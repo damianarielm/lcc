@@ -1,0 +1,1283 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Subsection*
+Ejericio 1
+\end_layout
+
+\begin_layout Standard
+Sea la base de datos de proveedores, partes y proyectos, cuyo esquema conceptual
+ es:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s$
+\end_inset
+
+ 
+\begin_inset Formula $\left(sCod,sNombre,situacion,ciudad\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p$
+\end_inset
+
+ 
+\begin_inset Formula $\left(pCod,pNombre,color,peso,ciudad\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $j$
+\end_inset
+
+ 
+\begin_inset Formula $\left(jCod,jNombre,ciudad\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $spj$
+\end_inset
+
+ 
+\begin_inset Formula $\left(sCod,pCod,jCod,cant\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En los ejercicio siguientes escribir una proposicion o conjunto de proposiciones
+ en SQL para la operacion indicada.
+\end_layout
+
+\begin_layout Paragraph
+Consultas sencillas
+\end_layout
+
+\begin_layout Enumerate
+Obtener los detalles completos de todos los proyectos.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT * FROM j
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Obtener los detalles completos de todos los proyectos de Londres.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT * FROM j WHERE ciudad = 
+\begin_inset Quotes eld
+\end_inset
+
+Londres
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Obtener los números de los proveedores que suministran partes al proyecto
+ J1, ordenados por número de proveedor.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT sCod FROM spj WHERE jCod = 
+\begin_inset Quotes eld
+\end_inset
+
+J1
+\begin_inset Quotes erd
+\end_inset
+
+ ORDER BY sCod
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Obtener todos los envíos en los cuales la cantidad está en el intervalo
+ de 300 a 750 inclusive.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT sCod FROM spj WHERE cant <= 750 AND cant >= 300
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Obtener una lista de todas las combinaciones parte-color/parte-ciudad, eliminand
+o todas las parejas color/ciudad repetidas.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT p.color, p2.ciudad FROM p JOIN p AS p2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Reuniones
+\end_layout
+
+\begin_layout Enumerate-Resume
+Obtener todas las 3-uplas número de proveedor/número de parte/ número de
+ proyecto tales que el proveedor, la parte y el proyecto indicados estén
+ todos en la misma ciudad (cosituados).
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT sCod, pCod, jCod FROM s NATURAL JOIN p NATURAL JOIN j
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener todas las 3-uplas número de proveedor/número de parte/ número de
+ proyecto tales que el proveedor, la parte y el proyecto indicados no estén
+ todos cosituados.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT sCod, pCod, jCod
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM s JOIN p JOIN j
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE s.ciudad <> p.ciudad OR p.ciudad <> j.ciudad
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener todas las 3-uplas número de proveedor/número de parte/ número de
+ proyecto tales que el proveedor, la parte y el proyecto indicados estén
+ todos en diferente ciudad.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT sCod, pCod, jCod
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM s JOIN p JOIN j
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE s.ciudad <> p.ciudad AND p.ciudad <> j.ciudad AND j.ciudad <> s.ciudad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de las partes suministradas por algún proveedor de Londres.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT pCod FROM spj NATURAL JOIN s WHERE ciudad = 
+\begin_inset Quotes eld
+\end_inset
+
+Londres
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de las partes suministradas por un proveedor de Londres
+ a un proyecto en Londres.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT pCod
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM spj NATURAL JOIN s NATURAL JOIN j
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE ciudad = 
+\begin_inset Quotes eld
+\end_inset
+
+Londres
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener todas las parejas de nombres de ciudad tales que un proveedor de
+ la primera ciudad suministre partes a un proyecto en la segunda ciudad.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT s.ciudad, j.ciudad
+\end_layout
+
+\begin_layout Plain Layout
+
+FROM spj JOIN s JOIN j
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE spj.sCod = s.sCod AND spj.jCod = j.jCod
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de las partes suministradas a un proyecto por un proveedor
+ situado en la misma ciudad que el proyecto.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT pCod FROM spj NATURAL JOIN s NATURAL JOIN j
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de los proyectos a los cuales suministra partes por
+ lo menos un proveedor situado en una ciudad distinta.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener todas las parejas de números de parte tales que algún proveedor
+ suministre las dos partes indicadas.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Funciones de agregados
+\end_layout
+
+\begin_layout Enumerate-Resume
+Obtener el número total de proyectos a los cuales suministra partes el proveedor
+ S1.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT COUNT (DISTINCT jCod) FROM spj WHERE sCod = 
+\begin_inset Quotes eld
+\end_inset
+
+S1
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener la cantidad total de la parte Pl suministrada por el proveedor Sl.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT SUM (Cant) FROM spj WHERE sCod = 
+\begin_inset Quotes eld
+\end_inset
+
+S1
+\begin_inset Quotes erd
+\end_inset
+
+ AND pCod = 
+\begin_inset Quotes eld
+\end_inset
+
+P1
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Para cada parte suministrada a un proyecto, obtener el número de parte,
+ el número de proyecto y la cantidad total correspondiente.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT pCod, jCod, SUM (Cant) FROM spj GROUP BY pCod, jCod
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de las partes suministradas a algún proyecto tales que
+ la cantidad promedio suministrada sea mayor que 320.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT pCod FROM spj GROUP BY pCod HAVING AVG(cant) > 320
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Diversas
+\end_layout
+
+\begin_layout Enumerate-Resume
+Obtener todos los envíos para los cuales la cantidad no sea nula.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT * FROM spj WHERE cant <> 0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener números de proyecto y ciudades en los cuales la segunda letra del
+ nombre de la ciudad sea una "o".
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT jCod, ciudad FROM j WHERE ciudad LIKE 
+\begin_inset Quotes eld
+\end_inset
+
+_o%
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Subconsultas
+\end_layout
+
+\begin_layout Enumerate-Resume
+Obtener los nombres de los proyectos a los cuales suministra partes el proveedor
+ S1.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT jNombre FROM spj NATURAL JOIN j WHERE sCod = 
+\begin_inset Quotes eld
+\end_inset
+
+S1
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los colores de las partes suministradas por el proveedor S1.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT color FROM spj NATURAL JOIN p WHERE sCod = 
+\begin_inset Quotes eld
+\end_inset
+
+S1
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de las partes suministradas a cualquier proyecto en
+ Londres.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT pCod FROM spj NATURAL JOIN j WHERE ciudad = 
+\begin_inset Quotes eld
+\end_inset
+
+Londres
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de los proyectos donde se utilice al menos una de las
+ partes suministradas por el proveedor S1.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT jCod FROM spj NATURAL JOIN j 
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE pCod IN (SELECT pCod FROM spj WHERE sCod = 
+\begin_inset Quotes eld
+\end_inset
+
+S1
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de los proveedores que suministren por lo menos una
+ de las partes suministradas por al menos uno de los proveedores que suministran
+ por lo menos una parte roja.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de los proveedores cuya situación sea inferior a la
+ del proveedor S1.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT sCod FROM s
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE situacion < (SELECT situacion FROM s WHERE sCod = 
+\begin_inset Quotes eld
+\end_inset
+
+S1
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de los proyectos cuya ciudad sea la primera en la lista
+ alfabética de las ciudades donde hay proyectos.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT jCod FROM j
+\end_layout
+
+\begin_layout Plain Layout
+
+WHERE ciudad = (SELECT ciudad FROM j ORDER BY ciudad LIMIT 1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+EXISTS
+\end_layout
+
+\begin_layout Enumerate-Resume
+Repetir el ejercicio 23 utilizando EXISTS en la solución.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT pCod FROM p WHERE EXISTS
+\end_layout
+
+\begin_layout Plain Layout
+
+    (SELECT * FROM spj NATURAL JOIN j 
+\end_layout
+
+\begin_layout Plain Layout
+
+     WHERE spj.pCod = p.pCod AND ciudad = 
+\begin_inset Quotes eld
+\end_inset
+
+Londres
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Repetir el ejercicio 24 utilizando EXISTS en la solución.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT jCod FROM j WHERE EXISTS
+\end_layout
+
+\begin_layout Plain Layout
+
+    (SELECT * FROM spj WHERE spj.jCod = j.jCod AND sCod = 
+\begin_inset Quotes eld
+\end_inset
+
+S1
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de los proyectos a los cuales no suministra ninguna
+ parte roja ninguno de los proveedores de Londres.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT jCod FROM j WHERE NOT EXISTS
+\end_layout
+
+\begin_layout Plain Layout
+
+    (SELECT * FROM spj JOIN p JOIN s
+\end_layout
+
+\begin_layout Plain Layout
+
+     WHERE spj.jCod = j.jCod AND
+\end_layout
+
+\begin_layout Plain Layout
+
+           spj.pCod = p.pCod AND
+\end_layout
+
+\begin_layout Plain Layout
+
+           spj.sCod = s.sCod AND
+\end_layout
+
+\begin_layout Plain Layout
+
+           color = 
+\begin_inset Quotes eld
+\end_inset
+
+Rojo
+\begin_inset Quotes erd
+\end_inset
+
+ AND
+\end_layout
+
+\begin_layout Plain Layout
+
+           s.ciudad = 
+\begin_inset Quotes eld
+\end_inset
+
+Londres
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Obtener los números de los proyectos para los cuales S1 es el único proveedor.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Union
+\end_layout
+
+\begin_layout Enumerate-Resume
+Construir una lista ordenada de todas las ciudades en las cuales esté situado
+ por lo menos un proveedor, una parte o un proyecto.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=SQL"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+SELECT DISTINCT ciudad FROM
+\end_layout
+
+\begin_layout Plain Layout
+
+    (SELECT ciudad FROM j UNION
+\end_layout
+
+\begin_layout Plain Layout
+
+     SELECT ciudad FROM s UNION
+\end_layout
+
+\begin_layout Plain Layout
+
+     SELECT ciudad FROM p) AS temp
+\end_layout
+
+\begin_layout Plain Layout
+
+ORDER BY ciudad
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Operaciones de actualizacion
+\end_layout
+
+\begin_layout Enumerate-Resume
+Cambiar a gris el color de todas las partes rojas.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Eliminar todos los proyectos para los cuales no haya envíos.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Insertar un nuevo proveedor (S10) en la tabla S.
+ El nombre y la ciudad son Salazar y Nueva York, respectivamente; la situación
+ no se conoce todavía.
+\end_layout
+
+\end_body
+\end_document

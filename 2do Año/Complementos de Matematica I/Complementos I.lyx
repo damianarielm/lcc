@@ -1,0 +1,6501 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introduccion a la teoria de grafos
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introduccion
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Grafo simple
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ es una tupla 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ es un conjunto finito, no vacio de vertices.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E$
+\end_inset
+
+ es un conjunto finito de aristas tal que 
+\begin_inset Formula $E\subseteq\left\{ X\in\mathcal{P}\left(V\right):\left|X\right|=2\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si consideramos a las aristas como un conjunto 
+\begin_inset Formula $E$
+\end_inset
+
+ tal que 
+\begin_inset Formula $E\subseteq\left\{ \left(x,y\right)\in V\times V:x\neq y\right\} $
+\end_inset
+
+ diremos entonces que se trata de un grafo simple dirigido.
+\end_layout
+
+\begin_layout Subsection
+Multigrafo
+\end_layout
+
+\begin_layout Standard
+Un multigrafo 
+\begin_inset Formula $G$
+\end_inset
+
+ es una terna 
+\begin_inset Formula $G=\left(V,E,f\right)$
+\end_inset
+
+ donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V$
+\end_inset
+
+ es un conjunto finito, no vacio de vertices.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E$
+\end_inset
+
+ es un conjunto finito de aristas.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $f:E\to\left\{ X\in\mathcal{P}\left(V\right):1\leq\left|X\right|\leq2\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se tratara de un multigrafo dirigido si cambiamos el codominio de la funcion
+ por el conjunto 
+\begin_inset Formula $\left\{ \left(x,y\right)\in V\times V\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si ademas consideramos una funcion 
+\begin_inset Formula $w:E\to\mathbb{R}$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $\text{\ensuremath{G=\left(V,E,f,w\right)}}$
+\end_inset
+
+ es un multigrafo ponderado (con pesos en las aristas) por la funcion 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Terminologia
+\end_layout
+
+\begin_layout Itemize
+Llamaremos orden de un grafo a 
+\begin_inset Formula $\left|V\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Llamaremos tamaño de un grafo a 
+\begin_inset Formula $\left|E\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $e\in E$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(e\right)=\left\{ a,b\right\} $
+\end_inset
+
+ diremos que 
+\begin_inset Formula $e$
+\end_inset
+
+ es una arista incidente en 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Dos aristas son adyacentes si comparten un vertice en comun.
+\end_layout
+
+\begin_layout Itemize
+Dos vertices son adyacentes si comparten una arista.
+\end_layout
+
+\begin_layout Itemize
+Cuando una arista relaciona a un solo verticle, la llamaremos lazo.
+\end_layout
+
+\begin_layout Itemize
+Dos o mas aristas son paralelas si relacionan el mismo par de vertices.
+\end_layout
+
+\begin_layout Itemize
+Diremos que un grafo es simple, cuando no tiene lazos ni aristas paralelas.
+\end_layout
+
+\begin_layout Itemize
+Llamaremos grado de un vertice a la cantidad de aristas que inciden en el
+ y lo notaremos: 
+\begin_inset Formula $\delta\left(v\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Diremos que un grafo es regular si todos sus vertices tienen el mismo grado.
+\end_layout
+
+\begin_layout Subsection
+Grafo bipartito
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ se dice bipartito si existen 
+\begin_inset Formula $V_{1},V_{2}$
+\end_inset
+
+ tales que forman una particion de 
+\begin_inset Formula $V$
+\end_inset
+
+ y para cualquier arista 
+\begin_inset Formula $\left\{ u,v\right\} $
+\end_inset
+
+ resulta 
+\begin_inset Formula $u\in V_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $v\in V_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Grafo completo
+\end_layout
+
+\begin_layout Standard
+Llamaremos grafo completo a un grafo simple en donde cada vertice comparte
+ aristas con los demas.
+ Es decir: 
+\begin_inset Formula $K_{n}=\left(V,E\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $E=\left\{ \left\{ u,v\right\} :u,v\in V\land u\neq v\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Notaremos con 
+\begin_inset Formula $K_{m,n}=\left(V,E\right)$
+\end_inset
+
+ al grafo bipartito tal que 
+\begin_inset Formula $\left|V_{1}\right|=m$
+\end_inset
+
+, 
+\begin_inset Formula $\left|V_{2}\right|=n$
+\end_inset
+
+ y 
+\begin_inset Formula $E=\left\{ \left\{ u,v\right\} :u\in V_{1}\land v\in V_{2}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Grafo complementario
+\end_layout
+
+\begin_layout Standard
+Dado un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $\left|V\right|=n$
+\end_inset
+
+, el grafo complementario de 
+\begin_inset Formula $G$
+\end_inset
+
+, al que notaremos 
+\begin_inset Formula $\overline{G}$
+\end_inset
+
+, es el grafo 
+\begin_inset Formula $\overline{G}=\left(V,E'\right)$
+\end_inset
+
+; donde 
+\begin_inset Formula $E'$
+\end_inset
+
+ es el conjunto de aristas que estan en 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ pero no en 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Subgrafo
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+; un grafo 
+\begin_inset Formula $G'=\left(V',E'\right)$
+\end_inset
+
+ es un subgrafo de 
+\begin_inset Formula $G$
+\end_inset
+
+ si:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V'\subseteq V$
+\end_inset
+
+ y 
+\begin_inset Formula $E'\subseteq E$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\left\{ u',w'\right\} \in E'$
+\end_inset
+
+ entonces 
+\begin_inset Formula $u',w'\in V'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Subgrafos inducidos
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo y 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+, el subgrafo inducido por 
+\begin_inset Formula $U$
+\end_inset
+
+ es el subgrafo 
+\begin_inset Formula $G'=\left(U,E'\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $E'=\left\{ \left\{ u,v\right\} \in E:u,v\in U\right\} $
+\end_inset
+
+ es decir que 
+\begin_inset Formula $E'$
+\end_inset
+
+ consta de todas las aristas cuyos extremos pertenecen a 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Notaremos con 
+\begin_inset Formula $G-v$
+\end_inset
+
+ al subgrafo inducido por 
+\begin_inset Formula $V-\left\{ v\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dado un conjunto 
+\begin_inset Formula $D\subseteq E$
+\end_inset
+
+, el subgrafo inducido por 
+\begin_inset Formula $D$
+\end_inset
+
+ es el subgrafo 
+\begin_inset Formula $G'=\left(V',D\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $V'$
+\end_inset
+
+ es el conjunto de vertices incididos por 
+\begin_inset Formula $D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Analogamente notaremos con 
+\begin_inset Formula $G-e$
+\end_inset
+
+ al subgrafo inducido por 
+\begin_inset Formula $E-\left\{ e\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matrices de representacion
+\end_layout
+
+\begin_layout Subsubsection
+Matriz de adyacencia
+\end_layout
+
+\begin_layout Standard
+La matriz de adyacencia de un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ se construye a partir de la matriz 
+\begin_inset Formula $0_{\left|V\right|\times\left|V\right|}$
+\end_inset
+
+.
+ Por cada arista que une a dos nodos, se suma 1 al valor que hay actualmente
+ en la ubicación correspondiente de la matriz.
+ Si tal arista es un bucle y el grafo es no dirigido, entonces se suma 2
+ en vez de 1.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Es posible obtener el grado de un vertice, sumando el renglon o columna
+ correspondiente en su matriz de adyacencia.
+\end_layout
+
+\begin_layout Subsubsection
+Matriz de incidencia
+\end_layout
+
+\begin_layout Standard
+Dado un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+, la matriz de incidencia de 
+\begin_inset Formula $G$
+\end_inset
+
+ es una matriz binaria de dimensiones 
+\begin_inset Formula $\left|V\right|\times\left|E\right|$
+\end_inset
+
+ donde oor cada nodo unido por una arista, ponemos un uno (1) en el lugar
+ correspondiente, y llenamos el resto de las ubicaciones con ceros (0).
+\end_layout
+
+\begin_layout Section
+Caminos, circuitos y ciclos
+\end_layout
+
+\begin_layout Subsection
+Definiciones
+\end_layout
+
+\begin_layout Itemize
+Una 
+\emph on
+trayectoria
+\emph default
+ o 
+\emph on
+camino
+\emph default
+ (walk) de longitud 
+\begin_inset Formula $n$
+\end_inset
+
+ es una sucesion alternante de 
+\begin_inset Formula $n+1$
+\end_inset
+
+ vertices y 
+\begin_inset Formula $n$
+\end_inset
+
+ aristas de la forma: 
+\begin_inset Formula $C=v_{o},e_{1},v_{1},e_{2},v_{2},\ldots,v_{n-1},e_{n},v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $v_{0}=v_{n}$
+\end_inset
+
+ diremos que se trata de un camino 
+\emph on
+cerrado
+\emph default
+.
+ En caso contrario, es un camino 
+\emph on
+abierto
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Diremos que un camino es 
+\emph on
+simple
+\emph default
+ cuando no repite vertices.
+\end_layout
+
+\begin_layout Itemize
+Llamaremos 
+\emph on
+circuito
+\emph default
+ (circuit) a un camino cerrado de longitud mayor a 
+\begin_inset Formula $0$
+\end_inset
+
+ donde no se repiten aristas.
+\end_layout
+
+\begin_layout Itemize
+Un 
+\emph on
+circuito euleriano
+\emph default
+ es un circuito que contiene a todas las aristas.
+ Llamaremos 
+\emph on
+grafo euleriano
+\emph default
+ a aquel que contenga un circuito euleriano.
+\end_layout
+
+\begin_layout Itemize
+Si un camino abierto pasa por todas las aristas sin repetir ninguna, lo
+ llamaremos 
+\emph on
+camino euleriano
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+Diremos que un camino cerrado es un 
+\emph on
+ciclo
+\emph default
+ 
+\emph on
+hamiltoniano
+\emph default
+ si incluye a todos los vertices y no los repite (exceptuando el primero
+ y ultimo).
+ Llamaremos 
+\emph on
+grafo hamiltoniano
+\emph default
+ a aquel que contenga un ciclo hamiltoniano.
+\end_layout
+
+\begin_layout Standard
+En resumen:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Repite vertices
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Repite aristas
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abierto/Cerrado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Camino (walk)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ambos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trail
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ambos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circuito (circuit)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Si
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cerrado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Path
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abierto
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circuito simple (cycle)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cerrado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Grafo conexo
+\end_layout
+
+\begin_layout Standard
+Un grafo es conexo si dados dos vertices cualesquiera 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $w$
+\end_inset
+
+, existe un camino de 
+\begin_inset Formula $u$
+\end_inset
+
+ a 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Componente conexa
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo y 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ definimos 
+\begin_inset Formula $\left[v\right]=\left\{ u\in V:\exists\text{ uv-camino en \ensuremath{G}}\right\} $
+\end_inset
+
+.
+ Llamaremos componente conexa al subgrafo inducido por 
+\begin_inset Formula $\left[v\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Un grafo es conexo si y solo si tiene una sola componente conexa.
+\end_layout
+
+\begin_layout Subsection
+Punto de articulacion y puente
+\end_layout
+
+\begin_layout Standard
+Un vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ en un grafo conexo 
+\begin_inset Formula $G$
+\end_inset
+
+ es un punto de articulacion si la eliminacion de 
+\begin_inset Formula $v$
+\end_inset
+
+ y todas las aristas incidentes en el, aumenta la cantidad de componentes
+ conexas de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Analogamente, un puente es una arista que al ser eliminada incrementa el
+ numero de componentes conexas.
+\end_layout
+
+\begin_layout Subsection
+Distancia y diametro
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo conexo, la distancia entre los vertices 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $v$
+\end_inset
+
+ (que notaremos 
+\begin_inset Formula $dist\left(u,v\right)$
+\end_inset
+
+) es la longitud de la ruta mas corta de 
+\begin_inset Formula $u$
+\end_inset
+
+ a 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El diametro de dicho grafo es 
+\begin_inset Formula $d\left(G\right)=\max\left\{ dist\left(u,v\right)/u,v\in V\right\} $
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algoritmo de la ruta mas corta (Dijkstra)
+\end_layout
+
+\begin_layout Paragraph
+Entrada
+\end_layout
+
+\begin_layout Standard
+Un grafo ponderado 
+\begin_inset Formula $G=\left(V,E,w\right)$
+\end_inset
+
+, y dos vertices distinguidos 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Salida
+\end_layout
+
+\begin_layout Standard
+La longitud del camino mas corto de 
+\begin_inset Formula $a$
+\end_inset
+
+ a 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Algoritmo
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+dijkstra(G,a,z):
+\end_layout
+
+\begin_layout Plain Layout
+
+	L[a] = 0; # Etiquetas iniciales
+\end_layout
+
+\begin_layout Plain Layout
+
+	for each x in V-a: L[x] = infinity; # Etiquetas iniciales
+\end_layout
+
+\begin_layout Plain Layout
+
+	T = V; # Etiquetas no definitivas
+\end_layout
+
+\begin_layout Plain Layout
+
+	while z in T:
+\end_layout
+
+\begin_layout Plain Layout
+
+		v = x in T | L[x] is minimum;
+\end_layout
+
+\begin_layout Plain Layout
+
+		T = T - v;
+\end_layout
+
+\begin_layout Plain Layout
+
+		for each x in T | {x, v} in E:
+\end_layout
+
+\begin_layout Plain Layout
+
+			L[x] = min(L[x], L[v] + w(v,x));
+\end_layout
+
+\begin_layout Plain Layout
+
+	return L[z];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Lema del apreton de manos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2\left|E\right|={\displaystyle \sum_{v\in V}\delta\left(v\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+La cantidad de nodos de grado impar es par.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Lo probaremos por induccion en la cantidad de aristas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $\left|E\right|=0$
+\end_inset
+
+: Para cualquier grafo sin aristas resultara: 
+\begin_inset Formula ${\displaystyle \sum_{v\in V}\delta\left(v\right)}=0=2\cdot0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $\left|E\right|=k$
+\end_inset
+
+: Supongamos que para cualquier grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $k$
+\end_inset
+
+ aristas resulta 
+\begin_inset Formula $2k={\displaystyle \sum_{v\in V}\delta\left(v\right)}$
+\end_inset
+
+.
+ Consideremos el grafo 
+\begin_inset Formula $G'=\left(V',E'\right)$
+\end_inset
+
+ al que se le agrega la arista 
+\begin_inset Formula $\left\{ x,y\right\} $
+\end_inset
+
+.
+ Resultara entonces 
+\begin_inset Formula $\left|E'\right|=k+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ no estan en 
+\begin_inset Formula $V$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{v\in V'}\delta\left(v\right)}={\displaystyle \sum_{v\in V}\delta\left(v\right)+\delta\left(x\right)+\delta\left(y\right)=2k+2=2\left(k+1\right)=2\left|E'\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $x\in V$
+\end_inset
+
+ y 
+\begin_inset Formula $y\notin V$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{v\in V'}\delta\left(v\right)}={\displaystyle \sum_{v\in V}\delta\left(v\right)+\underbrace{1}_{x}+\delta\left(y\right)=2k+2=2\left(k+1\right)=2\left|E'\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si ambos estan en 
+\begin_inset Formula $V$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{v\in V'}\delta\left(v\right)}={\displaystyle \sum_{v\in V}\delta\left(v\right)+\underbrace{1}_{x}+\underbrace{1}_{y}=2k+2=2\left(k+1\right)=2\left|E'\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Tambien hay que tener en cuenta posibles vertices aislados cuyos grados
+ no interfieren en la expresion.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $2\left|E\right|={\displaystyle \sum_{v\in V}\delta\left(v\right)}={\displaystyle \sum_{v\in V_{i}}\delta\left(v\right)}+\underbrace{{\displaystyle \sum_{v\in V_{p}}\delta\left(v\right)}}_{\text{par}}$
+\end_inset
+
+ luego 
+\begin_inset Formula ${\displaystyle \sum_{v\in V_{i}}\delta\left(v\right)}$
+\end_inset
+
+ es par por lo que 
+\begin_inset Formula $\left|V_{i}\right|$
+\end_inset
+
+ tambien.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cantidad de aristas minima en un grafo conexo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+En todo grafo conexo 
+\begin_inset Formula $\left|E\right|\geq\left|V\right|-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Lo probaremos por induccion en la cantidad de vertices:
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $\left|V\right|=1$
+\end_inset
+
+: Resulta trivial que 
+\begin_inset Formula $\left|E\right|\geq0\geq\left|V\right|-1=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $\left|V\right|=k$
+\end_inset
+
+: Supongamos que para todo grafo conexo 
+\begin_inset Formula $\text{\ensuremath{G=\left(V,E\right)}}$
+\end_inset
+
+ con 
+\begin_inset Formula $k$
+\end_inset
+
+ vertices resulta 
+\begin_inset Formula $\left|E\right|\geq k-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Para cualquier grafo 
+\begin_inset Formula $G'=\left(V',E'\right)$
+\end_inset
+
+ conexo con 
+\begin_inset Formula $k+1$
+\end_inset
+
+ vertices tambien necesitamos agregar al menos 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ aristas para conservar la conexidad.
+ Sumando en la desigualdad de la hipotesis inductiva tenemos:
+\begin_inset Formula 
+\[
+\left|E'\right|=\left|E\right|+n\geq k-1+1=\left(k+1\right)-1=\left|V'\right|-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Teorema de la matriz de adyacencia
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+El elemento 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ de 
+\begin_inset Formula $A^{k}$
+\end_inset
+
+ (matriz de adyacencia) es el numero de caminos distintos de longitud 
+\begin_inset Formula $k$
+\end_inset
+
+, de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ a 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ en un grafo simple.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Teorema de existencia de circuito euleriano
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ sin vertices aislados tiene un circuito euleriano si y solo si es conexo
+ y todos los vertices son de grado par.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $C=v_{0},\ldots,v_{0}$
+\end_inset
+
+ el circuito euleriano del grafo.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Consideremos un par de vertices distintos 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $G$
+\end_inset
+
+ no tiene vertices aislados han de ser incididos por alguna arista, y esta
+ ha de pertenecer a 
+\begin_inset Formula $C$
+\end_inset
+
+ (por ser 
+\begin_inset Formula $C$
+\end_inset
+
+ euleriano).
+ Ahora podemos afirmar que existe un camino de 
+\begin_inset Formula $u$
+\end_inset
+
+ a 
+\begin_inset Formula $v$
+\end_inset
+
+; a saber, la parte del circuito que los une, por lo que 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo.
+\end_layout
+
+\begin_layout Itemize
+En cada 
+\begin_inset Formula $v_{i}\in C$
+\end_inset
+
+, inciden dos aristas diferentes (por ser 
+\begin_inset Formula $C$
+\end_inset
+
+ un cilco) y como 
+\begin_inset Formula $C$
+\end_inset
+
+ es euleriano sabemos que incluye a todas las aristas del grafo, por lo
+ que cualquier vertice del grafo sera contribuido en su grado, de a pares.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Como 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo, no tiene vertices aislados.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $W=v_{0},e_{1},v_{1},\ldots,e_{n-1},v_{n-1},e_{n},v_{n}$
+\end_inset
+
+ un camino que no repite aristas (trail) de longitud maxima en 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Todas las aristas incidentes en 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ estan en 
+\begin_inset Formula $W$
+\end_inset
+
+ pues de lo contrario no seria de longitud maxima.
+ Ademas 
+\begin_inset Formula $v_{0}=v_{n}$
+\end_inset
+
+ (
+\begin_inset Formula $W$
+\end_inset
+
+ es un ciclo) pues de lo contrario, si 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ aparece 
+\begin_inset Formula $k$
+\end_inset
+
+ veces en 
+\begin_inset Formula $W$
+\end_inset
+
+ su grado sera 
+\begin_inset Formula $2\left(k-1\right)+1$
+\end_inset
+
+ lo cual contradice nuestra hipotesis.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $W$
+\end_inset
+
+ no es euleriano, es decir: 
+\begin_inset Formula $\text{\ensuremath{\exists e\in E/e\notin W}}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo, uno de los extremos de 
+\begin_inset Formula $e=\left\{ v_{i},v\right\} $
+\end_inset
+
+ estara en 
+\begin_inset Formula $W$
+\end_inset
+
+ (supongamos 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+).
+ Por lo tanto el trail 
+\begin_inset Formula $v,e,v_{i},e_{i+1},\ldots,v_{n},e_{1},v_{1},\ldots,e_{i},v_{i}$
+\end_inset
+
+ tiene mayor longitud que 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Contradiccion.
+ Luego 
+\begin_inset Formula $W$
+\end_inset
+
+ es un ciclo euleriano.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ sin vertices aislados tiene un camino euleriano de 
+\begin_inset Formula $u$
+\end_inset
+
+ a 
+\begin_inset Formula $w$
+\end_inset
+
+ si y solo si es conexo y 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $w$
+\end_inset
+
+ son los unicos vertices de grado impar.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si un vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ de grado impar esta al comienzo de un camino euleriano, restaran por recorrerse
+ una cantidad par de aristas en 
+\begin_inset Formula $v$
+\end_inset
+
+, de manera que cada vez que se vuelva a 
+\begin_inset Formula $v$
+\end_inset
+
+ se debera salir, impidiendo de esta manera que 
+\begin_inset Formula $v$
+\end_inset
+
+ tambien sea el final.
+\end_layout
+
+\begin_layout Itemize
+Si un vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ de grado impar no esta al comienzo de un camino euleriano entonces debe
+ estar al final pues se puede entrar y salir de el 
+\begin_inset Formula $2n$
+\end_inset
+
+ veces y la ultima vez no se podra salir.
+\end_layout
+
+\begin_layout Itemize
+Como cada vertice de grado impar debe ser inicio o fin, no puede haber mas
+ de dos.
+\end_layout
+
+\begin_layout Itemize
+Ademas como no hay vertices aislados, un camino euleriano alcanza todos
+ los vertices, por lo tanto es conexo.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Como el grafo es conexo, no tiene vertices aislados.
+\end_layout
+
+\begin_layout Itemize
+Agreguemos temporalmente una arista 
+\begin_inset Formula $\left\{ u,w\right\} $
+\end_inset
+
+.
+ El grafo resultante tiene todos sus vertices de grado par, luego existe
+ un circuito euleriano.
+ Si eliminamos dicha arista del circuito, obtenemos un camino euleriano
+ entre 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Correctitud del algoritmo de Dijkstra
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+El algoritmo de Dijkstra determina de manera correcta la longitud de un
+ 
+\begin_inset Formula $az$
+\end_inset
+
+-camino en un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $i$
+\end_inset
+
+ la cantidad de veces que se ejecuta la linea 7 del algoritmo, probaremos
+ por induccion que 
+\begin_inset Formula $L\left[v\right]$
+\end_inset
+
+ es la longitud de la ruta mas corta de 
+\begin_inset Formula $a$
+\end_inset
+
+ a 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Puesto que el algoritmo devuelev 
+\begin_inset Formula $L\left[z\right]$
+\end_inset
+
+, esto implica que el algoritmo es correcto.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $i=1$
+\end_inset
+
+: Antes de que la linea se ejecute por primera vez, 
+\begin_inset Formula $L\left[a\right]=0$
+\end_inset
+
+ y 
+\begin_inset Formula $L\left[x\right]=\infty$
+\end_inset
+
+ para cualquier otro 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Luego resultara 
+\begin_inset Formula $v=a$
+\end_inset
+
+ y 
+\begin_inset Formula $L\left[v\right]=0$
+\end_inset
+
+ siendo esta la longitud minima de un 
+\begin_inset Formula $aa$
+\end_inset
+
+-camino.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $i=n$
+\end_inset
+
+: Supongamos que para 
+\begin_inset Formula $k\in\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+ la 
+\begin_inset Formula $k$
+\end_inset
+
+-esima vez que se ejecuta la linea 7, 
+\begin_inset Formula $L\left[v\right]$
+\end_inset
+
+ es la minima longitud de un 
+\begin_inset Formula $av$
+\end_inset
+
+-camino.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Veamos que si existe una trayectoria del vertice 
+\begin_inset Formula $a$
+\end_inset
+
+ otro vertice 
+\begin_inset Formula $w$
+\end_inset
+
+ cuya longitud es menor a 
+\begin_inset Formula $L\left[v\right]$
+\end_inset
+
+, entonces 
+\begin_inset Formula $w\notin T$
+\end_inset
+
+.
+ Supongamos que esto no fuera asi (
+\begin_inset Formula $w\in T$
+\end_inset
+
+) y sean: 
+\begin_inset Formula $C$
+\end_inset
+
+ el camino mas corto de 
+\begin_inset Formula $a$
+\end_inset
+
+ a 
+\begin_inset Formula $w$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+ el vertice de dicho camino mas cercano a 
+\begin_inset Formula $a$
+\end_inset
+
+ dentro de 
+\begin_inset Formula $T$
+\end_inset
+
+, y 
+\begin_inset Formula $u$
+\end_inset
+
+ el predecesor de 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ /* PREGUNTAR Entonces 
+\begin_inset Formula $u\notin T$
+\end_inset
+
+ */ por lo que ya se habia seleccionado en una iteracion anterior del ciclo
+ while y por hipotesis inductiva 
+\begin_inset Formula $L\left[u\right]$
+\end_inset
+
+ es la longitud mas corta de un 
+\begin_inset Formula $au$
+\end_inset
+
+-camino.
+ Ahora 
+\begin_inset Formula $L\left[x\right]\leq L\left[u\right]+w\left(u,x\right)\leq C<L\left[v\right]$
+\end_inset
+
+.
+ Pero esta desigualdad muestra que 
+\begin_inset Formula $v$
+\end_inset
+
+ no es el vertice en 
+\begin_inset Formula $T$
+\end_inset
+
+ con 
+\begin_inset Formula $L\left[v\right]$
+\end_inset
+
+ minimo pues 
+\begin_inset Formula $L\left[x\right]$
+\end_inset
+
+ es menor.
+ Contradiccion.
+\end_layout
+
+\begin_layout Itemize
+Si hubiera un 
+\begin_inset Formula $av$
+\end_inset
+
+-camino de logitud menor a 
+\begin_inset Formula $L\left[v\right]$
+\end_inset
+
+ entonces 
+\begin_inset Formula $v\notin T$
+\end_inset
+
+ (por el apartado anterior) lo cual es una contradiccion pues se eligio
+ a 
+\begin_inset Formula $v$
+\end_inset
+
+ dentro del conjunto 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $L\left[v\right]$
+\end_inset
+
+ es longitud minima.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Teorema de Ore
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo simple sin lazos, con 
+\begin_inset Formula $n=\left|V\right|\geq3$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\delta\left(u\right)+\delta\left(v\right)\geq n$
+\end_inset
+
+ para cualquier par de vertices no adyacentes, entonecs 
+\begin_inset Formula $G$
+\end_inset
+
+ es hamiltoneano.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos que existen grafos que cumplen las hipotesis, pero no son hamiltonean
+os y sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ (con 
+\begin_inset Formula $n=\left|V\right|$
+\end_inset
+
+) el que mas aristas tiene de entre todos ellos.
+ 
+\end_layout
+
+\begin_layout Standard
+Sabemos que 
+\begin_inset Formula $G$
+\end_inset
+
+ no es 
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ (pues este es hamiltoneano) luego existen vertices no adyacentes 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+; y ademas 
+\begin_inset Formula $G+\left\{ v_{1},v_{n}\right\} $
+\end_inset
+
+ es hamiltoneano (pues de lo contrario 
+\begin_inset Formula $G$
+\end_inset
+
+ no tendria cantidad de aristas maxima).
+ Sea 
+\begin_inset Formula $\text{\ensuremath{C=v_{n},v_{1},v_{2},\ldots,v_{n-1},v_{n}}}$
+\end_inset
+
+ el ciclo hamiltoneano de 
+\begin_inset Formula $G+\left\{ v_{1},v_{n}\right\} $
+\end_inset
+
+, luego 
+\begin_inset Formula $C'=v_{1},v_{2},\ldots,v_{n-1},v_{n}$
+\end_inset
+
+ es un camino hamiltoneano en 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puesto que 
+\begin_inset Formula $\delta\left(v_{1}\right)+\delta\left(v_{n}\right)\geq n$
+\end_inset
+
+, por el principio del palomar existe 
+\begin_inset Formula $\text{\ensuremath{i\in\left\{ 2,\ldots,n-1\right\} }}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ es adyacente a 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{i-1}$
+\end_inset
+
+ es adyacente a 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ pero entonces el ciclo 
+\begin_inset Formula $v_{1},\ldots,v_{i-1},v_{n},v_{n-1},\ldots,v_{i},v_{1}$
+\end_inset
+
+ es un ciclo hamiltoneano.
+\end_layout
+
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo simple sin lazos, con 
+\begin_inset Formula $n=\left|V\right|\geq3$
+\end_inset
+
+, y 
+\begin_inset Formula $\left|E\right|=\binom{n-1}{2}+2$
+\end_inset
+
+ entonces 
+\begin_inset Formula $G$
+\end_inset
+
+ es hamiltoneano.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a,b\in V/e=\left\{ a,b\right\} \notin E$
+\end_inset
+
+ y 
+\begin_inset Formula $H$
+\end_inset
+
+ el subgrafo de 
+\begin_inset Formula $G$
+\end_inset
+
+ inducido por 
+\begin_inset Formula $V-\left\{ a,b\right\} $
+\end_inset
+
+.
+ Tenemos entonces que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|V\left(H\right)\right|=n-2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|E\left(H\right)\right|\leq\left|K_{n-2}\right|=\binom{n-2}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|E\right|=\left|E\left(H\right)\right|+\delta\left(a\right)+\delta\left(b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $\binom{n-1}{2}+2=\left|E\left(H\right)\right|+\delta\left(a\right)+\delta\left(b\right)\leq\binom{n-2}{2}+\delta\left(a\right)+\delta\left(b\right)$
+\end_inset
+
+ de donde:
+\begin_inset Formula 
+\[
+\delta\left(a\right)+\delta\left(b\right)\geq\binom{n-1}{2}+2-\binom{n-2}{2}=\ldots=n
+\]
+
+\end_inset
+
+y por el teorema de Ore, 
+\begin_inset Formula $G$
+\end_inset
+
+ es hamiltoneano.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Dirac
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo simple sin lazos, con 
+\begin_inset Formula $n=\left|V\right|\geq3$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\delta\left(u\right)\geq n/2$
+\end_inset
+
+ para cualquier vertice, entonces 
+\begin_inset Formula $G$
+\end_inset
+
+ es hamiltoneano.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Veamos que 
+\begin_inset Formula $G$
+\end_inset
+
+ satisface las hipotesis del teorema de Ore.
+ Sean 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $v$
+\end_inset
+
+ vertices no adyacentes, entonces 
+\begin_inset Formula $\delta\left(u\right)+\delta\left(v\right)\geq2\left(n/2\right)=n$
+\end_inset
+
+ y por el teorema de Ore, 
+\begin_inset Formula $G$
+\end_inset
+
+ es hamiltoneano.
+\end_layout
+
+\begin_layout Chapter
+Planaridad y coloreo
+\end_layout
+
+\begin_layout Section
+Planaridad
+\end_layout
+
+\begin_layout Subsection
+Definiciones
+\end_layout
+
+\begin_layout Subsubsection
+Grafos isomorfos
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $G'=\left(V',E'\right)$
+\end_inset
+
+ dos grafos, se dice que 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $G'$
+\end_inset
+
+ son isomorfos si existen biyecciones 
+\begin_inset Formula $f:V\to V'$
+\end_inset
+
+ y 
+\begin_inset Formula $g:E\to E'$
+\end_inset
+
+ tales que dados 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ y 
+\begin_inset Formula $e\in E$
+\end_inset
+
+; 
+\begin_inset Formula $e$
+\end_inset
+
+ incide en 
+\begin_inset Formula $v$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $g\left(e\right)$
+\end_inset
+
+ incide en 
+\begin_inset Formula $f\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Invariantes
+\end_layout
+
+\begin_layout Standard
+Una propiedad que un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ comparte con todo otro grafo 
+\begin_inset Formula $G'$
+\end_inset
+
+ que sea isomorfo a el, se llama invariante.
+ Son invariantes las siguientes propiedades:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+Numero de vertices.
+\end_layout
+
+\begin_layout Itemize
+Numero de aristas.
+\end_layout
+
+\begin_layout Itemize
+Componentes conexas.
+\end_layout
+
+\begin_layout Itemize
+Ciclo eulereano.
+\end_layout
+
+\begin_layout Itemize
+Ciclo hamiltoneano.
+\end_layout
+
+\begin_layout Itemize
+Bipartito.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m$
+\end_inset
+
+ vertices de grado 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m$
+\end_inset
+
+ ciclos de longitud 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Subdivision elemental y reduccion en serie
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo tal que 
+\begin_inset Formula $e=\left\{ u,v\right\} \in E$
+\end_inset
+
+, el grafo 
+\begin_inset Formula $G'$
+\end_inset
+
+ obtenido por subdivision elementaria de 
+\begin_inset Formula $e$
+\end_inset
+
+ es el grafo 
+\begin_inset Formula $G'=\left(V\cup\left\{ w\right\} ,\left[E-\left\{ e\right\} \right]\cup\left\{ \left\{ u,w\right\} ,\left\{ w,v\right\} \right\} \right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $w\notin V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene un vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ de grado 2 y aristas 
+\begin_inset Formula $\left\{ v,u\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ v,w\right\} $
+\end_inset
+
+ con 
+\begin_inset Formula $u\neq w$
+\end_inset
+
+, se dice que dichas aristas estan en serie.
+ La reduccion de una serie consiste en eliminar el vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ del grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ y sustituir las dos aristas indicentes por la arista 
+\begin_inset Formula $\left\{ u,w\right\} $
+\end_inset
+
+.
+ Se dice que el grafo obtenido 
+\begin_inset Formula $G'$
+\end_inset
+
+ se obtiene de 
+\begin_inset Formula $G$
+\end_inset
+
+ al reducir una serie.
+\end_layout
+
+\begin_layout Subsubsection
+Grafos homeomorfos
+\end_layout
+
+\begin_layout Standard
+Dos grafos 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $G'$
+\end_inset
+
+ se dicen homeomorfos si son isomorfos o pueden obtenerse de un mismo grafo
+ por subdivisiones elementales de aristas.
+\end_layout
+
+\begin_layout Standard
+En forma equivalente, 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $G'$
+\end_inset
+
+ se dicen homeomorfos si son isomorfos o pueden obtenerse de un mismo grafo
+ por reducciones en serie.
+\end_layout
+
+\begin_layout Subsubsection
+Grafo plano
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ se dice plano o planar, si es posible dibujarlo en el plano sin que se
+ crucen las aristas.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K_{n}$
+\end_inset
+
+ es plano para 
+\begin_inset Formula $n\leq4$
+\end_inset
+
+ y no lo es para 
+\begin_inset Formula $n\geq5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Todo subgrafo de un grafo plano tambien es plano.
+\end_layout
+
+\begin_layout Subsection
+Teoremas
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Los grafos 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $G'$
+\end_inset
+
+ son isomorfos si y solo si, para algun orden de sus vertices, sus matrices
+ de adyacencia son iguales.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsubsection
+Isomorfismos de grafos simples
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dos grafos simples 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $G'=\left(V',E'\right)$
+\end_inset
+
+ son isomorfos si y solo si existe una biyeccion 
+\begin_inset Formula $f:V\to V'$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left\{ u,v\right\} \in E\iff\left\{ f\left(u\right),f\left(v\right)\right\} \in E'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema de Kuratowski
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ es planar si y solo si no contiene un subgrafo homeomorfo a 
+\begin_inset Formula $K_{5}$
+\end_inset
+
+ o 
+\begin_inset Formula $K_{3,3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Formula de Euler
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dada una representacion plana de un grafo conexo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $\left|V\right|=v$
+\end_inset
+
+, 
+\begin_inset Formula $\left|E\right|=e$
+\end_inset
+
+ y 
+\begin_inset Formula $r$
+\end_inset
+
+ regiones delimitadas en el plano por la representacion, se tiene que 
+\begin_inset Formula $v-e+r=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Lo demostraremos por induccion en el numero de aristas:
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $e=0$
+\end_inset
+
+: Como 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo, ha de tratarse de 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+.
+ Tenemos entonces 
+\begin_inset Formula $v-e+r=1-0+1=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $e=k$
+\end_inset
+
+: Supongamos que para todo grafo planar conexo con 
+\begin_inset Formula $e<k$
+\end_inset
+
+ aristas resulta 
+\begin_inset Formula $v-e+r=2$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ un grafo con 
+\begin_inset Formula $k$
+\end_inset
+
+ aristas.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ no contiene ciclos, sea 
+\begin_inset Formula $a$
+\end_inset
+
+ una arista incidente en un vertice 
+\begin_inset Formula $x$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\delta\left(x\right)=1$
+\end_inset
+
+.
+ El grafo 
+\begin_inset Formula $G'=G-x$
+\end_inset
+
+ tiene la misma cantidad de regiones, un vertice menos y una arista menos,
+ luego por hipotesis inductiva 
+\begin_inset Formula $v-e+r=2\iff\left(v-1\right)-\left(e-1\right)+r=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+En caso contrario, sean 
+\begin_inset Formula $C$
+\end_inset
+
+ el ciclo de 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $a$
+\end_inset
+
+ una arista de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Observemos que el grafo 
+\begin_inset Formula $G-a$
+\end_inset
+
+ sigue siendo conexo pues hemos removido una arista que formaba parte de
+ un ciclo.
+ Ademas el numero de regiones se ha decrementado en uno pues la region que
+ quedaba delimitada dentro del ciclo se ha unido a la region de afuera.
+ Ahora podemos afirmar por hipotesis inductiva que 
+\begin_inset Formula $v-e+r=2\iff v-\left(e-1\right)+\left(r-1\right)=2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un grafo conexo, simple y plano con 
+\begin_inset Formula $\left|V\right|=v$
+\end_inset
+
+, 
+\begin_inset Formula $\left|E\right|=e$
+\end_inset
+
+ y 
+\begin_inset Formula $r$
+\end_inset
+
+ regiones; entonces 
+\begin_inset Formula $3r\leq2e$
+\end_inset
+
+ y 
+\begin_inset Formula $e\leq3v-6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Como cada ciclo tiene al menos tres aristas, sabemos que cada cara esta
+ rodeada de al menos tres aristas; entonces el numero de aristas que acotan
+ las caras es 
+\begin_inset Formula $3r$
+\end_inset
+
+.
+ Ademas cada arista toca como maximo dos caras, por lo tanto 
+\begin_inset Formula $2e\geq3r=3\left(e-v+2\right)\iff e\leq3v-6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Cota de grado minimo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+En todo grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ simple planar, existe un vertice 
+\begin_inset Formula $v/\delta\left(v\right)\leq5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos que todo vertice tiene grado mayor o igual a 6.
+ Por el lema del apreton de manos tenemos 
+\begin_inset Formula $2e={\displaystyle \sum_{v\in V}\delta\left(v\right)}\Rightarrow2e\geq6v$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $3v\leq e$
+\end_inset
+
+ y ademas por el corolario anterior 
+\begin_inset Formula $e\leq3v-6$
+\end_inset
+
+.
+ Sumando ambas desigualdades: 
+\begin_inset Formula $3v+e\leq e+3v-6\iff0\leq-6$
+\end_inset
+
+.
+ Absurdo.
+\end_layout
+
+\begin_layout Section
+Coloreo
+\end_layout
+
+\begin_layout Subsection
+Definiciones
+\end_layout
+
+\begin_layout Subsubsection
+Grafo dual
+\end_layout
+
+\begin_layout Standard
+Dada una representacion plana de un grafo plano 
+\begin_inset Formula $G$
+\end_inset
+
+ que determina las regiones 
+\begin_inset Formula $R_{1},\ldots,R_{r}$
+\end_inset
+
+, definimos un grafo dual 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ tomando 
+\begin_inset Formula $V\left(G^{*}\right)=\left\{ R_{1},\ldots,R_{r}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $E\left(G^{*}\right)$
+\end_inset
+
+ en correspondencia biunivoca con 
+\begin_inset Formula $E\left(G\right)$
+\end_inset
+
+ de manera que si 
+\begin_inset Formula $e\in E\left(G\right)$
+\end_inset
+
+ es frontera de 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{j}$
+\end_inset
+
+ (con 
+\begin_inset Formula $i$
+\end_inset
+
+ no necesariamente distinto a 
+\begin_inset Formula $j$
+\end_inset
+
+) entonces se corresponde con 
+\begin_inset Formula $e^{*}\in E\left(G^{*}\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $e^{*}=\left\{ R_{i},R_{j}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Coloreo
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, un 
+\begin_inset Formula $k$
+\end_inset
+
+-coloreo propio de un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $f:V\to C$
+\end_inset
+
+ donde 
+\begin_inset Formula $\left|C\right|=k$
+\end_inset
+
+ y tal que si 
+\begin_inset Formula $\left\{ v_{i},v_{j}\right\} \in E$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f\left(v_{i}\right)\neq f\left(v_{j}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Clase de color
+\end_layout
+
+\begin_layout Standard
+Dado un coloreo de 
+\begin_inset Formula $G$
+\end_inset
+
+, 
+\begin_inset Formula $f:V\to C$
+\end_inset
+
+, la clase de color de 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ es 
+\begin_inset Formula $\left\{ v\in V:f\left(v\right)=f\left(c\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Una clase de color es un conjunto independiente.
+\end_layout
+
+\begin_layout Subsubsection
+Numero cromatico
+\end_layout
+
+\begin_layout Standard
+El numero cromatico de un grafo simple 
+\begin_inset Formula $G$
+\end_inset
+
+ es el minimo 
+\begin_inset Formula $k/G$
+\end_inset
+
+ es 
+\begin_inset Formula $k$
+\end_inset
+
+-coloreable.
+ Notaremos a este numero como 
+\begin_inset Formula $\chi\left(G\right)=k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diremos ademas que un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ es 
+\begin_inset Formula $k$
+\end_inset
+
+-color critico si 
+\begin_inset Formula $\chi\left(G\right)=k$
+\end_inset
+
+ y para cualquier subgrafo propio 
+\begin_inset Formula $G'$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\chi\left(G'\right)<k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Conjuntos independientes y cliques
+\end_layout
+
+\begin_layout Standard
+Dado un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+, llamaremos conjunto estable o independiente, a un subconjunto 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left\{ u,v\right\} \notin E$
+\end_inset
+
+, para cualquier par de vertices de 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Una clique de un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ es un conjunto 
+\begin_inset Formula $Q\subseteq V/Q$
+\end_inset
+
+ induce un subgrafo completo.
+\end_layout
+
+\begin_layout Subsubsection
+Estabilidad
+\end_layout
+
+\begin_layout Standard
+Llamaremos estabilidad del grafo, o numero de independencia al numero 
+\begin_inset Formula $\alpha\left(G\right):=\max\left\{ \left|U\right|:U\subseteq V\left(G\right)\land U\text{ es independiente}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Numero de clique
+\end_layout
+
+\begin_layout Standard
+El numero de clique de un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega\left(G\right)=\max\left\{ \left|Q\right|:Q\subseteq V\left(G\right)\land G\text{ es una clique}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teoremas y algoritmos
+\end_layout
+
+\begin_layout Subsubsection
+Algoritmo de coloreo
+\end_layout
+
+\begin_layout Paragraph
+Entrada
+\end_layout
+
+\begin_layout Standard
+Un grafo simple 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ con vertices ordenados 
+\begin_inset Formula $v_{1},\ldots,v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Salida
+\end_layout
+
+\begin_layout Standard
+Un 
+\begin_inset Formula $k$
+\end_inset
+
+-coloreo de 
+\begin_inset Formula $G$
+\end_inset
+
+, donde 
+\begin_inset Formula $k=\max\left\{ \delta\left(v\right):v\in V\right\} +1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Algoritmo
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+colors(G):
+\end_layout
+
+\begin_layout Plain Layout
+
+	colores = [1..k];
+\end_layout
+
+\begin_layout Plain Layout
+
+	for i = 1 to n:
+\end_layout
+
+\begin_layout Plain Layout
+
+		vadyacentes = [v in V | {v, vi} in E];
+\end_layout
+
+\begin_layout Plain Layout
+
+		cadyacentes = [f[vj] | vj in vadyacentes];
+\end_layout
+
+\begin_layout Plain Layout
+
+		f[i] = minimum [c in colores | c not in cadyacentes];
+\end_layout
+
+\begin_layout Plain Layout
+
+	return f;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Standard
+Se puede deducir que 
+\begin_inset Formula $\chi\left(G\right)\leq k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Conexidad del grafo dual
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ es un grafo plano, entonces 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ es conexo.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsubsection
+Planaridad del grafo dual
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ es un grafo plano, entonces 
+\begin_inset Formula $\exists G^{*}/G^{*}$
+\end_inset
+
+ es plano.
+ Mas aun: si 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo entonces 
+\begin_inset Formula $G^{**}\simeq G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema de los cinco colores
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Todo grafo simple y planar es 5-coloreable.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Haremos la demostracion por induccion sobre el numero de vertices 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Casos base 
+\begin_inset Formula $n\leq5$
+\end_inset
+
+: Como maximo tenemos cinco vertices, luego podemos pintar uno de cada color.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $n=k$
+\end_inset
+
+: Supongamos que todo grafo simple plano con 
+\begin_inset Formula $k$
+\end_inset
+
+ vertices es 5-coloreable.
+ Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left|V\right|=k+1$
+\end_inset
+
+, luego por la cota del grado minimo sabemos que 
+\begin_inset Formula $\exists v\in V/\delta\left(v\right)\leq5$
+\end_inset
+
+.
+ Si consideramos 
+\begin_inset Formula $G'=G-v$
+\end_inset
+
+ sabemos por hipotesis inductiva que 
+\begin_inset Formula $G'$
+\end_inset
+
+ es 5-coloreable.
+ Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ dicho coloreo.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $\delta\left(v\right)\leq4$
+\end_inset
+
+: Como los vecinos de 
+\begin_inset Formula $v$
+\end_inset
+
+ tienen a lo sumo 4 colores distintos, siempre nos sobra un color para extender
+ el coloreo de 
+\begin_inset Formula $G'$
+\end_inset
+
+ a un 5-coloreo de 
+\begin_inset Formula $G$
+\end_inset
+
+, utilizando el color restante para 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $\delta\left(v\right)=5$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si para los vecinos de 
+\begin_inset Formula $v$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+ asigna a lo sumo 4 colores distintos, de igual manera que en el caso anterior
+ podemos extender dicho coloreo a 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $v_{1},\ldots,v_{5}$
+\end_inset
+
+ los vertices adyacentes a 
+\begin_inset Formula $v$
+\end_inset
+
+ y supongamos 
+\begin_inset Formula $\text{\ensuremath{f\left(v_{i}\right)=i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Consideremos el subrafo de 
+\begin_inset Formula $G'$
+\end_inset
+
+ inducido por los vertices de color 
+\begin_inset Formula $1$
+\end_inset
+
+ o 
+\begin_inset Formula $3$
+\end_inset
+
+, es decir que cada arista conecta un vertice de color 
+\begin_inset Formula $1$
+\end_inset
+
+ con otro de color 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ 
+\bar under
+Si 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{3}$
+\end_inset
+
+ se encuentran en diferentes componentes conexas
+\bar default
+, definimos un coloreo 
+\begin_inset Formula $f'$
+\end_inset
+
+ donde intercambiamos los colores 
+\begin_inset Formula $1$
+\end_inset
+
+ y 
+\begin_inset Formula $3$
+\end_inset
+
+ en la componente de 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+.
+ Ahora, los vecinos de 
+\begin_inset Formula $v$
+\end_inset
+
+ no estan pintados de color 
+\begin_inset Formula $1$
+\end_inset
+
+, pudiendo extender 
+\begin_inset Formula $f'$
+\end_inset
+
+ a un 5-coloreo de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\bar under
+De lo contrario
+\bar default
+ consideremos el subrafo de 
+\begin_inset Formula $G'$
+\end_inset
+
+ inducido por los vertices de color 
+\begin_inset Formula $2$
+\end_inset
+
+ o 
+\begin_inset Formula $4$
+\end_inset
+
+.
+ Los vertices 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+ han de estar en diferentes componentes conexas pues en otro caso, 
+\begin_inset Formula $G$
+\end_inset
+
+ no seria plano ya que el ciclo 
+\begin_inset Formula $v_{1},\ldots,v_{3},v,v_{1}$
+\end_inset
+
+ intersecaria al camino 
+\begin_inset Formula $v_{2},\ldots,v_{4}$
+\end_inset
+
+.
+ Esto nos permite aplicar un razonamiento analogo al anterior para 5-colorear
+ a 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Teorema de los cuatro colores
+\end_layout
+
+\begin_layout Standard
+Todo grafo plano simple se puede pintar con cuatro colores.
+\end_layout
+
+\begin_layout Subsubsection
+Relacion entre vertices, numero cromatco y estabilidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Para todo grafo simple 
+\begin_inset Formula $G$
+\end_inset
+
+ vale que: 
+\begin_inset Formula $\left|V\left(G\right)\right|\leq\alpha\left(G\right)\chi\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ un coloreo optimo de 
+\begin_inset Formula $G$
+\end_inset
+
+ con colores 
+\begin_inset Formula $C=\left\{ 1,\ldots,\chi\left(G\right)\right\} $
+\end_inset
+
+, como 
+\begin_inset Formula $f$
+\end_inset
+
+ induce una particion de los nodos en conjuntos independientes, resulta:
+\begin_inset Formula 
+\[
+\left|V\left(G\right)\right|=\sum_{i=1}^{\chi\left(G\right)}\left|\left[i\right]\right|\leq\sum_{i=1}^{\chi\left(G\right)}\alpha\left(G\right)=\chi\left(G\right)\alpha\left(G\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Relacion entre numero de clique y numero cromatico
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dado un grafo simple 
+\begin_inset Formula $G$
+\end_inset
+
+ vale que 
+\begin_inset Formula $\omega\left(G\right)\leq\chi\left(G\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S\subseteq V/\left|S\right|=\omega\left(S\right)$
+\end_inset
+
+, como todos los vertices de 
+\begin_inset Formula $S$
+\end_inset
+
+ son adyacentes, necesitamos 
+\begin_inset Formula $\omega\left(S\right)$
+\end_inset
+
+ colores para pintar solo esos vertices, de donde sigue el resultado.
+\end_layout
+
+\begin_layout Subsubsection
+Relacion entre independencia y clique
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Como cada subconjunto de 
+\begin_inset Formula $G$
+\end_inset
+
+ es estable si y solo si es una clique en 
+\begin_inset Formula $\overline{G}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\alpha\left(G\right)=\omega\left(\overline{G}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\omega\left(G\right)=\alpha\left(\overline{G}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Chapter
+Arboles
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Arbol
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ se deonmina arbol, si es conexo y aciclico.
+\end_layout
+
+\begin_layout Subsection
+Bosque
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ se denomina bosque si es aciclico.
+\end_layout
+
+\begin_layout Subsection
+Arbol con raiz
+\end_layout
+
+\begin_layout Standard
+Un arbol con raiz es un arbol con uno nodo distinguido, llamado raiz.
+\end_layout
+
+\begin_layout Subsection
+Terminologia
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $T=\left(V,E\right)$
+\end_inset
+
+ un arbol con raiz 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $C=v_{0},\ldots,v_{n}$
+\end_inset
+
+ un camino simple en 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Nivel: Llamaremos nivel de un nodo 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ a la longitud del unico 
+\begin_inset Formula $v_{0}v$
+\end_inset
+
+-camino simple en 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Altura: La altura de 
+\begin_inset Formula $T$
+\end_inset
+
+ es la longitud maxima de un 
+\begin_inset Formula $v_{0}v$
+\end_inset
+
+-camino simple en 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Padre: Llamaremos padre de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ a 
+\begin_inset Formula $v_{i-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Ancestros: Diremos que 
+\begin_inset Formula $v_{0},\ldots,v_{i-1}$
+\end_inset
+
+ son ancestros de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Hijo: 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ es hijo de 
+\begin_inset Formula $v_{i-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Descendiente: Si 
+\begin_inset Formula $u\in V$
+\end_inset
+
+ es ancestro de 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ diremos tambien que 
+\begin_inset Formula $v$
+\end_inset
+
+ es descendiente de 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Hermanos: Si 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $v$
+\end_inset
+
+ son hijos de 
+\begin_inset Formula $w$
+\end_inset
+
+, entonces 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $v$
+\end_inset
+
+ se llaman hermanos.
+\end_layout
+
+\begin_layout Itemize
+Hoja: Si 
+\begin_inset Formula $v$
+\end_inset
+
+ no tiene hijos, diremos que 
+\begin_inset Formula $v$
+\end_inset
+
+ es una hoja.
+\end_layout
+
+\begin_layout Itemize
+Vertice interno: Aquellos vertices que no sean hojas se los llama vertices
+ internos.
+\end_layout
+
+\begin_layout Itemize
+Subarbol: Un subarbol con raiz 
+\begin_inset Formula $x$
+\end_inset
+
+ es el arbol 
+\begin_inset Formula $T'=\left(V',E'\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $V'=\left\{ x\right\} \cup\left\{ v\in V:x\text{ es ancestro de }v\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $E'=\left\{ e\in E:e\text{ pertenece a algun }xv\text{-camino con }v\in V'\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Excentricidad: La exentricidad de un vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ es la longitud maxima de un camino simple que alli comienza.
+\end_layout
+
+\begin_layout Itemize
+Centro: Un vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ es un centro si su excentricidad es minima.
+\end_layout
+
+\begin_layout Itemize
+Radio: Excentricidad del centro.
+\end_layout
+
+\begin_layout Subsection
+Arbol de expansion
+\end_layout
+
+\begin_layout Standard
+Dado un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+, un arbol de expansion (o arbol generador) de 
+\begin_inset Formula $G$
+\end_inset
+
+ es un subgrafo 
+\begin_inset Formula $T$
+\end_inset
+
+ tal que 
+\begin_inset Formula $V\left(T\right)=V\left(G\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+ es un arbol.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ es un grafo con pesos en las aristas, un arbol de expansion minimo es un
+ arbol de expansion con peso minimo.
+\end_layout
+
+\begin_layout Subsection
+Arbol n-ario
+\end_layout
+
+\begin_layout Standard
+Un arbol con raiz 
+\begin_inset Formula $T$
+\end_inset
+
+ es 
+\begin_inset Formula $n$
+\end_inset
+
+-ario (con 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+) si cada vertice interno tiene a lo sumo 
+\begin_inset Formula $n$
+\end_inset
+
+ hijos.
+\end_layout
+
+\begin_layout Standard
+Un arbol 
+\begin_inset Formula $n$
+\end_inset
+
+-ario se dice completo si cada vertice interno tiene exactamente 
+\begin_inset Formula $n$
+\end_inset
+
+ hijos.
+\end_layout
+
+\begin_layout Standard
+Diremos que 
+\begin_inset Formula $T$
+\end_inset
+
+ es equilibrado si cada hoja tiene nivel 
+\begin_inset Formula $a$
+\end_inset
+
+ o 
+\begin_inset Formula $a-1$
+\end_inset
+
+, donde 
+\begin_inset Formula $a$
+\end_inset
+
+ es la altura del arbol.
+\end_layout
+
+\begin_layout Standard
+Diremos que 
+\begin_inset Formula $T$
+\end_inset
+
+ esta balanceado si para cada vertice 
+\begin_inset Formula $v$
+\end_inset
+
+, las alturas de los subarboles izquierdo y derecho difieren a lo sumo en
+ 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ La altura de un arbol vacio se define como 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Algoritmos
+\end_layout
+
+\begin_layout Subsection
+Busqueda a lo ancho
+\end_layout
+
+\begin_layout Paragraph
+Entrada
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ con vertices ordenados 
+\begin_inset Formula $v_{1},\ldots,v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Salida
+\end_layout
+
+\begin_layout Standard
+Un arbol de expansion.
+\end_layout
+
+\begin_layout Paragraph
+Algoritmo
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+bfs(G):
+\end_layout
+
+\begin_layout Plain Layout
+
+	S[0] = v1;
+\end_layout
+
+\begin_layout Plain Layout
+
+	V' = [v1];
+\end_layout
+
+\begin_layout Plain Layout
+
+	E' = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+	while len(V) != len(E') + 1: # faltan aristas
+\end_layout
+
+\begin_layout Plain Layout
+
+		for each x in S:
+\end_layout
+
+\begin_layout Plain Layout
+
+			for each y in V - V':
+\end_layout
+
+\begin_layout Plain Layout
+
+				if {x,y} in E:
+\end_layout
+
+\begin_layout Plain Layout
+
+					E' = E' ++ [{x, y}];
+\end_layout
+
+\begin_layout Plain Layout
+
+					V' = V' ++ [y];
+\end_layout
+
+\begin_layout Plain Layout
+
+		S = sort(sons(S));
+\end_layout
+
+\begin_layout Plain Layout
+
+	return (V', E');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Busqueda en profundidad
+\end_layout
+
+\begin_layout Paragraph
+Entrada
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ con vertices ordenados 
+\begin_inset Formula $v_{1},\ldots,v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Salida
+\end_layout
+
+\begin_layout Standard
+Un arbol de expansion.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Algoritmo
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+dfs(G):
+\end_layout
+
+\begin_layout Plain Layout
+
+	w = v1;
+\end_layout
+
+\begin_layout Plain Layout
+
+	V' = [v1];
+\end_layout
+
+\begin_layout Plain Layout
+
+	E' = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+	while len(V) != len(E') + 1: # faltan aristas
+\end_layout
+
+\begin_layout Plain Layout
+
+		while exist {w, vk} | vk not in V':
+\end_layout
+
+\begin_layout Plain Layout
+
+			k = minimum such that {w, vk} not in V';
+\end_layout
+
+\begin_layout Plain Layout
+
+			E' = E' ++ [{w, vk}];
+\end_layout
+
+\begin_layout Plain Layout
+
+			V' = V' ++ [vk];
+\end_layout
+
+\begin_layout Plain Layout
+
+			w = vk;
+\end_layout
+
+\begin_layout Plain Layout
+
+		w = fahter(w); # retroceso
+\end_layout
+
+\begin_layout Plain Layout
+
+	return (V', E');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algoritmo de Prim
+\end_layout
+
+\begin_layout Paragraph
+Entrada
+\end_layout
+
+\begin_layout Standard
+Un grafo ponderado 
+\begin_inset Formula $G=\left(V,E,w\right)$
+\end_inset
+
+ con vertices 
+\begin_inset Formula $v_{1},\ldots,v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Salida
+\end_layout
+
+\begin_layout Standard
+Un arbol de expansion minimo.
+\end_layout
+
+\begin_layout Paragraph
+Algoritmo
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+prim(G):
+\end_layout
+
+\begin_layout Plain Layout
+
+	for i in [2..n]: v[i] = false;
+\end_layout
+
+\begin_layout Plain Layout
+
+	v[1] = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+	E' = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+	for i in [1..n-1]: # se agregan n-1 aristas
+\end_layout
+
+\begin_layout Plain Layout
+
+		min = infinity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		for j in [1..n]:
+\end_layout
+
+\begin_layout Plain Layout
+
+			if v[j]:
+\end_layout
+
+\begin_layout Plain Layout
+
+				for k in [1..n]:
+\end_layout
+
+\begin_layout Plain Layout
+
+					if not (v[k] && w(j,k) < min):
+\end_layout
+
+\begin_layout Plain Layout
+
+						add_vertex = k;
+\end_layout
+
+\begin_layout Plain Layout
+
+						e = {j, k};
+\end_layout
+
+\begin_layout Plain Layout
+
+						min = w(j,k);
+\end_layout
+
+\begin_layout Plain Layout
+
+		v[add_vertex] = true;
+\end_layout
+
+\begin_layout Plain Layout
+
+		E' = E' ++ [e];
+\end_layout
+
+\begin_layout Plain Layout
+
+	return (V,E');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algoritmo de Kruskal
+\end_layout
+
+\begin_layout Paragraph
+Entrada
+\end_layout
+
+\begin_layout Standard
+Un grafo ponderado 
+\begin_inset Formula $G=\left(V,E,w\right)$
+\end_inset
+
+ con vertices 
+\begin_inset Formula $v_{1},\ldots,v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Salida
+\end_layout
+
+\begin_layout Standard
+Un arbol de expansion minimo.
+\end_layout
+
+\begin_layout Paragraph
+Algoritmo
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+kruskal(G):
+\end_layout
+
+\begin_layout Plain Layout
+
+	E' = [];
+\end_layout
+
+\begin_layout Plain Layout
+
+	while len(E') - 1 != len(V):
+\end_layout
+
+\begin_layout Plain Layout
+
+		min = infinity;
+\end_layout
+
+\begin_layout Plain Layout
+
+		for each e in E:
+\end_layout
+
+\begin_layout Plain Layout
+
+			if cycles(V, E' ++ [e]) == 0 && w(e) < min:
+\end_layout
+
+\begin_layout Plain Layout
+
+				min = w(e);
+\end_layout
+
+\begin_layout Plain Layout
+
+				add_edge = e;
+\end_layout
+
+\begin_layout Plain Layout
+
+		E' = E' ++ [e];
+\end_layout
+
+\begin_layout Plain Layout
+
+	return (V,E');
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Minima cantidad de hojas
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ un arbol con 
+\begin_inset Formula $\left|V\right|\geq2$
+\end_inset
+
+ entonces 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene como minimo 2 hojas.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $C=v_{0},v_{1},\ldots,v_{k}$
+\end_inset
+
+ el 
+\begin_inset Formula $v_{0}v_{k}$
+\end_inset
+
+-camino simple de maxima longitud en 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Por definicion 
+\begin_inset Formula $G$
+\end_inset
+
+ no contiene ciclos, luego 
+\begin_inset Formula $v_{0}\neq vk$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $\delta\left(v_{0}\right)=\delta\left(v_{k}\right)=1$
+\end_inset
+
+ pues de lo contrario 
+\begin_inset Formula $C$
+\end_inset
+
+ no seria de longitud maxima.
+ Por lo tanto 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ son dos hojas distintas de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Definiciones equivalentes
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Las siguientes definiciones son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo y no tiene ciclos.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ no tiene ciclos y 
+\begin_inset Formula $\left|V\right|=\left|E\right|+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo y 
+\begin_inset Formula $\left|V\right|=\left|E\right|+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Existe un unico camino simple entre cualquier par de vertices.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{1\Rightarrow2}$
+\end_inset
+
+: Por hipotesis ya sabemos que es aciclico.
+ Mostraremos por induccion en la cantidad de vertices que todo grafo conexo
+ y aciclico tiene 
+\begin_inset Formula $\left|V\right|=\left|E\right|+1$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $\left|V\right|=1$
+\end_inset
+
+: Tenemos 
+\begin_inset Formula $1=0+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $\left|V\right|=k$
+\end_inset
+
+: Supongamos que para cualquier grafo conexo y aciclico 
+\begin_inset Formula $G$
+\end_inset
+
+ con 
+\begin_inset Formula $\left|V\right|\leq k$
+\end_inset
+
+ vertices resulta 
+\begin_inset Formula $\left|V\right|=\left|E\right|+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G'$
+\end_inset
+
+ un grafo conexo y aciclico con 
+\begin_inset Formula $k+1$
+\end_inset
+
+ vertices, luego el grafo 
+\begin_inset Formula $G=G'-h$
+\end_inset
+
+ (donde 
+\begin_inset Formula $h$
+\end_inset
+
+ es una hoja) verifica la hipotesis inductiva, y ademas tiene 
+\begin_inset Formula $\left|V'\right|-1$
+\end_inset
+
+ vertices y 
+\begin_inset Formula $\left|E'\right|-1$
+\end_inset
+
+ aristas, por lo tanto: 
+\begin_inset Formula $\left|V'\right|-1=\left|E'\right|-1+1\iff\left|V'\right|=\left|E'\right|+1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{2\Rightarrow1}$
+\end_inset
+
+: Por hipotesis ya sabemos que es aciclico.
+ Supongamos que no sea conexo y tenga 
+\begin_inset Formula $n$
+\end_inset
+
+ componentes conexas 
+\begin_inset Formula $G_{1},\ldots,G_{n}$
+\end_inset
+
+.
+ Cada 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ es conexa y aciclica luego por 
+\begin_inset Formula $1\Rightarrow2$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $\left|V_{i}\right|=\left|E_{i}\right|+1$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\left|V\right|=\sum_{i=1}^{n}\left|V_{i}\right|=\sum_{i=1}^{n}\left(\left|E_{i}\right|+1\right)=n+\sum_{i=1}^{n}\left|E_{i}\right|=n+\left|E\right|
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\left|V\right|-n<\left|V\right|-1\iff\left|E\right|<\left|V\right|-1$
+\end_inset
+
+ lo cual contradice la hipotesis.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{1\Rightarrow3}$
+\end_inset
+
+: Por hipotesis 
+\begin_inset Formula $G$
+\end_inset
+
+ no tiene ciclos y por 
+\begin_inset Formula $1\Rightarrow2$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\text{\ensuremath{\left|V\right|=\left|E\right|+1}}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{3\Rightarrow1}$
+\end_inset
+
+: Por hipotesis 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo.
+ Supongamos que 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene un ciclo 
+\begin_inset Formula $C$
+\end_inset
+
+ y sea 
+\begin_inset Formula $e$
+\end_inset
+
+ una arista de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Consideremos el grafo 
+\begin_inset Formula $G'=G-e$
+\end_inset
+
+.
+ Como hemos removido a 
+\begin_inset Formula $e$
+\end_inset
+
+ dentro de un ciclo, el grafo 
+\begin_inset Formula $G'$
+\end_inset
+
+ sigue siendo conexo y ademas 
+\begin_inset Formula $\left|V\left(G'\right)\right|=\left|E\left(G'\right)\right|$
+\end_inset
+
+ pero como 
+\begin_inset Formula $G'$
+\end_inset
+
+ es conexo deberia ser 
+\begin_inset Formula $\left|E\right|\geq\left|V\right|-1$
+\end_inset
+
+.
+ Contradiccion.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{1\Rightarrow4}$
+\end_inset
+
+: Como 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo sabemos que existe un camino entre cualquier par de vertices
+ y por lo tanto tambien un camino simple.
+ Supongamos que existen dos 
+\begin_inset Formula $uw$
+\end_inset
+
+-caminos simples diferentes: 
+\begin_inset Formula $C=u,b_{1},b_{2},\ldots,b_{n},w$
+\end_inset
+
+ y 
+\begin_inset Formula $C'=u,v_{1},v_{2},\ldots,v_{m},w$
+\end_inset
+
+ luego 
+\begin_inset Formula $u,b_{1},\ldots,b_{n},w,v_{m},\ldots,v_{1},u$
+\end_inset
+
+ es un ciclo.
+ Contradiccion.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{4\Rightarrow1}$
+\end_inset
+
+: Por definicion 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo.
+ Ademas supongamos que 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene un ciclo, luego tambien tiene un ciclo simple 
+\begin_inset Formula $v_{0},v_{1},\ldots,v_{n},v_{0}$
+\end_inset
+
+ pero entonces 
+\begin_inset Formula $v_{0},v_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{0},v_{n},\ldots,v_{1}$
+\end_inset
+
+ serian dos caminos simples diferentes entre 
+\begin_inset Formula $v_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+; por lo que 
+\begin_inset Formula $G$
+\end_inset
+
+ es aciclico.
+\end_layout
+
+\begin_layout Subsection
+Formula de Cayley
+\end_layout
+
+\begin_layout Standard
+La cantidad de arboles con 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices es 
+\begin_inset Formula $n^{n-2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Arboles de expansion y conexidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene un arbol de expansion si y solo si 
+\begin_inset Formula $G$
+\end_inset
+
+ es conexo.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ el arbol de expansion de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Entre cualquier par de vertices de 
+\begin_inset Formula $T$
+\end_inset
+
+ hay un camino, y como 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene todos los vertices de 
+\begin_inset Formula $G$
+\end_inset
+
+, ese mismo camino esta en 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Si 
+\begin_inset Formula $G$
+\end_inset
+
+ es aciclico, ya es un arbol.
+ Si no, quitamos aristas de todos los ciclos hasta que 
+\begin_inset Formula $G$
+\end_inset
+
+ sea aciclico.
+ Como hemos quitado aristas de ciclos, el grafo resultante sigue siendo
+ conexo y por lo tanto un arbol.
+\end_layout
+
+\begin_layout Subsection
+Correctitud del algoritmo de Prim
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+El algoritmo de Prim es correcto, es decir, al terminar el algoritmo 
+\begin_inset Formula $T$
+\end_inset
+
+ es un arbol de expansion minima.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Definimos 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ como el subgrafo inducido por 
+\begin_inset Formula $E'$
+\end_inset
+
+ luego de la i-esima iteracion del ciclo for (lineas 5-15) y 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ como el grafo sin aristas cuyo unico vertice es 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+.
+ Probaremos por induccion en las repeticiones del ciclo, que 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ esta contenido en algun arbol de expansion minima.
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $i=0$
+\end_inset
+
+: Como 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ es un vertice solo, esta contenido en todo arbol de expansion minima.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $i=k$
+\end_inset
+
+: Supongamos que 
+\begin_inset Formula $T_{k}=\left(V,E_{k}\right)$
+\end_inset
+
+ esta contenido en algun arbol de expansion minima 
+\begin_inset Formula $T'$
+\end_inset
+
+.
+ El algoritmo selecciona una arista 
+\begin_inset Formula $\left\{ p,q\right\} $
+\end_inset
+
+ de peso minimo tal que 
+\begin_inset Formula $p\in V\land q\notin V$
+\end_inset
+
+ y la agrega a 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+ para producir 
+\begin_inset Formula $T_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\left\{ p,q\right\} $
+\end_inset
+
+ esta en 
+\begin_inset Formula $T'$
+\end_inset
+
+, entonces 
+\begin_inset Formula $T_{k+1}$
+\end_inset
+
+ esa contenida en dicho arbol.
+\end_layout
+
+\begin_layout Itemize
+De lo contrario, 
+\begin_inset Formula $T'+\left\{ p,q\right\} $
+\end_inset
+
+ contiene un ciclo 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Elijamos de ese ciclo otra arista 
+\begin_inset Formula $\left\{ x,y\right\} \neq\left\{ p,q\right\} $
+\end_inset
+
+ con 
+\begin_inset Formula $x\in V$
+\end_inset
+
+ y 
+\begin_inset Formula $y\notin V$
+\end_inset
+
+, luego 
+\begin_inset Formula $w\left(x,y\right)\geq w\left(p,q\right)$
+\end_inset
+
+; pues de lo contrario el algoritmo no hubiera elegido a 
+\begin_inset Formula $\left\{ p,q\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Observemos que el grafo 
+\begin_inset Formula $T''=\left[T'+\left\{ p,q\right\} \right]-\left\{ x,y\right\} $
+\end_inset
+
+ tiene peso menor o igual a 
+\begin_inset Formula $T'$
+\end_inset
+
+ y como 
+\begin_inset Formula $T'$
+\end_inset
+
+ es de peso minimo, 
+\begin_inset Formula $T''$
+\end_inset
+
+ resulta ser un arbol de expansion minima que contiene a 
+\begin_inset Formula $T_{k+1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Correctitud del algoritmo de Kruskal
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Cantidad maxima de hojas
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ un arbol 
+\begin_inset Formula $n$
+\end_inset
+
+-ario con 
+\begin_inset Formula $h$
+\end_inset
+
+ hojas y altura 
+\begin_inset Formula $a$
+\end_inset
+
+; entonces: 
+\begin_inset Formula $h\leq n^{a}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Lo demostraremos por induccion en la altura.
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $a=0$
+\end_inset
+
+: El arbol consiste en un solo vertice, luego 
+\begin_inset Formula $1\leq n^{0}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset Formula $a=k$
+\end_inset
+
+: Supongamos que para todo arbol de altura menor o igual a 
+\begin_inset Formula $k$
+\end_inset
+
+ se cumple la desigualdad y sea 
+\begin_inset Formula $T$
+\end_inset
+
+ un arbol de altura 
+\begin_inset Formula $k+1$
+\end_inset
+
+ con 
+\begin_inset Formula $h$
+\end_inset
+
+ hojas.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supongamos que la raiz tiene hijos 
+\begin_inset Formula $v_{1},\ldots,v_{m}$
+\end_inset
+
+ (con 
+\begin_inset Formula $m\leq n$
+\end_inset
+
+) y sean 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ el subarbol con raiz en 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+, con altura 
+\begin_inset Formula $a_{i}\leq k$
+\end_inset
+
+ y 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ vertices terminales.
+ Por hipotesis inductiva para cada 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $h_{i}\leq n^{a_{i}}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $h=h_{1}+\ldots+h_{m}$
+\end_inset
+
+ obtenemos:
+\begin_inset Formula 
+\[
+h=\sum_{i=1}^{m}h_{i}\leq\sum_{i=1}^{m}n^{a_{i}}\leq\sum_{i=1}^{m}n^{k}=mn^{k}\leq nn^{k}=n^{k+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Propiedades de los arboles completos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ un arbol 
+\begin_inset Formula $n$
+\end_inset
+
+-ario completo con 
+\begin_inset Formula $h$
+\end_inset
+
+ hojas, 
+\begin_inset Formula $i$
+\end_inset
+
+ vertices internos, 
+\begin_inset Formula $v$
+\end_inset
+
+ vertices en total y altura 
+\begin_inset Formula $a$
+\end_inset
+
+; entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v=ni+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h=\left(n-1\right)i+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\leq h-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Los vertices de 
+\begin_inset Formula $T$
+\end_inset
+
+ consisten en los vertices que son hijos de alguien y los que no.
+ Existe un solo vertice que no es hijo, la raiz.
+ Como hay 
+\begin_inset Formula $i$
+\end_inset
+
+ vertices internos, cada uno con 
+\begin_inset Formula $n$
+\end_inset
+
+ hijos entonces el numero total de vertices es 
+\begin_inset Formula $ni+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Como 
+\begin_inset Formula $h=v-i$
+\end_inset
+
+ entonces 
+\begin_inset Formula $h=ni+1-i=\left(n-1\right)i+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Chapter
+Flujos en redes y emparejamientos
+\end_layout
+
+\begin_layout Section
+Redes
+\end_layout
+
+\begin_layout Subsection
+Red de transporte
+\end_layout
+
+\begin_layout Standard
+Una red de transporte es un grafo dirigido simple 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+, con pesos no negativos en las aristas tal que:
+\end_layout
+
+\begin_layout Itemize
+Existe un vertice 
+\begin_inset Quotes cld
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\begin_inset Quotes crd
+\end_inset
+
+ (al que llamaremos origen), que no tiene aristas de entrada.
+\end_layout
+
+\begin_layout Itemize
+Existe un vertice 
+\begin_inset Quotes cld
+\end_inset
+
+
+\begin_inset Formula $z$
+\end_inset
+
+
+\begin_inset Quotes crd
+\end_inset
+
+, (al que llamaremos destino) que no tiene aristas de salida.
+\end_layout
+
+\begin_layout Subsection
+Flujo
+\end_layout
+
+\begin_layout Standard
+Un flujo sobre una red 
+\begin_inset Formula $G$
+\end_inset
+
+, es una funcion 
+\begin_inset Formula $f:E\to\mathbb{R}_{0}^{+}$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_layout Enumerate
+Para cualquier vertice 
+\begin_inset Formula $v$
+\end_inset
+
+ (excepto 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $z$
+\end_inset
+
+) resulta: 
+\begin_inset Formula ${\displaystyle \sum_{\left(u,v\right)\in E}f\left(u,v\right)=\sum_{\left(v,u\right)\in E}f\left(v,u\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Para cualquier arista resulta: 
+\begin_inset Formula $f\left(u,v\right)\leq w\left(u,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+A veces se dice tambien que 
+\begin_inset Formula $f$
+\end_inset
+
+ es un flujo si satisface la propiedad de conservacion de flujo
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+; y que es un flujo factible si satisface ambas condiciones.
+\end_layout
+
+\begin_layout Subsection
+Valor de flujo
+\end_layout
+
+\begin_layout Standard
+El valor de un flujo 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $val\left(f\right)={\displaystyle \sum_{\left(a,u\right)\in E}}f\left(a,u\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $val\left(f\right)\leq\underbrace{{\displaystyle \sum_{\left(u,z\right)\in E}}w\left(u,z\right)}_{\left(1\right)}$
+\end_inset
+
+ y 
+\begin_inset Formula $val\left(f\right)\leq\underbrace{{\displaystyle \sum_{\left(a,u\right)\in E}}w\left(a,u\right)}_{\left(2\right)}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $val\left(v\right)\leq\min\left\{ \left(1\right),\left(2\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Corte
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G=\left(V,E,w\right)$
+\end_inset
+
+ una red y dado 
+\begin_inset Formula $P\subset V/a\in P\land z\notin P$
+\end_inset
+
+, llamaremos 
+\begin_inset Formula $az$
+\end_inset
+
+-corte al siguiente conjunto: 
+\begin_inset Formula 
+\[
+\left(P,\overline{P}\right)=\left\{ \left(u,v\right)\in E:u\in P\land v\in\overline{P}\right\} \cup\left\{ \left(u,v\right)\in E:u\in\overline{P}\land v\in P\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La capacidad de corte de 
+\begin_inset Formula $\left(P,\overline{P}\right)$
+\end_inset
+
+ es 
+\begin_inset Formula $w\left(P,\overline{P}\right)={\displaystyle \sum_{\left(u,v\right)\in\left(P,\overline{P}\right)/u\in P}}w\left(u,v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Algoritmo de Ford-Fulkerson
+\end_layout
+
+\begin_layout Enumerate
+Partimos de un flujo inicial cualquiera.
+\end_layout
+
+\begin_layout Enumerate
+Etiquetamos la fuente con 
+\begin_inset Formula $\left(-,\infty\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+A cualquier vertice 
+\begin_inset Formula $x$
+\end_inset
+
+ adyacente a la fuente, lo etiquetamos asi:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $w\left(a,x\right)-f\left(a,x\right)>0$
+\end_inset
+
+, definimos 
+\begin_inset Formula $\Delta\left(x\right)=w\left(a,x\right)-f\left(a,x\right)$
+\end_inset
+
+ y etiquetamos el vertice 
+\begin_inset Formula $x$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(a^{+},\Delta\left(x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $w\left(a,x\right)-f\left(a,x\right)=0$
+\end_inset
+
+, dejamos el vertice sin etiquetar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mientras exista un vertice 
+\begin_inset Formula $x\neq a$
+\end_inset
+
+ que este etiquetado, y una arista 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $y$
+\end_inset
+
+ no este etiquetado; etiquetamos el vertice 
+\begin_inset Formula $y$
+\end_inset
+
+ como sigue:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $w\left(x,y\right)-f\left(x,y\right)>0$
+\end_inset
+
+, definimos 
+\begin_inset Formula $\Delta\left(y\right)=\min\left\{ \Delta\left(x\right),w\left(x,y\right)-f\left(x,y\right)\right\} $
+\end_inset
+
+ y etiquetamos el vertice 
+\begin_inset Formula $y$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(x^{+},\Delta\left(y\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $w\left(x,y\right)-f\left(x,y\right)=0$
+\end_inset
+
+, dejamos el vertice sin etiquetar.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+De forma analoga, mientras exista un vertice 
+\begin_inset Formula $x\neq a$
+\end_inset
+
+ que este etiquetado, y una arista 
+\begin_inset Formula $\left(y,x\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $y$
+\end_inset
+
+ no este etiquetado; etiquetamos el vertice 
+\begin_inset Formula $y$
+\end_inset
+
+ como sigue:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f\left(y,x\right)>0$
+\end_inset
+
+, etiquetamos el vertice como 
+\begin_inset Formula $\left(x^{-},\Delta\left(y\right)\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $\Delta\left(y\right)=\min\left\{ \Delta\left(x\right),f\left(y,x\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f\left(x,y\right)=0$
+\end_inset
+
+, dejamos el vertice sin etiquetar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Al finalizar el proceso de etiquetado pueden ocurrir dos cosas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si el vertice 
+\begin_inset Formula $z$
+\end_inset
+
+ no esta etiquetado, entonces se ha logrado el flujo maximo.
+\end_layout
+
+\begin_layout Itemize
+De lo contrario, sea 
+\begin_inset Formula $\left(y^{+},\Delta\left(z\right)\right)$
+\end_inset
+
+ la etiqueta de 
+\begin_inset Formula $z$
+\end_inset
+
+, entonces redefinimos 
+\begin_inset Formula $f\left(y,z\right)$
+\end_inset
+
+ como 
+\begin_inset Formula $f\left(y,z\right)+\Delta\left(z\right)$
+\end_inset
+
+.
+ Ahora consideremos la etiqueta del vertice 
+\begin_inset Formula $y$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(x^{+},\Delta\left(y\right)\right)$
+\end_inset
+
+: Incrementamos en forma analoga el flujo 
+\begin_inset Formula $f\left(x,y\right)$
+\end_inset
+
+ redefiniendolo como 
+\begin_inset Formula $f\left(x,y\right)+\Delta\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(x^{-},\Delta\left(y\right)\right)$
+\end_inset
+
+: Decrementamos en forma analoga el flujo 
+\begin_inset Formula $f\left(x,y\right)$
+\end_inset
+
+ redefiniendolo como 
+\begin_inset Formula $f\left(x,y\right)-\Delta\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Continuamos estre proceso de regreso al origen, borramos todas las etiquetas
+ y volvemos al punto 2.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Integridad de flujo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dada una red 
+\begin_inset Formula $G=\left(V,E,w\right)$
+\end_inset
+
+ y cualquier flujo 
+\begin_inset Formula $f$
+\end_inset
+
+ se tiene: 
+\begin_inset Formula $val\left(f\right)={\displaystyle \sum_{\left(u,z\right)\in E}f\left(u,z\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P\subset V/a\in P\land z\notin P$
+\end_inset
+
+, por la propiedad de conservacion de flujo vale el siguiente resultado:
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+val\left(f\right)=\sum_{\left(a,x\right)\in E}f\left(a,x\right)-\overbrace{\sum_{\left(x,a\right)\in E}f\left(x,a\right)}^{0}=\left[\sum_{v\in P\land x\in V}f\left(v,x\right)\right]-\left[\sum_{v\in P\land x\in V}f\left(x,v\right)\right]=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\left[\underbrace{\sum_{v\in P\land x\in P}f\left(v,x\right)}_{\left(*\right)}+\sum_{v\in P\land x\in\overline{P}}f\left(v,x\right)\right]-\left[\underbrace{\sum_{v\in P\land x\in P}f\left(x,v\right)}_{\left(*\right)}+\sum_{v\in P\land x\in\overline{P}}f\left(x,v\right)\right]=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{v\in P\land x\in\overline{P}}f\left(v,x\right)-\sum_{v\in\overline{P}\land x\in P}f\left(v,x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En particular para 
+\begin_inset Formula $P=V-\left\{ z\right\} $
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+val\left(f\right)=\sum_{v\in P\land x\in\overline{P}}f\left(v,x\right)-\sum_{v\in\overline{P}\land x\in P}f\left(v,x\right)={\displaystyle \sum_{\left(u,z\right)\in E}f\left(u,z\right)}-0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es un flujo factible en la red 
+\begin_inset Formula $G=\left(V,E,w\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(P,\overline{P}\right)$
+\end_inset
+
+ es un 
+\begin_inset Formula $az$
+\end_inset
+
+-corte, entonces 
+\begin_inset Formula $val\left(f\right)\leq w\left(P,\overline{P}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sabemos que el flujo de una arista esta acotado por su capacidad, luego
+ 
+\begin_inset Formula ${\displaystyle \sum_{v\in P\land x\in\overline{P}}f\left(v,x\right)}\leq w\left(P,\overline{P}\right)$
+\end_inset
+
+ y por el teorema anterior:
+\begin_inset Formula 
+\[
+val\left(f\right)=\sum_{v\in P\land x\in\overline{P}}f\left(v,x\right)-\sum_{v\in\overline{P}\land x\in P}f\left(v,x\right)\leq\sum_{v\in P\land x\in\overline{P}}f\left(v,x\right)\leq w\left(P,\overline{P}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Flujo maximo, corte minimo
+\end_layout
+
+\begin_layout Standard
+Dada una red 
+\begin_inset Formula $G$
+\end_inset
+
+, se verifica:
+\end_layout
+
+\begin_layout Enumerate
+Existe 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ flujo factible y un 
+\begin_inset Formula $az$
+\end_inset
+
+-corte 
+\begin_inset Formula $\left(P^{*},\overline{P^{*}}\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $val\left(f^{*}\right)=w\left(P^{*},\overline{P^{*}}\right)$
+\end_inset
+
+ y como consecuencia del teorema anterior, 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ es un flujo maximo y 
+\begin_inset Formula $\left(P^{*},\overline{P^{*}}\right)$
+\end_inset
+
+ un corte minimo.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es un flujo factible y 
+\begin_inset Formula $\left(P,P^{*}\right)$
+\end_inset
+
+ un 
+\begin_inset Formula $az$
+\end_inset
+
+-corte, entonces ambos son optimos si y solo si:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f\left(u,v\right)=w\left(u,v\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $\left(u,v\right)\in\left(P,\overline{P}\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $u\in P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(u,v\right)=0$
+\end_inset
+
+ para 
+\begin_inset Formula $\left(u,v\right)\in\left(P,\overline{P}\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $u\in\overline{P}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Emparejamientos
+\end_layout
+
+\begin_layout Subsection
+Definiciones
+\end_layout
+
+\begin_layout Itemize
+Un matching (emparejamiento) en un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ es un conjunto de aristas 
+\begin_inset Formula $M\subseteq E$
+\end_inset
+
+ tales que cualquier par de aristas diferentes no son adyacentes.
+\end_layout
+
+\begin_layout Itemize
+Diremos que 
+\begin_inset Formula $M$
+\end_inset
+
+ es un matching maximal si no existe otro matching 
+\begin_inset Formula $M'/M\subset M'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Un matching perfecto o completo es un matching que cubre todos los vertices
+ del grafo.
+\end_layout
+
+\begin_layout Subsection
+Camino alternante y aumentante
+\end_layout
+
+\begin_layout Standard
+Un camino 
+\begin_inset Formula $M$
+\end_inset
+
+-alternante en un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ es un camino cuyas aristas estan alternadas en 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Un camino 
+\begin_inset Formula $M$
+\end_inset
+
+-aumentante es un camino 
+\begin_inset Formula $M$
+\end_inset
+
+-alternante cuyos primer y ultimo vertice no son incididos por ninguna arista
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Lema de Berge
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Un matching 
+\begin_inset Formula $M$
+\end_inset
+
+ en un grafo 
+\begin_inset Formula $G$
+\end_inset
+
+ es maximal si y solo si 
+\begin_inset Formula $G$
+\end_inset
+
+ no tiene caminos 
+\begin_inset Formula $M$
+\end_inset
+
+-aumentantes.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Probaremos el contrareciproco: 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene un matching mayor que 
+\begin_inset Formula $M$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene un camino 
+\begin_inset Formula $M$
+\end_inset
+
+-aumentante.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $M'$
+\end_inset
+
+ un matching mayor que 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Observemos que el subgrafo 
+\begin_inset Formula $G'$
+\end_inset
+
+ inducido por 
+\begin_inset Formula $D=\left(M-M'\right)\cup\left(M'-M\right)$
+\end_inset
+
+ consiste exclusivamente ciclos de longitud par y caminos.
+ De hecho cada vertice en 
+\begin_inset Formula $G'$
+\end_inset
+
+ puede ser incidido a lo sumo por dos aristas (una de 
+\begin_inset Formula $M$
+\end_inset
+
+ y otra de 
+\begin_inset Formula $M'$
+\end_inset
+
+) y los grafos en los que todo vertice tiene grado a lo sumo 
+\begin_inset Formula $2$
+\end_inset
+
+ consisten solo de cilcos, caminos y vertices aislados.
+ Mas aun, como cada camino alterna sus aristas entre los matchings 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $M'$
+\end_inset
+
+, un ciclo debera tener longitud par.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Como 
+\begin_inset Formula $M'$
+\end_inset
+
+ es mayor que 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $G'$
+\end_inset
+
+ debe contener una componete que tiene mas aristas de 
+\begin_inset Formula $M'$
+\end_inset
+
+ que de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Dicha componente es un camino que empieza y termina con una arista de 
+\begin_inset Formula $M'$
+\end_inset
+
+, por lo que es un camino 
+\begin_inset Formula $M$
+\end_inset
+
+-aumentante.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Si 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene un camino 
+\begin_inset Formula $M$
+\end_inset
+
+-aumentante 
+\begin_inset Formula $C$
+\end_inset
+
+, podemos usar dicho camino para crear un matching 
+\begin_inset Formula $M'$
+\end_inset
+
+ mayor.
+ Basta tomar 
+\begin_inset Formula $\text{\ensuremath{M'=\left(M-C\right)\cup\left(C-M\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Matrimonio de Hall
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ un grafo dirigido bipartito con conjuntos de vertices 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ en los que las aristas estan dirigidas de los vertices en 
+\begin_inset Formula $V$
+\end_inset
+
+ a los vertices de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Existe un matching completo en 
+\begin_inset Formula $G$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\left|S\right|\leq\left|N\left(S\right)\right|$
+\end_inset
+
+ para todo 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+; donde 
+\begin_inset Formula $N\left(X\right)$
+\end_inset
+
+ denota al conjunto de vertices adyacentes a los de 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Como existe un matching perfecto, cada subconjunto 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ debera tener al menos 
+\begin_inset Formula $\left|S\right|$
+\end_inset
+
+ vecinos (aquellos a donde los llevan las aristas del matching).
+\end_layout
+
+\begin_layout Subsection
+Teorema de Tutte
+\end_layout
+
+\begin_layout Standard
+Un grafo 
+\begin_inset Formula $G=\left(V,E\right)$
+\end_inset
+
+ tiene un matching perfecto si y solo si para cada subconjunto 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+, el subgrafo inducido por 
+\begin_inset Formula $V-U$
+\end_inset
+
+ tiene a lo sumo 
+\begin_inset Formula $\left|U\right|$
+\end_inset
+
+ componentes conexas con un numero impar de vertices.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+literal "true"
+
+\end_inset
+
+Richard Johnsonbaugh.
+ 
+\emph on
+Matematicas Discretas
+\emph default
+.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+literal "true"
+
+\end_inset
+
+Ralph Grimaldi.
+ 
+\emph on
+Matematicas Discretas y Combinatoria
+\emph default
+.
+\end_layout
+
+\end_body
+\end_document

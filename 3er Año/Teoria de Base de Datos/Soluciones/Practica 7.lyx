@@ -1,0 +1,1638 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Ejercicio 1
+\end_layout
+
+\begin_layout Standard
+Sean la relacion 
+\begin_inset Formula $R=\left\{ A,B,C,D,E,F,G,H,I,J\right\} $
+\end_inset
+
+ y el conjunto de dependencias funcionales 
+\begin_inset Formula $F1=\left\{ AB\to C,BD\to EF,AD\to GH,A\to I,H\to J\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Encontrar una clave de 
+\begin_inset Formula $R$
+\end_inset
+
+ y demostrar que es clave.
+\end_layout
+
+\begin_layout Enumerate
+Descomponer 
+\begin_inset Formula $R$
+\end_inset
+
+ en segunda forma normal.
+\end_layout
+
+\begin_layout Enumerate
+Descomponer el conjunto de relaciones resultantes en tercera forma normal.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Definimos la clave 
+\begin_inset Formula $K=\left\{ A,B,D\right\} $
+\end_inset
+
+.
+ Demostracion:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to AB\to C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to BD\to EF\to E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to BD\to EF\to F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to AD\to GH\to G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to AD\to GH\to H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ABD\to A\to I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{ABD\to AD\to GH\to H\to J}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $R=\left\{ \underline{A,B},C,\underline{D},E,F,G,H,I,J\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{A,B},C\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{A,B,D},E,F,G,H,I,J\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{A,B},C\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B,D},E,F\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ \underline{A,B,D},G,H,I,J\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{A,B},C\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B,D},E,F\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ \underline{A,D},G,H,J\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\text{\ensuremath{R_{4}=\left\{ \underline{A,B,D},I\right\} }}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{A,B},C\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B,D},E,F\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ \underline{A,D},G,H,J\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\text{\ensuremath{R_{4}=\left\{ \underline{A},I\right\} }}$
+\end_inset
+
+ 
+\begin_inset Formula $R_{5}=\left\{ \underline{A,B,D}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $R_{1}=\left\{ \underline{A,B},C\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B,D},E,F\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ \underline{A,D},G,H\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\text{\ensuremath{R_{4}=\left\{ \underline{H},J\right\} }}$
+\end_inset
+
+; 
+\begin_inset Formula $R_{5}=\left\{ \underline{A},I\right\} $
+\end_inset
+
+ 
+\begin_inset Formula $R_{6}=\left\{ \underline{A,B,D}\right\} $
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 2
+\end_layout
+
+\begin_layout Standard
+Dado el esquema 
+\begin_inset Formula $R=\left\{ A,B,C,D,E,G,H\right\} $
+\end_inset
+
+ donde se cumplen las siguientes DF 
+\begin_inset Formula $F=\left\{ B\to C,D\to A,E\to H,C\to E,B\to G\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Encontrar una clave del esquema y demostrar que lo es.
+\end_layout
+
+\begin_layout Enumerate
+Descomponer el esquema en 3NF, manteniendo las dependencias.
+\end_layout
+
+\begin_layout Enumerate
+Verificar si la descomposicion hallada en el punto anterior preserva la
+ propiedad lossless join.
+\end_layout
+
+\begin_layout Enumerate
+¿La descomposicion esta en BCNF? ¿Por que?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Definimos la clave 
+\begin_inset Formula $K=\left\{ B,D\right\} $
+\end_inset
+
+.
+ Demostracion:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $BD\to D\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $BD\to B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $BD\to B\to C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $BD\to D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $BD\to B\to C\to E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $BD\to B\to G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $BD\to B\to C\to E\to H$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $R=\left\{ A,\underline{B},C,\underline{D},E,G,H\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{D},A\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B},C,\underline{D},E,G,H\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{D},A\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B},C,E,G,H\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ \underline{B,D}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{D},A\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B},C,G\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ \underline{C},E,H\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{4}=\left\{ \underline{B,D}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\left\{ \underline{D},A\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ \underline{B},C,G\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ \underline{C},E\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{4}=\left\{ \underline{E},H\right\} $
+\end_inset
+
+ 
+\begin_inset Formula $\text{\ensuremath{R_{5}=\left\{ \underline{B,D}\right\} }}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\to$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\to$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\to$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\times$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{R_{5}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\to}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\checked}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\to}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\checked}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\to}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\to}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\to}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Esta en BCNF pues no existen otras claves.
+\end_layout
+
+\begin_layout Section*
+Ejercicio 3
+\end_layout
+
+\begin_layout Standard
+Se desea modelar la actividad de un broker bursatil, quien maneja las carteras
+ de acciones de varios inversores.
+ Los atributos relevantes son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+B (broker).
+\end_layout
+
+\begin_layout Itemize
+I (inversor).
+\end_layout
+
+\begin_layout Itemize
+E (domicilio comercial del broker).
+\end_layout
+
+\begin_layout Itemize
+A (accion de una empresa que cotiza en bolsa).
+\end_layout
+
+\begin_layout Itemize
+D (dividendo).
+\end_layout
+
+\begin_layout Itemize
+C (cantidad de acciones).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ademas se cumplen las siguientes DF: 
+\begin_inset Formula $F=\left\{ A\to D,I\to B,IA\to C,B\to E\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar una clave y demostrar que lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si descomponemos el esquema en 
+\begin_inset Formula $D_{3}=\left\{ IB,IAC,AD,IAE\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Proyectar 
+\begin_inset Formula $F$
+\end_inset
+
+ sobre cada subesquema.
+\end_layout
+
+\begin_layout Enumerate
+¿Se puede afirmar que 
+\begin_inset Formula $D_{3}$
+\end_inset
+
+ preserva dependencias?
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Definimos la clave 
+\begin_inset Formula $K=\left\{ A,I\right\} $
+\end_inset
+
+.
+ Demostracion:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $AI\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AI\to I\to B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AI\to C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AI\to A\to D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AI\to A\to D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AI\to I\to B\to E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $AI\to I$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $F_{IB}=\left\{ I\to B\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $F_{IAC}=\left\{ IA\to C\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $F_{AD}=\left\{ A\to D\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $\text{\ensuremath{F_{IAE}=\left\{ I\to E\right\} }}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+No preserva dependencias pues no se puede recuperar 
+\begin_inset Formula $B\to E$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Ejercicio 4
+\end_layout
+
+\begin_layout Standard
+Chequear la equivalencia de los suigentes conjuntos de DFs:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F=\left\{ A\to C,AC\to D,E\to AD,E\to H\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G=\left\{ A\to CD,E\to AH\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $G^{+}=\left\{ \boldsymbol{A\to CD},\boxed{A\to C},A\to D,AC\to DC,\boxed{AC\to D},\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.\boldsymbol{E\to AH},\boxed{E\to H},E\to A,A\to AD,\boxed{E\to AD},\ldots\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F^{+}=\left\{ \boldsymbol{A\to C},A\to AC,\boldsymbol{AC\to D},A\to D,\boxed{A\to CD},\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left.\boldsymbol{E\to AD},E\to A,\boldsymbol{E\to H},\boxed{E\to AH},\ldots\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 5
+\end_layout
+
+\begin_layout Standard
+Dado el esquema 
+\begin_inset Formula $R=\left\{ A,B,C,D,E,G,H\right\} $
+\end_inset
+
+ y las DFs 
+\begin_inset Formula 
+\[
+F=\left\{ A\to C,B\to D,BC\to E,BC\to H,GH\to E,D\to A\right\} 
+\]
+
+\end_inset
+
+ y sabiendo que 
+\begin_inset Formula $CG$
+\end_inset
+
+ es clave:
+\end_layout
+
+\begin_layout Enumerate
+Buscar otra clave mostrar que lo es.
+\end_layout
+
+\begin_layout Enumerate
+Dada la siguiente descomposicion de 
+\begin_inset Formula $R$
+\end_inset
+
+, verificar si preservan las dependencias: 
+\begin_inset Formula $R_{1}=\left\{ B,D\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{2}=\left\{ G,H,E\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $R_{3}=\left\{ A,B,C\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+El conjunto 
+\begin_inset Formula $\left\{ AG\right\} $
+\end_inset
+
+ es clave.
+ Basta notar que 
+\begin_inset Formula $AG\to A\to C$
+\end_inset
+
+ y 
+\begin_inset Formula $AG\to G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F_{R1}=\left\{ B\to D\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $F_{R2}=\left\{ GH\to E\right\} $
+\end_inset
+
+; 
+\begin_inset Formula $F_{R3}=\left\{ A\to C\right\} $
+\end_inset
+
+.
+ No preserva dependencias pues no es posible recuperar 
+\begin_inset Formula $BC\to E$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 6
+\end_layout
+
+\begin_layout Standard
+Sea el esquema 
+\begin_inset Formula $R=\left\{ A,B,C,D,E,G,H\right\} $
+\end_inset
+
+ y las DFs 
+\begin_inset Formula 
+\[
+F=\left\{ A\to BC,C\to D,D\to G,H\to E,E\to A,E\to H\right\} 
+\]
+
+\end_inset
+
+encontrar todas las claves del esquema.
+ Justificar que lo son.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Las unicas claves son 
+\begin_inset Formula $\left\{ E\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ H\right\} $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Para 
+\begin_inset Formula $K=\left\{ E\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\to A\to BC\to B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\to A\to BC\to C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\to A\to BC\to C\to D$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\to E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\to A\to BC\to C\to D\to G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\to H$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Para 
+\begin_inset Formula $K=\left\{ H\right\} $
+\end_inset
+
+: Con 
+\begin_inset Formula $H\to E$
+\end_inset
+
+ llegamos a la clave anterior.
+\end_layout
+
+\begin_layout Section*
+Ejercicio 7
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S=\left\{ A,B,C,D,E,G\right\} $
+\end_inset
+
+.
+ Se sabe que las unicas claves son 
+\begin_inset Formula $\left\{ AG\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ CE\right\} $
+\end_inset
+
+.
+ Ademas se conocen las siguientes DFs: 
+\begin_inset Formula $A\to B,B\to D,D\to B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Se encuentra 
+\begin_inset Formula $S$
+\end_inset
+
+ en 3FN? Ejemplifique con una instancia de 
+\begin_inset Formula $S$
+\end_inset
+
+ un caso posible de anomalia.
+\end_layout
+
+\begin_layout Enumerate
+Obtenga una descomposicion de 
+\begin_inset Formula $S$
+\end_inset
+
+ que este en 3FN.
+\end_layout
+
+\begin_layout Enumerate
+¿Se encuentra la descomposicion obtenida en BCNF? Justifique.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Efectivamente, pues las claves no se solapan.
+\end_layout
+
+\end_body
+\end_document
