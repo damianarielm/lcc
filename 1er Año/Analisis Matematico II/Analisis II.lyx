@@ -1,0 +1,10182 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Analisis Matematico II
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Aplicaciones de la derivada
+\end_layout
+
+\begin_layout Chapter
+Estudio de funciones
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Extremos de una funcion
+\end_layout
+
+\begin_layout Subsubsection
+Extremos absolutos
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f:D\subseteq\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ una funcion y 
+\begin_inset Formula $c,d\in D$
+\end_inset
+
+ diremos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(c)$
+\end_inset
+
+ es 
+\emph on
+maximo absoluto
+\emph default
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $D$
+\end_inset
+
+ si 
+\begin_inset Formula $f(x)\leq f(c)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(d)$
+\end_inset
+
+ es 
+\emph on
+minimo absoluto
+\emph default
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $D$
+\end_inset
+
+ si 
+\begin_inset Formula $f(x)\geq f(d)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in D$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Extremos relativos
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f:D\subseteq\mathbb{R}\rightarrow\mathbb{R}$
+\end_inset
+
+ una funcion y 
+\begin_inset Formula $c,d\in D$
+\end_inset
+
+ diremos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ alcanza un 
+\emph on
+maximo relativo
+\emph default
+ en 
+\begin_inset Formula $c$
+\end_inset
+
+ si 
+\begin_inset Formula $\exists E(c)/f(x)\leq f(c)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in E(c)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f$
+\end_inset
+
+ alcanza un 
+\emph on
+minimo relativo
+\emph default
+ en 
+\begin_inset Formula $d$
+\end_inset
+
+ si 
+\begin_inset Formula $\exists E(d)/f(x)\geq f(d)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in E(d)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Concavidad y convexidad
+\end_layout
+
+\begin_layout Subsubsection
+Conjunto convexo
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $C$
+\end_inset
+
+ se dice convexo si 
+\begin_inset Formula $\forall p,q\in C$
+\end_inset
+
+, el segmento 
+\begin_inset Formula $\overline{pq}\subset C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Epigrafo
+\end_layout
+
+\begin_layout Standard
+Llamamos epigrafo a la region que esta por encima de la grafica de una funcion.
+ Es decir:
+\begin_inset Formula 
+\[
+ef=\{(x,y)\in\mathbb{R}^{2}/x\in Dom(f),y\geq f(x)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Concavidad y convexidad de funciones
+\end_layout
+
+\begin_layout Itemize
+Una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ se dice 
+\emph on
+convexa
+\emph default
+ en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ si su epigrafo es convexo.
+ Es decir:
+\begin_inset Formula 
+\[
+\forall x,y\in[a,b]\land\forall\alpha\in(0,1)\Rightarrow f\left[\alpha y+\left(1-\alpha\right)x\right]\leq\alpha f\left(y\right)+\left(1-\alpha\right)f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ se dice 
+\emph on
+concava
+\emph default
+ en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ si su epigrafo es no es convexo.
+ Es decir:
+\begin_inset Formula 
+\[
+\forall x,y\in[a,b]\land\forall\alpha\in(0,1)\Rightarrow f\left[\alpha y+\left(1-\alpha\right)x\right]\geq\alpha f\left(y\right)+\left(1-\alpha\right)f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Propiedad
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es convexa en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces 
+\begin_inset Formula $-f$
+\end_inset
+
+ es concava en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Punto de inflexion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $c$
+\end_inset
+
+ un punto de contacto entre dos intervalos tales que 
+\begin_inset Formula $f$
+\end_inset
+
+ es convexa en uno de ellos y concava en el otro, diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene en 
+\begin_inset Formula $c$
+\end_inset
+
+ un punto de inflexion.
+\end_layout
+
+\begin_layout Subsection
+Punto critico
+\end_layout
+
+\begin_layout Standard
+Decimos que 
+\begin_inset Formula $c\in Dom(f)$
+\end_inset
+
+ es un 
+\emph on
+punto critico
+\emph default
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ si 
+\begin_inset Formula $f'(c)=0$
+\end_inset
+
+ o 
+\begin_inset Formula $f$
+\end_inset
+
+ no es derivable en 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Teorema de Weierstrass
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en un intervalo cerrado y acotado 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ alcanza su maximo y minimo absoluto en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Es decir:
+\begin_inset Formula 
+\[
+\exists\alpha,\beta\in[a,b]/m=f(\alpha)\leq f(x)\leq f(\beta)=M,\forall x\in[a,b]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema de los valores intermedios
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ definida y continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, y sean 
+\begin_inset Formula $M,m$
+\end_inset
+
+ sus respectivos extremos absolutos; entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ alcanza todos los valores entre 
+\begin_inset Formula $m$
+\end_inset
+
+ y 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Es decir: 
+\begin_inset Formula $Im(f)=[m,M]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Fermat
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ definida en un entorno de 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ y supongamos 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene en 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ un extremo relativo, entonces 
+\begin_inset Formula $f'(x_{0})=0$
+\end_inset
+
+ o bien 
+\begin_inset Formula $\exists f'(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos lo contrario, es decir 
+\begin_inset Formula $f'(x_{0})\neq0$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f'(x_{0})>0$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $f'(x_{0})={\displaystyle \lim_{x\rightarrow x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}>0}$
+\end_inset
+
+ y por el teorema de conservacion del signo: 
+\begin_inset Formula $\exists\delta>0/0<|x-x_{0}|<\delta\Rightarrow\frac{f(x)-f(x_{0})}{x-x_{0}}>0$
+\end_inset
+
+.
+ Por lo tanto:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $x_{0}-\delta<x<x_{0}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\frac{f(x)-f(x_{0})}{x-x_{0}}>0$
+\end_inset
+
+ y 
+\begin_inset Formula $\mbox{\ensuremath{x-x_{0}<0\Rightarrow f(x)-f(x_{0})<0\Rightarrow f(x)<f(x_{0})}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $x_{0}<x<x_{0}+\delta$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\frac{f(x)-f(x_{0})}{x-x_{0}}>0$
+\end_inset
+
+ y 
+\begin_inset Formula $\mbox{\ensuremath{x-x_{0}>0\Rightarrow f(x)-f(x_{0})>0\Rightarrow f(x)>f(x_{0})}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir, 
+\begin_inset Formula $f$
+\end_inset
+
+ no tendra extremo relativo en 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ ¡Absurdo! 
+\begin_inset Formula $\therefore f'(x_{0})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+El teorema de Fermat nos dice que si 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene un extremo relativo en c, entonces 
+\begin_inset Formula $c$
+\end_inset
+
+ es un punto critico de 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Por lo tanto para hallar extremos relativos de una funcion, debemos localizar
+ sus puntos criticos y determinar mediante algun criterio si hay extremos
+ en ellos; pues no en todo punto critico hay extremos.
+\end_layout
+
+\begin_layout Itemize
+El teorema de Weierstrass nos asegura la existencia de extremos absolutos
+ para una funcion continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Estos pueden alcanzarse en 
+\begin_inset Formula $a,b$
+\end_inset
+
+ o en puntos interiores al intervalo.
+ Para hallarlos debemos localizar los puntos criticos de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ y comparar sus imagenes con 
+\begin_inset Formula $f(a)$
+\end_inset
+
+ y 
+\begin_inset Formula $f(b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Rolle
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ definida y continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+; y derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\exists c\in(a,b)/f'(c)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $m,M$
+\end_inset
+
+ los extremos absolutos garantizados por el teorema de Weierstrass, sera
+ entonces 
+\begin_inset Formula $m\leq M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si fuese 
+\begin_inset Formula $m=M$
+\end_inset
+
+ resultaria 
+\begin_inset Formula $f$
+\end_inset
+
+ constante y tendriamos 
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $m<M$
+\end_inset
+
+ y como 
+\begin_inset Formula $f(a)=f(b)$
+\end_inset
+
+, al menos uno de los extremos sera asumido en un punto 
+\begin_inset Formula $c\in(a,b)$
+\end_inset
+
+.
+ Por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ tendra un extremo relativo en 
+\begin_inset Formula $c$
+\end_inset
+
+ y siendo derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ resultara 
+\begin_inset Formula $f'(c)=0$
+\end_inset
+
+ por el teorema de Fermat.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Lagrange
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ definida en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\exists c\in(a,b)/f'(c)=\frac{f(b)-f(a)}{b-a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Definimos 
+\begin_inset Formula $F(x)=f(x)-\frac{f(b)-f(a)}{b-a}(x-a)$
+\end_inset
+
+ para 
+\begin_inset Formula $x\in[a,b]$
+\end_inset
+
+, entonces 
+\begin_inset Formula $F$
+\end_inset
+
+ verifica:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(a)=f(a)-\frac{f(b)-f(a)}{b-a}(a-a)=f(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(b)=f(b)-\frac{f(b)-f(a)}{b-a}(b-a)=f(b)-f(b)+f(a)=f(a)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F(a)=F(b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ por ser 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y por el algebra de funciones continuas.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F$
+\end_inset
+
+ es derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ por ser 
+\begin_inset Formula $f$
+\end_inset
+
+ derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ y por el algebra de funciones derivables.
+\end_layout
+
+\begin_layout Standard
+Por (1), (2) y (3) verifica las hipotesis del teorema de Rolle y en consecuencia
+ 
+\begin_inset Formula $\exists c\in(a,b)/F'(c)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ahora 
+\begin_inset Formula $F'(x)=f'(x)-\frac{f(b)-f(a)}{b-a}$
+\end_inset
+
+, luego 
+\begin_inset Formula $F'(c)=f'(c)-\frac{f(b)-f(a)}{b-a}=0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f'(c)=\frac{f(b)-f(a)}{b-a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Cauchy
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ funciones continuas en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y derivables en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+\exists c\in(a,b)/f'\left(c\right)\left[g\left(b\right)-g\left(a\right)\right]=g'\left(c\right)\left[f\left(b\right)-f\left(a\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Definamos 
+\begin_inset Formula $h(x)=f\left(x\right)\left[g\left(b\right)-g\left(a\right)\right]-g\left(x\right)\left[f\left(b\right)-f\left(a\right)\right]$
+\end_inset
+
+.
+ Es facil ver que 
+\begin_inset Formula $h$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ y ademas puede comprobarse que 
+\begin_inset Formula $h(a)=h(b)$
+\end_inset
+
+.
+ Luego por el teorema de Rolle 
+\begin_inset Formula $\mbox{\ensuremath{\exists c\in(a,b)/h'(c)=0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ahora como 
+\begin_inset Formula $h'(x)=f'\left(x\right)\left[g\left(b\right)-g\left(a\right)\right]-g'\left(x\right)\left[f\left(b\right)-f\left(a\right)\right]$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $h'(c)=0\Rightarrow f'\left(c\right)\left[g\left(b\right)-g\left(a\right)\right]=g'\left(c\right)\left[f\left(b\right)-f\left(a\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Estudio de la variacion de una funcion
+\end_layout
+
+\begin_layout Subsection
+Criterio para determinar monotonia
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ una funcion continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)\Rightarrow f$
+\end_inset
+
+ es estrictamente creciente en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)\Rightarrow f$
+\end_inset
+
+ es estrictamente decreciente en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)\Rightarrow f$
+\end_inset
+
+ es constante en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $x_{1},x_{2}\in[a,b]/x_{1}<x_{2}$
+\end_inset
+
+.
+ Por el teorema de Lagrange 
+\begin_inset Formula $\exists c\in(x_{1},x_{2})/f'(c)=\frac{f(x_{2})-f(x_{1})}{x_{2}-x_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Como 
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)\Rightarrow f'(c)=\frac{f(x_{2})-f(x_{1})}{x_{2}-x_{1}}>0$
+\end_inset
+
+ y como 
+\begin_inset Formula $\mbox{\ensuremath{x_{2}-x_{1}>0}}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f(x_{2})>f(x_{1})$
+\end_inset
+
+, por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ es creciente en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Analogo para 
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f(x_{2})<f(x_{1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $x\in(a,b)$
+\end_inset
+
+ por el teorema de Lagrange 
+\begin_inset Formula $\exists c\in(a,x)/f'(c)=\frac{f(x)-f(a)}{x-a}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $f'(x)=0$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f'(c)=0\Rightarrow f(x)=f(a)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in[a,b]$
+\end_inset
+
+.
+ Por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ es constante en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Criterio de la primer derivada
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ una funcion continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ salvo a lo sumo en 
+\begin_inset Formula $x_{0}\in(a,b)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,x_{0})$
+\end_inset
+
+ y 
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(x_{0},b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+ es el maximo de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f'(x)<0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,x_{0})$
+\end_inset
+
+ y 
+\begin_inset Formula $f'(x)>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(x_{0},b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f(x_{0})$
+\end_inset
+
+ es el minimo de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Por el criterio para determinar monotonia sabemos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es estrictamente creciente en 
+\begin_inset Formula $(a,x_{0})$
+\end_inset
+
+ y estrictamente decreciente en 
+\begin_inset Formula $(x_{0},b)$
+\end_inset
+
+, luego 
+\begin_inset Formula $f(x)<f(x_{0})$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\neq x_{0}$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene un maximo en 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Analogo.
+\end_layout
+
+\begin_layout Subsection
+Criterio de la segunda derivada
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ una funcion dos veces derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f''$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $c\in(a,b)$
+\end_inset
+
+ y 
+\begin_inset Formula $f'(c)=0$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f''(c)>0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f(c)$
+\end_inset
+
+ es un minimo relativo.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f''(c)<0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f(c)$
+\end_inset
+
+ es un maximo relativo.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f''(c)>0$
+\end_inset
+
+, por ser 
+\begin_inset Formula $f''$
+\end_inset
+
+ continua en 
+\begin_inset Formula $c$
+\end_inset
+
+ y por el teorema de conservacion del signo, existira un entorno 
+\begin_inset Formula $E_{\delta}(c)$
+\end_inset
+
+ donde 
+\begin_inset Formula $f''(x)>0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in E_{\delta}(c)$
+\end_inset
+
+.
+ Por lo tanto 
+\begin_inset Formula $f'$
+\end_inset
+
+ es estrictamente creciente en 
+\begin_inset Formula $E_{\delta}(c)$
+\end_inset
+
+ pero como 
+\begin_inset Formula $f'(c)=0$
+\end_inset
+
+ y 
+\begin_inset Formula $f'$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $E_{\delta}(c)$
+\end_inset
+
+ por ser derivable; resulta que 
+\begin_inset Formula $f'$
+\end_inset
+
+ cambio de signo en 
+\begin_inset Formula $c$
+\end_inset
+
+ y por el teorema anterior 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene un minimo relativo en 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Analogo.
+\end_layout
+
+\begin_layout Subsection
+Criterios para determinar concavidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f'$
+\end_inset
+
+ es creciente en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es convexa en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f'$
+\end_inset
+
+ es decreciente en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es concava en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ademas si existe 
+\begin_inset Formula $f''$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b):$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f''\geq0$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es convexa en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f''\leq0$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es concava en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $x,y/a\leq x\leq y\leq b$
+\end_inset
+
+ y 
+\begin_inset Formula $z=\alpha y+(1-\alpha)x$
+\end_inset
+
+, con 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+.
+ Veamos primero que las siguientes expresiones son equivalentes y luego
+ que si 
+\begin_inset Formula $f'$
+\end_inset
+
+ es creciente, se obtiene la ultima desigualdad:
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+f\mbox{ es convexa en }[a,b] & \iff & f(z)\leq\alpha f(y)+(1-\alpha)f(x)\iff\\
+f(z)+\alpha f(z)-\alpha f(z) & \leq & \alpha f(y)+(1-\alpha)f(x)\iff\\
+f(z)=\alpha f(z)+(1-\alpha)f(z) & \leq & \alpha f(y)+(1-\alpha)f(x)\iff\\
+(1-\alpha)\left[f(z)-f(x)\right] & \leq & \alpha\left[f(y)-f(z)\right]
+\end{array}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y derivable en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $[x,z]$
+\end_inset
+
+ y en 
+\begin_inset Formula $[z,y]$
+\end_inset
+
+ y derivable en 
+\begin_inset Formula $(x,z)$
+\end_inset
+
+ y en 
+\begin_inset Formula $(z,y)$
+\end_inset
+
+.
+ Por lo tanto, aplicando el teorema de Lagrange a 
+\begin_inset Formula $f$
+\end_inset
+
+ en cada uno de esos intervalos, podemos asegurar que existen 
+\begin_inset Formula $c\in(x,z)$
+\end_inset
+
+ y 
+\begin_inset Formula $d\in(z,y)$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f'(c)=\frac{f(z)-f(x)}{z-x}$
+\end_inset
+
+ y 
+\begin_inset Formula $f'(d)=\frac{f(y)-f(z)}{y-z}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Como 
+\begin_inset Formula $f'$
+\end_inset
+
+ es creciente y 
+\begin_inset Formula $c<0$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f'(c)<f'(d)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $(1-\alpha)\left[f(z)-f(x)\right]=(1-\alpha)(z-x)f'(c)\leq(1-\alpha)(z-x)f'(d)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Por hipotesis 
+\begin_inset Formula $z=\alpha y+(1-\alpha)x$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula $x=\frac{z-\alpha y}{1-\alpha}$
+\end_inset
+
+.
+ Ahora:
+\begin_inset Formula 
+\[
+z-x=z-\left(\frac{z-\alpha y}{1-\alpha}\right)=\frac{z(1-\alpha)-z+\alpha y}{1-\alpha}=\frac{\alpha(y-z)}{1-\alpha}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+y reemplazando la parte derecha la desigualdad anterior:
+\begin_inset Formula 
+\[
+(1-\alpha)\left[f(z)-f(x)\right]\leq(1-\alpha)\frac{\alpha(y-z)}{(1-\alpha)}f'(d)=\alpha(y-z)\frac{f(y)-f(z)}{(y-z)}=\alpha\left[f(y)-f(z)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Se puede repetir la demostracion anterior teniendo en cuenta que si 
+\begin_inset Formula $f'$
+\end_inset
+
+ es decreciente 
+\begin_inset Formula $\Rightarrow-f'$
+\end_inset
+
+ es creciente 
+\begin_inset Formula $\Rightarrow-f$
+\end_inset
+
+ es convexa 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $f$
+\end_inset
+
+ es concava.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f''\geq0$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b)\Rightarrow f'$
+\end_inset
+
+ es creciente en 
+\begin_inset Formula $(a,b)\Rightarrow f$
+\end_inset
+
+ es convexa en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Analogo.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Criterio para determinacion de puntos de inflexion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ derivable en 
+\begin_inset Formula $I$
+\end_inset
+
+ y 
+\begin_inset Formula $c\in I$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene un punto de inflexion en 
+\begin_inset Formula $c$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $f'$
+\end_inset
+
+ tiene un extremo relativo en 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ derivable en 
+\begin_inset Formula $I$
+\end_inset
+
+ y 
+\begin_inset Formula $c\in I$
+\end_inset
+
+ un punto de inflexion de 
+\begin_inset Formula $f$
+\end_inset
+
+, si existe 
+\begin_inset Formula $f''(c)$
+\end_inset
+
+, necesariamente sera 
+\begin_inset Formula $f''(c)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Resulta de aplicar a 
+\begin_inset Formula $f'$
+\end_inset
+
+ la condicion necesaria para extremo de una funcion derivable.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f''(c)=0$
+\end_inset
+
+ no es condicion suficiente para que 
+\begin_inset Formula $f$
+\end_inset
+
+ tenga un punto de inflexion en 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Criterio de la derivada de mayor orden
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ una funcion derivable en 
+\begin_inset Formula $(a,c)$
+\end_inset
+
+ y sea 
+\begin_inset Formula $b\in(a,c)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $f'(b)=f''(b)=f'''(b)=\ldots=f^{(n-1)}(b)=0$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{(n)}(b)\neq0$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $n$
+\end_inset
+
+ es par:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f^{(n)}<0\Rightarrow x=b$
+\end_inset
+
+ es un maximo local.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f^{(n)}>0\Rightarrow x=b$
+\end_inset
+
+ es un minimo local.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $n$
+\end_inset
+
+ es impar:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f^{(n)}<0\Rightarrow x=b$
+\end_inset
+
+ es un punto de inflexion decreciente.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f^{(n)}>0\Rightarrow x=b$
+\end_inset
+
+ es un punto de inflexion creciente.
+\end_layout
+
+\end_deeper
+\begin_layout Chapter
+Indeterminaciones
+\end_layout
+
+\begin_layout Section
+Formas indeterminadas
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Se llama forma indeterminada a una expresión algebraica que involucra límites
+ del tipo: 
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+, 
+\begin_inset Formula $0\cdot\infty$
+\end_inset
+
+, 
+\begin_inset Formula $1^{\infty},$
+\end_inset
+
+ 
+\begin_inset Formula $0^{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\infty^{0}$
+\end_inset
+
+ o bien 
+\begin_inset Formula $\infty-\infty$
+\end_inset
+
+.
+ Dicho límite puede converger a cualquier valor, puede converger a infinito
+ o puede no existir, dependiendo de las funciones 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \lim_{x\to0}\frac{\overbrace{x}^{\to0}}{\underbrace{x^{3}}_{\to0}}}={\displaystyle \lim_{x\to0}\frac{1}{x^{2}}=\infty}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \lim_{x\to0}\frac{\overbrace{x}^{\to0}}{\underbrace{x}_{\to0}}}={\displaystyle \lim_{x\to0}\frac{1}{1}=1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \lim_{x\to0}\frac{\overbrace{x^{2}}^{\to0}}{\underbrace{x}_{\to0}}}={\displaystyle \lim_{x\to0}\frac{x}{1}=0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transformacion de formas indeterminadas
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Forma
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Condiciones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Transformacion a 
+\begin_inset Formula $0/0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Transformacion a 
+\begin_inset Formula $\infty/\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\frac{0}{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)=}0$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to c}g(x)=}0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}}\frac{f(x)}{g(x)}={\displaystyle \lim_{x\to c}}\frac{1/g(x)}{1/f(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\frac{\infty}{\infty}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)=}\infty$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to c}g(x)=}\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}}\frac{f(x)}{g(x)}={\displaystyle \lim_{x\to c}}\frac{1/g(x)}{1/f(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $0\cdot\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)=}0$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to c}g(x)=}\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)g(x)=\lim_{x\to c}\frac{f(x)}{1/g(x)}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)g(x)=\lim_{x\to c}\frac{g(x)}{1/f(x)}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $1^{\infty}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)=}1$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to c}g(x)=}\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)^{g(x)}=exp\left(\lim_{x\to c}\frac{ln\left[f(x)\right]}{1/g(x)}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)^{g(x)}=exp\left(\lim_{x\to c}\frac{g(x)}{1/ln\left[f(x)\right]}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $0^{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)=}0^{+}$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to c}g(x)=}0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)^{g(x)}=exp\left(\lim_{x\to c}\frac{g(x)}{1/ln\left[f(x)\right]}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)^{g(x)}=exp\left(\lim_{x\to c}\frac{ln\left[f(x)\right]}{1/g(x)}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\infty^{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)=}\infty$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to c}g(x)=}0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)^{g(x)}=exp\left(\lim_{x\to c}\frac{g(x)}{1/ln\left[f(x)\right]}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)^{g(x)}=exp\left(\lim_{x\to c}\frac{ln\left[f(x)\right]}{1/g(x)}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $\infty-\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}f(x)=}\infty$
+\end_inset
+
+, 
+\begin_inset Formula ${\displaystyle \lim_{x\to c}g(x)=}\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}\left[f(x)-g(x)\right]=\lim_{x\to c}\frac{1/g(x)-1/f(x)}{1/\left[f(x)g(x)\right]}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula ${\displaystyle \lim_{x\to c}\left[f(x)-g(x)\right]=ln\left[\lim_{x\to c}\frac{e^{f(x)}}{e^{g(x)}}\right]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Regla de L'Hôpital
+\end_layout
+
+\begin_layout Subsection
+Cuando 
+\begin_inset Formula $x\to a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ funciones derivables en 
+\begin_inset Formula $\mathring{E}(a)$
+\end_inset
+
+ tales que 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}f(x)=0=\lim_{x\to a}g(x)}$
+\end_inset
+
+ y si 
+\begin_inset Formula $g'(x)\neq0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\mathring{E}(a)$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+\lim_{x\to a}\frac{f'(x)}{g'(x)}=L\Rightarrow\lim_{x\to a}\frac{f(x)}{g(x)}=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Consideremos las funciones 
+\begin_inset Formula $F(x)=\begin{cases}
+f(x) & x\neq a\\
+0 & x=a
+\end{cases}$
+\end_inset
+
+ y 
+\begin_inset Formula $G(x)\begin{cases}
+f(x) & x\neq a\\
+0 & x=a
+\end{cases}$
+\end_inset
+
+.
+ Asi definidas 
+\begin_inset Formula $F$
+\end_inset
+
+ y 
+\begin_inset Formula $G$
+\end_inset
+
+ son continuas en 
+\begin_inset Formula $E(a)$
+\end_inset
+
+, ya que 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ lo son en 
+\begin_inset Formula $\mathring{E}(a)$
+\end_inset
+
+ y ademas, 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}F(x)=\lim_{x\to a}f(x)=0=F(a)}=G(a)={\displaystyle \lim_{x\to a}g(x)=\lim_{x\to a}G(x)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $x\in\mathring{E}(a)$
+\end_inset
+
+ y supongamos 
+\begin_inset Formula $x>a$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ y 
+\begin_inset Formula $G$
+\end_inset
+
+ son conitnuas en 
+\begin_inset Formula $[a,x]$
+\end_inset
+
+ y derivables en 
+\begin_inset Formula $(a,x)$
+\end_inset
+
+.
+ Ademas 
+\begin_inset Formula $G'\neq0$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,x)$
+\end_inset
+
+ pues 
+\begin_inset Formula $G'=g'$
+\end_inset
+
+.
+ Luego por el teorema de Cauchy 
+\begin_inset Formula $\exists c\in(a,x)/F'(c)\left[G(x)-G(a)\right]=G'(c)\left[F(x)-F(a)\right]$
+\end_inset
+
+ o sea:
+\begin_inset Formula 
+\[
+\frac{F'(c)}{G'(c)}=\frac{F(x)-F(a)}{G(x)-G(a)}\underbrace{=}_{F(a)=G(a)=0}\frac{F(x)}{G(x)}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora si 
+\begin_inset Formula $x\to a^{+}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $c\to a^{+}$
+\end_inset
+
+ 
+\begin_inset Formula $(a<c<x)$
+\end_inset
+
+ de modo que:
+\begin_inset Formula 
+\[
+\lim_{x\to a^{+}}\frac{f(x)}{g(x)}=\lim_{x\to a^{+}}\frac{F(x)}{G(x)}=\lim_{x\to a^{+}}\frac{F'(c)}{G'(c)}=\lim_{c\to a^{+}}\frac{F'(c)}{G'(c)}=\lim_{c\to a^{+}}\frac{f'(c)}{g'(c)}=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analogamente para 
+\begin_inset Formula $x<a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Standard
+La regla de L'Hôpital tambien se cumple cuando 
+\begin_inset Formula $f,g$
+\end_inset
+
+ son tales que 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}f(x)=\pm\infty}$
+\end_inset
+
+ y 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}g(x)=\pm\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Cuando 
+\begin_inset Formula $x\to\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ funciones derivables en 
+\begin_inset Formula $(M,+\infty)$
+\end_inset
+
+, siendo 
+\begin_inset Formula $M>0$
+\end_inset
+
+ fijo.
+ Si
+\begin_inset Formula ${\displaystyle \lim_{x\to\infty}f(x)=0=\lim_{x\to\infty}g(x)}$
+\end_inset
+
+ y si 
+\begin_inset Formula $g'(x)\neq0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x>M$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}\frac{f'(x)}{g'(x)}=L\Rightarrow\lim_{x\to\infty}\frac{f(x)}{g(x)}=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $F(t)=f(1/t)$
+\end_inset
+
+ y 
+\begin_inset Formula $G(t)=g(1/t)$
+\end_inset
+
+, entonces si 
+\begin_inset Formula $x=1/t$
+\end_inset
+
+ sera 
+\begin_inset Formula $\frac{f(x)}{g(x)}=\frac{f(1/t)}{g(1/t)}=\frac{F(t)}{G(t)}$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $t\to0^{+}$
+\end_inset
+
+ cuando 
+\begin_inset Formula $x\to+\infty$
+\end_inset
+
+.
+ Luego por la regla de L'Hôpital:
+\begin_inset Formula 
+\[
+\lim_{t\to0^{+}}\frac{\overbrace{F(t)}^{\to0}}{\underbrace{G(t)}_{\to0}}=\lim_{t\to0^{+}}\frac{F'(t)}{G'(t)}=\lim_{t\to0^{+}}\frac{f'(1/t)(-1/t^{2})}{g'(1/t)(-1/t^{2})}=\lim_{x\to\infty}\frac{f'(x)}{g'(x)}=L
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y finalmente 
+\begin_inset Formula ${\displaystyle \lim_{t\to0^{+}}\frac{F(t)}{G(t)}=L\Rightarrow\lim_{x\to\infty}\frac{f(x)}{g(x)}=L}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Standard
+La regla de L'Hôpital tambien se cumple cuando 
+\begin_inset Formula $f,g$
+\end_inset
+
+ son tales que 
+\begin_inset Formula ${\displaystyle \lim_{x\to\infty}f(x)=\pm\infty}$
+\end_inset
+
+ y 
+\begin_inset Formula ${\displaystyle \lim_{x\to\infty}g(x)=\pm\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Polinomios de aproximacion
+\end_layout
+
+\begin_layout Section
+Conceptos previos
+\end_layout
+
+\begin_layout Subsection
+Infinitesimos
+\end_layout
+
+\begin_layout Standard
+Una funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ se dice un 
+\emph on
+infinitesimo
+\emph default
+ en 
+\begin_inset Formula $a$
+\end_inset
+
+ (o cuando 
+\begin_inset Formula $x\to a$
+\end_inset
+
+) si 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}f(x)=0}$
+\end_inset
+
+, pudiendo ser tambien 
+\begin_inset Formula $a=\pm\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Equivalencia de infinitesimos
+\end_layout
+
+\begin_layout Standard
+Se dice que dos infinitesimos en 
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ y 
+\begin_inset Formula $g(x)$
+\end_inset
+
+ son 
+\emph on
+equivalentes
+\emph default
+ si 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=1}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Compracion de infinitesimos
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ dos infinitesimos en 
+\begin_inset Formula $a$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Se dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ tienen el 
+\emph on
+mismo orden
+\emph default
+ si 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=k\neq0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Se dice que el orden de 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\emph on
+mayor
+\emph default
+ al de 
+\begin_inset Formula $g$
+\end_inset
+
+ si 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Se dice que el orden de 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\emph on
+menor
+\emph default
+ al de 
+\begin_inset Formula $g$
+\end_inset
+
+ si 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Cuando 
+\begin_inset Formula $\nexists{\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}}$
+\end_inset
+
+ se dice que los infinitesimos son 
+\emph on
+incomparables
+\emph default
+.
+\end_layout
+
+\begin_layout Subsubsection
+Orden de un infinitesimo
+\end_layout
+
+\begin_layout Standard
+Decimos que un infinitesimo 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $a$
+\end_inset
+
+ tiene orden 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, si 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}\frac{f(x)}{(x-a)^{\alpha}}=k\neq0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Diferenciabilidad
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es derivable en 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ entonces: 
+\begin_inset Formula 
+\[
+f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\theta(x)(x-x_{0})
+\]
+
+\end_inset
+
+ siendo 
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}\theta(x)=0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sabemos que 
+\begin_inset Formula $\mbox{\ensuremath{f'(x_{0})={\displaystyle \lim_{x\to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}}\iff{\displaystyle \lim_{x\to x_{0}}\frac{f(x)-f(x_{0})}{x-x_{0}}}-f(x_{0})=0}}$
+\end_inset
+
+.
+ Sea entonces 
+\begin_inset Formula $\theta(x)={\displaystyle \frac{f(x)-f(x_{0})}{x-x_{0}}}-f'(x_{0})$
+\end_inset
+
+.
+ Es facil ver que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}\theta(x)=0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta(x)+f'(x_{0})=\frac{f(x)-f(x_{0})}{x-x_{0}}\Rightarrow\theta(x)(x-x_{0})+f'(x_{0})(x-x_{0})=f(x)-f(x_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\theta(x)(x-x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Standard
+Si llamamos 
+\begin_inset Formula $\Delta x=x-x_{0}$
+\end_inset
+
+ al incremento de 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta f=f(x)-f(x_{0})$
+\end_inset
+
+ al incremento de 
+\begin_inset Formula $y$
+\end_inset
+
+ resulta: 
+\begin_inset Formula $\Delta f=\underbrace{f'(x_{0})\Delta x}_{\mbox{termino lineal}}+\underbrace{\theta(x)\Delta x}_{\mbox{termino no lineal}}$
+\end_inset
+
+ con 
+\begin_inset Formula ${\displaystyle \lim_{\Delta x\to0}\theta(x)=\lim_{x\to x_{0}}\theta(x)=0}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diferencial de una funcion
+\end_layout
+
+\begin_layout Standard
+Llamamos diferencial de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, y lo notamos 
+\begin_inset Formula $df$
+\end_inset
+
+, a la parte lineal de 
+\begin_inset Formula $\Delta f$
+\end_inset
+
+ es decir: 
+\begin_inset Formula $df=f'(x_{0})\Delta x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El polinomio 
+\begin_inset Formula $P(x)=f(x_{0})+df$
+\end_inset
+
+ es la aproximacion lineal de 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+ Este es el unico poliniomio que satisface:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(x_{0})=f(x_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P'(x_{0})=f'(x_{0})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $gr\left[P(x)\right]=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos que existe otro polinomio 
+\begin_inset Formula $Q(x)=Ax+B$
+\end_inset
+
+ que verifica las tres condiciones.
+ Entonces 
+\begin_inset Formula $Q(x_{0})=Ax_{0}+B=f(x_{0})$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $Q'(x_{0})=A=f'(x_{0})$
+\end_inset
+
+, luego 
+\begin_inset Formula $B=f(x_{0})-f'(x_{0})x_{0}$
+\end_inset
+
+.
+ Finamlente 
+\begin_inset Formula $\mbox{\ensuremath{Q(x)=Ax+B=f'(x_{0})x+f(x_{0})-f'(x_{0})x_{0}=f(x_{0})+f'(x_{0})(x-x_{0})=P(x)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Se considera que tomando valores pequeños de 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+, resulta 
+\begin_inset Formula $\Delta f\approx df$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $f(x)\approx f(x_{0})+df$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Polinomio de Taylor
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $n$
+\end_inset
+
+ veces derivable en un entorno de 
+\begin_inset Formula $a$
+\end_inset
+
+, llamamos polinomio de Taylor de grado 
+\begin_inset Formula $n$
+\end_inset
+
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ alrededor de 
+\begin_inset Formula $a$
+\end_inset
+
+ al polinomio:
+\begin_inset Formula 
+\[
+T_{n}(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^{2}+\ldots+\frac{f^{(n)}(a)}{n!}(x-a)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se tiene que 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+ es el unico polinomio de grado menor o igual que 
+\begin_inset Formula $n$
+\end_inset
+
+ tal que sus primeras 
+\begin_inset Formula $n$
+\end_inset
+
+ derivadas en 
+\begin_inset Formula $a$
+\end_inset
+
+ coinciden con 
+\begin_inset Formula $f$
+\end_inset
+
+ y sus 
+\begin_inset Formula $n$
+\end_inset
+
+ primeras derivadas en 
+\begin_inset Formula $a$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $f(x)=T_{n}(x)+E(x)$
+\end_inset
+
+ con 
+\begin_inset Formula ${\displaystyle \lim_{x\to a}E(x)=0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Puede probarse ademas que 
+\begin_inset Formula $E(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1}$
+\end_inset
+
+ con 
+\begin_inset Formula $\xi$
+\end_inset
+
+ entre 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ funciones, 
+\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $a\in Dom(f),Dom(g)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{n}(\alpha f+\beta g)=\alpha T_{n}(f)+\beta T_{n}(g)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{2n}(fg)=T_{n}(f)T_{n}(g)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{n-m}(f/g)=\frac{T_{n}(f)}{T_{m}(g)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{nm}(f\circ g)=T_{n}(f)\circ T_{m}(g)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{n-1}(f')=[T_{n}(f)]'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{n+1}(\int f)=\int T(f)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Calculo integral
+\end_layout
+
+\begin_layout Chapter
+Introduccion
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Area
+\end_layout
+
+\begin_layout Standard
+El area es una funcion 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ que asigna a las regiones del plano medibles, un numero real.
+ Sea 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ el conjunto de regiones medibles y sean 
+\begin_inset Formula $R,R_{1},R_{2}\in\mathcal{M}$
+\end_inset
+
+ entonces definimos: 
+\begin_inset Formula $\mathcal{A}:\mathcal{M}\to\mathbb{R}$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{A}(R)\geq0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall R\in\mathcal{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ es un rectangulo de base 
+\begin_inset Formula $b$
+\end_inset
+
+ y altura 
+\begin_inset Formula $h$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mathcal{A}(R)=bh$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $R_{1}\subseteq R_{2}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mathcal{A}(R_{1})\leq\mathcal{A}(R_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{A}(R_{1}\cup R_{2})=\mathcal{A}(R_{1})+\mathcal{A}(R_{2})-\mathcal{A}(R_{1}\cap R_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ es congruente con 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mathcal{A}(R_{1})=\mathcal{A}(R_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Particion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $P=\{x_{0},x_{1},\ldots,x_{n}\}$
+\end_inset
+
+ un conjunto de puntos de 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\mbox{\ensuremath{a=x_{0}<x_{1}<x_{2}<\ldots<x_{n-1}<x_{n}=b}}$
+\end_inset
+
+.
+ Decimos que 
+\begin_inset Formula $P$
+\end_inset
+
+ es una particion de 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $\mathcal{P}[a,b]$
+\end_inset
+
+ al conjunto de todas las particiones posibles de 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Una particion 
+\begin_inset Formula $P\in\mathcal{P}[a,b]$
+\end_inset
+
+ divide al intervalo 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ en 
+\begin_inset Formula $n$
+\end_inset
+
+ subintervalos 
+\begin_inset Formula $[x_{i-1},x_{i}]$
+\end_inset
+
+ para 
+\begin_inset Formula $i=1,\ldots n$
+\end_inset
+
+ cuyas logitudes (no necesariamente iguales entre si) son 
+\begin_inset Formula $\Delta x_{i}=x_{i}-x_{i-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Particion regular
+\end_layout
+
+\begin_layout Standard
+Si para una particion 
+\begin_inset Formula $P\in\mathcal{P}[a,b]$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $\Delta x_{i}=\frac{b-a}{n}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall i$
+\end_inset
+
+, decimos que es 
+\emph on
+regular
+\emph default
+.
+ En ese caso 
+\begin_inset Formula $x_{i}=a+i\frac{b-a}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Norma
+\end_layout
+
+\begin_layout Standard
+Llamamos norma de la particion 
+\begin_inset Formula $P$
+\end_inset
+
+ al numero 
+\begin_inset Formula $\mbox{\ensuremath{\left\Vert P\right\Vert =max\{\left|\Delta x_{i}\right|:i=1,\ldots,n\}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $P$
+\end_inset
+
+ es regular entonces 
+\begin_inset Formula $\left\Vert P\right\Vert =\frac{b-a}{n}$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $\mbox{\ensuremath{\left\Vert P\right\Vert \to0\iff n\to\infty}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $P$
+\end_inset
+
+ no es regular lo anterior no es cierto.
+\end_layout
+
+\begin_layout Subsection
+Funcion seccionalmente continua
+\end_layout
+
+\begin_layout Standard
+Se dice que 
+\begin_inset Formula $f$
+\end_inset
+
+ es seccionalmente continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, si tiene un numero finito de discontinuidades en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ del tipo evitable o del tipo salto finito.
+ Es decir, existe una particion 
+\begin_inset Formula $P\in\mathcal{P}[a,b]$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en cada subintervalo de 
+\begin_inset Formula $P$
+\end_inset
+
+ y existen los limites laterales para cada uno de los extremos.
+\end_layout
+
+\begin_layout Section
+Sumas de Riemann
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P\in\mathcal{P}[a,b]$
+\end_inset
+
+, si para cada 
+\begin_inset Formula $i$
+\end_inset
+
+ elegimos 
+\begin_inset Formula $c_{i}\in[x_{i-1},x_{i}]$
+\end_inset
+
+; llamamos suma de Riemann de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ asociada a 
+\begin_inset Formula $P$
+\end_inset
+
+ a 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}f(c_{i})\Delta x_{i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Una suma de Riemann depende de 
+\begin_inset Formula $f$
+\end_inset
+
+, de 
+\begin_inset Formula $P$
+\end_inset
+
+ y de la eleccion de los 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Suma superior, inferior, derecha e izquierda
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:[a,b]\rightarrow\mathbb{R}$
+\end_inset
+
+ continua y sea 
+\begin_inset Formula $P\in\mathcal{P}[a,b]$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en cada 
+\begin_inset Formula $[x_{i-1},x]$
+\end_inset
+
+, por el teorema de Weierstrass existen 
+\begin_inset Formula $m,M\in[x_{i-1},x_{i}]$
+\end_inset
+
+ donde 
+\begin_inset Formula $f$
+\end_inset
+
+ asume el minimo y el maximo respectivamente en dicho subintervalo.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamamos:
+\end_layout
+
+\begin_layout Itemize
+Suma superior de 
+\begin_inset Formula $f$
+\end_inset
+
+ a 
+\begin_inset Formula $U_{n}(f)={\displaystyle \sum_{i=1}^{n}f(M_{i})\Delta x_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Suma inferior de 
+\begin_inset Formula $f$
+\end_inset
+
+ a 
+\begin_inset Formula $L_{n}(f)={\displaystyle \sum_{i=1}^{n}f(m_{i})\Delta x_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Suma derecha de 
+\begin_inset Formula $f$
+\end_inset
+
+ a 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}f(x_{i})\Delta x_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Suma izquierda de 
+\begin_inset Formula $f$
+\end_inset
+
+ a 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}f(x_{i-1})\Delta x_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces existen 
+\begin_inset Formula ${\displaystyle \lim_{n\to\infty}U_{n}}$
+\end_inset
+
+ y 
+\begin_inset Formula ${\displaystyle \lim_{n\to\infty}L_{n}}$
+\end_inset
+
+ y ademas 
+\begin_inset Formula ${\displaystyle \lim_{n\to\infty}U_{n}}={\displaystyle \lim_{n\to\infty}L_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $c_{i}\in[x_{i-1},x_{i}]$
+\end_inset
+
+ para cada 
+\begin_inset Formula $i=1,\ldots,n$
+\end_inset
+
+ se tiene 
+\begin_inset Formula $\mbox{\ensuremath{f(m_{i})\leq f(c_{i})\leq f(M_{i})}}$
+\end_inset
+
+, luego 
+\begin_inset Formula $L_{n}(f)\leq{\displaystyle \sum_{i=1}^{n}f(c_{i})\Delta x_{i}}<U_{n}(f)$
+\end_inset
+
+ y por el teorema de intercalacion 
+\begin_inset Formula ${\displaystyle \lim_{n\to\infty}{\displaystyle \sum_{i=1}^{n}f(c_{i})\Delta x_{i}={\displaystyle \lim_{n\to\infty}U_{n}}={\displaystyle \lim_{n\to\infty}L_{n}}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Area
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua y no negativa en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\mbox{\ensuremath{S=\{(x,y)\in\mathbb{R}:a\leq x\leq b,0\leq y\leq f(x)\}}}$
+\end_inset
+
+ defimimos: 
+\begin_inset Formula $\mathcal{A}(S)={\displaystyle \lim_{n\to\infty}\sum_{i=1}^{n}f(c_{i})\Delta x_{i}}.$
+\end_inset
+
+ En particular tomando una particion regular y suma derecha: 
+\begin_inset Formula $\mathcal{A}(S)={\displaystyle \lim_{n\to\infty}\frac{b-a}{n}\sum_{i=1}^{n}f(a+i\frac{b-a}{n})}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Integral definida
+\end_layout
+
+\begin_layout Section
+Integral de Riemann
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:[a,b]\rightarrow\mathbb{R}$
+\end_inset
+
+, decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\series bold
+
+\begin_inset Formula $[a,b]$
+\end_inset
+
+
+\series default
+ si existe 
+\begin_inset Formula 
+\[
+{\displaystyle \lim_{\left\Vert P\right\Vert \to0}\sum_{i=1}^{n}f(c_{i})\Delta x_{i}}\forall P\forall c_{i}\in[x_{i-1},x_{i}]
+\]
+
+\end_inset
+
+ y en este caso, llamamos integral definida de 
+\begin_inset Formula $f$
+\end_inset
+
+ desde 
+\begin_inset Formula $a$
+\end_inset
+
+ hasta 
+\begin_inset Formula $b$
+\end_inset
+
+ y lo notamos:
+\begin_inset Formula 
+\[
+\intop_{a}^{b}f(x)dx=\lim_{\left\Vert P\right\Vert \to0}\sum_{i=1}^{n}f(c_{i})\Delta x_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Extendemos la definicion para 
+\begin_inset Formula $a>b$
+\end_inset
+
+ y 
+\begin_inset Formula $a=b$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $a>b$
+\end_inset
+
+, entonces 
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}f(x)dx=-\intop_{b}^{a}f(x)dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $a=b$
+\end_inset
+
+, entonces 
+\begin_inset Formula ${\displaystyle \intop_{b}^{a}f(x)dx=}0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Standard
+No toda integral definida representa un area.
+ Si la funcion no es positiva entonces la integral representa el area de
+ la region por debajo de la grafica y por arriba del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ menos la region del area por debajo del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y por arriba de la grafica.
+\end_layout
+
+\begin_layout Subsection
+Condiciones de integracion
+\end_layout
+
+\begin_layout Subsubsection
+Condiciones suficientes
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua o monotona en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces es integrable.
+ Ademas si 
+\begin_inset Formula $f$
+\end_inset
+
+ es seccionalmente continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y resulta: 
+\begin_inset Formula 
+\[
+{\displaystyle \intop_{a}^{b}f(x)dx=\sum_{i=1}^{n}\intop_{x_{i-1}}^{x_{i}}f(t)dt}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Condicion necesaria
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es acotada en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Es decir, 
+\begin_inset Formula $\mbox{\ensuremath{\exists M>0/\left\Vert f(x)\right\Vert \leq M}}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ integrables en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}cdx=c(b-a)}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall c\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}(f+g)(x)dx=\intop_{a}^{b}f(x)dx+\intop_{a}^{b}g(x)dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}cf(x)dx=c\intop_{a}^{b}f(x)dx}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall c\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}(f-g)(x)dx=\intop_{a}^{b}f(x)dx-\intop_{a}^{b}g(x)dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}f(x)dx=\intop_{a}^{c}f(x)dx+\intop_{c}^{b}f(x)dx}$
+\end_inset
+
+ cualquiera sea 
+\begin_inset Formula $c$
+\end_inset
+
+ y siempre que existan las integrales.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Como 
+\begin_inset Formula $f=c$
+\end_inset
+
+ es continua entonces es integrable en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una particion regular entonces 
+\begin_inset Formula 
+\[
+{\displaystyle \intop_{a}^{b}cdx=\lim_{\left\Vert P\right\Vert \to0}\sum_{i=1}^{n}}f(c_{i})\Delta x_{i}={\displaystyle \lim_{n\to\infty}}{\displaystyle \sum_{i=1}^{n}c\frac{b-a}{n}}=\lim_{n\to\infty}c\sum_{i=1}^{n}\frac{b-a}{n}=\lim_{n\to\infty}c(b-a)=c(b-a)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{enumi}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Se deduce de (2) y (3).
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Primer caso: 
+\begin_inset Formula $a<c<b$
+\end_inset
+
+.
+ Sabemos que 
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}f(x)dx=\lim_{\left\Vert P\right\Vert \to0}\sum_{i=1}^{n}f(c_{i})\Delta x_{i}}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P=\{x_{0},\ldots,x_{n}\}$
+\end_inset
+
+ una particion de 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x_{k}=c$
+\end_inset
+
+.
+ Definimos 
+\begin_inset Formula $P_{1}=\{x_{0},\ldots,x_{k}\}$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{2}=\{x_{k},\ldots,x_{n}\}$
+\end_inset
+
+ donde 
+\begin_inset Formula $P_{1}\cup P_{2}=P$
+\end_inset
+
+.
+ Es claro que si 
+\begin_inset Formula $\left\Vert P\right\Vert \to0$
+\end_inset
+
+ tambien lo hacen 
+\begin_inset Formula $\left\Vert P_{1}\right\Vert $
+\end_inset
+
+ y 
+\begin_inset Formula $\left\Vert P_{2}\right\Vert $
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Renombremos los puntos de 
+\begin_inset Formula $P_{2}=\{t_{0},\ldots,t_{m}\}$
+\end_inset
+
+ donde 
+\begin_inset Formula $t_{0}=x_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $m=n-k$
+\end_inset
+
+ y 
+\begin_inset Formula $t_{m}=x_{k+m}=x_{n}=b$
+\end_inset
+
+.
+ Entonces:
+\begin_inset Formula 
+\[
+\intop_{a}^{b}f(x)dx=\lim_{\left\Vert P\right\Vert \to0}\sum_{i=1}^{n}f(c_{i})\Delta x_{i}=\lim_{\left\Vert P\right\Vert \to0}\left(\sum_{i=1}^{k}f(c_{i})\Delta x_{i}+\sum_{i=k+1}^{n}f(c_{i})\Delta x_{i}\right)
+\]
+
+\end_inset
+
+ y por propiedades del limite resulta: 
+\begin_inset Formula 
+\[
+=\underbrace{\lim_{\left\Vert P_{1}\right\Vert \to0}\sum_{i=1}^{k}f(c_{i})\Delta x_{i}}_{L_{1}}+\underbrace{\lim_{\left\Vert P_{2}\right\Vert \to0}\sum_{i=1}^{m}f(c'_{i})\Delta t_{i}}_{L_{2}}
+\]
+
+\end_inset
+
+ con 
+\begin_inset Formula $c'_{i}\in[t_{i-1},t_{i}]$
+\end_inset
+
+.
+ Si existe alguno de los limites 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ entonces existe el otro y vale 
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}f=\intop_{a}^{c}f+\intop_{c}^{b}f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Segundo caso: 
+\begin_inset Formula $c<a<b$
+\end_inset
+
+.
+ Por el primer caso: 
+\begin_inset Formula 
+\[
+\intop_{c}^{b}f=\intop_{c}^{a}f+\intop_{a}^{b}f\Rightarrow\intop_{a}^{b}f=-\intop_{c}^{a}f+\intop_{c}^{b}f\Rightarrow\intop_{a}^{b}f=\intop_{a}^{c}f+\intop_{c}^{b}f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Tercer caso: 
+\begin_inset Formula $a<b<c$
+\end_inset
+
+: se demuestra de manera analoga al segundo caso.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Propiedades de orden
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ integrables en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f(x)\geq0$
+\end_inset
+
+ en 
+\begin_inset Formula $[a,b]\Rightarrow{\displaystyle \intop_{a}^{b}f(x)dx\geq0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f(x)\geq g(x)$
+\end_inset
+
+ en 
+\begin_inset Formula $[a,b]\Rightarrow{\displaystyle \intop_{a}^{b}f(x)dx\geq\intop_{a}^{b}g(x)dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $m\leq f(x)\leq M$
+\end_inset
+
+ en 
+\begin_inset Formula $[a,b]\Rightarrow m(b-a)\leq{\displaystyle \intop_{a}^{b}f(x)dx\leq M(b-a)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|{\displaystyle \intop_{a}^{b}f(x)dx}\right|\leq{\displaystyle \intop_{a}^{b}\left|f(x)\right|dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Como 
+\begin_inset Formula $f(x)\geq0$
+\end_inset
+
+ entonces 
+\begin_inset Formula ${\displaystyle \intop_{a}^{b}f(x)dx=\lim_{\left\Vert P\right\Vert \to0}\sum_{i=1}^{n}\underbrace{f(c_{i})}_{\geq0}\underbrace{\Delta x_{i}}_{\geq0}\geq0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $h(x)=f(x)-g(x)$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $f,g$
+\end_inset
+
+ son integrables, 
+\begin_inset Formula $h$
+\end_inset
+
+ es integrable y 
+\begin_inset Formula $h(x)\geq0$
+\end_inset
+
+ luego por el punto anterior: 
+\begin_inset Formula 
+\[
+0\leq{\displaystyle \intop_{a}^{b}h(x)dx=\intop_{a}^{b}f(x)dx-\intop_{a}^{b}g(x)dx\iff\intop_{a}^{b}g(x)dx\leq\intop_{a}^{b}f(x)dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ Se deduce de (2) y aplicando propiedades de la integral constante.
+\end_layout
+
+\begin_layout Enumerate
+Sabemos que 
+\begin_inset Formula $-|f|\leq f\leq|f|$
+\end_inset
+
+, luego por el punto 2, sera 
+\begin_inset Formula 
+\[
+-{\displaystyle \intop_{a}^{b}|f(x)|dx=\intop_{a}^{b}-|f(x)|dx\leq\intop_{a}^{b}f(x)dx\leq\intop_{a}^{b}|f(x)|dx}
+\]
+
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $\left|{\displaystyle \intop_{a}^{b}f(x)dx}\right|\le{\displaystyle \intop_{a}^{b}\left|f(x)\right|dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Funcion integral
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $[a,x]$
+\end_inset
+
+ para cada 
+\begin_inset Formula $x\in[a,b]$
+\end_inset
+
+ definimos la funcion 
+\begin_inset Formula $\mbox{\ensuremath{g:[a,b]\rightarrow\mathbb{R}}}$
+\end_inset
+
+ por 
+\begin_inset Formula $g(x)={\displaystyle \intop_{a}^{x}f(t)dt}$
+\end_inset
+
+.
+ En general, si 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $[a,x]$
+\end_inset
+
+ para cada 
+\begin_inset Formula $x\in[a,b]$
+\end_inset
+
+ y 
+\begin_inset Formula $c\in[a,b]$
+\end_inset
+
+ se puede definir 
+\begin_inset Formula $F_{c}(x)={\displaystyle \intop_{c}^{x}f(t)dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $c,d\in[a,b]$
+\end_inset
+
+, entonces
+\begin_inset Formula $F_{c}$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{d}$
+\end_inset
+
+ difieren en una constante.
+ En efecto 
+\begin_inset Formula $F_{c}(x)-F_{d}(x)={\displaystyle \intop_{c}^{x}f(t)dt-\intop_{d}^{x}f(t)dt=\intop_{c}^{x}f(t)dt+\intop_{x}^{d}f(t)dt=\intop_{c}^{d}f(t)dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Teorema de valor promedio
+\end_layout
+
+\begin_layout Paragraph
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+, se define el valor promedio de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ al numero 
+\begin_inset Formula $VP(f)=\frac{1}{b-a}{\displaystyle \intop_{a}^{b}f(x)dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces: 
+\begin_inset Formula 
+\[
+\exists c\in[a,b]/f(c)=VP(f)\iff f(c)(b-a)={\displaystyle \intop_{a}^{b}f(x)dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $m,M$
+\end_inset
+
+ los valores minimo y maximo alcanzados por 
+\begin_inset Formula $f$
+\end_inset
+
+ y garantizados por el teorema de Weierstrass.
+ 
+\begin_inset Formula $m\leq f(x)\leq M$
+\end_inset
+
+ luego por propiedad de orden:
+\begin_inset Formula 
+\[
+{\displaystyle \intop_{a}^{b}mdx}\leq{\displaystyle \intop_{a}^{b}f(x)dx\leq{\displaystyle \intop_{a}^{b}Mdx}\iff m(b-a)}\leq{\displaystyle \intop_{a}^{b}f(x)dx}\leq M(b-a)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema de valor medio ponderado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ continuas en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $g$
+\end_inset
+
+ no cambia de signo en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+\exists\xi\in[a,b]/{\displaystyle \intop_{a}^{b}f(x)g(x)dx=f(\xi)\intop_{a}^{b}g(x)dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Primer teorema fundamental del calculo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ integrable en 
+\begin_inset Formula $[a,x]$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in[a,b]$
+\end_inset
+
+ y sea 
+\begin_inset Formula $c\in[a,b]$
+\end_inset
+
+, entonces 
+\begin_inset Formula $F_{c}$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y ademas si 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua resulta 
+\begin_inset Formula $F_{c}$
+\end_inset
+
+ derivable en 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $F_{c}'(x)=f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Probaremos 
+\begin_inset Formula $F_{c}$
+\end_inset
+
+ continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ mostrando que 
+\begin_inset Formula ${\displaystyle \lim_{x\to x_{0}}F_{c}(x)=\lim_{h\to0}F_{c}(x_{0}+h)=F_{c}(x_{0})}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $h>0$
+\end_inset
+
+ entonces
+\begin_inset Formula 
+\[
+F_{c}(x_{0}+h)-F_{c}(x_{0})={\displaystyle \intop_{c}^{x_{0}+h}f(t)dt-\intop_{c}^{x_{0}}f(t)dt=\intop_{c}^{x_{0}+h}f(t)dt+\intop_{x_{0}}^{c}f(t)dt=\intop_{x_{0}}^{x_{0}+h}f(t)dt}
+\]
+
+\end_inset
+
+ como 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es acotada en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y que existen 
+\begin_inset Formula $m,M$
+\end_inset
+
+ tales que 
+\begin_inset Formula $m\leq f(x)\leq M$
+\end_inset
+
+, luego 
+\begin_inset Formula ${\displaystyle mh\leq\intop_{x_{0}}^{x_{0}+h}f(t)dt\leq Mh}$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula ${\displaystyle mh\leq F_{c}(x_{0}+h)-F_{c}(x_{0})\leq Mh}$
+\end_inset
+
+.
+ Ahora 
+\begin_inset Formula ${\displaystyle \lim_{h\to0^{+}}mh=\lim_{h\to0^{+}}Mh=}0$
+\end_inset
+
+ por el teorema de intercalacion 
+\begin_inset Formula ${\displaystyle \lim_{h\to0^{+}}}\left[F_{c}(x_{0}+h)-F_{c}(x_{0})\right]=0$
+\end_inset
+
+ es decir: 
+\begin_inset Formula ${\displaystyle \lim_{h\to0^{+}}}F_{c}(x_{0}+h)=F_{c}(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $h<0$
+\end_inset
+
+ entonces entonces
+\begin_inset Formula 
+\[
+F_{c}(x_{0})-F_{c}(x_{0}+h)={\displaystyle \intop_{c}^{x_{0}}f(t)dt-\intop_{c}^{x_{0}+h}f(t)dt=\intop_{c}^{x_{0}}f(t)dt+\intop_{x_{0}+h}^{c}f(t)dt=\intop_{x_{0}+h}^{x_{0}}f(t)dt}
+\]
+
+\end_inset
+
+ y exactamente igual que en el punto anterior:
+\begin_inset Formula 
+\[
+{\displaystyle mh\leq\intop_{x_{0}}^{x_{0}+h}f(t)dt\leq Mh}\iff{\displaystyle m(-h)\leq\intop_{x_{0}+h}^{x_{0}}f(t)dt\leq M(-h)}
+\]
+
+\end_inset
+
+ luego 
+\begin_inset Formula ${\displaystyle \lim_{h\to0^{-}}}F_{c}(x_{0}+h)=F_{c}(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ veremos que 
+\begin_inset Formula $\exists F_{c}'(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)$
+\end_inset
+
+ y que 
+\begin_inset Formula $\mbox{\ensuremath{F_{c}'(x)=f(x)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $h>0$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x+h\in(a,b)$
+\end_inset
+
+ entonces por el teorema del valor promedio 
+\begin_inset Formula $\frac{F_{c}(x+h)-F_{c}(x)}{h}=\frac{1}{h}{\displaystyle \intop_{x}^{x+h}f(t)dt=f(\alpha)}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $\mbox{\ensuremath{\alpha\in(x,x+h)}}$
+\end_inset
+
+.
+ Ahora derivamos:
+\begin_inset Formula 
+\[
+F_{c}'(x)=\lim_{h\to0^{+}}\frac{F_{c}(h+x)-F_{c}(x)}{h}=\lim_{h\to0^{+}}f(\alpha)=\lim_{\alpha\to x^{+}}f(\alpha)=f(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Analogamente si 
+\begin_inset Formula $h<0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Segundo teorema fundamental del calculo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ y de 
+\begin_inset Formula $P$
+\end_inset
+
+ una primitiva de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ entonces para todo 
+\begin_inset Formula $c\in(a,b)$
+\end_inset
+
+ vale 
+\begin_inset Formula $P(x)=P(c)+{\displaystyle \intop_{c}^{x}f(t)dt}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)$
+\end_inset
+
+ o bien:
+\begin_inset Formula 
+\[
+\intop_{c}^{x}f(t)dt=P(x)-P(c)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $F_{c}(x)={\displaystyle \intop_{c}^{x}f(t)dt}$
+\end_inset
+
+, como 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+, por el primer teorema fundamental del calculo resulta 
+\begin_inset Formula $F_{c}'(x)=f(x)$
+\end_inset
+
+.
+ Ahora como por hipotesis 
+\begin_inset Formula $P$
+\end_inset
+
+ es una primitiva de 
+\begin_inset Formula $f$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $F_{c}(x)-P(x)=k$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in(a,b)$
+\end_inset
+
+.
+ En particular para 
+\begin_inset Formula $x=c$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $F_{c}(c)-P(c)=k$
+\end_inset
+
+ y como 
+\begin_inset Formula $F_{c}(c)=0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $k=-P(c)$
+\end_inset
+
+, por lo tanto 
+\begin_inset Formula $F_{c}(x)=P(x)-P(c)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Logaritmo y exponenciacion
+\end_layout
+
+\begin_layout Section
+Funcion logaritmo
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Se llama funcion logaritmo natural de 
+\begin_inset Formula $x$
+\end_inset
+
+ y se nota 
+\begin_inset Formula $ln(x)$
+\end_inset
+
+ a la funcion:
+\begin_inset Formula 
+\begin{align*}
+ln:\mathbb{R}^{+}\to & \mathbb{R}\\
+x\to & ln(x)=\intop_{1}^{x}\frac{1}{t}dt
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $f(x)=1/x$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $\mathbb{R}^{+}$
+\end_inset
+
+, por el primer teorema fundamental resulta 
+\begin_inset Formula $ln'(x)=1/x$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\mathbb{R}^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a,b\in\mathbb{R}^{+}$
+\end_inset
+
+ 
+\begin_inset Formula $r\in\mathbb{Q}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ln(xy)=ln(x)+ln(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ln(1/y)=-ln(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ln(x/y)=ln(x)-ln(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ln(x^{r})=rln(x)$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Sea para 
+\begin_inset Formula $y$
+\end_inset
+
+ fijo 
+\begin_inset Formula $h(x)=ln(xy)$
+\end_inset
+
+, entonces por regla de la cadena 
+\begin_inset Formula $\mbox{\ensuremath{h'(x)=\frac{1}{xy}y=\frac{1}{x}}}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ y 
+\begin_inset Formula $ln(x)$
+\end_inset
+
+ son primitivas de 
+\begin_inset Formula $1/x$
+\end_inset
+
+ y en consecuencia difieren en una constante.
+ Es decir: 
+\begin_inset Formula $\mbox{\ensuremath{h(x)=ln(x)+c\Rightarrow ln(xy)=ln(x)+c}}$
+\end_inset
+
+.
+ Si tomamos 
+\begin_inset Formula $x=1$
+\end_inset
+
+, 
+\begin_inset Formula $h(1)=\underbrace{ln(1y)=ln(1)+c=c}_{c=ln(y)}$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $\mbox{\ensuremath{ln(xy)=ln(x)+ln(y)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $x=1/y$
+\end_inset
+
+ y aplicando el punto anterior sera 
+\begin_inset Formula $\mbox{\ensuremath{ln(1)=ln(\frac{1}{y}y)=ln(\frac{1}{y})+ln(y)=0}}$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $ln(\frac{1}{y})=-ln(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+ Se deduce de (1) y (2).
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $g(x)=ln(x^{r})$
+\end_inset
+
+ y 
+\begin_inset Formula $h(x)=rln(x)$
+\end_inset
+
+ para 
+\begin_inset Formula $r\in\mathbb{Q}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\mbox{\ensuremath{g'(x)=\frac{1}{x^{r}}r^{x-1}=\frac{r}{x}}}$
+\end_inset
+
+ y 
+\begin_inset Formula $h'(x)=r\frac{1}{x}=\frac{r}{x}$
+\end_inset
+
+ las funciones 
+\begin_inset Formula $g,h$
+\end_inset
+
+ difieren en una constante luego 
+\begin_inset Formula $g(x)=h(x)+c\iff ln(x^{r})=rln(x)+c$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $x=1$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mbox{\ensuremath{ln(1^{r})=ln(1)=\underbrace{0=rln(1)+c=0+c=c}_{c=0}}}$
+\end_inset
+
+ de donde 
+\begin_inset Formula $ln(x^{r})=rln(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Puesto que 
+\begin_inset Formula $Im(ln)=\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $ln$
+\end_inset
+
+ es inyectiva entonces existe un unico 
+\begin_inset Formula $x>0/ln(x)=1$
+\end_inset
+
+.
+ Este numero se denota con 
+\begin_inset Formula $e$
+\end_inset
+
+ es decir: 
+\begin_inset Formula $\mbox{\ensuremath{ln(e)={\displaystyle \intop_{1}^{e}\frac{1}{t}dt=1}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Funcion exponencial
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+La funcion 
+\begin_inset Formula $ln(x)$
+\end_inset
+
+ es inyectiva y por lo tanto invertible.
+ Llamamos funcion exponencial a la funcion inversa del logaritmo natural,
+ es decir:
+\begin_inset Formula 
+\begin{align*}
+E:\mathbb{R}\to & \mathbb{R}^{+}\\
+x\to & E(x)=y\iff x=ln(y)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E(0)=1$
+\end_inset
+
+, 
+\begin_inset Formula $E(1)=e$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E'(x)=E(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E(x+y)=E(x)E(y)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E(-y)=\frac{1}{E(y)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E(x-y)=\frac{E(x)}{E(y)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E(r)=e^{r}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall r\in\mathbb{Q}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(f^{-1}\right)'(y)=\frac{1}{f'\left[f^{-1}(y)\right]}=\frac{1}{f'(x)}\Rightarrow E'(x)=\frac{1}{1/y}=\frac{1}{1/E(x)}=E(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $a=E(x)$
+\end_inset
+
+, 
+\begin_inset Formula $b=E(y)$
+\end_inset
+
+ y 
+\begin_inset Formula $c=E(x+y)$
+\end_inset
+
+ es decir 
+\begin_inset Formula $ln(a)=x$
+\end_inset
+
+, 
+\begin_inset Formula $ln(b)=y$
+\end_inset
+
+ y 
+\begin_inset Formula $ln(c)=x+y$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $ln(ab)=ln(a)+ln(b)=x+y=ln(c)$
+\end_inset
+
+ y como 
+\begin_inset Formula $ln(x)$
+\end_inset
+
+ es inyectiva resulta 
+\begin_inset Formula $ab=c$
+\end_inset
+
+ entonces 
+\begin_inset Formula $E(x)E(y)=E(x+y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR. 
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+ 
+\begin_inset Formula $ln(e^{r})=rln(e)=r$
+\end_inset
+
+ y por definicion de 
+\begin_inset Formula $E(x)$
+\end_inset
+
+ resulta 
+\begin_inset Formula $E(r)=e^{r}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Base a
+\end_layout
+
+\begin_layout Subsection
+Exponencial en base a
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $a>0$
+\end_inset
+
+ y 
+\begin_inset Formula $a\neq1$
+\end_inset
+
+ definimos la funcion exponencial de base 
+\begin_inset Formula $a$
+\end_inset
+
+ como 
+\begin_inset Formula $\mbox{\ensuremath{a^{x}=e^{xln(a)}}}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Logaritmo en base a
+\end_layout
+
+\begin_layout Standard
+Llamamos funcion logaritmo de base 
+\begin_inset Formula $a$
+\end_inset
+
+, con 
+\begin_inset Formula $a>0,a\neq1$
+\end_inset
+
+ a la funcion inversa de la funcion exponencial de base 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Es decir:
+\begin_inset Formula 
+\begin{align*}
+log_{a}:\mathbb{R}^{+}\to & \mathbb{R}\\
+x\to & log_{a}(x)=y\iff a^{y}=x
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $log_{a}x=\frac{ln(x)}{ln(a)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $log_{a}(xy)=log_{a}(x)+log_{a}(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $log_{a}(x/y)=log_{a}(x)-log_{a}(y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a^{x+y}=a^{x}a^{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a^{x-y}=\frac{a^{x}}{a^{y}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Tecnicas de integracion
+\end_layout
+
+\begin_layout Section
+Tecnicas basicas
+\end_layout
+
+\begin_layout Subsection
+Integrales inmediatas
+\end_layout
+
+\begin_layout Standard
+
+\size larger
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="0.2cm" interlinespace="0.2cm" endhead="true" endfoot="true">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\int f(x)dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $f(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $f'(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $kx+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{x^{n+1}}{n+1}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $x^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $nx^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $a\int f(x)dx+b\int g(x)dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $af(x)+bg(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $af'(x)+bg'(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $ln\left(\left|x\right|\right)+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{1}{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $-\frac{1}{x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{x\left|x\right|}{2}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\left|x\right|$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{x}{\left|x\right|}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\left|x\right|+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $sgn(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{a^{x}}{ln(a)}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $a^{x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $a^{x}ln(a)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{xln(x)-x}{ln(a)}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $log_{a}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{1}{xln(a)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{b^{ax}}{aln(b)}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $b^{ax}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $b^{ax}ln(b)a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $-cos(x)+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $sen(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $cos(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $sen(x)+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $cos(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $-sen(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $-ln\left[\left|cos\left(x\right)\right|\right]+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $tan(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $sec^{2}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $xsen^{-1}(x)+\sqrt{1-x^{2}}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $sen^{-1}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{1}{\sqrt{1-x^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $xcos^{-1}(x)-\sqrt{1-x^{2}}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $cos^{-1}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $-\frac{1}{\sqrt{1-x^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $xtan^{-1}(x)-\frac{ln\left(x^{2}+1\right)}{2}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $tan^{-1}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $\frac{1}{1+x^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Integracion por substitucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $I$
+\end_inset
+
+ y sea 
+\begin_inset Formula $g$
+\end_inset
+
+ derivable, con derivada continua en 
+\begin_inset Formula $I$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Im(g)\subset I$
+\end_inset
+
+ entonces 
+\begin_inset Formula ${\displaystyle \int f\left[g(x)\right]g'(x)dx=\int f(t)dt}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Integracion por partes
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ derivables con derivada continua en 
+\begin_inset Formula $I$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+{\displaystyle \int f(x)g'(x)dx=f(x)g(x)-\int f'(x)g(x)dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Integracion de funciones racionales
+\end_layout
+
+\begin_layout Subsection
+Cociente de polinomios
+\end_layout
+
+\begin_layout Subsubsection
+Raices reales simples
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsubsection
+Raices reales multiples
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsubsection
+Raices complejas simples
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsubsection
+Raices complejas multiples
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cociente de funciones trigonometricas
+\end_layout
+
+\begin_layout Standard
+Las integrales de cocientes de funciones trigonometricas se resuelven mediante
+ la sustitucion 
+\begin_inset Formula $u=tan(x/2)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[thick] 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+coordinate (O) at (0,0); 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+coordinate (A) at (4,0); 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+coordinate (B) at (0,2); 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw (O)--(A)--(B)--cycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tkzLabelSegment[below=2pt](O,A){
+\backslash
+textit{$1$}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tkzLabelSegment[left=2pt](O,B){
+\backslash
+textit{$u$}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tkzLabelSegment[above right=2pt](A,B){
+\backslash
+textit{$
+\backslash
+sqrt{1+u^2}$}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tkzMarkAngle[fill= none,size=1.7cm, opacity=.4](B,A,O) 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tkzLabelAngle[pos = 1.3](B,A,O){$x/2$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando el coseno del angulo doble obtenemos: 
+\begin_inset Formula 
+\[
+cos(x)=cos\left(\frac{x}{2}+\frac{x}{2}\right)=cos^{2}\left(\frac{x}{2}\right)-sen^{2}\left(\frac{x}{2}\right)=\left(\frac{1}{\sqrt{1+u^{2}}}\right)^{2}-\left(\frac{u}{\sqrt{1+u^{2}}}\right)^{2}=\frac{1-u^{2}}{1+u^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplicando el seno del angulo doble:
+\begin_inset Formula 
+\[
+sen(x)=sen\left(\frac{x}{2}+\frac{x}{2}\right)=2sen\left(\frac{x}{2}\right)cos\left(\frac{x}{2}\right)=2\frac{u}{\sqrt{1+u^{2}}}\frac{1}{\sqrt{1+u^{2}}}=\frac{2u}{1+u^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ademas 
+\begin_inset Formula $u=tan(x/2)\iff x=2tan^{-1}(u)$
+\end_inset
+
+ luego: 
+\begin_inset Formula $dx=\frac{2}{1+u^{2}}du$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Cociente de funciones exponenciales
+\end_layout
+
+\begin_layout Standard
+Las integrales de cocientes de funciones exponenciales se resuelven mediente
+ la sustitucion 
+\begin_inset Formula $u=e^{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+Calculo diferencial en campos escalares
+\end_layout
+
+\begin_layout Chapter
+Limites y continuidad
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Campo escalar
+\end_layout
+
+\begin_layout Standard
+Llamamos campo escalar a una funcion cuyo dominio esta contenido en 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ y cuyo codominio es 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+ Es decir:
+\begin_inset Formula 
+\begin{align*}
+f:D\subseteq\mathbb{R}^{n}\to & \mathbb{R}\\
+(x_{1},x_{2},\ldots,x_{n})\to & f(x_{1},x_{2},\ldots,x_{n})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Conjunto imagen
+\end_layout
+
+\begin_layout Standard
+Llamamos conjunto imagen de 
+\begin_inset Formula $f$
+\end_inset
+
+ a: 
+\begin_inset Formula $\{y\in\mathbb{R}:y=f(x_{1},x_{2},\ldots,x_{n})\mbox{ p.a. \ensuremath{(x_{1},x_{2},\ldots,x_{n})\in\mathbb{R}^{n}\}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Grafica de un campo escalar
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, llamaremos grafica de 
+\begin_inset Formula $f$
+\end_inset
+
+ al conjunto: 
+\begin_inset Formula 
+\[
+G_{f}=\{\left(\vec{x},f(\vec{x})\right):\vec{x}\in Dom(f)\subseteq\mathbb{R}^{n}\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $G_{f}\subseteq\mathbb{R}^{n+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Conjunto de nivel
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $k\in\mathbb{R}$
+\end_inset
+
+ llamamos conjunto de nivel 
+\begin_inset Formula $k$
+\end_inset
+
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ y lo notamos 
+\begin_inset Formula $C_{k}$
+\end_inset
+
+ al conjunto: 
+\begin_inset Formula $C_{k}=\{\vec{x}\in\mathbb{R}^{n}:f(\vec{x})=k\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Norma
+\end_layout
+
+\begin_layout Standard
+La norma es una funcion de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{R}_{0}^{+}$
+\end_inset
+
+ que indicaremos 
+\begin_inset Formula $\left\Vert \cdot\right\Vert $
+\end_inset
+
+ definida por: 
+\begin_inset Formula 
+\[
+\left\Vert \vec{x}\right\Vert =\sqrt{x_{1}^{2}+\ldots+x_{n}^{2}}=\sqrt{\vec{x}\times\vec{x}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Distancia
+\end_layout
+
+\begin_layout Standard
+La distancia es una funcion de 
+\begin_inset Formula $\mathbb{R}^{n}\times\mathbb{R}^{n}$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{R}_{0}^{+}$
+\end_inset
+
+ que indicaremos 
+\begin_inset Formula $dist$
+\end_inset
+
+ definida por 
+\begin_inset Formula $dist(\vec{x},\vec{y})=\left\Vert \vec{x}-\vec{y}\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Propiedades
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dist(\vec{x},\vec{y})=dist(\vec{y},\vec{x})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dist(\vec{x},\vec{y})\leq dist(\vec{x},\vec{z})+dist(\vec{z},\vec{y})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dist(\vec{x},\vec{y})\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dist(\vec{x},\vec{y})=0\iff\vec{x}=\vec{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Bola
+\end_layout
+
+\begin_layout Standard
+Definimos bola de centro 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ y radio 
+\begin_inset Formula $r$
+\end_inset
+
+ como:
+\begin_inset Formula 
+\[
+B(\vec{a},r)=B_{r}(\vec{a})=\{\vec{x}\in\mathbb{R}^{n}:dist(\vec{x},\vec{a})<r\}=\{\vec{x}\in\mathbb{R}^{n}:\left\Vert \vec{x}-\vec{a}\right\Vert <r\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+En 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $B_{r}(a)=(a-r,a+r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Entorno
+\end_layout
+
+\begin_layout Standard
+Llamaremos entorno de un punto 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ a todo conjunto que contenga 
+\begin_inset Formula $B_{r}(\vec{a})$
+\end_inset
+
+.
+ Es decir 
+\begin_inset Formula $E$
+\end_inset
+
+ es un entorno de 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ si y solo si: 
+\begin_inset Formula $\exists r>0/B_{r}(\vec{a})\subseteq E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Punto interior
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A\subseteq\mathbb{R}^{n}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\vec{x}\in A$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ es un punto interior de 
+\begin_inset Formula $A$
+\end_inset
+
+ si y solo si: 
+\begin_inset Formula $\exists r>0/\vec{x}\in B_{r}(\vec{x})\subseteq A$
+\end_inset
+
+.
+ Definimos ademas 
+\begin_inset Formula $\mathring{A}$
+\end_inset
+
+ como el conjunto de todos los puntos interiores de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Conjunto abierto
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $A\subseteq\mathbb{R}^{n}$
+\end_inset
+
+ es abierto si todos sus puntos son interiores, es decir si 
+\begin_inset Formula $A=\mathring{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Conjunto cerrado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A\subseteq\mathbb{R}^{n}$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $A$
+\end_inset
+
+ es cerrado si 
+\begin_inset Formula $\mathcal{C}A$
+\end_inset
+
+ (complemento de 
+\begin_inset Formula $A)$
+\end_inset
+
+ es abierto.
+\end_layout
+
+\begin_layout Subsection
+Punto de clausura
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A\subseteq\mathbb{R}^{n}$
+\end_inset
+
+, el punto 
+\begin_inset Formula $\vec{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ es un punto de clausura de 
+\begin_inset Formula $A$
+\end_inset
+
+ si y solo si todo entorno de 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ tiene interseccion no vacia con 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Llamaremos clausura de 
+\begin_inset Formula $A$
+\end_inset
+
+ y lo notaremos 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ al conjunto de todos los puntos de clausura de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Propiedad
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ es cerrado si y solo si 
+\begin_inset Formula $A=\overline{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Punto frontera
+\end_layout
+
+\begin_layout Standard
+Un punto 
+\begin_inset Formula $\vec{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ es punto frontera de 
+\begin_inset Formula $A\subseteq\mathbb{R}^{n}$
+\end_inset
+
+ si cualquier entorno de 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ tiene interseccion no vacia con 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{C}A$
+\end_inset
+
+.
+ Definimos frontera de 
+\begin_inset Formula $A$
+\end_inset
+
+ y lo notamos 
+\begin_inset Formula $\partial A$
+\end_inset
+
+ al conjunto de todos los puntos de frontera de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Punto exterior
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A\subseteq\mathbb{R}^{n}$
+\end_inset
+
+, el punto 
+\begin_inset Formula $\vec{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ es llamado punto exterior de 
+\begin_inset Formula $A$
+\end_inset
+
+ si existe 
+\begin_inset Formula $B_{r}(\vec{x})\subseteq\mathcal{C}A$
+\end_inset
+
+.
+ Llamamos exterior de 
+\begin_inset Formula $A$
+\end_inset
+
+ y lo notaremos 
+\begin_inset Formula $ext(A)$
+\end_inset
+
+ al conjunto de todos los puntos exteriores de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Conjunto compacto
+\end_layout
+
+\begin_layout Standard
+Un conjunto cerrado y acotado de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ es llamado conjunto compacto.
+\end_layout
+
+\begin_layout Subsection
+Campo escalar acotado
+\end_layout
+
+\begin_layout Standard
+Decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es acotada en un entorno 
+\begin_inset Formula $E$
+\end_inset
+
+ de 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ si existe 
+\begin_inset Formula $M>0$
+\end_inset
+
+ tal que 
+\begin_inset Formula $|f(x,y)|\leq M$
+\end_inset
+
+ 
+\begin_inset Formula $\forall(x,y)\in E(a,b)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Funcion vectorial
+\end_layout
+
+\begin_layout Standard
+Llamamos funcion vectorial a 
+\begin_inset Formula $\vec{\alpha}:[a,b]\to\mathbb{R}^{n}$
+\end_inset
+
+ dada por 
+\begin_inset Formula $\vec{\alpha}(t)=\left(\alpha_{1}(t),\ldots,\alpha_{n}(t)\right)$
+\end_inset
+
+.
+ A cada funcion 
+\begin_inset Formula $\alpha_{k}$
+\end_inset
+
+ la llamamos funcion componente de 
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si todas las funciones componentes son continuas, llamamos 
+\emph on
+curva
+\emph default
+ al conjunto 
+\begin_inset Formula $\Gamma=\left\{ \vec{\alpha}(t):t\in[a,b]\right\} $
+\end_inset
+
+ y decimos que 
+\begin_inset Formula $\vec{\alpha}(t)$
+\end_inset
+
+ es una parametrizacion continua de la curva 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+ Notemos que un punto 
+\begin_inset Formula $P\in\Gamma\iff\exists t_{0}\in[a,b]/\vec{\alpha}(t_{0})=P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si las funciones componentes tienen derivadas continuas o seccionalmente
+ continuas, la curva 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ se dice regular o regular a trozos.
+\end_layout
+
+\begin_layout Section
+Limites
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\vec{a}\in\overline{D}$
+\end_inset
+
+ (o sea que todo entorno de 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ tiene interseccion no vacia con 
+\begin_inset Formula $D$
+\end_inset
+
+) entonces diremos que 
+\begin_inset Formula $L\in\mathbb{R}$
+\end_inset
+
+ es el limite de 
+\begin_inset Formula $f$
+\end_inset
+
+ cuando 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ tiende a 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ y lo notamos 
+\begin_inset Formula ${\displaystyle \lim_{\vec{x}\to\vec{a}}f(\vec{x})=L}$
+\end_inset
+
+ si y solo si:
+\begin_inset Formula 
+\[
+\forall\epsilon>0\exists\delta>0/\vec{x}\in D\land0<\left\Vert \vec{x}-\vec{a}\right\Vert <\delta\Rightarrow\left|f(\vec{x})-L\right|<\epsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Itemize
+Para 
+\begin_inset Formula $n=2$
+\end_inset
+
+: Sea 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $(a,b)\in\overline{D}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mbox{\ensuremath{{\displaystyle \lim_{(x,y)\to(a,b)}}f(x,y)=L}}$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\mbox{\ensuremath{\forall\epsilon>0\exists\delta>0/(x,y)\in D\land0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta\Rightarrow\left|f(x,y)-L\right|<\epsilon}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Condiciones necesarias
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ dos curvas que contienen al punto 
+\begin_inset Formula $(a,b)\in\mathbb{R}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{\ensuremath{L_{1}={\displaystyle \lim_{(x,y)\to(a,b)}f(x,y)}}}$
+\end_inset
+
+ cuando 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ se acerca de 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ por la curva 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mbox{\ensuremath{L_{2}={\displaystyle \lim_{(x,y)\to(a,b)}f(x,y)}}}$
+\end_inset
+
+ cuando 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ se acerca de 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ por la curva 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mbox{\ensuremath{L_{1}\neq L_{2}\Rightarrow\nexists\lim_{(x,y)\to(a,b)}f(x,y)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si existe 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}f(x,y)=L}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es acotada en algun entorno de 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Limites radiales
+\end_layout
+
+\begin_layout Standard
+Si consideramos las infinitas rectas que pasan por el origen (
+\begin_inset Formula $y=mx$
+\end_inset
+
+ y 
+\begin_inset Formula $x=0$
+\end_inset
+
+) podemos calcular el limite de un campo escalar en el origen en todas esas
+ direcciones si evaluamos: 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(0,0)}f(x,mx)}$
+\end_inset
+
+ y 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(0,0)}f(0,y)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Los limites radiales no son todas las direcciones posibles, luego son suficiente
+s para el calculo de un limite.
+\end_layout
+
+\begin_layout Subsection
+Coordenadas polares
+\end_layout
+
+\begin_layout Subsection
+Teoremas
+\end_layout
+
+\begin_layout Subsubsection
+Unicidad del limite
+\end_layout
+
+\begin_layout Standard
+Si existe 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}f(x,y)=L}$
+\end_inset
+
+ este es unico.
+\end_layout
+
+\begin_layout Subsubsection
+Formulaciones equivalentes
+\end_layout
+
+\begin_layout Standard
+Las siguientes expresiones son equivalentes: 
+\begin_inset Formula 
+\[
+\lim_{(x,y)\to(a,b)}f(x,y)=L\iff\lim_{(x,y)\to(a,b)}\left[f(x,y)-L\right]=0\iff\lim_{\left\Vert (x,y)-(a,b)\right\Vert \to0}\left|f(x,y)-L\right|=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Algebra de limites
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g$
+\end_inset
+
+ campos escalares de 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ con igual dominio 
+\begin_inset Formula $D\subseteq\mathbb{R}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\mbox{\ensuremath{b={\displaystyle \lim_{(x,y)\to(a,b)}}f(x,y)}}$
+\end_inset
+
+ y 
+\begin_inset Formula $c={\displaystyle \lim_{(x,y)\to(a,b)}}g(x,y)$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}}f(x,y)+g(x,y)=b+c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall\alpha\in\mathbb{R}\Rightarrow{\displaystyle \lim_{(x,y)\to(a,b)}\alpha}f(x,y)=\alpha b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}}f(x,y)g(x,y)=bc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}}\left|f(x,y)\right|=|b|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $c\neq0\Rightarrow{\displaystyle \lim_{(x,y)\to(a,b)}}\frac{f(x,y)}{g(x,y)}=b/c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Caracter local del limite
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g:D\subseteq\mathbb{R}^{2}\to\mathbb{R}/\exists r>0$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mbox{\ensuremath{f(x,y)=g(x,y)\forall(x,y)\in B_{r}\left[(a,b)\right]-\{(a,b)\}}}$
+\end_inset
+
+, entonces si 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}}f(x,y)=L\Rightarrow{\displaystyle \lim_{(x,y)\to(a,b)}}g(x,y)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema de intercalacion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g,h:D\subseteq\mathbb{R}^{2}\to\mathbb{R}/\exists r>0$
+\end_inset
+
+ donde 
+\begin_inset Formula $g(x,y)\leq f(x,y)\leq h(x,y)$
+\end_inset
+
+ para todo 
+\begin_inset Formula $(x,y)\in B_{r}\left[(a,b)\right]-\{(a,b)\}$
+\end_inset
+
+ entonces si 
+\begin_inset Formula $\mbox{\ensuremath{{\displaystyle \lim_{(x,y)\to(a,b)}}g(x,y)={\displaystyle \lim_{(x,y)\to(a,b)}}h(x,y)=L}}$
+\end_inset
+
+ resulta 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}}f(x,y)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Continuidad
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Decimos que el campo escalar 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+ es continuo en 
+\begin_inset Formula $(a,b)\in D$
+\end_inset
+
+ si 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}}f(x,y)=f(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Continuidad de la composicion
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\subseteq\mathbb{R}\to\mathbb{R}$
+\end_inset
+
+ (con 
+\begin_inset Formula $f(D)\subseteq B)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $f(a,b)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mbox{\ensuremath{h(x,y)=g\circ f(x,y)=g\left[f\left(x,y\right)\right]}}$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+, como 
+\begin_inset Formula $g$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $f(a,b)$
+\end_inset
+
+ existe 
+\begin_inset Formula $r>0$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left|f(x,y)-f(a,b)\right|<r\Rightarrow\left|g\left[f(x,y)\right]-g\left[f(a,b)\right]\right|<\epsilon$
+\end_inset
+
+; pero como 
+\begin_inset Formula $f$
+\end_inset
+
+ es conitnua en 
+\begin_inset Formula $(a,b)$
+\end_inset
+
+ para este 
+\begin_inset Formula $r$
+\end_inset
+
+ existe 
+\begin_inset Formula $\delta=\delta(r)>0$
+\end_inset
+
+ tal que si 
+\begin_inset Formula 
+\[
+\left\Vert (x,y)-(a,b)\right\Vert <\delta\Rightarrow\left|f(x,y)-f(a,b)\right|<r\Rightarrow\left|g\left[f(x,y)\right]-g\left[f(a,b)\right]\right|<\epsilon
+\]
+
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula ${\displaystyle \lim_{(x,y)\to(a,b)}g\left[f(x,y)\right]=g\left[f(a,b)\right]}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Derivadas y diferenciabilidad
+\end_layout
+
+\begin_layout Section
+Derivadas
+\end_layout
+
+\begin_layout Subsection
+Derivada direccional
+\end_layout
+
+\begin_layout Standard
+Sea, 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{x}\in\mathring{D}$
+\end_inset
+
+ (entonces 
+\begin_inset Formula $\exists r>0/B_{r}(\vec{x})\subseteq D$
+\end_inset
+
+), 
+\begin_inset Formula $\vec{u}$
+\end_inset
+
+ un versor y 
+\begin_inset Formula $h\neq0/\vec{x}+h\vec{u}\in B_{r}(\vec{x})$
+\end_inset
+
+; entonces si existe 
+\begin_inset Formula ${\displaystyle \lim_{h\to0}\frac{f(\vec{x}+h\vec{u})-f(\vec{x})}{h}=D_{\vec{u}}f(\vec{x})}$
+\end_inset
+
+ se lo llama derivada direccional de 
+\begin_inset Formula $f$
+\end_inset
+
+ en la direccion de 
+\begin_inset Formula $\vec{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo podemos tomar 
+\begin_inset Formula $h$
+\end_inset
+
+ tal que 
+\begin_inset Formula $|h|<r$
+\end_inset
+
+ pues:
+\begin_inset Formula 
+\[
+dist(\vec{x}+h\vec{u},x)=\left\Vert \vec{x}+h\vec{u}-\vec{x}\right\Vert =\left\Vert h\vec{u}\right\Vert =\left|h\right|\left\Vert \vec{u}\right\Vert =\left|h\right|<r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+En 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ si 
+\begin_inset Formula $\vec{u}=(u_{1},u_{2})$
+\end_inset
+
+ es un versor y 
+\begin_inset Formula $\vec{x}=(a,b)$
+\end_inset
+
+ entonces: 
+\begin_inset Formula 
+\[
+D_{\vec{u}}f(a,b)=\lim_{h\to0}\frac{f(a+hu_{1},b+hu_{2})-f(a,b)}{h}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivada parcial
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\vec{u}=\vec{e}_{i}=(0,0,\ldots,\underbrace{1}_{iesima},0,\ldots,0)$
+\end_inset
+
+ el iesimo vector de la base canonica de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ si existe 
+\begin_inset Formula ${\displaystyle \lim_{h\to0}}\frac{f(\vec{x}+h\vec{e}_{i})-f(\vec{x})}{h}=D_{\vec{e}_{i}}f(\vec{x})$
+\end_inset
+
+ se lo llama derivada parcial iesima de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Notaciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D_{\vec{e}_{i}}f(\vec{x})=D_{i}f(\vec{x})=f_{x_{i}}(\vec{x})=\frac{\partial f}{\partial x_{i}}(\vec{x})$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Derivadas de orden superior
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+ y existen 
+\begin_inset Formula $f_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{y}$
+\end_inset
+
+ en todo punto de 
+\begin_inset Formula $\mathring{D}$
+\end_inset
+
+ podemos considerar las derivadas parciales dobles de 
+\begin_inset Formula $f$
+\end_inset
+
+ que notaremos:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{1}(D_{1}f)=D_{11}f=f_{xx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{2}(D_{1}f)=D_{21}f=(f_{x})_{y}=f_{xy}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{1}(D_{2}f)=D_{12}f=(f_{y})_{x}=f_{yx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{2}(D_{2}f)=D_{22}f=f_{yy}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En general si 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ notamos: 
+\begin_inset Formula 
+\[
+D_{ij}f=D_{i}(D_{j}f)=(f_{x_{j}})_{x_{i}}=f_{x_{j}x_{i}}=\frac{\partial}{\partial x_{i}}\left(\frac{\partial f}{\partial x_{j}}\right)=\frac{\partial^{2}f}{\partial x_{i}\partial x_{j}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema de Clairaut
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $\vec{a}\in\mathring{D}$
+\end_inset
+
+, si 
+\begin_inset Formula $D_{ij}f$
+\end_inset
+
+ y 
+\begin_inset Formula $D_{ji}f$
+\end_inset
+
+ son continuas en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ entonces: 
+\begin_inset Formula $D_{ij}f(\vec{a})=D_{ji}f(\vec{a})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz Hessiana
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f:A\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ es un campo escalar con derivadas de segundo orden continuas y 
+\begin_inset Formula $\vec{a}\in\mathring{A}$
+\end_inset
+
+ llamamos matriz Hessiana de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ a la matriz dada por las derivadas parciales segundas de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+, es decir:
+\begin_inset Formula 
+\[
+H_{f}(\vec{a})=H(\vec{a})=\left(\begin{array}{cccc}
+D_{11}f(\vec{a}) & D_{12}f(\vec{a}) & \cdots & D_{1n}f(\vec{a})\\
+D_{21}f(\vec{a}) & \cdots & \cdots & D_{2n}f(\vec{a})\\
+\vdots & \cdots & \ddots & \vdots\\
+D_{n1}f(\vec{a}) & \cdots & \cdots & D_{nn}f(\vec{a})
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamamos Hessiano al determinate de dicha matriz.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Condicion suficiente de continuidad
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $D$
+\end_inset
+
+ abierto tal que 
+\begin_inset Formula $D_{j}f$
+\end_inset
+
+ para 
+\begin_inset Formula $j=1,\ldots,n$
+\end_inset
+
+ son acotadas en 
+\begin_inset Formula $D$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $D$
+\end_inset
+
+ no es abierto y para 
+\begin_inset Formula $j=1,\ldots,n$
+\end_inset
+
+ son acotadas en 
+\begin_inset Formula $\mathring{D}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $\mathring{D}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Itemize
+La existencia de las derivadas direccionales en cualquier direccion no garantiza
+ la continuidad del campo escalar.
+ Por ejemplo 
+\begin_inset Formula $f(x,y)=\frac{xy^{2}}{x^{2}+x^{4}}$
+\end_inset
+
+ si 
+\begin_inset Formula $(x,y)\neq(0,0)$
+\end_inset
+
+ y 
+\begin_inset Formula $f(x,y)=0$
+\end_inset
+
+ si 
+\begin_inset Formula $(x,y)=(0,0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Diferenciabilidad
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{a}\in\mathring{D}$
+\end_inset
+
+ y 
+\begin_inset Formula $\vec{v}/\vec{a}+\vec{v}\in B_{r}(\vec{a})$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ si existe 
+\begin_inset Formula $\vec{\alpha}=(\alpha_{1},\ldots,\alpha_{n})\in\mathbb{R}^{n}$
+\end_inset
+
+ tal que: 
+\begin_inset Formula $\mbox{\ensuremath{f(\vec{a}+\vec{v})-f(\vec{a})=\vec{\alpha}\times\vec{v}+\left\Vert \vec{v}\right\Vert E(\vec{a},\vec{v})}}$
+\end_inset
+
+ donde 
+\begin_inset Formula ${\displaystyle \lim_{\left\Vert \vec{v}\right\Vert \to0}E(\vec{a},\vec{v})=0}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\vec{v}/\vec{a}+\vec{v}\in B_{r}(\vec{a})$
+\end_inset
+
+, es decir 
+\begin_inset Formula $\left\Vert v\right\Vert <r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+El termino 
+\begin_inset Formula $\vec{\alpha}\times\vec{v}$
+\end_inset
+
+ es lineal en 
+\begin_inset Formula $\vec{v}$
+\end_inset
+
+ y representa una transformacion lineal llamada diferencial de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para 
+\begin_inset Formula $\vec{v}$
+\end_inset
+
+ 
+\begin_inset Quotes cld
+\end_inset
+
+chico
+\begin_inset Quotes crd
+\end_inset
+
+ la diferencia 
+\begin_inset Formula $f(\vec{a}+\vec{v})-f(\vec{a})\approx\vec{\alpha}\times\vec{v}$
+\end_inset
+
+ 
+\begin_inset Formula $(\Delta f\approx df)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:D\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, diferenciable en 
+\begin_inset Formula $a\in\mathring{D}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f$
+\end_inset
+
+ tiene derivadas direccionales en cualquier direccion 
+\begin_inset Formula $\vec{v}\in\mathbb{R}^{n}$
+\end_inset
+
+ con 
+\begin_inset Formula $\mbox{\ensuremath{\left\Vert \vec{v}\right\Vert =1}}$
+\end_inset
+
+ y vale: 
+\begin_inset Formula $D_{\vec{v}}f(\vec{a})=\vec{\alpha}\times\vec{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Veamos que 
+\begin_inset Formula ${\displaystyle \lim_{\vec{v}\to0}\left[f(\vec{a}+\vec{v})-f(\vec{a})\right]=0}$
+\end_inset
+
+ resultando 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ sera: 
+\size small
+
+\begin_inset Formula 
+\[
+\lim_{\vec{v}\to0}\left[f(\vec{a}+\vec{v})-f(\vec{a})\right]=\lim_{\vec{v}\to0}\left[\vec{\alpha}\times\vec{v}+\left\Vert \vec{v}\right\Vert E(\vec{a},\vec{v})\right]=\lim_{\vec{v}\to0}\vec{\alpha}\times\vec{v}+\lim_{\vec{v}\to0}\left\Vert \vec{v}\right\Vert E(\vec{a},\vec{v})=\vec{\alpha}\times\lim_{\vec{v}\to0}\vec{v}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_layout Subsection
+Condicion suficiente de diferenciabilidad
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $D_{i}f$
+\end_inset
+
+ son continuas 
+\begin_inset Formula $\forall i=1,\ldots,n$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable en 
+\begin_inset Formula $\vec{a}\in\mathring{A}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Vector gradiente
+\end_layout
+
+\begin_layout Standard
+Si existen todas las derivadas parciales de 
+\begin_inset Formula $f$
+\end_inset
+
+ se llama gradiente de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ al vector 
+\begin_inset Formula $\nabla f(\vec{a})=(D_{1}f(\vec{a}),\ldots,D_{n}f(\vec{a}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable en 
+\begin_inset Formula $a$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mbox{\ensuremath{D_{\vec{v}}f(\vec{a})=\vec{\alpha}\times\vec{v}=\nabla f(\vec{a})\times\vec{v}}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\left\Vert \vec{v}\right\Vert =1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Aplicaciones
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Teorema de valor medio para campos escalares
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $D$
+\end_inset
+
+ un abierto de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, si 
+\begin_inset Formula $f:D\to\mathbb{R}$
+\end_inset
+
+ con derivadas parciales continuas tal que el segmento 
+\begin_inset Formula $\overline{a,a+h}\subseteq D$
+\end_inset
+
+ entonces existe 
+\begin_inset Formula $p\in\overline{a,a+h}$
+\end_inset
+
+ tal que: 
+\begin_inset Formula $f(a+h)-f(a)=\nabla f(p)\times h$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Definimos 
+\begin_inset Formula $F:[0,1]\to\mathbb{R}$
+\end_inset
+
+ por 
+\begin_inset Formula $F(t)=f(a+th)$
+\end_inset
+
+.
+ Resulta 
+\begin_inset Formula $F$
+\end_inset
+
+ derivable y 
+\begin_inset Formula $F'(t)=\nabla f(a+th)\times h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego: 
+\begin_inset Formula $\mbox{\ensuremath{f(a+h)-f(a)=F(1)-F(0)\underbrace{=}_{Lagrange}F'(\alpha)(1-0)=F'(\alpha)}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\mbox{\ensuremath{0<\alpha<1}}$
+\end_inset
+
+.
+ Por lo tanto existe 
+\begin_inset Formula $p=a+\alpha h/\mbox{\ensuremath{f(a+h)-f(a)=\nabla f(a+\alpha h)\times h=\nabla f(p)\times h}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Plano tangente a una superficie
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+ la ecuacion de una superficie 
+\begin_inset Formula $S$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, sea 
+\begin_inset Formula $\mbox{\ensuremath{P_{0}=(x_{0},y_{0},z_{0})=\left(x_{0},y_{0},f(x_{0},y_{0})\right)}}$
+\end_inset
+
+ un punto de la superficie y supongamos que en 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+ la funcion 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable; entonces la ecuacion del plano tangente a 
+\begin_inset Formula $S$
+\end_inset
+
+ en el punto 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $z=f(x_{0},y_{0})+\nabla f(x_{0},y_{0})\times(x-x_{0},y-y_{0})$
+\end_inset
+
+ es decir:
+\begin_inset Formula 
+\[
+z-z_{0}=f_{x}(x_{0},y_{0})(x-x_{0})+f_{y}(x_{0},y_{0})(y-y_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Definicion alternativa
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ una superficie de nivel de ecuacion 
+\begin_inset Formula $\mbox{\ensuremath{f(x,y,z)=k}}$
+\end_inset
+
+, si 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene derivadas parciales continuas y 
+\begin_inset Formula $P_{0}(x_{0},y_{0},z_{0})\in S$
+\end_inset
+
+ definimos el plano tangente a 
+\begin_inset Formula $S$
+\end_inset
+
+ en 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ como 
+\begin_inset Formula $\{P(x,y,z):\nabla f(P_{0})\times(P-P_{0})=0\}$
+\end_inset
+
+.
+ La ecuacion cartesiana del plano es entonces:
+\begin_inset Formula 
+\[
+f_{x}(x_{0},y_{0},z_{0})(x-x_{0})+f_{y}(x_{0},y_{0},z_{0})(y-y_{0})+f_{z}(x_{0},y_{0},z_{0})(z-z_{0})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Esta definicion comprende a la anterior.
+ En efecto segun la definicion anterior si 
+\begin_inset Formula $z=f(x,y)$
+\end_inset
+
+ es la ecuacion de una superficie 
+\begin_inset Formula $S$
+\end_inset
+
+ definimos plano tangente por 
+\begin_inset Formula $z-z_{0}=f_{x}(x_{0},y_{0})(x-x_{0})+f_{y}(x_{0},y_{0})(y-y_{0})$
+\end_inset
+
+.
+ Ahora la superficie 
+\begin_inset Formula $S$
+\end_inset
+
+ la podemos considerar como la superficie de nivel cero de 
+\begin_inset Formula $h(x,y,z)=z-f(x,y)=0$
+\end_inset
+
+.
+ Sera entonces 
+\begin_inset Formula $\nabla h=(-f_{x},-f_{y},1)$
+\end_inset
+
+, luego el plano tangente en 
+\begin_inset Formula $P_{0}(x_{0},y_{0},z_{0})=\left(x_{0},y_{0},f(x_{0},y_{0})\right)$
+\end_inset
+
+ segun la definicion alternativa esta dado por:
+\begin_inset Formula 
+\begin{align*}
+\nabla h(x_{0},y_{0},z_{0})\times(x-x_{0},y-y_{0},z-z_{0})= & 0\\
+-f_{x}(x_{0},y_{0})(x-x_{0})-f_{y}(x_{0},y_{0})(y-y_{0})+1(z-z_{0})= & 0\\
+f_{x}(x_{0},y_{0})(x-x_{0})+f_{y}(x_{0},y_{0})(y-y_{0})= & z-z_{0}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Regla de la cadena
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $I\subseteq\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{\alpha}:I\to\mathbb{R}^{n}$
+\end_inset
+
+ una funcion vectorial y 
+\begin_inset Formula $\mbox{\ensuremath{f:D\subset\mathbb{R}^{n}\to\mathbb{R}}}$
+\end_inset
+
+ un campo escalar diferenciable en 
+\begin_inset Formula $\vec{\alpha}(t)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Im(\vec{\alpha})\subset D$
+\end_inset
+
+; definimos la funcion compuesta 
+\begin_inset Formula $g:I\to\mathbb{R}$
+\end_inset
+
+ dada por 
+\begin_inset Formula $g(t)=\left(f\circ\vec{\alpha}\right)(t)=f\left[\vec{\alpha}\left(t\right)\right]$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $t\in\mathring{I}$
+\end_inset
+
+ y existe 
+\begin_inset Formula $\vec{\alpha}'(t)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $g$
+\end_inset
+
+ es derivable en 
+\begin_inset Formula $t$
+\end_inset
+
+ y resulta: 
+\begin_inset Formula $g'(t)=\nabla f\left[\vec{\alpha}(t)\right]\times\vec{\alpha}'(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $t\in\mathring{I}$
+\end_inset
+
+ y 
+\begin_inset Formula $h\neq0/t+h\in I$
+\end_inset
+
+.
+ Llamamos 
+\begin_inset Formula $\vec{a}=\vec{\alpha}(t)$
+\end_inset
+
+ y 
+\begin_inset Formula $\vec{v}=\vec{\alpha}(t+h)-\vec{\alpha}(t)$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable entonces:
+\begin_inset Formula 
+\[
+g(t+h)-g(t)=f(\vec{a}+\vec{v})-f(\vec{a})=\nabla f(\vec{a})\times\vec{v}+\left\Vert v\right\Vert E(\vec{a},\vec{v})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset Formula $v\to0$
+\end_inset
+
+ cuando 
+\begin_inset Formula $h\to0$
+\end_inset
+
+ pues 
+\begin_inset Formula $\vec{\alpha}$
+\end_inset
+
+ es continua, luego 
+\begin_inset Formula $\mbox{\ensuremath{E(a,v)\to0}}$
+\end_inset
+
+ cuando 
+\begin_inset Formula $h\to0$
+\end_inset
+
+.
+ Ahora derivamos:
+\begin_inset Formula 
+\[
+g'(t)=\lim_{h\to0}\frac{g(t+h)-g(t)}{h}=\lim_{h\to0}\left(\nabla f(\vec{a})\times\underbrace{\frac{\vec{\alpha}(t+h)-\vec{\alpha}(t)}{h}}_{\to\vec{\alpha}'(t)}+\underbrace{\left\Vert \frac{\vec{\alpha}(t+h)-\vec{\alpha}(t)}{h}\right\Vert }_{acotado}\underbrace{E(\vec{a},\vec{v})}_{\to0}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+es decir 
+\begin_inset Formula $g'(t)=\nabla f\left[\vec{\alpha}(t)\right]\times\vec{\alpha}'(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Interpretacion geometrica
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+Optimizacion
+\end_layout
+
+\begin_layout Subsection
+Direccion de maximo crecimiento
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+La derivada direccional en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ es maxima en la direccion y sentido de 
+\begin_inset Formula $\nabla f(\vec{a})$
+\end_inset
+
+ y minima en el sentido opuesto.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left|D_{\vec{u}}f(\vec{a})\right|=\left|\nabla f(\vec{a})\times\vec{u}\right|=\left|\left\Vert \nabla f(\vec{a})\right\Vert \left\Vert \vec{u}\right\Vert cos\left[\nabla f(\vec{a}),\vec{u}\right]\right|\leq\left\Vert \nabla f(\vec{a})\right\Vert \cdot1\cdot1=\left\Vert \nabla f(\vec{a})\right\Vert 
+\]
+
+\end_inset
+
+ Ademas 
+\begin_inset Formula $\left|D_{\vec{u}}f(\vec{a})\right|=\left\Vert \nabla f(\vec{a})\right\Vert \iff cos\left[\nabla f(\vec{a}),\vec{u}\right]=\pm1\iff\nabla f(\vec{a})||\vec{u}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Laplaciano
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ un campo escalar que admite derivadas parciales segundas, llamamos Laplaciano
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ a 
+\begin_inset Formula $\Delta f=f_{xx}+f_{yy}+f_{zz}$
+\end_inset
+
+.
+ Decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es armonica si 
+\begin_inset Formula $\Delta f=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Extremos de un campo escalar
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:A\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ un campo escalar, si existe 
+\begin_inset Formula $\vec{a}\in A/f(\vec{x})\leq f(\vec{a})$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\vec{x}\in A$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $f(\vec{a})$
+\end_inset
+
+ es un maximo absoluto de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si existe 
+\begin_inset Formula $\vec{a}\in A/f(\vec{x})\leq f(\vec{a})$
+\end_inset
+
+ para todo 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ en un entorno 
+\begin_inset Formula $E(\vec{a})\cap A$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $f(\vec{a})$
+\end_inset
+
+ es un maximo relativo de 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si existe 
+\begin_inset Formula $\vec{a}\in A/f(\vec{x})\geq f(\vec{a})$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\vec{x}\in A$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $f(\vec{a})$
+\end_inset
+
+ es un minimo absoluto de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Si existe 
+\begin_inset Formula $\vec{a}\in A/f(\vec{x})\geq f(\vec{a})$
+\end_inset
+
+ para todo 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ en un entorno 
+\begin_inset Formula $E(\vec{a})\cap A$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $f(\vec{a})$
+\end_inset
+
+ es un minimo relativo de 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Weierstrass
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $A$
+\end_inset
+
+ compacto entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene maximo y minimo en 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Es decir existen 
+\begin_inset Formula $\vec{a},\vec{b}\in A$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f(\vec{a})$
+\end_inset
+
+ es maximo absoluto y 
+\begin_inset Formula $f(\vec{b})$
+\end_inset
+
+ es minimo absoluto.
+\end_layout
+
+\begin_layout Subsection
+Condicion necesaria para extremos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A\subseteq\mathbb{R}^{n}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene un extremo local en 
+\begin_inset Formula $\vec{a}\in A$
+\end_inset
+
+ y 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable en 
+\begin_inset Formula $\mathring{A}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\nabla f(a)=\vec{0}$
+\end_inset
+
+ es decir: 
+\begin_inset Formula $D_{1}f(\vec{a})=\ldots=D_{n}f(\vec{a})=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $\vec{a}\in\mathring{A}$
+\end_inset
+
+ existe 
+\begin_inset Formula $\delta>0/B_{\delta}(\vec{a})\subseteq A$
+\end_inset
+
+.
+ Luego si 
+\begin_inset Formula $\mbox{\ensuremath{\vec{h}\in\mathbb{R}^{n},h\neq0}}$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $\left\Vert \vec{h}\right\Vert <\delta$
+\end_inset
+
+ el segmento 
+\begin_inset Formula $\overline{\vec{a}-\vec{h},\vec{a}+\vec{h}}$
+\end_inset
+
+ esta en 
+\begin_inset Formula $B_{\delta}(\vec{a})\subseteq A$
+\end_inset
+
+.
+ Definimos 
+\begin_inset Formula $g:[-1,1]\to\mathbb{R}$
+\end_inset
+
+ por 
+\begin_inset Formula $g(t)=f(\vec{a}+t\vec{h})$
+\end_inset
+
+, asi 
+\begin_inset Formula $g(0)=f(\vec{a})$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable y tiene un extremo local en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $g$
+\end_inset
+
+ derivable en 0 y tiene un extremo local en 0.
+ Luego sera 
+\begin_inset Formula $g'(0)=\nabla f(\vec{a})\times\vec{h}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\vec{h}/\left\Vert \vec{h}\right\Vert <\delta$
+\end_inset
+
+.
+ Por lo tanto 
+\begin_inset Formula $\nabla f(\vec{a})=\vec{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+En los puntos de 
+\begin_inset Formula $A$
+\end_inset
+
+ donde se anula el gradiente de 
+\begin_inset Formula $f$
+\end_inset
+
+ no necesariamente hay un extremo.
+ Por ejemplo 
+\begin_inset Formula $f(x,y)=xy$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Punto estacionario y punto de ensilladura
+\end_layout
+
+\begin_layout Standard
+Los puntos 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\nabla f(\vec{a})=\vec{0}$
+\end_inset
+
+ son llamados puntos estacionarios o criticos.
+ Puede ocurrir que en un punto critico 
+\begin_inset Formula $f$
+\end_inset
+
+ tenga un extremo o bien no sabemos que pasa con 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\nabla f(\vec{a})=\vec{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $f$
+\end_inset
+
+ no tiene un extremo en 
+\begin_inset Formula $\vec{a}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left(\vec{a},f(\vec{a})\right)$
+\end_inset
+
+ es llamado punto de ensilladura.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es diferenciable en todo su dominio 
+\begin_inset Formula $A$
+\end_inset
+
+ abierto de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\{\vec{a}\in A:f$
+\end_inset
+
+ tiene un extremo local en 
+\begin_inset Formula $\vec{a}\}\subset\{\vec{a}\in A:\vec{a}$
+\end_inset
+
+ es estacionario
+\begin_inset Formula $\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Criterio del Hessiano
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:A\subseteq\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+, su hessiano esta dado por 
+\begin_inset Formula $\left|H(\vec{a})\right|=f_{xx}(\vec{a})f_{yy}(\vec{a})-f_{xy}^{2}(\vec{a})=ac-b^{2}$
+\end_inset
+
+.
+ Luego si 
+\begin_inset Formula $a$
+\end_inset
+
+ es un punto estacionario y supongamos que las derivadas parciales segundas
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ son continuas en 
+\begin_inset Formula $B_{r}(\vec{a})$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|H(\vec{a})\right|>0$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{xx}(\vec{a})>0\Rightarrow f(\vec{a})$
+\end_inset
+
+ es minimo local.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|H(\vec{a})\right|>0$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{xx}(\vec{a})<0\Rightarrow f(\vec{a})$
+\end_inset
+
+ es maximo local.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|H(\vec{a})\right|<0\Rightarrow f(\vec{a})$
+\end_inset
+
+ es punto de ensilladura.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|H(\vec{a})\right|=0\Rightarrow$
+\end_inset
+
+ el criterio no decide.
+\end_layout
+
+\begin_layout Subsection
+Extremos condicionados
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f:A\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $g_{i}:B_{i}\subseteq\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ (con 
+\begin_inset Formula $i=1,\ldots,k)$
+\end_inset
+
+ campos escalares diferenciables, se plantea el problema de optimizar 
+\begin_inset Formula $f$
+\end_inset
+
+ con 
+\begin_inset Formula $k<n$
+\end_inset
+
+ condiciones 
+\begin_inset Formula $g_{1}(x_{1},\ldots,x_{n})=0,\ldots,g_{k}(x_{1},\ldots,x_{n})=0$
+\end_inset
+
+ para 
+\begin_inset Formula $\mbox{\ensuremath{(x_{1},\ldots,x_{n})\in A\cap\left({\displaystyle \bigcap_{i=1}^{k}B_{i}}\right)}}$
+\end_inset
+
+ es decir: 
+\begin_inset Formula $\begin{cases}
+optimizar & f(x_{1},\ldots,x_{n})\\
+s/a & g_{1}(x_{1},\ldots,x_{n})=0\\
+ & \vdots\\
+ & g_{k}(x_{1},\ldots,x_{n})=0\\
+ & (x_{1},\ldots,x_{n})\in A\cap\left({\displaystyle \bigcap_{i=1}^{k}B_{i}}\right)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $P(x_{1},x_{2},\ldots,x_{n})$
+\end_inset
+
+ maximiza o minimiza a 
+\begin_inset Formula $f$
+\end_inset
+
+ sujeto a las restricciones entonces: 
+\begin_inset Formula 
+\[
+\begin{cases}
+\nabla f(P) & =\alpha_{1}\nabla g_{1}(P)+\alpha_{2}\nabla g_{2}(P)+\ldots+\alpha_{k}\nabla g_{k}(P)\\
+g_{1}(P) & =0\\
+g_{2}(P) & =0\\
+\vdots\\
+g_{k}(P) & =0\\
+P\in A\cap & \left({\displaystyle \bigcap_{i=1}^{k}B_{i}}\right)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Calculo integral en campos escalares
+\end_layout
+
+\begin_layout Chapter
+Introduccion
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Particion regular de orden n
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $R=[a,b]\times[c,d]\subset\mathbb{R}^{2}$
+\end_inset
+
+.
+ Una particion 
+\begin_inset Formula $P$
+\end_inset
+
+ de 
+\begin_inset Formula $R$
+\end_inset
+
+ de orden 
+\begin_inset Formula $n$
+\end_inset
+
+ es un conjunto de 
+\begin_inset Formula $(n+1)^{2}$
+\end_inset
+
+ puntos 
+\begin_inset Formula $(x_{j},y_{k})\in\mathbb{R}^{2}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\mbox{\ensuremath{a=x_{0}<x_{1}<\ldots<x_{n}=b}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mbox{\ensuremath{c=y_{0}<y_{1}<\ldots<y_{n}=d}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\Delta x_{j}=x_{j+1}-x_{j}=\frac{b-a}{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mbox{\ensuremath{\Delta y_{k}=y_{k+1}-y_{k}=\frac{d-c}{n}}}$
+\end_inset
+
+ para todo 
+\begin_inset Formula $j,k=0,\ldots,n-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Norma de una particion de orden n
+\end_layout
+
+\begin_layout Standard
+La norma de una particion 
+\begin_inset Formula $P$
+\end_inset
+
+ de orden 
+\begin_inset Formula $n$
+\end_inset
+
+ esta dada por 
+\begin_inset Formula ${\displaystyle \left\Vert P\right\Vert =\max_{j,k=0,\ldots,n-1}=\left\{ \left|\Delta x_{j}\right|,\left|\Delta y_{k}\right|\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Conjunto de contenido nulo
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\emph on
+conjunto de contenido nulo
+\emph default
+ a un conjunto que es a lo sumo union finita de graficas de funciones continuas.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Regiones elementales
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $D\subset\mathbb{R}^{2}$
+\end_inset
+
+ decimos que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 1 si 
+\begin_inset Formula $D=\{(x,y):a\leq x\leq b\land\varphi_{1}(x)\leq y\leq\varphi_{2}(x)\}$
+\end_inset
+
+ con 
+\begin_inset Formula $\varphi_{1},\varphi_{2}$
+\end_inset
+
+ continuas en 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 2 si 
+\begin_inset Formula $D=\{(x,y):c\leq y\leq d\land\gamma_{1}(y)\leq x\leq\gamma_{2}(y)\}$
+\end_inset
+
+ con 
+\begin_inset Formula $\gamma_{1},\gamma_{2}$
+\end_inset
+
+ continuas en 
+\begin_inset Formula $[c,d]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 3 si 
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 
+\begin_inset Formula $1$
+\end_inset
+
+ y 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $D\subset\mathbb{R}^{3}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 1 si 
+\begin_inset Formula $D=\{(x,y,z):(x,y)\in S\land\mbox{\ensuremath{\varphi_{1}(x,y)\leq z\leq\varphi_{2}(x,y)\}}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\varphi_{1},\varphi_{2}$
+\end_inset
+
+ continuas en 
+\begin_inset Formula $S$
+\end_inset
+
+ elemental de 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 2 si 
+\begin_inset Formula $D=\{(x,y,z):(y,z)\in S\land\mbox{\ensuremath{\varphi_{1}(y,z)\leq z\leq\varphi_{2}(y,z)\}}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\varphi_{1},\varphi_{2}$
+\end_inset
+
+ continuas en 
+\begin_inset Formula $S$
+\end_inset
+
+ elemental de 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 3 si 
+\begin_inset Formula $D=\{(x,y,z):(x,z)\in S\land\mbox{\ensuremath{\varphi_{1}(x,z)\leq y\leq\varphi_{2}(x,z)\}}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\varphi_{1},\varphi_{2}$
+\end_inset
+
+ continuas en 
+\begin_inset Formula $S$
+\end_inset
+
+ elemental de 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 4 si es de tipo 1, 2 y 3.
+\end_layout
+
+\begin_layout Standard
+Decimos que 
+\begin_inset Formula $D$
+\end_inset
+
+ es una region elemental si es de tipo 1, 2, 3 o 4.
+ Toda region elemental es cerrada y acotada.
+\end_layout
+
+\begin_layout Section
+Integrales dobles sobre rectangulos
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $R=[a,b]\times[c,d]\subset\mathbb{R}^{2}$
+\end_inset
+
+.
+ Si existe el 
+\begin_inset Formula ${\displaystyle {\displaystyle \lim_{\left\Vert P\right\Vert \to0}\sum_{j,k=0}^{n-1}f(\left(c_{jk}\right)\Delta x_{j}\Delta y_{k}}}$
+\end_inset
+
+ independientemente de la eleccion de los 
+\begin_inset Formula $c_{jk}$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $R$
+\end_inset
+
+ y lo notamos 
+\begin_inset Formula ${\displaystyle \intop_{R}f(x,y)dA=\iintop_{R}f(x,y)dxdy}$
+\end_inset
+
+ donde 
+\begin_inset Formula $dA$
+\end_inset
+
+ es el diferencial de area.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f,g$
+\end_inset
+
+ son integrables en 
+\begin_inset Formula $R=[a,b]\times[c,d]$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \iintop_{R}}\left[f(x,y)+g(x,y)\right]dA={\displaystyle \iintop_{R}f(x,y)dA+\iintop_{R}g(x,y)dA}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \iintop_{R}\alpha f(x,y)dA=\alpha\iintop_{R}f(x,y)}dA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ para 
+\begin_inset Formula $i=1,\ldots m$
+\end_inset
+
+ son rectangulos disjuntos tales que 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable sobre cada 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ y si 
+\begin_inset Formula $R={\displaystyle \bigcup_{i=1}^{m}R_{i}}$
+\end_inset
+
+ es un rectangulo, entonces una funcion acotada 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable sobre 
+\begin_inset Formula $R$
+\end_inset
+
+ y ademas 
+\begin_inset Formula ${\displaystyle \iintop_{R}f(x,y)dA=\sum_{i=1}^{m}\iintop_{R}f(x,y)dA}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de orden
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f,g$
+\end_inset
+
+ son integrables en 
+\begin_inset Formula $R=[a,b]\times[c,d]$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f(x,y)\geq0$
+\end_inset
+
+ en 
+\begin_inset Formula $R$
+\end_inset
+
+ entonces 
+\begin_inset Formula ${\displaystyle \iintop_{R}f(x,y)dA\geq0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f(x,y)\geq g(x,y)$
+\end_inset
+
+ en 
+\begin_inset Formula $R$
+\end_inset
+
+ entonces 
+\begin_inset Formula ${\displaystyle \iintop_{R}f(x,y)dA\geq\iintop_{R}g(x,y)dA}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $R_{1}\subset R_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $f(x,y)\geq0$
+\end_inset
+
+ en 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ entonces 
+\begin_inset Formula ${\displaystyle \iintop_{R_{1}}f(x,y)dA\leq\iintop_{R_{2}}f(x,y)dA}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|{\displaystyle \iintop_{R}f(x,y)dA}\right|\leq{\displaystyle \iintop_{R}\left|f(x,y)\right|dA}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema de Fubini
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $R=[a,b]\times[c,d]$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Si en cambio 
+\begin_inset Formula $f$
+\end_inset
+
+ es acotada tal que el conjunto de puntos de discontinuidades de 
+\begin_inset Formula $f$
+\end_inset
+
+ es un conjunto de contenido nulo tambien es integrable en 
+\begin_inset Formula $R$
+\end_inset
+
+ y en ambos casos:
+\begin_inset Formula 
+\[
+\iintop_{R}f(x,y)dA=\intop_{a}^{b}\left(\intop_{c}^{d}f(x,y)dy\right)dx=\intop_{c}^{d}\left(\intop_{a}^{b}f(x,y)dx\right)dy
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Integrales triples sobre un cubo
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $Q=[a,b]\times[c,d]\times[e,h]\subset\mathbb{R}^{3}$
+\end_inset
+
+.
+ Si existe el 
+\begin_inset Formula ${\displaystyle {\displaystyle \lim_{\left\Vert P\right\Vert \to0}\sum_{i,j,k=0}^{n-1}f\left(c_{ijk}\right)\Delta x_{i}\Delta y_{j}\Delta z_{k}}}$
+\end_inset
+
+ independientemente de la eleccion de los 
+\begin_inset Formula $c_{ijk}$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es integrable en 
+\begin_inset Formula $Q$
+\end_inset
+
+ y lo notamos 
+\begin_inset Formula ${\displaystyle \intop_{Q}f(x,y,z)dV=\iiintop_{Q}f(x,y,z)dxdydz}$
+\end_inset
+
+ donde 
+\begin_inset Formula $dV$
+\end_inset
+
+ es el diferencial de volumen.
+\end_layout
+
+\begin_layout Chapter
+Teoremas y aplicaciones
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Integrales sobre regiones elementales
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $D$
+\end_inset
+
+ una region elemental y 
+\begin_inset Formula $R=[a,b]\times[c,d]$
+\end_inset
+
+ tal que 
+\begin_inset Formula $R\subset D$
+\end_inset
+
+, si 
+\begin_inset Formula $\mbox{\ensuremath{f:D\to\mathbb{R}}}$
+\end_inset
+
+ es continua en 
+\begin_inset Formula $D$
+\end_inset
+
+ se define 
+\begin_inset Formula $f^{*}:R\to\mathbb{R}$
+\end_inset
+
+ por 
+\begin_inset Formula $f^{*}(x,y)=\begin{cases}
+f(x,y) & \text{si }(x,y)\in D\\
+0 & \text{si }(x,y)\in R-D
+\end{cases}$
+\end_inset
+
+ Decimos que 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ es una extension acotada de 
+\begin_inset Formula $f$
+\end_inset
+
+ a 
+\begin_inset Formula $R$
+\end_inset
+
+ y definimos: 
+\begin_inset Formula ${\displaystyle \iintop_{D}f(x,y)dA=\iintop_{R}f^{*}(x,y)dA}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ademas si 
+\begin_inset Formula $D$
+\end_inset
+
+ es de tipo 1 entonces:
+\begin_inset Formula 
+\[
+\iintop_{D}f(x,y)dA=\intop_{a}^{b}\left(\intop_{\varphi_{1}(x)}^{\varphi_{2}(x)}f(x,y)dy\right)dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analogamente si es de tipo 2.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f(x,y)=1$
+\end_inset
+
+ en 
+\begin_inset Formula $D$
+\end_inset
+
+ entonces 
+\begin_inset Formula ${\displaystyle \iintop_{D}f(x,y)dA=a(D)}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Integrales sobre regiones mas generales
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $D$
+\end_inset
+
+ no es una region elemental pero es union de dos regiones elementales cuya
+ interseccion es un conjunto de contenido nulo entonces:
+\begin_inset Formula 
+\[
+{\displaystyle \iintop_{D}f(x,y)dA=\iintop_{D_{1}}f(x,y)dA+\iintop_{D_{2}}f(x,y)dA}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En general si 
+\begin_inset Formula $D$
+\end_inset
+
+ es union finita de 
+\begin_inset Formula $n$
+\end_inset
+
+ regiones elementales que no tienen en comun sino puntos frontera (puntos
+ que pertenecen a conjuntos de contenido nulo) entonces se define: 
+\begin_inset Formula ${\displaystyle \iintop_{D}f(x,y)dA=\sum_{i=1}^{n}\iintop_{D_{i}}f(x,y)dA}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de valor medio
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ continua en una region elemental 
+\begin_inset Formula $D$
+\end_inset
+
+ entonces existe 
+\begin_inset Formula $(x_{0},y_{0})$
+\end_inset
+
+ tal que 
+\begin_inset Formula ${\displaystyle \iintop_{D}f(x,y)dA=f(x_{0},y_{0})a(D)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $D$
+\end_inset
+
+ es compacto y 
+\begin_inset Formula $f$
+\end_inset
+
+ es continua el teorema de Weierstrass garantiza que 
+\begin_inset Formula $m\leq f(x,y)\leq M$
+\end_inset
+
+ 
+\begin_inset Formula $\forall(x,y)\in D$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $m\geq0$
+\end_inset
+
+ por propiedades de orden: 
+\begin_inset Formula ${\displaystyle ma(D)\leq\iintop_{D}f(x,y)dA\leq Ma(D)\iff m\leq\frac{1}{a(D)}\iintop_{D}f(x,y)dA\leq M}$
+\end_inset
+
+ y por el teorema de los valores intermedios 
+\begin_inset Formula $f$
+\end_inset
+
+ alcanza todos los valores entre 
+\begin_inset Formula $m$
+\end_inset
+
+ y 
+\begin_inset Formula $M$
+\end_inset
+
+, en particular 
+\begin_inset Formula $\frac{1}{a(D)}\iintop_{D}f(x,y)dA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Cambio de variables
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $D^{*}$
+\end_inset
+
+ regiones elementales, sea 
+\begin_inset Formula $T:D^{*}\to D$
+\end_inset
+
+ un campo vectorial biyectivo con derivadas parciales continuas tal que
+ 
+\begin_inset Formula $T(u,v)=\left(X(u,v),Y(u,v)\right)$
+\end_inset
+
+ y sea 
+\begin_inset Formula $f:D\to\mathbb{R}$
+\end_inset
+
+ integrable en 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Observemos que 
+\begin_inset Formula $f(x,y)$
+\end_inset
+
+ con 
+\begin_inset Formula $(x,y)\in D$
+\end_inset
+
+ es lo mismo que 
+\begin_inset Formula $\left(f\circ T\right)(u,v)$
+\end_inset
+
+ con 
+\begin_inset Formula $(u,v)\in D^{*}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego:
+\begin_inset Formula 
+\[
+{\displaystyle \iintop_{D}f(x,y)dxdy=\iintop_{D^{*}}\left(f\circ T\right)(u,v)\left|J_{T}(u,v)\right|dudv}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\left|J_{T}(u,v)\right|$
+\end_inset
+
+ es el valor absoluto del determinante de la matriz jacobiana de 
+\begin_inset Formula $T$
+\end_inset
+
+ dada por:
+\begin_inset Formula 
+\[
+J_{T}(u,v)=\left(\begin{array}{cc}
+X_{u}(u,v) & X_{v}(u,v)\\
+Y_{u}(u,v) & Y_{v}(u,v)
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Aplicaciones
+\end_layout
+
+\begin_layout Subsection
+Masa de un cuerpo
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $D$
+\end_inset
+
+ una placa o lamina y 
+\begin_inset Formula $E$
+\end_inset
+
+ un solido.
+ La masa de un cuerpo es su resistencia al desplazamiento.
+ Esta viene dada por la formula 
+\begin_inset Formula $\mbox{\ensuremath{m(D)=\delta(x,y)a(D)}}$
+\end_inset
+
+ en el caso de una placa o bien 
+\begin_inset Formula $m(E)=\delta(x,y,z)V(E)$
+\end_inset
+
+ donde 
+\begin_inset Formula $\delta$
+\end_inset
+
+ es la densidad del cuerpo.
+ Es decir: 
+\begin_inset Formula $m(D)={\displaystyle \iintop_{D}\delta(x,y)dA}$
+\end_inset
+
+ o bien 
+\begin_inset Formula $m(E)={\displaystyle \iiintop_{E}\delta(x,y,z)dV}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Centro de gravedad
+\end_layout
+
+\begin_layout Standard
+Las coordenadas del centro de masa o gravedad de una placa 
+\begin_inset Formula $D$
+\end_inset
+
+ con densidad dada por 
+\begin_inset Formula $\delta(x,y)$
+\end_inset
+
+ vienan dadas por 
+\begin_inset Formula $x_{g}=\frac{1}{m(D)}\iintop_{D}x\delta(x,y)dA$
+\end_inset
+
+ y 
+\begin_inset Formula $\mbox{\ensuremath{y_{g}=\frac{1}{m(D)}\iintop_{D}y\delta(x,y)dA}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para un solido 
+\begin_inset Formula $E$
+\end_inset
+
+ las formulas correspondientes son 
+\begin_inset Formula $x_{g}=\frac{1}{m(E)}{\displaystyle \iiintop_{E}}x\delta(x,y,z)dV$
+\end_inset
+
+, 
+\begin_inset Formula $y_{g}=\frac{1}{m(E)}{\displaystyle \iiintop_{E}}y\delta(x,y,z)dV$
+\end_inset
+
+ y 
+\begin_inset Formula $z_{g}=\frac{1}{m(E)}{\displaystyle \iiintop_{E}}z\delta(x,y,z)dV$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
