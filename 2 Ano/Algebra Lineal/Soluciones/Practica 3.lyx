@@ -1,0 +1,2850 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Transformaciones lineales.
+ Primera parte.
+\end_layout
+
+\begin_layout Enumerate
+Para cada una de las siguientes funciones 
+\begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+ determinar si se trata de una transformacion lineal y en caso afirmativo:
+ obtener 
+\begin_inset Formula $nul\left(T\right),img\left(T\right)$
+\end_inset
+
+, calcular sus dimensiones y determinar si 
+\begin_inset Formula $T$
+\end_inset
+
+ es inversible.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left(x,y\right)\right)=\left(y,x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left(x,y\right)\right)=\left(x^{2},y^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left(x,y\right)\right)=\left(x,-y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\left(x,y\right)\right)=\left(x,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T\left(\alpha\left(x_{1},y_{1}\right)+\beta\left(x_{2},y_{2}\right)\right)=T\left(\left(\alpha x_{1},\alpha y_{1}\right)+\left(\beta x_{2},\beta y_{2}\right)\right)=T\left(\left(\alpha x_{1}+\beta x_{2},\alpha y_{1}+\beta y_{2}\right)\right)=\boxed{\left(\alpha y_{1}+\beta y_{2},\alpha x_{1}+\beta x_{2}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha T\left(\left(x_{1},y_{1}\right)\right)+\beta T\left(\left(x_{2},y_{2}\right)\right)=\alpha\left(y_{1},x_{1}\right)+\beta\left(y_{2},x_{2}\right)=\left(\alpha y_{1},\alpha x_{1}\right)+\left(\beta y_{2},\beta x_{2}\right)=\boxed{\left(\alpha y_{1}+\beta y_{2},\alpha x_{1}+\beta x_{2}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{N}\left(T\right)=\left\{ \left(x,y\right)\in\mathbb{R}^{2}:T\left(x,y\right)=\left(0,0\right)\right\} =\left\{ \left(x,y\right)\in\mathbb{R}^{2}:\left(y,x\right)=\left(0,0\right)\right\} =\left\{ \left(0,0\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+ no tiene base, luego 
+\begin_inset Formula $dim\left[\mathcal{N}\left(T\right)\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{img\left(T\right)=\left\{ T\left(x,y\right)\in\mathbb{R}^{2}:\left(x,y\right)\in\mathbb{R}^{2}\right\} =\left\{ \left(y,x\right)\in\mathbb{R}^{2}:\left(x,y\right)\in\mathbb{R}^{2}\right\} =\mathbb{R}^{2}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dim\left[img\left(T\right)\right]=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{N}\left(T\right)=\left\{ 0\right\} \Rightarrow T$
+\end_inset
+
+ es inyectiva y 
+\begin_inset Formula $\text{\ensuremath{dim\left[img\left(T\right)\right]=dim\left(\mathbb{R}^{2}\right)\Rightarrow T}}$
+\end_inset
+
+ es sobreyectiva, por lo que 
+\begin_inset Formula $T$
+\end_inset
+
+ es inversible.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ No es lineal pues 
+\begin_inset Formula $\text{\ensuremath{2T\left(1,1\right)=2\left(1,1\right)=\left(2,2\right)\neq T\left(2\left(1,1\right)\right)=T\left(2,2\right)=\left(4,4\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+ COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V=\mathbb{R}^{n}$
+\end_inset
+
+, fijamos la base canonica 
+\begin_inset Formula $B=\left\{ e_{1},e_{2},\ldots,e_{n}\right\} $
+\end_inset
+
+.
+ Para cada 
+\begin_inset Formula $T_{i}:\mathbb{R}^{n}\rightarrow\mathbb{R}^{n}$
+\end_inset
+
+ hallar 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $A_{i}x=T_{i}\left(x\right),\forall x\in\mathbb{R}^{n},i=1,\ldots,4$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T_{1}\left(x\right)=x,\forall x\in\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{2}\left(x\right)=0,\forall x\in\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{3}\left(x\right)=cx,c\in\mathbb{R},\forall x\in\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{4}\left(x\right)=y,$
+\end_inset
+
+ donde 
+\begin_inset Formula $y=\left(y_{k}\right)_{k=1}^{n}$
+\end_inset
+
+ con 
+\begin_inset Formula $\text{\ensuremath{y_{k}=x_{k},i\neq k\neq j,y_{k}=x_{i},k=j}}$
+\end_inset
+
+ y 
+\begin_inset Formula $y_{k}=x_{j},k=i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{1}\left(e_{i}\right)=e_{i}$
+\end_inset
+
+, por lo tanto 
+\begin_inset Formula $A_{1}=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+e_{1} & \ldots & e_{n}\\
+\mid & \mid & \mid
+\end{array}\right]=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{2}\left(e_{i}\right)=0$
+\end_inset
+
+, por lo tanto 
+\begin_inset Formula $A_{2}=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+0 & \ldots & 0\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{3}\left(e_{i}\right)=ce_{i}$
+\end_inset
+
+, por lo tanto 
+\begin_inset Formula $A_{3}=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+ce_{1} & \ldots & ce_{n}\\
+\mid & \mid & \mid
+\end{array}\right]=cI$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consideremos la base canonica de 
+\begin_inset Formula $V=\mathbb{R}^{2}$
+\end_inset
+
+ dada por 
+\begin_inset Formula $B=\left\{ e_{1},e_{2}\right\} $
+\end_inset
+
+ y la transformacion lineal 
+\begin_inset Formula $T:\mathbb{R}^{2}\to\mathbb{R}^{2}$
+\end_inset
+
+ que aplica los vectores 
+\begin_inset Formula $e_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $e_{2}$
+\end_inset
+
+ como sigue:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T\left(e_{1}\right)=e_{1}+e_{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T\left(e_{2}\right)=2e_{1}-e_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Obtener:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(3e_{1}-4e_{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $T^{2}\left(3e_{1}-4e_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Las matrices asociadas a 
+\begin_inset Formula $T$
+\end_inset
+
+ y 
+\begin_inset Formula $T^{2}$
+\end_inset
+
+ en la base 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(v\right),\forall v\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T\left(3e_{1}-4e_{2}\right)=T\left(3e_{1}\right)-T\left(4e_{2}\right)=3T\left(e_{1}\right)-4T\left(e_{2}\right)=3\left(e_{1}+e_{2}\right)-4\left(2e_{1}-e_{2}\right)=\left(3,3\right)-\left(8,-4\right)=\left(-5,7\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T\left(T\left(3e_{1}-4e_{2}\right)\right)=T\left(-5,7\right)=T\left(-5e_{1}+7e_{2}\right)=-5T\left(e_{1}\right)+7T\left(e_{2}\right)=-5\left(1,1\right)+7\left(2,-1\right)=\left(9,-12\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+\mid & \mid\\
+T\left(e_{1}\right) & T\left(e_{2}\right)\\
+\mid & \mid
+\end{array}\right]=\left[\begin{array}{cc}
+1 & 2\\
+1 & -1
+\end{array}\right],A^{2}=\left[\begin{array}{cc}
+3 & 0\\
+0 & 3
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(x_{1},x_{2}\right)=Ax=x_{1}\left[\begin{array}{c}
+1\\
+1
+\end{array}\right]+x_{2}\left[\begin{array}{c}
+2\\
+-1
+\end{array}\right]=\left(x_{1}+2x_{2},x_{1}-x_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $T_{1,2}:\mathbb{R}^{3}\to\mathbb{R}^{3}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $T_{1}\left(\left(x,y,z\right)\right)=\left(x,y,0\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{T_{2}\left(\left(x,y,z\right)\right)=\left(x,y,y\right)}}$
+\end_inset
+
+.
+ Hallar 
+\begin_inset Formula $T_{1}\circ T_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}\circ T_{1}$
+\end_inset
+
+.
+ Analizar si son epimorfismos, monomorfismos, isomorfismos o ninguna de
+ ellas.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T_{1}\circ T_{2}\left(x,y,z\right)=T_{1}\left(T_{2}\left(x,y,z\right)\right)=T_{1}\left(x,y,y\right)=\left(x,y,0\right)$
+\end_inset
+
+ y
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $T_{2}\circ T_{1}\left(x,y,z\right)=T_{2}\left(T_{1}\left(x,y,z\right)\right)=T_{2}\left(x,y,0\right)=\left(x,y,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ninguna es monomorfismo pues 
+\begin_inset Formula $T_{1}\circ T_{2}\left(0,0,0\right)=T_{1}\circ T_{2}\left(0,0,1\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}\circ T_{1}\left(0,0,0\right)=T_{2}\circ T_{1}\left(0,0,1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Ninguna es epimorfismo pues 
+\begin_inset Formula $img\left(T_{1}\circ T_{2}\right)=\left\{ \left(x,y,0\right):x,y\in\mathbb{R}^{3}\right\} =\left\{ x\left(1,0,0\right)+y\left(0,1,0\right):x,y\in\mathbb{R}^{3}\right\} =\left\langle \left\{ \left(1,0,0\right),\left(0,1,0\right)\right\} \right\rangle $
+\end_inset
+
+ y 
+\begin_inset Formula $img\left(T_{2}\circ T_{1}\right)=\left\{ \left(x,y,y\right):x,y\in\mathbb{R}^{3}\right\} =\left\{ x\left(1,0,0\right)+y\left(0,1,1\right):x,y\in\mathbb{R}^{3}\right\} =\left\langle \left\{ \left(1,0,0\right),\left(0,1,1\right)\right\} \right\rangle $
+\end_inset
+
+ ambos distintos de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+De lo anterior sigue que ninguna es un isomorfismo.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Definimos: 
+\begin_inset Formula 
+\[
+\mathbb{R}_{n}\left[x\right]=\left\{ p:p\text{ es un polinomio a coeficientes reales tal que }grad\left(p\right)\leq n,x\in\mathbb{R}\right\} \cup\left\{ 0\right\} 
+\]
+
+\end_inset
+
+Sea
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+T: & \mathbb{R}^{2\times2} & \to & \mathbb{R}_{3}\left[x\right]\\
+ & \left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right] & \to & T\left(\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right)=\left(2d\right)x^{3}+\left(a+b\right)x^{2}+\left(a-c\right)x+2\left(c+d\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $T$
+\end_inset
+
+ es lineal.
+\end_layout
+
+\begin_layout Enumerate
+Hallar una base para 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+ y una para 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar si 
+\begin_inset Formula $T$
+\end_inset
+
+ es un isomorfismo.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T\left(\alpha\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]\right)=T\left(\left[\begin{array}{cc}
+\alpha a & \alpha b\\
+\alpha c & \alpha d
+\end{array}\right]\right)=\left(2\alpha d\right)x^{3}+\left[\alpha\left(a+b\right)\right]x^{2}+\left[\alpha\left(a-c\right)\right]x+2\left[\alpha\left(c+d\right)\right]=\alpha T\left(\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{N}\left(T\right)=\left\{ \left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]\in\mathbb{R}^{2\times2}:T\left(\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right)=0\right\} =$
+\end_inset
+
+
+\begin_inset Formula $\left\{ 0\right\} $
+\end_inset
+
+, no tiene base.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $img\left(T\right)=\left\{ \underbrace{\left(2d\right)}_{\alpha}x^{3}+\underbrace{\left(a+b\right)}_{\beta}x^{2}+\underbrace{\left(a-c\right)}_{\gamma}x+\underbrace{2\left(c+d\right)}_{\epsilon}/a,b,c,d\in\mathbb{R}\right\} =\left\{ \alpha x^{3}+\beta x^{2}+\gamma x+\epsilon/\alpha,\beta,\gamma,\epsilon\in\mathbb{R}\right\} =\left\langle \left\{ x^{3},x^{2},x,1\right\} \right\rangle =\mathbb{R}_{3}\left[x\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+De lo anterior sigue que 
+\begin_inset Formula $T$
+\end_inset
+
+ es un isomorfismo.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T_{w}:\mathbb{C}\to\mathbb{C}/f\left(z\right)=z+w\bar{z}$
+\end_inset
+
+, donde 
+\begin_inset Formula $w=a+bi$
+\end_inset
+
+ con 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Considerar 
+\begin_inset Formula $w=1+i$
+\end_inset
+
+ y calcular 
+\begin_inset Formula $T_{w}\left(2+3i\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Comprobar que 
+\begin_inset Formula $T_{w}$
+\end_inset
+
+ es una transformacion lineal.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $B=\left\{ 1,i\right\} $
+\end_inset
+
+ es base de 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+, hallar la matriz de 
+\begin_inset Formula $T_{w}$
+\end_inset
+
+ en dicha base.
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $T_{w}$
+\end_inset
+
+ es isomorfismo si y solo si 
+\begin_inset Formula $a^{2}+b^{2}\neq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{\ensuremath{T_{w}\left(2+3i\right)=2+3i+\left(1+i\right)\left(2-3i\right)=2+3i+2-3i+2i-3i^{2}=7+2i}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+\mid & \mid\\
+T_{w}\left(1\right) & T_{w}\left(i\right)\\
+\mid & \mid
+\end{array}\right]=\left[\begin{array}{cc}
+1+a & b\\
+b & 1-a
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T_{w}$
+\end_inset
+
+ es isomorfismos si y solo si 
+\begin_inset Formula $A$
+\end_inset
+
+ es inversible si y solo si 
+\begin_inset Formula $\left|A\right|=0$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\left(1+a\right)\left(1-a\right)-b^{2}=0\iff1-a^{2}-b^{2}=0\iff a^{2}+b^{2}=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T:\mathbb{R}_{n}\left[x\right]\to\mathbb{R}_{n}\left[x\right]$
+\end_inset
+
+ tal que 
+\begin_inset Formula $T\left(a_{0}+a_{1}x+\ldots+a_{n}x^{n}\right)=a_{0}+a_{1}\left(x+1\right)+\ldots+a_{n}\left(x+1\right)^{n}$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $T$
+\end_inset
+
+ es isomorfismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ es inyectiva: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ es sobreyectiva: Sea 
+\begin_inset Formula $P\left(x\right)=a_{0}+a_{1}x+\ldots+a_{n}x^{n}$
+\end_inset
+
+ en el codominio.
+ Observemos que 
+\begin_inset Formula $T$
+\end_inset
+
+ es una transformacion que desplaza la grafica de los elementos de su dominio
+ hacia la izquierda.
+ Luego para 
+\begin_inset Formula $P\left(x-1\right)$
+\end_inset
+
+ en el dominio resultara 
+\begin_inset Formula $T\left(P\left(x-1\right)\right)=P\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T:\mathbb{R}^{3}\to\mathbb{R}^{3}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $T\left(v\right)=\left(x+y,x+z,S\left(v\right)\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $v=\left(x,y,z\right)$
+\end_inset
+
+.
+ Determinar, si es posible, 
+\begin_inset Formula $S$
+\end_inset
+
+ de modo que 
+\begin_inset Formula $T$
+\end_inset
+
+ resulte lineal.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T\left[\left(x,y,z\right)+\left(x',y',z'\right)\right]=T\left(x+x',y+y',z+z'\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left(x+x'+y+y',x+x'+z+z',\boxed{S\left(x+x',y+y',z+z'\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $T\left(x,y,z\right)+T\left(x',y',z'\right)=\left(x+y,x+z,S\left(x,y,z\right)\right)+\left(x'+y',x'+z',S\left(x',y',z'\right)\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left(x+x'+y+y',x+x'+z+z',\boxed{S\left(x,y,z\right)+S\left(x',y',z'\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+De lo antenior buscamos que 
+\begin_inset Formula $S\left(v+v'\right)=S\left(v\right)+S\left(v'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T\left[\alpha\left(x,y,z\right)\right]=T\left(\alpha x,\alpha y,\alpha z\right)=\left(\alpha x+\alpha y,\alpha x+\alpha z,\boxed{S\left(\alpha x,\alpha y,\alpha z\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha T\left(x,y,z\right)=\alpha\left(x+y,x+z,S\left(x,y,z\right)\right)=\left(\alpha x+\alpha y,\alpha x+\alpha z,\boxed{\alpha S\left(x,y,z\right)}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+De lo antenior buscamos que 
+\begin_inset Formula $S\left(\alpha v\right)=\alpha S\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+En definitiva, 
+\begin_inset Formula $S$
+\end_inset
+
+ debe ser transformacion lineal.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T:\mathbb{R}^{3}\to\mathbb{R}^{3}$
+\end_inset
+
+ transformacion lineal tal que:
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+T\left(0,0,1\right)=\left(2,3,5\right), & T\left(0,1,1\right)=\left(1,0,0\right), & T\left(1,1,1\right)=\left(0,1,-1\right)\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que con esta informacion es posible obtener 
+\begin_inset Formula $T\left(v\right),\forall v\in\mathbb{R}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar, fijada la base canonica en 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, la matriz de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Utilizando 
+\begin_inset Formula $\left(9b\right)$
+\end_inset
+
+, obtener 
+\begin_inset Formula $dim\left[\mathcal{N}\left(T\right)\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $rang\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar si 
+\begin_inset Formula $T$
+\end_inset
+
+ es inversible.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+En efecto puesto que dichos 3 vectores son linealmente independientes resulta
+ que generan todo el espacio, es decir que para todo 
+\begin_inset Formula $v$
+\end_inset
+
+ resulta 
+\begin_inset Formula $v=\alpha\left(0,0,1\right)+\beta\left(0,1,1\right)+\gamma\left(1,1,1\right)$
+\end_inset
+
+.
+ Ademas como 
+\begin_inset Formula $T$
+\end_inset
+
+ es lineal 
+\begin_inset Formula $T\left(v\right)=\alpha\left(2,3,5\right)+\beta\left(1,0,0\right)+\gamma\left(0,1,-1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $e_{1}=\left(1,1,1\right)-\left(0,1,1\right)$
+\end_inset
+
+, 
+\begin_inset Formula $e_{2}=\left(0,1,1\right)-\left(0,0,1\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $e_{3}=\left(0,1,1\right)$
+\end_inset
+
+, luego 
+\begin_inset Formula $T\left(e_{1}\right)=\left(-1,1,-1\right)$
+\end_inset
+
+, 
+\begin_inset Formula $T\left(e_{2}\right)=\left(-1,-3,-5\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $T\left(e_{3}\right)=\left(2,3,5\right)$
+\end_inset
+
+.
+ Finalmente 
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+-1 & -1 & 2\\
+1 & -3 & 3\\
+-1 & -5 & 5
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{\ensuremath{\left[\begin{array}{ccc}
+-1 & -1 & 2\\
+1 & -3 & 3\\
+-1 & -5 & 5
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & -1 & 2\\
+0 & -4 & 5\\
+0 & -4 & 3
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+-1 & -1 & 2\\
+0 & -4 & 5\\
+0 & 0 & -2
+\end{array}\right]\Rightarrow\mathcal{N}\left(T\right)=\left\{ 0\right\} }}$
+\end_inset
+
+ y 
+\begin_inset Formula $rang\left(T\right)=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+En efecto.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar, si existe, una transformacion lineal 
+\begin_inset Formula $T:\mathbb{R}^{3}\to\mathbb{R}^{2}$
+\end_inset
+
+ que verifique 
+\begin_inset Formula $T\left(1,-1,1\right)=\left(1,0\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $T\left(1,1,1\right)=\left(0,1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $B=\left\{ \left(1,-1,1\right),\left(1,1,1\right),\left(0,3,1\right)\right\} $
+\end_inset
+
+ base ordenada de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ luego la transformacion dada por la matriz 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 1\\
+0 & 1 & 1
+\end{array}\right]$
+\end_inset
+
+ asociada a las bases 
+\begin_inset Formula $B$
+\end_inset
+
+ y a la base canonica de 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ es lineal.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ espacios vectoriales sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+.
+ Probar que para 
+\begin_inset Formula $\text{\ensuremath{T_{1,2}\in\mathcal{L}\left(V,W\right)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left\{ v\in V:T_{1}\left(v\right)=T_{2}\left(v\right)\right\} $
+\end_inset
+
+ es un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $V=\left\langle U\right\rangle $
+\end_inset
+
+ y 
+\begin_inset Formula $T_{1}\left(u\right)=T_{2}\left(u\right),$
+\end_inset
+
+ 
+\begin_inset Formula $\forall u\in U$
+\end_inset
+
+ entonces 
+\begin_inset Formula $T_{1}\left(v\right)=T_{2}\left(v\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall v\in V$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $v_{1},v_{2}\in A$
+\end_inset
+
+ luego 
+\begin_inset Formula $T_{1}\left(v_{1}+v_{2}\right)=T_{1}\left(v_{1}\right)+T_{1}\left(v_{2}\right)=T_{2}\left(v_{1}\right)+T_{2}\left(v_{2}\right)=T_{2}\left(v_{1}+v_{2}\right)$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $T_{1}\left(\alpha v_{1}\right)=\alpha T_{1}\left(v_{1}\right)=\alpha T_{2}\left(v_{1}\right)=T_{2}\left(\alpha v_{1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ espacios vectoriales de dimension finita y 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+.
+ Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es inyectiva, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ transforma conjuntos L.I.
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ en conjuntos L.I.
+ de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es sobreyectiva, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ transforma conjuntos generadores de 
+\begin_inset Formula $V$
+\end_inset
+
+ en conjuntos generadores de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ es biyectiva si y solo si 
+\begin_inset Formula $T$
+\end_inset
+
+ transforma bases de 
+\begin_inset Formula $V$
+\end_inset
+
+ en bases de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} \subseteq V/\left\langle \left\{ v_{1},\ldots,v_{n}\right\} \right\rangle =V$
+\end_inset
+
+, nos preguntamos si 
+\begin_inset Formula $\left\langle \left\{ T\left(v_{1}\right),\ldots,T\left(v_{n}\right)\right\} \right\rangle =W$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\subseteq}$
+\end_inset
+
+: 
+\begin_inset Formula $x\in\left\langle \left\{ T\left(v_{1}\right),\ldots,T\left(v_{n}\right)\right\} \right\rangle \Rightarrow x={\displaystyle \sum_{i=1}^{n}\alpha_{i}\underbrace{T\left(v_{i}\right)}_{\in W}\Rightarrow x\in W}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\supseteq}$
+\end_inset
+
+: 
+\begin_inset Formula $\text{\ensuremath{x\in W\underbrace{\Rightarrow}_{Hip.}\exists v\in V/T\left(v\right)=x\Rightarrow\exists v={\displaystyle \sum_{i=1}^{n}\beta_{i}v_{i}}/T\left(v\right)=x\Rightarrow}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow T\left({\displaystyle \sum_{i=1}^{n}}\beta_{i}v_{i}\right)=x\Rightarrow{\displaystyle \sum_{i=1}^{n}}\beta_{i}T\left(v_{i}\right)=x\Rightarrow x\in\left\langle \left\{ T\left(v_{1}\right),\ldots,T\left(v_{n}\right)\right\} \right\rangle =W}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y supongamos que existe un aplicacion lineal 
+\begin_inset Formula $T\in\mathcal{L}\left(V\right)$
+\end_inset
+
+ tal que tanto 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+ como 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+ son subespacios de dimension finita.
+ Probar que 
+\begin_inset Formula $V$
+\end_inset
+
+ tambien debe ser de dimension finita.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita sobre 
+\begin_inset Formula $\text{\mathbb{K}}$
+\end_inset
+
+, y 
+\begin_inset Formula $S,T\in\mathcal{L}\left(V\right)$
+\end_inset
+
+.
+ Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\circ S$
+\end_inset
+
+ es inversible si y solo si 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+ son inversibles.
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $I$
+\end_inset
+
+ la funcion identidad en 
+\begin_inset Formula $V,T\circ S=I$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $S\circ T=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Transformaciones lineales.
+ Segunda parte.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ el espacio vectorial de los numeros complejos y 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ el cuerpo de los numeros reales.
+ Con las operaciones usuales, 
+\begin_inset Formula $V$
+\end_inset
+
+ es un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+.
+ Describir explicitamente un isomorfismo de este espacio con 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T:\mathbb{C}\to\mathbb{R}^{2}$
+\end_inset
+
+ definida como 
+\begin_inset Formula $T\left(z\right)=\left(Re\left(z\right),Im\left(z\right)\right)$
+\end_inset
+
+, veamos que es biyectiva:
+\end_layout
+
+\begin_layout Itemize
+Inyectiva: 
+\begin_inset Formula $T\left(z_{1}\right)=T\left(z_{2}\right)\iff\left(Re\left(z_{1}\right),Im\left(z_{1}\right)\right)=\left(Re\left(z_{2}\right),Im\left(z_{2}\right)\right)\iff Re\left(z_{1}\right)=Re\left(z_{2}\right)\land Im\left(z_{1}\right)=Im\left(z_{2}\right)\iff z_{1}=z_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sobreyectiva: Sea 
+\begin_inset Formula $\left(a,b\right)\in\mathbb{R}^{2}$
+\end_inset
+
+, luego para 
+\begin_inset Formula $a+bi\in\mathbb{C}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $T\left(a+bi\right)=\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Veamos que es lineal:
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $z_{1}=a+bi$
+\end_inset
+
+ y 
+\begin_inset Formula $z_{2}=x+yi$
+\end_inset
+
+, luego 
+\begin_inset Formula $T\left(z_{1}+z_{2}\right)=T\left(a+x+\left(b+y\right)i\right)=\left(a+x,b+y\right)=\left(a,b\right)+\left(x,y\right)=T\left(z_{1}\right)+T\left(z_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+, luego 
+\begin_inset Formula $T\left(\alpha z_{1}\right)=T\left(\alpha a+\alpha bi\right)=\left(\alpha a,\alpha b\right)=\alpha\left(a,b\right)=\alpha T\left(z_{1}\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una matriz 
+\begin_inset Formula $n\times n$
+\end_inset
+
+, 
+\begin_inset Formula $A=\left(a_{ij}\right)_{i,j=1}^{n}$
+\end_inset
+
+ con entradas en 
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $A=\bar{A}^{t}$
+\end_inset
+
+, es decir 
+\begin_inset Formula $a_{ij}=\overline{a_{ji}}$
+\end_inset
+
+, para todos 
+\begin_inset Formula $i,j=1,\ldots,n$
+\end_inset
+
+ se dice Hermitiana.
+ Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ el conjunto de todas las matrices Hermitianas 
+\begin_inset Formula $2\times2$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verificar que 
+\begin_inset Formula $W$
+\end_inset
+
+ es un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Verificar que la aplicacion 
+\begin_inset Formula $\left(x,y,z,t\right)\mapsto\left[\begin{array}{cc}
+t+x & y+iz\\
+y-iz & t-x
+\end{array}\right]$
+\end_inset
+
+ es un isomorfismo de 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ en 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $\mathbb{K}^{m\times n}$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $\mathbb{K}^{mn}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T\left(A\right)=\left(a_{11},a_{12},\ldots,a_{1n},a_{21},\ldots,a_{2n},\ldots,a_{m1},\ldots,a_{mn}\right)$
+\end_inset
+
+, es facil ver que 
+\begin_inset Formula $T$
+\end_inset
+
+ es una aplicacion lineal biyectiva.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ dos espacios vectoriales de dimension finita sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ son isomorfos si y solo si 
+\begin_inset Formula $dim\left(V\right)=dim\left(W\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ el isomorfismos entre 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $T$
+\end_inset
+
+ es inyectiva resulta 
+\begin_inset Formula $dim\left(\mathcal{N}\left(T\right)\right)=0$
+\end_inset
+
+ y como es sobreyectiva resulta que 
+\begin_inset Formula $img\left(T\right)=W$
+\end_inset
+
+.
+ Luego por el teorema de la dimension resulta 
+\begin_inset Formula $dim\left(V\right)=0+dim\left(W\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ la transformacion lineal de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ definida por:
+\begin_inset Formula 
+\[
+T\left(x_{1},x_{2},x_{3}\right)=\left(x_{1}+x_{2},2x_{3}-x_{1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $B$
+\end_inset
+
+ es la base ordenada estandar de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ es la base ordenada estandar para 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+, determianr la matriz de 
+\begin_inset Formula $T$
+\end_inset
+
+ relativa al par 
+\begin_inset Formula $\left(B,B'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $B=\left\{ \left(1,0,-1\right),\left(1,1,1\right),\left(1,0,0\right)\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B'=\left\{ \left(0,1\right),\left(1,0\right)\right\} $
+\end_inset
+
+ ¿ Cual es la matriz de 
+\begin_inset Formula $T$
+\end_inset
+
+ relativa al par 
+\begin_inset Formula $\left(B,B'\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T=\left[\begin{array}{ccc}
+1 & 1 & 0\\
+-1 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Notemos que 
+\begin_inset Formula $T\left(1,0,-1\right)=\left(1,-3\right)=-3\left(0,1\right)+1\left(1,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $T\left(1,1,1\right)=\left(2,1\right)=1\left(0,1\right)+2\left(1,0\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $T\left(1,0,0\right)=\left(1,-1\right)=-1\left(0,1\right)+1\left(1,0\right)$
+\end_inset
+
+, luego la matriz sera 
+\begin_inset Formula $\left[\begin{array}{ccc}
+-3 & 1 & -1\\
+1 & 2 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ un operador lineal sobre 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $A$
+\end_inset
+
+ la matriz de 
+\begin_inset Formula $T$
+\end_inset
+
+ relativa a la base estandar de 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ el subespacio de 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+ generado por los vectores columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ ¿Que relacion existe entre 
+\begin_inset Formula $W$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Recordemos que 
+\begin_inset Formula $img\left(T\right)=\left\{ Ax/x\in\mathbb{K}^{n}\right\} $
+\end_inset
+
+.
+ Veremos que 
+\begin_inset Formula $\mathcal{C}\left(A\right)=img\left(T\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\subseteq}$
+\end_inset
+
+: 
+\begin_inset Formula $\text{\ensuremath{v\in\mathcal{C}\left(A\right)\Rightarrow v=x_{1}A_{1}+\ldots+x_{n}A_{n}=A\underbrace{\left[\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{n}
+\end{array}\right]}_{\in\mathbb{K}^{n}}\in img\left(T\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\supseteq}$
+\end_inset
+
+: 
+\begin_inset Formula $\text{\ensuremath{v\in img\left(T\right)\Rightarrow v=Ax=A\underbrace{\left[\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{n}
+\end{array}\right]}_{\in\mathbb{K}^{n}}=x_{1}A_{1}+\ldots+x_{n}A_{n}\in\mathcal{C}\left(A\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita sobre el campo 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sean 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+ operadores lineales sobre 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Probar que existen bases ordenadas 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ en 
+\begin_inset Formula $V$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left[S\right]_{B}=\left[T\right]_{B'}$
+\end_inset
+
+ si y solo si existe un operador lineal inversible 
+\begin_inset Formula $U$
+\end_inset
+
+ sobre 
+\begin_inset Formula $V$
+\end_inset
+
+ tal que 
+\begin_inset Formula $T=USU^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B'=\left\{ w_{1},\ldots,w_{n}\right\} $
+\end_inset
+
+ las bases de la hipotesis.
+ Recordemos que un operador lineal queda completamente definido por como
+ actua sobre los vectores de una base.
+ Sea entonces 
+\begin_inset Formula $U:V\to V$
+\end_inset
+
+ dado por 
+\begin_inset Formula $U\left(v_{i}\right)=w_{i}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $U$
+\end_inset
+
+ lleva base en base, sabemos que es isomorfo, luego 
+\begin_inset Formula $U\left(v_{i}\right)=w_{i}\iff U^{-1}\left(w_{i}\right)=v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Como por hipotesis 
+\begin_inset Formula $\left[S\right]_{B}=\left[T\right]_{B'}$
+\end_inset
+
+ entonces la i-esima columna de 
+\begin_inset Formula $S$
+\end_inset
+
+ (
+\begin_inset Formula $S_{i}$
+\end_inset
+
+) ha de ser igual a la i-esima columna de 
+\begin_inset Formula $T$
+\end_inset
+
+ (
+\begin_inset Formula $T_{i}$
+\end_inset
+
+) para todo 
+\begin_inset Formula $i$
+\end_inset
+
+, es decir: 
+\begin_inset Formula 
+\[
+S_{i}=\left[S\left(v_{i}\right)\right]_{B}=\left[T\left(w_{i}\right)\right]_{B'}=T_{i}=\left(x_{1},\ldots,x_{n}\right)
+\]
+
+\end_inset
+
+Tenemos 
+\begin_inset Formula $S\left(v_{i}\right)={\displaystyle \sum_{j=1}^{n}}x_{j}v_{j}$
+\end_inset
+
+ y 
+\begin_inset Formula $T\left(w_{i}\right)={\displaystyle \sum_{j=1}^{n}}x_{j}w_{j}$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(w_{i}\right)=T\left(U\left(v_{i}\right)\right)={\displaystyle \sum_{j=1}^{n}}x_{j}w_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $US\left(v_{i}\right)=U\left({\displaystyle \sum_{j=1}^{n}}x_{j}v_{j}\right)={\displaystyle \sum_{j=1}^{n}}x_{j}U\left(v_{j}\right)={\displaystyle \sum_{j=1}^{n}}x_{j}w_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De lo anterior sigue que 
+\begin_inset Formula $US\left(v_{i}\right)=TU\left(v_{i}\right)$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $US=TU\iff USU^{-1}=T$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+, sean 
+\begin_inset Formula $v_{1}=\left(1,0,1\right),v_{2}=\left(0,1,2\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{3}=\left(-1,-1,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es un funcional lineal sobre 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(v_{1}\right)=1,f\left(v_{2}\right)=-1$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(v_{3}\right)=3$
+\end_inset
+
+; y si 
+\begin_inset Formula $v=\left(a,b,c\right)$
+\end_inset
+
+, hallar 
+\begin_inset Formula $f\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Describir explicitamente un funcional lineal 
+\begin_inset Formula $f$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(v_{1}\right)=f\left(v_{2}\right)=0$
+\end_inset
+
+ pero 
+\begin_inset Formula $f\left(v_{3}\right)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ cualquier funcional lineal tal que 
+\begin_inset Formula $f\left(v_{1}\right)=f\left(v_{2}\right)=0$
+\end_inset
+
+ pero 
+\begin_inset Formula $f\left(v_{3}\right)\neq0$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $v=\left(2,3,-1\right)$
+\end_inset
+
+, muestre que 
+\begin_inset Formula $f\left(v\right)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f\left(x,y,z\right)=\alpha x+\beta y+\gamma z$
+\end_inset
+
+ , luego resultara 
+\begin_inset Formula $f\left(v_{1}\right)=\alpha+\gamma=1$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(v_{2}\right)=\beta+2\gamma=-1$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(v_{3}\right)=-\alpha-\beta=3$
+\end_inset
+
+.
+ Resolviendo el sistema:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc|c}
+1 & 0 & 1 & 1\\
+0 & 1 & 2 & -1\\
+-1 & -1 & 0 & 3
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|c}
+1 & 0 & 1 & 1\\
+0 & 1 & 2 & -1\\
+0 & -1 & 1 & 4
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|c}
+1 & 0 & 1 & 1\\
+0 & 1 & 2 & -1\\
+0 & 0 & 3 & 3
+\end{array}\right]
+\]
+
+\end_inset
+
+resulta 
+\begin_inset Formula $\gamma=1$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=-3$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $f\left(v\right)=-3b+c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f\left(v\right)=c-a-2b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Notemos que 
+\begin_inset Formula $v=-v_{1}-3v_{3}$
+\end_inset
+
+, luego 
+\begin_inset Formula $f\left(v\right)=-f\left(v_{1}\right)-3f\left(v_{3}\right)=-3f\left(v_{3}\right)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $B=\left\{ \underbrace{\left(1,0,-1\right)}_{b_{1}},\underbrace{\left(1,1,1\right)}_{b_{2}},\underbrace{\left(2,2,0\right)}_{b_{3}}\right\} $
+\end_inset
+
+ una base de 
+\begin_inset Formula $\mathbb{C}^{3}$
+\end_inset
+
+.
+ Hallar la base dual de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Observemos primero que 
+\begin_inset Formula $V=\left(\mathbb{C}^{3},\mathbb{C},+,\cdot\right)$
+\end_inset
+
+ y sea 
+\begin_inset Formula $v=\left(z_{1},z_{2},z_{3}\right)=\alpha b_{1}+\beta b_{2}+\gamma b_{3}$
+\end_inset
+
+, luego 
+\begin_inset Formula $z_{1}=\alpha+\beta+2\gamma$
+\end_inset
+
+, 
+\begin_inset Formula $z_{2}=\beta+2\gamma$
+\end_inset
+
+ y 
+\begin_inset Formula $z_{3}=-\alpha+\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{1}\left(v\right)=\alpha=z_{1}-z_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{2}\left(v\right)=\beta=z_{1}-z_{2}+z_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{3}\left(v\right)=\gamma=\frac{1}{2}\left(-z_{1}+2z_{2}-z_{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $v_{1}=\left(1,0,-1,2\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{2}=\left(2,3,1,1\right)$
+\end_inset
+
+ y sea 
+\begin_inset Formula $W=\left\langle \left\{ v_{1},v_{2}\right\} \right\rangle $
+\end_inset
+
+.
+ ¿Que funcionales lineales de la forma 
+\begin_inset Formula $f\left(x_{1},x_{2},x_{3},x_{4}\right)=c_{1}x_{1}+c_{2}x_{2}+c_{3}x_{3}+c_{4}x_{4}$
+\end_inset
+
+ estan en el anulador de 
+\begin_inset Formula $W$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Buscamos 
+\begin_inset Formula $f/f\left(1,0,-1,2\right)=f\left(2,3,1,1\right)=0$
+\end_inset
+
+ es decir:
+\begin_inset Formula 
+\[
+c_{1}-c_{3}+2c_{4}=0=2c_{1}+3c_{2}+c_{3}+c_{4}
+\]
+
+\end_inset
+
+Resolviendo el sistema:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cccc}
+1 & 0 & -1 & 2\\
+2 & 3 & 1 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 0 & -1 & 2\\
+0 & 3 & 3 & -3
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 0 & -1 & 2\\
+0 & 1 & 1 & -1
+\end{array}\right]
+\]
+
+\end_inset
+
+luego 
+\begin_inset Formula $c=\alpha\left(-2,1,0,1\right)+\beta\left(1,-1,1,0\right)$
+\end_inset
+
+, por lo tanto:
+\begin_inset Formula 
+\[
+W^{0}=\left\{ f\left(x\right)=x\cdot c/c\in\left\langle \left\{ \left(-2,1,0,1\right),\left(1,-1,1,0\right)\right\} \right\rangle \right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V=\mathbb{R}^{2\times2}$
+\end_inset
+
+ y sean
+\begin_inset Formula 
+\[
+B=\left[\begin{array}{cc}
+2 & -2\\
+-1 & 1
+\end{array}\right],C=\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ el subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+ que consiste de todas las matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ tales que 
+\begin_inset Formula $AB=0$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ un funcional lineal sobre 
+\begin_inset Formula $V$
+\end_inset
+
+ que esta en el anulador de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Supongamos que 
+\begin_inset Formula $f\left(I\right)=0$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(C\right)=3$
+\end_inset
+
+.
+ Hallar 
+\begin_inset Formula $f\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Observemos primero que 
+\begin_inset Formula $W=\left\{ \left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]:\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]\left[\begin{array}{cc}
+2 & -2\\
+-1 & 1
+\end{array}\right]=0\right\} =\left\{ \left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]:\left[\begin{array}{cc}
+2a-b & -2a+b\\
+2c-d & -2c+d
+\end{array}\right]=0\right\} =\left\{ \left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]:2a=b\land2c=d\right\} =\left\{ \left[\begin{array}{cc}
+a & 2a\\
+c & 2c
+\end{array}\right]:a,c\in\mathbb{R}\right\} $
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $B=\underbrace{\left[\begin{array}{cc}
+-1 & -2\\
+-1 & -2
+\end{array}\right]}_{\in W}+3I$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $f\left(B\right)=f\left(X\right)+3f\left(I\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+ subespacios de un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $\left(W_{1}+W_{2}\right)^{0}=W_{1}^{0}\cap W_{2}^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $\left(W_{1}\cap W_{2}\right)^{0}=W_{1}^{0}+W_{2}^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $W$
+\end_inset
+
+ un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ SI 
+\begin_inset Formula $f$
+\end_inset
+
+ es un funcional lineal sobre 
+\begin_inset Formula $W$
+\end_inset
+
+, pruebe que existe un funcional lineal 
+\begin_inset Formula $g$
+\end_inset
+
+ sobre 
+\begin_inset Formula $V$
+\end_inset
+
+ tal que 
+\begin_inset Formula $g\left(v\right)=f\left(v\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\forall v\in W$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $B_{V}$
+\end_inset
+
+ una base de 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $B_{W}$
+\end_inset
+
+ una base de 
+\begin_inset Formula $W$
+\end_inset
+
+ tales que 
+\begin_inset Formula $B_{W}\subseteq B_{V}$
+\end_inset
+
+.
+ Toda transformacion lineal (en particular los funcionales lineales) queda
+ determinada por como actua sobre los vectores de la base, luego podemos
+ definir a 
+\begin_inset Formula $g\left(v\right)=f\left(v\right)$
+\end_inset
+
+ para cada vector en 
+\begin_inset Formula $B_{W}$
+\end_inset
+
+ y 
+\begin_inset Formula $g\left(v\right)=0$
+\end_inset
+
+ para cada vector en 
+\begin_inset Formula $B_{V}-B_{W}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ espacio vectorial, entonces 
+\begin_inset Formula $v$
+\end_inset
+
+ induce un funcional lineal 
+\begin_inset Formula $L_{v}$
+\end_inset
+
+ en 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ definido por:
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+L_{v} & : & V^{*} & \to & \mathbb{K}\\
+ &  & f & \to & L_{v}\left(f\right)=f\left(v\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $L_{v}$
+\end_inset
+
+ es lineal.
+\end_layout
+
+\begin_layout Enumerate
+Probar que si 
+\begin_inset Formula $V$
+\end_inset
+
+ es de dimension finita y 
+\begin_inset Formula $v\neq0$
+\end_inset
+
+, entonces existe un funcional lineal 
+\begin_inset Formula $f$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(v\right)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probar que si 
+\begin_inset Formula $V$
+\end_inset
+
+ es de dimension finita, la aplicacion lineal 
+\begin_inset Formula $v\mapsto L_{v}$
+\end_inset
+
+ es un isomorfismo de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $V^{**}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probar que si 
+\begin_inset Formula $L$
+\end_inset
+
+ es un funcional lineal sobre el espacio dual 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ del espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita, entonces existe un unico vector 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ tal que 
+\begin_inset Formula $L\left(f\right)=f\left(v\right)$
+\end_inset
+
+ para todo 
+\begin_inset Formula $f\in V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que en un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita, toda base de 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ es la dual de alguna base de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

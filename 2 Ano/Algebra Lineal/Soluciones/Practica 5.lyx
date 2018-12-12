@@ -1,0 +1,1640 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Verificar la ley del paralelogramo para los vectores 
+\begin_inset Formula $u,v\in\mathbb{R}^{n}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left\Vert u+v\right\Vert ^{2}+\left\Vert u-v\right\Vert ^{2}=2\left(\left\Vert u\right\Vert ^{2}+\left\Vert v\right\Vert ^{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $u+v=\left(u_{1},\ldots,u_{n}\right)+\left(v_{1},\ldots,v_{n}\right)=\left(u_{1}+v_{1},\ldots,u_{n}+v_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\Vert u+v\right\Vert ^{2}=\left[u_{1}+v_{1},\ldots,u_{n}+v_{n}\right]\left(u_{1}+v_{1},\ldots,u_{n}+v_{n}\right)=\left(u_{1}+v_{1}\right)^{2}+\ldots+\left(u_{n}+v_{n}\right)^{2}=\underbrace{\left(u_{1}^{2}+2u_{1}v_{1}+v_{1}^{2}\right)+\ldots+\left(u_{n}^{2}+2u_{n}v_{n}+v_{n}^{2}\right)}_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\Vert u-v\right\Vert ^{2}=\left[u_{1}-v_{1},\ldots,u_{n}-v_{n}\right]\left(u_{1}-v_{1},\ldots,u_{n}-v_{n}\right)=\left(u_{1}-v_{1}\right)^{2}+\ldots+\left(u_{n}-v_{n}\right)^{2}=\underbrace{\left(u_{1}^{2}-2u_{1}v_{1}+v_{1}^{2}\right)+\ldots+\left(u_{n}^{2}-2u_{n}v_{n}+v_{n}^{2}\right)}_{**}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $*+**=2\left(u_{1}^{2}+v_{1}^{2}\right)+\ldots+2\left(u_{n}^{2}+v_{n}^{2}\right)=2\left[\left(u_{1}^{2}+v_{1}^{2}\right)+\ldots+\left(u_{n}^{2}+v_{n}^{2}\right)\right]=2\left[\left(u_{1}^{2}+\ldots+u_{n}^{2}\right)+\left(v_{1}^{2}+\ldots+v_{n}^{2}\right)\right]=2\left(\left\Vert u\right\Vert ^{2}+\left\Vert v\right\Vert ^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $v=\left(a,b\right)$
+\end_inset
+
+.
+ Describir el conjunto 
+\begin_inset Formula $H$
+\end_inset
+
+ de vectores 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ que son ortogonales a 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H=\left\{ \left(x,y\right)/\left[x,y\right]\cdot\left(a,b\right)=0\right\} =\left\{ \left(x,y\right)/xa+yb=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $W=\left\langle \left\{ v_{1},\ldots,v_{p}\right\} \right\rangle $
+\end_inset
+
+.
+ Mostrar que si 
+\begin_inset Formula $x$
+\end_inset
+
+ es ortogonal a todo 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+, para 
+\begin_inset Formula $1\leq j\leq p$
+\end_inset
+
+, luego 
+\begin_inset Formula $x$
+\end_inset
+
+ es ortogonal a todo vector en 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $v\in W/v=\alpha_{1}v_{1}+\ldots+\alpha_{p}v_{p}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $v\cdot x=\left(\alpha_{1}v_{1}\right)\cdot x+\ldots+\left(\alpha_{p}v_{p}\right)\cdot x=\alpha_{1}\underbrace{\left(v_{1}\cdot x\right)}_{0}+\ldots+\alpha_{p}\underbrace{\left(v_{p}\cdot x\right)}_{0}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que si 
+\begin_inset Formula $x\in W\cap W^{\bot}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En cada caso, mostrar que 
+\begin_inset Formula $\left\{ u_{1},u_{2}\right\} $
+\end_inset
+
+ o 
+\begin_inset Formula $\left\{ u_{1},u_{2},u_{3}\right\} $
+\end_inset
+
+ es una base ortogonal para 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ o 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ respectivamente, y luego expresar a 
+\begin_inset Formula $x$
+\end_inset
+
+ como combinacion lineal de la base correspondiente:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}=\left[\begin{array}{c}
+2\\
+-3
+\end{array}\right],u_{2}=\left[\begin{array}{c}
+6\\
+4
+\end{array}\right],x=\left[\begin{array}{c}
+9\\
+-7
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}=\left[\begin{array}{c}
+1\\
+0\\
+1
+\end{array}\right],u_{2}=\left[\begin{array}{c}
+-1\\
+4\\
+1
+\end{array}\right],u_{3}=\left[\begin{array}{c}
+2\\
+1\\
+-2
+\end{array}\right],x=\left[\begin{array}{c}
+8\\
+-4\\
+-3
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}\cdot u_{2}=12-12=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x=3u_{1}+\frac{1}{2}u_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}\cdot u_{2}=-1+1=0$
+\end_inset
+
+, 
+\begin_inset Formula $u_{1}\cdot u_{3}=2+\left(-2\right)=0$
+\end_inset
+
+, 
+\begin_inset Formula $u_{2}\cdot u_{3}=-2+4-2=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x=\frac{5}{2}u_{1}-\frac{3}{2}u_{2}+2u_{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponer que 
+\begin_inset Formula $W$
+\end_inset
+
+ es un subespacio de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ generado por 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores ortogonales distintos de 0.
+ Explicar por que 
+\begin_inset Formula $W=\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Debemos ver que los 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores generan 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ Ya sabemos que son 
+\begin_inset Formula $n$
+\end_inset
+
+, nos resta ver que son linealmente independientes.
+ Supongamos que no lo sean, luego uno de ellos puede expresarse como combinacion
+ lineal de los demas: 
+\begin_inset Formula $v_{1}=\alpha v_{2}+\beta v_{3}$
+\end_inset
+
+.
+ Ahora:
+\begin_inset Formula 
+\[
+\left(\alpha v_{2}+\beta v_{3}\right)\cdot v_{1}=\left(\alpha v_{2}\right)\cdot v_{1}+\left(\beta v_{2}\right)\cdot v_{1}=\alpha\left(v_{2}\cdot v_{1}\right)+\beta\left(v_{2}\cdot v_{1}\right)=0
+\]
+
+\end_inset
+
+es decir 
+\begin_inset Formula $v_{1}\cdot v_{1}=0\iff v_{1}=0$
+\end_inset
+
+.
+ Contradiccion.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $U,V$
+\end_inset
+
+ matrices ortogonales.
+ Explicar por que 
+\begin_inset Formula $UV$
+\end_inset
+
+ es una matriz ortogonal.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sabemos que 
+\begin_inset Formula $U^{-1}=U^{t}$
+\end_inset
+
+ y 
+\begin_inset Formula $V^{-1}=V^{t}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\left(UV\right)^{t}=V^{t}U^{t}=V^{-1}U^{-1}$
+\end_inset
+
+; es decir, 
+\begin_inset Formula $\left(UV\right)^{t}=\left(UV\right)^{-1}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left\{ u_{1},u_{2}\right\} $
+\end_inset
+
+ un conjunto ortogonal de vectores distintos de cero y 
+\begin_inset Formula $c_{1},c_{2}$
+\end_inset
+
+ escalares no nulos.
+ Mostrar que 
+\begin_inset Formula $\left\{ c_{1}u_{1},c_{2}u_{2}\right\} $
+\end_inset
+
+ tambien es ortogonal.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dado 
+\begin_inset Formula $0\neq u\in\mathbb{R}^{n}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $L=\left\langle \left\{ u\right\} \right\rangle $
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $y\in\mathbb{R}^{n}$
+\end_inset
+
+, la reflexion de 
+\begin_inset Formula $y$
+\end_inset
+
+ en 
+\begin_inset Formula $L$
+\end_inset
+
+ se define como:
+\begin_inset Formula 
+\[
+ref_{L}y=2proy_{L}y-y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Graficar en 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ para observar que la 
+\begin_inset Formula $ref_{L}y$
+\end_inset
+
+ es la suma de 
+\begin_inset Formula $\hat{y}=proy_{L}y$
+\end_inset
+
+ con 
+\begin_inset Formula $\hat{y}-y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que la aplicacion 
+\begin_inset Formula $y\mapsto ref_{L}y$
+\end_inset
+
+ es una transformacion lineal.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean
+\begin_inset Formula 
+\[
+u_{1}=\left[\begin{array}{c}
+0\\
+1\\
+-4\\
+-1
+\end{array}\right],u_{2}=\left[\begin{array}{c}
+3\\
+5\\
+1\\
+1
+\end{array}\right],u_{3}=\left[\begin{array}{c}
+1\\
+0\\
+1\\
+-4
+\end{array}\right],u_{4}=\left[\begin{array}{c}
+5\\
+-3\\
+-1\\
+1
+\end{array}\right],x=\left[\begin{array}{c}
+10\\
+-8\\
+2\\
+0
+\end{array}\right]
+\]
+
+\end_inset
+
+Escribir 
+\begin_inset Formula $x$
+\end_inset
+
+ como suma de dos vectores, uno en 
+\begin_inset Formula $\left\langle \left\{ u_{1},u_{2},u_{3}\right\} \right\rangle $
+\end_inset
+
+ y otro en 
+\begin_inset Formula $\left\langle \left\{ u_{4}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x=\left(-\frac{8}{9}u_{1}-\frac{2}{9}u_{2}+\frac{2}{3}u_{3}\right)+2u_{4}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ el subespacio generado por 
+\begin_inset Formula $v_{1}=\left[\begin{array}{c}
+3\\
+1\\
+-1\\
+1
+\end{array}\right],v_{2}=\left[\begin{array}{c}
+1\\
+-1\\
+1\\
+-1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $y=\left(3,1,5,1\right)$
+\end_inset
+
+, escribirlo como la suma de un vector en 
+\begin_inset Formula $W$
+\end_inset
+
+ y uno en 
+\begin_inset Formula $W^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $y=\left(3,-1,1,13\right)$
+\end_inset
+
+, encontrar el punto mas cercano a 
+\begin_inset Formula $y$
+\end_inset
+
+ en 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $y=\left(2,4,0,1\right)$
+\end_inset
+
+, encontrar la mejor aproximacion a 
+\begin_inset Formula $y$
+\end_inset
+
+ mediante vectores de la forma 
+\begin_inset Formula $c_{1}v_{1}+c_{2}v_{2}$
+\end_inset
+
+.
+ Hallar la distancia de 
+\begin_inset Formula $y$
+\end_inset
+
+ a 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $v_{3}=\left[\begin{array}{c}
+0\\
+0\\
+1\\
+1
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{4}=\left[\begin{array}{c}
+0\\
+1\\
+1\\
+0
+\end{array}\right]$
+\end_inset
+
+, veamos que ambos pertenecen a 
+\begin_inset Formula $W^{\bot}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $x\in W/x=\alpha v_{1}+\beta v_{2}$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\cdot v_{3}=\alpha v_{1}\cdot v_{3}+\beta v_{2}\cdot v_{3}=\alpha0+\beta0=0$
+\end_inset
+
+ y analogamente para 
+\begin_inset Formula $v_{4}$
+\end_inset
+
+.
+ Finalmente 
+\begin_inset Formula $y=\left(\frac{1}{2}v_{1}+\frac{3}{2}v_{2}\right)+\left(2v_{3}+2v_{4}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $y=\left(\frac{5}{3}v_{1}-\frac{14}{3}v_{2}\right)+\left(\frac{28}{3}v_{3}-\frac{14}{3}v_{4}\right)$
+\end_inset
+
+, luego el 
+\begin_inset Quotes cld
+\end_inset
+
+punto
+\begin_inset Quotes crd
+\end_inset
+
+ mas cercano es 
+\begin_inset Formula $\left(\frac{1}{3},\frac{19}{3},-\frac{19}{3},\frac{19}{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $y=\left(\frac{11}{2}v_{1}-\frac{3}{4}v_{2}\right)+\left(-\frac{2}{3}v_{3}\frac{7}{3}v_{4}\right)$
+\end_inset
+
+, luego la mejor aproximacion es 
+\begin_inset Formula $\frac{11}{2}v_{1}-\frac{3}{4}v_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $y=\left[4,8,1\right]^{t},u_{1}=\left[\frac{2}{3},\frac{1}{3},\frac{2}{3}\right]^{t},u_{2}=\left[-\frac{2}{3},\frac{2}{3},\frac{1}{3}\right]^{t}$
+\end_inset
+
+ y 
+\begin_inset Formula $W=\left\langle \left\{ u_{1},u_{2}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $U=\left[u_{1}u_{2}\right]$
+\end_inset
+
+.
+ Calcular 
+\begin_inset Formula $U^{t}U$
+\end_inset
+
+ y 
+\begin_inset Formula $UU^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Calcular 
+\begin_inset Formula $proy_{W}y$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(UU^{t}\right)y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $U^{t}U=I$
+\end_inset
+
+.
+ 
+\begin_inset Formula $UU^{t}=\left[\begin{array}{ccc}
+\frac{8}{9} & -\frac{2}{9} & \frac{2}{9}\\
+-\frac{2}{9} & \frac{5}{9} & \frac{4}{9}\\
+\frac{2}{9} & \frac{4}{9} & \frac{5}{9}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\begin_inset Formula $UU^{t}y=\left(2,4,5\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ una matriz 
+\begin_inset Formula $m\times n$
+\end_inset
+
+.
+ Demostrar que todo vector 
+\begin_inset Formula $x\in\mathbb{R}^{n}$
+\end_inset
+
+ puede escribirse en la forma 
+\begin_inset Formula $x=p+u$
+\end_inset
+
+, donde 
+\begin_inset Formula $p$
+\end_inset
+
+ esta en 
+\begin_inset Formula $\mathcal{F}\left(A\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $u\in\mathcal{N}\left(A\right)$
+\end_inset
+
+.
+ Mostrar que si la ecuacion 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ es consistente, entonces hay una unica 
+\begin_inset Formula $p$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathcal{F}\left(A\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Ap=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ un subespacio de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ con una base ortogonal 
+\begin_inset Formula $\left\{ w_{1},\ldots,w_{p}\right\} $
+\end_inset
+
+ y sea 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{q}\right\} $
+\end_inset
+
+ una base ortogonal de 
+\begin_inset Formula $W^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explicar por que 
+\begin_inset Formula $\left\{ w_{1},\ldots,w_{p},v_{1},\ldots,v_{q}\right\} $
+\end_inset
+
+ es un conjunto ortogonal.
+\end_layout
+
+\begin_layout Enumerate
+Explicar por que el conjunto definido en el item anterior genera 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Demostrar que 
+\begin_inset Formula $dim\left(W\right)+dim\left(W^{\bot}\right)=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $w_{i}\cdot w_{j}=0$
+\end_inset
+
+ por ser 
+\begin_inset Formula $\left\{ w_{1},\ldots,w_{p}\right\} $
+\end_inset
+
+ un conjunto ortogonal y analogamente para 
+\begin_inset Formula $v_{i},v_{j}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+, como 
+\begin_inset Formula $v_{j}\in W^{\bot}$
+\end_inset
+
+ significa que 
+\begin_inset Formula $v_{j}\cdot w=0$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $w\in W$
+\end_inset
+
+, en particular para cualquier 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Siendo 
+\begin_inset Formula $u=\left[\begin{array}{c}
+3\\
+0\\
+-1
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $v=\left[\begin{array}{c}
+8\\
+5\\
+-6
+\end{array}\right]$
+\end_inset
+
+, utilizar el proceso de Gram-Schmidt para producir una base ortogonal de
+ 
+\begin_inset Formula $\left\langle \left\{ u,v\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $w_{1}=u$
+\end_inset
+
+ y 
+\begin_inset Formula $w_{2}=v-\frac{v\cdot w_{1}}{w_{1}\cdot w_{1}}w_{1}=\left[\begin{array}{c}
+8\\
+5\\
+-6
+\end{array}\right]-\frac{30}{10}\left[\begin{array}{c}
+3\\
+0\\
+-1
+\end{array}\right]=\left[\begin{array}{c}
+8\\
+5\\
+-6
+\end{array}\right]-\left[\begin{array}{c}
+9\\
+0\\
+-3
+\end{array}\right]=\left[\begin{array}{c}
+-1\\
+5\\
+-3
+\end{array}\right]$
+\end_inset
+
+, luego 
+\begin_inset Formula $\left\langle \left\{ w_{1},w_{2}\right\} \right\rangle $
+\end_inset
+
+ es base ortogonal de 
+\begin_inset Formula $\left\langle \left\{ u,v\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+1 & 2 & 5\\
+-1 & 1 & 4\\
+-1 & 4 & -3\\
+1 & -4 & 7\\
+1 & 2 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+Encontrar una base ortogonal para el espacio columna de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+, definimos 
+\begin_inset Formula $u_{1}=v_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $u_{2}=v_{2}-\frac{v_{2}\cdot u_{1}}{u_{1}\cdot u_{1}}u_{1}=\left[\begin{array}{c}
+2\\
+1\\
+4\\
+-4\\
+2
+\end{array}\right]-\frac{-5}{5}\left[\begin{array}{c}
+1\\
+-1\\
+-1\\
+1\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+0\\
+3\\
+-3\\
+3
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $u_{3}=v_{3}-\frac{v_{3}\cdot u_{1}}{u_{1}\cdot u_{1}}u_{1}-\frac{v_{3}\cdot u_{2}}{u_{2}\cdot u_{2}}u_{2}=\left[\begin{array}{c}
+5\\
+4\\
+-3\\
+7\\
+1
+\end{array}\right]-\frac{12}{5}\left[\begin{array}{c}
+1\\
+-1\\
+-1\\
+1\\
+1
+\end{array}\right]-\frac{-12}{36}\left[\begin{array}{c}
+3\\
+0\\
+3\\
+-3\\
+3
+\end{array}\right]=\left[\begin{array}{c}
+\frac{18}{5}\\
+\frac{32}{5}\\
+\frac{2}{5}\\
+\frac{18}{5}\\
+-\frac{2}{5}
+\end{array}\right]$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{\mathcal{C}\left(A\right)=\left\langle \left\{ u_{1},u_{2},u_{3}\right\} \right\rangle }}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verificar que 
+\begin_inset Formula $A\times B={\displaystyle \sum_{i,j}A_{ij}B_{ij}}$
+\end_inset
+
+ es un producto interno en 
+\begin_inset Formula $\mathbb{R}^{n\times n}$
+\end_inset
+
+ (conocido como producto de Frobenius).
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $A\times B=tr\left(AB^{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $AB\times C=B\times A^{t}C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(A+B\right)\times C={\displaystyle \sum_{i,j}\left(A_{ij}+B_{ij}\right)C_{ij}=\sum_{i,j}\left(A_{ij}C_{ij}+B_{ij}C_{ij}\right)=}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $={\displaystyle \sum_{i,j}}A_{ij}C_{ij}+{\displaystyle \sum_{i,j}}B_{ij}C_{ij}=A\times C+B\times C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha A\times B={\displaystyle \sum_{i,j}\alpha A_{ij}B_{ij}=\alpha\sum_{i,j}A_{ij}B_{ij}=\alpha\left(A\times B\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\times B={\displaystyle \sum_{i,j}A_{ij}B_{ij}=\sum_{i,j}B_{ij}A_{ij}=B\times A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\times A={\displaystyle \sum_{i,j}A_{ij}A_{ij}=\sum_{i,j}\underbrace{A_{ij}^{2}}_{\geq0}\geq0}$
+\end_inset
+
+ y claramente 
+\begin_inset Formula $\text{\ensuremath{A\times A=0\iff A=0}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Verificar que 
+\begin_inset Formula $f\times g={\displaystyle \intop_{1}^{e}log\left(x\right)f\left(x\right)g\left(x\right)dx}$
+\end_inset
+
+ es un producto interno en 
+\begin_inset Formula $\mathcal{C}\left(\left[1,e\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados 
+\begin_inset Formula $u,v\in V$
+\end_inset
+
+ espacio vectorial con producto interno, probar que 
+\begin_inset Formula $u=v$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $u\times w=v\times w$
+\end_inset
+
+ para todo 
+\begin_inset Formula $w\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Trivial.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial con producto interno y 
+\begin_inset Formula $W$
+\end_inset
+
+ un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $\left(W^{\bot}\right)^{\bot}=W$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\subseteq}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x\in\left(W^{\bot}\right)^{\bot}$
+\end_inset
+
+, como 
+\begin_inset Formula $x\in V$
+\end_inset
+
+ sabemos que podemos escribirlo como 
+\begin_inset Formula $x=p+u$
+\end_inset
+
+ con 
+\begin_inset Formula $p\in W$
+\end_inset
+
+ y 
+\begin_inset Formula $u\in W^{\bot}$
+\end_inset
+
+.
+ Ademas 
+\begin_inset Formula $x\cdot u=0$
+\end_inset
+
+ es decir 
+\begin_inset Formula $\left(p+u\right)\cdot u=\underbrace{p\cdot u}_{0}+u\cdot u=u\cdot u=0\iff u=0$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $x=p\in W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\supseteq}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x\in W$
+\end_inset
+
+, como 
+\begin_inset Formula $x\in V$
+\end_inset
+
+ sabemos que podemos escribirlo como 
+\begin_inset Formula $x=p+u$
+\end_inset
+
+ con 
+\begin_inset Formula $p\in W^{\bot}$
+\end_inset
+
+ y 
+\begin_inset Formula $u\in\left(W^{\bot}\right)^{\bot}$
+\end_inset
+
+.
+ Ademas 
+\begin_inset Formula $x\cdot p=0$
+\end_inset
+
+ es decir 
+\begin_inset Formula $\left(p+u\right)\cdot p=p\cdot p+\underbrace{p\cdot u}_{0}=p\cdot p=0\iff p=0$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $x=u\in\left(W^{\bot}\right)^{\bot}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathbb{R}^{n\times n}$
+\end_inset
+
+ con el producto interno definido en el ejercicio 17.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Hallar una base ortogonal para 
+\begin_inset Formula $\mathbb{R}^{n\times n}$
+\end_inset
+
+ para dicho producto interno.
+\end_layout
+
+\begin_layout Enumerate
+Hallar 
+\begin_inset Formula $W^{\bot}$
+\end_inset
+
+, si 
+\begin_inset Formula $W=\left\langle \left\{ \left[\begin{array}{cc}
+1 & 2\\
+0 & -1
+\end{array}\right],\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]\right\} \right\rangle \subset\mathbb{R}^{2\times2}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+Idem para 
+\begin_inset Formula $W=\left\{ \left[\begin{array}{ccc}
+a & b & c\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]:a,b,c\in\mathbb{R}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+w & x\\
+y & z
+\end{array}\right]$
+\end_inset
+
+, recordemos que 
+\begin_inset Formula $\left\langle A,B\right\rangle =aw+bx+cy+dz$
+\end_inset
+
+; luego la base estandard es una base ortogonal.
+\end_layout
+
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $W=\left\{ \left[\begin{array}{cc}
+x & 2y\\
+0 & -y
+\end{array}\right]:x,y\in\mathbb{R}\right\} $
+\end_inset
+
+.
+ Buscamos 
+\begin_inset Formula $X=\left[\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right]/ax+2by-dy=ax+\left(2b-d\right)y=0$
+\end_inset
+
+ para cualequiera 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $W^{\bot}=\left\langle \left\{ \left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 1\\
+0 & 2
+\end{array}\right]\right\} \right\rangle $
+\end_inset
+
+.
+ Corroboramos:
+\begin_inset Formula 
+\[
+\left\langle a\left[\begin{array}{cc}
+1 & 2\\
+0 & -1
+\end{array}\right]+b\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],c\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right]+d\left[\begin{array}{cc}
+0 & 1\\
+0 & 2
+\end{array}\right]\right\rangle =
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle \left[\begin{array}{cc}
+a+b & 2a\\
+0 & -a
+\end{array}\right],\left[\begin{array}{cc}
+0 & d\\
+c & 2d
+\end{array}\right]\right\rangle =0+2ad+0-2ad=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}\left[\left(1,e\right)\right]$
+\end_inset
+
+, con el producto interno definido en el ejercicio 18.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcular 
+\begin_inset Formula $\left\Vert f\right\Vert $
+\end_inset
+
+ para 
+\begin_inset Formula $f\left(x\right)=\sqrt{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Hallar un polinomio de grado uno que sea ortogonal a 
+\begin_inset Formula $g\left(x\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

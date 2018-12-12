@@ -1,0 +1,2215 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Eliminacion Gaussiana.
+ Factorizacion LU.
+ Primera parte.
+\end_layout
+
+\begin_layout Enumerate
+Resuelva los siguientes sistemas utilizando eliminacion gaussiana e identifique
+ las matrices de eliminacion y/o permutacion utilizadas en cada caso:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\begin{cases}
+x_{2}+4x_{3} & =-5\\
+x_{1}+3x_{2}-5x_{3} & =-2\\
+3x_{1}+7x_{2}+7x_{3} & =6
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{cases}
+x_{1}-3x_{2} & =-4\\
+3x_{1}-7x_{2}+7x_{3} & =-8\\
+-4x_{1}+6x_{2}-x_{3} & =7
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{cases}
+x_{1}-3x_{2} & =5\\
+-x_{1}+x_{2}+5x_{3} & =2\\
+x_{2}+x_{3} & =0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+0 & 1 & 4\\
+1 & 3 & -5\\
+3 & 7 & 7
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $P_{12}A=\left[\begin{array}{ccc}
+1 & 3 & -5\\
+0 & 1 & 4\\
+3 & 7 & 7
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\text{\ensuremath{E_{31}\left(-3\right)P_{12}A=\left[\begin{array}{ccc}
+1 & 3 & -5\\
+0 & 1 & 4\\
+0 & -2 & 22
+\end{array}\right]}}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{32}\left(2\right)E_{31}\left(-3\right)P_{12}A=\left[\begin{array}{ccc}
+1 & 3 & -5\\
+0 & 1 & 4\\
+0 & 0 & 30
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $c=\left[\begin{array}{c}
+-2\\
+-5\\
+2
+\end{array}\right]$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $\text{\ensuremath{x_{3}=\frac{1}{15}}}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=-5-\frac{4}{15}=-\frac{79}{15}$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{1}=-2+\frac{5}{15}+3\frac{79}{15}=\frac{212}{15}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+1 & -3 & 0\\
+3 & -7 & 7\\
+-4 & 6 & -1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $E_{21}\left(-3\right)A=\left[\begin{array}{ccc}
+1 & -3 & 0\\
+0 & 2 & 7\\
+-4 & 6 & -1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $E_{31}\left(4\right)E_{21}\left(-3\right)A=\left[\begin{array}{ccc}
+1 & -3 & 0\\
+0 & 2 & 7\\
+0 & -6 & -1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $E_{32}\left(3\right)E_{31}\left(4\right)E_{21}\left(-3\right)A=\left[\begin{array}{ccc}
+1 & -3 & 0\\
+0 & 2 & 7\\
+0 & 0 & 20
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $\text{\ensuremath{c=\left[\begin{array}{c}
+-4\\
+4\\
+3
+\end{array}\right]}}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $x_{3}=\frac{3}{20}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=\frac{1}{2}\left(4-7\frac{3}{20}\right)=\frac{59}{40}$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{1}=-4+3\frac{59}{40}=\frac{17}{40}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encuentre la operacion elemental de fila que transforma a la primer matriz
+ en la segunda de cada item siguiente.
+ Ademas determine cual es la operacion elemental de fila que transforma
+ a la segunta en la primera.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & -2 & 5\\
+1 & 4 & -7\\
+3 & -1 & 6
+\end{array}\right]$
+\end_inset
+
+ 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 4 & -7\\
+0 & -2 & 5\\
+3 & -1 & 6
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 3 & -4\\
+0 & -2 & 6\\
+0 & -5 & 9
+\end{array}\right]$
+\end_inset
+
+ 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 3 & -4\\
+0 & 1 & -3\\
+0 & -5 & 9
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & -2 & 1 & 0\\
+0 & 5 & -2 & 8\\
+4 & -1 & 3 & -6
+\end{array}\right]$
+\end_inset
+
+ 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & -2 & 1 & 0\\
+0 & 5 & -2 & 8\\
+0 & 7 & -1 & -6
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 2 & -5 & 0\\
+0 & 1 & -3 & -2\\
+0 & -3 & 9 & 5
+\end{array}\right]$
+\end_inset
+
+ 
+\begin_inset Formula $\leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 2 & -5 & 0\\
+0 & 1 & -3 & -2\\
+0 & 0 & 0 & -1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P_{12}$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{12}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{22}\left(-\frac{1}{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{22}\left(-2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{31}\left(-4\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{31}\left(4\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{32}\left(3\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{32}\left(-3\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+2 & 1 & 4\\
+0 & -1 & 1
+\end{array}\right]\text{ y }B=\left[\begin{array}{cc}
+1 & 1\\
+0 & 1\\
+1 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La primera fila de 
+\begin_inset Formula $AB$
+\end_inset
+
+ es una combinacion lineal de todas las filas de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ ¿Cuales son los escalares de esta combinacion y cual es la primera fila
+ de 
+\begin_inset Formula $AB$
+\end_inset
+
+? ¿Cual es la segunda fila?
+\end_layout
+
+\begin_layout Enumerate
+La primera columna de 
+\begin_inset Formula $AB$
+\end_inset
+
+ es una combinacion lineal de todas las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ ¿Cuales son los escalares de esta combinacion y cual es la primera columna
+ de 
+\begin_inset Formula $AB$
+\end_inset
+
+? ¿Cual es la segunda columna?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+La primer columna de 
+\begin_inset Formula $AB$
+\end_inset
+
+ es una combinacion de las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+ con los escalares de la primer columna de 
+\begin_inset Formula $B$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $\left(AB\right)_{1}=1\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]+0\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]+1\left[\begin{array}{c}
+4\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+6\\
+1
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(AB\right)_{2}=1\left[\begin{array}{c}
+2\\
+0
+\end{array}\right]+1\left[\begin{array}{c}
+1\\
+-1
+\end{array}\right]+0\left[\begin{array}{c}
+4\\
+1
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+-1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar la veracidad de las siguientes afirmaciones.
+ Justificar y mostrar un contraejemplo en el caso de que sea falso.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si la primera y la tercera columna de 
+\begin_inset Formula $B$
+\end_inset
+
+ son iguales, tambien lo son la primera y la tercera columna de 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si la primera y la tercera fila de 
+\begin_inset Formula $B$
+\end_inset
+
+ son iguales, tambien lo son la primera y la tercera fila de 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si la primera y la tercera fila de 
+\begin_inset Formula $A$
+\end_inset
+
+ son iguales, tambien lo son la primera y la tercera fila de 
+\begin_inset Formula $AB$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(AB\right)^{2}=A^{2}B^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Verdadero pues 
+\begin_inset Formula $\left(AB\right)_{1}=AB_{1}=AB_{3}=\left(AB\right)_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ Por ejemplo: 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 1 & 1\\
+0 & 0 & 0\\
+1 & 1 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+4 & 4 & 4\\
+10 & 10 & 10\\
+16 & 16 & 16
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ Sean 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & 1\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+1 & 0\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+, luego 
+\begin_inset Formula $\left(AB\right)^{2}=\left[\begin{array}{cc}
+4 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ pero 
+\begin_inset Formula $A^{2}B^{2}=\left[\begin{array}{cc}
+2 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar ejemplos de matrices de orden 
+\begin_inset Formula $2$
+\end_inset
+
+ por 
+\begin_inset Formula $2$
+\end_inset
+
+ tales que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A^{2}=-I$
+\end_inset
+
+, donde 
+\begin_inset Formula $A$
+\end_inset
+
+ tenga solo entradas reales.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B^{2}=0$
+\end_inset
+
+, aunque 
+\begin_inset Formula $B\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $CD=-DC$
+\end_inset
+
+, dejando de lado el caso 
+\begin_inset Formula $CD=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $EF=0$
+\end_inset
+
+, aunque ninguna de las entradas de 
+\begin_inset Formula $E$
+\end_inset
+
+ o de 
+\begin_inset Formula $F$
+\end_inset
+
+ sea 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & -1\\
+2 & -1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left[\begin{array}{cc}
+1 & 1\\
+-1 & -1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=\left[\begin{array}{cc}
+0 & 1\\
+-1 & 0
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $D=\left[\begin{array}{cc}
+2 & 3\\
+3 & -2
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E=\left[\begin{array}{cc}
+1 & 1\\
+1 & 1
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $F=\left[\begin{array}{cc}
+2 & -2\\
+-2 & 2
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La matriz de rotacion del plano 
+\begin_inset Formula $x-y$
+\end_inset
+
+ por un angulo 
+\begin_inset Formula $\theta$
+\end_inset
+
+ es:
+\begin_inset Formula 
+\[
+\left[\begin{array}{cc}
+\cos\left(\theta\right) & -\sin\left(\theta\right)\\
+\sin\left(\theta\right) & \cos\left(\theta\right)
+\end{array}\right]
+\]
+
+\end_inset
+
+Recordando algunas identidades trigonometricas, verifique que 
+\begin_inset Formula $A\left(\theta_{1}\right)A\left(\theta_{2}\right)=A\left(\theta_{1}+\theta_{2}\right)$
+\end_inset
+
+.
+ ¿Que matriz es 
+\begin_inset Formula $A\left(\theta\right)A\left(-\theta\right)$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos matrices triangulares inferiores.
+ Muestre que el producto 
+\begin_inset Formula $AB$
+\end_inset
+
+ es una matriz triangular inferior, y que si 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible, 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ tambien es triangular inferior.
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos matrices triangulares superiores.
+ Muestre que el producto 
+\begin_inset Formula $AB$
+\end_inset
+
+ es una matriz triangular superior, y que si 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible, 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ tambien es triangular superior.
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos matrices triangulares diagonales.
+ Muestre que el producto 
+\begin_inset Formula $AB$
+\end_inset
+
+ es una matriz diagonal, y que si 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible, 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ tambien es diagonal.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Podemos escribir a 
+\begin_inset Formula $AB$
+\end_inset
+
+ como 
+\begin_inset Formula $\left[\left(AB\right)^{t}\right]^{t}=\left[B^{t}A^{t}\right]^{t}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $A$
+\end_inset
+
+ son triangulares inferiores entonces por el resultado anterior 
+\begin_inset Formula $B^{t}A^{t}$
+\end_inset
+
+ es triangular inferior luego 
+\begin_inset Formula $\left[B^{t}A^{t}\right]^{t}=AB$
+\end_inset
+
+ es triangular superior.
+\end_layout
+
+\begin_layout Enumerate
+Resulta evidente de considerar los resultados anteriores teniendo en cuenta
+ que una matriz diagonal es triangular superior e inferior.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Que le sucede a una matriz 
+\begin_inset Formula $A\in\mathcal{M}_{3\times3}$
+\end_inset
+
+ si la premultiplicamos por 
+\begin_inset Formula $E_{31}\left(4\right)$
+\end_inset
+
+ o 
+\begin_inset Formula $E_{23}\left(5\right)$
+\end_inset
+
+? ¿Que sucede si la postmultiplicamos por dichas matrices?
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Solucion
+\end_layout
+
+\begin_layout Standard
+Si premultiplicamos por 
+\begin_inset Formula $E_{ij}\left(\alpha\right)$
+\end_inset
+
+, a la fila 
+\begin_inset Formula $i$
+\end_inset
+
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ se le suman 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ veces la fila 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Si postmultiplicamos por 
+\begin_inset Formula $E_{ij}\left(\alpha\right)$
+\end_inset
+
+, a la columna 
+\begin_inset Formula $j$
+\end_inset
+
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ se le suman 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ veces la columna 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Exhiba la matriz 
+\begin_inset Formula $M$
+\end_inset
+
+ de orden 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ que produce los siguientes pasos de eliminacion:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ suma 
+\begin_inset Formula $5$
+\end_inset
+
+ veces la fila 
+\begin_inset Formula $1$
+\end_inset
+
+ a la fila 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ suma 
+\begin_inset Formula $-7$
+\end_inset
+
+ veces la fila 
+\begin_inset Formula $2$
+\end_inset
+
+ a la fila 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+ intercambia las filas 
+\begin_inset Formula $1$
+\end_inset
+
+ y 
+\begin_inset Formula $2$
+\end_inset
+
+ y luego la 
+\begin_inset Formula $2$
+\end_inset
+
+ y 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=E_{21}\left(5\right)=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+5 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=E_{32}\left(-7\right)=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & -7 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M=P_{23}P_{12}=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right]\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]=\left[\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 1\\
+1 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determina las matrices 
+\begin_inset Formula $E_{21}$
+\end_inset
+
+, 
+\begin_inset Formula $E_{31}$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{32}$
+\end_inset
+
+ que llevan a la matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ a su forma triangular 
+\begin_inset Formula $U$
+\end_inset
+
+, siendo
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+1 & 1 & 0\\
+4 & 6 & 1\\
+-2 & 2 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calcula la matriz 
+\begin_inset Formula $E=E_{32}E_{31}E_{21}$
+\end_inset
+
+ que realiza todos los pasos de la eliminacion: 
+\begin_inset Formula $EA=U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{21}\left(-4\right)$
+\end_inset
+
+, 
+\begin_inset Formula $E_{31}\left(2\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{32}\left(-2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+-4 & 1 & 0\\
+10 & -2 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considere el sistema de ecuaciones 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+, donde
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+2 & 3 & 3\\
+0 & 5 & 7\\
+6 & 9 & 8
+\end{array}\right],b=\left[\begin{array}{c}
+2\\
+2\\
+5
+\end{array}\right]
+\]
+
+\end_inset
+
+Factorizar 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $LU$
+\end_inset
+
+ y escribir el sistema triangular superior 
+\begin_inset Formula $Ux=c$
+\end_inset
+
+ que se obtiene despues de la eliminacion gaussiana.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E_{31}\left(-3\right)A=\left[\begin{array}{ccc}
+2 & 3 & 3\\
+0 & 5 & 7\\
+0 & 0 & -1
+\end{array}\right]=U$
+\end_inset
+
+, 
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+3 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $c=\left[\begin{array}{c}
+2\\
+2\\
+-1
+\end{array}\right]$
+\end_inset
+
+, luego el sistema es: 
+\begin_inset Formula $\begin{cases}
+2x_{1}+3x_{2}+3x_{3} & =2\\
+5x_{2}+7x_{3} & =2\\
+-x_{3} & =-1
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar la matriz inversa del producto
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & -c & 1
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+-b & 0 & 1
+\end{array}\right]\left[\begin{array}{ccc}
+1 & 0 & 0\\
+-a & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 0 & 0\\
+a & 1 & 0\\
+b & c & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea el sistema de ecuaciones 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ dado por:
+\begin_inset Formula 
+\[
+\begin{cases}
+2x_{1}+4x_{2}+0x_{3}+2x_{4} & =6\\
+0x_{1}+3x_{2}+3x_{3}+x_{4} & =4\\
+2x_{1}+7x_{2}+9x_{3}+7x_{4} & =8\\
+0x_{1}+0x_{2}+6x_{3}+5x_{4} & =-4
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Factorizar 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $LU$
+\end_inset
+
+ y resolver el sistema anterior.
+\end_layout
+
+\begin_layout Enumerate
+Resolver el sistema 
+\begin_inset Formula $Ax=b'$
+\end_inset
+
+ con 
+\begin_inset Formula $b'=\left(6,2,10,2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Resolver el sistema 
+\begin_inset Formula $Ax=b''$
+\end_inset
+
+ con 
+\begin_inset Formula $b''=\left(5,0,2,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{31}\left(-1\right)A=\left[\begin{array}{cccc}
+2 & 4 & 0 & 2\\
+0 & 3 & 3 & 1\\
+0 & 3 & 9 & 5\\
+0 & 0 & 6 & 5
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $E_{32}\left(-1\right)E_{31}\left(-1\right)A=\left[\begin{array}{cccc}
+2 & 4 & 0 & 2\\
+0 & 3 & 3 & 1\\
+0 & 0 & 6 & 4\\
+0 & 0 & 6 & 5
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $E_{43}\left(-1\right)E_{32}\left(-1\right)E_{31}\left(-1\right)A=\left[\begin{array}{cccc}
+2 & 4 & 0 & 2\\
+0 & 3 & 3 & 1\\
+0 & 0 & 6 & 4\\
+0 & 0 & 0 & 1
+\end{array}\right]=U$
+\end_inset
+
+, 
+\begin_inset Formula $L=\left[\begin{array}{cccc}
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+1 & 1 & 1 & 0\\
+0 & 0 & 1 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Ax=L\underbrace{Ux}_{c}=b$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\begin{cases}
+Lc & =b\\
+Ux & =c
+\end{cases}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $c_{1}=6$
+\end_inset
+
+, 
+\begin_inset Formula $c_{2}=4$
+\end_inset
+
+, 
+\begin_inset Formula $c_{3}=8-4-6=-2$
+\end_inset
+
+, 
+\begin_inset Formula $c_{4}=-4+2=-2$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{4}=-2$
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}=\frac{1}{6}\left[-2-4\left(-2\right)\right]=1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=\frac{1}{3}\left(4+2-3\right)=1$
+\end_inset
+
+, 
+\begin_inset Formula $x_{1}=\frac{1}{2}\left(6+4-4\right)=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c_{1}=6$
+\end_inset
+
+, 
+\begin_inset Formula $c_{2}=2$
+\end_inset
+
+, 
+\begin_inset Formula $c_{3}=10-6-2=2$
+\end_inset
+
+, 
+\begin_inset Formula $c_{4}=2-2=0$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{4}=0$
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}=\frac{1}{6}\left(2-0\right)=\frac{1}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}=\frac{1}{3}\left(2-0-3\frac{1}{3}\right)=\frac{1}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{1}=\frac{1}{2}\left(6-0-\frac{4}{3}\right)=\frac{7}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Eliminacion Gaussiana.
+ Factorizacion LU.
+ Segunda parte.
+\end_layout
+
+\begin_layout Enumerate
+Encontrar los factores 
+\begin_inset Formula $L$
+\end_inset
+
+, 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $U$
+\end_inset
+
+ de la matriz
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+2 & -1 & 0\\
+-1 & 2 & -1\\
+0 & -1 & 2
+\end{array}\right]
+\]
+
+\end_inset
+
+Resolver el sistema 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+, donde 
+\begin_inset Formula $b=\left(6,0,-6\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $AA^{t}$
+\end_inset
+
+ y 
+\begin_inset Formula $A^{t}A$
+\end_inset
+
+ son siempre simetricas.
+ Mostrar mediante un ejemplo que pueden no ser iguales.
+ Mostrar que tambien 
+\begin_inset Formula $A+A^{t}$
+\end_inset
+
+ es simetrica si 
+\begin_inset Formula $A$
+\end_inset
+
+ es cuadrada.
+ ¿Que sucede con 
+\begin_inset Formula $A-A^{t}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Solucion
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $B=AA^{t}$
+\end_inset
+
+, luego 
+\begin_inset Formula $B_{ij}={\displaystyle \sum_{k=1}^{n}a_{ik}a_{kj}^{t}=\sum_{k=1}^{n}a_{kj}^{t}a_{ik}=\sum_{k=1}^{n}a_{jk}a_{ki}^{t}=b_{ji}}$
+\end_inset
+
+.
+ Analogamente para 
+\begin_inset Formula $C=A^{t}A$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & 1\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\text{\ensuremath{A^{t}A=\left[\begin{array}{cc}
+1 & 1\\
+1 & 2
+\end{array}\right]}}$
+\end_inset
+
+ y 
+\begin_inset Formula $AA^{t}=\left[\begin{array}{cc}
+2 & 1\\
+1 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $D=A+A^{t}$
+\end_inset
+
+, luego 
+\begin_inset Formula $d_{ij}=a_{ij}+a_{ij}^{t}=a_{ij}^{t}+a_{ij}=a_{ji}+a_{ji}^{t}=d_{ji}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que los pivotes de 
+\begin_inset Formula $A$
+\end_inset
+
+ son tambien los pivotes de 
+\begin_inset Formula $A^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A=LDU$
+\end_inset
+
+ luego 
+\begin_inset Formula $A^{t}=U^{t}D^{t}L^{t}=U^{t}DL^{t}$
+\end_inset
+
+.
+ Notar que 
+\begin_inset Formula $U^{t}$
+\end_inset
+
+ es triangular inferior y 
+\begin_inset Formula $L^{t}$
+\end_inset
+
+ es triangular superior.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Hallar la factorizacion 
+\begin_inset Formula $LDU$
+\end_inset
+
+ de la matriz
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+2 & 3 & 3\\
+0 & 5 & 7\\
+6 & 9 & 8
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Aprovechando lo hecho en el item anterior, resolver el sistema 
+\begin_inset Formula $A^{t}x=\left(2,5,5\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E_{31}\left(-3\right)A=\left[\begin{array}{ccc}
+2 & 3 & 3\\
+0 & 5 & 7\\
+0 & 0 & -1
+\end{array}\right]=U'$
+\end_inset
+
+, 
+\begin_inset Formula $D=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+0 & 5 & 0\\
+0 & 0 & -1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+1 & \frac{3}{2} & \frac{3}{2}\\
+0 & 1 & \frac{7}{5}\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+3 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Recordemos que la matriz 
+\begin_inset Formula $E_{ij}\left(a\right)$
+\end_inset
+
+ (con 
+\begin_inset Formula $i>j$
+\end_inset
+
+) esta definida por:
+\begin_inset Formula 
+\[
+E_{ij}\left(a\right)=\left(m_{kl}\right)\text{ donde }m_{kl}=\begin{cases}
+1 & k=l\\
+a & k=i\land l=j\\
+0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $\left[E_{ij}\left(a\right)\right]_{l}$
+\end_inset
+
+ (que es la columna 
+\begin_inset Formula $l$
+\end_inset
+
+ de 
+\begin_inset Formula $E_{ij}\left(a\right)$
+\end_inset
+
+) verifica:
+\begin_inset Formula 
+\[
+\left[E_{ij}\left(a\right)\right]_{l}=\begin{cases}
+e_{l} & l\neq j\\
+e_{j}+ae_{i} & l=j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dado 
+\begin_inset Formula $r\in\mathbb{N}$
+\end_inset
+
+, probar que 
+\begin_inset Formula $\left[E_{ij}\left(a\right)\right]^{r}=E_{ij}\left(ra\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar la matriz 
+\begin_inset Formula $\left[E_{ij}\left(a\right)\right]^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar la matriz 
+\begin_inset Formula $E_{ij}\left(a\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $E_{i'j'}\left(b\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $i'>j'$
+\end_inset
+
+, 
+\begin_inset Formula $i<i'$
+\end_inset
+
+ y 
+\begin_inset Formula $j<j'$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Resolver mediante intercambio de filas cuando sea necesario:
+\begin_inset Formula 
+\[
+\begin{cases}
+u+4v+2w & =-2\\
+-2u-8v+3w & =32\\
+v+w & =1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+1 & 4 & 2\\
+-2 & -8 & 3\\
+0 & 1 & 1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $E_{21}\left(2\right)A=\left[\begin{array}{ccc}
+1 & 4 & 2\\
+0 & 0 & 7\\
+0 & 1 & 1
+\end{array}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $P_{23}E_{21}\left(2\right)A=\left[\begin{array}{ccc}
+1 & 4 & 2\\
+0 & 1 & 1\\
+0 & 0 & 7
+\end{array}\right]=E_{31}\left(2\right)P_{23}A=U$
+\end_inset
+
+, 
+\begin_inset Formula $L=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+-2 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\tilde{A}=P_{23}A$
+\end_inset
+
+, luego 
+\begin_inset Formula $\tilde{A}=LU$
+\end_inset
+
+.
+ COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar la factorizacion 
+\begin_inset Formula $PA=LDU$
+\end_inset
+
+ de las matrices
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+0 & 1\\
+2 & 3
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+1 & 2 & 3\\
+2 & 4 & 2\\
+1 & 1 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuales son los valores de 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ que conducen a intercambio de filas y cuales son los que hacen la matriz
+ singular?
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccc}
+1 & 2 & 2\\
+a & 8 & 3\\
+0 & b & 3
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{21}\left(-a\right)A=\left[\begin{array}{ccc}
+1 & 2 & 2\\
+0 & 8-2a & 3-2a\\
+0 & b & 3
+\end{array}\right]$
+\end_inset
+
+, luego si 
+\begin_inset Formula $8-2a=0\iff4=a$
+\end_inset
+
+ necesitaremos intercambio de filas (siempre que 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Demostrar los siguientes enunciados:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $E_{ij}\left(-a\right)$
+\end_inset
+
+ sustrae de una ecuacion un multiplo de otra, entonces 
+\begin_inset Formula $\left[E_{ij}\left(-a\right)\right]^{-1}$
+\end_inset
+
+ lo suma nuevamente.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ intercambia dos filas, entonces 
+\begin_inset Formula $P_{ij}^{-1}$
+\end_inset
+
+ las vuelve a intercambiar, es decir 
+\begin_inset Formula $P_{ij}^{-1}=P_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $D$
+\end_inset
+
+ es una matriz diagonal, conentradas en la diagonal 
+\begin_inset Formula $d_{1},\ldots,d_{n}$
+\end_inset
+
+ no nulas, entonces 
+\begin_inset Formula $D^{-1}$
+\end_inset
+
+ es tambien diagonal con entradas en la diagonal 
+\begin_inset Formula $\frac{1}{d_{1}},\ldots,\frac{1}{d_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una matriz es de permutacion si es cuadrada, con entradas 
+\begin_inset Formula $0$
+\end_inset
+
+ o 
+\begin_inset Formula $1$
+\end_inset
+
+ y con un solo 
+\begin_inset Formula $1$
+\end_inset
+
+ en cada fila y en cada columna.
+ Probar que si 
+\begin_inset Formula $P$
+\end_inset
+
+ es una matriz de permutacion, entonces 
+\begin_inset Formula $P^{t}=P^{-1}$
+\end_inset
+
+.
+ Comparar con el ejercicio 22b.
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar, cuando sea posible, las matrices inversas de las matrices de
+ coeficientes del ejercicio 1, utilizando el metodo de Gauss-Jordan.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc|ccc}
+0 & 1 & 4 & 1 & 0 & 0\\
+1 & 3 & -5 & 0 & 1 & 0\\
+3 & 7 & 7 & 0 & 0 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|ccc}
+1 & 3 & -5 & 0 & 1 & 0\\
+0 & 1 & 4 & 1 & 0 & 0\\
+3 & 7 & 7 & 0 & 0 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|ccc}
+1 & 3 & -5 & 0 & 1 & 0\\
+0 & 1 & 4 & 1 & 0 & 0\\
+0 & -2 & 22 & 0 & -3 & 1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccc|ccc}
+1 & 3 & -5 & 0 & 1 & 0\\
+0 & 1 & 4 & 1 & 0 & 0\\
+0 & 0 & 30 & 2 & -3 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|ccc}
+1 & 3 & -5 & 0 & 1 & 0\\
+0 & 1 & 4 & 1 & 0 & 0\\
+0 & 0 & 1 & \frac{1}{15} & -\frac{1}{10} & \frac{1}{30}
+\end{array}\right]\rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccc|ccc}
+1 & 3 & -5 & 0 & 1 & 0\\
+0 & 1 & 0 & \frac{11}{15} & \frac{2}{5} & -\frac{2}{15}\\
+0 & 0 & 1 & \frac{1}{15} & -\frac{1}{10} & \frac{1}{30}
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|ccc}
+1 & 3 & 0 & \frac{1}{3} & \frac{1}{2} & \frac{1}{6}\\
+0 & 1 & 0 & \frac{11}{15} & \frac{2}{5} & -\frac{2}{15}\\
+0 & 0 & 1 & \frac{1}{15} & -\frac{1}{10} & \frac{1}{30}
+\end{array}\right]\rightarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left[\begin{array}{ccc|ccc}
+1 & 0 & 0 & -\frac{28}{15} & -\frac{7}{10} & \frac{17}{30}\\
+0 & 1 & 0 & \frac{11}{15} & \frac{2}{5} & -\frac{2}{15}\\
+0 & 0 & 1 & \frac{1}{15} & -\frac{1}{10} & \frac{1}{30}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

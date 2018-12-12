@@ -1,0 +1,10418 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Algebra Lineal
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Sistemas de ecuaciones
+\end_layout
+
+\begin_layout Chapter
+Matrices
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Matriz
+\end_layout
+
+\begin_layout Standard
+Una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ de tamaño 
+\begin_inset Formula $f\times c$
+\end_inset
+
+ con coeficientes en 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ es una funcion 
+\begin_inset Formula $A:\left\llbracket 1,f\right\rrbracket \times\left\llbracket 1,c\right\rrbracket \to\mathbb{K}$
+\end_inset
+
+.
+ Notaremos al conjunto de todas las matrices de 
+\begin_inset Formula $f$
+\end_inset
+
+ filas y 
+\begin_inset Formula $c$
+\end_inset
+
+ columnas con coeficientes en 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ como 
+\begin_inset Formula $\mathbb{K}^{f\times c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es comun representar a una matriz 
+\begin_inset Formula $A:\left\llbracket 1,f\right\rrbracket \times\left\llbracket 1,c\right\rrbracket \to\mathbb{K}$
+\end_inset
+
+ como un arreglo rectangular
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{cccc}
+a_{11} & a_{12} & \ldots & a_{1c}\\
+a_{21} & a_{22} & \ldots & a_{2c}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{f1} & a_{f2} & \ldots & a_{fc}
+\end{array}\right]
+\]
+
+\end_inset
+
+en donde 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ son los llamados coeficientes de la matriz 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diremos que dos matrices 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son iguales si tienen la misma cantidad de filas, la misma cantidad de
+ columnas y 
+\begin_inset Formula $a_{ij}=b_{ij}$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $i,j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz cuadrada
+\end_layout
+
+\begin_layout Standard
+Una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ se dice cuadrada si tiene la misma cantidad de filas y columnas, es decir,
+ si 
+\begin_inset Formula $A\in\mathbb{K}^{n\times n}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matrices triangulares
+\end_layout
+
+\begin_layout Standard
+Una matriz cuadrada 
+\begin_inset Formula $A$
+\end_inset
+
+ se dice:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+triangular superior
+\emph default
+ si 
+\begin_inset Formula $a_{ij}=0$
+\end_inset
+
+ para 
+\begin_inset Formula $i>j$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+triangular inferior
+\emph default
+ si 
+\begin_inset Formula $a_{ij}=0$
+\end_inset
+
+ para 
+\begin_inset Formula $i<j$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+diagonal
+\emph default
+ si es triangular superior y triangular inferior.
+\end_layout
+
+\begin_layout Subsection
+Matrices particulares
+\end_layout
+
+\begin_layout Standard
+La matriz nula 
+\begin_inset Formula $0_{f\times c}$
+\end_inset
+
+ es la matriz de tamaño 
+\begin_inset Formula $f\times c$
+\end_inset
+
+ que tiene todas sus entradas iguales a cero.
+\end_layout
+
+\begin_layout Standard
+La matriz identidad de orden 
+\begin_inset Formula $n$
+\end_inset
+
+ es la matriz 
+\begin_inset Formula $I=I_{n}\in\mathbb{K}^{n\times n}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $I_{ij}=\delta_{ij}$
+\end_inset
+
+ en donde 
+\begin_inset Formula $\delta_{ij}$
+\end_inset
+
+ esta definida por:
+\begin_inset Formula 
+\[
+\delta_{ij}=\begin{cases}
+1 & i=j\\
+0 & i\neq j
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Transposicion
+\end_layout
+
+\begin_layout Standard
+Dada 
+\begin_inset Formula $A\in\mathbb{K}^{m\times n}$
+\end_inset
+
+ se define la matriz transpuesta de 
+\begin_inset Formula $A$
+\end_inset
+
+ como la matriz 
+\begin_inset Formula $A^{t}\in\mathbb{K}^{n\times m}$
+\end_inset
+
+ dada por 
+\begin_inset Formula $\left(A^{t}\right)_{ij}=a_{ji}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diremos que una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ es simetrica si 
+\begin_inset Formula $A=A^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz inversa
+\end_layout
+
+\begin_layout Standard
+Diremos que una matriz 
+\begin_inset Formula $A\in\mathbb{R}^{n\times n}$
+\end_inset
+
+ es inversible si existe otra matriz 
+\begin_inset Formula $B\in\mathbb{R}^{n\times n}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $AB=BA=I$
+\end_inset
+
+.
+ De existir esta matriz es unica y se nota 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Operaciones
+\end_layout
+
+\begin_layout Subsection
+Suma
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A,B\in\mathbb{K}^{f\times c}$
+\end_inset
+
+, la suma de 
+\begin_inset Formula $A$
+\end_inset
+
+ con 
+\begin_inset Formula $B$
+\end_inset
+
+ es la matriz 
+\begin_inset Formula $C=\left(A+B\right)\in\mathbb{K}^{f\times c}$
+\end_inset
+
+ dada por los coeficientes 
+\begin_inset Formula $c_{ij}=a_{ij}+b_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Notese que solo pueden sumarse matrices del mismo tamaño.
+\end_layout
+
+\begin_layout Subsection
+Multiplicacion por un escalar
+\end_layout
+
+\begin_layout Standard
+La multiplicacion de la matriz 
+\begin_inset Formula $A\in\mathbb{K}^{f\times c}$
+\end_inset
+
+ por el escalar 
+\begin_inset Formula $\alpha\in\mathbb{K}$
+\end_inset
+
+ se define como la matriz 
+\begin_inset Formula $C=\left(\alpha A\right)\in\mathbb{K}^{f\times c}$
+\end_inset
+
+ dada por 
+\begin_inset Formula $c_{ij}=\alpha a_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Producto
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A\in\mathbb{K}^{m\times n}$
+\end_inset
+
+ y 
+\begin_inset Formula $B\in\mathbb{K}^{n\times p}$
+\end_inset
+
+ definimos el producto de 
+\begin_inset Formula $A$
+\end_inset
+
+ con 
+\begin_inset Formula $B$
+\end_inset
+
+ como la matriz 
+\begin_inset Formula $C=\left(AB\right)\in\mathbb{K}^{m\times p}$
+\end_inset
+
+ dada por
+\begin_inset Formula 
+\[
+c_{ij}=\sum_{k=1}^{n}a_{ik}b_{kj}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Notese que el producto de matrices no es conmutativo, aunque si asociativo.
+\end_layout
+
+\begin_layout Subsection
+Traza
+\end_layout
+
+\begin_layout Standard
+Dada 
+\begin_inset Formula $A\in\mathbb{K}^{n\times n}$
+\end_inset
+
+ se define la traza de 
+\begin_inset Formula $A$
+\end_inset
+
+ como 
+\begin_inset Formula $tr\left(A\right)={\displaystyle \sum_{i=1}^{n}a_{ii}}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Propiedades de la suma
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A,B,C\in\mathbb{K}^{n\times m}$
+\end_inset
+
+, entonces:
+\end_layout
+
+\begin_layout Itemize
+Asociatividad:
+\begin_inset Formula $\left(A+B\right)+C=A+\left(B+C\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Conmutatividad:
+\begin_inset Formula $\left(A+B\right)=\left(B+A\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Existencia del neutro: 
+\begin_inset Formula $0_{n\times m}+A=A+0_{n\times m}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Existencia del opuesto: 
+\begin_inset Formula $A+\left(-1A\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades del producto por un escalar
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A,B\in\mathbb{K}^{n\times m}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha,\beta\in\mathbb{K}$
+\end_inset
+
+, entonces:
+\end_layout
+
+\begin_layout Itemize
+Asociatividad:
+\begin_inset Formula $\left(\alpha\beta\right)A=\alpha\left(\beta A\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Distributividad respecto de la suma de matrices: 
+\begin_inset Formula $\alpha\left(A+B\right)=\alpha A+\beta B$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Distributividad respecto de la suma de escalares: 
+\begin_inset Formula $\left(\alpha+\beta\right)A=\alpha A+\beta A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Escalar neutro para el producto: 
+\begin_inset Formula $1A=A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha0_{n\times m}=0_{n\times m}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0A=0_{n\times m}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha A=0_{n\times m}\Rightarrow\alpha=0$
+\end_inset
+
+ o 
+\begin_inset Formula $A=0_{n\times m}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-\alpha\right)A=\alpha\left(-A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades del producto de matrices
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A,B,C$
+\end_inset
+
+ matrices con coeficientes en 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, entonces:
+\end_layout
+
+\begin_layout Itemize
+Asociatividad: 
+\begin_inset Formula $A\left(BC\right)=\left(AB\right)C$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Distributividad respecto de la suma de matrices por la derecha: 
+\begin_inset Formula $\left(A+B\right)C=AC+BC$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Distributividad respecto de la suma de matrices por la izquierda: 
+\begin_inset Formula $A\left(B+C\right)=AB+AC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de las matrices triangulares
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son matrices triangulares inferiores, entonces 
+\begin_inset Formula $AB$
+\end_inset
+
+ tambien lo es y ademas si 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible resultara que 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ es triangular inferior.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son matrices triangulares superiores, entonces 
+\begin_inset Formula $AB$
+\end_inset
+
+ tambien lo es y ademas si 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible resultara que 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ es triangular superior.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son matrices diagonales, entonces 
+\begin_inset Formula $AB$
+\end_inset
+
+ tambien lo es y ademas si 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible resultara que 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ es diagonal.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de la transposicion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A,B\in\mathbb{K}^{f\times c},\alpha\in\mathbb{K}$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A^{t}\right)^{t}=A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\alpha A\right)^{t}=\alpha A^{t}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A+B\right)^{t}=A^{t}+B^{t}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $C\in\mathbb{K}^{m\times n}$
+\end_inset
+
+ y 
+\begin_inset Formula $D\in\mathbb{K}^{n\times p}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left(CD\right)^{t}=D^{t}C^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de la traza
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $tr\left(A+B\right)=tr\left(A\right)+tr\left(B\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $tr\left(\alpha A\right)=\alpha tr\left(A\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $tr\left(AB\right)=tr\left(BA\right)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $tr\left(AA^{t}\right)={\displaystyle \sum_{i=1}^{n}\sum_{j=1}^{n}}a_{ij}^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Factorizacion LDU
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Matriz de eliminacion
+\end_layout
+
+\begin_layout Standard
+Definimos la matriz 
+\begin_inset Formula $E_{ij}\left(-l\right)$
+\end_inset
+
+ dada por:
+\begin_inset Formula 
+\[
+e_{pq}=\begin{cases}
+-l & p=i\land q=j\\
+1 & p=q\\
+0
+\end{cases}
+\]
+
+\end_inset
+
+Si premultiplicamos a una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ por esta matriz de eliminacion, lo que obtenemos es una nueva matriz donde
+ a la fila 
+\begin_inset Formula $i$
+\end_inset
+
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ se le ha restado 
+\begin_inset Formula $l$
+\end_inset
+
+ veces la fila 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz de permutacion
+\end_layout
+
+\begin_layout Standard
+Una matriz es de permutacion si es cuadrada con exactamente una componente
+ 
+\begin_inset Formula $1$
+\end_inset
+
+ por fila y columna, y el resto de sus coeficientes son 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz no singular
+\end_layout
+
+\begin_layout Standard
+Una matriz cuadrada 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Quotes cld
+\end_inset
+
+no singular
+\begin_inset Quotes crd
+\end_inset
+
+ si puede transformarse en 
+\begin_inset Formula $U$
+\end_inset
+
+ sin pivotes nulos, con posibles intercambios de filas.
+ En este caso el sistema 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ tiene solucion unica.
+\end_layout
+
+\begin_layout Standard
+Una matriz es singular cuando aun con intercambio de filas hay pivotes nulos.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Unicidad de la factorizacion LDU
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ puede factorizarse sin intercambio de filas y todos los pivotes son distintos
+ de 
+\begin_inset Formula $0$
+\end_inset
+
+, entonces la factorizacion 
+\begin_inset Formula $LDU$
+\end_inset
+
+ es unica.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $A=L_{1}D_{1}U_{1}=L_{2}D_{2}U_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L_{1}^{-1}$
+\end_inset
+
+ es triangular inferior con 
+\begin_inset Formula $1$
+\end_inset
+
+ en la diagonal.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $U_{2}^{-1}$
+\end_inset
+
+ es triangular superior con 
+\begin_inset Formula $1$
+\end_inset
+
+ en la diagonal.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{1}^{-1}$
+\end_inset
+
+ es diagonal cuyos elementos diagonales son los reciprocos de los elementos
+ diagonales de 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+L_{1}D_{1}U_{1} & = & L_{2}D_{2}U_{2}\\
+D_{1}U_{1} & = & L_{1}^{-1}L_{2}D_{2}U_{2}\\
+U_{1} & = & D_{1}^{-1}L_{1}^{-1}L_{2}D_{2}U_{2}\\
+\underbrace{U_{1}U_{2}^{-1}}_{\text{triangular superior con 1 en la diagonal}} & = & \underbrace{D_{1}^{-1}L_{1}^{-1}L_{2}D_{2}}_{\text{triangular inferior}}
+\end{array}
+\]
+
+\end_inset
+
+Luego ambas matrices son 
+\begin_inset Formula $I$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $U_{1}U_{2}^{-1}=I\Rightarrow U_{1}=U_{2}$
+\end_inset
+
+ y analogamente 
+\begin_inset Formula $L_{1}=L_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $D_{1}=D_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Unicidad de la factorizacion LU
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+La factorizacion 
+\begin_inset Formula $LU$
+\end_inset
+
+ de una matriz cuadrada invertible es unica.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $A=L_{1}U_{1}=L_{2}U_{2}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{A=L_{1}D_{1}\widetilde{U_{1}}=L_{2}D_{2}\widetilde{U_{2}}}}$
+\end_inset
+
+ y por el teorema anterior 
+\begin_inset Formula $\text{\ensuremath{L_{1}=L_{2}\land D_{1}=D_{2}\land\widetilde{U_{1}}=\widetilde{U_{2}}\Rightarrow U_{1}=D_{1}\widetilde{U_{1}}=D_{2}\widetilde{U_{2}}=U_{2}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Factorizacion de matrices simetricas
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ es simetrica y puede factorizarse sin intercambio de filas en la forma
+ 
+\begin_inset Formula $LDU$
+\end_inset
+
+, entonces 
+\begin_inset Formula $U=L^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=LDU=A^{t}=U^{t}D^{t}L^{t}=U^{t}DL^{t}$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $L=U^{t}$
+\end_inset
+
+ y 
+\begin_inset Formula $U=L^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Lema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean para 
+\begin_inset Formula $i,j\in\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+ las funciones:
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+\Pi_{ij}: & \left\{ 1,\ldots,n\right\}  & \rightarrow & \left\{ 1,\ldots,n\right\} \\
+ & r & \rightarrow & \Pi_{ij}\left(r\right) & =\begin{cases}
+r & i\neq j\neq r\\
+i & r=j\\
+j & r=i
+\end{cases}
+\end{array}
+\]
+
+\end_inset
+
+entonces 
+\begin_inset Formula $P_{ij}E_{kl}\left(m\right)=E_{\Pi_{ij}\left(k\right)\Pi_{ij}\left(l\right)}\left(m\right)P_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $k,l\neq i,j\Rightarrow P_{ij}E_{kl}=E_{kl}P_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $k=i\land l=j$
+\end_inset
+
+, como 
+\begin_inset Formula $\Pi_{ij}\left(k\right)=j$
+\end_inset
+
+ y 
+\begin_inset Formula $\Pi_{ij}\left(l\right)=i\Rightarrow P_{ij}E_{ij}=E_{ji}P_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $k=i\land l\neq j$
+\end_inset
+
+, como 
+\begin_inset Formula $\Pi_{ij}\left(k\right)=j$
+\end_inset
+
+ y 
+\begin_inset Formula $\Pi_{ij}\left(l\right)=l\Rightarrow P_{ij}E_{il}=E_{jl}P_{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Clasificacion de sistemas
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A\in\mathbb{R}^{n\times n}$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ se puede transformar en 
+\begin_inset Formula $U$
+\end_inset
+
+ triangular superior sin 
+\begin_inset Formula $0$
+\end_inset
+
+ en la diagonal entonces 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ tiene solucion unica 
+\begin_inset Formula $\forall b\in\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si no, entonces para cada 
+\begin_inset Formula $b\in\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ tiene infinitas soluciones o ninguna.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Ax=b$
+\end_inset
+
+, 
+\begin_inset Formula $\underbrace{EPA}_{U}x=\underbrace{EPb}_{\tilde{b}}\Rightarrow Ux=\tilde{b}$
+\end_inset
+
+, luego como 
+\begin_inset Formula $U$
+\end_inset
+
+ es triangular superior sin 
+\begin_inset Formula $0$
+\end_inset
+
+ en la diagonal, existe solucion unica con substitucion hacia atras.
+\end_layout
+
+\begin_layout Enumerate
+Si no se puede transformar en 
+\begin_inset Formula $U$
+\end_inset
+
+, la matriz 
+\begin_inset Formula $EPA$
+\end_inset
+
+ tendra esta forma:
+\begin_inset Formula 
+\[
+j\left[\begin{array}{ccc}
+\overbrace{\begin{array}{|cccc|}
+\hline ? & \cdots & \cdots & ?\\
+0 & \ddots &  & \vdots\\
+\vdots & \ddots & \ddots & \vdots\\
+0 & \cdots & 0 & ?
+\\\hline \end{array}}^{U'} & \overbrace{\begin{array}{|c|}
+\hline ?\\
+\vdots\\
+\vdots\\
+?
+\\\hline \end{array}}^{c} & \overbrace{\begin{array}{|cccc|}
+\hline ? & \cdots & \cdots & ?\\
+\vdots &  &  & \vdots\\
+\vdots &  &  & \vdots\\
+? & \cdots & \cdots & ?
+\\\hline \end{array}}^{M_{1}}\\
+\begin{array}{cccc}
+0 & \cdots & \cdots & 0\end{array} & 0 & \begin{array}{|cccc|}
+\hline ? & \cdots & \cdots & ?\\\hline \end{array}\\
+\underbrace{\begin{array}{|cccc|}
+\hline 0 & \cdots & \cdots & 0\\
+\vdots &  &  & \vdots\\
+\vdots &  &  & \vdots\\
+0 & \cdots & \cdots & 0
+\\\hline \end{array}}_{0} & \begin{array}{c}
+0\\
+\vdots\\
+\vdots\\
+0
+\end{array} & \underbrace{\begin{array}{|cccc|}
+\hline ? & \cdots & \cdots & ?\\
+\vdots &  &  & \vdots\\
+\vdots &  &  & \vdots\\
+? & \cdots & \cdots & ?
+\\\hline \end{array}}_{M_{3}}
+\end{array}\}m_{2}\right]
+\]
+
+\end_inset
+
+sea 
+\begin_inset Formula $x=\left(\underbrace{x_{1},\ldots}_{w},x_{j},\underbrace{\ldots x_{n}}_{z}\right)$
+\end_inset
+
+, luego 
+\begin_inset Formula $EPAx$
+\end_inset
+
+ tendra esta forma:
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+U'w+cx_{j}+M_{1}z\\
+m_{2}z\\
+M_{3}z
+\end{array}\right]
+\]
+
+\end_inset
+
+y sea 
+\begin_inset Formula $\tilde{b}=EPb=\left(\underbrace{\ldots}_{d_{1}},b_{j},\underbrace{\ldots}_{d_{2}}\right)$
+\end_inset
+
+, luego el sistema 
+\begin_inset Formula $EPAx=\tilde{b}$
+\end_inset
+
+ es equivalente al sistema 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{cases}
+U'w+cx_{j}+M_{1}z & =d_{1}\\
+M_{2} & =b_{j}\\
+M_{3} & =d_{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $M_{3}z=d_{2}$
+\end_inset
+
+ no tiene solucion entonces no hay solucion del sistema.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $M_{3}z=d_{2}$
+\end_inset
+
+ tiene solucion, sea 
+\begin_inset Formula $\tilde{z}$
+\end_inset
+
+ tal solucion, luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $M_{2}\tilde{z}\neq b_{j}\Rightarrow$
+\end_inset
+
+ no hay solucion.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+No singularidad e invertibilidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A$
+\end_inset
+
+ es no singular si y solo si 
+\begin_inset Formula $A$
+\end_inset
+
+ es inversible.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Como 
+\begin_inset Formula $A$
+\end_inset
+
+ es no singular, entonces 
+\begin_inset Formula $\forall b\in\mathbb{R}^{n}$
+\end_inset
+
+ el sistema 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ tiene solucion unica.
+ En particular para los versores 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sean 
+\begin_inset Formula $x_{j}/Ax_{j}=e_{j}$
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+x_{1} & \ldots & x_{n}\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{AB=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+Ax_{1} & \ldots & Ax_{n}\\
+\mid & \mid & \mid
+\end{array}\right]=I}}$
+\end_inset
+
+.
+ Tenemos:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Ax_{j}=e_{j}\Rightarrow\underbrace{EA}_{U}x_{j}=Ee_{j}\Rightarrow x_{j}=U^{-1}Ee_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+U^{-1}Ee_{1} & \ldots & U^{-1}Ee_{n}\\
+\mid & \mid & \mid
+\end{array}\right]=U^{-1}EI=U^{-1}E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $BA=\left(U^{-1}E\right)A=U^{-1}\left(EA\right)=U^{-1}U=I$
+\end_inset
+
+, o en forma mas sencilla:
+\begin_inset Formula 
+\[
+AB=I\iff EPAB=EP\iff UBA=EPA\iff UBA=U\iff BA=I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible, luego existe 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $Ax=b$
+\end_inset
+
+ tiene solucion 
+\begin_inset Formula $x=A^{-1}b$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $Ax_{1}=b$
+\end_inset
+
+ y 
+\begin_inset Formula $Ax_{2}=b$
+\end_inset
+
+, luego 
+\begin_inset Formula $x_{1}=A^{-1}b$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{2}=A^{-1}b$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Part
+Espacios vectoriales
+\end_layout
+
+\begin_layout Chapter
+Introduccion
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Espacio vectorial
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un conjunto no vacio de objetos llamados elementos, 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ un cuerpo de escalares y las operaciones:
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+\begin{aligned}+:V\times V\to & V\\
+\left(u,v\right)\to & u+v
+\end{aligned}
+ & \begin{aligned}\cdot:\mathbb{K}\times V\to & V\\
+\left(\alpha,u\right)\to & \alpha u
+\end{aligned}
+\end{array}
+\]
+
+\end_inset
+
+ decimos que 
+\begin_inset Formula $\left(V,\mathbb{K},+,\cdot\right)$
+\end_inset
+
+ es un espacio vectorial si satisface los siguientes axiomas:
+\end_layout
+
+\begin_layout Itemize
+Axiomas para la suma
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Cerrado bajo la suma: 
+\begin_inset Formula $\left(\forall u,v\in V\right)\exists!w\in V/w=u+v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Asociatividad de la suma: 
+\begin_inset Formula $u+\left(v+w\right)=\left(u+v\right)+w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Conmutatividad de la suma: 
+\begin_inset Formula $u+v=v+u$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+Elemento neutro de la suma: 
+\begin_inset Formula $\exists!0\in V/v+0=v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Elemento opuesto de la suma: 
+\begin_inset Formula $\left(\forall v\in V\right)\exists!-v\in V/v+\left(-v\right)=0$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Axiomas para el producto por escalares
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Cerrado bajo el producto: 
+\begin_inset Formula $\left(\forall v\in V,\alpha\in\mathbb{K}\right)\exists!w\in V/w=\alpha v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Asociatividad del producto: 
+\begin_inset Formula $\left(\alpha\beta\right)v=\alpha\left(\beta v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Elemento neutro del producto: 
+\begin_inset Formula $\left(\forall v\in V\right)1_{\mathbb{K}}v=v$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Propiedades distributivas
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Del producto respecto de la suma de vectores: 
+\begin_inset Formula $\alpha\left(u+v\right)=\alpha u+\alpha v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Del producto respecto de la suma de escalares: 
+\begin_inset Formula $\text{\ensuremath{\left(\alpha+\beta\right)v=\alpha v+\beta v}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Subespacio vectorial
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $U$
+\end_inset
+
+ es subespacio vectorial de 
+\begin_inset Formula $V$
+\end_inset
+
+ si es un subconjunto de 
+\begin_inset Formula $V$
+\end_inset
+
+ y ademas es un espacio vectorial, es decir:
+\end_layout
+
+\begin_layout Enumerate
+No es vacio: 
+\begin_inset Formula $0\in U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Cerrado bajo la suma: 
+\begin_inset Formula $\left(\forall u,v\in U\right)\exists!w\in U/w=u+v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Cerrado bajo el producto: 
+\begin_inset Formula $\left(\forall v\in U,\alpha\in\mathbb{K}\right)\exists!w\in U/w=\alpha v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+El resto de los axioman se heredan por ser 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Suma de subespacios
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre el cuerpo 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $U_{1},U_{2}$
+\end_inset
+
+ subespacios de 
+\begin_inset Formula $V$
+\end_inset
+
+ definimos el subespacio suma como: 
+\begin_inset Formula $U=U_{1}+U_{2}=\left\{ u_{1}+u_{2}/u_{1}\in U_{1},u_{2}\in U_{2}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si ademas, cada 
+\begin_inset Formula $u\in U$
+\end_inset
+
+ se escribe de manera unica como la suma de un vector de 
+\begin_inset Formula $U_{1}$
+\end_inset
+
+ y otro de 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+ y lo notamos 
+\begin_inset Formula $U=U_{1}\oplus U_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Combinacion lineal
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y dados los vectores 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}\in V$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ es una combinacion lineal de dichos vectores si existen escalares 
+\begin_inset Formula $\alpha_{1},\alpha_{2},\ldots,\alpha_{n}\in\mathbb{K}$
+\end_inset
+
+ tales que: 
+\begin_inset Formula $v=\alpha_{1}v_{1}+\alpha_{2}v_{2}+\cdots+\alpha_{n}v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Espacio generado
+\end_layout
+
+\begin_layout Standard
+Definimos al espacio generado por 
+\begin_inset Formula $S=\left\{ v_{1},v_{2},\ldots,v_{n}\right\} $
+\end_inset
+
+ como:
+\begin_inset Formula 
+\[
+\left\langle S\right\rangle =\left\{ \alpha_{1}v_{1}+\alpha_{2}v_{2}+\cdots+\alpha_{n}v_{n}/\alpha_{1},\alpha_{2},\ldots,\alpha_{n}\in\mathbb{K}\right\} 
+\]
+
+\end_inset
+
+es decir, el conjunto de todas las combinaciones lineales de los vectores
+ de 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ y 
+\begin_inset Formula $V=\left\langle S\right\rangle $
+\end_inset
+
+ diremos que 
+\begin_inset Formula $S$
+\end_inset
+
+ genera a 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\left|S\right|=n\in\mathbb{N}$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $V$
+\end_inset
+
+ es de dimension finita y en caso contrario de dimension infinita.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Propiedades de los espacios vectoriales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left(V,\mathbb{K},+,\cdot\right)$
+\end_inset
+
+ un espacio vectorial, sabemos existe 
+\begin_inset Formula $\text{\ensuremath{0\in V/0+x=x}}$
+\end_inset
+
+; y para cada 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ existe 
+\begin_inset Formula $\bar{v}/v+\bar{v}=0$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $0'\in V$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $0'+x=x$
+\end_inset
+
+, entonces 
+\begin_inset Formula $0'=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dado 
+\begin_inset Formula $v\in V$
+\end_inset
+
+, si 
+\begin_inset Formula $\bar{v}'$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $v+\bar{v}'=0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\bar{v}'=\bar{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $z+x=z+y$
+\end_inset
+
+ entonces 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha\cdot0=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\cdot v=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-\alpha\cdot v\right)=\alpha\cdot\bar{v}=\overline{\left(\alpha\cdot v\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\alpha\cdot v=0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ o 
+\begin_inset Formula $v=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Caracterizacion de suma directa de subespacios
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $U_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+ subespacios de 
+\begin_inset Formula $V$
+\end_inset
+
+, luego las siguientes proposiciones son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V=U_{1}\oplus U_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V=U_{1}+U_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $0=u_{1}+u_{2}\Rightarrow u_{1}=u_{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V=U_{1}+U_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $U_{1}\cap U_{2}=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1\iff2$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Supongamos 
+\begin_inset Formula $V=U_{1}\oplus U_{2}$
+\end_inset
+
+.
+ Luego por definicion resulta 
+\begin_inset Formula $\text{\ensuremath{V=U_{1}+U_{2}}}$
+\end_inset
+
+.
+ Ademas por la unicidad de la representacion del 
+\begin_inset Formula $0$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $\text{\ensuremath{0=u_{1}+u_{2}\Rightarrow u_{1}=u_{2}=0}}$
+\end_inset
+
+ pues 
+\begin_inset Formula $0=0+0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Puesto que 
+\begin_inset Formula $V=U_{1}+U_{2}$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $\text{\ensuremath{\forall v\in V\exists u_{1},u_{2}/v=u_{1}+u_{2}}}$
+\end_inset
+
+.
+ Solo nos queda ver la unicidad.
+ Supongamos que 
+\begin_inset Formula $\text{\ensuremath{v=w_{1}+w_{2}=u_{1}+u_{2}}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+0=v-v=\left(u_{1}+u_{2}\right)-\left(w_{1}+w_{2}\right)=\underbrace{\left(u_{1}-w_{1}\right)}_{\in U_{1}}-\underbrace{\left(u_{2}-w_{2}\right)}_{\in U_{2}}
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $0=u_{1}+u_{2}\Rightarrow u_{1}=u_{2}=0$
+\end_inset
+
+, sabemos que 
+\begin_inset Formula $\text{\ensuremath{u_{1}-w_{1}=0\Rightarrow u_{1}=w_{1}}}$
+\end_inset
+
+ y analogamente 
+\begin_inset Formula $u_{2}=w_{2}$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $\exists!u_{1},u_{2}/v=u_{1}+u_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $1\iff3$
+\end_inset
+
+: EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Lema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial y 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}\in V$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v_{j}\in\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+ para 
+\begin_inset Formula $j\in\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+ es un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+ es un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+ tal que 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}\in U$
+\end_inset
+
+ luego 
+\begin_inset Formula $\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle \subseteq U$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+En efecto 
+\begin_inset Formula $v_{j}=\left(0v_{1}+\ldots+1v_{j}+\ldots+0v_{n}\right)\in\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Nos alcanzara con ver que 
+\begin_inset Formula $\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle \neq\emptyset$
+\end_inset
+
+ y ademas es cerrado bajo la suma de vectores y producto por escalares:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0\in\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+ pues 
+\begin_inset Formula $0=0v_{1}+\ldots+0v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $u,w\in\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+ luego 
+\begin_inset Formula $u=\alpha_{1}v_{1}+\ldots+\alpha_{n}v_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $w=\beta_{1}v_{1}+\ldots+\beta_{n}v_{n}$
+\end_inset
+
+.
+ Sumando ambas igualdades obtenemos:
+\begin_inset Formula 
+\[
+u+w=\left(\alpha_{1}+\beta_{1}\right)v_{1}+\ldots+\left(\alpha_{n}+\beta_{n}\right)v_{n}
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $u+w\in\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ un escalar, luego 
+\begin_inset Formula $\text{\ensuremath{\alpha v=\alpha\left(c_{1}v_{1}+\ldots+c_{n}v_{n}\right)=\left(\alpha c_{1}\right)v_{1}+\ldots+\left(\alpha c_{n}\right)v_{n}}}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\alpha v\in\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $u\in\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+, luego 
+\begin_inset Formula $u=\alpha_{1}v_{1}+\ldots+\alpha_{n}v_{n}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $v_{1},\ldots,v_{n}\in U$
+\end_inset
+
+ y 
+\begin_inset Formula $U$
+\end_inset
+
+ es un espacio vectorial, los axiomas de clausura nos permiten asegurar
+ que 
+\begin_inset Formula $\alpha_{1}v_{1}+\ldots+\alpha_{n}v_{n}=u\in U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Este lema implica que 
+\begin_inset Formula $\left\langle \left\{ v_{1},v_{2},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+ es el menor subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+ que contiene a 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Union de espacios vectoriales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $W_{1},W_{2}$
+\end_inset
+
+ subespacios de 
+\begin_inset Formula $V$
+\end_inset
+
+, luego 
+\begin_inset Formula $W_{1}\cup W_{2}$
+\end_inset
+
+ es subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $W_{1}\subset W_{2}$
+\end_inset
+
+ o 
+\begin_inset Formula $W_{2}\subset W_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Supongamos lo contrario, es decir que 
+\begin_inset Formula $W_{1}\not\subset W_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}\not\subset W_{1}$
+\end_inset
+
+.
+ Esto quiere decir que 
+\begin_inset Formula $\exists u\in W_{1}/u\notin W_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\exists v\in W_{2}/u\notin W_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consideremos ahora el vector 
+\begin_inset Formula $u+v\in W_{1}\cup W_{2}$
+\end_inset
+
+, luego 
+\begin_inset Formula $u+v\in W_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $u+v\in W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $u+v\in W_{1}$
+\end_inset
+
+ entonces por existencia del opuesto y clausura bajo la suma 
+\begin_inset Formula $u+v-u=u\in W_{1}$
+\end_inset
+
+.
+ Contradiccion.
+\end_layout
+
+\begin_layout Itemize
+Analogamente para 
+\begin_inset Formula $u+v\in W_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Trivial pues si 
+\begin_inset Formula $W_{1}\subset W_{2}$
+\end_inset
+
+ o 
+\begin_inset Formula $W_{2}\subset W_{1}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $W_{1}\cup W_{2}=W_{1}$
+\end_inset
+
+ o bien 
+\begin_inset Formula $W_{1}\cup W_{2}=W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Independencia lineal, dimension y base
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Independencia lineal
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $S\subset V$
+\end_inset
+
+ se dice linealmente dependiente si existen 
+\begin_inset Formula $v_{1},\ldots,v_{n}\in S$
+\end_inset
+
+ distintos y escalares 
+\begin_inset Formula $\alpha_{1},\ldots,\alpha_{n}$
+\end_inset
+
+ no todos nulos tales que 
+\begin_inset Formula $\alpha_{1}v_{1}+\cdots+\alpha_{n}v_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Un conjunto que no es linealmente dependiente se dice linealmente independiente.
+ Mas precisamente un conjunto es linealmente independiente si 
+\begin_inset Formula $\alpha_{1}v_{1}+\alpha_{2}v_{2}+\cdots+\alpha_{n}v_{n}=0\Rightarrow\alpha_{1}=\ldots=\alpha_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si el conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ es finito, frecuentemente se dice que los vectores 
+\begin_inset Formula $S$
+\end_inset
+
+ son linealmente dependientes o independientes.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+Cualquier conjunto que contenga a 
+\begin_inset Formula $0$
+\end_inset
+
+ es linealmente dependiente.
+\end_layout
+
+\begin_layout Itemize
+Cualquier conjunto que contenga a otro linealmente dependiente es linealmente
+ dependiente.
+\end_layout
+
+\begin_layout Itemize
+Cualquier subconjunto de uno linealmente independiente, tambien es linealmente
+ independiente.
+\end_layout
+
+\begin_layout Itemize
+Un conjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente independiente si y solo si cada subconjunto de 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente independiente.
+\end_layout
+
+\begin_layout Subsection
+Dimension
+\end_layout
+
+\begin_layout Standard
+Todo espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ generado por una cantidad finita de vectores 
+\begin_inset Formula $n$
+\end_inset
+
+ se denomina espacio vectorial de dimension finita y lo notamos 
+\begin_inset Formula $dim\left(V\right)=n$
+\end_inset
+
+ siendo 
+\begin_inset Formula $n$
+\end_inset
+
+ el natural mas pequeño posible.
+ En caso contrario diremos que 
+\begin_inset Formula $V$
+\end_inset
+
+ es de dimension infinita.
+\end_layout
+
+\begin_layout Subsection
+Base
+\end_layout
+
+\begin_layout Standard
+En un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita, una base 
+\begin_inset Formula $B$
+\end_inset
+
+ es un conjunto de vectores linealmente independientes que genera el espacio.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Notese que 
+\begin_inset Formula $\left|B\right|=dim\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Unicidad de la combinacion lineal independiente
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Los vectores 
+\begin_inset Formula $v_{1},\ldots,v_{n}$
+\end_inset
+
+ son linealmente independientes si y solo si 
+\begin_inset Formula $\text{\ensuremath{\forall v\in\left\langle \left\{ v_{1},\ldots,v_{n}\right\} \right\rangle }}$
+\end_inset
+
+, 
+\begin_inset Formula $v$
+\end_inset
+
+ puede escribirse de manera unica como combinacion lineal de 
+\begin_inset Formula $v_{1},\ldots,v_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $\text{\ensuremath{v\in\left\langle \left\{ v_{1},\ldots,v_{n}\right\} \right\rangle /v=\alpha_{1}v_{1}+\ldots+\alpha_{n}v_{n}=\beta_{1}v_{1}+\ldots+\beta_{n}v_{n}}}$
+\end_inset
+
+ luego 
+\begin_inset Formula $0=v-v=\left(\alpha_{1}-\beta_{1}\right)v_{1}+\ldots+\left(\alpha_{n}-\beta_{n}\right)v_{n}$
+\end_inset
+
+.
+ Como dichos vectores son linealmente independientes resulta 
+\begin_inset Formula $\alpha_{i}-\beta_{i}=0\iff\alpha_{i}=\beta_{i}$
+\end_inset
+
+, por lo tanto ambas combinaciones son identicas.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Como la unica forma de escribir al 
+\begin_inset Formula $0$
+\end_inset
+
+ es 
+\begin_inset Formula $0=0v_{1}+\ldots+0v_{n}$
+\end_inset
+
+ entonces dichos vectores son linealmente independientes.
+\end_layout
+
+\begin_layout Subsection
+Lema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ es linealmente dependiente y 
+\begin_inset Formula $v_{1}\neq0$
+\end_inset
+
+ luego 
+\begin_inset Formula $\exists j\in\left\{ 2,\ldots,n\right\} $
+\end_inset
+
+ tal que se verifican:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v_{j}\in\left\langle \left\{ v_{1},\ldots,v_{j-1},v_{j+1},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si quitamos al vector 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ resulta: 
+\begin_inset Formula $\left\langle \left\{ v_{1},\ldots,v_{n}\right\} \right\rangle =\left\langle \left\{ v_{1},\ldots,v_{j-1},v_{j+1},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Como 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente dependiente existen escalares 
+\begin_inset Formula $c_{1},\ldots,c_{n}\in\mathbb{K}$
+\end_inset
+
+ no todos nulos tales que 
+\begin_inset Formula $c_{1}v_{1}+\ldots+c_{n}v_{n}=0$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $v_{1}\neq0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $c_{2},\ldots,c_{n}$
+\end_inset
+
+ no pueden ser todos cero.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea 
+\begin_inset Formula $j\in\left\{ 2,\ldots,n\right\} $
+\end_inset
+
+ el mayor indice tal que 
+\begin_inset Formula $c_{j}\neq0$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+v_{j}=\frac{c_{j}}{c_{j}}v_{j}=-\frac{c_{1}}{c_{j}}v_{1}-\frac{c_{2}}{c_{j}}v_{2}-\ldots-\frac{c_{j-1}}{c_{j}}v_{j-1}-\frac{c_{j+1}}{c_{j}}v_{j+1}-\ldots-\frac{c_{n}}{c_{j}}v_{n}
+\]
+
+\end_inset
+
+ quedando probado lo propuesto.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\supseteq}$
+\end_inset
+
+: Trivial.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\subseteq}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $v\in\left\langle \left\{ v_{1},\ldots,v_{n}\right\} \right\rangle $
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+v=a_{1}v_{1}+\ldots+a_{j}\left(-\frac{c_{1}}{c_{j}}v_{1}-\ldots-\frac{c_{j-1}}{c_{j}}v_{j-1}-\frac{c_{j+1}}{c_{j}}v_{j+1}-\ldots-\frac{c_{n}}{c_{j}}v_{n}\right)+\ldots+a_{n}v_{n}
+\]
+
+\end_inset
+
+ quedando probado lo propuesto.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Finitud de subconjuntos linealmente independientes
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial generado por un conjunto finito de vectores 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ entonces cualquier conjunto linealmente independiente de vectores de 
+\begin_inset Formula $V$
+\end_inset
+
+ es finito y no contiene mas de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S\subseteq V$
+\end_inset
+
+ un conjunto con mas de 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores: 
+\begin_inset Formula $\text{\ensuremath{S=\left\{ w_{1},\ldots,w_{m}\right\} } }$
+\end_inset
+
+.
+ Como cada 
+\begin_inset Formula $w_{j}\in V$
+\end_inset
+
+ entonces existen escalares 
+\begin_inset Formula $\text{\ensuremath{a_{ij}\in\mathbb{K}/w_{j}={\displaystyle \sum_{i=1}^{n}a_{ij}v_{i}}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A=\left(a_{ij}\right)_{n\times m}$
+\end_inset
+
+, como el sistema 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+ es compatible indeterminado (pues tiene menos ecuaciones que incognitas)
+ existe una solucion no trivial 
+\begin_inset Formula $x=\left(x_{1},\ldots x_{m}\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula ${\displaystyle \sum_{j=1}^{m}a_{ij}x_{j}=0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consideremos una combinacion lineal en 
+\begin_inset Formula $S$
+\end_inset
+
+ con dichos escalares:
+\begin_inset Formula 
+\[
+\sum_{j=1}^{m}x_{j}w_{j}=\sum_{j=1}^{m}x_{j}\left({\displaystyle \sum_{i=1}^{n}a_{ij}v_{i}}\right)=\sum_{j=1}^{m}\left({\displaystyle \sum_{i=1}^{n}x_{j}a_{ij}v_{i}}\right)=\sum_{i=1}^{n}\left(\sum_{j=1}^{m}x_{j}a_{ij}\right)v_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir que para esos escalares 
+\begin_inset Formula $x_{1},\ldots,x_{m}$
+\end_inset
+
+ no todos nulos resulta que 
+\begin_inset Formula $x_{1}w_{1}+\ldots+x_{m}w_{m}=0$
+\end_inset
+
+ con escalares no todos nulos, luego 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente dependiente.
+\end_layout
+
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita 
+\begin_inset Formula $n$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+Cualquier subconjunto de 
+\begin_inset Formula $V$
+\end_inset
+
+ que contenga mas de 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores es linealmente dependiente.
+\end_layout
+
+\begin_layout Enumerate
+No existe un subconjunto de 
+\begin_inset Formula $V$
+\end_inset
+
+ que contenga menos de 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores que genere 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ un subconjunto de 
+\begin_inset Formula $V$
+\end_inset
+
+ con mas de 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores y supongamos que es linealmente independiente, luego por el teorema
+ anterior resulta que 
+\begin_inset Formula $S$
+\end_inset
+
+ no tiene mas de 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores.
+ Contradiccion.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos existe un conjunto con menos de 
+\begin_inset Formula $n$
+\end_inset
+
+ vectores que genera 
+\begin_inset Formula $V$
+\end_inset
+
+, digamos 
+\begin_inset Formula $m<n$
+\end_inset
+
+ vectores.
+ Como 
+\begin_inset Formula $n$
+\end_inset
+
+ es la dimension de 
+\begin_inset Formula $V$
+\end_inset
+
+ entonces es el minimo numero de vectores necesarios para generar 
+\begin_inset Formula $V$
+\end_inset
+
+, sin embargo tambien lo podemos generar con 
+\begin_inset Formula $m<n$
+\end_inset
+
+ vectores.
+ Contradiccion.
+\end_layout
+
+\begin_layout Subsection
+Lema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ un subconjunto linealmente independiente de un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ y supongamos que 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ pero 
+\begin_inset Formula $v\notin\left\langle S\right\rangle $
+\end_inset
+
+ entonces 
+\begin_inset Formula $S\cup\left\{ v\right\} $
+\end_inset
+
+ es linealmente independiente.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $w_{1},\ldots,w_{n}\in S$
+\end_inset
+
+ distintos.
+ Consideremos 
+\begin_inset Formula $\text{\ensuremath{c_{1}w_{1}+\ldots+c_{n}w_{n}+bv=0}}$
+\end_inset
+
+ con 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+.
+ Podemos escribir 
+\begin_inset Formula $v=-\frac{cn}{b}w_{1}-\ldots-\frac{c_{n}}{b}w_{n}$
+\end_inset
+
+ luego 
+\begin_inset Formula $v\in\left\langle S\right\rangle $
+\end_inset
+
+ lo que contradice nuestra hipotesis por lo que 
+\begin_inset Formula $b=0$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula $c_{1}=\ldots=c_{n}=0$
+\end_inset
+
+ por ser 
+\begin_inset Formula $S$
+\end_inset
+
+ linealmente independiente.
+\end_layout
+
+\begin_layout Subsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $W$
+\end_inset
+
+ es un subespacio de un espacio vectorial de dimension finita 
+\begin_inset Formula $V$
+\end_inset
+
+, entonces cada subconjunto linealmente independiente de 
+\begin_inset Formula $W$
+\end_inset
+
+ es finito y es parte de una base finita de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ un subconjunto linealmente independiente de 
+\begin_inset Formula $W$
+\end_inset
+
+, luego 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ es subconjunto linealmente independiente de 
+\begin_inset Formula $V$
+\end_inset
+
+ por ser 
+\begin_inset Formula $W\subseteq V$
+\end_inset
+
+ y por el teorema anterior (como 
+\begin_inset Formula $V$
+\end_inset
+
+ es de dimension finita) resulta 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ un conjunto finito.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ genera a 
+\begin_inset Formula $W$
+\end_inset
+
+ ya esta probado el teorema.
+ Si no entonces existe 
+\begin_inset Formula $\text{\ensuremath{b_{1}\in W/b_{1}\notin\left\langle S_{0}\right\rangle }}$
+\end_inset
+
+ luego 
+\begin_inset Formula $S_{1}=\left\{ b_{1}\right\} \cup S_{0}$
+\end_inset
+
+ resulta linealmente independiente por el lema anterior.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ genera a 
+\begin_inset Formula $W$
+\end_inset
+
+ ya esta probado el teorema.
+ Si no entonces existe 
+\begin_inset Formula $\text{\ensuremath{b_{2}\in W/b_{2}\notin\left\langle S_{1}\right\rangle }}$
+\end_inset
+
+ luego 
+\begin_inset Formula $S_{2}=\left\{ b_{2}\right\} \cup S_{1}$
+\end_inset
+
+ resulta linealmente independiente por el lema anterior.
+\end_layout
+
+\begin_layout Standard
+Continuando de esta manera entonces en a lo sumo 
+\begin_inset Formula $dim\left(V\right)-1$
+\end_inset
+
+ pasos llegamos a obtener un conjunto 
+\begin_inset Formula $S_{k}=S_{0}\cup\left\{ b_{1},\ldots,b_{k}\right\} $
+\end_inset
+
+ que es base de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Relacion entre la dimension de un espacio y un subespacio
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $W$
+\end_inset
+
+ es un subespacio propio de un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita entonces 
+\begin_inset Formula $W$
+\end_inset
+
+ es de dimension finita y 
+\begin_inset Formula $dim\left(W\right)<dim\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $v\in W/v\neq0$
+\end_inset
+
+.
+ Por el teorema anterior existe una base de 
+\begin_inset Formula $W$
+\end_inset
+
+ que contiene a 
+\begin_inset Formula $v$
+\end_inset
+
+ y no contiene mas de 
+\begin_inset Formula $dim\left(V\right)$
+\end_inset
+
+ elementos por lo que resulta 
+\begin_inset Formula $W$
+\end_inset
+
+ de dimension finita y 
+\begin_inset Formula $dim\left(W\right)\leq dim\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $W$
+\end_inset
+
+ es un subespacio propio de 
+\begin_inset Formula $V$
+\end_inset
+
+, existe 
+\begin_inset Formula $b\in V/b\notin W$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $B_{W}$
+\end_inset
+
+ una base de 
+\begin_inset Formula $W$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+dim\left(W\right)=\left|B_{W}\right|<\left|\left\{ b\right\} \cup B_{W}\right|\leq dim\left(V\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+En un espacio vectorial de dimension finita 
+\begin_inset Formula $V$
+\end_inset
+
+ cada conjunto no vacio de vectores linealmente independientes es parte
+ de una base de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Inversibilidad de una matriz
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ una matriz 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ sobre un cuerpo 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y supongamos que sus vectores filas forman un conjunto linealmente independient
+e de 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $A$
+\end_inset
+
+ es inversible.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+- & v_{1} & -\\
+- & \vdots & -\\
+- & v_{n} & -
+\end{array}\right]$
+\end_inset
+
+ siendo 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ vectores fila de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Llamemos 
+\begin_inset Formula $W$
+\end_inset
+
+ al subespacio generado por 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ donde 
+\begin_inset Formula $dim\left(W\right)=n$
+\end_inset
+
+ resultando 
+\begin_inset Formula $W=\mathbb{K}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por otro lado 
+\begin_inset Formula $e_{i}={\displaystyle \sum_{j=1}^{n}c_{ij}v_{j}}$
+\end_inset
+
+ para algunos escalares 
+\begin_inset Formula $c_{ij}$
+\end_inset
+
+ con 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+, luego 
+\begin_inset Formula $I=CA$
+\end_inset
+
+ y analogamente 
+\begin_inset Formula $I=AC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Dimension de la suma de subespacios
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+ son subespacio de dimension finita de un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ entonces 
+\begin_inset Formula $W_{1}+W_{2}$
+\end_inset
+
+ es de dimension finita y ademas resulta: 
+\begin_inset Formula 
+\[
+dim\left(W_{1}\right)+dim\left(W_{2}\right)=dim\left(W_{1}\cap W_{2}\right)+dim\left(W_{1}+W_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Por hipotesis podemos decir que 
+\begin_inset Formula $W_{1}\cap W_{2}$
+\end_inset
+
+ es un subespacio de dimension finita y por el corolario anterior existe
+ una base de 
+\begin_inset Formula $W_{1}\cap W_{2}$
+\end_inset
+
+, digamos 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{k}\right\} $
+\end_inset
+
+ tal que es parte de una base de 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+ y una base de 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+.
+ Es decir:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{k},v_{1},\ldots,v_{m}\right\} $
+\end_inset
+
+ es base de 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{k},w_{1},\ldots,w_{n}\right\} $
+\end_inset
+
+ es base de 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Seguro que 
+\begin_inset Formula $W_{1}+W_{2}$
+\end_inset
+
+ esta generado por 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{k},v_{1},\ldots,v_{m},w_{1},\ldots,w_{n}\right\} $
+\end_inset
+
+.
+ Veamos que este conjunto es linealmente independiente:
+\begin_inset Formula 
+\[
+\overbrace{\sum_{i=1}^{k}x_{i}u_{i}+\sum_{j=1}^{m}y_{j}v_{j}+\sum_{l=1}^{n}z_{l}w_{l}=0}^{\left(*\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underbrace{-\sum_{l=1}^{n}z_{l}w_{l}}_{h\in W_{2}}=\underbrace{\sum_{i=1}^{k}x_{i}u_{i}+\sum_{j=1}^{m}y_{j}v_{j}}_{h\in W_{1}}
+\]
+
+\end_inset
+
+luego resulta que 
+\begin_inset Formula $h\in W_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $h\in W_{1}$
+\end_inset
+
+, es decir 
+\begin_inset Formula $h\in W_{1}\cap W_{2}=\left\{ u_{1},\ldots,u_{k}\right\} $
+\end_inset
+
+ por lo que existen escalares 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ tales que:
+\begin_inset Formula 
+\[
+h=-\sum_{l=1}^{n}z_{l}w_{l}=\sum_{i=1}^{k}c_{i}u_{i}\Rightarrow0=\sum_{i=1}^{k}c_{i}u_{i}+\sum_{l=1}^{n}z_{l}w_{l}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{k},w_{1},\ldots,w_{n}\right\} $
+\end_inset
+
+ es linealmente independiente (por ser base de 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+) y entonces 
+\begin_inset Formula $z_{l}=0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $l\in\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Volviendo a 
+\begin_inset Formula $\left(*\right)$
+\end_inset
+
+: 
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{k}}x_{i}u_{i}+{\displaystyle \sum_{j=1}^{m}}y_{j}v_{j}=0$
+\end_inset
+
+ donde 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{k},v_{1},\ldots,v_{m}\right\} $
+\end_inset
+
+ es linealmente independiente, luego 
+\begin_inset Formula $x_{i}=0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $i\in\left\{ 1,\ldots,k\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $y_{j}=0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $j\in\left\{ 1,\ldots,m\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por lo tanto 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{k},v_{1},\ldots,v_{m},w_{1},\ldots,w_{n}\right\} $
+\end_inset
+
+ es linealmente independiente y mas aun, es una base de 
+\begin_inset Formula $W_{1}+W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tenemos:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dim\left(W_{1}\right)+dim\left(W_{2}\right)=\left(k+m\right)+\left(k+n\right)=k+\left(m+k+n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dim\left(W_{1}+W_{2}\right)=k+m+n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dim\left(W_{1}\cap W_{2}\right)=k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+luego, 
+\begin_inset Formula 
+\[
+dim\left(W_{1}\right)+dim\left(W_{2}\right)=dim\left(W_{1}\cap W_{2}\right)+dim\left(W_{1}+W_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Coordendas y cambios de base
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Base ordenada
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita, una base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+ es una sucesion finita de vectores que genera el espacio 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Por abuso de notacion diremos que 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ es una base ordenada.
+\end_layout
+
+\begin_layout Subsection
+Coordenadas
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ una base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+ entonces, dado 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ resulta que existe una unica n-upla 
+\begin_inset Formula $\left(x_{1},\ldots,x_{n}\right)$
+\end_inset
+
+ de escalares tal que 
+\begin_inset Formula $v={\displaystyle \sum_{i=1}^{n}x_{i}v_{i}}$
+\end_inset
+
+.
+ Llamaremos a 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ la cordenada i-esima de 
+\begin_inset Formula $v$
+\end_inset
+
+ respecto de la base ordenada 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es decir que para cada base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+ existe una funcion biyectiva:
+\begin_inset Formula 
+\[
+\begin{aligned}F:V\to & \mathbb{K}^{n}\\
+v\to & \left(x_{1},\ldots,x_{n}\right)
+\end{aligned}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $F$
+\end_inset
+
+ verifica 
+\begin_inset Formula $F\left(u+v\right)=F\left(u\right)+F\left(v\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $F\left(\alpha u\right)=\alpha F\left(u\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para establecer la dependencia de las coordenadas respecto de una base ordenada
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ notaremos 
+\begin_inset Formula $\left[v\right]_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Matriz de cambio de base
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension 
+\begin_inset Formula $n$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sean 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ bases ordenadas de 
+\begin_inset Formula $V$
+\end_inset
+
+ entonces existe una unica matriz 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ inversible 
+\begin_inset Formula $A\in\mathcal{M\left[\mathbb{K}\right]}$
+\end_inset
+
+ tal que: 
+\begin_inset Formula $\left[v\right]_{B}=A\left[v\right]_{B'}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left[v\right]_{B'}=A^{-1}\left[v\right]_{B}$
+\end_inset
+
+ para todo 
+\begin_inset Formula $v\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B'=\left\{ v_{1}',\ldots,v_{n}'\right\} $
+\end_inset
+
+ bases ordenadas de 
+\begin_inset Formula $V$
+\end_inset
+
+ y sea 
+\begin_inset Formula $u\in V$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left[u\right]_{B'}=\left(x_{1}',\ldots,x_{n}'\right)$
+\end_inset
+
+.
+ Sabemos que para cada 
+\begin_inset Formula $v_{j}'$
+\end_inset
+
+ existe unicos escalares 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $v_{j}'={\displaystyle \sum_{i=1}^{n}a_{ij}v_{i}}$
+\end_inset
+
+ para 
+\begin_inset Formula $1\leq j\leq n$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $u$
+\end_inset
+
+ tenemos: 
+\begin_inset Formula 
+\[
+u=x_{1}'v_{1}'+\ldots+x_{n}v_{n}'={\displaystyle \sum_{j=1}^{n}x_{j}'v_{j}'=\sum_{j=1}^{n}x_{j}'\left(\sum_{i=1}^{n}a_{ij}v_{i}\right)=\sum_{j=1}^{n}\sum_{i=1}^{n}}\left(x_{j}'a_{ij}\right)v_{i}=\sum_{i=1}^{n}\left(\sum_{j=1}^{n}x_{j}'a_{ij}\right)v_{i}
+\]
+
+\end_inset
+
+Como las coordenadas 
+\begin_inset Formula $x_{1},\ldots,x_{n}$
+\end_inset
+
+ de 
+\begin_inset Formula $u$
+\end_inset
+
+ respecto de 
+\begin_inset Formula $B$
+\end_inset
+
+ son unicas, se deduce que 
+\begin_inset Formula $\underbrace{x_{i}={\displaystyle \sum_{j=1}^{n}}a_{ij}x_{j}'}_{\left(*\right)}$
+\end_inset
+
+ para 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ la matriz 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ cuyas entradas entrada 
+\begin_inset Formula $ij$
+\end_inset
+
+ son 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ y sean 
+\begin_inset Formula $x=\left[\begin{array}{c}
+x_{1}\\
+\vdots\\
+x_{n}
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $x'=\left[\begin{array}{c}
+x_{1}'\\
+\vdots\\
+x_{n}'
+\end{array}\right]$
+\end_inset
+
+ podemos escribir 
+\begin_inset Formula $\left(*\right)$
+\end_inset
+
+ como 
+\begin_inset Formula $\left[u\right]_{B}=x=Ax'=A\left[u\right]_{B'}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ son linealmente independientes, 
+\begin_inset Formula $x=0\iff x'=0$
+\end_inset
+
+ entonces considerando 
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+ resulta que los vectores columna de 
+\begin_inset Formula $A$
+\end_inset
+
+ son linealmente independientes luego 
+\begin_inset Formula $A$
+\end_inset
+
+ resulta inversible y 
+\begin_inset Formula $x'=A^{-1}x$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ una matriz inversible 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension 
+\begin_inset Formula $n$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ una base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+ entonces existe una unica base ordenada 
+\begin_inset Formula $B'$
+\end_inset
+
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[v\right]_{B}=A^{-1}\left[v\right]_{B'}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[v\right]_{B'}=A\left[v\right]_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+, si 
+\begin_inset Formula $B'=\left\{ v_{1}',\ldots,v_{n}'\right\} $
+\end_inset
+
+ es una base que verifica 
+\begin_inset Formula $\left(2\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $v_{j}'={\displaystyle \sum_{i=1}^{n}a_{ij}v_{i}}$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $\left\{ v_{1}',\ldots,v_{n}'\right\} $
+\end_inset
+
+ asi definidos constituyen una base ordenada.
+ Sea 
+\begin_inset Formula $Q=A^{-1}$
+\end_inset
+
+, luego
+\begin_inset Formula 
+\[
+\sum_{j=1}^{n}q_{jk}v_{j}'=\sum_{j=1}^{n}q_{jk}\sum_{i=1}^{n}a_{ij}v_{i}=\sum_{i=1}^{n}\left(\sum_{j=1}^{n}a_{ij}q_{jk}\right)v_{i}=v_{k}
+\]
+
+\end_inset
+
+para 
+\begin_inset Formula $1\leq k\leq n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vemos que para cada 
+\begin_inset Formula $k$
+\end_inset
+
+ pudimos expresar al vector 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ como combinacion lineal de los vectores 
+\begin_inset Formula $\left\{ v_{1}',\ldots,v_{n}'\right\} $
+\end_inset
+
+, es decir que el espacio generado por 
+\begin_inset Formula $B'$
+\end_inset
+
+ contiene a 
+\begin_inset Formula $B$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $B'$
+\end_inset
+
+ genera todo el espacio 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Ademas como 
+\begin_inset Formula $B'$
+\end_inset
+
+ es linealmente independiente, luego 
+\begin_inset Formula $B'$
+\end_inset
+
+ es base de 
+\begin_inset Formula $V$
+\end_inset
+
+ y por su definicion y el teorema anterior resultan 
+\begin_inset Formula $\left(1\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+Transformaciones lineales
+\end_layout
+
+\begin_layout Chapter
+Introduccion
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Transformacion lineal
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ espacios vectoriales sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, una funcion 
+\begin_inset Formula $T:V\to W$
+\end_inset
+
+ es llamada lineal si verifica:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(u+v\right)=T\left(u\right)+T\left(v\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall u,v\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(\alpha u\right)=\alpha T\left(u\right)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall u\in V\forall\alpha\in\mathbb{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Notaremos al conjunto de todas las transformaciones lineales de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $W$
+\end_inset
+
+ como 
+\begin_inset Formula $\mathcal{L}\left(V,W\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $T\left(0-v\right)=T\left(0\right)-T\left(v\right)$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\text{\ensuremath{T\left(u\right)=T\left(v\right)\iff T\left(u-v\right)=0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Espacio nulo
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ definimos el espacio nulo de 
+\begin_inset Formula $T$
+\end_inset
+
+ como: 
+\begin_inset Formula $\mathcal{N}\left(T\right)=\left\{ v\in V/T\left(v\right)=0\right\} $
+\end_inset
+
+.
+ Notese que 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+ es un espacio vectorial.
+\end_layout
+
+\begin_layout Standard
+Diremos que una transformacion lineal es no singular si 
+\begin_inset Formula $T\left(v\right)=0\Rightarrow v=0$
+\end_inset
+
+ es decir 
+\begin_inset Formula $\mathcal{N}\left(T\right)=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Rango
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $V$
+\end_inset
+
+ es un espacio vectorial de dimension finita y 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ se dice que la dimension de 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+ es el rango de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Homomorfismos
+\end_layout
+
+\begin_layout Standard
+Las transformaciones lineales de entre espacios vectoriales son llamadas
+ homomorfismos de espacios vectoriales.
+ Un homomorfismo 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ se llama:
+\end_layout
+
+\begin_layout Description
+Monomorfismo si 
+\begin_inset Formula $T$
+\end_inset
+
+ es inyectiva.
+\end_layout
+
+\begin_layout Description
+Epimorfismo si 
+\begin_inset Formula $T$
+\end_inset
+
+ es sobreyectiva.
+\end_layout
+
+\begin_layout Description
+Isomorfismo si 
+\begin_inset Formula $T$
+\end_inset
+
+ es biyectiva.
+\end_layout
+
+\begin_layout Description
+Endomorfismo si 
+\begin_inset Formula $V=W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Automorfimos si es un isomorfimo endomorfo.
+\end_layout
+
+\begin_layout Subsection
+Espacios isomorfos
+\end_layout
+
+\begin_layout Standard
+Si existe un isomorfismo de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $W$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ son isomorfismos.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+Todo espacio vectorial es trivialmente isomorfo a si mismo.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $V$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $W$
+\end_inset
+
+ luego 
+\begin_inset Formula $W$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $V$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $W$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ a 
+\begin_inset Formula $Z$
+\end_inset
+
+ entonces 
+\begin_inset Formula $V$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De lo anterior concluimos que la relacion 
+\begin_inset Quotes cld
+\end_inset
+
+ser isomorfo a
+\begin_inset Quotes crd
+\end_inset
+
+ es una relacion de equivalencia en el conjunto de espacios vectoriales.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Determinacion de una TL por la actuacion en la base
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita y 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ una base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+ y sean 
+\begin_inset Formula $W$
+\end_inset
+
+ un espacio vectorial sobre el mismo cuerpo 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $w_{1},\ldots,w_{n}\in W$
+\end_inset
+
+ entonces existe una unica 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)/T\left(v_{i}\right)=w_{i}$
+\end_inset
+
+ con 
+\begin_inset Formula $i\in\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Definamos 
+\begin_inset Formula $T$
+\end_inset
+
+ sobre 
+\begin_inset Formula $V$
+\end_inset
+
+: sea 
+\begin_inset Formula $v\in V$
+\end_inset
+
+, sabemos que existe un unico vector 
+\begin_inset Formula $\left(x_{1},\ldots,x_{n}\right)\in\mathbb{K}^{n}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $v=x_{1}v_{1}+\ldots+x_{n}v_{n}$
+\end_inset
+
+.
+ Sea:
+\begin_inset Formula 
+\[
+T\left(v\right)=x_{1}T\left(v_{1}\right)+\ldots+x_{n}T\left(v_{n}\right)=T\left(\sum_{i=1}^{n}x_{i}v_{i}\right)=\sum_{i=1}^{n}x_{i}T\left(v_{i}\right)=\sum_{i=1}^{n}x_{i}w_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ esta bien definida pues 
+\begin_inset Formula $T\left(v_{i}\right)\in W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ es lineal pues:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T\left(u+v\right)=T\left({\displaystyle \sum_{i=1}^{n}x_{i}v_{i}+\sum_{i=1}^{n}y_{i}v_{i}}\right)=T\left[{\displaystyle \sum_{i=1}^{n}\left(x_{i}+y_{i}\right)v_{i}}\right]={\displaystyle \sum_{i=1}^{n}\left(x_{i}+y_{i}\right)T\left(v_{i}\right)}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $={\displaystyle \sum_{i=1}^{n}\left(x_{i}+y_{i}\right)w_{i}=\sum_{i=1}^{n}x_{i}w_{i}+\sum_{i=1}^{n}y_{i}w_{i}=T\left(v\right)+T\left(w\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $T\left(\alpha v\right)=T\left({\displaystyle \sum_{i=1}^{n}\alpha x_{i}v_{i}}\right)={\displaystyle \sum_{i=1}^{n}}\alpha x_{i}T\left(v_{i}\right)=\alpha{\displaystyle \sum_{i=1}^{n}}x_{i}w_{i}=\alpha T\left(v\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $T$
+\end_inset
+
+ es unica: Supongamos 
+\begin_inset Formula $S:V\to W$
+\end_inset
+
+ es una transformacion lineal tal que 
+\begin_inset Formula $S\left(v_{i}\right)=w_{i}$
+\end_inset
+
+ para 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset
+
+.
+ Luego para 
+\begin_inset Formula $v\in V$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+S\left(v\right)=S\left(\sum_{i=1}^{n}x_{i}v_{i}\right)=\sum_{i=1}^{n}x_{i}S\left(v_{i}\right)=\sum_{i=1}^{n}x_{i}w_{i}=\sum_{i=1}^{n}x_{i}T\left(v_{i}\right)=T\left(\sum_{i=1}^{n}x_{i}v_{i}\right)=T\left(v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Inyectividad de una transformacion lineal
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una transformacion lineal, luego 
+\begin_inset Formula $T$
+\end_inset
+
+ es inyectiva si y solo si 
+\begin_inset Formula $\text{\ensuremath{\mathcal{N}\left(T\right)=\left\{ 0\right\} }}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Supongamos existe un vector 
+\begin_inset Formula $\text{\ensuremath{v\in V/T\left(v\right)=0=T\left(0\right)\underbrace{\Rightarrow}_{\text{inyectiva}}v=0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $u,v\in V/T\left(u\right)=T\left(v\right)$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+T\left(u\right)-T\left(v\right)=0\Rightarrow T\left(u-v\right)=0\Rightarrow u-v\in\mathcal{N}\left(T\right)=\left\{ 0\right\} \Rightarrow u-v=0\Rightarrow u=v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema de la dimension
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V,W$
+\end_inset
+
+ espacios vectoriales sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ de dimension finita, entonces 
+\begin_inset Formula $rang\left(T\right)+dim\left[\mathcal{N}\left(T\right)\right]=dim\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+ una base de 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+, existen vectores 
+\begin_inset Formula $v_{k+1},\ldots,v_{m}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k},v_{k+1},\ldots,v_{m}\right\} $
+\end_inset
+
+ es base de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $\left\{ T\left(v_{k+1}\right),\ldots,T\left(v_{m}\right)\right\} $
+\end_inset
+
+ es una base de 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los vectores 
+\begin_inset Formula $T\left(v_{1}\right),\ldots,T\left(v_{m}\right)$
+\end_inset
+
+ generan 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+ pues sea 
+\begin_inset Formula $y\in img\left(T\right)$
+\end_inset
+
+ luego 
+\begin_inset Formula $\exists v\in V/T\left(v\right)=y$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ existen escalares 
+\begin_inset Formula $\text{\ensuremath{\alpha_{1},\ldots,\alpha_{m}\in\mathbb{K}/v={\displaystyle \sum_{j=1}^{m}\alpha_{j}v_{j}}}}$
+\end_inset
+
+, luego 
+\begin_inset Formula $y=T\left({\displaystyle \sum_{j=1}^{m}\alpha_{j}v_{j}}\right)={\displaystyle \sum_{j=1}^{m}\alpha_{j}T\left(v_{j}\right)}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $1<j<k$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $T\left(v_{j}\right)=0$
+\end_inset
+
+ (por ser vectores de 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+) por lo tanto 
+\begin_inset Formula $y={\displaystyle \sum_{j=k+1}^{m}\alpha_{j}T\left(v_{j}\right)}$
+\end_inset
+
+ concluyendo que 
+\begin_inset Formula $T\left(v_{k+1}\right),\ldots,T\left(v_{m}\right)$
+\end_inset
+
+ generan 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+.
+ Debemos ver ahora que son linealmente independientes.
+\end_layout
+
+\begin_layout Standard
+Supongamos existen escalares 
+\begin_inset Formula $c_{i}\in\mathbb{K}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $0={\displaystyle \sum_{i=k+1}^{m}c_{i}T\left(v_{i}\right)=T\left(\sum_{i=k+1}^{m}c_{i}v_{i}\right)}$
+\end_inset
+
+, es decir que 
+\begin_inset Formula $v={\displaystyle \sum_{i=k+1}^{m}c_{i}v_{i}\in\mathcal{N}\left(T\right)}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+ es base de 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+ tambien existen escalares 
+\begin_inset Formula $b_{i}\in\mathbb{K}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\text{\ensuremath{v={\displaystyle \sum_{i=1}^{k}b_{i}v_{i}}}}\in\mathcal{N}\left(T\right)$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $0=v-v={\displaystyle \sum_{i=1}^{k}b_{i}v_{i}}-{\displaystyle \sum_{i=k+1}^{m}c_{i}v_{i}}$
+\end_inset
+
+ y como 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k},v_{k+1},\ldots,v_{m}\right\} $
+\end_inset
+
+ son linealmente independientes por ser base de 
+\begin_inset Formula $V$
+\end_inset
+
+ resulta que 
+\begin_inset Formula $b_{i}=c_{i}=0$
+\end_inset
+
+.
+ Por lo tanto 
+\begin_inset Formula $\left\{ T\left(v_{k+1}\right),\ldots,T\left(v_{m}\right)\right\} $
+\end_inset
+
+ es base de 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $rang\left(T\right)=dim\left[img\left(T\right)\right]=m-k$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dim\left(V\right)=m=k+\left(m-k\right)=dim\left[\mathcal{N}\left(T\right)\right]+rang\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Relacion entre el rango por filas y columnas
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ es una matriz con entradas en 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $dim\left[\mathcal{N}\left(T\right)\right]$
+\end_inset
+
+ mas el rango de 
+\begin_inset Formula $A$
+\end_inset
+
+ por filas es igual al rango de 
+\begin_inset Formula $A$
+\end_inset
+
+ por columnas.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T:\mathbb{K}^{n}\to\mathbb{K}^{m}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $T\left(x\right)=Ax$
+\end_inset
+
+.
+ El espacio nulo de 
+\begin_inset Formula $T$
+\end_inset
+
+ es el espacio solucion de 
+\begin_inset Formula $Ax=0$
+\end_inset
+
+.
+ La imagen de 
+\begin_inset Formula $T$
+\end_inset
+
+ es el conjunto de vectores columna 
+\begin_inset Formula $y$
+\end_inset
+
+ tales que 
+\begin_inset Formula $Ax=y$
+\end_inset
+
+ tiene solucion.
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A_{1},\ldots,A_{m}$
+\end_inset
+
+ las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+, luego 
+\begin_inset Formula $T\left(x\right)=Ax=x_{1}A_{1}+\ldots+x_{n}A_{n}$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+ es el subespacio generado por las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Vale decir entonces que 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+ es 
+\begin_inset Formula $\mathcal{C}\left(A\right)$
+\end_inset
+
+ de donde sigue que 
+\begin_inset Formula $\text{\ensuremath{rang\left(T\right)=dim\left[\mathcal{C}\left(A\right)\right]}}$
+\end_inset
+
+.
+ COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Espacio de todas las transformaciones
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V,W$
+\end_inset
+
+ espacios vectoriales sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $T,S\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ entonces la funcion 
+\begin_inset Formula $\left(T+S\right)$
+\end_inset
+
+ definida por 
+\begin_inset Formula $\left(T+S\right)v=Tv+Sv$
+\end_inset
+
+ es una transformacion lineal.
+\end_layout
+
+\begin_layout Standard
+El conjunto de todas las transformaciones lineales de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $W$
+\end_inset
+
+ junto a la suma y el producto por escalares asi definido, es un espacio
+ vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+Clausura respecto de la suma:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(T+S\right)\left(cv+u\right)=T\left(cv+u\right)+S\left(cv+u\right)=\boxed{cT\left(v\right)+T\left(u\right)+cS\left(v\right)+S\left(u\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T\left(cv+u\right)+S\left(cv+u\right)=\boxed{cT\left(v\right)+T\left(u\right)+cS\left(v\right)+S\left(u\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Clausura respecto del producto por escalares:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{\left(\alpha T\right)\left(cv+u\right)=\left(\alpha T\right)\left(cv\right)+\left(\alpha T\right)\left(u\right)=c\left(\alpha T\right)\left(v\right)+\left(\alpha T\right)\left(u\right)=\boxed{c\alpha T\left(v\right)+\alpha T\left(u\right)}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha T\left(cv+u\right)=\alpha\left[T\left(cv\right)+T\left(u\right)\right]=\alpha T\left(cv\right)+\alpha T\left(u\right)=\boxed{\alpha cT\left(v\right)+\alpha T\left(u\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+EJERCICIO.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ es un subespacio del espacio vectorial formado por todas las funciones
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $W$
+\end_inset
+
+ (no solo las lineales) con la suma y producto por escalares usuales.
+\end_layout
+
+\begin_layout Subsection
+Dimension del espacio de todas las transformaciones
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial n-dimensional sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $W$
+\end_inset
+
+ otro espacio m-dimensional sobre el mismo cuerpo luego 
+\begin_inset Formula $\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ es de dimension finita y de dimension 
+\begin_inset Formula $mn$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B'=\left\{ w_{1},\ldots,w_{m}\right\} $
+\end_inset
+
+ bases ordenadas de 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Definimos para 
+\begin_inset Formula $1\leq p\leq m$
+\end_inset
+
+ y 
+\begin_inset Formula $1\leq q\leq n$
+\end_inset
+
+ las siguientes transformaciones lineales:
+\begin_inset Formula 
+\[
+E_{pq}\left(v_{j}\right)=\begin{cases}
+0 & j\neq q\\
+w_{p} & j=q
+\end{cases}
+\]
+
+\end_inset
+
+Veamos que las 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ transformaciones lineales definidas forman una base de 
+\begin_inset Formula $\mathcal{L}\left(V,W\right)$
+\end_inset
+
+.
+ COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Linealidad de la composicion
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V,W,Z$
+\end_inset
+
+ espacios vectoriales sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sean 
+\begin_inset Formula $\text{\ensuremath{T\in\mathcal{L}\left(V,W\right),S\in\mathcal{L}\left(W,Z\right)}}$
+\end_inset
+
+ luego la composicion 
+\begin_inset Formula $S\circ T$
+\end_inset
+
+ definida por 
+\begin_inset Formula $\text{\ensuremath{\left(S\circ T\right)v=\left(ST\right)v=STv=S\left(Tv\right)}}$
+\end_inset
+
+ es una transformacion lineal de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(ST\right)\left(\alpha v+u\right)=S\left[T\left(\alpha v+u\right)\right]=S\left[\alpha T\left(v\right)+T\left(u\right)\right]=\alpha S\left(Tv\right)+S\left(Tu\right)=\alpha\left(ST\right)\left(v\right)+\left(ST\right)u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Linealidad de la inversa
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V,W$
+\end_inset
+
+ espacios vectoriales sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+, si 
+\begin_inset Formula $T$
+\end_inset
+
+ es inversible entonces su inversa 
+\begin_inset Formula $T^{-1}\in\mathcal{L}\left(W,V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ es inversible se tiene que 
+\begin_inset Formula $TT^{-1}=I_{W}$
+\end_inset
+
+ y 
+\begin_inset Formula $T^{-1}T=I_{V}$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $w_{1},w_{2}\in W$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha\in\mathbb{K}$
+\end_inset
+
+ y sean 
+\begin_inset Formula $v_{i}=T^{-1}\left(w_{i}\right)$
+\end_inset
+
+ es decir que 
+\begin_inset Formula $v_{i}\in V$
+\end_inset
+
+ son los unicos vectores tales que 
+\begin_inset Formula $T\left(v_{i}\right)=w_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $T$
+\end_inset
+
+ es lineal, 
+\begin_inset Formula $T\left(\alpha v_{1}+v_{2}\right)=\alpha T\left(v_{1}\right)+T\left(v_{2}\right)=\alpha w_{1}+w_{2}$
+\end_inset
+
+.
+ El vector 
+\begin_inset Formula $\alpha v_{1}+v_{2}$
+\end_inset
+
+ es el unico vector de 
+\begin_inset Formula $V$
+\end_inset
+
+ que 
+\begin_inset Formula $T$
+\end_inset
+
+ asigna a 
+\begin_inset Formula $\alpha w_{1}+w_{2}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+T^{-1}\left(\alpha w_{1}+w_{2}\right)=\alpha v_{1}+v_{2}=\alpha T^{-1}\left(w_{1}\right)+T^{-1}\left(w_{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $S\in\mathcal{L}\left(W,Z\right)$
+\end_inset
+
+ son inversibles entonces:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(ST\right)^{-1}=T^{-1}S^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(ST\right)\left(T^{-1}S^{-1}\right)=I_{v}\land\left(T^{-1}S^{-1}\right)\left(ST\right)=I_{z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de los morfismos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ luego:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ es monomorfismo si y solo si lleva cada conjunto linealmente independiente
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ a un subconjunto linealmente independiente de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es epimorfismo entonces lleva cada conjunto generador de 
+\begin_inset Formula $V$
+\end_inset
+
+ a un conjunto generador de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T$
+\end_inset
+
+ es isomorfismo si y solo si lleva cada base de 
+\begin_inset Formula $V$
+\end_inset
+
+ a una base de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ no singular y sea 
+\begin_inset Formula $S$
+\end_inset
+
+ un subconjunto linealmente independiente de 
+\begin_inset Formula $V$
+\end_inset
+
+, queremos ver que si 
+\begin_inset Formula $v_{1},\ldots,v_{k}\in S$
+\end_inset
+
+ luego 
+\begin_inset Formula $T\left(v_{1}\right),\ldots,T\left(v_{k}\right)$
+\end_inset
+
+ es linealmente independiente en 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+0=\alpha_{1}T\left(v_{1}\right)+\ldots+\alpha_{k}T\left(v_{k}\right)=T\left(\alpha_{1}v_{1}+\ldots+\alpha_{k}v_{k}\right)\Rightarrow\alpha_{1}v_{1}+\ldots+\alpha_{k}v_{k}=0\Rightarrow\alpha_{i}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Supongamos que 
+\begin_inset Formula $T$
+\end_inset
+
+ lleva subconjunton 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+ linealmente independientes en 
+\begin_inset Formula $V$
+\end_inset
+
+ en subconjuntos linealmente independientes en 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $v\in V/v\neq0$
+\end_inset
+
+.
+ El conjunto 
+\begin_inset Formula $S=\left\{ v\right\} $
+\end_inset
+
+ es linealmente independiente luego 
+\begin_inset Formula $\left\{ T\left(v\right)\right\} $
+\end_inset
+
+ es linealmente independiente en 
+\begin_inset Formula $W$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $T\left(v\right)\neq0$
+\end_inset
+
+.
+ Esto muestra que 
+\begin_inset Formula $\mathcal{N}\left(T\right)=\left\{ 0\right\} $
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $T$
+\end_inset
+
+ es no singular.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{n}\right\} \subseteq V/\left\langle \left\{ v_{1},\ldots,v_{n}\right\} \right\rangle =V$
+\end_inset
+
+, nos preguntamos si 
+\begin_inset Formula $\left\langle \left\{ T\left(v_{1}\right),\ldots,T\left(v_{n}\right)\right\} \right\rangle =W$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\subseteq}$
+\end_inset
+
+: 
+\begin_inset Formula $x\in\left\langle \left\{ T\left(v_{1}\right),\ldots,T\left(v_{n}\right)\right\} \right\rangle \Rightarrow x={\displaystyle \sum_{i=1}^{n}\alpha_{i}\underbrace{T\left(v_{i}\right)}_{\in W}\Rightarrow x\in W}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\supseteq}$
+\end_inset
+
+: 
+\begin_inset Formula $\text{\ensuremath{x\in W\underbrace{\Rightarrow}_{Hip.}\exists v\in V/T\left(v\right)=x\Rightarrow\exists v={\displaystyle \sum_{i=1}^{n}\beta_{i}v_{i}}/T\left(v\right)=x\Rightarrow}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow T\left({\displaystyle \sum_{i=1}^{n}}\beta_{i}v_{i}\right)=x\Rightarrow{\displaystyle \sum_{i=1}^{n}}\beta_{i}T\left(v_{i}\right)=x\Rightarrow x\in\left\langle \left\{ T\left(v_{1}\right),\ldots,T\left(v_{n}\right)\right\} \right\rangle =W}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Trivial pues si 
+\begin_inset Formula $B_{V}$
+\end_inset
+
+ es base de 
+\begin_inset Formula $V$
+\end_inset
+
+, entonces es linealmente independiente y genera a 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Luego como 
+\begin_inset Formula $T$
+\end_inset
+
+ es monomorfismo y epimorfismo lleva 
+\begin_inset Formula $B_{W}$
+\end_inset
+
+ a un conjunto linealmente que genera 
+\begin_inset Formula $W$
+\end_inset
+
+, es decir una base de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Isomorfismo sobre el cuerpo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Todo espacio vectorial n-dimensional sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio n-dimensional y 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ una base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+, definimos la transformacion 
+\begin_inset Formula $T:V\to\mathbb{K}^{n}$
+\end_inset
+
+ dada por 
+\begin_inset Formula $T\left(v\right)=\left(x_{1},\ldots,x_{n}\right)$
+\end_inset
+
+ la n-upla de coordenadas de 
+\begin_inset Formula $v$
+\end_inset
+
+ relativas a la base 
+\begin_inset Formula $B$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $v=x_{1}v_{1}+\ldots+x_{n}v_{n}$
+\end_inset
+
+.
+ Esta aplicacion resulta lineal, inyectiva y sobreyectiva
+\end_layout
+
+\begin_layout Subsection
+Respresentacion de TL por matrices
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial n-dimensional sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $W$
+\end_inset
+
+ un espacio vectorial m-dimensional sobre el mismo cuerpo y sean 
+\begin_inset Formula $B$
+\end_inset
+
+ base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ base ordenada de 
+\begin_inset Formula $W$
+\end_inset
+
+ entonces para cada 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ existe una matriz 
+\begin_inset Formula $A\in\mathcal{M}_{m\times n}\left[\mathbb{K}\right]$
+\end_inset
+
+ tal que para cada vector 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\left[Tv\right]_{B'}=A\left[v\right]_{B}$
+\end_inset
+
+.
+ Mas aun, la funcion que a cada transformacion le asignua su correspondiente
+ matriz, es biyectiva.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $v=x_{1}v_{1}+\ldots+x_{n}v_{n}\in V$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+T\left(v\right)=T\left(\sum_{j=1}^{n}x_{j}v_{j}\right)=\sum_{j=1}^{n}x_{j}T\left(v_{j}\right)=\sum_{j=1}^{n}x_{j}\left(\sum_{i=1}^{m}A_{ij}w_{i}\right)=\sum_{i=1}^{m}\left(\sum_{j=1}^{n}A_{ij}x_{j}\right)w_{i}
+\]
+
+\end_inset
+
+Si 
+\begin_inset Formula $x$
+\end_inset
+
+ es el vector de coordenadas de 
+\begin_inset Formula $v$
+\end_inset
+
+ en la base 
+\begin_inset Formula $B$
+\end_inset
+
+, esta igualdad muestra que 
+\begin_inset Formula $Ax$
+\end_inset
+
+ es el vector de coordenadas del vector 
+\begin_inset Formula $T\left(v\right)$
+\end_inset
+
+ en la base 
+\begin_inset Formula $B'$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $\left[T\left(v\right)\right]_{B'}=A\left[v\right]_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ademas si 
+\begin_inset Formula $A$
+\end_inset
+
+ es cualquier matriz 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ entonces definiendo 
+\begin_inset Formula $T\left({\displaystyle \sum_{j=1}^{n}}x_{j}v_{j}\right):={\displaystyle \sum_{i=1}^{m}}\left({\displaystyle \sum_{j=1}^{n}}A_{ij}x_{j}\right)w_{i}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ cuya matriz asociada relativa a las bases ordenadas 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ es 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ A esta matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ asociada a 
+\begin_inset Formula $T$
+\end_inset
+
+ se llama matriz de transformacion relativa a las bases 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ la matriz cuyas columnas son 
+\begin_inset Formula $A_{1},\ldots,A_{n}$
+\end_inset
+
+ con 
+\begin_inset Formula $\text{\ensuremath{a_{ij}=\left[T\left(v_{j}\right)\right]_{B'}}}$
+\end_inset
+
+, si 
+\begin_inset Formula $S\in\mathcal{L}\left(V,W\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $C=\left[C_{1},\ldots,C_{n}\right]$
+\end_inset
+
+ es la matriz de 
+\begin_inset Formula $S$
+\end_inset
+
+ relativa a las bases ordenadas 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ entonces la matriz 
+\begin_inset Formula $\alpha A+C$
+\end_inset
+
+ es la matriz asociada a la transformacion lineal 
+\begin_inset Formula $\alpha T+S$
+\end_inset
+
+ relativa a 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ pues:
+\begin_inset Formula 
+\[
+\alpha a_{ij}+c_{ij}=\alpha\left[T\left(v_{j}\right)\right]_{B'}+\left[S\left(v_{j}\right)\right]_{B'}=\left[\alpha T\left(v_{j}\right)+S\left(v_{j}\right)\right]_{B'}=\left[\left(\alpha T+S\right)\left(v_{j}\right)\right]_{B'}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial n-dimensional sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ un espacio vectorial sobre el mismo cuerpo, para cada par de bases ordenadas
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ respectivamente la funcion
+\begin_inset Formula 
+\[
+\begin{aligned}F:\mathcal{L}\left(V,W\right)\to & \mathbb{K}^{m\times n}\\
+T\to & A
+\end{aligned}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $A$
+\end_inset
+
+ es la matriz de transformacion relativa a las bases 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+, es un isomorfismo entre dichos espacios vectoriales.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Resulta evidente de considerar el teorema anterior teniendo en cuenta la
+ observacion.
+\end_layout
+
+\begin_layout Paragraph
+Notacion
+\end_layout
+
+\begin_layout Standard
+Para señalar explicitamente la dependencia de esta matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ asociada a 
+\begin_inset Formula $T$
+\end_inset
+
+ de la base ordenada 
+\begin_inset Formula $B$
+\end_inset
+
+ suele escribirse como 
+\begin_inset Formula $A=\left[T\right]_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz asociada a la composicion
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V,W,Z$
+\end_inset
+
+ espacios vectoriales de dimension finita sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sean 
+\begin_inset Formula $T\in\mathcal{L}\left(V,W\right),S\in\mathcal{L}\left(W,Z\right)$
+\end_inset
+
+, si 
+\begin_inset Formula $B,B',B''$
+\end_inset
+
+ son bases ordenadas para 
+\begin_inset Formula $V,W,Z$
+\end_inset
+
+ y si 
+\begin_inset Formula $A$
+\end_inset
+
+ es la matriz de 
+\begin_inset Formula $T$
+\end_inset
+
+ relativa a 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B'$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ es la matriz de 
+\begin_inset Formula $S$
+\end_inset
+
+ relativa a 
+\begin_inset Formula $B'$
+\end_inset
+
+ y 
+\begin_inset Formula $B''$
+\end_inset
+
+ entonces la matriz de la composicion 
+\begin_inset Formula $ST$
+\end_inset
+
+ relativa a 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $B''$
+\end_inset
+
+ es la matriz 
+\begin_inset Formula $D=CA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $T,S\in\mathcal{L}\left(V\right)$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ base ordenada de 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita entonces: 
+\begin_inset Formula $\left[ST\right]_{B}=\left[S\right]_{B}\left[T\right]_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+El isomorfismo entre 
+\begin_inset Formula $\mathcal{L}\left(V\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{M}_{n\times n}\left[\mathbb{K}\right]$
+\end_inset
+
+ preserva productos.
+ Como consecuencia de esto se tiene que un operador lineal 
+\begin_inset Formula $T$
+\end_inset
+
+ es inversible si y solo si 
+\begin_inset Formula $\left[T\right]_{B}$
+\end_inset
+
+ es una matriz inversible.
+\end_layout
+
+\begin_layout Itemize
+Cuando 
+\begin_inset Formula $T$
+\end_inset
+
+ es inversible resulta 
+\begin_inset Formula $\left[T^{-1}\right]_{B}=\left[T\right]_{B}^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Funcionales lineales y dualidad
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Funcional lineal
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, una transformacion lineal de 
+\begin_inset Formula $V$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ se dice un funcional lineal.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es un funcional lineal no nulo, entonces 
+\begin_inset Formula $rang\left(f\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $dim\left(V\right)=n\in\mathbb{N}$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $\text{\ensuremath{dim\left[\mathcal{N}\left(f\right)\right]=dim\left(V\right)-rang\left(f\right)=n-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Espacio dual
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $V$
+\end_inset
+
+ es un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, el conjunto de todos los funcionales lineales sobre 
+\begin_inset Formula $V$
+\end_inset
+
+ forman un espacio vectorial.
+ Dicho espacio lo notaremos 
+\begin_inset Formula $\mathcal{L}\left(V,\mathbb{K}\right)=V^{*}$
+\end_inset
+
+ y lo llamaremos espacio dual de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Por el teorema de la dimension del espacio de todas las transformaciones,
+ sabemos que 
+\begin_inset Formula $dim\left(V^{*}\right)=dim\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Hiperplano
+\end_layout
+
+\begin_layout Standard
+En un espacio vectorial de dimension finita 
+\begin_inset Formula $n$
+\end_inset
+
+, un subespacio de dimension 
+\begin_inset Formula $n-1$
+\end_inset
+
+ es llamado hiperplano.
+\end_layout
+
+\begin_layout Subsection
+Anulador
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $S\subset V$
+\end_inset
+
+, llamamos anulador de 
+\begin_inset Formula $S$
+\end_inset
+
+ al conjunto 
+\begin_inset Formula $S^{0}=\left\{ f\in V^{*}/f\left(v\right)=0\forall v\in S\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S^{0}$
+\end_inset
+
+ es subespacio vectorial de 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $S=\left\{ 0\right\} $
+\end_inset
+
+ entonces 
+\begin_inset Formula $S^{0}=V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $S=V$
+\end_inset
+
+ entonces 
+\begin_inset Formula $S^{0}=\left\{ 0\right\} \subset V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Existencia y unicidad de la base dual
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{n}\right\} $
+\end_inset
+
+ una base ordenada de un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+, sabemos por el teorema de determinacion de una TL por la actuacion en
+ la base que para cada 
+\begin_inset Formula $i\in\left\{ 1,\ldots,n\right\} $
+\end_inset
+
+ existen unicos funcionales lineales 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ sobre 
+\begin_inset Formula $V$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f_{i}\left(v_{j}\right)=\delta_{ij}$
+\end_inset
+
+.
+ Luego el conjunto 
+\begin_inset Formula $\left\{ f_{1},\ldots,f_{n}\right\} $
+\end_inset
+
+ es la unica base de 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Veamos que son linealmente independientes: Sea 
+\begin_inset Formula $f={\displaystyle \sum_{i=1}^{n}c_{i}f_{i}}$
+\end_inset
+
+ con 
+\begin_inset Formula $c_{i}\in\mathbb{K}$
+\end_inset
+
+ luego 
+\begin_inset Formula $f\left(v_{j}\right)={\displaystyle \sum_{i=1}^{n}c_{i}f_{i}\left(v_{j}\right)=\sum_{i=1}^{n}c_{i}\delta_{ij}=c_{j}}$
+\end_inset
+
+.
+ En particular si 
+\begin_inset Formula $f$
+\end_inset
+
+ es el funcional lineal nulo 
+\begin_inset Formula $f_{0}={\displaystyle \sum_{i=1}^{n}c_{i}f_{i}}$
+\end_inset
+
+ sera 
+\begin_inset Formula $f_{0}\left(v_{j}\right)=0$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $c_{j}=0$
+\end_inset
+
+ pudiendo concluir lo propuesto.
+\end_layout
+
+\begin_layout Standard
+Ademas como sabemos que 
+\begin_inset Formula $dim\left(V^{*}\right)=dim\left(V\right)=n$
+\end_inset
+
+ surge que 
+\begin_inset Formula $\text{\ensuremath{B^{*}=\left\{ f_{1},\ldots,f_{n}\right\} }}$
+\end_inset
+
+ es base para 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ llamada base dual de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+El funcional lineal 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ es la funcion que asigna a cada vector 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ su i-esima coordenada relativa a la base 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de los funcionales lineales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Enumerate
+Para cada funcional lineal 
+\begin_inset Formula $f$
+\end_inset
+
+ sobre 
+\begin_inset Formula $V$
+\end_inset
+
+ se tiene que: 
+\begin_inset Formula $f={\displaystyle \sum_{i=1}^{n}}f\left(v_{i}\right)f_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ se tiene 
+\begin_inset Formula $v={\displaystyle \sum_{i=1}^{n}}f_{i}\left(v\right)v_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f\in V^{*}$
+\end_inset
+
+, luego 
+\begin_inset Formula $f$
+\end_inset
+
+ es combinacion lineal de los elementos 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $f={\displaystyle \sum_{i=1}^{n}}c_{i}f_{i}$
+\end_inset
+
+ y como 
+\begin_inset Formula $f\left(v_{i}\right)=c_{1}f_{1}\left(v_{i}\right)+\ldots+c_{n}f_{n}\left(v_{i}\right)=0+\ldots+c_{i}\underbrace{f_{i}\left(v_{i}\right)}_{1}+\ldots+0$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f\left(v_{i}\right)=c_{i}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $f={\displaystyle \sum_{i=1}^{n}}f\left(v_{i}\right)f_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+De forma similar si 
+\begin_inset Formula $v\in V$
+\end_inset
+
+, 
+\begin_inset Formula $v={\displaystyle \sum_{i=1}^{n}x_{i}v_{i}}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{f_{j}\left(v\right)={\displaystyle \sum_{i=1}^{n}}x_{i}f_{j}\left(v_{i}\right)={\displaystyle \sum_{i=1}^{n}}x_{i}\delta_{ij}=x_{j}}}$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $x_{j}=f_{j}\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Relacion entre la dimension de un espacio y su anulador
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $W$
+\end_inset
+
+ subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+, entonces se tiene que 
+\begin_inset Formula $dim\left(W\right)+dim\left(W^{0}\right)=dim\left(V\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $dim\left(W\right)=k$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+ base de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+ Elijamos 
+\begin_inset Formula $v_{k+1},\ldots,v_{n}\in V/B=\left\{ v_{1},\ldots,v_{k},v_{k+1},\ldots,v_{n}\right\} $
+\end_inset
+
+ es una base de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left\{ f_{1},\ldots,f_{n}\right\} $
+\end_inset
+
+ la base dual de 
+\begin_inset Formula $V^{*}$
+\end_inset
+
+ en 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $\left\{ f_{k+1},\ldots,f_{n}\right\} $
+\end_inset
+
+ es base de 
+\begin_inset Formula $W^{0}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{i}\in W^{0}$
+\end_inset
+
+ para 
+\begin_inset Formula $i=k+1,\ldots,n$
+\end_inset
+
+ pues 
+\begin_inset Formula $f_{i}\left(v_{j}\right)=\delta_{ij}$
+\end_inset
+
+ donde 
+\begin_inset Formula $\delta_{ij}=0$
+\end_inset
+
+ si 
+\begin_inset Formula $\begin{cases}
+i\geq k+1\\
+j\leq k
+\end{cases}$
+\end_inset
+
+, luego para 
+\begin_inset Formula $v\in W$
+\end_inset
+
+: 
+\begin_inset Formula $v={\displaystyle \sum_{j=1}^{n}\alpha_{j}v_{j}}$
+\end_inset
+
+ para ciertos 
+\begin_inset Formula $\alpha_{j}\in\mathbb{K}$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $f_{i}\left(v\right)={\displaystyle \sum_{j=1}^{k}\alpha_{j}f_{i}\left(v_{j}\right)=0}$
+\end_inset
+
+, 
+\begin_inset Formula $i\geq k+1$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $f_{i}\in W^{0}$
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ f_{k+1},\ldots,f_{n}\right\} $
+\end_inset
+
+ es linealmente independiente.
+\end_layout
+
+\begin_layout Standard
+Falta ver que 
+\begin_inset Formula $\left\langle \left\{ f_{k+1},\ldots,f_{n}\right\} \right\rangle =W^{0}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $f\in V^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $f={\displaystyle \sum_{i=1}^{n}f\left(v_{i}\right)f_{i}}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\text{\ensuremath{f\in W^{0}}}$
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $f\left(v_{i}\right)=0$
+\end_inset
+
+ para 
+\begin_inset Formula $v_{i}\in W$
+\end_inset
+
+, 
+\begin_inset Formula $1\leq i\leq k$
+\end_inset
+
+ luego 
+\begin_inset Formula $\text{\ensuremath{f={\displaystyle \sum_{i=k+1}^{n}}f\left(v_{i}\right)f_{i}}}$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $f$
+\end_inset
+
+ es combinacion lineal de 
+\begin_inset Formula $\left\langle \left\{ f_{k+1},\ldots,f_{n}\right\} \right\rangle $
+\end_inset
+
+.
+ Asi se tiene que 
+\begin_inset Formula $\text{\ensuremath{dim\left(W^{0}\right)=n-k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $W$
+\end_inset
+
+ es subespacio k-dimensional de un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ n-dimensional, entonces 
+\begin_inset Formula $W$
+\end_inset
+
+ es la interseccion de 
+\begin_inset Formula $\left(n-k\right)$
+\end_inset
+
+ hiperplanos de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $W$
+\end_inset
+
+ es exactamente el conjunto de vectores 
+\begin_inset Formula $v$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f_{i}\left(v\right)=0$
+\end_inset
+
+, 
+\begin_inset Formula $i=k+1,\ldots,n$
+\end_inset
+
+.
+ En el caso 
+\begin_inset Formula $k=n-1$
+\end_inset
+
+, 
+\begin_inset Formula $W$
+\end_inset
+
+ es el espacio nulo de 
+\begin_inset Formula $f_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+ son subespacios de un espacio vectorial de dimension finita, entonces 
+\begin_inset Formula $W_{1}=W_{2}\iff W_{1}^{0}=W_{2}^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Trivial.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Supongamos 
+\begin_inset Formula $W_{1}\neq W_{2}$
+\end_inset
+
+ y supongamos existen 
+\begin_inset Formula $\text{\ensuremath{v\in V/v\in W_{1}\land v\notin W_{2}}}$
+\end_inset
+
+, es decir existe un funcional lineal 
+\begin_inset Formula $f$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(u\right)=0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $u\in W_{2}$
+\end_inset
+
+ pero 
+\begin_inset Formula $f\left(v\right)\neq0$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $f\in W_{2}^{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $f\notin W_{1}^{0}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $W_{2}$
+\end_inset
+
+ esta generado como la interseccion de un numero finito de hiperplanos).
+\end_layout
+
+\begin_layout Subsection
+Suma e interseccion de anuladores
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+ subespacios de un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(W_{1}+W_{2}\right)^{0}=W_{1}^{0}\cap W_{2}^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(W_{1}\cap W_{2}\right)^{0}=W_{1}^{0}+W_{2}^{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Part
+Diagonalizacion
+\end_layout
+
+\begin_layout Chapter
+Autovalores y autovectores
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Autovalores y autovectores
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $T$
+\end_inset
+
+ un operador lineal sobre 
+\begin_inset Formula $V$
+\end_inset
+
+, un autovalor de 
+\begin_inset Formula $T$
+\end_inset
+
+ es un escalar 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+ tal que existe un vector no nulo 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ que verifica 
+\begin_inset Formula $T\left(v\right)=\lambda v$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es un autovalor de 
+\begin_inset Formula $T$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Itemize
+Cualquier vector 
+\begin_inset Formula $v/T\left(v\right)=\lambda v$
+\end_inset
+
+ se llama autovector de 
+\begin_inset Formula $T$
+\end_inset
+
+ asociado al autovalor 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La coleccion de todos los autovectores asociados a un determinado autovalor
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ se llama autoespacio de 
+\begin_inset Formula $T$
+\end_inset
+
+ asociado a 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es un operador lineal cuya matriz asociada es 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es un escalar cualquiera, el conjunto 
+\begin_inset Formula $\left\{ v\in V:Av=\lambda v\right\} $
+\end_inset
+
+ es un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ En efecto es el espacio nulo de la matriz 
+\begin_inset Formula $A-\lambda I$
+\end_inset
+
+.
+ Tenemos que 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es autovalor de 
+\begin_inset Formula $T$
+\end_inset
+
+ si 
+\begin_inset Formula $\text{\ensuremath{Av=\lambda v\iff Av-\lambda v=0\iff\left(A-\lambda I\right)v=0\iff v\in\mathcal{N}\left(A-\lambda I\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $dim\left(V\right)$
+\end_inset
+
+ es finita, 
+\begin_inset Formula $\left(A-\lambda I\right)$
+\end_inset
+
+ es no inyectiva cuando el determinante de la matriz asociada a ella para
+ alguna base 
+\begin_inset Formula $B$
+\end_inset
+
+ es igual a 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ tiene a 0 como autovalor, esto significa que 
+\begin_inset Formula $Ax=0x$
+\end_inset
+
+ tiene una solucion no trivial, luego 
+\begin_inset Formula $A$
+\end_inset
+
+ es singular y por lo tanto no inversible.
+\end_layout
+
+\begin_layout Subsection
+Ecuacion y polinomios caracteristicos
+\end_layout
+
+\begin_layout Standard
+La ecuacion 
+\begin_inset Formula $\left|A-\lambda I\right|=0$
+\end_inset
+
+ se llama ecuacion caracteristica de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Al polinomio 
+\begin_inset Formula $P\left(\lambda\right)=\left|A-\lambda I\right|$
+\end_inset
+
+ se lo llama polinomio caracteristico.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Un escalar 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es autovalor de 
+\begin_inset Formula $A$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ satisface la ecuacion caracteristica de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Autovalores de una matriz triangular
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Los autovalres de una matriz triangular son las entradas de su diagonal
+ principal.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Veamoslo para una matriz de orden 3 triangular superior:
+\begin_inset Formula 
+\[
+A-\lambda I=\left[\begin{array}{ccc}
+a_{11}-\lambda & a_{12} & a_{13}\\
+0 & a_{22}-\lambda & a_{23}\\
+0 & 0 & a_{33}-\lambda
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\lambda$
+\end_inset
+
+ sera autovalor de 
+\begin_inset Formula $A$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\left|A-\lambda I\right|=0$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\left(a_{11}-\lambda\right)\left(a_{22}-\lambda\right)\left(a_{33}-\lambda\right)=0$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\lambda=a_{ii}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Independencia lineal de los autoespacios
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $v_{1},\ldots,v_{r}$
+\end_inset
+
+ son autovectores correspondientes a distintos autovalores 
+\begin_inset Formula $\lambda_{1},\ldots,\lambda_{r}$
+\end_inset
+
+ de una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{r}\right\} $
+\end_inset
+
+ es linealmente independiente.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{r}\right\} $
+\end_inset
+
+ es linealmente dependiente.
+ Como para cada 
+\begin_inset Formula $j\in\left\{ 1,\ldots,r\right\} $
+\end_inset
+
+ se tiene que 
+\begin_inset Formula $v_{j}\neq0$
+\end_inset
+
+, uno de ellos debe ser combinacion lineal de los precedentes vectores linealmen
+te independientes.
+ Entonces para ciertos escalares 
+\begin_inset Formula $c_{1},\ldots,c_{p}$
+\end_inset
+
+ tenemos: 
+\begin_inset Formula $c_{1}v_{1}+\ldots+c_{p}v_{p}=v_{p+1}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $p+1$
+\end_inset
+
+ entre 1 y 
+\begin_inset Formula $r$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por un lado, multiplicando ambos lados por 
+\begin_inset Formula $A$
+\end_inset
+
+ obtenemos:
+\begin_inset Formula 
+\[
+c_{1}Av_{1}+\ldots+c_{p}Av_{p}=Av_{p+1}\iff c_{1}\lambda_{1}v_{1}+\ldots+c_{p}\lambda_{p}v_{p}=\lambda_{p+1}v_{p+1}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ son autovectores asociados al correspondiente autovalor 
+\begin_inset Formula $\lambda_{j}$
+\end_inset
+
+; por el otro multiplicando por 
+\begin_inset Formula $\lambda_{p+1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+c_{1}\lambda_{p+1}v_{1}+\ldots+c_{p}\lambda_{p+1}v_{p}=\lambda_{p+1}v_{p+1}
+\]
+
+\end_inset
+
+y restando ambas igualdades resulta:
+\begin_inset Formula 
+\[
+c_{1}\left(\lambda_{1}-\lambda_{p+1}\right)v_{1}+\ldots+c_{p}\left(\lambda_{p}-\lambda_{p+1}\right)v_{1}=0
+\]
+
+\end_inset
+
+pero como 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{p}\right\} $
+\end_inset
+
+ es linealmente independiente resulta que todos los escalares tienen que
+ ser 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como por hipotesis los autovalores son distintos sabemos que 
+\begin_inset Formula $\lambda_{i}-\lambda_{p+1}\neq0$
+\end_inset
+
+ surge que 
+\begin_inset Formula $c_{i}=0$
+\end_inset
+
+ para 
+\begin_inset Formula $1\leq i\leq p$
+\end_inset
+
+ luego reemplazando en la igualdad original se tiene 
+\begin_inset Formula $v_{p+1}=0$
+\end_inset
+
+ lo que es contradiccion que parte de suponer 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{r}\right\} $
+\end_inset
+
+ es linealmente dependiente.
+\end_layout
+
+\begin_layout Chapter
+Diagonalizacion
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Matrices semejantes
+\end_layout
+
+\begin_layout Standard
+Sean 2 matrices cuadradas 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, se dice que 
+\begin_inset Formula $B$
+\end_inset
+
+ es semejante o similar a 
+\begin_inset Formula $A$
+\end_inset
+
+ si existe una matriz 
+\begin_inset Formula $P$
+\end_inset
+
+ inversible tal que 
+\begin_inset Formula $B=P^{-1}AP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+En dicho caso 
+\begin_inset Formula $A$
+\end_inset
+
+ tambien es semejante a 
+\begin_inset Formula $B$
+\end_inset
+
+ pues 
+\begin_inset Formula $\text{\ensuremath{B=P^{-1}AP\iff PBP^{-1}=A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz diagonalizable
+\end_layout
+
+\begin_layout Standard
+Se dice que una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ es diagonalizable si es semejante a una matriz diagonal.
+ Es decir si 
+\begin_inset Formula $A=PDP^{-1}$
+\end_inset
+
+ para alguna matriz 
+\begin_inset Formula $P$
+\end_inset
+
+ inversible y 
+\begin_inset Formula $D$
+\end_inset
+
+ diagonal.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Autovalores de matrices semejantes
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si las matrices 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son semejantes, entonces tienen el mismo polinomio caracteristico y por
+ lo tanto los mismos autovalores con la misma multiplicidad.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $B=P^{-1}AP$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+B-\lambda I=P^{-1}AP-\lambda I=P^{-1}AP-\lambda P^{-1}IP=P^{-1}\left(A-\lambda I\right)P
+\]
+
+\end_inset
+
+luego:
+\begin_inset Formula 
+\[
+\left|B-\lambda I\right|=\left|P^{-1}\left(A-\lambda I\right)P\right|=\left|P^{-1}\right|\left|A-\lambda I\right|\left|P\right|=\left|A-\lambda I\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Este resultado permite calcular los autovalores de un operador lineal 
+\begin_inset Formula $T$
+\end_inset
+
+ sobre un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension finita como los autovalores de la matriz asociada a 
+\begin_inset Formula $T$
+\end_inset
+
+ en cualquier base ordenada 
+\begin_inset Formula $B$
+\end_inset
+
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Esto demuestra ademas que un operador lineal 
+\begin_inset Formula $T$
+\end_inset
+
+ sobre 
+\begin_inset Formula $V$
+\end_inset
+
+ con 
+\begin_inset Formula $dim\left(V\right)=n$
+\end_inset
+
+ tendra a lo sumo 
+\begin_inset Formula $n$
+\end_inset
+
+ autovalores diferentes.
+\end_layout
+
+\begin_layout Subsection
+Condicion necesaria y suficiente de diagonalizabilidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ es diagonalizable si y solo si 
+\begin_inset Formula $A$
+\end_inset
+
+ tiene 
+\begin_inset Formula $n$
+\end_inset
+
+ autovectores linealmente independientes.
+ Es mas, 
+\begin_inset Formula $A=PDP^{-1}$
+\end_inset
+
+ con 
+\begin_inset Formula $D$
+\end_inset
+
+ diagonal si y solo si las columnas de 
+\begin_inset Formula $P$
+\end_inset
+
+ son 
+\begin_inset Formula $n$
+\end_inset
+
+ autovectores linealmente independientes de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ En este caso las entradas diagonales de 
+\begin_inset Formula $D$
+\end_inset
+
+ son los autovalores de 
+\begin_inset Formula $A$
+\end_inset
+
+ que corresponden a los respectivos autovectores.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $\lambda_{1},\ldots,\lambda_{n}$
+\end_inset
+
+ las entradas de 
+\begin_inset Formula $D$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\text{\ensuremath{P=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+v_{1} & \ldots & v_{n}\\
+\mid & \mid & \mid
+\end{array}\right]}}$
+\end_inset
+
+ luego 
+\begin_inset Formula $AP=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+Av_{1} & \ldots & Av_{n}\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $PD=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+\lambda_{1}v_{1} & \ldots & \lambda v_{n}\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Como 
+\begin_inset Formula $A$
+\end_inset
+
+ es diagonalizable 
+\begin_inset Formula $A=PDP^{-1}\iff AP=PD$
+\end_inset
+
+, e igualando columnas 
+\begin_inset Formula $Av_{i}=\lambda_{i}v_{i}$
+\end_inset
+
+.
+ Ademas como 
+\begin_inset Formula $P$
+\end_inset
+
+ es inversible resultan sus columnas ser autovectores linealmente independientes
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ y los elementos diagonales de 
+\begin_inset Formula $D$
+\end_inset
+
+ los autovalores correspondientes.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Dados 
+\begin_inset Formula $v_{1},\ldots v_{n}$
+\end_inset
+
+ autovectores linealmente independientes de 
+\begin_inset Formula $A$
+\end_inset
+
+, construimos la matriz 
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+v_{1} & \ldots & v_{n}\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+ y con los correspondientes autovalores armamos una matriz diagonal 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Luego vale para estas matrices que 
+\begin_inset Formula $AP=PD$
+\end_inset
+
+.
+ Si ademas 
+\begin_inset Formula $\left\{ v_{1},\ldots v_{n}\right\} $
+\end_inset
+
+ es linealmente independiente resulta que 
+\begin_inset Formula $P$
+\end_inset
+
+ es inversible y se tiene 
+\begin_inset Formula $A=PDP^{-1}$
+\end_inset
+
+ siendo en ese caso 
+\begin_inset Formula $A$
+\end_inset
+
+ diagonalizable.
+\end_layout
+
+\begin_layout Subsection
+Condicion suficiente de diagonalizabilidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Una matriz de orden 
+\begin_inset Formula $n$
+\end_inset
+
+ con 
+\begin_inset Formula $n$
+\end_inset
+
+ autovalores diferentes es diagonalizable.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Resulta evidente de considerar los teoremas de independencia lineal de los
+ autoespacios y condicion necesaria y suficiente de diagonalizabilidad.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ una matriz de orden 
+\begin_inset Formula $n$
+\end_inset
+
+ cuyos autovalores diferentes son 
+\begin_inset Formula $\lambda_{1},\ldots,\lambda_{p}$
+\end_inset
+
+ con 
+\begin_inset Formula $1\leq p\leq n$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $1\leq k\leq p$
+\end_inset
+
+ la dimension del autoespacio correspondiente a 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+ es menor o igual a la multiplicidad del autovalor 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+La matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ es diagonalizable si y solo si la suma de las dimensiones de los distintos
+ autoespacios es igual a 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Esto sucede si y solo si la dimension del autoespacio correspondiente a
+ 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+ es igual a su multiplicidad.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ es diagonalizable y 
+\begin_inset Formula $B_{k}$
+\end_inset
+
+ es base para el autoespacio correspondiente a 
+\begin_inset Formula $\lambda_{k}$
+\end_inset
+
+ entonces la coleccion 
+\begin_inset Formula $B=B_{1}\cup\ldots\cup B_{p}$
+\end_inset
+
+ forma una base de autovectores de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Forma normal de Jordan
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Espacio invariante
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ un operador lineal, un subespacio 
+\begin_inset Formula $W$
+\end_inset
+
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ se dice invariante por 
+\begin_inset Formula $T$
+\end_inset
+
+ si 
+\begin_inset Formula $T$
+\end_inset
+
+ aplica a 
+\begin_inset Formula $W$
+\end_inset
+
+ en si mismo.
+ Esto es, si 
+\begin_inset Formula $v\in W\Rightarrow T\left(v\right)\in W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S=\left\{ T_{1},T_{2},\ldots\right\} $
+\end_inset
+
+ es un conjunto de operadores lineales sobre 
+\begin_inset Formula $V$
+\end_inset
+
+, diremos que un subespacio 
+\begin_inset Formula $W$
+\end_inset
+
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+ es S-invariante si es invariente para cada 
+\begin_inset Formula $T_{i}\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diremos ademas que 
+\begin_inset Formula $V\neq\left\{ 0\right\} $
+\end_inset
+
+ es un S-espacio simple si sus unicos subespacios S-invarantes son 
+\begin_inset Formula $V$
+\end_inset
+
+ y el espacio trivial.
+\end_layout
+
+\begin_layout Subsection
+Vector ciclico
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ un operador lineal, 
+\begin_inset Formula $\alpha\in\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ un vector no nulo, diremos que 
+\begin_inset Formula $v$
+\end_inset
+
+ es 
+\begin_inset Formula $\left(T-\alpha I\right)$
+\end_inset
+
+ ciclico si existe un entero 
+\begin_inset Formula $r\geq1$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(T-\alpha I\right)^{r}v=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+El minimo entero positivo 
+\begin_inset Formula $r$
+\end_inset
+
+ que tiene esta propiedad recibe el nombre de periodo de 
+\begin_inset Formula $v$
+\end_inset
+
+ relativo a 
+\begin_inset Formula $T-\alpha I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $r$
+\end_inset
+
+ es dicho periodo, entonces tenemos que 
+\begin_inset Formula $\left(T-\alpha I\right)v\neq0$
+\end_inset
+
+ para cualquier entero 
+\begin_inset Formula $k$
+\end_inset
+
+ tal que 
+\begin_inset Formula $0\leq k<r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Espacio ciclico
+\end_layout
+
+\begin_layout Standard
+Un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de dimension 
+\begin_inset Formula $r$
+\end_inset
+
+ se conoce como ciclico, si existe algun numero 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y un vector 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ que es 
+\begin_inset Formula $\left(T-\alpha I\right)$
+\end_inset
+
+ ciclico de orden 
+\begin_inset Formula $r$
+\end_inset
+
+, para alguna transformacion lineal 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $V$
+\end_inset
+
+ es ciclico entonces 
+\begin_inset Formula $\left\{ \left(T-\alpha I\right)^{r-1}v,\left(T-\alpha I\right)^{r-2}v,\ldots,\left(T-\alpha I\right)v,v\right\} $
+\end_inset
+
+ es una base de 
+\begin_inset Formula $V$
+\end_inset
+
+ llamada base de Jordan.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Invarianza de espacios nulos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ lineal y 
+\begin_inset Formula $P\left(X\right)$
+\end_inset
+
+ un polinomio cualqueira, entonces 
+\begin_inset Formula $\mathcal{N}\left[P\left(T\right)\right]$
+\end_inset
+
+ es invariante por 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Llamemos con 
+\begin_inset Formula $S$
+\end_inset
+
+ a la transformacion lineal 
+\begin_inset Formula $P\left(T\right)$
+\end_inset
+
+ y sea 
+\begin_inset Formula $v\in\mathcal{N}\left(S\right)$
+\end_inset
+
+, esto es 
+\begin_inset Formula $S\left(v\right)=0$
+\end_inset
+
+.
+ Necesitamos probar que 
+\begin_inset Formula $T\left(v\right)\in\mathcal{N}\left(S\right)$
+\end_inset
+
+ o lo que es lo mismo: 
+\begin_inset Formula $S\left[T\left(v\right)\right]=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $P\left(X\right)X=XP\left(X\right)$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $ST=TS$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{S\left[T\left(v\right)\right]=T\left[S\left(v\right)\right]=T\left(0\right)=0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema 4
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $P_{1}\left(X\right),P_{2}\left(X\right)$
+\end_inset
+
+ polinomios no constantes tales que su maximo comun divisor es 1 (es decir
+ que no comparten raices y sus coeficientes principales son coprimos) y
+ sean 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ un operador lineal.
+ Si 
+\begin_inset Formula $P\left(T\right)$
+\end_inset
+
+ es la transformacion nula, entonces para 
+\begin_inset Formula $W_{1}=\mathcal{N}\left[P_{1}\left(T\right)\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}=\mathcal{N}\left[P_{2}\left(T\right)\right]$
+\end_inset
+
+ resulta 
+\begin_inset Formula $V=W_{1}\oplus W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Debemos ver que 
+\begin_inset Formula $V$
+\end_inset
+
+ es suma de 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+ y cada vector de 
+\begin_inset Formula $W_{1}+W_{2}$
+\end_inset
+
+ se expresa de forma unica.
+ Por suposicion existen polinomios 
+\begin_inset Formula $Q_{1},Q_{2}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\text{\ensuremath{Q_{1}\left(X\right)P_{1}\left(X\right)+Q_{2}\left(X\right)P_{2}\left(X\right)=1}}$
+\end_inset
+
+ de donde 
+\begin_inset Formula $\text{\ensuremath{Q_{1}\left(T\right)P_{1}\left(T\right)+Q_{2}\left(T\right)P_{2}\left(T\right)=I}}\left(*\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V=W_{1}+W_{2}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $v\in V$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{v=Iv=\left[Q_{1}\left(T\right)P_{1}\left(T\right)\right]\left(v\right)+\left[Q_{2}\left(T\right)P_{2}\left(T\right)\right]\left(v\right)}}$
+\end_inset
+
+.
+ Observemos que el primer termino de esta suma pertenece a 
+\begin_inset Formula $W_{2}$
+\end_inset
+
+ pues 
+\begin_inset Formula $\left[P_{2}\left(T\right)Q_{1}\left(T\right)P_{1}\left(T\right)\right]\left(v\right)=\left[Q_{1}\left(T\right)\underbrace{P_{1}\left(T\right)P_{2}\left(T\right)}_{P\left(T\right)}\right]\left(v\right)=0$
+\end_inset
+
+ y analogamente el segundo termino esta en 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $v\in W_{1}+W_{2}$
+\end_inset
+
+, luego 
+\begin_inset Formula $v=w_{1}+w_{2}$
+\end_inset
+
+ con 
+\begin_inset Formula $w_{1}\in W_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $w_{2}\in W_{2}$
+\end_inset
+
+.
+ Observemos que:
+\begin_inset Formula 
+\[
+\left[Q_{1}\left(T\right)P_{1}\left(T\right)\right]\left(v\right)=\underbrace{\left[Q_{1}\left(T\right)P_{1}\left(T\right)\right]\left(w_{1}\right)}_{0}+\left[Q_{1}\left(T\right)P_{1}\left(T\right)\right]\left(w_{2}\right)=\left[Q_{1}\left(T\right)P_{1}\left(T\right)\right]\left(w_{2}\right)
+\]
+
+\end_inset
+
+Aplicando 
+\begin_inset Formula $\left(*\right)$
+\end_inset
+
+ a 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $w_{2}=Iw_{2}=\left[Q_{1}\left(T\right)P_{1}\left(T\right)\right]\left(w_{2}\right)+\left[Q_{2}\left(T\right)P_{2}\left(T\right)\right]\left(w_{2}\right)$
+\end_inset
+
+, luego 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+ esta determinado de manera unica y analogamente para 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema 5
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ un operador lineal, 
+\begin_inset Formula $P\left(X\right)=\left(X-\alpha_{1}\right)^{m_{1}}\ldots\left(X-\alpha_{r}\right)^{m_{r}}$
+\end_inset
+
+ un polinomio tal que 
+\begin_inset Formula $\text{\ensuremath{P\left(T\right)=0}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{U_{i}=\mathcal{N}\left(T-\alpha_{i}I\right)^{m_{i}}}}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $V$
+\end_inset
+
+ es la suma directa de los subespacios 
+\begin_inset Formula $U_{1},\ldots,U_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO (INDUCCION).
+\end_layout
+
+\begin_layout Subsection
+Proposicion 1
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S=\left\{ U_{1},\ldots,U_{n}\right\} $
+\end_inset
+
+ un conjunto de operadores de 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{T\in\mathcal{L}\left(V\right)}}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $TU_{i}=U_{i}T$
+\end_inset
+
+ para toda 
+\begin_inset Formula $U_{i}\in S$
+\end_inset
+
+, entonces 
+\begin_inset Formula $img\left(T\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+ son subespacios S-invariantes de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $w\in Img\left(T\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $T\left(v\right)=w$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{U_{i}\left(w\right)=U_{i}\left[T\left(v\right)\right]=T\left[U_{i}\left(v\right)\right]}}$
+\end_inset
+
+ y como 
+\begin_inset Formula $T$
+\end_inset
+
+ aplica vectores dentro de su imagen resulta 
+\begin_inset Formula $U_{i}\left(w\right)\in Img\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $u\in\mathcal{N}\left(T\right)$
+\end_inset
+
+, entonces 
+\begin_inset Formula $T\left[U_{i}\left(u\right)\right]=U_{i}\left[T\left(u\right)\right]=U_{i}\left(0\right)=0$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $U_{i}\left(u\right)\in\mathcal{N}\left(T\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proposicion 2
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ un conjunto de operadores de 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ un operador lineal.
+ Supongamos que 
+\begin_inset Formula $UT=TU$
+\end_inset
+
+ para todo 
+\begin_inset Formula $U\in S$
+\end_inset
+
+, luego si 
+\begin_inset Formula $P$
+\end_inset
+
+ es un polinomio sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $P\left(T\right)U=UP\left(T\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Lema de Schur
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $S=\left\{ U_{1},\ldots U_{n}\right\} $
+\end_inset
+
+ un conjunto de operadores de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $V$
+\end_inset
+
+ es un S-espacio simple y 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ una transformacion lineal tal que 
+\begin_inset Formula $TU_{i}=U_{i}T$
+\end_inset
+
+ para toda 
+\begin_inset Formula $U_{i}\in S$
+\end_inset
+
+, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es invertible o 
+\begin_inset Formula $T$
+\end_inset
+
+ es la aplicacion nula.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $T\neq0$
+\end_inset
+
+.
+ Por la proposicion 1 sabemos que 
+\begin_inset Formula $Img\left(T\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{N}\left(T\right)$
+\end_inset
+
+ son subespacios invariantes.
+ Ademas como 
+\begin_inset Formula $V$
+\end_inset
+
+ es un S-espacio simple sus unicos subespacios invariantes son 
+\begin_inset Formula $V$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ 0\right\} $
+\end_inset
+
+ por lo que 
+\begin_inset Formula $Img\left(T\right)=V$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{N}\left(T\right)=\left\{ 0\right\} $
+\end_inset
+
+.
+ Esto implica que 
+\begin_inset Formula $T$
+\end_inset
+
+ es sobreyectiva e inyectiva, luego es invertible.
+\end_layout
+
+\begin_layout Subsection
+Independencia lineal de vectores ciclicos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $v\neq0$
+\end_inset
+
+ es 
+\begin_inset Formula $\left(T-\alpha I\right)$
+\end_inset
+
+ ciclico con periodo 
+\begin_inset Formula $r$
+\end_inset
+
+, entonces los elementos 
+\begin_inset Formula $v,\left(T-\alpha I\right)v,\ldots,\left(T-\alpha I\right)^{r-1}v$
+\end_inset
+
+ son linealmente independientes.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $U=T-\alpha I$
+\end_inset
+
+, consideremos escalares 
+\begin_inset Formula $c_{0},\ldots,c_{r-1}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $0=c_{0}v+c_{1}U^{1}\left(v\right)+\ldots+c_{r-1}U^{r-1}\left(v\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Aplicando 
+\begin_inset Formula $U^{r-1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+U^{r-1}\left(0\right)=0=c_{0}U^{r-1}\left(v\right)+c_{1}\underbrace{U^{r}\left(v\right)}_{0}+\underbrace{\ldots}_{0}+c_{r-1}0
+\]
+
+\end_inset
+
+es decir 
+\begin_inset Formula $c_{0}\underbrace{U^{r-1}\left(v\right)}_{\neq0}=0$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $c_{0}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Aplicando 
+\begin_inset Formula $U^{r-2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+U^{r-2}\left(0\right)=0=0v+c_{1}U^{r-1}\left(v\right)+c_{2}\underbrace{U^{r}\left(v\right)}_{0}+\underbrace{\ldots}_{0}+c_{r-1}0
+\]
+
+\end_inset
+
+es decir 
+\begin_inset Formula $c_{1}\underbrace{U^{r-1}\left(v\right)}_{\neq0}=0$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $c_{1}=0$
+\end_inset
+
+.
+ Continuando de esta manera obtenemos que 
+\begin_inset Formula $c_{i}=0$
+\end_inset
+
+ por lo que dichos vectores son linealmente independientes.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Jordan
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V\neq\left\{ 0\right\} $
+\end_inset
+
+ un espacio de dimension finita sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $T:V\to V$
+\end_inset
+
+ un operador lineal, entonces 
+\begin_inset Formula $V$
+\end_inset
+
+ se puede expresar como una suma directa de subespacios ciclicos T-invariantes.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+NO COMPLETAR.
+\end_layout
+
+\begin_layout Part
+Producto interno y ortogonalidad
+\end_layout
+
+\begin_layout Chapter
+Producto interno
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Producto interno
+\end_layout
+
+\begin_layout Standard
+Dado un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ sobre un cuerpo 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, un producto interno en 
+\begin_inset Formula $V$
+\end_inset
+
+ es una funcion
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+V\times V & \to & \mathbb{K}\\
+\left(u,v\right) & \to & u\cdot v=u\times v=\left\langle u,v\right\rangle 
+\end{array}
+\]
+
+\end_inset
+
+que satisface los siguientes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle u,v\right\rangle =\overline{\left\langle v,u\right\rangle }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle u+v,w\right\rangle =\left\langle u,w\right\rangle +\left\langle v,w\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \alpha u,v\right\rangle =\alpha\left\langle u,v\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle u,u\right\rangle \geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle u,u\right\rangle =0\iff u=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Producto interno estandar
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $u,v$
+\end_inset
+
+ matrices 
+\begin_inset Formula $n\times1$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+, luego el escalar 
+\begin_inset Formula $u^{t}v$
+\end_inset
+
+ se dice producto interno de 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $v$
+\end_inset
+
+ y se indica 
+\begin_inset Formula $u\cdot v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Longitud
+\end_layout
+
+\begin_layout Standard
+La longitud o norma de un vector 
+\begin_inset Formula $v\in\mathbb{R}^{n}$
+\end_inset
+
+ es un escalar no negativo que notamos 
+\begin_inset Formula $\left\Vert v\right\Vert $
+\end_inset
+
+ definido como 
+\begin_inset Formula $\sqrt{v\cdot v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Distancia
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $u,v\in\mathbb{R}^{n}$
+\end_inset
+
+, la distancia entre 
+\begin_inset Formula $u$
+\end_inset
+
+ y 
+\begin_inset Formula $v$
+\end_inset
+
+ es la longitud de 
+\begin_inset Formula $u-v$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $dist\left(u,v\right)=\left\Vert u-v\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Ley del paralelogramo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\Vert x+y\right\Vert ^{2}+\left\Vert x-y\right\Vert ^{2}=2\left(\left\Vert x\right\Vert ^{2}+\left\Vert y\right\Vert ^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\Vert x+y\right\Vert ^{2}=\left(x+y\right)\cdot\left(x+y\right)=x\cdot x+x\cdot y+y\cdot x+y\cdot y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\Vert x-y\right\Vert ^{2}=\left(x-y\right)\cdot\left(x-y\right)=x\cdot x-x\cdot y-y\cdot x+y\cdot y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\Vert x+y\right\Vert ^{2}+\left\Vert x+y\right\Vert ^{2}=x\cdot x+x\cdot x+y\cdot y+y\cdot y=2\left(\left\Vert x\right\Vert ^{2}+\left\Vert y\right\Vert ^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de Pitagoras
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\Vert x+y\right\Vert ^{2}=\left\Vert x\right\Vert ^{2}+\left\Vert y\right\Vert ^{2}\iff x\cdot y=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+:
+\begin_inset Formula $\left\Vert x+y\right\Vert ^{2}-\left\Vert x\right\Vert ^{2}-\left\Vert y\right\Vert ^{2}=0\iff2\left(x\cdot y\right)=0\iff x\cdot y=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: 
+\begin_inset Formula $\left\Vert x+y\right\Vert ^{2}=x\cdot x+\underbrace{x\cdot y}_{0}+\underbrace{y\cdot x}_{0}+y\cdot y=\left\Vert x\right\Vert ^{2}+\left\Vert y\right\Vert ^{2}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Desigualdad de Cauchy-Schwarz
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|u\cdot v\right|\leq\left\Vert u\right\Vert \left\Vert v\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $v=0$
+\end_inset
+
+ el teorema es trivialmente cierto, si no, sea 
+\begin_inset Formula $\text{\ensuremath{\alpha=\frac{u\cdot v}{v\cdot v}}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+0\leq\left\Vert u-\alpha v\right\Vert ^{2}=u\cdot u-u\cdot\alpha v-\alpha v\cdot u+\alpha v\cdot\alpha v=u\cdot u-2\alpha\left(u\cdot v\right)+\alpha^{2}\left(v\cdot v\right)
+\]
+
+\end_inset
+
+y reemplazando 
+\begin_inset Formula $\left[\alpha\right]$
+\end_inset
+
+ tenemos:
+\begin_inset Formula 
+\[
+0\leq\left\Vert u\right\Vert ^{2}-2\left[\frac{u\cdot v}{v\cdot v}\right]\left(u\cdot v\right)+\left[\frac{u\cdot v}{v\cdot v}\right]^{2}\left(v\cdot v\right)=\left\Vert u\right\Vert ^{2}-2\frac{\left(u\cdot v\right)^{2}}{\left\Vert v\right\Vert ^{2}}+\frac{\left(u\cdot v\right)^{2}}{\left\Vert v\right\Vert ^{2}}=\left\Vert u\right\Vert ^{2}-\frac{\left(u\cdot v\right)^{2}}{\left\Vert v\right\Vert ^{2}}
+\]
+
+\end_inset
+
+Notemos que como 
+\begin_inset Formula $u\cdot v\geq0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $u\cdot v=\left|u\cdot v\right|\iff\left(u\cdot v\right)^{2}=\left|u\cdot v\right|^{2}$
+\end_inset
+
+.
+ En resumen:
+\begin_inset Formula 
+\[
+0\leq\left\Vert u\right\Vert ^{2}-\frac{\left|u\cdot v\right|^{2}}{\left\Vert v\right\Vert ^{2}}\iff\frac{\left|u\cdot v\right|^{2}}{\left\Vert v\right\Vert ^{2}}\leq\left\Vert u\right\Vert ^{2}\iff\left|u\cdot v\right|^{2}\leq\left\Vert u\right\Vert ^{2}\left\Vert v\right\Vert ^{2}\iff\left|u\cdot v\right|\leq\left\Vert u\right\Vert \left\Vert v\right\Vert 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Desigualdad triangular
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\Vert u+v\right\Vert \leq\left\Vert u\right\Vert +\left\Vert v\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\Vert u+v\right\Vert ^{2}=\left\Vert u\right\Vert ^{2}+2\left(u\cdot v\right)+\left\Vert v\right\Vert ^{2}=\left\Vert u\right\Vert ^{2}+2\left|u\cdot v\right|+\left\Vert v\right\Vert ^{2}\leq\left\Vert u\right\Vert ^{2}+2\left\Vert u\right\Vert \cdot\left\Vert v\right\Vert +\left\Vert v\right\Vert ^{2}=\left(\left\Vert u\right\Vert +\left\Vert v\right\Vert \right)^{2}
+\]
+
+\end_inset
+
+donde la desigualdad vale por el teorema anterior.
+\end_layout
+
+\begin_layout Chapter
+Ortogonalidad
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Ortogonalidad
+\end_layout
+
+\begin_layout Standard
+Dos vectores 
+\begin_inset Formula $u,v\in\mathbb{R}^{n}$
+\end_inset
+
+ son ortogonales si 
+\begin_inset Formula $u\cdot v=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+El vector 
+\begin_inset Formula $0$
+\end_inset
+
+ es ortogonal a todo vector.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $u$
+\end_inset
+
+ es ortogonal a 
+\begin_inset Formula $v$
+\end_inset
+
+ entonces tambien lo es a 
+\begin_inset Formula $\alpha v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Complemento ortogonal
+\end_layout
+
+\begin_layout Standard
+Si un vector 
+\begin_inset Formula $z$
+\end_inset
+
+ es ortogonal a todo vector en un subespacio 
+\begin_inset Formula $W$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $z$
+\end_inset
+
+ es ortogonal a 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El conjunto de todos los vectores 
+\begin_inset Formula $z$
+\end_inset
+
+ que son ortogonales a 
+\begin_inset Formula $W$
+\end_inset
+
+ se llama complemento ortogonal de 
+\begin_inset Formula $W$
+\end_inset
+
+ y se nota 
+\begin_inset Formula $W^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Conjunto ortogonal
+\end_layout
+
+\begin_layout Standard
+Se dice que un conjunto de vectores 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{n}\right\} $
+\end_inset
+
+ es ortogonal si cada par de vectores diferentes del conjunto son ortogonales.
+\end_layout
+
+\begin_layout Subsection
+Base ortogonal
+\end_layout
+
+\begin_layout Standard
+Una base ortogonal de un subespacio 
+\begin_inset Formula $W$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ es una base de 
+\begin_inset Formula $W$
+\end_inset
+
+ que ademas es un conjunto ortogonal.
+\end_layout
+
+\begin_layout Subsection
+Conjunto ortonormal
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{n}\right\} $
+\end_inset
+
+ es un conjunto ortonormal si es un conjunto ortogonal de vectores de norma
+ 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz ortongonal
+\end_layout
+
+\begin_layout Standard
+Una matriz ortogonal es una matriz 
+\begin_inset Formula $U$
+\end_inset
+
+ cuadrada, inversible tal que 
+\begin_inset Formula $\text{\ensuremath{U^{-1}=U^{t}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Toda matriz cuadrada con columnas ortonormales es una matriz ortogonal.
+\end_layout
+
+\begin_layout Subsection
+Proyeccion de un vector sobre otro
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $u,y\in\mathbb{R}^{n}$
+\end_inset
+
+ (con 
+\begin_inset Formula $u\neq0$
+\end_inset
+
+), buscamos escribir a 
+\begin_inset Formula $y$
+\end_inset
+
+ como 
+\begin_inset Formula $y=\alpha u+z$
+\end_inset
+
+ con 
+\begin_inset Formula $z\bot u$
+\end_inset
+
+.
+ Notese que 
+\begin_inset Formula $y=\alpha u+z\iff z=y-\alpha u$
+\end_inset
+
+, luego 
+\begin_inset Formula $z\bot u\iff\left(y-\alpha u\right)\bot u\iff\left(y-\alpha u\right)\cdot u=0\iff y\cdot u-\alpha\left(u\cdot u\right)=0$
+\end_inset
+
+ y despejando 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ obtenemos: 
+\begin_inset Formula $\alpha=\frac{y\cdot u}{u\cdot u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Llamando 
+\begin_inset Formula $\hat{y}=\alpha u=\frac{y\cdot u}{u\cdot u}u$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $y=\hat{y}+z$
+\end_inset
+
+.
+ Diremos que 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ es proyeccion ortogonal de 
+\begin_inset Formula $y$
+\end_inset
+
+ sobre 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+La proyeccion ortogonal de 
+\begin_inset Formula $y$
+\end_inset
+
+ sobre 
+\begin_inset Formula $u$
+\end_inset
+
+ es igual a la de 
+\begin_inset Formula $y$
+\end_inset
+
+ sobre cualquier multiplo de 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Luego, considerando 
+\begin_inset Formula $L=\left\langle \left\{ u\right\} \right\rangle $
+\end_inset
+
+ resulta: 
+\begin_inset Formula 
+\[
+\hat{y}=proy_{L}y=\frac{y\cdot u}{u\cdot u}u
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Proposicion
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Enumerate
+Un vector 
+\begin_inset Formula $x\in W^{\bot}$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $x$
+\end_inset
+
+ es ortogonal a todo vector de un conjunto que genere 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $W^{\bot}$
+\end_inset
+
+ es un espacio vectorial.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $B=\left\{ w_{1},\ldots,w_{n}\right\} $
+\end_inset
+
+ una base de 
+\begin_inset Formula $W$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Dado 
+\begin_inset Formula $x\in W^{\bot}$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\bot w$
+\end_inset
+
+ para todo 
+\begin_inset Formula $w\in W$
+\end_inset
+
+, en particular para todo 
+\begin_inset Formula $w_{i}\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ tal que 
+\begin_inset Formula $w=\alpha_{1}w_{1}+\ldots+\alpha_{n}w_{n}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+w\cdot x=\alpha_{1}\underbrace{\left(w_{1}\cdot x\right)}_{0}+\ldots+\alpha_{n}\underbrace{\left(w_{n}\cdot x\right)}_{0}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Veamos que satisface los axiomas de clausura:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Para cualquier 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ sean 
+\begin_inset Formula $x,x'\in W^{\bot}$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\cdot w=x'\cdot w=0$
+\end_inset
+
+ y como 
+\begin_inset Formula $\left(x+x'\right)\cdot w=x\cdot w+x'\cdot w=0$
+\end_inset
+
+ resulta que 
+\begin_inset Formula $x+x'\in W^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para cualquier 
+\begin_inset Formula $w\in W$
+\end_inset
+
+ sea 
+\begin_inset Formula $x\in W^{\bot}$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\cdot w=0$
+\end_inset
+
+ y como 
+\begin_inset Formula $\left(\alpha x\right)\cdot w=\alpha\left(x\cdot w\right)=0$
+\end_inset
+
+ resulta que 
+\begin_inset Formula $\alpha x\in W^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Relacion entre complemento ortogonal y espacio nulo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A\in\mathbb{R}^{m\times n}$
+\end_inset
+
+ entonces el complemento ortogonal del espacio fila de 
+\begin_inset Formula $A$
+\end_inset
+
+ es el espacio nulo de 
+\begin_inset Formula $A$
+\end_inset
+
+ y el complemento ortogonal del espacio columna de 
+\begin_inset Formula $A$
+\end_inset
+
+ es el espacio nulo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ax=0=\left[\begin{array}{c}
+A_{1}x\\
+\hline \vdots\\
+\hline A_{n}x
+\end{array}\right]=\left[\begin{array}{c}
+0\\
+\vdots\\
+0
+\end{array}\right]$
+\end_inset
+
+, luego 
+\begin_inset Formula $x$
+\end_inset
+
+ es ortogonal a cada vector fila de 
+\begin_inset Formula $A$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $x\in\mathcal{F}\left(A\right)^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De manera reciproca si 
+\begin_inset Formula $x\in\mathcal{F}\left(A\right)^{\bot}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $x$
+\end_inset
+
+ es ortogonal a todo vector en 
+\begin_inset Formula $\mathcal{F}\left(A\right)$
+\end_inset
+
+, en particular a los vectores filas de 
+\begin_inset Formula $A$
+\end_inset
+
+ y asi resulta 
+\begin_inset Formula $Ax=0\Rightarrow x\in\mathcal{N}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Usando este resultado para 
+\begin_inset Formula $A^{t}$
+\end_inset
+
+ obtenemos la otra igualdad.
+\end_layout
+
+\begin_layout Subsection
+Independencia lineal de conjuntos ortogonales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S=\left\{ u_{1},\ldots,u_{p}\right\} \subset\mathbb{R}^{n}$
+\end_inset
+
+ es un conjunto ortogonal de vectores distintos de 
+\begin_inset Formula $0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente independiente, por lo tanto es una base del espacio generado
+ por 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $c_{1}u_{1}+\ldots+c_{p}u_{p}=0$
+\end_inset
+
+ para algunos escalares 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ Entonces:
+\begin_inset Formula 
+\[
+0=0\cdot u_{1}=\left(c_{1}u_{1}+\ldots+c_{p}u_{p}\right)\cdot u_{1}=c_{1}\left(u_{1}\cdot u_{1}\right)+\ldots+c_{p}\left(u_{p}\cdot u_{1}\right)=c_{1}\left(u_{1}\cdot u_{1}\right)=0\Rightarrow c_{1}=0
+\]
+
+\end_inset
+
+De forma analoga obtenemos que 
+\begin_inset Formula $c_{i}=0$
+\end_inset
+
+, luego 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente independiente.
+\end_layout
+
+\begin_layout Subsection
+Combinacion lineal ortogonal
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S=\left\{ u_{1},\ldots,u_{p}\right\} $
+\end_inset
+
+ una base ortogonal de un subespacio 
+\begin_inset Formula $W$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, entonces para cada 
+\begin_inset Formula $y\in W$
+\end_inset
+
+, los coeficientes de la combinacion lineal 
+\begin_inset Formula $y=c_{1}u_{1}+\ldots+c_{p}u_{p}$
+\end_inset
+
+ estan dados por 
+\begin_inset Formula $c_{j}=\frac{y\cdot u_{j}}{u_{j}\cdot u_{j}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+La ortogonalidad de 
+\begin_inset Formula $S$
+\end_inset
+
+ nos permite afirmar que: 
+\begin_inset Formula 
+\[
+\underbrace{y\cdot u_{j}}_{\left(1\right)}=\left(c_{1}u_{1}+\ldots+c_{p}u_{p}\right)\cdot u_{j}=c_{j}\underbrace{\left(u_{j}\cdot u_{j}\right)}_{\left(2\right)}\Rightarrow c_{j}=\frac{\overbrace{y\cdot u_{j}}^{\left(1\right)}}{\underbrace{u_{j}\cdot u_{j}}_{\left(2\right)}}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Caracterizacion de las matrices ortonormales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Una matriz tiene columnas ortonormales si y solo si 
+\begin_inset Formula $U^{t}U=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $m=3=n$
+\end_inset
+
+ y sea 
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+u_{1} & u_{2} & u_{3}\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+ luego
+\begin_inset Formula 
+\[
+\begin{array}{c|ccc}
+U^{t}U & u_{1} & u_{2} & u_{3}\\
+\hline u_{1}^{t} & u_{1}^{t}\cdot u_{1} & u_{1}^{t}\cdot u_{2} & u_{1}^{t}\cdot u_{3}\\
+u_{2}^{t} & u_{2}^{t}\cdot u_{1} & u_{2}^{t}\cdot u_{2} & u_{2}^{t}\cdot u_{3}\\
+u_{3}^{t} & u_{3}^{t}\cdot u_{1} & u_{3}^{t}\cdot u_{2} & u_{3}^{t}\cdot u_{3}
+\end{array}
+\]
+
+\end_inset
+
+de donde sigue el resultado.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de las matrices ortonormales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $U\in\mathbb{R}^{m\times n}$
+\end_inset
+
+ con columnas ortonormales y sean 
+\begin_inset Formula $x,y\in\mathbb{R}^{n}$
+\end_inset
+
+ entonces se tiene que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert Ux\right\Vert =\left\Vert x\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Ux\cdot Uy=x\cdot y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Ux\cdot Uy=0\iff x\cdot y=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Teorema de la descomposicion ortogonal
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ un subespacio de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, entonces todo 
+\begin_inset Formula $y\in\mathbb{R}^{n}$
+\end_inset
+
+ puede escribirse de forma unica como 
+\begin_inset Formula $y=\hat{y}+z$
+\end_inset
+
+ donde 
+\begin_inset Formula $\hat{y}\in W$
+\end_inset
+
+ y 
+\begin_inset Formula $z\in W^{\bot}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De hecho si 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{p}\right\} $
+\end_inset
+
+ es cualquier base ortogonal de 
+\begin_inset Formula $W$
+\end_inset
+
+ entonces: 
+\begin_inset Formula 
+\[
+\hat{y}=\frac{y\cdot u_{1}}{u_{1}\cdot u_{1}}u_{1}+\ldots+\frac{y\cdot u_{p}}{u_{p}\cdot u_{p}}u_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{p}\right\} $
+\end_inset
+
+ base ortogonal de 
+\begin_inset Formula $W$
+\end_inset
+
+ y definimos 
+\begin_inset Formula 
+\[
+\hat{y}:=\frac{y\cdot u_{1}}{u_{1}\cdot u_{1}}u_{1}+\ldots+\frac{y\cdot u_{p}}{u_{p}\cdot u_{p}}u_{p}
+\]
+
+\end_inset
+
+ entonces 
+\begin_inset Formula $\hat{y}\in W$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $z=y-\hat{y}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+z\cdot u_{1}=\left(y-\hat{y}\right)\cdot u_{1}=y\cdot u_{1}-\hat{y}\cdot u_{1}=y\cdot u_{1}-\left[\frac{y\cdot u_{1}}{u_{1}\cdot u_{1}}\left(u_{1}\cdot u_{1}\right)+\underbrace{\ldots}_{=0}+\frac{y\cdot u_{p}}{u_{p}\cdot u_{p}}\underbrace{\left(u_{p}\cdot u_{1}\right)}_{=0}\right]=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=y\cdot u_{1}-\left[\frac{y\cdot u_{1}}{u_{1}\cdot u_{1}}\left(u_{1}\cdot u_{1}\right)\right]=y\cdot u_{1}-\left[y\cdot u_{1}\right]=0
+\]
+
+\end_inset
+
+De manera analoga obtenemos que 
+\begin_inset Formula $z\bot u_{j}$
+\end_inset
+
+ para 
+\begin_inset Formula $j\in\left\{ 1,\ldots,p\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para ver la unicidad supongamos que 
+\begin_inset Formula $y$
+\end_inset
+
+ puede escribirse como 
+\begin_inset Formula $y=\hat{y}_{1}+z_{1}$
+\end_inset
+
+ y como 
+\begin_inset Formula $y=\hat{y}_{2}+z_{2}$
+\end_inset
+
+ con 
+\begin_inset Formula $\hat{y}_{1},\hat{y}_{2}\in W^{\bot}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $y=\hat{y}_{1}+z_{1}=\hat{y}_{2}+z_{2}\Rightarrow\underbrace{\hat{y}_{1}-\hat{y}_{2}}_{v\in W}=\underbrace{z_{2}-z_{1}}_{v\in W^{\bot}}$
+\end_inset
+
+, luego 
+\begin_inset Formula $v\cdot v=0\Rightarrow\begin{cases}
+\hat{y}_{1}-\hat{y}_{2} & =0\\
+z_{2}-z_{1} & =0
+\end{cases}\Rightarrow\hat{y}_{1}=\hat{y}_{2}\land z_{1}=z_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de la mejor aproximacion
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $W$
+\end_inset
+
+ un subespacio de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $y\in\mathbb{R}^{n}$
+\end_inset
+
+ e 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ la proyeccion ortogonal de 
+\begin_inset Formula $y$
+\end_inset
+
+ sobre 
+\begin_inset Formula $W$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\hat{y}$
+\end_inset
+
+ es el vector de 
+\begin_inset Formula $W$
+\end_inset
+
+ mas cercano a 
+\begin_inset Formula $y$
+\end_inset
+
+ en el sentido de que 
+\begin_inset Formula $\left\Vert y-\hat{y}\right\Vert <\left\Vert y-v\right\Vert $
+\end_inset
+
+ para todo 
+\begin_inset Formula $v\in W$
+\end_inset
+
+ (
+\begin_inset Formula $v\neq\hat{y}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $v\in W$
+\end_inset
+
+ (
+\begin_inset Formula $v\neq\hat{y}$
+\end_inset
+
+), luego 
+\begin_inset Formula $\hat{y}-v\in W$
+\end_inset
+
+.
+ Ademas segun el teorema de la descomposicion ortogonal 
+\begin_inset Formula $y-\hat{y}\in W^{\bot}$
+\end_inset
+
+, en particular 
+\begin_inset Formula $y-\hat{y}\bot\hat{y}-v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Usando el teorema de Pitagoras, 
+\begin_inset Formula $\text{\ensuremath{\left\Vert y-\hat{y}\right\Vert ^{2}+\left\Vert \hat{y}-v\right\Vert ^{2}=\left\Vert y-\hat{y}+\hat{y}-v\right\Vert ^{2}=\left\Vert y-v\right\Vert ^{2}}}$
+\end_inset
+
+ y puesto que 
+\begin_inset Formula $v\neq\hat{y}\Rightarrow\hat{y}-v\neq0\Rightarrow\left(\hat{y}-v\right)\cdot\left(\hat{y}-v\right)>0\iff\left\Vert \hat{y}-v\right\Vert ^{2}>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sumando a ambos lados de la desigualdad tenemos 
+\begin_inset Formula $\text{\ensuremath{\left\Vert \hat{y}-v\right\Vert ^{2}+\left\Vert y-\hat{y}\right\Vert ^{2}>\left\Vert y-\hat{y}\right\Vert ^{2}}}$
+\end_inset
+
+ y por lo visto usando el teorema de pitagoras obtenemos 
+\begin_inset Formula $\text{\ensuremath{\left\Vert y-v\right\Vert ^{2}>\left\Vert y-\hat{y}\right\Vert ^{2}}}$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\text{\ensuremath{\left\Vert y-v\right\Vert >\left\Vert y-\hat{y}\right\Vert }}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $y\in W=\left\langle \left\{ u_{1},\ldots,u_{p}\right\} \right\rangle $
+\end_inset
+
+ entonces 
+\begin_inset Formula $proy_{W}y=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $y=c_{1}u_{1}+\ldots+c_{p}u_{p}$
+\end_inset
+
+, luego: 
+\begin_inset Formula 
+\[
+proy_{W}y=\frac{\overbrace{y\cdot u_{1}}^{c_{1}u_{1}\cdot u_{1}}}{u_{1}\cdot u_{1}}u_{1}+\ldots+\frac{\overbrace{y\cdot u_{p}}^{c_{p}u_{p}\cdot u_{p}}}{u_{p}\cdot u_{p}}u_{p}=c_{1}u_{1}+\ldots+c_{p}u_{p}=y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proyecciones sobre conjuntos ortonormales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\left\{ u_{1},\ldots,u_{p}\right\} $
+\end_inset
+
+ es base ortonormal de un subespacio 
+\begin_inset Formula $W$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $proy_{W}y=\left(y\cdot u_{1}\right)u_{1}+\ldots+\left(y\cdot u_{p}\right)u_{p}$
+\end_inset
+
+ y ademas si 
+\begin_inset Formula $U=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+u_{1} & \ldots & u_{p}\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+ entonces 
+\begin_inset Formula $proy_{W}y=UU^{t}y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+EJERCICIO\SpecialChar endofsentence
+
+\end_layout
+
+\begin_layout Subsection
+Algoritmo de Gram-Schmidt
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dada una base 
+\begin_inset Formula $\left\{ w_{1},\ldots,w_{p}\right\} $
+\end_inset
+
+ para un subespacio 
+\begin_inset Formula $W$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+, definiendo:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{1}=w_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{2}=w_{2}-\frac{w_{2}\cdot v_{1}}{v_{1}\cdot v_{1}}v_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{3}=w_{3}-\frac{w_{3}\cdot v_{1}}{v_{1}\cdot v_{1}}v_{1}-\frac{w_{3}\cdot v_{2}}{v_{2}\cdot v_{2}}v_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{p}=w_{p}-\frac{w_{p}\cdot v_{1}}{v_{1}\cdot v_{1}}v_{1}-\frac{w_{p}\cdot v_{2}}{v_{2}\cdot v_{2}}v_{2}-\ldots-\frac{w_{p}\cdot v_{p}}{v_{p}\cdot v_{p}}v_{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+entonces 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+ es base ortogonal de 
+\begin_inset Formula $W_{k}=\left\langle \left\{ w_{1},\ldots,w_{k}\right\} \right\rangle $
+\end_inset
+
+ para 
+\begin_inset Formula $\text{\ensuremath{1\leq k\leq p}}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+CASO BASE: Trivial pues 
+\begin_inset Formula $v_{1}=w_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+CASO INDUCTIVO: Supongamos que se probo el resultado para 
+\begin_inset Formula $k$
+\end_inset
+
+, es decir que 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k}\right\} $
+\end_inset
+
+ es base ortogonal de 
+\begin_inset Formula $W_{k}=\left\langle \left\{ w_{1},\ldots,w_{k}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Veamos que 
+\begin_inset Formula $B=\left\{ v_{1},\ldots,v_{k},v_{k+1}\right\} $
+\end_inset
+
+ es ortogonal.
+ Para 
+\begin_inset Formula $\text{\ensuremath{i,j\in\left\{ 1,\ldots,k\right\} /i\neq j}}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $v_{i}\perp v_{j}$
+\end_inset
+
+ por hipotesis inductiva.
+ Ademas:
+\begin_inset Formula 
+\[
+v_{k+1}\cdot v_{i}=\left(w_{k+1}-\frac{w_{k+1}\cdot v_{1}}{v_{1}\cdot v_{1}}v_{1}-\ldots-\frac{w_{k+1}\cdot v_{k}}{v_{k}\cdot v_{k}}v_{k}\right)\cdot v_{i}=w_{k+1}\cdot v_{i}-\frac{w_{k+1}\cdot v_{i}}{v_{i}\cdot v_{i}}v_{i}\cdot v_{i}=0
+\]
+
+\end_inset
+
+luego 
+\begin_inset Formula $\left\{ v_{1},\ldots,v_{k},v_{k+1}\right\} $
+\end_inset
+
+ es ortogonal y en consecuencia tambien es linealmente independiente.
+ Como ademas 
+\begin_inset Formula $\left|B\right|=\left|W_{k+1}\right|$
+\end_inset
+
+ resulta que tambien es base.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

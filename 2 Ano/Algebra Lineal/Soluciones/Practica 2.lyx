@@ -1,0 +1,3983 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Espacios vectoriales.
+ Primera parte.
+\end_layout
+
+\begin_layout Enumerate
+Analizar si los siguientes conjunto con las operaciones definidas son un
+ espacio vectorial:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El conjunto de los numeros reales positivos 
+\begin_inset Formula $\left(\mathbb{R}^{+}\right)$
+\end_inset
+
+, con la suma y el producto por escalar usuales.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de los numeros reales positivos 
+\begin_inset Formula $\left(\mathbb{R}^{+}\right)$
+\end_inset
+
+, con la suma 
+\begin_inset Formula $x+y$
+\end_inset
+
+ definida como 
+\begin_inset Formula $xy$
+\end_inset
+
+ y el producto 
+\begin_inset Formula $cx$
+\end_inset
+
+ como 
+\begin_inset Formula $x^{c}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de las funciones pares, con la suma y producto por escalares
+ usuales.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de las funciones continuas, con el producto 
+\begin_inset Formula $cf$
+\end_inset
+
+ definido como 
+\begin_inset Formula $\left(cf\right)\left(x\right)=f\left(cx\right)$
+\end_inset
+
+ y la suma habitual de funciones.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de las funciones reales biyectivas, con el producto por escalar
+ habitual y la suma 
+\begin_inset Formula $f+g$
+\end_inset
+
+ definida como 
+\begin_inset Formula $\left(f+g\right)\left(x\right)=f\left[g\left(x\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de los polinomios a coeficientes reales de grado a lo sumo 3,
+ incluido el polinomio nulo, con la suma y producto por escalar habituales.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ con el producto por escalar habitual y la suma de 
+\begin_inset Formula $u=\left(u_{1},u_{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $v=\left(v_{1},v_{2}\right)$
+\end_inset
+
+ definida como 
+\begin_inset Formula $u+v=\left(u_{1}+v_{1}+1,u_{2}+v_{2}+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Dicho conjunto no es un espacio vectorial pues no respeta el axioma de clausura
+ del producto por escalares.
+ Por ejemplo, sean 
+\begin_inset Formula $\boldsymbol{v}\in\mathbb{R}^{+}/\boldsymbol{v}=\boldsymbol{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\mathbb{R}/\alpha=-1$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\alpha\boldsymbol{\cdot v}=\boldsymbol{-1}\notin\mathbb{R}^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+En efecto, veamos que verifica los axiomas de espacio vectorial:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Clausura de la suma: Sean 
+\begin_inset Formula $\boldsymbol{u},\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{\boldsymbol{u\kreuz v}=uv>0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Clausura del producto con escalares: Sean 
+\begin_inset Formula $\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\alpha\boldsymbol{\cdot v}=\boldsymbol{v^{\alpha}}>0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Conmutatividad de la suma: Sean 
+\begin_inset Formula $\boldsymbol{u},\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\text{\ensuremath{\boldsymbol{u\kreuz v}=uv=vu=\boldsymbol{v\kreuz u}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Asociatividad de la suma: Sean 
+\begin_inset Formula $\boldsymbol{u},\boldsymbol{v},\boldsymbol{w}\in\mathbb{R}^{+}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\text{\ensuremath{\boldsymbol{u\kreuz\left(v\kreuz w\right)}=u\left(vw\right)=\left(uv\right)w=\boldsymbol{\left(u\kreuz v\right)\kreuz w}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Neutro de la suma: Sea 
+\begin_inset Formula $\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+, luego para 
+\begin_inset Formula $\boldsymbol{n=1}\in\mathbb{R}^{+}$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+\boldsymbol{v\kreuz n}=v1=v=\boldsymbol{v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Existencia del opuesto: Sea 
+\begin_inset Formula $\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+, luego para 
+\begin_inset Formula $\text{\ensuremath{\boldsymbol{o}=\boldsymbol{\frac{1}{v}}\in\mathbb{R}^{+}}}$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+\boldsymbol{v\kreuz o}=v\frac{1}{v}=1=\boldsymbol{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Asociatividad del producto con escalares: Sean 
+\begin_inset Formula $\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\alpha\boldsymbol{\cdot}\left(\beta\boldsymbol{\cdot v}\right)=\alpha\left(v^{\beta}\right)=v^{\beta^{\alpha}}=v^{\beta\alpha}=v^{\alpha\beta}=v^{\alpha^{\beta}}=\beta\left(v^{\alpha}\right)=\beta\boldsymbol{\cdot}\left(\alpha\boldsymbol{\cdot v}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Neutro del producto con escalares: Sea 
+\begin_inset Formula $\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+, luego para el neutro multiplicativo de 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+1\boldsymbol{\cdot v}=v^{1}=v=\boldsymbol{v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Distributividad del producto respecto de la suma de vectores: Sean 
+\begin_inset Formula $\boldsymbol{u},\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+, y 
+\begin_inset Formula $\alpha\in\mathbb{R}$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+\alpha\boldsymbol{\cdot\left(u\kreuz v\right)}=\left(uv\right)^{\alpha}=u^{\alpha}v^{\alpha}=\alpha\boldsymbol{\cdot u\kreuz}\alpha\boldsymbol{\cdot v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Distributividad del producto respecto de la suma de escalares: Sean 
+\begin_inset Formula $\boldsymbol{v}\in\mathbb{R}^{+}$
+\end_inset
+
+, y 
+\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+\left(\alpha+\beta\right)\boldsymbol{\cdot v}=v^{\alpha+\beta}=v^{\alpha}v^{\beta}=\alpha\boldsymbol{\cdot v\kreuz}\beta\boldsymbol{\cdot v}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Dicho conjunto no es un espacio vectorial pues no respeta el axioma de clausura
+ del producto por un escalar.
+ Por ejemplo, sean 
+\begin_inset Formula $\boldsymbol{f}\in V$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\mathbb{R}/\alpha=0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $0\boldsymbol{\cdot f}=0f\left(x\right)=0$
+\end_inset
+
+ que claramente no es inyectiva.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Dicho conjunto no es un espacio vectorial pues no respeta el axioma distributivi
+dad del producto respecto de la suma de escalares.
+ Por ejemplo, sean 
+\begin_inset Formula $\boldsymbol{v}=\left(v_{1},v_{2}\right)\in\mathbb{R}^{2}$
+\end_inset
+
+, y 
+\begin_inset Formula $\alpha,\beta\in\mathbb{R}$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+\left(\alpha+\beta\right)\boldsymbol{\cdot v}=\left(\left(\alpha+\beta\right)v_{1},\left(\alpha+\beta\right)v_{2}\right)=\left(\alpha v_{1}+\beta v_{1},\alpha v_{1}+\beta v_{1}\right)
+\]
+
+\end_inset
+
+pero
+\begin_inset Formula 
+\[
+\alpha\boldsymbol{\cdot v\kreuz}\beta\boldsymbol{\cdot v}=\left(\alpha v_{1},\alpha v_{2}\right)\kreuz\left(\beta v_{1},\beta v_{2}\right)=\left(\alpha v_{1}+\beta v_{1}+1,\alpha v_{1}+\beta v_{1}+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(V,\mathbb{R},+,\cdot\right)$
+\end_inset
+
+ un espacio vectorial.
+ En particular sabemos que existe 
+\begin_inset Formula $\boldsymbol{0}\in V/\boldsymbol{0}+\boldsymbol{x}=\boldsymbol{x}$
+\end_inset
+
+ para todo 
+\begin_inset Formula $\boldsymbol{x}\in V$
+\end_inset
+
+; y que para todo 
+\begin_inset Formula $\boldsymbol{x}\in V$
+\end_inset
+
+ existe un vector 
+\begin_inset Formula $\widetilde{\boldsymbol{x}}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\boldsymbol{x}+\boldsymbol{\widetilde{x}}=\boldsymbol{0}$
+\end_inset
+
+.
+ Demuestre los siguientes enunciados:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Unicidad del neutro: si 
+\begin_inset Formula $\boldsymbol{0'}\in V$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $\boldsymbol{0'}+\boldsymbol{x}=\boldsymbol{x}$
+\end_inset
+
+ para todo 
+\begin_inset Formula $\boldsymbol{x}\in V$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\boldsymbol{0'}=\boldsymbol{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Unicidad del opuesto: dado 
+\begin_inset Formula $\boldsymbol{x}\in V$
+\end_inset
+
+, si 
+\begin_inset Formula $\boldsymbol{\widetilde{x}'}\in V$
+\end_inset
+
+ es tal que 
+\begin_inset Formula $\boldsymbol{x}+\boldsymbol{\widetilde{x}'}=\boldsymbol{0},$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\boldsymbol{\widetilde{x}'}=\boldsymbol{\widetilde{x}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Propiedad cancelativa: si 
+\begin_inset Formula $\boldsymbol{z}+\boldsymbol{x}=\boldsymbol{z}+\boldsymbol{y}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\boldsymbol{x}=\boldsymbol{y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha\cdot\boldsymbol{0}=\boldsymbol{0}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall\alpha\in\mathbb{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\cdot v=\boldsymbol{0}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall v\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-\alpha\cdot\boldsymbol{v}\right)=\alpha\cdot\left(\boldsymbol{-v}\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $\boldsymbol{-v}$
+\end_inset
+
+ es el opuesto de 
+\begin_inset Formula $\boldsymbol{v}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall v\in V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\alpha\cdot\boldsymbol{v}=\boldsymbol{0}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ o 
+\begin_inset Formula $\boldsymbol{v}=\boldsymbol{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Por un lado 
+\begin_inset Formula $\boldsymbol{0}+\boldsymbol{0'}=\boldsymbol{0}$
+\end_inset
+
+ y por otro 
+\begin_inset Formula $\boldsymbol{0}+\boldsymbol{0'}=\boldsymbol{0'}$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $\boldsymbol{0}=\boldsymbol{0'}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+En efecto 
+\begin_inset Formula $\boldsymbol{\widetilde{x}}=\boldsymbol{\widetilde{x}}+\boldsymbol{0}=\boldsymbol{\widetilde{x}}+\overbrace{\boldsymbol{x}+\boldsymbol{\widetilde{x}'}}^{\boldsymbol{0}}=\underbrace{\boldsymbol{\widetilde{x}}+\boldsymbol{x}}_{\boldsymbol{0}}+\boldsymbol{\widetilde{x}'}=\boldsymbol{\widetilde{x}'}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar cuales de los siguientes conjuntos son un subespacio de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El conjunto formado por las 3-uplas 
+\begin_inset Formula $\left(b_{1},b_{2},b_{3}\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $b_{1}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto formado por las 3-uplas 
+\begin_inset Formula $\left(b_{1},b_{2},b_{3}\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $b_{1}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto formado por las 3-uplas 
+\begin_inset Formula $\left(b_{1},b_{2},b_{3}\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $b_{1}b_{2}b_{3}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto formado por las 3-uplas 
+\begin_inset Formula $\left(x,y,z\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x+y-2x=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto formado por las 3-uplas 
+\begin_inset Formula $\left(b_{1},b_{2},b_{3}\right)$
+\end_inset
+
+ que son combinacion lineal de 
+\begin_inset Formula $v=\left(1,4,0\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $w=\left(2,2,2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto formado por las 3-uplas 
+\begin_inset Formula $\left(b_{1},b_{2},b_{3}\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $b_{1}+b_{2}+b_{3}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto formado por las 3-uplas 
+\begin_inset Formula $\left(b_{1},b_{2},b_{3}\right)$
+\end_inset
+
+ que verifican 
+\begin_inset Formula $b_{1}\leq b_{2}\leq b_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+En efecto el conjunto indicado es subconjunto de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ y ademas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se verifica la clausura de la suma: 
+\begin_inset Formula $\left(0,u_{2},u_{3}\right)+\left(0,v_{2},v_{3}\right)=\left(0,u_{2}+v_{2},u_{3}+v_{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Se verifica la clausura del producto por escalares: 
+\begin_inset Formula $\alpha\left(0,u_{2},u_{3}\right)=\left(0,\alpha u_{2},\alpha u_{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El conjunto indicado no es un subespacio de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ pues no verifica la clausura de la suma: 
+\begin_inset Formula $\left(1,u_{2},u_{3}\right)+\left(1,v_{2},v_{3}\right)=\left(2,u_{2}+v_{2},u_{3}+v_{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto indicado no es un subespacio de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ pues no verifica la clausura de la suma: 
+\begin_inset Formula $\left(0,2,3\right)+\left(1,0,3\right)=\left(1,2,6\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto indicado no es un subespacio de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ pues no verifica la clausura del producto: 
+\begin_inset Formula $0\left(0,0,-2\right)=\left(0,0,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto indicado no es un subespacio de 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+ pues no verifica la clausura del producto: 
+\begin_inset Formula $-1\left(1,2,3\right)=\left(-1,-2,-3\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que las dos propiedades que definen un subespacio vectorial (i.e.
+ que la suma sea cerrada en el conjunto y que el producto por escalar tambien
+ lo sea) son propiedades independientes una de otra.
+ Para ello buscar un conjunto que sea cerrado bajo la suma pero no bajo
+ el producto por escalar y otro conjunto que cumpla lo contrario.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A=\left\{ \left(x,y,z\right)\in\mathbb{R}^{3}:x>0\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left\{ \left(x,y,z\right)\in\mathbb{R}^{3}:x=0\lor y=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ es cerrado bajo la suma pues 
+\begin_inset Formula 
+\[
+\left(x_{1},y_{1},z_{1}\right)+\left(x_{2},y_{2},z_{2}\right)=\left(\overbrace{x_{1}+x_{2}}^{>0},y_{1}+y_{2},z_{1}+z_{2}\right)
+\]
+
+\end_inset
+
+ y sin embargo no es cerrado bajo el producto pues 
+\begin_inset Formula $0\left(1,0,0\right)=\left(0,0,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+ es cerrado bajo el producto pues si 
+\begin_inset Formula $x=0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\alpha\left(x,y,z\right)=\left(0,\alpha y,\alpha z\right)$
+\end_inset
+
+ o si 
+\begin_inset Formula $y=0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\alpha\left(x,y,z\right)=\left(\alpha x,0,\alpha z\right)$
+\end_inset
+
+ y sin embargo no es cerrado bajo la suma pues 
+\begin_inset Formula $\left(0,1,0\right)+\left(1,0,0\right)=\left(1,1,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar cuales de los siguientes conjuntos son subespacios de 
+\begin_inset Formula $\mathbb{R}^{n\times n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El conjunto de las matrices triangulares.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de las matrices singulares.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de las matrices simetricas.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ En efecto 
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right]+\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right]=\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ En efecto 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 1\\
+1 & 1
+\end{array}\right]+\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right]=\left[\begin{array}{cc}
+1 & 2\\
+1 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(V,\mathbb{R},+,\cdot\right)$
+\end_inset
+
+ un espacio vectorial y sean 
+\begin_inset Formula $U$
+\end_inset
+
+ y 
+\begin_inset Formula $W$
+\end_inset
+
+ subespacios de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Probar que
+\begin_inset Formula 
+\[
+U+W=\left\{ v\in V/v=u+w\land u\in U,w\in W\right\} 
+\]
+
+\end_inset
+
+es un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Por definicion 
+\begin_inset Formula $\left(U+W\right)\subseteq V$
+\end_inset
+
+.
+ Veamos que satisface los axiomas de clausura:
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $x=\left(u_{1}+v_{1}\right)\in\left(U+W\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $y=\left(u_{2}+v_{2}\right)\in\left(U+W\right)$
+\end_inset
+
+ luego 
+\begin_inset Formula $x+y=u_{1}+v_{1}+u_{2}+v_{2}=\underbrace{u_{1}+u_{2}}_{\in U}+\underbrace{v_{2}+v_{2}}_{\in V}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\text{\ensuremath{\left(x+y\right)\in\left(U+W\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $x=\left(u+v\right)\in\left(U+W\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\mathbb{K}$
+\end_inset
+
+ luego 
+\begin_inset Formula $\alpha x=\underbrace{\alpha u}_{\in U}+\underbrace{\alpha v}_{\in V}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\text{\ensuremath{\left(\alpha x\right)\in\left(U+W\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]\text{ y }B=\left[\begin{array}{cc}
+0 & 0\\
+0 & -1
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describir un subespacio de 
+\begin_inset Formula $\mathbb{R}^{2\times2}$
+\end_inset
+
+ que contenga a 
+\begin_inset Formula $A$
+\end_inset
+
+ y no a 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si un subespacio de 
+\begin_inset Formula $\mathbb{R}^{2\times2}$
+\end_inset
+
+ contiene a 
+\begin_inset Formula $A$
+\end_inset
+
+ y a 
+\begin_inset Formula $B$
+\end_inset
+
+, ¿debe contener tambien a 
+\begin_inset Formula $I$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+Si consideremos el subespacio 
+\begin_inset Formula $V=\left\{ \left[\begin{array}{cc}
+\alpha & 0\\
+0 & 0
+\end{array}\right]\in\mathbb{R}^{2\times2}:\alpha\in\mathbb{R}\right\} $
+\end_inset
+
+, es facil ver que 
+\begin_inset Formula $A\in V$
+\end_inset
+
+ y 
+\begin_inset Formula $B\notin V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+En efecto puesto que un espacio vectorial es cerrado bajo la suma y producto
+ por escalares, si contiene a 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ tambien debe contener a 
+\begin_inset Formula $A+\left(-1\right)B=I$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explicitar el espacio columna y el espacio nulo de las siguientes matrices:
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{cc}
+1 & 2\\
+2 & 4
+\end{array}\right],B=\left[\begin{array}{cc}
+1 & 3\\
+2 & 6
+\end{array}\right],C=\left[\begin{array}{cc}
+1 & 2\\
+0 & 0\\
+0 & 0
+\end{array}\right],D=\left[\begin{array}{cc}
+1 & 0\\
+0 & 2\\
+0 & 0
+\end{array}\right],E=\left[\begin{array}{cc}
+1 & 0\\
+2 & 0\\
+0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathcal{C}\left(A\right) & =\left\{ v\in\mathbb{R}^{2}:v=\alpha\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]+\beta\left[\begin{array}{c}
+2\\
+4
+\end{array}\right]\right\} =\left\{ v\in\mathbb{R}^{2}:v=\alpha\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]+\beta2\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]\right\} \\
+ & =\left\{ v\in\mathbb{R}^{2}:v=\left(\alpha+2\beta\right)\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]\right\} =\left\{ v\in\mathbb{R}^{2}:v=x\left[\begin{array}{c}
+1\\
+2
+\end{array}\right]\right\} =\left\{ \left[\begin{array}{c}
+x\\
+2x
+\end{array}\right]:x\in\mathbb{R}\right\} 
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{C}\left(B\right)=COMPLETAR
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{C}\left(C\right)=COMPLETAR
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\mathcal{C}\left(D\right) & =\left\{ v\in\mathbb{R}^{3}:v=\alpha\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]+\beta\left[\begin{array}{c}
+0\\
+2\\
+0
+\end{array}\right]\right\} =\left\{ v\in\mathbb{R}^{3}:v=\alpha\left[\begin{array}{c}
+1\\
+0\\
+0
+\end{array}\right]+\beta2\left[\begin{array}{c}
+0\\
+1\\
+0
+\end{array}\right]\right\} \\
+ & =\left\{ v\in\mathbb{R}^{3}:v=\left[\begin{array}{c}
+x\\
+0\\
+0
+\end{array}\right]+\left[\begin{array}{c}
+0\\
+y\\
+0
+\end{array}\right]\right\} =\left\{ \left[\begin{array}{c}
+x\\
+y\\
+0
+\end{array}\right]:x,y\in\mathbb{R}\right\} 
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{C}\left(E\right)=COMPLETAR
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Para que vectores 
+\begin_inset Formula $b=\left(b_{1},b_{2},b_{3}\right)^{t}$
+\end_inset
+
+ los siguientes sistemas tienen solucion?
+\begin_inset Formula 
+\[
+S_{1}=\underbrace{\left[\begin{array}{ccc}
+1 & 4 & 2\\
+2 & 8 & 4\\
+-1 & -4 & -2
+\end{array}\right]}_{A_{1}}\cdot\left[\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]=\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+b_{3}
+\end{array}\right]\text{ y }S_{2}=\underbrace{\left[\begin{array}{cc}
+1 & 4\\
+2 & 9\\
+-1 & -4
+\end{array}\right]}_{A_{2}}\cdot\left[\begin{array}{c}
+x_{1}\\
+x_{2}
+\end{array}\right]=\left[\begin{array}{c}
+b_{1}\\
+b_{2}\\
+b_{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+Notese que 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ es una combinacion lineal de las columnas de 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+, es decir que buscamos que 
+\begin_inset Formula $b\in\mathcal{C}\left(A_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathcal{C}\left(A_{1}\right) & =\left\{ v\in\mathbb{R}^{3}:\alpha\left[\begin{array}{c}
+1\\
+2\\
+-1
+\end{array}\right]+\beta\left[\begin{array}{c}
+4\\
+8\\
+-4
+\end{array}\right]+\gamma\left[\begin{array}{c}
+2\\
+4\\
+-2
+\end{array}\right]\right\} \\
+ & =\left\{ v\in\mathbb{R}^{3}:\alpha\left[\begin{array}{c}
+1\\
+2\\
+-1
+\end{array}\right]+\beta4\left[\begin{array}{c}
+1\\
+2\\
+-1
+\end{array}\right]+\gamma2\left[\begin{array}{c}
+1\\
+2\\
+-1
+\end{array}\right]\right\} =\left\{ \left[\begin{array}{c}
+x\\
+2x\\
+-x
+\end{array}\right]:x\in\mathbb{R}\right\} 
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{C}\left(A_{2}\right)=COMPLETAR
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dadas 
+\begin_inset Formula $A\in\mathbb{R}^{m\times n}$
+\end_inset
+
+ y 
+\begin_inset Formula $B\in\mathbb{R}^{n\times p}$
+\end_inset
+
+, probar que el espacio columna de 
+\begin_inset Formula $AB$
+\end_inset
+
+ esta contenido en el espacio columna de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Dar un ejemplo donde dicha contencion sea estricta.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A_{k},B_{k},C_{k}$
+\end_inset
+
+ las columnas de 
+\begin_inset Formula $A,B$
+\end_inset
+
+ y 
+\begin_inset Formula $C=AB$
+\end_inset
+
+, luego la k-esima columna de 
+\begin_inset Formula $C$
+\end_inset
+
+ es una combinacion lineal de las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+ con los coeficientes de 
+\begin_inset Formula $B_{k}$
+\end_inset
+
+: 
+\begin_inset Formula $AB=\left[\begin{array}{ccc}
+\mid & \mid & \mid\\
+AB_{1} & \ldots & AB_{p}\\
+\mid & \mid & \mid
+\end{array}\right]$
+\end_inset
+
+.
+ Es decir: 
+\begin_inset Formula 
+\[
+C_{k}=b_{1k}\underbrace{\left[\begin{array}{c}
+a_{11}\\
+a_{21}\\
+\vdots\\
+a_{m1}
+\end{array}\right]}_{A_{1}}+b_{2k}\underbrace{\left[\begin{array}{c}
+a_{12}\\
+a_{22}\\
+\vdots\\
+a_{m2}
+\end{array}\right]}_{A_{2}}+\ldots+b_{nk}\underbrace{\left[\begin{array}{c}
+a_{1n}\\
+a_{2n}\\
+\vdots\\
+a_{mn}
+\end{array}\right]}_{A_{n}}
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $C_{k}\in\mathcal{C}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $x\in\mathcal{C}\left(C\right)$
+\end_inset
+
+ luego 
+\begin_inset Formula $x=\alpha_{1}C_{1}+\ldots+\alpha_{p}C_{p}$
+\end_inset
+
+ y como cada 
+\begin_inset Formula $C_{i}\in\mathcal{C}\left(A\right)$
+\end_inset
+
+ por ser combinacion de las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+, esta nueva combinacion tambien pertenece.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuales de los siguientes conjuntos son subespacios de 
+\begin_inset Formula $\mathbb{R}^{\infty}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ x=\left(x_{1},x_{2},\ldots\right)\in\mathbb{R}^{\infty}:\left|\left\{ i\in\mathbb{N}/x_{i}\neq0\right\} \right|\in\mathbb{N}_{0}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ x=\left(x_{1},x_{2},\ldots\right)\in\mathbb{R}^{\infty}:\exists i_{0}\in\mathbb{N}/x_{i}=0,\forall i\geq i_{0}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ x=\left(x_{1},x_{2},\ldots\right)\in\mathbb{R}^{\infty}:x_{i}\geq x_{i+1},\forall i\in\mathbb{N}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Espacios vectoriales.
+ Segunda parte.
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar el siguiente enunciado: Sean 
+\begin_inset Formula $\mathcal{U}_{1},\mathcal{U}_{2}\subset V$
+\end_inset
+
+ subespacios.
+ Luego 
+\begin_inset Formula $V=\mathcal{U}_{1}\oplus\mathcal{U}_{2}$
+\end_inset
+
+ si y solo si se verifican las siguientes condiciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $V=\mathcal{U}_{1}+\mathcal{U}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{U}_{1}\cap\mathcal{U}_{2}=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Encontrar un contraejemplo para demostrar que este resultado no puede extenderse
+ a 
+\begin_inset Formula $m$
+\end_inset
+
+ subespacios.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Por definicion de suma directa 
+\begin_inset Formula $V=\mathcal{U}_{1}+\mathcal{U}_{2}$
+\end_inset
+
+.
+ Ademas como 
+\begin_inset Formula $\mathcal{U}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{U}_{2}$
+\end_inset
+
+ son espacios vectoriales resulta que 
+\begin_inset Formula $0\in\mathcal{U}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $0\in\mathcal{U}_{2}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $0\in\mathcal{U}_{1}\cap\mathcal{U}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supongamos existe un vector 
+\begin_inset Formula $u\in\mathcal{U}_{1}\cap\mathcal{U}_{2}/u\neq0$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $u\in V$
+\end_inset
+
+ existen unicos 
+\begin_inset Formula $u_{1}\in\mathcal{U}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $u_{2}\in\mathcal{U}_{2}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $u=u_{1}+u_{2}$
+\end_inset
+
+.
+ Sin embargo 
+\begin_inset Formula $u=\underbrace{0}_{\in\mathcal{U}_{1}}+\underbrace{u}_{\in\mathcal{U}_{2}}$
+\end_inset
+
+ y tambien 
+\begin_inset Formula $u=\underbrace{u}_{\in\mathcal{U}_{1}}+\underbrace{0}_{\in\mathcal{U}_{2}}$
+\end_inset
+
+.
+ Contradiccion.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sabemos que 
+\begin_inset Formula $V=\mathcal{U}_{1}+\mathcal{U}_{2}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ y supongamos existen 
+\begin_inset Formula $u_{1},\widehat{u_{1}}\in\mathcal{U}_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $u_{2},\widehat{u_{2}}\in\mathcal{U}_{2}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $v=u_{1}+u_{2}=\widehat{u_{1}}+\widehat{u_{2}}$
+\end_inset
+
+ luego 
+\begin_inset Formula $\underbrace{u_{1}-\widehat{u_{1}}}_{\in\mathcal{U}_{1}}=\underbrace{\widehat{u_{2}}-u_{2}}_{\in\mathcal{U}_{2}}$
+\end_inset
+
+ y por nuestra otra hipotesis resulta 
+\begin_inset Formula $u_{1}-\widehat{u_{1}}=0\iff u_{1}=\widehat{u_{1}}$
+\end_inset
+
+ y analogamente 
+\begin_inset Formula $u_{2}=\widehat{u_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $\mathcal{U}_{1}=\left\langle \left\{ \left(1,0,0\right)\right\} \right\rangle ,\mathcal{U}_{2}=\left\langle \left\{ \left(1,1,0\right)\right\} \right\rangle ,\mathcal{U}_{3}=\left\langle \left\{ \left(1,2,0\right)\right\} \right\rangle $
+\end_inset
+
+, luego es facil ver que 
+\begin_inset Formula $\mathcal{U}_{1}\cap\mathcal{U}_{2}\cap\mathcal{U}_{3}=\left\{ 0\right\} $
+\end_inset
+
+ pero 
+\begin_inset Formula $\left(1,2,0\right)=1u_{3}=2u_{2}-u_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para cada uno de los siguientes conjuntos determinar si es un subespacio
+ de 
+\begin_inset Formula $\mathcal{C}\left(\mathbb{R}\right)$
+\end_inset
+
+ o explique por que no lo es:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left\{ f\in\mathcal{C}\left(\mathbb{R}\right):f\left(x\right)\leq0,\forall x\in\mathbb{R}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left\{ f\in\mathcal{C}\left(\mathbb{R}\right):f\left(0\right)=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=\left\{ f\in\mathcal{C}\left(\mathbb{R}\right):f\left(2\right)=0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El conjunto de funciones constantes
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E=\left\{ \alpha+\beta sen\left(x\right):\alpha,\beta\in\mathbb{R}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+No lo es pues no respera la clausura del producto por un escalar: Sea 
+\begin_inset Formula $f\left(x\right)=-1$
+\end_inset
+
+, luego 
+\begin_inset Formula $-f\left(x\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+En efecto, veamos que respeta las propiedades de clausura:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f,g\in A$
+\end_inset
+
+ luego 
+\begin_inset Formula $f+g\left(0\right)=f\left(0\right)+g\left(0\right)=0+0=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha f\left(0\right)=\alpha0=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Analogo.
+\end_layout
+
+\begin_layout Enumerate
+En efecto, veamos que respeta las propiedades de clausura:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f,g\in D/f\left(x\right)=c,g\left(x\right)=k$
+\end_inset
+
+ luego 
+\begin_inset Formula $f+g\left(x\right)=f\left(x\right)+g\left(x\right)=k+c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha f\left(x\right)=\alpha c$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{U}\subset\mathbb{R}^{2}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+ es cerrado bajo la multiplicacion por escalares pero no es un subespacio
+ de 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+ Dar un ejemplo de un subespacio no vacio de 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\mathcal{U}=\left\{ \left(x,0\right):x\in\mathbb{R}\right\} \cup\left\{ \left(0,y\right):y\in\mathbb{R}\right\} $
+\end_inset
+
+.
+ Es facil ver que es cerrado bajo el producto por escalares y no es subespacio
+ pues 
+\begin_inset Formula $\left(1,0\right)+\left(0,1\right)=\left(1,1\right)\notin\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $V=\left\{ \left(x,0\right):x\in\mathbb{R}\right\} $
+\end_inset
+
+ es claramente un subespacio de 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathbb{K}\left[x\right]$
+\end_inset
+
+ el espacio vectorial de los polinomios con coeficientes en 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, y sea 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+ el subespacio de 
+\begin_inset Formula $\mathbb{K}\left[x\right]$
+\end_inset
+
+ dado por 
+\begin_inset Formula $\mathcal{U}=\left\{ ax^{2}+bx^{5}:a,b\in\mathbb{K}\right\} $
+\end_inset
+
+.
+ Encontrar un subespacio 
+\begin_inset Formula $\mathcal{W}$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathbb{K}\left[x\right]$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathbb{K}\left[x\right]=\mathcal{U}\oplus\mathcal{W}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\mathcal{W}=\left\{ a_{0}+a_{1}x+a_{3}x^{3}+a_{4}x^{4}+{\displaystyle \sum_{i\in\mathbb{N}_{\geq6}}}a_{i}x^{i}:a_{i}\in\mathbb{K}\right\} $
+\end_inset
+
+ es facil ver que 
+\begin_inset Formula $\mathbb{K}\left[x\right]=\mathcal{U}+\mathcal{W}$
+\end_inset
+
+ y ademas por igualdad de polinomios se puede ver que 
+\begin_inset Formula $\mathcal{U}\cap\mathcal{W}=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, y sean 
+\begin_inset Formula $W_{1},W_{2},W_{3}$
+\end_inset
+
+ subespacios de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Determinar si son verdaderas o falsas las siguientes afirmaciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $V=W_{1}+W_{3}=W_{2}+W_{3}$
+\end_inset
+
+ luego 
+\begin_inset Formula $W_{1}=W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $V=W_{1}\oplus W_{3}=W_{2}\oplus W_{3}$
+\end_inset
+
+ luego 
+\begin_inset Formula $W_{1}=W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V=\mathbb{R}^{2},W_{1}=\left\{ \left(x,0\right):x\in\mathbb{R}^{2}\right\} ,W_{2}=\left\{ \left(0,y\right):y\in\mathbb{R}^{2}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $W_{3}=\left\{ \left(z,z\right):z\in\mathbb{R}^{2}\right\} $
+\end_inset
+
+.
+ Claramente 
+\begin_inset Formula $W_{1}\neq W_{2}$
+\end_inset
+
+ y ademas:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $W_{1}+W_{3}=V$
+\end_inset
+
+ pues,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $W_{1}+W_{3}=\left\{ u+v\in\mathbb{R}^{2}:u\in W_{1},v\in W_{3}\right\} \subseteq\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $\left(a,b\right)\in\mathbb{R}^{2}$
+\end_inset
+
+ luego para 
+\begin_inset Formula $u=\left(a-b,0\right)\in W_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{v=\left(b,b\right)\in W_{3}}}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\left(a,b\right)=u+v\in W_{1}+W_{3}$
+\end_inset
+
+, es decir 
+\begin_inset Formula $\mathbb{R}^{2}\subseteq W_{1}+W_{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Por el item anterior 
+\begin_inset Formula $W_{1}+W_{3}=V$
+\end_inset
+
+ y como 
+\begin_inset Formula $W_{1}\cap W_{3}=\left\{ \left(0,0\right)\right\} $
+\end_inset
+
+; y por el ejercicio 12 resulta 
+\begin_inset Formula $V=W_{1}\oplus W_{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A\in\mathbb{K}^{m\times n}$
+\end_inset
+
+ y 
+\begin_inset Formula $B\in\mathbb{K}^{n\times p}$
+\end_inset
+
+ matrices tales que 
+\begin_inset Formula $AB=0$
+\end_inset
+
+.
+ Demostrar que el espacio columna de 
+\begin_inset Formula $B$
+\end_inset
+
+ esta contenido en el espacio nulo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ ¿Que sucede con el espacio fila de 
+\begin_inset Formula $A$
+\end_inset
+
+ y el espacio nulo de 
+\begin_inset Formula $B^{t}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A_{i},B_{i}$
+\end_inset
+
+ las columnas de 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{C}\left(B\right)=\left\{ x\in\mathbb{K}^{n}:x=\alpha_{1}B_{1}+\ldots+\alpha_{p}B_{p},\alpha_{i}\in\mathbb{K}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{N}\left(A\right)=\left\{ x\in\mathbb{K}^{n}:Ax=0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado 
+\begin_inset Formula $x\in\mathcal{C}\left(B\right)$
+\end_inset
+
+ resulta 
+\begin_inset Formula $x=B\left[\begin{array}{c}
+\alpha_{1}\\
+\vdots\\
+\alpha_{n}
+\end{array}\right]$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{AB\left[\begin{array}{c}
+\alpha_{1}\\
+\vdots\\
+\alpha_{n}
+\end{array}\right]=0\left[\begin{array}{c}
+\alpha_{1}\\
+\vdots\\
+\alpha_{n}
+\end{array}\right]=0}}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x\in\mathcal{N}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Notemos que 
+\begin_inset Formula $AB=0=0^{t}=\left(AB\right)^{t}=B^{t}A^{t}$
+\end_inset
+
+.
+ Dado 
+\begin_inset Formula $x\in\text{\mathcal{F}}\left(A\right)\iff x\in\mathcal{C}\left(A^{t}\right)$
+\end_inset
+
+ es decir 
+\begin_inset Formula $x=A^{t}\left[\begin{array}{c}
+\alpha_{1}\\
+\vdots\\
+\alpha_{m}
+\end{array}\right]$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{B^{t}A^{t}\left[\begin{array}{c}
+\alpha_{1}\\
+\vdots\\
+\alpha_{m}
+\end{array}\right]=0\left[\begin{array}{c}
+\alpha_{1}\\
+\vdots\\
+\alpha_{m}
+\end{array}\right]=0}}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x\in\mathcal{N}\left(B^{t}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $W_{1},W_{2}$
+\end_inset
+
+ subespacios de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Demostrar que 
+\begin_inset Formula $W_{1}\cup W_{2}$
+\end_inset
+
+ es subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $W_{1}\subset W_{2}$
+\end_inset
+
+ o 
+\begin_inset Formula $W_{2}\subset W_{1}$
+\end_inset
+
+.
+ Comparar con el ejercicio 6 de la primera parte de la practica.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Supongamos lo contrario, es decir que 
+\begin_inset Formula $W_{1}\not\subset W_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $W_{2}\not\subset W_{1}$
+\end_inset
+
+.
+ Esto quiere decir que 
+\begin_inset Formula $\exists u\in W_{1}/u\notin W_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\exists v\in W_{2}/u\notin W_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consideremos ahora el vector 
+\begin_inset Formula $u+v\in W_{1}\cup W_{2}$
+\end_inset
+
+, luego 
+\begin_inset Formula $u+v\in W_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $u+v\in W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $u+v\in W_{1}$
+\end_inset
+
+ entonces por existencia del opuesto y clausura bajo la suma 
+\begin_inset Formula $u+v-u=u\in W_{1}$
+\end_inset
+
+.
+ Contradiccion.
+\end_layout
+
+\begin_layout Itemize
+Analogamente para 
+\begin_inset Formula $u+v\in W_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Trivial pues si 
+\begin_inset Formula $W_{1}\subset W_{2}$
+\end_inset
+
+ o 
+\begin_inset Formula $W_{2}\subset W_{1}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $W_{1}\cup W_{2}=W_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $W_{1}\cup W_{2}=W_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considere el espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+ de todas las funciones con dominio y codominio igual a 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ (con la suma y producto por escalares usuales).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sean 
+\begin_inset Formula $V_{i}=\left\{ f\in V:f\text{ es una funcion impar}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $V_{p}=\left\{ f\in V:f\text{ es una funcion par}\right\} $
+\end_inset
+
+.
+ Probar que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{p}$
+\end_inset
+
+ son subespacios de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V_{i}+V_{p}=V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $V_{i}\cap V_{p}=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En el espacio vectorial de las matrices reales de orden 3, describir el
+ subespacio generado por cada uno de los siguientes conjuntos:
+\begin_inset Formula 
+\[
+A=\left\{ \left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 1\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 1 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+B=\left\{ \left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 1\\
+0 & -1 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 1 & 0\\
+-1 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0\\
+-1 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & -1\\
+0 & 0 & 2\\
+1 & -2 & 0
+\end{array}\right]\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left\langle S\right\rangle $
+\end_inset
+
+ el subespacio generado por un subconjunto 
+\begin_inset Formula $S$
+\end_inset
+
+ de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Demostrar las siguientes propiedades:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $S\subset T$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left\langle S\right\rangle \subset\left\langle T\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S\subset\left\langle S\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $S\subset T$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+ es un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left\langle S\right\rangle \subset T$
+\end_inset
+
+.
+ Es decir que 
+\begin_inset Formula $\left\langle S\right\rangle $
+\end_inset
+
+ es el menor subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+ que contiene a 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+ es un subespacio de 
+\begin_inset Formula $V$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\left\langle S\right\rangle =S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left\langle S\right\rangle =\mathcal{U}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left\langle \mathcal{U}\right\rangle =\mathcal{U}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $W\subset V$
+\end_inset
+
+ entonces,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle S\cap W\right\rangle \subset\left\langle S\right\rangle \cap\left\langle W\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle S\cup W\right\rangle \subset\left\langle S\right\rangle +\left\langle W\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Valen las contenciones inversas en los items 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $s\in\left\langle S\right\rangle $
+\end_inset
+
+ luego 
+\begin_inset Formula $s={\displaystyle \sum_{v\in S}}\alpha_{v}v$
+\end_inset
+
+ y como 
+\begin_inset Formula $v\in S\Rightarrow v\in T$
+\end_inset
+
+ resulta 
+\begin_inset Formula $s\in\left\langle T\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $s\in S$
+\end_inset
+
+ luego 
+\begin_inset Formula $s={\displaystyle 1s+\sum_{v\in S-\left\{ s\right\} }}0v$
+\end_inset
+
+ por lo que resulta 
+\begin_inset Formula $s\in\left\langle S\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $s\in\left\langle S\right\rangle $
+\end_inset
+
+ luego 
+\begin_inset Formula $s={\displaystyle \sum_{v\in S}}\alpha_{v}v$
+\end_inset
+
+ y como 
+\begin_inset Formula $v\in S\Rightarrow v\in T$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+ respeta los axiomas de clausura, entonces 
+\begin_inset Formula $s\in T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+ COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+ COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describir el menor subespacio vectorial de 
+\begin_inset Formula $\mathbb{R}^{2\times2}$
+\end_inset
+
+ que contenga a:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 1\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+ y 
+\begin_inset Formula $\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{cc}
+\left\langle \left\{ \left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right],\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right]\right\} \right\rangle = & \left\{ \alpha\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]+\beta\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right]:\alpha,\beta\in\mathbb{K}\right\} =\\
+ & =\left\{ \left[\begin{array}{cc}
+\alpha & \beta\\
+0 & 0
+\end{array}\right]\in\mathbb{R}^{2\times2}:\alpha,\beta\in\mathbb{K}\right\} 
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{cc}
+\left\langle \left\{ \left[\begin{array}{cc}
+1 & 1\\
+0 & 0
+\end{array}\right]\right\} \right\rangle = & \left\{ \alpha\left[\begin{array}{cc}
+1 & 1\\
+0 & 0
+\end{array}\right]:\alpha\in\mathbb{K}\right\} =\\
+ & =\left\{ \left[\begin{array}{cc}
+\alpha & \alpha\\
+0 & 0
+\end{array}\right]\in\mathbb{R}^{2\times2}:\alpha\in\mathbb{K}\right\} 
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ el espacio vectorial de los polinomios en 
+\begin_inset Formula $\mathbb{R}\left[x\right]$
+\end_inset
+
+ de grado menor o igual a 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ Considere los siguientes polinomios:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $p_{1}\left(x\right)=x^{3}+2x^{2}+3x+4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{2}\left(x\right)=2x^{3}+5x^{2}+11x+8$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{3}\left(x\right)=x^{2}+5x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{4}\left(x\right)=3x^{3}+6x^{2}+9x+12$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p_{5}\left(x\right)=x^{3}+3x^{2}+8x+3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $j\in\left\{ 4,5\right\} $
+\end_inset
+
+ determinar si 
+\begin_inset Formula $p_{j}\in\left\langle \left\{ p_{1},p_{2},p_{3}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+Es facil ver que 
+\begin_inset Formula $p_{4}=3p_{1}+0p_{2}+0p_{3}$
+\end_inset
+
+ luego 
+\begin_inset Formula $p_{4}\in\left\langle \left\{ p_{1},p_{2},p_{3}\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Nos preguntamos ahora si existen 
+\begin_inset Formula $\alpha_{1},\alpha_{2},\alpha_{3}/p_{5}=\alpha_{1}p_{1}+\alpha_{2}p_{2}+\alpha_{3}p_{3}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc|c}
+1 & 2 & 0 & 1\\
+2 & 5 & 1 & 3\\
+3 & 11 & 5 & 8\\
+4 & 8 & 0 & 3
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|c}
+1 & 2 & 0 & 1\\
+0 & 1 & 1 & 1\\
+3 & 11 & 5 & 8\\
+4 & 8 & 0 & 3
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|c}
+1 & 2 & 0 & 1\\
+0 & 1 & 1 & 1\\
+0 & 5 & 5 & 5\\
+4 & 8 & 0 & 3
+\end{array}\right]\rightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\rightarrow\left[\begin{array}{ccc|c}
+1 & 2 & 0 & 1\\
+0 & 1 & 1 & 1\\
+0 & 5 & 5 & 5\\
+0 & 0 & 0 & -1
+\end{array}\right]\rightarrow\left[\begin{array}{ccc|c}
+1 & 2 & 0 & 1\\
+0 & 1 & 1 & 1\\
+0 & 0 & 5 & \frac{5}{2}\\
+0 & 0 & 0 & -1
+\end{array}\right]
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $0\alpha_{3}=-1$
+\end_inset
+
+ concluimos que no existen.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Analizar si los siguientes vectores son linealmente independientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(1,1,0,0\right);\left(1,0,1,0\right);\left(0,0,1,1\right);\left(0,1,0,1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(1,1,0\right);\left(1,0,0\right);\left(0,1,1\right);\left(x,y,z\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ cualesquiera.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{cccc}
+1 & 1 & 0 & 0\\
+1 & 0 & 0 & 1\\
+0 & 1 & 1 & 0\\
+0 & 0 & 1 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 1 & 0 & 0\\
+0 & -1 & 0 & 1\\
+0 & 1 & 1 & 0\\
+0 & 0 & 1 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 1 & 0 & 0\\
+0 & -1 & 0 & 1\\
+0 & 0 & 1 & 1\\
+0 & 0 & 1 & 1
+\end{array}\right]\rightarrow\left[\begin{array}{cccc}
+1 & 1 & 0 & 0\\
+0 & -1 & 0 & 1\\
+0 & 0 & 1 & 1\\
+0 & 0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Los vectores no son linealmente independientes pues podemos escribir a 
+\begin_inset Formula $0$
+\end_inset
+
+ como 
+\begin_inset Formula $-1\left(1,1,0,0\right)+1\left(1,0,1,0\right)-1\left(0,0,1,1\right)+1\left(0,1,0,1\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Claramente para 
+\begin_inset Formula $\left(x,y,z\right)=\left(1,0,0\right)$
+\end_inset
+
+ resulta 
+\begin_inset Formula $0=1\left(1,0,0\right)+0\left(1,0,0\right)+0\left(0,1,1\right)-1\left(x,y,z\right)$
+\end_inset
+
+, luego no son linealmente independientes.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P=\left\{ \left(x,y,z,t\right)\in\mathbb{R}^{4}:x-2y+z-t=0\right\} $
+\end_inset
+
+.
+ Verificar que 
+\begin_inset Formula $P$
+\end_inset
+
+ es un espacio vectorial y hallar 3 vectores linealmente independientes
+ en 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+En efecto, sean 
+\begin_inset Formula $u=\left(x_{1},y_{1},z_{1},t_{1}\right)\in P$
+\end_inset
+
+, 
+\begin_inset Formula $v=\left(x_{2},y_{2},z_{2},t_{2}\right)\in P$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha\in\mathbb{K}$
+\end_inset
+
+.
+ Luego:
+\end_layout
+
+\begin_layout Itemize
+Sabemos que 
+\begin_inset Formula $x_{1}-2y_{1}+z_{1}-t_{1}=0$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{2}-2y_{2}+z_{2}-t_{2}=0$
+\end_inset
+
+ y sumando ambas ecuaciones: 
+\begin_inset Formula $\left(x_{1}+x_{2}\right)-2\left(y_{1}+y_{2}\right)+\left(z_{1}+z_{2}\right)-\left(t_{1}+t_{2}\right)=0$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $u+v=\left(x_{1}+x_{2},y_{1}+y_{2},z_{1}+z_{2},t_{1}+t_{2}\right)\in P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha u=\left(\alpha x_{1},\alpha y_{1},\alpha z_{1},\alpha t_{1}\right)\in P$
+\end_inset
+
+ pues multiplicando ambos lados por 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ obtenemos 
+\begin_inset Formula $\left(\alpha x_{1}\right)-2\left(\alpha y_{1}\right)+\left(\alpha z_{1}\right)-\left(\alpha t_{1}\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $a=\left(1,0,0,1\right)$
+\end_inset
+
+, 
+\begin_inset Formula $b=\left(0,0,1,1\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $c=\left(1,1,1,0\right)$
+\end_inset
+
+.
+ Estos vectores son linealmente independientes pues 
+\begin_inset Formula $\alpha_{1}a+\alpha_{2}b+\alpha_{3}c=0\Rightarrow\alpha_{1}=\alpha_{2}=\alpha_{3}=0$
+\end_inset
+
+ como puede observarse tras resolverse el sistema:
+\begin_inset Formula 
+\[
+\left[\begin{array}{ccc}
+1 & 0 & 1\\
+0 & 0 & 1\\
+0 & 1 & 1\\
+1 & 1 & 0
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & 0 & 1\\
+0 & 0 & 1\\
+0 & 1 & 1\\
+0 & 1 & -1
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & 0 & 1\\
+0 & 1 & 1\\
+0 & 0 & 1\\
+0 & 1 & -1
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & 0 & 1\\
+0 & 1 & 1\\
+0 & 0 & 1\\
+0 & 0 & -2
+\end{array}\right]\rightarrow\left[\begin{array}{ccc}
+1 & 0 & 1\\
+0 & 1 & 1\\
+0 & 0 & 1\\
+0 & 0 & 0
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Todo conjunto de vectores que contenga al vector nulo es linealmente dependiente.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente independiente entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es linealmente independiente 
+\begin_inset Formula $\forall T\subseteq S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $S$
+\end_inset
+
+ es linealmente dependiente entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es linealmente dependiente 
+\begin_inset Formula $\forall T\subseteq S$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+En efecto 
+\begin_inset Formula $0=\alpha0+{\displaystyle \sum_{v\in V-\left\{ 0\right\} }0v}$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos lo contrario, es decir existe 
+\begin_inset Formula $T\subseteq S$
+\end_inset
+
+ tal que 
+\begin_inset Formula $T$
+\end_inset
+
+ es linealmente dependiente.
+ Luego existen escalares 
+\begin_inset Formula $\alpha_{v}$
+\end_inset
+
+ no todos nulos tales que 
+\begin_inset Formula $0={\displaystyle \sum_{v\in T}\alpha_{v}v}$
+\end_inset
+
+.
+ Luego como 
+\begin_inset Formula $v\in T\Rightarrow v\in S$
+\end_inset
+
+ podemos tomar la combinacion lineal 
+\begin_inset Formula ${\displaystyle \sum_{v\in T}\alpha_{v}v}+{\displaystyle \sum_{v\in S-T}0v}=0$
+\end_inset
+
+ en 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Contradiccion.
+\end_layout
+
+\begin_layout Enumerate
+Sabemos existen escalares 
+\begin_inset Formula $\alpha_{v}$
+\end_inset
+
+ no todos nulos tales que 
+\begin_inset Formula $0={\displaystyle \sum_{v\in T}\alpha_{v}v}$
+\end_inset
+
+.
+ Luego como 
+\begin_inset Formula $v\in T\Rightarrow v\in S$
+\end_inset
+
+ podemos tomar la combinacion lineal 
+\begin_inset Formula ${\displaystyle \sum_{v\in T}\alpha_{v}v}+{\displaystyle \sum_{v\in S-T}0v}=0$
+\end_inset
+
+ en 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left\{ v_{1},v_{2},v_{3}\right\} \subset V$
+\end_inset
+
+ es un conjunto linealmente independiente, probar que 
+\begin_inset Formula $\left\{ v_{1}+v_{2},v_{1}+v_{3},v_{2}+v_{3}\right\} $
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+En efecto 
+\begin_inset Formula $0=\alpha_{1}\left(v_{1}+v_{2}\right)+\alpha_{2}\left(v_{1}+v_{3}\right)+\alpha_{3}\left(v_{2}+v_{3}\right)=\alpha_{1}v_{1}+\alpha_{1}v_{2}+\alpha_{2}v_{1}+\alpha_{2}v_{3}+\alpha_{3}v_{2}+\alpha_{3}v_{3}=\left(\alpha_{1}+\alpha_{2}\right)v_{1}+\left(\alpha_{1}+\alpha_{3}\right)v_{2}+\left(\alpha_{2}+\alpha_{3}\right)v_{3}$
+\end_inset
+
+ y como 
+\begin_inset Formula $V$
+\end_inset
+
+ es linealmente independiente resulta 
+\begin_inset Formula $\alpha_{1}+\alpha_{2}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha_{1}+\alpha_{3}=0$
+\end_inset
+
+ y 
+\begin_inset Formula $\alpha_{2}+\alpha_{3}=0$
+\end_inset
+
+ por lo que resolviendo el sistema obtenemos 
+\begin_inset Formula $\alpha_{1}=\alpha_{2}=\alpha_{3}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Espacios vectoriales.
+ Tercera parte.
+\end_layout
+
+\begin_layout Enumerate
+Encontrar una base y las dimensiones de:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El espacio 
+\begin_inset Formula $V$
+\end_inset
+
+ de las matrices simetricas de orden 3.
+\end_layout
+
+\begin_layout Enumerate
+El espacio nulo de la matriz 
+\begin_inset Formula $I\in\mathbb{R}^{4\times4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El espacio 
+\begin_inset Formula $V$
+\end_inset
+
+ de todos los vectores de 
+\begin_inset Formula $\mathbb{R}^{4}$
+\end_inset
+
+ cuyas componentes suman 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula 
+\begin{align*}
+B & =\left\{ \left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right],\right.\\
+ & \left.\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0\\
+1 & 0 & 0
+\end{array}\right],\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right]\right\} 
+\end{align*}
+
+\end_inset
+
+Para demostrar que es una base debemos ver que 
+\begin_inset Formula $B$
+\end_inset
+
+ es linealmente independiente y que genera el espacio.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left\langle B\right\rangle $
+\end_inset
+
+ genera el espacio: En efecto sea 
+\begin_inset Formula $v\in V$
+\end_inset
+
+ luego 
+\begin_inset Formula 
+\begin{align*}
+v & =\left[\begin{array}{ccc}
+a & x & z\\
+x & b & y\\
+z & y & c
+\end{array}\right]=a\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]+b\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right]+c\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]+\\
+ & +x\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]+y\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right]+z\left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0\\
+1 & 0 & 0
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+ es linealmente independiente: 
+\begin_inset Formula $a\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]+b\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 0
+\end{array}\right]+c\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]++x\left[\begin{array}{ccc}
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 0
+\end{array}\right]+y\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array}\right]+z\left[\begin{array}{ccc}
+0 & 0 & 1\\
+0 & 0 & 0\\
+1 & 0 & 0
+\end{array}\right]=\left[\begin{array}{ccc}
+a & x & z\\
+x & b & y\\
+z & y & c
+\end{array}\right]=0\Rightarrow a=b=c=x=y=z=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dim\left(V\right)=\left|B\right|=6$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{N}\left(I\right)=\left\{ x\in\mathbb{R}^{4}:Ix=0\right\} =\left\{ 0\right\} $
+\end_inset
+
+, luego el espacio no tiene base.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $B=\left\{ \left[\begin{array}{c}
+1\\
+-1\\
+0\\
+0
+\end{array}\right],\left[\begin{array}{c}
+1\\
+0\\
+-1\\
+0
+\end{array}\right],\left[\begin{array}{c}
+1\\
+0\\
+0\\
+-1
+\end{array}\right]\right\} $
+\end_inset
+
+.
+ Para demostrar que es una base debemos ver que 
+\begin_inset Formula $B$
+\end_inset
+
+ es linealmente independiente y que genera el espacio.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left\langle B\right\rangle $
+\end_inset
+
+ genera el espacio: Sea 
+\begin_inset Formula $v\in V/v=\left[\begin{array}{c}
+a\\
+b\\
+c\\
+d
+\end{array}\right]$
+\end_inset
+
+ luego 
+\begin_inset Formula $\text{\ensuremath{a=-b-c-d}}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\text{\ensuremath{v=\left[\begin{array}{c}
+-b-c-d\\
+b\\
+c\\
+d
+\end{array}\right]=-b\left[\begin{array}{c}
+1\\
+-1\\
+0\\
+0
+\end{array}\right]-c\left[\begin{array}{c}
+1\\
+0\\
+-1\\
+0
+\end{array}\right]-d\left[\begin{array}{c}
+1\\
+0\\
+0\\
+-1
+\end{array}\right]}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+ es linealmente independiente: 
+\begin_inset Formula $a\left[\begin{array}{c}
+1\\
+-1\\
+0\\
+0
+\end{array}\right]+b\left[\begin{array}{c}
+1\\
+0\\
+-1\\
+0
+\end{array}\right]+c\left[\begin{array}{c}
+1\\
+0\\
+0\\
+-1
+\end{array}\right]=\left[\begin{array}{c}
+a+b+c\\
+-a\\
+-b\\
+-c
+\end{array}\right]=0\Rightarrow-c=-b=-a=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dim\left(V\right)=\left|B\right|=3$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $B_{1}=\left\{ v_{1},v_{2},v_{3}\right\} $
+\end_inset
+
+ una base para un espacio vectorial 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demostrar que 
+\begin_inset Formula $B_{2}=\left\{ v_{1},v_{1}+v_{2},v_{1}+v_{2}+v_{3}\right\} $
+\end_inset
+
+ tambien es una base.
+\end_layout
+
+\begin_layout Enumerate
+Hallar la matriz de cambio de base 
+\begin_inset Formula $A/\left[v\right]_{B_{1}}=A\left[v\right]_{B_{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Notese que 
+\begin_inset Formula $dim\left(V\right)=\left|B_{1}\right|=\left|B_{2}\right|=3$
+\end_inset
+
+, luego nos bastara con ver que 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+ es linealmente independiente.
+ En efecto:
+\begin_inset Formula 
+\[
+\alpha_{1}\left(v_{1}\right)+\alpha_{2}\left(v_{1}+v_{2}\right)+\alpha_{3}\left(v_{1}+v_{2}+v_{3}\right)=\left(\alpha_{1}+\alpha_{2}+\alpha_{3}\right)v_{1}+\left(\alpha_{2}+\alpha_{3}\right)v_{2}+\left(\alpha_{3}\right)v_{3}
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ es linealmente independiente debe ser 
+\begin_inset Formula $0=\left(\alpha_{1}+\alpha_{2}+\alpha_{3}\right)=\left(\alpha_{2}+\alpha_{3}\right)=\alpha_{3}$
+\end_inset
+
+.
+ Resolviendo el sistema obtenemos: 
+\begin_inset Formula $\alpha_{i}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 1 & 1\\
+0 & 1 & 1\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V=\left\{ {\displaystyle \sum_{i=0}^{2}a_{i}x^{i}/a_{i}\in\mathbb{R}}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B_{1}=\left\{ 1,x,x^{2}\right\} $
+\end_inset
+
+ base estandar de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $B_{2}=\left\{ x-1,1,\left(x-1\right)^{2}\right\} $
+\end_inset
+
+ es otra base de 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Hallar la matriz de cambio de base de 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+ a 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Utilizar lo obtenido en el item anterior y determinar 
+\begin_inset Formula $\left[p\right]_{B_{2}}$
+\end_inset
+
+ donde 
+\begin_inset Formula $p\left(x\right)=2x^{2}-5x+6$
+\end_inset
+
+.
+ ¿Cuales son las coordenadas de 
+\begin_inset Formula $p$
+\end_inset
+
+ en la base 
+\begin_inset Formula $B_{3}=\left\{ 1,\left(x-1\right)^{2},x-1\right\} $
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 1 & 2\\
+1 & 1 & 1\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left[\begin{array}{ccc}
+0 & 1 & 2\\
+1 & 1 & 1\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+6\\
+-5\\
+2
+\end{array}\right]=\left[\begin{array}{c}
+-1\\
+3\\
+2
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left[\begin{array}{ccc}
+1 & 1 & 1\\
+0 & 0 & 1\\
+0 & 1 & 2
+\end{array}\right]$
+\end_inset
+
+
+\begin_inset Formula $\left[\begin{array}{c}
+6\\
+-5\\
+2
+\end{array}\right]=\left[\begin{array}{c}
+3\\
+2\\
+-1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hallar la matriz de cambio de base de:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La base estandar de 
+\begin_inset Formula $\mathbb{R}^{2\times2}$
+\end_inset
+
+ a la base:
+\begin_inset Formula 
+\[
+B'=\left\{ \underbrace{\left[\begin{array}{cc}
+1 & 1\\
+0 & 0
+\end{array}\right]}_{v_{1}},\underbrace{\left[\begin{array}{cc}
+-1 & 0\\
+0 & 0
+\end{array}\right]}_{v_{2}},\underbrace{\left[\begin{array}{cc}
+2 & 0\\
+-1 & 0
+\end{array}\right]}_{v_{3}},\underbrace{\left[\begin{array}{cc}
+1 & 2\\
+3 & 4
+\end{array}\right]}_{v_{4}}\right\} 
+\]
+
+\end_inset
+
+Determinar 
+\begin_inset Formula $\left[A\right]_{B'}$
+\end_inset
+
+ para 
+\begin_inset Formula $A\in\mathbb{R}^{2\times2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+La base 
+\begin_inset Formula $\left\{ 1,x,-1+2x^{2},-3x+4x^{3}\right\} $
+\end_inset
+
+ de 
+\begin_inset Formula $\mathbb{R}_{3}\left[x\right]$
+\end_inset
+
+ a la base
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left\{ 1,-\frac{1}{2}+x,-x+x^{2},\frac{1}{4}-\frac{3}{2}x^{2}+x^{3}\right\} $
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Asumiendo 
+\begin_inset Formula $B=\left\{ \underbrace{\left[\begin{array}{cc}
+1 & 0\\
+0 & 0
+\end{array}\right]}_{b_{1}},\underbrace{\left[\begin{array}{cc}
+0 & 1\\
+0 & 0
+\end{array}\right]}_{b_{2}},\underbrace{\left[\begin{array}{cc}
+0 & 0\\
+1 & 0
+\end{array}\right]}_{b_{3}},\underbrace{\left[\begin{array}{cc}
+0 & 0\\
+0 & 1
+\end{array}\right]}_{b_{4}}\right\} $
+\end_inset
+
+ como base estandar, notemos que 
+\begin_inset Formula $b_{1}=0v_{1}-1v_{2}+0v_{3}+0v_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{2}=1v_{1}+1v_{2}+0v_{3}+0v_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{3}=0v_{1}-2v_{2}-1v_{3}+0v_{4}$
+\end_inset
+
+ y 
+\begin_inset Formula $b_{4}=-\frac{1}{2}v_{1}+\frac{5}{4}v_{2}+\frac{3}{4}v_{3}+\frac{1}{4}v_{4}$
+\end_inset
+
+.
+ Luego la matriz de cambio de base es 
+\begin_inset Formula $\left[\begin{array}{cccc}
+0 & 1 & 0 & -\frac{1}{2}\\
+-1 & 1 & -2 & \frac{5}{4}\\
+0 & 0 & -1 & \frac{3}{4}\\
+0 & 0 & 0 & \frac{1}{4}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En el espacio 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ se considera la base estandar 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $A=\left[\begin{array}{cc}
+\frac{1}{2} & \frac{1}{2}\\
+-\frac{1}{2} & \frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+, ¿existe una base 
+\begin_inset Formula $B'$
+\end_inset
+
+ tal que 
+\begin_inset Formula $A$
+\end_inset
+
+ sea la matriz de cambio de base de 
+\begin_inset Formula $B$
+\end_inset
+
+ a 
+\begin_inset Formula $B'$
+\end_inset
+
+? De existir, hallar dicha base.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+En efecto, dicha base es 
+\begin_inset Formula $B'=\left\{ \left[\begin{array}{c}
+1\\
+1
+\end{array}\right],\left[\begin{array}{c}
+-1\\
+1
+\end{array}\right]\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

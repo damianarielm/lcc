@@ -1,0 +1,1510 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T\in\mathcal{L}\left(\mathbb{K}^{2},\mathbb{K}^{2}\right)$
+\end_inset
+
+ definida por 
+\begin_inset Formula $T\left(u,v\right)=\left(v,u\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $u,v\in\mathbb{K}$
+\end_inset
+
+.
+ Calcular los autovalores y los autovectores asociados a 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T\in\mathcal{L}\left(\mathbb{K}^{3},\mathbb{K}^{3}\right)$
+\end_inset
+
+ definida por 
+\begin_inset Formula $T\left(u,v,w\right)=\left(2v,0,5w\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $u,v,w\in\mathbb{K}$
+\end_inset
+
+.
+ Calcular los autovalores y sus autovectores asociados para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ sea 
+\begin_inset Formula $T\in\mathcal{L}\left(\mathbb{K}^{n},\mathbb{K}^{n}\right)$
+\end_inset
+
+ definida por
+\begin_inset Formula 
+\[
+T\left(x_{1},\ldots,x_{n}\right)=\left(x_{1}+\ldots+x_{n},\ldots,x_{1}+\ldots+x_{n}\right)
+\]
+
+\end_inset
+
+Calcular los autovalores y sus autovectores asociados para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+0 & 1\\
+1 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $B=A-\lambda I=\left[\begin{array}{cc}
+-\lambda & 1\\
+1 & -\lambda
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left|B\right|=\lambda^{2}-1=\left(\lambda-1\right)\left(\lambda+1\right)=0\iff\lambda=1\lor\lambda=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+: 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+-1 & 1\\
+1 & -1
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Bx=0\iff x\in\left\langle \left\{ \left(1,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=-1$
+\end_inset
+
+: 
+\begin_inset Formula $B=\left[\begin{array}{cc}
+1 & 1\\
+1 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Bx=0\iff x\in\left\langle \left\{ \left(1,-1\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 5
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $B=A-\lambda I=\left[\begin{array}{ccc}
+2-\lambda & 0 & 0\\
+0 & -\lambda & 0\\
+0 & 0 & 5-\lambda
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left|B\right|=\left(2-\lambda\right)\left(-\lambda\right)\left(5-\lambda\right)=0\iff\lambda=2\lor\lambda=0\lor\lambda=5$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=2$
+\end_inset
+
+: 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+0 & 0 & 0\\
+0 & -2 & 0\\
+0 & 0 & 3
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Bx=0\iff x\in\left\langle \left\{ \left(1,0,0\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+: 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+2 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 5
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Bx=0\iff x\in\left\langle \left\{ \left(0,1,0\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=5$
+\end_inset
+
+: 
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+-3 & 0 & 0\\
+0 & -5 & 0\\
+0 & 0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Bx=0\iff x\in\left\langle \left\{ \left(0,0,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar los autovalores y autovectores asociados para los operadores lineales
+ sobre 
+\begin_inset Formula $\mathbb{K}^{2}$
+\end_inset
+
+ dados por las siguientes matrices
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+3 & 0\\
+8 & -1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left[\begin{array}{cc}
+10 & -9\\
+4 & -2
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=\left[\begin{array}{cc}
+1 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $D=\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H=A-\lambda I=\left[\begin{array}{cc}
+3-\lambda & 0\\
+8 & -1-\lambda
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left|H\right|=\left(3-\lambda\right)\left(-1-\lambda\right)=0\iff\lambda=3\lor\lambda=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=3$
+\end_inset
+
+: 
+\begin_inset Formula $H=\left[\begin{array}{cc}
+0 & 0\\
+8 & -4
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Hx=0\iff x\in\left\langle \left\{ \left(1,2\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=-1$
+\end_inset
+
+: 
+\begin_inset Formula $H=\left[\begin{array}{cc}
+4 & 0\\
+8 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Hx=0\iff x\in\left\langle \left\{ \left(0,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $H=B-\lambda I=\left[\begin{array}{cc}
+10-\lambda & -9\\
+4 & -2-\lambda
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left|H\right|=\left(-20-10\lambda+2\lambda+\lambda^{2}\right)+36=\lambda^{2}-8\lambda+16=\left(\lambda-4\right)^{2}=0\iff\lambda=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=4$
+\end_inset
+
+: 
+\begin_inset Formula $H=\left[\begin{array}{cc}
+6 & -9\\
+4 & -6
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Hx=0\iff x\in\left\langle \left\{ \left(3/2,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $H=C-\lambda I=\left[\begin{array}{cc}
+1-\lambda & 0\\
+0 & 1-\lambda
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left|H\right|=\left(1-\lambda\right)=0\iff\lambda=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=1$
+\end_inset
+
+: 
+\begin_inset Formula $H=\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Hx=0\iff x\in\left\langle \left\{ \left(1,0\right),\left(0,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $H=D-\lambda I=\left[\begin{array}{cc}
+-\lambda & 0\\
+0 & -\lambda
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\left|H\right|=\lambda^{2}=0\iff\lambda=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+: 
+\begin_inset Formula $H=\left[\begin{array}{cc}
+0 & 0\\
+0 & 0
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Hx=0\iff x\in\left\langle \left\{ \left(1,0\right),\left(0,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Encontrar el autoespacio correspondiente de cada autovalor
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+4 & -2\\
+-3 & 9
+\end{array}\right],\lambda=10$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+4 & 2 & 3\\
+-1 & 1 & -3\\
+2 & 4 & 9
+\end{array}\right],\lambda=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A-\lambda I=\left[\begin{array}{cc}
+-6 & -2\\
+-3 & -1
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Hx=0\iff x\in\left\langle \left\{ \left(-1/3,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B-\lambda I=\left[\begin{array}{ccc}
+1 & 2 & 3\\
+-1 & -2 & -3\\
+2 & 4 & 6
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Hx=0\iff x\in\left\langle \left\{ \left(-3,0,1\right),\left(-2,1,0\right)\right\} \right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para cada matriz dada, encontrar los autovalores para el operador 
+\begin_inset Formula $T$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbb{K}^{n}$
+\end_inset
+
+ sin realizar calculos.
+ Describir los autovectores 
+\begin_inset Formula $v\in\mathbb{K}^{n}$
+\end_inset
+
+ asociados a cada autovalor 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ analizando las soluciones de la ecuacion matricial 
+\begin_inset Formula $\left(A-\lambda I\right)v=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+-\frac{1}{3} & 0 & 0 & 0\\
+0 & -\frac{1}{3} & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & \frac{1}{2}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left[\begin{array}{cccc}
+1 & 3 & 7 & 11\\
+0 & \frac{1}{2} & 3 & 8\\
+0 & 0 & 0 & 4\\
+0 & 0 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda_{1}=-\frac{1}{3},\lambda_{2}=1,\lambda_{3}=\frac{1}{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $v_{1}=\left(x_{1},x_{2},0,0\right),v_{2}=\left(0,0,x_{3},0\right),v_{3}=\left(0,0,0,x_{4}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lambda_{1}=1,\lambda_{2}=\frac{1}{2},\lambda_{3}=0,\lambda_{4}=2$
+\end_inset
+
+.
+ 
+\begin_inset Formula $v_{1}=\left(x_{1},0,0,0\right),v_{2}=\left(-6x_{2},x_{2},0,0\right),v_{3}=\left(11x_{3},-6x_{3},x_{3},0\right),v_{4}=\left(53x_{4},\frac{28}{3}x_{4},2x_{4},x_{4}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio vectorial de dimension finita sobre 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y 
+\begin_inset Formula $T\in\mathcal{L}\left(V\right)$
+\end_inset
+
+.
+ Un espacio vectorial 
+\begin_inset Formula $\mathcal{U}$
+\end_inset
+
+ se dice invariante bajo 
+\begin_inset Formula $T$
+\end_inset
+
+ si 
+\begin_inset Formula $T\left(\mathcal{U}\right)\subset\mathcal{U}$
+\end_inset
+
+.
+ Supongamos que 
+\begin_inset Formula $\mathcal{U}_{1},\mathcal{U}_{2}$
+\end_inset
+
+ son dos subespacios invariantes bajo 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $\mathcal{U}_{1}\cap\mathcal{U}_{2}$
+\end_inset
+
+ tambien es invariante bajo 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $v\in\mathcal{U}_{1}\cap\mathcal{U}_{2}\Rightarrow v\in\mathcal{U}_{1}\land v\in\mathcal{U}_{2}\Rightarrow T\left(v\right)\in\mathcal{U}_{1}\land T\left(v\right)\in\mathcal{U}_{2}\Rightarrow T\left(v\right)\in\mathcal{U}_{1}\cap\mathcal{U}_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio de dimension finita sober 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $T\in\mathcal{L}\left(V\right)$
+\end_inset
+
+ inversible y 
+\begin_inset Formula $\lambda\in\mathbb{K}-\left\{ 0\right\} $
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es autovalor de 
+\begin_inset Formula $A$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\lambda^{-1}$
+\end_inset
+
+ es autovalor de 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $x\in V/T\left(x\right)=\lambda x\iff Ax=\lambda x\iff A^{-1}Ax=A^{-1}\lambda x\iff x=A^{-1}\lambda x\iff\lambda^{-1}x=A^{-1}x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio de dimension finita sober 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+, 
+\begin_inset Formula $A\in\mathcal{M}\left(\mathbb{K}\right)$
+\end_inset
+
+ matriz inversible y 
+\begin_inset Formula $\lambda\in\mathbb{K}$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es autovalor de 
+\begin_inset Formula $A$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es autovalor de 
+\begin_inset Formula $A^{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Notemos que 
+\begin_inset Formula $\left(A-\lambda I\right)^{t}=A^{t}-\lambda I$
+\end_inset
+
+ luego como 
+\begin_inset Formula $\left|X\right|=\left|X\right|^{t}$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+\left|A-\lambda I\right|=\left|\left(A-\lambda I\right)^{t}\right|=\left|A^{t}-\lambda I\right|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V$
+\end_inset
+
+ un espacio de dimension finita sober 
+\begin_inset Formula $\mathbb{K}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $T\in\mathcal{L}\left(V\right)$
+\end_inset
+
+ con la propiedad de que todo 
+\begin_inset Formula $v\in V-\left\{ 0\right\} $
+\end_inset
+
+ es un autovector asociado al mismo autovalor para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $T$
+\end_inset
+
+ debe ser igual a un escalar por la identidad en 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Considerar una matriz 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ con la propiedad de que todas las sumas de sus filas son iguales a un mismo
+ numero 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Mostrar que 
+\begin_inset Formula $\beta$
+\end_inset
+
+ es un autovalor de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Considerar una matriz 
+\begin_inset Formula $n\times n$
+\end_inset
+
+ con la propiedad de que todas las sumas de sus columnas son iguales a un
+ mismo numero 
+\begin_inset Formula $\beta$
+\end_inset
+
+.
+ Mostrar que 
+\begin_inset Formula $\beta$
+\end_inset
+
+ es un autovalor de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Trivial, por el ejercicio 7.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $A=\left[\begin{array}{cccc}
+5 & -2 & 6 & -1\\
+0 & 3 & h & 0\\
+0 & 0 & 5 & 4\\
+0 & 0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ Encontrar 
+\begin_inset Formula $h$
+\end_inset
+
+ tal que el autoespacio correspondiente a 
+\begin_inset Formula $\lambda=5$
+\end_inset
+
+ sea bidimensional.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A-\lambda I=\left[\begin{array}{cccc}
+0 & -2 & 6 & -1\\
+0 & -2 & h & 0\\
+0 & 0 & 0 & 4\\
+0 & 0 & 0 & -4
+\end{array}\right]$
+\end_inset
+
+.
+ Luego para 
+\begin_inset Formula $h=6$
+\end_inset
+
+ resultara 
+\begin_inset Formula $\left(A-\lambda I\right)x=0\iff\left[\begin{array}{cccc}
+0 & 1 & -3 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 4\\
+0 & 0 & 0 & 0
+\end{array}\right]x=\left[\begin{array}{c}
+0\\
+0\\
+0\\
+0
+\end{array}\right]\iff x=\left[\begin{array}{c}
+x_{1}\\
+3x_{3}\\
+x_{3}\\
+0
+\end{array}\right]$
+\end_inset
+
+ es decir, si y solo si 
+\begin_inset Formula $x\in\left\langle \left\{ \left(1,0,0,0\right),\left(0,3,1,0\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En cada uno de los siguientes items, sea 
+\begin_inset Formula $A=PDP^{-1}$
+\end_inset
+
+ y calcule 
+\begin_inset Formula $A^{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P=\left[\begin{array}{cc}
+2 & 3\\
+4 & 1
+\end{array}\right],D=\left[\begin{array}{cc}
+2 & 0\\
+0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\left[\begin{array}{cc}
+1 & 0\\
+3 & 1
+\end{array}\right],D=\left[\begin{array}{cc}
+a & 0\\
+0 & b
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\left[\begin{array}{ccc}
+1 & 1 & 2\\
+1 & 0 & -1\\
+1 & -1 & 0
+\end{array}\right],D=\left[\begin{array}{ccc}
+5 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A^{4}=PDP^{-1}PDP^{-1}PDP^{-1}PDP^{-1}=PDIDIDIDP^{-1}=PD^{4}P^{-1}$
+\end_inset
+
+.
+ Luego: 
+\begin_inset Formula $A^{4}=P\left[\begin{array}{cc}
+16 & 0\\
+0 & 1
+\end{array}\right]P^{-1}=\left[\begin{array}{cc}
+32 & 3\\
+64 & 1
+\end{array}\right]\left[\begin{array}{cc}
+-\frac{1}{10} & \frac{3}{10}\\
+\frac{2}{5} & -\frac{1}{5}
+\end{array}\right]=\left[\begin{array}{cc}
+-2 & 9\\
+-6 & 19
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A^{4}=P\left[\begin{array}{cc}
+a^{4} & 0\\
+0 & b^{4}
+\end{array}\right]P^{-1}=\left[\begin{array}{cc}
+a^{4} & 0\\
+3a^{4} & b^{4}
+\end{array}\right]\left[\begin{array}{cc}
+1 & 0\\
+-3 & 1
+\end{array}\right]=\left[\begin{array}{cc}
+a^{4} & 0\\
+3a^{4}-3b^{4} & b^{4}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Diagonalizar las siguientes matrices:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+2 & 3\\
+4 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left[\begin{array}{ccc}
+4 & 0 & -2\\
+2 & 5 & 4\\
+0 & 0 & 5
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=\left[\begin{array}{ccc}
+-7 & -16 & 4\\
+6 & 13 & -2\\
+12 & 16 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E=\left[\begin{array}{cccc}
+4 & 0 & 0 & 0\\
+0 & 4 & 0 & 0\\
+0 & 0 & 2 & 0\\
+1 & 0 & 0 & 2
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|A-\lambda I\right|=\left|\begin{array}{cc}
+2-\lambda & 3\\
+4 & 1-\lambda
+\end{array}\right|=\left(2-\lambda\right)\left(1-\lambda\right)-12=\lambda^{2}-3\lambda-10=\left(x-5\right)\left(x+2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=5$
+\end_inset
+
+: 
+\begin_inset Formula $\left(A-\lambda I\right)x=0\iff\left[\begin{array}{cc}
+-3 & 3\\
+4 & -4
+\end{array}\right]x=0\iff\left[\begin{array}{cc}
+-3 & 3\\
+0 & 0
+\end{array}\right]x=0\iff x\in\left\langle \left\{ \left(1,1\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=-2$
+\end_inset
+
+: 
+\begin_inset Formula $\left(A-\lambda I\right)x=0\iff\left[\begin{array}{cc}
+4 & 3\\
+4 & 3
+\end{array}\right]x=0\iff x\in\left\langle \left\{ \left(-\frac{3}{4},1\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $A=PDP^{-1}=\left[\begin{array}{cc}
+1 & -\frac{3}{4}\\
+1 & 1
+\end{array}\right]\left[\begin{array}{cc}
+5 & 0\\
+0 & -2
+\end{array}\right]P^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left|B-\lambda I\right|=\left|\begin{array}{ccc}
+4-\lambda & 0 & -2\\
+2 & 5-\lambda & 4\\
+0 & 0 & 5-\lambda
+\end{array}\right|=\left(4-\lambda\right)\left(5-\lambda\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=5$
+\end_inset
+
+: 
+\begin_inset Formula $\left(B-\lambda I\right)x=0\iff\left[\begin{array}{ccc}
+-1 & 0 & -2\\
+2 & 0 & 4\\
+0 & 0 & 0
+\end{array}\right]x=0\iff x\in\left\langle \left\{ \left(-2,0,1\right),\left(0,1,0\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=4$
+\end_inset
+
+: 
+\begin_inset Formula $\text{\ensuremath{\left(B-\lambda I\right)x=0\iff\left[\begin{array}{ccc}
+0 & 0 & -2\\
+2 & 1 & 4\\
+0 & 0 & 1
+\end{array}\right]x=0\iff x\in\left\langle \left\{ \left(-\frac{1}{2},1,0\right)\right\} \right\rangle }}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $B=PDP^{-1}=\left[\begin{array}{ccc}
+-2 & 0 & -\frac{1}{2}\\
+0 & 1 & 1\\
+1 & 0 & 0
+\end{array}\right]\left[\begin{array}{ccc}
+5 & 0 & 0\\
+0 & 5 & 0\\
+0 & 0 & 4
+\end{array}\right]P^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left|E-\lambda I\right|=\left(4-\lambda\right)^{2}\left(2-\lambda\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lambda=4$
+\end_inset
+
+: 
+\begin_inset Formula $\left(E-\lambda I\right)x=0\iff\left[\begin{array}{cccc}
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & -2 & 0\\
+1 & 0 & 0 & -2
+\end{array}\right]x=0\iff x\in\left\langle \left\{ \left(2,0,0,1\right),\left(0,1,0,0\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=2$
+\end_inset
+
+: 
+\begin_inset Formula $\left(E-\lambda I\right)x=0\iff\left[\begin{array}{cccc}
+2 & 0 & 0 & 0\\
+0 & 2 & 0 & 0\\
+0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0
+\end{array}\right]x=0\iff x\in\left\langle \left\{ \left(0,0,0,1\right),\left(0,0,1,0\right)\right\} \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $E=PDP^{-1}=\left[\begin{array}{cccc}
+2 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+1 & 0 & 0 & 1
+\end{array}\right]\left[\begin{array}{cccc}
+4 & 0 & 0 & 0\\
+0 & 4 & 0 & 0\\
+0 & 0 & 2 & 0\\
+0 & 0 & 0 & 2
+\end{array}\right]P^{-1}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ una matriz 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ con dos autovalores.
+ Cada autoespacio es unidimensional.
+ Determinar si 
+\begin_inset Formula $A$
+\end_inset
+
+ es diagonalizable justificando la respuesta.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Demostrar que si 
+\begin_inset Formula $A$
+\end_inset
+
+ es tanto diagonalizable como invertible, tambien lo es 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A=PDP^{-1}\iff AA^{-1}=PDP^{-1}A^{-1}\iff P^{-1}=DP^{-1}A^{-1}\iff D^{-1}P^{-1}=P^{-1}A^{-1}\iff PD^{-1}P^{-1}=A^{-1}$
+\end_inset
+
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describir una matriz 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ distinta de cero que sea inversible pero no diagonalizable.
+\end_layout
+
+\begin_layout Enumerate
+Describir una matriz 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ distinta de cero que sea diagonalizable pero no inversible.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A=\left[\begin{array}{cc}
+1 & 0\\
+1 & 1
+\end{array}\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $A^{-1}=\left[\begin{array}{cc}
+1 & 0\\
+-1 & 1
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left[\begin{array}{cc}
+1 & 1\\
+2 & 2
+\end{array}\right]=\left[\begin{array}{cc}
+\frac{1}{2} & -1\\
+1 & 1
+\end{array}\right]\left[\begin{array}{cc}
+3 & 0\\
+0 & 0
+\end{array}\right]\left[\begin{array}{cc}
+\frac{2}{3} & \frac{2}{3}\\
+-\frac{2}{3} & \frac{1}{3}
+\end{array}\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea
+\begin_inset Formula 
+\[
+A=\left[\begin{array}{ccccc}
+4 & 4 & 2 & 3 & -2\\
+0 & 1 & -2 & -2 & -2\\
+6 & 12 & 11 & 2 & -4\\
+9 & 20 & 10 & 10 & -6\\
+15 & 28 & 14 & 5 & -3
+\end{array}\right]
+\]
+
+\end_inset
+
+Diagonalizarla, encontrar sus autovalores y determinar las bases para los
+ autoespacios correspondientes.
+\end_layout
+
+\end_body
+\end_document
