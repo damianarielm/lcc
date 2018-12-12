@@ -1,0 +1,7937 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Induccion y Divisibilidad
+\end_layout
+
+\begin_layout Chapter
+Induccion matematica
+\end_layout
+
+\begin_layout Section
+Conceptos previos
+\end_layout
+
+\begin_layout Subsection
+Numeros reales
+\end_layout
+
+\begin_layout Subsubsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ a un conjunto que satisface los siguientes axiomas:
+\end_layout
+
+\begin_layout Description
+Asociatividad 
+\begin_inset Formula $a+\left(b+c\right)=\left(a+b\right)+c$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b,c\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Conmutatividad 
+\begin_inset Formula $a+b=b+a$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Neutro 
+\begin_inset Formula $a+0=a$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Opuesto 
+\begin_inset Formula $a+a'=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Asociatividad 
+\begin_inset Formula $a\left(bc\right)=\left(ab\right)c$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b,c\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Conmutatividad 
+\begin_inset Formula $ab=ba$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Neutro 
+\begin_inset Formula $a1=a$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a\in\mathbb{R}(1\neq0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Inverso 
+\begin_inset Formula $aa''=1$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a\in\mathbb{R}-\left\{ 0\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Distributividad 
+\begin_inset Formula $a\left(b+c\right)=ab+ac$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b,c\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Tricotomia 
+\begin_inset Formula $a<b\veebar a=b\veebar a>b$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Transitividad 
+\begin_inset Formula $a<b\land b<c\Rightarrow a<c$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b,c\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Consistencia 
+\begin_inset Formula $a<b\Rightarrow a+c<b+c$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b,c\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Consistencia 
+\begin_inset Formula $a<b\land c>0\Rightarrow ac<bc$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b,c\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Supremo 
+\begin_inset Formula $H\neq\emptyset\subseteq\mathbb{R}$
+\end_inset
+
+ es acotado superiormente en 
+\begin_inset Formula $\mathbb{R}\Rightarrow H$
+\end_inset
+
+ tiene supremo en 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Propiedades
+\end_layout
+
+\begin_layout Itemize
+El 
+\begin_inset Formula $0$
+\end_inset
+
+ es unico
+\end_layout
+
+\begin_layout Itemize
+El opuesto de 
+\begin_inset Formula $a$
+\end_inset
+
+ es unico y se denota 
+\begin_inset Formula $-a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ley cancelativa: 
+\begin_inset Formula $a+b=a+c\Rightarrow b=c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ab=0\Rightarrow a=0\lor b=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Regla de los signos: 
+\begin_inset Formula $\left(-a\right)b=a\left(-b\right)=-\left(ab\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{2}=b^{2}\Rightarrow a=b\lor a=-b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-1\right)a=-a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+El inverso de 
+\begin_inset Formula $a\neq0$
+\end_inset
+
+ es unico y se denota 
+\begin_inset Formula $1/a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Conjunto bien ordenado
+\end_layout
+
+\begin_layout Subsubsection*
+Definicion
+\end_layout
+
+\begin_layout Standard
+Decimos que 
+\begin_inset Formula $A$
+\end_inset
+
+ es un conjunto 
+\emph on
+bien ordenado
+\emph default
+ si todo subconjunto no vacio de 
+\begin_inset Formula $A$
+\end_inset
+
+ posee primer elemento.
+\end_layout
+
+\begin_layout Subsection
+Definiciones recursivas
+\end_layout
+
+\begin_layout Paragraph
+Definicion
+\end_layout
+
+\begin_layout Standard
+Definimos una sucesion 
+\begin_inset Formula $u_{1},u_{2},u_{3},\ldots$
+\end_inset
+
+ donde el termino n-esimo es en funcion de los anteriores.
+\end_layout
+
+\begin_layout Paragraph
+Ejemplo
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{n}=2u_{n-1}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\forall n>1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir: 
+\begin_inset Formula $u_{1}=1,u_{2}=2,u_{3}=4,u_{4}=8,\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sumatoria
+\end_layout
+
+\begin_layout Subsubsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Dada una sucesion de numeros reales 
+\begin_inset Formula $\left\{ x_{i}:i\in\mathbb{N}\right\} $
+\end_inset
+
+ se define la sumatoria desde 
+\begin_inset Formula $1$
+\end_inset
+
+ hasta 
+\begin_inset Formula $n$
+\end_inset
+
+ como:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{1}x_{i}=x_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{k+1}x_{i}=\sum_{i=1}^{k}x_{i}+x_{k+1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Propiedades
+\end_layout
+
+\begin_layout Itemize
+Aditividad: 
+\begin_inset Formula ${\displaystyle \sum_{k=1}^{n}\left(a_{k}+b_{k}\right)=\sum_{k=1}^{n}a_{k}+\sum_{k=1}^{n}b_{k}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Homogeneidad: 
+\begin_inset Formula ${\displaystyle \sum_{k=1}^{n}ca_{k}=c\sum_{k=1}^{n}a_{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Telescopica: 
+\begin_inset Formula ${\displaystyle \sum_{k=1}^{n}\left(a_{k}-a_{k-1}\right)=a_{n}-a_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \sum_{k=1}^{n}c=nc}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{m}\sum_{j=1}^{n}a_{i,j}=\sum_{j=1}^{n}\sum_{i=1}^{m}a_{i,j}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conjunto inductivo
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $H\subseteq\mathbb{R}$
+\end_inset
+
+ se dice inductivo si:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1\in H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k\in H\Rightarrow k+1\in H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \bigcup_{i=1}^{\infty}\left(i-\epsilon,i+\epsilon\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Lema: interseccion de conjutnos inductivos
+\end_layout
+
+\begin_layout Standard
+La interseccion arbitraria de conjuntos inductivos es un conjunto inductivo.
+\end_layout
+
+\begin_layout Subsubsection
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $X_{i}\subseteq\mathbb{R}$
+\end_inset
+
+ subconjuntos inductivos con 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ y sea 
+\begin_inset Formula $X={\displaystyle \bigcap_{i\in I}X_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ son inductivos: 
+\begin_inset Formula $1\in X_{i}\Rightarrow1\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $k\in X\Rightarrow k\in X_{i}\Rightarrow k+1\in X_{i}\Rightarrow k+1\in X$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Principio de induccion
+\end_layout
+
+\begin_layout Subsection
+Principio de induccion
+\end_layout
+
+\begin_layout Subsubsection
+Induccion conjuntista
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $H\subseteq\mathbb{N}/1\in\mathbb{N}\land\left(h\in H\Rightarrow h+1\in H\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $H=\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Por hipotesis 
+\begin_inset Formula $H$
+\end_inset
+
+ es inductivo 
+\begin_inset Formula $\xRightarrow{\ref{subsec:Definicion de numeros naturales}}\mathbb{N}\subseteq H$
+\end_inset
+
+ y como asumimos 
+\begin_inset Formula $H\subseteq\mathbb{N}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $H=\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Induccion clasica
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P\left(n\right)$
+\end_inset
+
+ una propiedad de 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(1\right)$
+\end_inset
+
+ es verdadera.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(k\right)$
+\end_inset
+
+ verdadera 
+\begin_inset Formula $\Rightarrow P\left(k+1\right)$
+\end_inset
+
+ verdadera.
+\end_layout
+
+\begin_layout Standard
+entonces 
+\begin_inset Formula $P\left(n\right)$
+\end_inset
+
+ es verdadera 
+\begin_inset Formula $\forall n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $H=\left\{ n\in\mathbb{N}:P\left(n\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Por hipotesis 
+\begin_inset Formula $P\left(1\right)$
+\end_inset
+
+ es verdadera, luego 
+\begin_inset Formula $1\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $k\in H$
+\end_inset
+
+ por definicion de 
+\begin_inset Formula $H$
+\end_inset
+
+, 
+\begin_inset Formula $P\left(k\right)$
+\end_inset
+
+ es verdadera y por hipotesis 
+\begin_inset Formula $P\left(k\right)\Rightarrow P\left(k+1\right)\Rightarrow k+1\in H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hemos demostrado que 
+\begin_inset Formula $H$
+\end_inset
+
+ es inductivo, luego 
+\begin_inset Formula $\mathbb{N}\subseteq H$
+\end_inset
+
+ y como 
+\begin_inset Formula $H\subseteq\mathbb{N}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $H=\mathbb{N}$
+\end_inset
+
+ 
+\begin_inset Formula $\therefore P\left(n\right)$
+\end_inset
+
+ es verdadera 
+\begin_inset Formula $\forall n\in\mathbb{N}=H$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Induccion desplazada
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P\left(n\right)$
+\end_inset
+
+ una propiedad de 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $N\in\mathbb{N}$
+\end_inset
+
+, si 
+\begin_inset Formula $P\left(N\right)$
+\end_inset
+
+ es cierta y 
+\begin_inset Formula $P\left(k\right)\Rightarrow P\left(k+1\right)$
+\end_inset
+
+ para cada 
+\begin_inset Formula $k\geq N$
+\end_inset
+
+ entonces 
+\begin_inset Formula $P\left(n\right)$
+\end_inset
+
+ es cierta 
+\begin_inset Formula $\forall n\geq N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $H=\left\{ n\in\mathbb{N}:P\left(n+N-1\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Notemos que 
+\begin_inset Formula $1\in H$
+\end_inset
+
+ pues 
+\begin_inset Formula $P\left(1+N-1\right)=P\left(N\right)$
+\end_inset
+
+ que es cierta por hipotesis.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $k\in H$
+\end_inset
+
+ entonces por definicion de 
+\begin_inset Formula $H$
+\end_inset
+
+, 
+\begin_inset Formula $P\left(k+N-1\right)$
+\end_inset
+
+ es cierta y por hipotesis: 
+\begin_inset Formula $P\left(k+N-1\right)\Rightarrow P\left(k+N-1+1\right)=P\left[\left(k+1\right)+N-1\right]$
+\end_inset
+
+ luego 
+\begin_inset Formula $k+1\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore H=\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Induccion fuerte conjuntista
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $H\subseteq\mathbb{N}/1\in H\land\left\llbracket 1,k\right\rrbracket \subseteq H\Rightarrow\left\llbracket 1,k+1\right\rrbracket \subseteq H$
+\end_inset
+
+ entonces 
+\begin_inset Formula $H=\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $H\subset\mathbb{N}\Rightarrow\overline{H}\neq\emptyset$
+\end_inset
+
+ luego por el principio del buen orden 
+\begin_inset Formula $\overline{H}$
+\end_inset
+
+ tiene primer elemento 
+\begin_inset Formula $p>1$
+\end_inset
+
+ (pues 
+\begin_inset Formula $1\in H$
+\end_inset
+
+ por hipotesis), entonces 
+\begin_inset Formula $\left\llbracket 1,p-1\right\rrbracket \subseteq H$
+\end_inset
+
+ pero por hipotesis si 
+\begin_inset Formula $\left\llbracket 1,p-1\right\rrbracket \subseteq H\Rightarrow\left\llbracket 1,p\right\rrbracket \subseteq H$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $p\in H$
+\end_inset
+
+.
+ Sin embargo 
+\begin_inset Formula $p\in\overline{H}$
+\end_inset
+
+ (pues es su primer elemento).
+ ¡Contradiccion!
+\end_layout
+
+\begin_layout Subsubsection
+Induccion fuerte clasica
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P\left(n\right)$
+\end_inset
+
+ una propiedad de 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(1\right)$
+\end_inset
+
+ es cierta.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $P\left(1\right),P\left(2\right),P\left(\text{3}\right),\ldots,P\left(k\right)$
+\end_inset
+
+ son ciertas, tambien lo es 
+\begin_inset Formula $P\left(k+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+entonces 
+\begin_inset Formula $P\left(n\right)$
+\end_inset
+
+ es cierta 
+\begin_inset Formula $\forall n\in\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $H=\left\{ n\in\mathbb{N}:P\left(n\right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Por hipotesis 
+\begin_inset Formula $P\left(1\right)$
+\end_inset
+
+ es cierta luego 
+\begin_inset Formula $1\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ademas como 
+\begin_inset Formula $P\left(1\right),P\left(2\right),P\left(\text{3}\right),\ldots,P\left(k\right)\Rightarrow P\left(k+1\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mbox{\ensuremath{\left\llbracket 1,k+1\right\rrbracket \subseteq H}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y por el principio de induccion fuerte 
+\begin_inset Formula $H=\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Numeros naturales
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Definicion de numeros naturales"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ es el conjunto de todos los subconjuntos inductivos de 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Propiedades de N"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n\in\mathbb{N}\land n\neq1\Rightarrow n-1\in\mathbb{N}$
+\end_inset
+
+ o en forma equivalente 
+\begin_inset Formula $\exists m\in\mathbb{N}/m+1=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a,b\in\mathbb{N}\Rightarrow a+b\in\mathbb{N}\land ab\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a,b\in\mathbb{N}\land a<b\Rightarrow b-a\in\mathbb{N}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:Clausura de la resta en N"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n\in\mathbb{N}_{0}\land a\in\mathbb{R}/n<a<n+1\Rightarrow a\notin\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ es un conjunto bien ordenado (principio del buen orden).
+\end_layout
+
+\begin_layout Subsection
+Demostraciones
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $H=\left\{ 1\right\} \cup\left\{ x\in\mathbb{N}:x=y+1\right\} $
+\end_inset
+
+ (para algun 
+\begin_inset Formula $y\in\mathbb{N}$
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $1\in H$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ entonces 
+\begin_inset Formula $h=y+1$
+\end_inset
+
+, luego 
+\begin_inset Formula $h+1=(y+1)+1$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $h+1\in H$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\therefore H=\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $b\in\mathbb{N}$
+\end_inset
+
+ fijo y sea 
+\begin_inset Formula $P\left(n\right):"n+b\in\mathbb{N}"$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(1\right)$
+\end_inset
+
+ es cierta pues 
+\begin_inset Formula $b\in\mathbb{N}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ es inductivo.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $P\left(k\right)$
+\end_inset
+
+ cierta luego 
+\begin_inset Formula $k+1+b=\left(k+b\right)+1\in\mathbb{N}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Finalmente 
+\begin_inset Formula $P\left(n\right)$
+\end_inset
+
+ es verdadera 
+\begin_inset Formula $\forall n,b\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P\left(n\right):"n<b\Rightarrow b-n\in\mathbb{N}"$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(1\right)$
+\end_inset
+
+ es cierta por la propiedad 1.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $P\left(k\right)$
+\end_inset
+
+ cierta luego si 
+\begin_inset Formula $k+1<b\Rightarrow k<b-1<b\Rightarrow b-k\in\mathbb{N}$
+\end_inset
+
+ (por H.
+ I.)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $b-\left(k+1\right)=\left(b-k\right)-1\in\mathbb{N}$
+\end_inset
+
+ (por propiedad 1).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\therefore P\left(k\right)\Rightarrow P\left(k+1\right)$
+\end_inset
+
+ si 
+\begin_inset Formula $k+1<b$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $0<a<1$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a\notin\mathbb{N}$
+\end_inset
+
+ pues 
+\begin_inset Formula $\mathbb{R}_{\geq1}$
+\end_inset
+
+ es inductivo y 
+\begin_inset Formula $a\notin\mathbb{R}_{\geq1}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Como 
+\begin_inset Formula $\mathbb{N}\subseteq\mathbb{R}_{\geq1}$
+\end_inset
+
+ sigue 
+\begin_inset Formula $a\notin\mathbb{N}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $n<a<n+1$
+\end_inset
+
+ con 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ y 
+\begin_inset Formula $a\in\mathbb{N}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $0<a-n<1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Por un lado 
+\begin_inset Formula $a-n\in\mathbb{N}$
+\end_inset
+
+ (por propiedad 3) pero acabamos de ver que no existen naturales entre 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ ¡Absurdo!
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\therefore a\notin\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Debemos ver que si 
+\begin_inset Formula $H\subseteq\mathbb{N}\Rightarrow H$
+\end_inset
+
+ tiene primer elemento.
+\begin_inset Newline newline
+\end_inset
+
+Supongamos por el absurdo que 
+\begin_inset Formula $H$
+\end_inset
+
+ no tiene primer elemento.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Sea 
+\begin_inset Formula $K=\left\{ n\in\mathbb{N}:\left\llbracket 1,n\right\rrbracket \subseteq\overline{H}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $1\in K$
+\end_inset
+
+ pues de lo contrario 
+\begin_inset Formula $1$
+\end_inset
+
+ seria primer elemento de 
+\begin_inset Formula $H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $k\in K$
+\end_inset
+
+ es decir 
+\begin_inset Formula $\left\llbracket 1,k\right\rrbracket \subseteq\overline{H}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(i\notin H\forall i\in\left\llbracket 1,k\right\rrbracket \right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $k+1\in H\Rightarrow k+1$
+\end_inset
+
+ seria primer elemento de 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ Esto no puede ser, luego 
+\begin_inset Formula $k+1\notin H\Rightarrow\left\llbracket 1,k+1\right\rrbracket \subseteq H$
+\end_inset
+
+, es decir 
+\begin_inset Formula $k+1\in K$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto 
+\begin_inset Formula $K$
+\end_inset
+
+ es inductivo y como 
+\begin_inset Formula $K\subseteq\mathbb{N}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $K=\mathbb{N}$
+\end_inset
+
+ y en conclusion 
+\begin_inset Formula $H=\emptyset$
+\end_inset
+
+.
+ ¡Contradiccion!
+\end_layout
+
+\end_deeper
+\begin_layout Chapter
+Divisibilidad
+\end_layout
+
+\begin_layout Section
+Numeros enteros
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Definimos al conjunto de los numeros enteros como 
+\begin_inset Formula $\mbox{\ensuremath{\mathbb{Z}=\mathbb{N}\cup\left\{ 0\right\} \cup\left\{ -n:n\in\mathbb{N}\right\} }}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a,b\in\mathbb{Z}\Rightarrow a+b\in\mathbb{Z}\land ab\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ab=1\Rightarrow\begin{cases}
+a=b=1\\
+a=b=-1
+\end{cases}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a,b\in\mathbb{Z}\Rightarrow a-b\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Demostraciones
+\end_layout
+
+\begin_layout Enumerate
+Analizaremos distintos casos.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a,b\in\mathbb{N}$
+\end_inset
+
+: ya vimos 
+\begin_inset Formula $a+b\in\mathbb{N}\land ab\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a=0\land b\in\mathbb{Z}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a+b=0+b=b\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ab=0b=0\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a\in\mathbb{Z}\land b=0$
+\end_inset
+
+: Analogo al caso anterior.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-a,-b\in\mathbb{N}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a+b=-\left[\begin{array}{cc}
+\underbrace{-a} & +\underbrace{\left(-b\right)}\\
+\in\mathbb{N} & \in\mathbb{N}
+\end{array}\right]\in-\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ab=\left[\left(-a\right)\left(-b\right)\right]\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a\in\mathbb{N}\land b\in-\mathbb{N}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a+b=a-\left(-b\right)\begin{cases}
+Si & a=-b\Rightarrow a+b=0\in\mathbb{Z}\\
+Si & a>-b\Rightarrow a+b=a-\left(-b\right)\in\mathbb{N}\eqref{subsec:Propiedades de N}\\
+Si & a<-b\Rightarrow a+b=a-\left(-b\right)=-\left(-b-a\right)\in\mathbb{N}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $ab=\left[a\left(-b\right)\in-\mathbb{N}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a\in-\mathbb{N}\land b\in\mathbb{N}$
+\end_inset
+
+: Analogo al caso anterior.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Podemos asumir 
+\begin_inset Formula $a,b\neq0$
+\end_inset
+
+ pues de lo contrario 
+\begin_inset Formula $ab=0\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $a,b\in\mathbb{N}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $ab=1\Rightarrow a=b=1$
+\end_inset
+
+ de lo contrario 
+\begin_inset Formula $ab>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $a\in\mathbb{N}\land b\in-\mathbb{N}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $ab<0\Rightarrow ab\neq1$
+\end_inset
+
+ por lo que este caso no se da.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $a,b\in-\mathbb{N}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $-a,-b\in\mathbb{N}$
+\end_inset
+
+.
+ Por hipotesis tenemos 
+\begin_inset Formula $\mbox{\ensuremath{ab=1=\left(-a\right)\left(-b\right)}}$
+\end_inset
+
+ y por el caso a) 
+\begin_inset Formula $-a=-b=1$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $a=b=-1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $1\in\mathbb{N}\Rightarrow-1\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{cc}
+a-b=a+ & \underbrace{\left(-1\right)b}\\
+ & \in\mathbb{Z}
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Divisibilidad
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ decimos que 
+\begin_inset Quotes cld
+\end_inset
+
+
+\emph on
+
+\begin_inset Formula $a$
+\end_inset
+
+ divide a 
+\begin_inset Formula $b$
+\end_inset
+
+
+\begin_inset Quotes crd
+\end_inset
+
+ 
+\emph default
+y lo notamos 
+\begin_inset Formula $a|b$
+\end_inset
+
+ si 
+\begin_inset Formula $\exists c\in\mathbb{Z}/b=ac$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1|a\land a|a\land a|0$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\land b|c\Rightarrow a|c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\land a|c\Rightarrow a|(b+c)\land a|(b-c)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\land a|(b+c)\Rightarrow a|c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\land b|a\Rightarrow a=\pm b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\Rightarrow a|bx$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\land a|c\Rightarrow a|(bx+cy)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x,y\in\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Demostraciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a=1a\Rightarrow1|a\land a|a$
+\end_inset
+
+ ademas 
+\begin_inset Formula $0=0a\Rightarrow a|0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\Rightarrow b=ax$
+\end_inset
+
+ ademas 
+\begin_inset Formula $b|c\Rightarrow c=by$
+\end_inset
+
+ luego 
+\begin_inset Formula $c=by=a\left(xy\right)\Rightarrow a|c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|b\Rightarrow b=ax$
+\end_inset
+
+ ademas 
+\begin_inset Formula $a|c\Rightarrow c=ay$
+\end_inset
+
+ luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $b+c=ax+ay=a\left(x+y\right)\Rightarrow a|\left(b+c\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b-c=ax-ay=a\left(x-y\right)\Rightarrow a|\left(b-c\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Por la propiedad 3) 
+\begin_inset Formula $a|b\land a|\left(b+c\right)\Rightarrow a|\left[\left(b+c\right)-b\right]$
+\end_inset
+
+ es decir 
+\begin_inset Formula $a|c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algoritmo de la division
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(b\neq0\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\exists q,r\in\mathbb{Z}/a=bq+r$
+\end_inset
+
+ con 
+\begin_inset Formula $0\leq r<b$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $q,r$
+\end_inset
+
+ son unicos.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b|a\iff r=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Demostracion
+\end_layout
+
+\begin_layout Paragraph
+Existencia
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $a>0$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $H=\left\{ h\in\mathbb{N}:hb>a\right\} $
+\end_inset
+
+.
+ Notemos que 
+\begin_inset Formula $H\neq\emptyset$
+\end_inset
+
+ pues 
+\begin_inset Formula $\left(a+1\right)b>a$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Por el principio del buen orden 
+\begin_inset Formula $H$
+\end_inset
+
+ tiene primer elemento 
+\begin_inset Formula $h_{0}$
+\end_inset
+
+; luego 
+\begin_inset Formula $h_{0}-1\notin H$
+\end_inset
+
+ es decir 
+\begin_inset Formula $\left(h_{0}-1\right)b\leq a<h_{0}b$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Llamemos 
+\begin_inset Formula $q=h_{0}-1$
+\end_inset
+
+ y 
+\begin_inset Formula $r=a-bq$
+\end_inset
+
+.
+ Restando 
+\begin_inset Formula $bq$
+\end_inset
+
+ miembro a miembro: 
+\begin_inset Formula $0\leq a-bq<b$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $0\leq r<b$
+\end_inset
+
+ y claramente 
+\begin_inset Formula $a=bq+r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $a<0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $-a>0$
+\end_inset
+
+.
+ Luego por la parte anterior 
+\begin_inset Formula $\exists q,r/-a=bq+r$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(0\leq r<b\right)$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $a=b\left(-q\right)-r$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $r=0\Rightarrow a=b\left(-q\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $0<r<b\Rightarrow0>-r>-b\Rightarrow-b<-r<0\Rightarrow0<b-r<b$
+\end_inset
+
+.
+ Luego: 
+\begin_inset Formula $a=b\left(-q\right)-r=b\left(-q\right)-b+b*r=b\underbrace{\left(q-1\right)}_{\widetilde{q}}+\underbrace{b-r}_{\widetilde{r}}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Finalmente: 
+\begin_inset Formula $a=b\widetilde{q}+\widetilde{r}$
+\end_inset
+
+ con 
+\begin_inset Formula $0\leq\widetilde{r}<b$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Unicidad
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $\begin{cases}
+a=bq+r & (0\leq r<b)\\
+a=bq'+r' & (0\leq r'<b)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $r\neq r'$
+\end_inset
+
+ supongamos 
+\begin_inset Formula $r'\leq r$
+\end_inset
+
+.
+ Restando las ecuaciones anteriroes: 
+\begin_inset Formula $0=b\left(q-q'\right)+r-r'$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(0<r-r'<b\right)\Rightarrow r-r'=b\left(q'-q\right)$
+\end_inset
+
+.
+ Luego:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $q'-q=0\Rightarrow r-r'=0\Rightarrow q=q'\land r=r'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+o bien 
+\begin_inset Formula $q'-q\in\mathbb{N}\Rightarrow r-r'=b\left(q'-q\right)\geq b$
+\end_inset
+
+ ¡Contradiccion!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore$
+\end_inset
+
+ 
+\begin_inset Formula $q=q'\land r=r'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Corolario
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $a,b\in\mathbb{Z},\exists q,r\in\mathbb{Z}/a=bq+r$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(0\leq r<\left|b\right|\right)$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ejemplos
+\end_layout
+
+\begin_layout Itemize
+Para
+\begin_inset Formula $19/6$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $19=6.3+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Para 
+\begin_inset Formula $-19/6$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $-19=6\left(-3\right)-1=6\left(-3\right)-6+6-1=6\left(-4\right)+5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Para 
+\begin_inset Formula $-19/-6$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $-19=\left(-6\right)4+5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sistemas de numeracion posicionales
+\end_layout
+
+\begin_layout Standard
+En general para representar un numero en base 
+\begin_inset Formula $b\geq2$
+\end_inset
+
+ se utilizan 
+\begin_inset Formula $b$
+\end_inset
+
+ simbolos 
+\begin_inset Formula $\left\{ S_{0},S_{1},\ldots,S_{b-1}\right\} $
+\end_inset
+
+ que representan los numeros 
+\begin_inset Formula $0,1,\ldots,b-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Un numero 
+\begin_inset Formula $a$
+\end_inset
+
+ en base 
+\begin_inset Formula $b$
+\end_inset
+
+ se escribe 
+\begin_inset Formula 
+\[
+a:\left(a_{k}a_{k-1}\cdots a_{1}a_{0}\right)_{b}=a_{k}b^{k}+a_{k-1}b^{k-1}+\ldots+a_{1}k+a_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $a=b\underbrace{\left(a_{k}b^{k-1}+a_{k-1}b^{k-2}+\ldots+a_{1}\right)}_{q'}+\underbrace{a_{0}}_{r'}$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(0\leq a_{0}<b\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Maximo comun divisor
+\end_layout
+
+\begin_layout Subsubsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(b\neq0\right)$
+\end_inset
+
+ decimos que 
+\begin_inset Formula $d$
+\end_inset
+
+ es un 
+\begin_inset Formula $MCD$
+\end_inset
+
+ de 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ si 
+\begin_inset Formula $d\in\mathbb{N}$
+\end_inset
+
+ y:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $d|a\land d|b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c|a\land c|b\Rightarrow c|d$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Si existe el 
+\begin_inset Formula $MCD$
+\end_inset
+
+ es unico.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $d_{2}$
+\end_inset
+
+ son 
+\begin_inset Formula $MCD$
+\end_inset
+
+ de 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ entonces 
+\begin_inset Formula $d_{2}|d_{1}\Rightarrow d_{2}\leq d_{1}$
+\end_inset
+
+.
+ Analogamente 
+\begin_inset Formula $d_{1}|d_{2}\Rightarrow d_{1}\leq d_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\therefore d_{1}=d_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ no simultaneamente nulos, entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists!d$
+\end_inset
+
+ que satisface las condiciones de la definicion.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $MCD(a,b)$
+\end_inset
+
+ es combinacion lineal de 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Es decir 
+\begin_inset Formula $\mbox{\ensuremath{\exists s,t\in\mathbb{Z}/MDC(a,b)=sa+tb}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Supongamos sin perder generalidad que 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+.
+ Mas aun, como 
+\begin_inset Formula $\text{\ensuremath{MCD(a,b)=MCD(a,-b)}}$
+\end_inset
+
+ se puede suponer 
+\begin_inset Formula $b>0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+Divido por b: 
+\begin_inset Formula $a=bq_{1}+r_{1}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(0\leq r_{1}<b\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $r_{1}\neq0$
+\end_inset
+
+ divido por 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+: 
+\begin_inset Formula $b=r_{1}q_{2}+r_{2}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(0\leq r_{2}<r_{1}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $r_{2}\neq0$
+\end_inset
+
+ divido por 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $r_{1}=r_{2}q_{3}+r_{3}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(0\leq r_{3}<r_{2}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\cdots$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Como 
+\begin_inset Formula $b=r_{0}>r_{1}>r_{2}>\ldots\geq0$
+\end_inset
+
+ llegamos a 
+\begin_inset Formula $r_{n}=0$
+\end_inset
+
+.
+ Luego:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $r_{n-3}=r_{n-2}q_{n-1}+\underbrace{r_{n-1}}_{MCD}$
+\end_inset
+
+ con 
+\begin_inset Formula $\left(0\leq r_{n-1}<r_{n-2}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $r_{n-2}=r_{n-1}q_{n}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Notar que: 
+\begin_inset Formula $\begin{array}{cc}
+r_{n-1}|r_{n-2}\Rightarrow r_{n-1}|r_{n-3}=r_{n-2}q_{n-1}+r_{n-1} & \Rightarrow\\
+r_{n-1}|r_{n-4}=r_{n-3}q_{n-2}+r_{n-2} & \Rightarrow\\
+r_{n-1}|r_{0}=b\Rightarrow r_{n-1}|a=bq_{1}+r_{1}
+\end{array}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Reciprocamente si 
+\begin_inset Formula $c|a\land c|b$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\begin{array}{cc}
+c|r_{1}=a-bq_{1} & \Rightarrow\\
+c|r_{2}=b-r_{1}q_{2}\Rightarrow c|r_{3} & \Rightarrow\\
+c|r_{n-1}
+\end{array}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $MCD(a,b)=r_{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Finalmente 
+\begin_inset Formula $r_{n-1}$
+\end_inset
+
+ es combinacion lineal entera de 
+\begin_inset Formula $r_{n-2}$
+\end_inset
+
+ y 
+\begin_inset Formula $r_{n-3}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+r_{n-1}=r_{n-3}-r_{n-2}q_{n-1}=r_{n-3}-\left(r_{n-4}-r_{n-3}q_{n-2}\right)q_{n-1}=-r_{n-4}+q_{n-1}+r_{n-3}\left(1+q_{n-2}q_{n-1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Continuando asi encontramos 
+\begin_inset Formula $s,t\in\mathbb{Z}/r_{n-1}=sa+tb$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Primalidad
+\end_layout
+
+\begin_layout Subsubsection
+Numeros coprimos
+\end_layout
+
+\begin_layout Paragraph
+Definicion
+\end_layout
+
+\begin_layout Standard
+Dos numeros 
+\begin_inset Formula $a,b\in\mathbb{Z}$
+\end_inset
+
+ no simultaneamente nulos, se dicen coprimos si 
+\begin_inset Formula $MCD(a,b)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1$
+\end_inset
+
+ es corpimo con todos los enteros.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ son coprimos 
+\begin_inset Formula $\iff$
+\end_inset
+
+ no tienen divisores comunes 
+\begin_inset Formula $\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Corolario
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\series bold
+
+\begin_inset Formula $b$
+\end_inset
+
+ 
+\series default
+son corpimos 
+\begin_inset Formula $\iff\exists s,t\in\mathbb{Z}/1=sa+tb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Rightarrow)$
+\end_inset
+
+ 
+\begin_inset Formula $a,b$
+\end_inset
+
+ coprimos 
+\begin_inset Formula $\text{\Rightarrow}MCD(a,b)=1\Rightarrow\exists s,t/1=sa+tb$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Leftarrow)$
+\end_inset
+
+ Si 
+\begin_inset Formula $c|a\land c|b\Rightarrow c|\left(sa+tb\right)=1$
+\end_inset
+
+, luego 
+\begin_inset Formula $c=\pm1\therefore MDC(a,b)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Numeros primos
+\end_layout
+
+\begin_layout Paragraph
+Definicion
+\end_layout
+
+\begin_layout Standard
+Un numero 
+\begin_inset Formula $p\text{\in\mathbb{Z}}$
+\end_inset
+
+ se dice primo si tiene exactamente cuatro divisores.
+ Equivalentemente 
+\begin_inset Formula $p$
+\end_inset
+
+ es primo si 
+\begin_inset Formula $p\neq\pm1$
+\end_inset
+
+ y solo es divisible por 
+\begin_inset Formula $\pm1,\pm p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p$
+\end_inset
+
+ es primo 
+\begin_inset Formula $\iff-p$
+\end_inset
+
+ es primo (
+\begin_inset Formula $p$
+\end_inset
+
+ y 
+\begin_inset Formula $-p$
+\end_inset
+
+ tienen los mismos divisores).
+\end_layout
+
+\begin_layout Paragraph
+Lema
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $p\in\mathbb{Z}$
+\end_inset
+
+ un numero primo, entonces: 
+\begin_inset Formula $p|ab\Rightarrow p|a\lor p|b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos 
+\begin_inset Formula $p\nmid a\Rightarrow MCD(a,p)=1$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $\text{\ensuremath{\exists s,t\in\mathbb{Z}/1=sa+tp}}$
+\end_inset
+
+ y como 
+\begin_inset Formula $b=b.1$
+\end_inset
+
+ entonces 
+\begin_inset Formula $b=b\left(sa+tp\right)=sab+tpb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $p|ab\Rightarrow p|sab$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $p|tpb$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mbox{\ensuremath{p|sab\land p|tpb\Rightarrow p|\left(sab+tpb\right)=b}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Lema
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $p$
+\end_inset
+
+ es primo y divide a un producto de enteros 
+\begin_inset Formula $a_{1},a_{2},\ldots,a_{n}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $p|a_{j}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $1\leq a_{j}\leq n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $p,q$
+\end_inset
+
+ son primos positivos y 
+\begin_inset Formula $p|q\Rightarrow p=q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema fundamental de la aritmetica
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $m\in\mathbb{Z},m\neq-1,0,1$
+\end_inset
+
+ entonces existen primos positivos 
+\begin_inset Formula $\text{\ensuremath{p_{1},p_{2},\ldots,p_{r}/m=\epsilon{\displaystyle \prod_{j=1}^{r}p_{j}}}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\epsilon=\pm1$
+\end_inset
+
+ y esta factorizacion es unica (salvo por el orden).
+\end_layout
+
+\begin_layout Subsubsection
+Demostracion
+\end_layout
+
+\begin_layout Paragraph
+Existencia
+\end_layout
+
+\begin_layout Standard
+Consideremos 
+\begin_inset Formula $m\geq2$
+\end_inset
+
+.
+ Debemos probar 
+\begin_inset Formula $Q\left(m\right):$
+\end_inset
+
+
+\begin_inset Quotes cld
+\end_inset
+
+
+\begin_inset Formula $m$
+\end_inset
+
+ es producto de primos
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Q\left(2\right)$
+\end_inset
+
+ es verdadera.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $Q\left(2\right),Q\left(3\right),\ldots,Q\left(m\right)$
+\end_inset
+
+ son ciertas y veamos que pasa con 
+\begin_inset Formula $Q\left(m+1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Si 
+\begin_inset Formula $m+1$
+\end_inset
+
+ es primo ya esta.
+ De lo contrario 
+\begin_inset Formula $m+1$
+\end_inset
+
+ tiene un divisor 
+\begin_inset Formula $a$
+\end_inset
+
+ tal que 
+\series bold
+
+\begin_inset Formula $\text{\ensuremath{1<a<m+1}}$
+\end_inset
+
+
+\series default
+.
+ Luego 
+\begin_inset Formula $m+1=ab$
+\end_inset
+
+ con 
+\begin_inset Formula $1<b<m+1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Como 
+\begin_inset Formula $Q(a)$
+\end_inset
+
+ y 
+\begin_inset Formula $Q(b)$
+\end_inset
+
+ son verdaderas, tanto 
+\begin_inset Formula $a$
+\end_inset
+
+ como 
+\begin_inset Formula $b$
+\end_inset
+
+ son producto de primos y en consecuencia 
+\begin_inset Formula $m+1=ab$
+\end_inset
+
+ es producto de primos.
+\end_layout
+
+\begin_layout Paragraph
+Unicidad
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P\left(r\right):$
+\end_inset
+
+ 
+\begin_inset Quotes cld
+\end_inset
+
+Todo 
+\begin_inset Formula $m\in\mathbb{N}$
+\end_inset
+
+ que es producto de primos positivos tiene una unica factorizacion en primos
+ positivos, salvo por el orden
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Veamos que 
+\begin_inset Formula $P\left(1\right)$
+\end_inset
+
+ es cierta.
+\begin_inset Newline newline
+\end_inset
+
+Supongamos 
+\begin_inset Formula $m={\displaystyle \prod_{j=1}^{1}p_{j}=p_{1}}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $m$
+\end_inset
+
+ es primo.
+\begin_inset Newline newline
+\end_inset
+
+Si por otro lado 
+\begin_inset Formula $m={\displaystyle \prod_{j=1}^{s}p'_{j}}$
+\end_inset
+
+ con 
+\begin_inset Formula $p'_{j}>0$
+\end_inset
+
+, por el lema previo: 
+\begin_inset Formula $m|p'_{j}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $j$
+\end_inset
+
+ y por la segunda parte del lema 
+\begin_inset Formula $m=p'_{j}=p_{1}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Por lo tanto 
+\begin_inset Formula $s=1\land m=p{}_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Veamos que 
+\begin_inset Formula $P\left(k\right)\Rightarrow P\left(k+1\right)$
+\end_inset
+
+.
+ Supongamos cierta 
+\begin_inset Formula $P\left(k\right)$
+\end_inset
+
+ y sea 
+\begin_inset Formula $\text{\ensuremath{m={\displaystyle \prod_{j=1}^{k+1}p_{j}=\prod_{j=1}^{s}p'_{j}}}}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $p_{k+1}\left|m{\displaystyle =\prod_{j=1}^{s}p'_{j}}\right.\Rightarrow p_{k+1}|p'_{h}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $1\leq h\leq s\therefore p_{k+1}=p'_{h}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Luego 
+\begin_inset Formula $\frac{m}{p_{k+1}}={\displaystyle \prod_{j=1}^{k}p{}_{j}=\prod_{\underset{j\ne k}{j=1}}^{s}p'_{j}}$
+\end_inset
+
+ con 
+\begin_inset Formula $j\neq h$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula $\frac{m}{p_{k+1}}$
+\end_inset
+
+ es producto de 
+\begin_inset Formula $k$
+\end_inset
+
+ primos.
+ Finalmente por hipotesis inductiva esta factorizacion es unica 
+\begin_inset Formula $\Rightarrow k+1=s\land p_{1},\ldots,p_{k+1}$
+\end_inset
+
+ coinciden con 
+\begin_inset Formula $p'_{1},\ldots,p'_{k+1}$
+\end_inset
+
+ salvo en el orden.
+\end_layout
+
+\begin_layout Subsubsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Existen infinitos numeros primos.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Supongamos que existen una cantidad finita de primos positivos.
+ Digamos 
+\begin_inset Formula $p_{1},p_{2},\ldots,p_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $n={\displaystyle \prod_{j=1}^{k}p{}_{j}}$
+\end_inset
+
+, como 
+\begin_inset Formula $n+1>1$
+\end_inset
+
+ por el teorema fundamental de la aritmetica existe un primo positivo 
+\begin_inset Formula $p$
+\end_inset
+
+ tal que 
+\begin_inset Formula $p|n+1$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $p=p_{j}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $p|n+1\land p|n\Rightarrow p|MCD(n,n+1)$
+\end_inset
+
+.
+ ¡Absurdo! (ver lema siguiente).
+\end_layout
+
+\begin_layout Subsubsection
+Lemas
+\end_layout
+
+\begin_layout Paragraph
+Lema 1
+\end_layout
+
+\begin_layout Standard
+Dado 
+\begin_inset Formula $n\in\mathbb{Z}$
+\end_inset
+
+: 
+\begin_inset Formula $n$
+\end_inset
+
+ y 
+\begin_inset Formula $n+1$
+\end_inset
+
+ son coprimos.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1=1\left(n+1\right)+\left(-1\right)n\therefore MCD(n,n+1)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Lema 2
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ no es primo, entonces existe un primo positivo 
+\begin_inset Formula $p$
+\end_inset
+
+ tal que 
+\begin_inset Formula $p|n\land p\leq n$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Proposicion
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a,b\in\mathbb{Z}-\left\{ 0\right\} $
+\end_inset
+
+ tales que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a=\epsilon{\displaystyle \prod_{j=1}^{r}p_{j}^{kj}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b=\epsilon'{\displaystyle \prod_{j=1}^{r}p_{j}^{hj}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $\epsilon,\epsilon'=\pm1,p_{j}$
+\end_inset
+
+ primos positivos distintos y 
+\begin_inset Formula $k_{j},h_{j}\geq0$
+\end_inset
+
+ entonces: 
+\begin_inset Formula 
+\[
+MCD(a,b)={\displaystyle \prod_{j=1}^{r}p_{j}^{min\left(k_{j},h_{j}\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Notese que 
+\begin_inset Formula $k_{j}=0$
+\end_inset
+
+ en el caso de que 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ no aparezca en la descomposicion en primos de 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ (Analogamente si 
+\begin_inset Formula $h_{j}=0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $d={\displaystyle \prod_{j=1}^{r}p_{j}^{min\left(k_{j},h_{j}\right)}}$
+\end_inset
+
+, claramente 
+\begin_inset Formula $d|a\land d|b$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $c$
+\end_inset
+
+ tal que 
+\begin_inset Formula $c|a\land c|b$
+\end_inset
+
+.
+ Notemos que si 
+\begin_inset Formula $p$
+\end_inset
+
+ es primo y 
+\begin_inset Formula $p|c$
+\end_inset
+
+ entonces 
+\begin_inset Formula $p|a\land p|b$
+\end_inset
+
+, luego 
+\begin_inset Formula $c={\displaystyle \epsilon''\prod_{j=1}^{r}p_{j}^{l_{j}}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\epsilon''=\pm$
+\end_inset
+
+ y 
+\begin_inset Formula $l_{j}\geq0$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $c|a$
+\end_inset
+
+, 
+\begin_inset Formula $l_{j}\leq k_{j}$
+\end_inset
+
+ y como 
+\begin_inset Formula $c|b$
+\end_inset
+
+, 
+\begin_inset Formula $l_{j}\leq h_{j}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $l_{j}\leq min\left(k_{j},h_{j}\right)\Rightarrow c|d\therefore d=MCD(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Minimo comun multiplo
+\end_layout
+
+\begin_layout Subsubsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Dados 
+\begin_inset Formula $a,b\in\mathbb{Z}-\left\{ 0\right\} $
+\end_inset
+
+, un numero 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ se dice minimo comun multiplo de 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ si:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|m\land b|m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a|n\land b|n\Rightarrow m|n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al igual que el 
+\begin_inset Formula $MCD$
+\end_inset
+
+ el 
+\begin_inset Formula $mcm$
+\end_inset
+
+ debe ser unico.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a,b\in\mathbb{Z}-\left\{ 0\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $mcm\left(a,b\right)=\frac{|ab|}{MCD(a,b)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $a=\epsilon{\displaystyle \prod_{j=1}^{r}p_{j}^{k_{j}}}$
+\end_inset
+
+ y 
+\begin_inset Formula $b=\epsilon''{\displaystyle \prod_{j=1}^{r}p_{j}^{h_{j}}}$
+\end_inset
+
+ con 
+\begin_inset Formula $\epsilon,\epsilon''=\pm1,p_{j}$
+\end_inset
+
+ primos positivos y 
+\begin_inset Formula $k_{j},h_{j}\geq0$
+\end_inset
+
+ entonces: 
+\begin_inset Formula $mcm\left(a,b\right)={\displaystyle \prod_{j=1}^{r}p_{j}^{max\left(k_{j},h_{j}\right)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Como 
+\begin_inset Formula $mcm(a,b)=mcm(|a|,|b|)$
+\end_inset
+
+ podemos suponer 
+\begin_inset Formula $a>0\land b>0$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $MCD(a,b)|a\land MCD(a,b)|b\Rightarrow\frac{a}{MCD(a,b)},\frac{b}{MCD(a,b)}\in\mathbb{N}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Luego 
+\begin_inset Formula $\frac{ab}{MCD(a,b)}=\underbrace{a\frac{b}{MCD(a,b)}}_{\Rightarrow a\left|\frac{ab}{MCD(a,b)}\right.}=\underbrace{b\frac{a}{MCD(a,b)}}_{\Rightarrow b\left|\frac{ab}{MCD(a,b)}\right.}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Por otro lado si 
+\begin_inset Formula $\text{\ensuremath{a|n\land b|n\Rightarrow\exists x,y\in\mathbb{Z}/n=xa=yb\Rightarrow x\frac{a}{MCD(a,b)}=y\frac{b}{MCD(a,b)}}}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Como 
+\begin_inset Formula $\frac{a}{MCD(a,b)}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{b}{MCD(a,b)}$
+\end_inset
+
+ son coprimos y 
+\begin_inset Formula $\frac{a}{MCD(a,b)}\left|\frac{b}{MCD(a,b)}\right.$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\frac{a}{MCD(a,b)}\left|y\Rightarrow y=\frac{a}{MCD(a,b)}z\right.$
+\end_inset
+
+ con 
+\begin_inset Formula $z\in\mathbb{Z}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Finalmente 
+\begin_inset Formula $n=yb=\frac{ab}{MCD(a,b)}z\Rightarrow\frac{ab}{MCD(a,b)}\left|n\right.\therefore\frac{ab}{MCD(a,b)}=mcm(a,b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $mcm(a,b)=\frac{|ab|}{MCD(a,b)}=\frac{{\displaystyle \prod_{j=1}^{r}p_{j}^{k_{j}+h_{j}}}}{{\displaystyle \prod_{j=1}^{r}p_{j}^{min\left(k_{j},h_{k}\right)}}}={\displaystyle \prod_{j=1}^{r}p_{j}^{k_{j}+h_{j}-min\left(k_{j},h_{j}\right)}={\displaystyle \prod_{j=1}^{r}p_{j}^{max\left(k_{j},h_{j}\right)}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+Geometria lineal en el espacio
+\end_layout
+
+\begin_layout Chapter
+Vectores
+\end_layout
+
+\begin_layout Chapter
+Plano
+\end_layout
+
+\begin_layout Chapter
+Recta
+\end_layout
+
+\begin_layout Part
+Analisis combinatorio
+\end_layout
+
+\begin_layout Chapter
+Cardinalidad
+\end_layout
+
+\begin_layout Section
+Funciones
+\end_layout
+
+\begin_layout Subsection
+Definiciones
+\end_layout
+
+\begin_layout Subsubsection
+Funcion inyectiva
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ conjuntos y 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ una funcion, decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva si
+\begin_inset Formula 
+\[
+x\neq y\Rightarrow f(x)\neq f(y)
+\]
+
+\end_inset
+
+ o en forma equivalente
+\begin_inset Formula 
+\[
+f(x)=f(y)\Rightarrow x=y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Funcion sobreyectiva
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ conjuntos y 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+ una funcion, decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es sobreyectiva o suryectiva si
+\begin_inset Formula 
+\[
+\forall y\in Y\exists x\in X/f(x)=y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Funcion biyectiva
+\end_layout
+
+\begin_layout Standard
+Decimos que una funcion es biyectiva si es inyectiva y suryectiva.
+\end_layout
+
+\begin_layout Subsubsection
+Composicion
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f:X\rightarrow Y$
+\end_inset
+
+, 
+\begin_inset Formula $g:Y\rightarrow Z$
+\end_inset
+
+, la composicion 
+\begin_inset Formula $g\circ f:X\rightarrow Z$
+\end_inset
+
+ se define como 
+\begin_inset Formula 
+\[
+\left(g\circ f\right)(x)=g\left(f(x)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Funcion caracteristica
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto y 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+,definimos 
+\begin_inset Formula $\chi B:A\rightarrow\left\{ 0,1\right\} $
+\end_inset
+
+ tal que 
+\begin_inset Formula $\text{\ensuremath{\chi B(i)=\begin{cases}
+0, & i\notin B\\
+1, & i\in B
+\end{cases}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Notacion
+\end_layout
+
+\begin_layout Itemize
+Denotamos con 
+\begin_inset Formula $\mathcal{F}\left(A,B\right)$
+\end_inset
+
+ al conjunto de 
+\emph on
+todas
+\emph default
+ las funciones de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Denotamos con 
+\begin_inset Formula $\mathcal{F}_{i}\left(A,B\right)$
+\end_inset
+
+ al conjunto de todas las funciones 
+\emph on
+inyectivas
+\emph default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Denotamos con 
+\begin_inset Formula $\mathcal{F}_{b}\left(A,B\right)$
+\end_inset
+
+ al conjunto de todas las funciones 
+\emph on
+biyectivas
+\emph default
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\llbracket m,n\right\rrbracket =\left\{ m,m+1,\ldots,n\right\} =\left\{ k\in\mathbb{N}:m\leq k\leq n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Inyectividad de la copmosicion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f,g$
+\end_inset
+
+ son inyectivas/suryectivas entonces 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es inyectiva/suryectiva.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es inyectiva/suryectiva entonces 
+\begin_inset Formula $f$
+\end_inset
+
+/
+\begin_inset Formula $g$
+\end_inset
+
+ es suryectiva.
+\end_layout
+
+\begin_layout Subsection
+Principio de las casillas
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $m,n\in\mathbb{N}/n>m$
+\end_inset
+
+, entonces no existe ninguna funcion inyectiva 
+\begin_inset Formula $f:\left\llbracket 1,n\right\rrbracket \rightarrow\left\llbracket 1,m\right\rrbracket $
+\end_inset
+
+.
+ 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $H=\left\{ n\in\mathbb{N}/\exists m<n,f:\left\llbracket 1,n\right\rrbracket \rightarrow\left\llbracket 1,m\right\rrbracket inyectiva\right\} $
+\end_inset
+
+.
+ Debemos ver que 
+\begin_inset Formula $H=\emptyset$
+\end_inset
+
+.
+ Supongamos lo contrario.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ el primer elemento de 
+\begin_inset Formula $H$
+\end_inset
+
+ (principio del buen orden).
+\end_layout
+
+\begin_layout Itemize
+Por definicion de 
+\begin_inset Formula $H$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $\exists m<h$
+\end_inset
+
+ y 
+\begin_inset Formula $f:\left\llbracket 1,h\right\rrbracket \rightarrow\left\llbracket 1,m\right\rrbracket $
+\end_inset
+
+ inyectiva.
+\end_layout
+
+\begin_layout Itemize
+Definimos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $c=f(h)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g:\left\llbracket 1,m\right\rrbracket \rightarrow\left\llbracket 1,m\right\rrbracket $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $g(i)=\begin{cases}
+i, & i\neq c,m\\
+m, & i=c\\
+c, & i=m
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $g\circ g=id_{\left\llbracket 1,m\right\rrbracket }$
+\end_inset
+
+, luego 
+\begin_inset Formula $g$
+\end_inset
+
+ es biyectiva.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $i\in\left\llbracket 1,h-1\right\rrbracket \Rightarrow g\left[f\left(i\right)\right]\in\left\llbracket 1,m-1\right\rrbracket $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $\widetilde{f}:\left\llbracket 1,h-1\right\rrbracket \rightarrow\left\llbracket 1,m-1\right\rrbracket $
+\end_inset
+
+ tal que 
+\begin_inset Formula $\widetilde{f}\left(i\right)=g\left[f\left(i\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\widetilde{f}$
+\end_inset
+
+ es inyectiva, pues 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ lo es 
+\begin_inset Formula $\left(\ref{subsec:Inyectividad de la copmosicion}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Luego 
+\begin_inset Formula $m-1<h-1\in H$
+\end_inset
+
+.
+ ¡Contradiccion!
+\end_layout
+
+\begin_layout Subsubsection
+Corolarios
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $n\neq m\Rightarrow\nexists f:\left\llbracket 1,n\right\rrbracket \rightarrow\left\llbracket 1,m\right\rrbracket $
+\end_inset
+
+ biyectiva.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f:\left\llbracket 1,n\right\rrbracket \rightarrow\left\llbracket 1,n\right\rrbracket $
+\end_inset
+
+ es inyectiva 
+\begin_inset Formula $\iff$
+\end_inset
+
+ es sobreyectiva 
+\begin_inset Formula $\iff$
+\end_inset
+
+ es biyectiva.
+\end_layout
+
+\begin_layout Section
+Cardinalidad
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $X$
+\end_inset
+
+ tiene cardinalidad 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ si existe una funcion biyectiva 
+\begin_inset Formula $f:\left\llbracket 1,n\right\rrbracket \rightarrow X$
+\end_inset
+
+ y se denota 
+\begin_inset Formula $|X|=n$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $X=\emptyset$
+\end_inset
+
+ definimos 
+\begin_inset Formula $|X|=0$
+\end_inset
+
+.
+ Estos conjuntos se llaman 
+\emph on
+conjuntos finitos
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Principio de la suma
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son dos conjuntos finitos 
+\emph on
+disjuntos
+\emph default
+ entonces: 
+\begin_inset Formula $|A\cup B|=|A|+|B|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A,B$
+\end_inset
+
+ tales que 
+\begin_inset Formula $|A|=n,|B|=m$
+\end_inset
+
+, sabemos entonces que existen 
+\begin_inset Formula $f:\left\llbracket 1,n\right\rrbracket \rightarrow A$
+\end_inset
+
+ y 
+\begin_inset Formula $g:\left\llbracket 1,m\right\rrbracket \rightarrow B$
+\end_inset
+
+ biyectivas.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $X=A\cup B$
+\end_inset
+
+.
+ Queremos ver que 
+\begin_inset Formula $|X|=|A|+|B|=n+m$
+\end_inset
+
+, es decir: existe una funcion biyectiva que parte de 
+\begin_inset Formula $\left\llbracket 1,n+m\right\rrbracket $
+\end_inset
+
+ y llega a 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Definimos 
+\begin_inset Formula $h(x)=\begin{cases}
+f(x), & x\in\left\llbracket 1,n\right\rrbracket \\
+g(x-n), & x\in\left\llbracket n+1,n+m\right\rrbracket 
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $f,g$
+\end_inset
+
+ son biyectivas, 
+\begin_inset Formula $h$
+\end_inset
+
+ es biyectiva.
+\end_layout
+
+\begin_layout Itemize
+Es facil ver que 
+\begin_inset Formula $Dom(h)=\left\llbracket 1,n+m\right\rrbracket $
+\end_inset
+
+ y 
+\begin_inset Formula $Im(h)=A\cup B=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Corolario
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A_{1},A_{2},\ldots,A_{n}$
+\end_inset
+
+ son conjuntos disjuntos entonces 
+\begin_inset Formula $\text{\ensuremath{|A_{1}\cup A_{2}\cup\ldots\cup A_{n}|={\displaystyle \sum_{i=1}^{n}\left|A_{i}\right|}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Principio del producto
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A,B$
+\end_inset
+
+ son dos conjuntos finitos 
+\emph on
+disjuntos
+\emph default
+ entonces: 
+\begin_inset Formula $|A\times B|=|A||B|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A=\left\{ a_{1},\ldots,a_{n}\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left\{ b_{1},\ldots,b_{m}\right\} $
+\end_inset
+
+ entonces 
+\begin_inset Formula $|A|=n$
+\end_inset
+
+ y 
+\begin_inset Formula $|B|=m$
+\end_inset
+
+.
+ Fijamos 
+\begin_inset Formula $m$
+\end_inset
+
+ y hacemos induccion en 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n=1\Rightarrow A\times B=\left\{ (a_{1},b_{1}),\ldots,(a_{1},b_{m})\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+La funcion 
+\begin_inset Formula $f:\left\llbracket 1,m\right\rrbracket \rightarrow A\times B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f(i)=(a_{1},b_{i})$
+\end_inset
+
+ es biyectiva, luego 
+\begin_inset Formula $|A\times B|=m.1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Supongamos que cierto para 
+\begin_inset Formula $n$
+\end_inset
+
+ y sea 
+\begin_inset Formula $A=\left\{ a_{1},\ldots,a_{n},a_{n+1}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\times B=\left[\left(A-\left\{ a_{n+1}\right\} \right)\times B\right]\cup\left[\left\{ a_{n+1}\right\} \times B\right]$
+\end_inset
+
+ (disjunta).
+\end_layout
+
+\begin_layout Enumerate
+Por hipotesis inductiva y el principio de la suma: 
+\begin_inset Formula $\text{\ensuremath{|A\times B|=nm+m=\left(n+1\right)m}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Corolario
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A_{1},A_{2},\ldots,A_{n}$
+\end_inset
+
+ son conjuntos disjuntos entonces 
+\begin_inset Formula $\text{\ensuremath{|A_{1}\times A_{2}\times\ldots\times A_{n}|={\displaystyle \prod_{i=1}^{n}\left|A_{i}\right|}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Conjuntos de funciones
+\end_layout
+
+\begin_layout Subsubsection
+Funciones de A en B
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Funciones-de-A"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A,B$
+\end_inset
+
+ dos conjuntos tales que 
+\begin_inset Formula $|A|=n,|B|=m$
+\end_inset
+
+ entonces 
+\begin_inset Formula $|\mathcal{F}(A,B)|=m^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A=\left\{ a_{1},a_{2},\ldots,a_{n}\right\} $
+\end_inset
+
+.
+ Toda 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+ se identifica con 
+\begin_inset Formula $\left(f(a_{1}),f(a_{1}),\ldots,f(a_{n})\right)\in\underbrace{B\times B\times\ldots\times B}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $\left|\mathcal{F}\left(A,B\right)\right|=\left|B\times B\times\ldots\times B\right|=m^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Funciones inyectivas de A en B
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $|A|=n,|B|=m$
+\end_inset
+
+ y 
+\begin_inset Formula $n\leq m$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left|\mathcal{F}_{i}\left(A,B\right)\right|=\frac{m!}{\left(m-n\right)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Ya vimos que si 
+\begin_inset Formula $n>m$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\mathcal{F}_{i}\left(A,B\right)=0$
+\end_inset
+
+ por el principio de las casillas.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A=\left\{ a_{1},a_{2},\ldots,a_{n}\right\} $
+\end_inset
+
+.
+ Toda 
+\begin_inset Formula $f:A\rightarrow B$
+\end_inset
+
+ se identifica con 
+\begin_inset Formula $\left(f(a_{1}),f(a_{1}),\ldots,f(a_{n})\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f\in\mathcal{F}_{i}\left(A,B\right)$
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(a_{1})$
+\end_inset
+
+ tiene 
+\begin_inset Formula $m$
+\end_inset
+
+ valores posibles,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(a_{2})$
+\end_inset
+
+ tiene 
+\begin_inset Formula $m-1$
+\end_inset
+
+ valores posibles, pues 
+\begin_inset Formula $f(a_{2})\neq f(a_{1})$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(a_{3})$
+\end_inset
+
+ tiene 
+\begin_inset Formula $m-2$
+\end_inset
+
+ valores posibles,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f(a_{n})$
+\end_inset
+
+ tiene 
+\begin_inset Formula $m-\left(n-1\right)$
+\end_inset
+
+ valores posibles.
+\end_layout
+
+\begin_layout Standard
+Por lo tanto 
+\begin_inset Formula $\left|\mathcal{F}_{i}\left(A,B\right)\right|=m(m-1)(m-2)\ldots\left[m-(n-1)\right]=\frac{m!}{(m-n)!}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Funciones biyectivas de A en B
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $|A|=|B|=n$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left|\mathcal{F}_{b}\left(A,B\right)\right|=m!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Por el apartado anterior 
+\begin_inset Formula $\text{\ensuremath{\left|\mathcal{F}_{i}\left(A,B\right)\right|=\frac{m!}{\left(m-m\right)!}=m!=\left|\mathcal{F}_{b}\left(A,B\right)\right|}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Proposicion
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto tal que 
+\begin_inset Formula $|A|=n$
+\end_inset
+
+, entonces 
+\begin_inset Formula $|\mathcal{P}(A)|=2^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $B=\left\{ 0,1\right\} $
+\end_inset
+
+, entonces 
+\begin_inset Formula $|B|=2$
+\end_inset
+
+.
+ Todo conjunto 
+\series bold
+
+\begin_inset Formula $H\subseteq A$
+\end_inset
+
+
+\series default
+ se identifica con 
+\begin_inset Formula $\chi H:A\rightarrow B$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $\left|\mathcal{P}(A)\right|=\left|\mathcal{F}(A,B)\right|$
+\end_inset
+
+ y por 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Funciones-de-A"
+
+\end_inset
+
+ 
+\begin_inset Formula $\left|\mathcal{P}(A)\right|=2^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Ejemplos
+\end_layout
+
+\begin_layout Itemize
+¿Cuantas banderas se pueden hacer con tres bandas verticales de colores
+ rojo, blanco, azul y verde, si se permiten dos o mas franjas del mismo
+ color?
+\begin_inset Newline newline
+\end_inset
+
+Sean 
+\begin_inset Formula $A=\{1,2,3\}$
+\end_inset
+
+ y 
+\begin_inset Formula $B=\{R,B,A,V\}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $|A|=3$
+\end_inset
+
+ y 
+\begin_inset Formula $|B|=4$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $\left|\mathcal{F}(A,B)\right|=4^{3}=64$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+¿Cuantas pueden formarse si no se permiten franjas del mismo color?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left|\mathcal{F}_{b}(A,B)\right|=4!=24$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si en un colectivo hay 10 asientos vacios, ¿de cuantas maneras distintas
+ pueden sentarse 7 personas?
+\begin_inset Newline newline
+\end_inset
+
+Sean 
+\begin_inset Formula $A=\left\llbracket 1,7\right\rrbracket $
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left\llbracket 1,10\right\rrbracket $
+\end_inset
+
+ entonces 
+\begin_inset Formula $|A|=7$
+\end_inset
+
+ y 
+\begin_inset Formula $|B|=10$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $\left|\mathcal{F}_{i}(A,B)\right|=\frac{10!}{\left(10-4\right)!}=640800$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Chapter
+Arreglos, permutaciones y combinaciones
+\end_layout
+
+\begin_layout Section
+Arreglos
+\end_layout
+
+\begin_layout Subsection
+Arreglos
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $|A|=m\geq n$
+\end_inset
+
+, un 
+\emph on
+arreglo
+\emph default
+ o 
+\emph on
+seleccion ordenada
+\emph default
+ de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos del conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ es una funcion inyectiva 
+\begin_inset Formula $f:\left\llbracket 1,n\right\rrbracket \rightarrow A$
+\end_inset
+
+.
+ Es comun representar un arreglo con una n-upla 
+\begin_inset Formula $\left(a_{1},\ldots,a_{n}\right)$
+\end_inset
+
+ en donde 
+\begin_inset Formula $a_{i}\in A$
+\end_inset
+
+ son todos distintos.
+\end_layout
+
+\begin_layout Standard
+La cantidad de arreglos de 
+\begin_inset Formula $m$
+\end_inset
+
+ elementos tomados de a 
+\begin_inset Formula $n$
+\end_inset
+
+ es entonces: 
+\begin_inset Formula 
+\[
+\left|A(n,m)\right|=\frac{m!}{\left(m-n\right)!}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ejemplos
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A=\left\{ a,b,c,d\right\} $
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a,b,c\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a,c,b\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a,b,d\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a,d,b\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(b,c,a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(b,a,c\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(b,c,d\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(b,d,c\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+son algunos de los arreglos de 
+\begin_inset Formula $A$
+\end_inset
+
+ tomados de a 3 elementos.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicaciones
+\end_layout
+
+\begin_layout Itemize
+En un grupo de 10 estudiantes, se escogera a cinco y se les sentara en fila
+ para una foto.
+ ¿Cuantas disposiciones lineales son posibles?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A(5,10)=\frac{10!}{\left(10-5\right)!}=30240$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Arreglos con repeticion
+\end_layout
+
+\begin_layout Standard
+Si se pueden volver a elegir los elementos ya seleccionados entonces tenemos
+ arreglos con repeticion.
+ La cantidad de arreglos con repeticion de 
+\begin_inset Formula $m$
+\end_inset
+
+ elementos tomados de a 
+\begin_inset Formula $n$
+\end_inset
+
+ es: 
+\begin_inset Formula $\left|AR(n,m)\right|=m^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Ejemplos
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A'=\left\{ \alpha,\beta,\gamma\right\} $
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\alpha,\beta\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\alpha,\gamma\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\beta,\alpha\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\gamma,\alpha\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\beta,\gamma\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\gamma,\beta\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\alpha,\alpha\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\beta,\beta\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\gamma,\gamma\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+son todos los arreglos de 
+\begin_inset Formula $A'$
+\end_inset
+
+ elementos tomados de a 2.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicaciones
+\end_layout
+
+\begin_layout Itemize
+¿Cuantos numeros de tres cifras se pueden formar con los digitos 
+\begin_inset Formula $1,2,3,4,5$
+\end_inset
+
+?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $AR(3,5)=5^{3}=125$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Permutaciones
+\end_layout
+
+\begin_layout Subsection
+Permutaciones
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $|A|=m$
+\end_inset
+
+, un arreglo de 
+\begin_inset Formula $n=m$
+\end_inset
+
+ elementos del conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ se llama 
+\emph on
+permutacion
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+La cantidad de permutaciones de 
+\begin_inset Formula $m$
+\end_inset
+
+ elementos es entonces: 
+\begin_inset Formula $\text{\ensuremath{\left|A(n,m)\right|=\frac{m!}{\left(m-m\right)!}=m!}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Ejemplos
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $B=\left\{ x,y,z\right\} $
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(x,y,z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(x,z,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(y,x,z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(y,z,x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(z,x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(z,y,x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+son todas sus permutaciones.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicaciones
+\end_layout
+
+\begin_layout Itemize
+¿De cuantas formas distintas se puede ordenar una baraja de naipes españoles?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $P(40)=40!$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Permutaciones con repeticion
+\end_layout
+
+\begin_layout Standard
+Cuando el conjunto posee elementos indistinguibles, tenemos permutaciones
+ con repeticion.
+ La cantidad de permutaciones con repeticion es: 
+\begin_inset Formula $\frac{m!}{m_{1}!,m_{2}!\ldots m_{r}!}$
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{1},m_{2},\ldots,m_{r}$
+\end_inset
+
+ son la cantidad de elementos repetidos de cada tipo.
+\end_layout
+
+\begin_layout Paragraph
+Ejemplos
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $B'=\left\{ \triangle,\square,\blacksquare\right\} $
+\end_inset
+
+ y suponiendo que no podemos diferenciar 
+\begin_inset Formula $\square$
+\end_inset
+
+ de 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\triangle,\square,\blacksquare\right)\approx\left(\triangle,\blacksquare,\square\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\square,\blacksquare,\triangle\right)\approx\left(\blacksquare,\square,\triangle\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\square,\triangle,\blacksquare\right)\approx\left(\blacksquare,\triangle,\square\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+son todas sus permutaciones con repeticion.
+\end_layout
+
+\begin_layout Paragraph
+Aplicaciones
+\end_layout
+
+\begin_layout Itemize
+¿Cuantos numeros distintos pueden armarse usando 
+\emph on
+todos
+\emph default
+ los dgitos 1112233345?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $PR(3,2,3,10)=\frac{10!}{3!2!3!}=50400$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Permutaciones circulares
+\end_layout
+
+\begin_layout Standard
+Las permutaciones circulares son un caso particular de las permutaciones
+ con repeticion, donde las repeticiones son distintas rotaciones de la misma
+ configuracion.
+ La cantidad de permutaciones circualres es 
+\begin_inset Formula $\frac{m!}{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicaciones
+\end_layout
+
+\begin_layout Itemize
+¿De cuantas formas distintas pueden sentarse 8 personas alrededor de una
+ mesa circular?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $PC(m)=\frac{8!}{8}=5040$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Combinaciones
+\end_layout
+
+\begin_layout Subsection
+Combinaciones
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $|A|=m\geq n$
+\end_inset
+
+ y seleccionamos 
+\begin_inset Formula $n$
+\end_inset
+
+ objetos entre 
+\begin_inset Formula $m$
+\end_inset
+
+ sin tener en cuenta el orden, obtenemos una combinacion de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos tomados de un conjunto con 
+\begin_inset Formula $m$
+\end_inset
+
+ elementos.
+\end_layout
+
+\begin_layout Standard
+La cantidad de combinaciones de 
+\begin_inset Formula $m$
+\end_inset
+
+ elementos tomados de a 
+\begin_inset Formula $n$
+\end_inset
+
+ es: 
+\begin_inset Formula 
+\[
+\left|C(n,m)\right|=\frac{\left|A(n,m)\right|}{\left|P(n)\right|}=\frac{m!}{n!\left(m-n\right)!}=\binom{m}{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Ejemplos
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $C=\left\{ 1,2,3,4,5\right\} $
+\end_inset
+
+ entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 1,2,3\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 1,2,4\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 1,2,5\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 1,3,4\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 1,3,5\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 1,4,5\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 2,3,4\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 2,3,5\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 2,4,5\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ 3,4,5\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+son todas sus combinaciones de 3 elementos.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicaciones
+\end_layout
+
+\begin_layout Itemize
+¿Cuantos comites distintos de 3 personas pueden armarse con un grupo de
+ 9 personas?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $C(3,9)=\binom{9}{3}=\frac{10!}{3!\left(9-3\right)!}=84$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Combinaciones con repeticion
+\end_layout
+
+\begin_layout Standard
+Si podemos extraer varias veces el mismo elemento del conjunto, entonces
+ tenemos combinaciones con repeticion.
+ La cantidad de combinaciones con repeticion es 
+\begin_inset Formula $CR(n,m)=\binom{m+n-1}{n}=\frac{\left(m+n-1\right)!}{n!\left(m-1\right)!}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Aplicaciones
+\end_layout
+
+\begin_layout Itemize
+En una bodega hay en un cinco tipos diferentes de botellas.
+ ¿De cuantas formas se pueden elegir cuatro botellas? 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $CR(4,5)=\frac{8!}{4!4!}=70$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Probabilidad
+\end_layout
+
+\begin_layout Subsection
+Definicion
+\end_layout
+
+\begin_layout Standard
+Se define la probabilidad de un evento como 
+\begin_inset Formula $\frac{\text{ casos favorables}}{\text{casos posibles}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Itemize
+En el juego del truco: ¿Cual es la probabilidad de tener 33 para el envido?
+\begin_inset Newline newline
+\end_inset
+
+Manos posibles: 
+\begin_inset Formula $\binom{40}{3}$
+\end_inset
+
+, Manos con el 6 y 7 de espadas: 
+\begin_inset Formula $38$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Probabilidad: 
+\begin_inset Formula $\frac{4.38}{\binom{40}{3}}=\frac{152}{9880}\approx0.015$
+\end_inset
+
+ 
+\begin_inset Formula $\left(1,5\%\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Numeros combinatorios
+\end_layout
+
+\begin_layout Subsection
+Teoremas
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{m}{1}=m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{m}{n}=\binom{m}{m-n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{m}{n-1}+\binom{m}{n}=\binom{m+1}{n}$
+\end_inset
+
+ (triangulo de Pascal)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \sum_{n=0}^{m}\binom{m}{n}=2^{m}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(a+b\right)^{n}={\displaystyle \sum_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k}}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall a,b\in\mathbb{R}$
+\end_inset
+
+ (teorema del binomio)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula ${\displaystyle \sum_{k=0}^{n}\left(-1\right)^{k}\binom{n}{k}=0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(1+x\right)^{n}={\displaystyle \sum_{k=0}^{n}\binom{n}{k}x^{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Demostraciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\binom{m}{1}=\frac{m!}{1!\left(m-1\right)!}=\frac{m\left(m-1\right)!}{\left(m-1\right)!}=m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\text{\ensuremath{\binom{m}{n}=\frac{m!}{n!\left(m-n!\right)}=\frac{m!}{\left(n+m-m\right)!\left(m-n\right)!}=\frac{m!}{\left(m-n\right)!\left(m+n-m\right)!}=\frac{m!}{\left(m-n\right)!\left[m-\left(m-n\right)\right]!}=\binom{m}{m-n}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Haremos una prueba por induccion:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $n=1$
+\end_inset
+
+: 
+\begin_inset Formula ${\displaystyle \sum_{k=0}^{1}\binom{1}{k}a^{k}b^{1-k}=\binom{1}{0}1b^{1}+\binom{1}{1}a^{1}b^{0}=b+a=\left(a+b\right)^{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Supongamos que vale para 
+\begin_inset Formula $n$
+\end_inset
+
+ y veamos que pasa para 
+\begin_inset Formula $n+1$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\left(a+b\right)^{n+1}=\left(a+b\right)^{n}+\left(a+b\right)=\left(a+b\right)^{n}a+\left(a+b\right)^{n}b=$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $={\displaystyle \sum_{k=0}^{n}\binom{n}{k}a^{k+1}b^{n-k}}+{\displaystyle \sum_{k=0}^{n}\binom{n}{k}a^{k}b^{n-k+1}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Observemos que podemos escribir el primer termino de esta forma cambiando
+ el indice:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle \sum_{k=1}^{n+1}\binom{n}{k-1}a^{k}b^{n+1-k}}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Retomando lo anterior:
+\begin_inset Formula $\left(a+b\right)^{n+1}={\displaystyle \sum_{k=1}^{n+1}\binom{n}{k-1}a^{k}b^{n+1-k}+{\displaystyle \sum_{k=0}^{n}\binom{n}{k}a^{k}b^{n+1-k}}}=$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $=\underbrace{\binom{n}{0}}_{1}b^{n+1}+{\displaystyle \sum_{k=1}^{n}\left[\underbrace{\binom{n}{k-1}+\binom{n}{k}}_{\text{ triangulo de pascal}}\right]a^{k}b^{n+1-k}+\underbrace{\binom{n}{n}}_{1}a^{n+1}}=$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $=\binom{n+1}{0}b^{n+1}+{\displaystyle \sum_{k=1}^{n}\binom{n+1}{k}a^{k}b^{n+1-k}+\binom{n+1}{n+1}a^{n+1}}={\displaystyle \sum_{k=0}^{n+1}\binom{n+1}{k}a^{k}b^{n+1-k}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $0=0^{n}=\left(-1+1\right)^{n}={\displaystyle \sum_{k}^{n}\binom{n}{k}\left(-1\right)^{k}1^{n-k}=\sum_{k}^{n}\left(-1\right)^{k}\binom{n}{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Matrices y determinantes
+\end_layout
+
+\begin_layout Part
+Sistemas de ecuaciones lineales
+\end_layout
+
+\begin_layout Chapter
+Sistemas de ecuaciones
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Ecuacion lineal
+\end_layout
+
+\begin_layout Standard
+Una ecuacion con 
+\begin_inset Formula $n$
+\end_inset
+
+ variables 
+\begin_inset Formula $x_{1},\ldots,x_{n}$
+\end_inset
+
+ es lineal si puede escribirse en la forma: 
+\begin_inset Formula $a_{1}x_{1}+a_{2}x_{2}+\ldots+a_{n}x_{n}=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ son los coeficientes, y y es el termino constante de la ecuacion.
+ Si 
+\begin_inset Formula $b=0$
+\end_inset
+
+, la ecuacion se denomina homogenea.
+\end_layout
+
+\begin_layout Standard
+Si se ordenan las variables, la primera variable cuyo coeficiente es distinto
+ de cero se llama variable delantera, las demas son variables libres.
+\end_layout
+
+\begin_layout Subsection
+Sistema de ecuaciones lineales
+\end_layout
+
+\begin_layout Standard
+Un sistema de 
+\begin_inset Formula $m$
+\end_inset
+
+ ecuaciones con 
+\begin_inset Formula $n$
+\end_inset
+
+ variables (o incognitas) 
+\begin_inset Formula $x_{1},\ldots,x_{n}$
+\end_inset
+
+ es un conjunto de 
+\begin_inset Formula $m$
+\end_inset
+
+ escuaciones lineales de la forma:
+\begin_inset Formula 
+\begin{equation}
+S)\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+\ldots+a_{1n}x_{n} & =y_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+\ldots+a_{2n}x_{n} & =y_{2}\\
+ & \vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\ldots+a_{mn}x_{n} & =y_{m}
+\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dado el sistema 
+\begin_inset Formula $(1)$
+\end_inset
+
+, si para cada 
+\begin_inset Formula $i=1,\ldots,m$
+\end_inset
+
+ llamamos 
+\begin_inset Formula $L_{i}$
+\end_inset
+
+ al primer miembro de su i-esima ecuacion: 
+\begin_inset Formula $L_{i}=a_{i1}x_{1}+a_{i2}x_{2}+\ldots+a_{in}x_{n}$
+\end_inset
+
+, entonces podemos escribir 
+\begin_inset Formula $S)$
+\end_inset
+
+ mas brevemente asi:
+\begin_inset Formula 
+\[
+S)\begin{cases}
+L_{1}= & y_{1}\\
+L_{2}= & y_{2}\\
+\vdots & \vdots\\
+L_{m}= & y_{m}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Solucion de un sistema lineal
+\end_layout
+
+\begin_layout Standard
+Una solucion 
+\begin_inset Formula $r_{1},r_{2},\ldots,r_{n}$
+\end_inset
+
+ de escalares es una solucion (particular) de un sistema si todas las ecuaciones
+ se satisfacen al sustituir 
+\begin_inset Formula $x_{1}=r_{1},\ldots,x_{n}=r_{n}$
+\end_inset
+
+.
+ El conjunto de todas las soluciones posibles es el conjunto solucion.
+\end_layout
+
+\begin_layout Subsection
+Sistemas equivalentes
+\end_layout
+
+\begin_layout Standard
+Dos sistemas 
+\begin_inset Formula $(S1)$
+\end_inset
+
+ y 
+\begin_inset Formula $(S2)$
+\end_inset
+
+ se dicen equivalentes si tienen las mismas soluciones.
+ O sea, toda solucion de 
+\begin_inset Formula $(S1)$
+\end_inset
+
+ es solucion de 
+\begin_inset Formula $(S2)$
+\end_inset
+
+ y viceversa.
+\end_layout
+
+\begin_layout Section
+Operaciones elementales en ecuaciones
+\end_layout
+
+\begin_layout Subsection
+Operaciones de eliminacion
+\end_layout
+
+\begin_layout Standard
+Pasamos de un sistema 
+\begin_inset Formula $(S)$
+\end_inset
+
+ a un sistema 
+\begin_inset Formula $(S')$
+\end_inset
+
+ sumando la i-esima ecuacion 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ves la k-esima ecuacion (con 
+\begin_inset Formula $k\neq i$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Si la i-esima y la k-esima ecuacion de 
+\begin_inset Formula $(S)$
+\end_inset
+
+ son 
+\begin_inset Formula 
+\begin{eqnarray*}
+a_{i1}x_{1}+a_{i2}x_{2}+\ldots+a_{in}x_{n}=y_{i}\\
+a_{k1}x_{1}+a_{k2}x_{2}+\ldots+a_{kn}x_{n}=y_{k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+entonces la i-esima ecuacion de 
+\begin_inset Formula $(S')$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+(A_{i1}+\alpha A_{k1})x_{1}+(A_{i2}+\alpha A_{k2})x_{2}+\ldots+(A_{in}+\alpha A_{kn})x_{n}=y_{i}+\alpha y_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operaciones de escalamiento
+\end_layout
+
+\begin_layout Standard
+Se pasa de un sistema 
+\begin_inset Formula $(S)$
+\end_inset
+
+ a un sistema 
+\begin_inset Formula $(S')$
+\end_inset
+
+ multiplicando la i-esima ecuacion por un escalar 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+.
+ Si la i-esima ecuacion de 
+\begin_inset Formula $(S)$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\[
+a_{i1}x_{1}+a_{i2}x_{2}+\ldots+a_{in}x_{n}=y_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+la i-esima ecuacion de 
+\begin_inset Formula $(S')$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+\alpha a_{i1}x_{1}+\alpha a_{i2}x_{2}+\ldots+\alpha a_{in}x_{n}=\alpha y_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Operaciones de intercambio
+\end_layout
+
+\begin_layout Standard
+Pasamos de un sistema 
+\begin_inset Formula $(S)$
+\end_inset
+
+ a un sistema 
+\begin_inset Formula $(S')$
+\end_inset
+
+ intercambiando dos ecuaciones.
+\end_layout
+
+\begin_layout Subsection
+Teorema fundamental de equivalencia de sistemas
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dado un sistema de ecuaciones lineales, al realizar cualquier operacion
+ elemental entre sus ecuaciones, obtenemos un sistema equivalente.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Enumerate
+Lo afirmado es obvio si la operacion elemental es de intercambio.
+\end_layout
+
+\begin_layout Enumerate
+Consideremos ahora una operacion elemental de escalamiento .
+ Sea 
+\begin_inset Formula $S)$
+\end_inset
+
+ el sistema de partida y sea 
+\begin_inset Formula $S')$
+\end_inset
+
+ el obtenido de reemplazar la i-esima ecuacion de 
+\begin_inset Formula $S)$
+\end_inset
+
+ por un multiplo 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+ de ella:
+\begin_inset Formula 
+\[
+S)\begin{cases}
+L_{1}= & y_{1}\\
+\vdots & \vdots\\
+L_{i}= & y_{i}\\
+\vdots & \vdots\\
+L_{m}= & y_{m}
+\end{cases}\rightarrow S')\begin{cases}
+L_{1}= & y_{1}\\
+\vdots & \vdots\\
+cL_{i}= & cy_{i}\\
+\vdots & \vdots\\
+L_{m}= & y_{m}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Toda solucion de 
+\begin_inset Formula $S)$
+\end_inset
+
+ lo es de 
+\begin_inset Formula $S')$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x=\left(x_{1},\ldots,x_{n}\right)$
+\end_inset
+
+ una solucion (particular) de 
+\begin_inset Formula $S)$
+\end_inset
+
+, para ver que 
+\begin_inset Formula $x$
+\end_inset
+
+ es solucion de 
+\begin_inset Formula $S')$
+\end_inset
+
+ solo hay que controlar que 
+\begin_inset Formula $x$
+\end_inset
+
+ verifica la i-esima ecuacion de 
+\begin_inset Formula $S')$
+\end_inset
+
+ pues las restantes son las mismas.
+\begin_inset Newline newline
+\end_inset
+
+Como 
+\begin_inset Formula $a_{i1}x_{1}+\ldots+a_{in}x_{n}=y_{i}$
+\end_inset
+
+ (por verificar 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ la ecuacion 
+\begin_inset Formula $\text{\ensuremath{L_{i}=y_{i}}}$
+\end_inset
+
+) multiplicando ambos miembros por 
+\begin_inset Formula $c$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\text{\ensuremath{\left(ca_{i1}\right)x_{1}+\ldots+\left(ca_{in}\right)x_{n}=cy_{i}}}$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $x$
+\end_inset
+
+ verifica la ecuacion 
+\begin_inset Formula $cL_{i}=cy_{i}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Toda solucion de 
+\begin_inset Formula $S')$
+\end_inset
+
+ lo es de 
+\begin_inset Formula $S)$
+\end_inset
+
+: Analogo multiplicando por 
+\begin_inset Formula $1/c$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consideremos por ultimo una operacion elemental de eliminacion.
+ Sea 
+\begin_inset Formula $S)$
+\end_inset
+
+ el sistema de partida y sea 
+\begin_inset Formula $S')$
+\end_inset
+
+ el obtenido de reemplazar la i-esima ecuacion de 
+\begin_inset Formula $S)$
+\end_inset
+
+ por la suma de ella mas la j-esima ecuacion de 
+\begin_inset Formula $S)$
+\end_inset
+
+ multiplicada por una constante 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+S)\begin{cases}
+L_{1}= & y_{1}\\
+\vdots & \vdots\\
+L_{i}= & y_{i}\\
+\vdots & \vdots\\
+L_{j}= & y_{j}\\
+\vdots & \vdots\\
+L_{m}= & y_{m}
+\end{cases}\rightarrow S')\begin{cases}
+L_{1}= & y_{1}\\
+\vdots & \vdots\\
+L_{i}+cL_{j}= & y_{i}+cy_{j}\\
+\vdots & \vdots\\
+L_{j}= & y_{j}\\
+\vdots & \text{\vdots}\\
+L_{m}= & y_{m}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Toda solucion de 
+\begin_inset Formula $S)$
+\end_inset
+
+ lo es de 
+\begin_inset Formula $S')$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x$
+\end_inset
+
+ una solucion de 
+\begin_inset Formula $S)$
+\end_inset
+
+, como 
+\begin_inset Formula $a_{i1}x_{1}+\ldots+a_{in}x_{n}=y_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{j1}x_{1}+\ldots+a_{jn}x_{n}=y_{i}$
+\end_inset
+
+ (por verificar 
+\begin_inset Formula $x$
+\end_inset
+
+ las ecuaciones 
+\begin_inset Formula $L_{i}=y_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $L_{j}=y_{j}$
+\end_inset
+
+) y sumando miembro a miembro ambas igualdades resulta: 
+\begin_inset Formula $\text{\ensuremath{(a_{i1}+ca_{j1})x_{1}+\ldots+(a_{in}+ca_{jn})x_{n}=y_{i}+cy_{j}}}$
+\end_inset
+
+, es decir 
+\begin_inset Formula $x$
+\end_inset
+
+ verifica la ecuacion 
+\begin_inset Formula $L_{i}+cL_{j}=y_{i}+cy_{j}$
+\end_inset
+
+, que es la i-esima ecuacion de 
+\begin_inset Formula $S')$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Toda solucion de 
+\begin_inset Formula $S')$
+\end_inset
+
+ lo es de 
+\begin_inset Formula $S)$
+\end_inset
+
+: 
+\end_layout
+
+\end_deeper
+\begin_layout Chapter
+Representacion matricial
+\end_layout
+
+\begin_layout Section
+Notacion matricial de un sistema lineal
+\end_layout
+
+\begin_layout Subsection
+Definiciones
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S)$
+\end_inset
+
+ un sistema de 
+\begin_inset Formula $m$
+\end_inset
+
+ escuaciones lineales con 
+\begin_inset Formula $n$
+\end_inset
+
+ variables
+\begin_inset Formula 
+\[
+S)\begin{cases}
+a_{11}x_{1}+a_{12}x_{2}+\ldots+a_{1n}x_{n} & =y_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+\ldots+a_{2n}x_{n} & =y_{2}\\
+ & \vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\ldots+a_{mn}x_{n} & =y_{m}
+\end{cases}
+\]
+
+\end_inset
+
+llamaremos:
+\end_layout
+
+\begin_layout Itemize
+Matriz de los coeficientes a la matriz 
+\begin_inset Formula $A$
+\end_inset
+
+, de tamnno 
+\begin_inset Formula $m\times n$
+\end_inset
+
+, constituida por los coeficientes de las variables de 
+\begin_inset Formula $S)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vector de las variables al vector columna 
+\begin_inset Formula $X$
+\end_inset
+
+ , de tamano 
+\begin_inset Formula $n$
+\end_inset
+
+ , formado por las incognitas
+\end_layout
+
+\begin_layout Itemize
+Vector de las constantes al vector columna 
+\begin_inset Formula $Y$
+\end_inset
+
+ , de tamano 
+\begin_inset Formula $m$
+\end_inset
+
+ , con los terminos constantes del sistema.
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{cccc}
+a_{12} & a_{12} & \ldots & a_{1n}\\
+a_{21} & a_{22} & \ldots & a_{2n}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{m1} & a_{m2} & \ldots & a_{mn}
+\end{array}\right)X=\left(\begin{array}{c}
+x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}
+\end{array}\right)Y=\left(\begin{array}{c}
+y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Matriz ampliada
+\end_layout
+
+\begin_layout Standard
+Llamaremos matriz ampliada a la matriz 
+\begin_inset Formula $A'\left(A|Y\right)$
+\end_inset
+
+, de tamaño 
+\begin_inset Formula $m\times\left(n+1\right)$
+\end_inset
+
+, que se obtiene de aregarle a la matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ la columna 
+\begin_inset Formula $Y$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+A'=\left(\begin{array}{cccc|c}
+a_{12} & a_{12} & \ldots & a_{1n} & y_{1}\\
+a_{21} & a_{22} & \ldots & a_{2n} & y_{2}\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+a_{m1} & a_{m2} & \ldots & a_{mn} & y_{m}
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos expresar un sistema en forma matricial 
+\begin_inset Formula $AX=Y$
+\end_inset
+
+ como se puede comprobar efectuando el producto de las matrices del primer
+ miembro y aplicando luego la de nicion de igualdad de matrices.
+\end_layout
+
+\begin_layout Subsubsection
+Sistema homogeneo
+\end_layout
+
+\begin_layout Standard
+Un sistema se dice homogeneo si 
+\begin_inset Formula $y_{1}=y_{2}=\cdots=y_{m}=0$
+\end_inset
+
+.
+ Un sistema homogeneo siempre admite la solucion trivial 
+\begin_inset Formula $x_{1}=x_{2}=\cdots=x_{m}=0$
+\end_inset
+
+ aunque podra tener soluciones no triviales.
+\end_layout
+
+\begin_layout Subsubsection
+Sistemas equivalentes
+\end_layout
+
+\begin_layout Standard
+Dos sistemas 
+\begin_inset Formula $S1)AX=Y$
+\end_inset
+
+ y 
+\begin_inset Formula $S2)A'X=Y'$
+\end_inset
+
+ con 
+\begin_inset Formula $A,A'\in\mathbb{F}^{m\times n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{Y,Y'\in\mathbb{F}^{m\times1}}}$
+\end_inset
+
+ se dicen equivalentes si tienen las mismas soluciones.
+ O sea, toda solucion de 
+\begin_inset Formula $S1)$
+\end_inset
+
+ es solucion de 
+\begin_inset Formula $S2)$
+\end_inset
+
+ y viceversa.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dado el sistema 
+\begin_inset Formula $S)AX=Y$
+\end_inset
+
+ con 
+\begin_inset Formula $A\in\mathbb{F}^{m\times n},Y\in\mathbb{F}^{m\times1}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $X_{0}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $AX_{0}=Y$
+\end_inset
+
+, entonces el conjunto solucion de 
+\begin_inset Formula $S)$
+\end_inset
+
+ es:
+\begin_inset Formula 
+\[
+Sol=\left\{ X_{0}+X_{h}:X_{h}\text{ es solucion de }AX=0\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+o en otras palabras toda solucion de 
+\begin_inset Formula $S)$
+\end_inset
+
+ se escribe como una solucion particular mas una solucion del sistema homogeneo.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $AX_{h}=0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $A\left(X_{0}+X_{h}\right)=AX_{0}+AX_{h}=AX_{0}+0$
+\end_inset
+
+ y por hipotesis: 
+\begin_inset Formula $AX_{0}=Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Reciprocamente si 
+\begin_inset Formula $AX=Y$
+\end_inset
+
+, escribimos 
+\begin_inset Formula $X=X_{0}+\left(-X_{0}+X\right)$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $A\left(-X_{0}+X\right)=-AX_{0}+AX=-Y+Y=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Operaciones elementales por filas
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+una matriz con 
+\begin_inset Formula $m$
+\end_inset
+
+ filas, definimos tres tipos de OEF sobre 
+\begin_inset Formula $A$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Tipo I: Se multiplica la fila 
+\begin_inset Formula $r$
+\end_inset
+
+ por un escalar 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Tipo II: Se suma a la fila 
+\begin_inset Formula $r$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ veces la sila s.
+ (con 
+\begin_inset Formula $r\neq s$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Tipo III: Se intercambia la fila 
+\begin_inset Formula $r$
+\end_inset
+
+ con la fila 
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Mas precisamente, una OEF 
+\begin_inset Formula $e$
+\end_inset
+
+ sobre A devuelve la matriz 
+\begin_inset Formula $e(A)$
+\end_inset
+
+ dada por:
+\end_layout
+
+\begin_layout Itemize
+Tipo I: 
+\begin_inset Formula $e(A)_{ij}=\begin{cases}
+A_{ij}, & i\neq r\\
+\alpha A_{rj}, & i=r
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tipo II: 
+\begin_inset Formula $e(A)_{ij}=\begin{cases}
+A_{ij}, & i\neq r\\
+A_{rj}+A_{sj}, & i=r
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tipo III: 
+\begin_inset Formula $e(A)_{ij}=\begin{cases}
+A_{ij}, & i\neq r,s\\
+A_{sj}, & i=r\\
+A_{rj}, & i=s
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Teorema fundamental de equivalencia de sistemas
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A\in\mathbb{F}^{m\times n},Y\in\mathbb{F}^{m\times1}$
+\end_inset
+
+, si 
+\begin_inset Formula $e$
+\end_inset
+
+ es una OEF entonces los sistemas 
+\begin_inset Formula $AX=Y$
+\end_inset
+
+ y 
+\begin_inset Formula $e(A)X=e(Y)$
+\end_inset
+
+ son equivalentes.
+\end_layout
+
+\begin_layout Subsubsection
+Equivalencia por filas
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A,B\in\mathbb{F}^{m\times n}$
+\end_inset
+
+, se dice que 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\series default
+ es equivalente por filas a 
+\begin_inset Formula $A$
+\end_inset
+
+ si se puede pasar de 
+\begin_inset Formula $A$
+\end_inset
+
+ a 
+\begin_inset Formula $B$
+\end_inset
+
+ por una sucecion finita de OEF.
+\end_layout
+
+\begin_layout Subsubsection
+Corolario
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $B$
+\end_inset
+
+ es equivalente por filas a 
+\begin_inset Formula $A$
+\end_inset
+
+, entonces los sistemas 
+\begin_inset Formula $AX=0$
+\end_inset
+
+ y 
+\begin_inset Formula $BX=0$
+\end_inset
+
+ son equivalentes.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Por hipotesis existen OEF 
+\begin_inset Formula $e_{1},e_{2},\ldots,e_{k}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\text{\ensuremath{B=e_{k}\left[\ldots e_{2}\left(e_{1}\left[A\right]\right)\right]}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Toda solucion de 
+\begin_inset Formula $AX=0$
+\end_inset
+
+ es solucion de 
+\begin_inset Formula $BX=0$
+\end_inset
+
+: En efecto,
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\text{\ensuremath{AX=0\Rightarrow e_{1}\left(A\right)X=0\Rightarrow e_{2}\left[e_{1}\left(A\right)\right]X=0\Rightarrow\ldots\Rightarrow e_{k}\left[\ldots e_{2}\left(e_{1}\left[A\right]\right)\right]=BX=0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Toda solucion de 
+\begin_inset Formula $BX=0$
+\end_inset
+
+ es solucion de 
+\begin_inset Formula $AX=0$
+\end_inset
+
+: En efecto, 
+\begin_inset Formula $B$
+\end_inset
+
+ es equivalente por filas a 
+\begin_inset Formula $A\Rightarrow B$
+\end_inset
+
+ es equivalente por filas a 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Luego el argumento anterior tambien sirve para demostrar esto.
+\end_layout
+
+\begin_layout Subsubsection
+Matrices elementales
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $e$
+\end_inset
+
+ una OEF que aplica sobre matrices con 
+\begin_inset Formula $m$
+\end_inset
+
+ filas, la matriz elemental asociada a 
+\begin_inset Formula $e$
+\end_inset
+
+ es 
+\begin_inset Formula $E=e(I)$
+\end_inset
+
+ en donde 
+\begin_inset Formula $I$
+\end_inset
+
+ es la matriz identidad 
+\begin_inset Formula $m\times m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observacion
+\end_layout
+
+\begin_layout Standard
+Las matrices elementales son invertibles.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Teorema de matrices elementales"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $e$
+\end_inset
+
+ una OEF y sea 
+\begin_inset Formula $E=e(I_{m})$
+\end_inset
+
+ su correspondiente matriz elemental.
+ Entonces para toda 
+\begin_inset Formula $A\in\mathbb{F}^{m\times n}$
+\end_inset
+
+ vale 
+\begin_inset Formula $e(A)=EA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+Tipo I: Sea 
+\begin_inset Formula $e="f_{r}\rightarrow\alpha f_{r}"$
+\end_inset
+
+ (
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+),
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E=e(I)=\begin{cases}
+\delta_{ij}, & i\neq r\\
+\alpha\delta_{rj}, & i=r
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(EA\right)_{ij}={\displaystyle \sum_{k=1}^{m}E_{ik}A_{kj}=\begin{cases}
+{\displaystyle \sum_{k=1}^{m}}\delta_{ik}A_{kj}=A_{ij}, & i\neq r\\
+{\displaystyle \sum_{k=1}^{m}}\alpha\delta_{rk}A_{kj}=\alpha A_{rj}, & i=r
+\end{cases}}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Tipo II: Sea 
+\begin_inset Formula $e="f_{r}\rightarrow f_{r}+\alpha f_{s}"$
+\end_inset
+
+ (
+\begin_inset Formula $r\neq s$
+\end_inset
+
+),
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E=e(I)=\begin{cases}
+\delta_{ij}, & i\neq r\\
+\delta_{rj}+\alpha\delta_{sj}, & i=r
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(EA\right)_{rj}={\displaystyle \sum_{k=1}^{m}E_{rk}A_{kj}=\sum_{k=1}^{m}\left(\delta_{rk}+\alpha\delta_{sk}\right)A_{kj}}=$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $={\displaystyle \sum_{k=1}^{m}\delta_{rk}A_{kj}+\alpha\sum_{k=1}^{m}\delta_{sk}A_{kj}=A_{rj}+\alpha A_{sj}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(EA\right)_{ij}=\begin{cases}
+A_{ij}, & i\neq r\\
+A_{rj}+\alpha A_{sj}, & i=r
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Lemas
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Lemas"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Lema I
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $E\in\mathbb{F}^{n\times n}$
+\end_inset
+
+ una matriz elemental asociada a una OEF 
+\begin_inset Formula $e$
+\end_inset
+
+, entonces:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $e="f_{r}\rightarrow\alpha f_{r}"\Rightarrow|E|=\alpha$
+\end_inset
+
+ (con 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $e="f_{r}\rightarrow f_{r}+\alpha f_{s}"\Rightarrow|E|=1$
+\end_inset
+
+ (con 
+\begin_inset Formula $r\neq s$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $e="f_{r}\leftrightarrow f_{s}"\Rightarrow|E|=-1$
+\end_inset
+
+ (con 
+\begin_inset Formula $r\neq s$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Sigue de las propiedades del determinante, pues 
+\begin_inset Formula $E=e(I)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Lema II
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $E$
+\end_inset
+
+ una matriz elemental, entonces para toda 
+\begin_inset Formula $A\in\mathbb{F}^{n\times n}$
+\end_inset
+
+ vale 
+\begin_inset Formula $\left|EA\right|=\left|E\right|\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+Por hipotesis 
+\begin_inset Formula $E=e(I)$
+\end_inset
+
+ para alguna OEF 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ Tenemos que analizar tres casos de acuerdo a si 
+\begin_inset Formula $e$
+\end_inset
+
+ es Tipo I, II o III:
+\end_layout
+
+\begin_layout Itemize
+Tipo I: Si 
+\begin_inset Formula $e="f_{r}\rightarrow\alpha f_{r}"$
+\end_inset
+
+ (con 
+\begin_inset Formula $\alpha\neq0$
+\end_inset
+
+), 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Como 
+\begin_inset Formula $EA=e\left(A\right)$
+\end_inset
+
+ (por 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Teorema de matrices elementales"
+
+\end_inset
+
+), 
+\begin_inset Formula $\left|EA\right|=\left|e\left(A\right)\right|=\alpha\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Luego por el lema previo, 
+\begin_inset Formula $\alpha\left|A\right|=\left|E\right|\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Por transitividad de la igualdad, 
+\begin_inset Formula $\left|EA\right|=\left|E\right|\left|A\right|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Tipo II: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Tipo III: COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Reduccion de matrices
+\end_layout
+
+\begin_layout Subsubsection
+Matriz reducida por filas
+\end_layout
+
+\begin_layout Paragraph
+Definicion
+\end_layout
+
+\begin_layout Standard
+Una matriz reducida por filas es una matriz que cumple las siguiente propiedades
+:
+\end_layout
+
+\begin_layout Enumerate
+El primer elemento no nulo de cada fila es 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Llamamos a este elemento 
+\begin_inset Quotes cld
+\end_inset
+
+
+\emph on
+pivote
+\emph default
+
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si una columna contiene un pivote, el resto de sus elementos son 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Llamamos a esta columna, 
+\begin_inset Quotes cld
+\end_inset
+
+columna pivote
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Ejemplos
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula 
+\[
+A=\left(\begin{array}{cccc}
+1 & 0 & \boldsymbol{0} & 0\\
+0 & 1 & \boldsymbol{-1} & 0\\
+0 & 0 & \boldsymbol{1} & 0
+\end{array}\right)B=\left(\begin{array}{ccc}
+\boldsymbol{0} & \boldsymbol{2} & \boldsymbol{1}\\
+1 & 0 & -3\\
+0 & 0 & 0
+\end{array}\right)C=\left(\begin{array}{cccc}
+1 & 0 & \boldsymbol{-1} & 0\\
+0 & 1 & \boldsymbol{2} & 0\\
+0 & 0 & \boldsymbol{0} & 1
+\end{array}\right)D=\left(\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ no es RF pues la tercer columna pivote no tiene el resto de los elementos
+ nulos.
+\end_layout
+
+\begin_layout Itemize
+La matriz 
+\begin_inset Formula $B$
+\end_inset
+
+ no es RF pues la primer fila tiene un pivote distinto de 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La matriz 
+\begin_inset Formula $C$
+\end_inset
+
+ es RF.
+ Notese que la tercer columna no es columna pivote.
+\end_layout
+
+\begin_layout Itemize
+La matriz 
+\begin_inset Formula $D$
+\end_inset
+
+ es RF.
+\end_layout
+
+\begin_layout Subsubsection
+Matriz escalonada reducida por filas
+\end_layout
+
+\begin_layout Paragraph
+Definicion
+\end_layout
+
+\begin_layout Standard
+Una matriz se dice escalonada reducida por filas si cumple las siguiente
+ propiedades:
+\end_layout
+
+\begin_layout Enumerate
+Es reducida por filas.
+\end_layout
+
+\begin_layout Enumerate
+Las filas nulas estan debajo de las no nulas.
+\end_layout
+
+\begin_layout Enumerate
+El pivote de cada fila, se encuentra a la derecha del pivote de la fila
+ anterior.
+\end_layout
+
+\begin_layout Subsubsection
+Existencia de matrices ERF
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Toda matriz 
+\begin_inset Formula $A\in\mathbb{F}^{m\times n}$
+\end_inset
+
+ es equivalente por las a una matriz ERF.
+ En otras palabras, existes matrices elementales 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $E_{k}E_{k-1}\cdots E_{2}E_{1}A$
+\end_inset
+
+ es ERF.
+ Esta matriz es ademas unica.
+\end_layout
+
+\begin_layout Subsubsection
+Teorema
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $A\in\mathbb{F}^{m\times n}$
+\end_inset
+
+ con 
+\begin_inset Formula $m<n$
+\end_inset
+
+ entonces el sistema homogeneo 
+\begin_inset Formula $AX=0$
+\end_inset
+
+ admite una solucion no trivial.
+ En otras palabras, un sistema homogeneo con mas incognitas que ecuaciones
+ tiene una solucion no trivial.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Clasificacion de sistemas
+\end_layout
+
+\begin_layout Standard
+Los sistemas de ecuaciones se pueden clasificar segun el numero de soluciones
+ que pueden presentar.
+ De acuerdo con ese caso se pueden presentar los siguientes casos:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Sistema compatible
+\emph default
+ si tiene solución, en este caso además puede distinguirse entre: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sistema compatible 
+\emph on
+determinado
+\emph default
+ cuando tiene una única solucion.
+\end_layout
+
+\begin_layout Itemize
+Sistema compatible 
+\emph on
+indeterminado
+\emph default
+ cuando admite mas de una solucion.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sistema incompatible si no tiene solucion.
+\end_layout
+
+\begin_layout Subsubsection
+Rango de una matriz
+\end_layout
+
+\begin_layout Standard
+Dada una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+ de tamano 
+\begin_inset Formula $m\times n$
+\end_inset
+
+ llamaremos rango de 
+\begin_inset Formula $A$
+\end_inset
+
+, y lo simbolizaremos 
+\begin_inset Formula $rg(A)$
+\end_inset
+
+, al numero de columnas pivote de la forma ERF (o equivalentemente: al numero
+ de filas no nulas).
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Teorema Rouche-Frobenius
+\end_layout
+
+\begin_layout Itemize
+Un sistema es incompatible si y solo si 
+\begin_inset Formula $rg\left(A'\right)>rg\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Un sistema es determinado si y solo si 
+\begin_inset Formula $rg\left(A'\right)=rg\left(A\right)=n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Un sistema es indeterminado si y solo si 
+\begin_inset Formula $rg\left(A'\right)=rg\left(A\right)<n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sistemas cuadrados
+\end_layout
+
+\begin_layout Subsection
+Teorema
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Formulaciones equivalentes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A\in\mathbb{F}^{n\times n}$
+\end_inset
+
+, la siguientes formulaciones son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible (
+\begin_inset Formula $|A|\neq0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El sistema 
+\begin_inset Formula $AX=0$
+\end_inset
+
+ tiene solucion unica.
+\end_layout
+
+\begin_layout Enumerate
+El sistema 
+\begin_inset Formula $AX=Y$
+\end_inset
+
+ tiene solucion unica para cada 
+\begin_inset Formula $Y\in\mathbb{F}^{n\times1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1\Rightarrow2$
+\end_inset
+
+: Como 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible, en 
+\begin_inset Formula $AX=0$
+\end_inset
+
+ multiplicando a izquierda por 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+ tenemos, 
+\begin_inset Formula $X=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1\Rightarrow3$
+\end_inset
+
+: Analogo.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $3\Rightarrow2$
+\end_inset
+
+: Trivial tomando 
+\begin_inset Formula $Y=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $2\Rightarrow1$
+\end_inset
+
+: Sea 
+\begin_inset Formula $R$
+\end_inset
+
+ la forma 
+\begin_inset Formula $ERF$
+\end_inset
+
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+ es triangular superior.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Por equivalencia de sistemas, si 
+\begin_inset Formula $AX=0$
+\end_inset
+
+ tiene solucion unica entonces 
+\begin_inset Formula $RX=0$
+\end_inset
+
+ tambien y por lo tanto 
+\begin_inset Formula $R=I$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Luego 
+\begin_inset Formula $A$
+\end_inset
+
+ es equivalente por filas a 
+\begin_inset Formula $R=I$
+\end_inset
+
+ y en consecuencia existen matrices elementales 
+\begin_inset Formula $E_{1},E_{2},\ldots,E_{k}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $E_{k}\ldots E_{2}E_{1}A=I$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+A partir de aqui: 
+\begin_inset Formula $E_{k}\ldots E_{2}E_{1}AA^{-1}=A^{-1}\iff E_{k}\ldots E_{2}E_{1}=A^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Matriz inversa
+\end_layout
+
+\begin_layout Standard
+La demostracion del teorema anterior nos da un metodo eficiente para calcular
+ la inversa de una matriz 
+\begin_inset Formula $A$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+ es invertible, por el teorema anterior, 
+\begin_inset Formula $A$
+\end_inset
+
+ es equivalente por filas a 
+\begin_inset Formula $I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $e_{1},e_{2},\ldots,e_{k}$
+\end_inset
+
+ son las OEF que aplicamos a 
+\begin_inset Formula $A$
+\end_inset
+
+ para llevarla a 
+\begin_inset Formula $I$
+\end_inset
+
+, entonces: 
+\begin_inset Formula $A^{-1}=E_{k}\ldots E_{2}E_{1}=e_{k}\left[\ldots e_{2}\left(e_{1}\left[I\right]\right)\right].$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En palabras: si aplicamos a la matriz identidad las mismas OEF que le aplicamos
+ a 
+\begin_inset Formula $A$
+\end_inset
+
+ para llegar a 
+\begin_inset Formula $I$
+\end_inset
+
+, lo que se obtiene es la matriz inversa 
+\begin_inset Formula $A^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Determinante del producto de matrices
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Dadas 
+\begin_inset Formula $A,B\in\mathbb{F}^{n\times n},$
+\end_inset
+
+se tiene que: 
+\begin_inset Formula $\left|AB\right|=\left|A\right|\left|B\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Itemize
+Primer caso: 
+\begin_inset Formula $|A|=0$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $|B|=0$
+\end_inset
+
+, por 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Formulaciones equivalentes"
+
+\end_inset
+
+, 
+\begin_inset Formula $\exists X\neq0/BX=0$
+\end_inset
+
+ y multiplicando miembro a miembro por 
+\begin_inset Formula $A$
+\end_inset
+
+: 
+\begin_inset Formula $ABX=0$
+\end_inset
+
+ (con 
+\begin_inset Formula $X\neq0)$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\text{\ensuremath{|AB|=0=|A||B|}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $|B|\neq0$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ es invertible y ademas por 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Formulaciones equivalentes"
+
+\end_inset
+
+, 
+\begin_inset Formula $\exists X\neq0/AX=0$
+\end_inset
+
+ y multiplicando al centro por 
+\begin_inset Formula $I$
+\end_inset
+
+: 
+\begin_inset Formula $AB\left(B^{-1}X\right)=0$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\text{\ensuremath{X\neq0\land B^{-1}\neq0}}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left(B^{-1}X\right)\neq0$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $|AB|=0=|A||B|$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Segundo caso: 
+\begin_inset Formula $|A|\neq0$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Por 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Formulaciones equivalentes"
+
+\end_inset
+
+, 
+\begin_inset Formula $AX=0\Rightarrow X=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ es equivalente por filas a 
+\begin_inset Formula $I$
+\end_inset
+
+ luego existen matrices elementales 
+\begin_inset Formula $E_{1},E_{2},\dots,E_{k}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $E_{k}\ldots E_{2}E_{1}A=I$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=E_{1}^{-1}E_{2}^{-1}\ldots E_{k}^{-1}$
+\end_inset
+
+ y 
+\begin_inset Formula $E_{i}^{-1}$
+\end_inset
+
+ son matrices elementales.
+\end_layout
+
+\begin_layout Itemize
+Por el lema II en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Lemas"
+
+\end_inset
+
+, 
+\begin_inset Formula $|A|=\left|E_{1}^{-1}\right|\left|E_{2}^{-1}\right|\ldots\left|E_{k}^{-1}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $AB=E_{1}^{-1}E_{2}^{-1}\ldots E_{k}^{-1}B$
+\end_inset
+
+, 
+\begin_inset Formula $\text{\ensuremath{|AB|=\left|E_{1}^{-1}\right|\left|E_{2}^{-1}\right|\ldots\left|E_{k}^{-1}\right|\left|B\right|=|A||B|}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Algotirmo de Gauss
+\end_layout
+
+\begin_layout Standard
+El siguiente es un algoritmo para llevar una matriz 
+\begin_inset Formula $A\in n\times n$
+\end_inset
+
+ a su forma ERF:
+\end_layout
+
+\begin_layout Enumerate
+Ir a la columna no cero extrema izquierda.
+\end_layout
+
+\begin_layout Enumerate
+Si la primera fila tiene un cero en esta columna, intercambiarlo con otra
+ que no lo tenga.
+\end_layout
+
+\begin_layout Enumerate
+Luego, obtener ceros debajo de este elemento delantero, sumando múltiplos
+ adecuados del renglon superior a los renglones debajo de el.
+\end_layout
+
+\begin_layout Enumerate
+Cubrir el renglon superior y repetir el proceso anterior con la submatriz
+ restante.
+ Repetir con el resto de los renglones.
+\end_layout
+
+\begin_layout Enumerate
+Comenzando con el ultimo renglón no cero, avanzar hacia arriba: para cada
+ renglon obtener un 1 delantero e introducir ceros arriba de este sumando
+ múltiplos correspondientes a los renglones correspondientes.
+\end_layout
+
+\begin_layout Subsection
+Regla de Cramer
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $A\in\mathbb{F}^{n\times n}$
+\end_inset
+
+ una matriz inversible, entonces la unica solucion del sistema 
+\begin_inset Formula $AX=Y$
+\end_inset
+
+ esta dada por 
+\begin_inset Formula 
+\[
+x_{i}=\frac{\left|A_{i}\right|}{\left|A\right|}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ esla matriz que se obtiene de 
+\begin_inset Formula $A$
+\end_inset
+
+ reemplazando la i-esima columna por el vector 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostracion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Part
+Cuerpos finitos
+\end_layout
+
+\begin_layout Chapter
+Cuerpos
+\end_layout
+
+\begin_layout Chapter
+Aritmetica Modular
+\end_layout
+
+\begin_layout Chapter
+Ecuaciones lineales en cuerpos finitos
+\end_layout
+
+\end_body
+\end_document
