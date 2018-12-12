@@ -1,0 +1,2407 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{logicproof}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ un conjunto de formulas proposicionales.
+ Demuestre que si el conjunto de valuaciones 
+\begin_inset Formula $v$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left\llbracket \Gamma\right\rrbracket _{v}=T$
+\end_inset
+
+ es finito, entonces 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es infinito.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $V=\left\{ v_{i}/\left\llbracket \Gamma\right\rrbracket _{v_{i}}=T\right\} =\left\{ v_{1},v_{2},\ldots,v_{n}\right\} $
+\end_inset
+
+ el conjunto de valuaciones de la hipotesis.
+ Supongamos que 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es finito y sean 
+\begin_inset Formula $p_{i_{1}},p_{i_{2}},\ldots,p_{i_{m}}$
+\end_inset
+
+ (donde 
+\begin_inset Formula $i_{m}$
+\end_inset
+
+ es el mayor de los indices) las distintas variables proposicioneles que
+ aparecen en cada formula de 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Definimos: 
+\begin_inset Formula $\tilde{v}\left(p_{j}\right)=\begin{cases}
+v_{1}\left(p_{j}\right) & p_{j}\in\left\{ p_{i_{1}},p_{i_{2}},\ldots,p_{i_{m}}\right\} \\
+!v_{1}\left(p_{i_{m}+1}\right) & j=i_{m}+1\\
+!v_{2}\left(p_{i_{m}+2}\right) & j=i_{m}+2\\
+\vdots & \vdots\\
+!v_{n}\left(p_{i_{m}+n}\right) & j=i_{m}+n
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta nueva valuacion satisface 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ pues es igual a 
+\begin_inset Formula $v_{1}\in V$
+\end_inset
+
+ en todas las variables proposicionales que intervienen, por lo que 
+\begin_inset Formula $\tilde{v}\in V$
+\end_inset
+
+.
+ Sin embargo no es ninguna de las valuaciones 
+\begin_inset Formula $v_{1},v_{2},\ldots,v_{n}$
+\end_inset
+
+ pues difiere de cada una de ellas en al menos un valor, luego 
+\begin_inset Formula $\tilde{v}\notin V$
+\end_inset
+
+.
+ Contradiccion.
+ Por lo tanto 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es infinito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Gamma\subseteq PROP$
+\end_inset
+
+.
+ Demuestre que los siguientes enunciados son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es consistente,
+\end_layout
+
+\begin_layout Enumerate
+No existe 
+\begin_inset Formula $\phi$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Gamma\vdash\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma\vdash\neg\phi$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+Existe al menos una formula 
+\begin_inset Formula $\phi$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Gamma\nvdash\phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{1\Rightarrow2}$
+\end_inset
+
+: Supongamos que existe 
+\begin_inset Formula $\phi/\Gamma\vdash\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma\vdash\neg\phi$
+\end_inset
+
+ luego por introduccion de bottom 
+\begin_inset Formula $\Gamma\vdash\bot$
+\end_inset
+
+, pero por hipotesis 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es consistente.
+ Contradiccion.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{2\Rightarrow3}$
+\end_inset
+
+: Supongamos lo contrario, es decir que para toda 
+\begin_inset Formula $\phi$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\Gamma\vdash\phi$
+\end_inset
+
+.
+ Luego tenemos 
+\begin_inset Formula $\Gamma\vdash\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma\vdash\neg\phi$
+\end_inset
+
+.
+ Contradiccion.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{3\Rightarrow1}$
+\end_inset
+
+: Supongamos 
+\begin_inset Formula $\Gamma\vdash\bot$
+\end_inset
+
+, luego por eliminacion de bottom 
+\begin_inset Formula $\Gamma\vdash\phi$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $\phi$
+\end_inset
+
+, en particular para la de la hipotesis.
+ Contradiccion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ un modelo para una signatura 
+\begin_inset Formula $\left(\mathcal{F},\mathcal{P}\right)$
+\end_inset
+
+.
+ Una formula 
+\begin_inset Formula $\text{\ensuremath{\phi\in FORM_{\left(\mathcal{F},\mathcal{P}\right)}}}$
+\end_inset
+
+ es realizable en 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ sii existe un contexto 
+\begin_inset Formula $s$
+\end_inset
+
+ donde 
+\begin_inset Formula $\mathcal{M},s\vDash\phi$
+\end_inset
+
+ ¿Es verdadera la siguiente afirmacion: Si 
+\begin_inset Formula $\phi$
+\end_inset
+
+ es realizable en 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\neg\phi$
+\end_inset
+
+ no es realizable en 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+? Justifique.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Falso.
+ Sean 
+\begin_inset Formula $\phi\equiv x_{1}\dot{=}x_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+ tal que 
+\begin_inset Formula $s\left(x_{1}\right)=s\left(x_{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $s'$
+\end_inset
+
+ tal que 
+\begin_inset Formula $s'\left(x_{1}\right)\neq s'\left(x_{2}\right)$
+\end_inset
+
+.
+ Veamos que se cumple la hipotesis, es decir que 
+\begin_inset Formula $\phi$
+\end_inset
+
+ es realizable:
+\begin_inset Formula 
+\[
+\begin{aligned} & \mathcal{M},s\vDash\phi\\
+\iff & \left\langle \text{definicion de }\vDash\right\rangle \\
+ & \left\llbracket \phi\right\rrbracket _{\mathcal{M},s}=T\\
+\iff & \left\langle \text{definicion de }\phi\right\rangle \\
+ & \left\llbracket x_{1}\dot{=}x_{2}\right\rrbracket _{\mathcal{M},s}=T\\
+\iff & \left\langle \text{definicion de }\left\llbracket \right\rrbracket \text{ para }\dot{=}\right\rangle \\
+ & \left\llbracket x_{1}\right\rrbracket _{\mathcal{M},s}=\left\llbracket x_{2}\right\rrbracket _{\mathcal{M},s}\\
+\iff & \left\langle \text{definicion de }\left\llbracket \right\rrbracket \text{ para }TERM\right\rangle \\
+ & s\left(x_{1}\right)=s\left(x_{2}\right)\\
+ & \left\langle \text{lo cual vale por definicion de }s\right\rangle 
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+Ahora veamos que 
+\begin_inset Formula $\neg\phi$
+\end_inset
+
+ tambien es realizable:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned} & \mathcal{M},s'\vDash\neg\phi\\
+\iff & \left\langle \text{definicion de }\vDash\right\rangle \\
+ & \left\llbracket \neg\phi\right\rrbracket _{\mathcal{M},s'}=T\\
+\iff & \left\langle \text{definicion de }\left\llbracket \right\rrbracket \text{ para }\neg\right\rangle \\
+ & \left\llbracket \phi\right\rrbracket _{\mathcal{M},s'}=F\\
+\iff & \left\langle \text{definicion de }\phi\right\rangle \\
+ & \left\llbracket x_{1}\dot{=}x_{2}\right\rrbracket _{\mathcal{M},s'}=F\\
+\iff & \left\langle \text{definicion de }\left\llbracket \right\rrbracket \text{ para }\dot{=}\right\rangle \\
+ & \left\llbracket x_{1}\right\rrbracket _{\mathcal{M},s'}\neq\left\llbracket x_{2}\right\rrbracket _{\mathcal{M},s'}\\
+\iff & \left\langle \text{definicion de }\left\llbracket \right\rrbracket \text{ para }TERM\right\rangle \\
+ & s\text{'}\left(x_{1}\right)\neq s'\left(x_{2}\right)\\
+ & \left\langle \text{lo cual vale por definicion de }s'\right\rangle 
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ un conjunto de formulas de la logica de predicados sobre una signatura
+ 
+\begin_inset Formula $\left(\mathcal{F},\mathcal{P}\right)$
+\end_inset
+
+.
+ Definimos los modelos de 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ de la siguiente forma:
+\begin_inset Formula 
+\[
+Mod\left(\Gamma\right)=\left\{ \mathcal{M}/\mathcal{M}\text{ es un modelo sobre }\left(\mathcal{F},\mathcal{P}\right)\text{ y }\mathcal{M}\vDash\Gamma\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Decimos que 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es satisfactible sii 
+\begin_inset Formula $Mod\left(\Gamma\right)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Determine si las siguientes proposiciones son verdaderas o falsas.
+ Justifique su respuesta.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Mod\left(\Gamma\cap\Delta\right)=\emptyset$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es no satisfactible y 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ es no satisfactible.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Mod\left(\Gamma\cup\Delta\right)=\emptyset$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es no satisfactible y 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ es no satisfactible.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Mod\left(\Gamma\right)\neq\emptyset$
+\end_inset
+
+, entonces 
+\begin_inset Formula $Mod\left(\neg\Gamma\right)=\emptyset$
+\end_inset
+
+ donde 
+\begin_inset Formula $\neg\Gamma=\left\{ \neg\phi/\phi\in\Gamma\right\} $
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+Verdadero.
+ Sea 
+\begin_inset Formula $\phi\in\Gamma\cap\Delta$
+\end_inset
+
+.
+ Por hipotesis 
+\begin_inset Formula $\phi$
+\end_inset
+
+ no es satisfactible y como 
+\begin_inset Formula $\phi\in\Gamma$
+\end_inset
+
+ y 
+\begin_inset Formula $\phi\in\Delta$
+\end_inset
+
+ (por definicion de 
+\begin_inset Formula $\cap$
+\end_inset
+
+) resulta 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ no es satisfactible y 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ tampoco.
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ Sean 
+\begin_inset Formula $\Gamma=\emptyset$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta=\left\{ \bot\right\} $
+\end_inset
+
+, luego resultara 
+\begin_inset Formula $\Gamma\cup\Delta=\left\{ \bot\right\} $
+\end_inset
+
+ que es trivialmente insatisfactible por lo que 
+\begin_inset Formula $Mod\left(\Gamma\cup\Delta\right)=\emptyset$
+\end_inset
+
+.
+ Sin embargo no es cierto que 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ sea no satisfactible y 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ tambien pues 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es satisfactible por vacuidad.
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ En efecto 
+\begin_inset Formula $\Gamma=\emptyset=\neg\emptyset$
+\end_inset
+
+ y resulta entonces 
+\begin_inset Formula $Mod\left(\Gamma\right)\neq\emptyset$
+\end_inset
+
+ y 
+\begin_inset Formula $Mod\left(\neg\Gamma\right)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Demuestre el teorema de compacidad: Para todo conjunto de sentencias 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+, si todos los subconjuntos finitos de 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ son satisfactibles, entonces 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es satisfactible.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ no es satisfactible, luego 
+\begin_inset Formula $\Gamma\vDash\bot$
+\end_inset
+
+ y por correctitud resulta 
+\begin_inset Formula $\Gamma\vdash\bot$
+\end_inset
+
+.
+ La prueba de 
+\begin_inset Formula $\Gamma\vdash\bot$
+\end_inset
+
+ es un arbol finito y en particular tiene un conjunto finito de premisas,
+ al que llamaremos 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tenemos que 
+\begin_inset Formula $\Delta\subseteq\Gamma$
+\end_inset
+
+ es finito y ademas inconsistente, pero por hipotesis todos los subconjuntos
+ finitos de 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ son satisfactibles.
+ Contradiccion.
+ Luego 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es satisfactible.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sin entrar en los detalles de la prueba, demuestre que el teorema de alcanzabili
+dad en grafos no es expresable en logica de predicados.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Demuestre el teorema de Löwenhein-Skolem: Si 
+\begin_inset Formula $\psi$
+\end_inset
+
+ es una sentencia de la logica de predicados tal que para cada numero natural
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ existe un modelo de 
+\begin_inset Formula $\psi$
+\end_inset
+
+ con al menos 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos, entonces 
+\begin_inset Formula $\psi$
+\end_inset
+
+ tiene un modelo con infinitos elementos.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Definamos las formulas 
+\begin_inset Formula $\phi_{n}\equiv\exists x_{1}\exists x_{2}\ldots\exists x_{n}\left({\displaystyle \bigwedge_{1\leq i<j\leq n}\neg\left(x_{i}=x_{j}\right)}\right)$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $\phi_{n}$
+\end_inset
+
+ expresa que 
+\begin_inset Quotes cld
+\end_inset
+
+existen al menos 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos
+\begin_inset Quotes crd
+\end_inset
+
+.
+ Definimos ademas 
+\begin_inset Formula $\Gamma=\left\{ \psi\right\} \cup\left\{ \phi_{n}:n\in\mathbb{N}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\phi_{n}\text{ es satisfactible para todo }n}$
+\end_inset
+
+: En efecto, bastara considerar un universo con al menos 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\phi_{k}\vDash\phi_{n}\text{ para todo }k\geq n}$
+\end_inset
+
+: De hecho si existen al menos 
+\begin_inset Formula $k$
+\end_inset
+
+ elementos, tambien existe una menor cantidad de elementos.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\Gamma\text{ es satisfactible}}$
+\end_inset
+
+: Para probar esto nos valdremos del teorema de compacidad, es decir, considerar
+emos un subconjunto finito cualquiera y mostraremos que es satisfactible.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Delta\subseteq\Gamma$
+\end_inset
+
+ y consideremos un numero 
+\begin_inset Formula $k$
+\end_inset
+
+ suficientemente grande como para que toda 
+\begin_inset Formula $\phi_{n}\in\Delta$
+\end_inset
+
+ valga en caso de que tambien valga 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ (por el punto anterior).
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\mathcal{M}_{k}$
+\end_inset
+
+ el modelo con al menos 
+\begin_inset Formula $k$
+\end_inset
+
+ elementos que garantiza la hipotesis, luego 
+\begin_inset Formula $\phi_{k}$
+\end_inset
+
+ resulta satisfactible por lo que tambien lo resultara cualquier 
+\begin_inset Formula $\phi_{n}\in\Delta$
+\end_inset
+
+.
+ Ademas si 
+\begin_inset Formula $\psi\in\Delta$
+\end_inset
+
+ por hipotesis tambien tenemos 
+\begin_inset Formula $\mathcal{M}_{k}\vDash\psi$
+\end_inset
+
+.
+ Es decir que todas las formulas de 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ son satisfactibles.
+\end_layout
+
+\begin_layout Standard
+En resumen hemos visto que cualquier subconjunto finito de 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es satisfactible, luego por el teorema de compacidad 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ tambien lo es, por lo que existe un modelo 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{M}\vDash\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\text{Existe un modelo infinito para }\psi}$
+\end_inset
+
+: Veamos que el modelo 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ que nos garantiza el punto anterior es infinito.
+ Supongamos que no lo sea y sea 
+\begin_inset Formula $c=\#\left|\mathcal{M}\right|$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\phi_{c+1}\in\Gamma$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{M}\vDash\Gamma$
+\end_inset
+
+ entonces existen al menos 
+\begin_inset Formula $c+1$
+\end_inset
+
+ elementos en el modelo, pero solo existen 
+\begin_inset Formula $c$
+\end_inset
+
+ elementos.
+ Contradiccion.
+ Luego el modelo es infinito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Recordemos que 
+\begin_inset Formula $\forall\lozenge\phi\equiv\forall\left[\top\boldsymbol{U}\phi\right]$
+\end_inset
+
+, y 
+\begin_inset Formula $\exists\square\phi\equiv\neg\forall\lozenge\neg\phi$
+\end_inset
+
+.
+ Derive la definicion semantica de 
+\begin_inset Formula $\exists\square\phi$
+\end_inset
+
+.
+ Es decir, calcule cuando un estado de un sistema de transiciones 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ satisface 
+\begin_inset Formula $\mathcal{M},s\vDash\exists\square\phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned} & \mathcal{M},s\vDash\exists\square\phi\\
+\iff & \left\langle \text{definicion de }\exists\square\right\rangle \\
+ & \mathcal{M},s\vDash\neg\forall\lozenge\neg\phi\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\neg\right\rangle \\
+ & \mathcal{M},s\nvDash\forall\lozenge\neg\phi\\
+\iff & \left\langle \text{definicion de }\forall\lozenge\right\rangle \\
+ & \text{no ocurre que }\mathcal{M},s\vDash\forall\left[\top\boldsymbol{U}\neg\phi\right]\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\forall\boldsymbol{\cup}\right\rangle \\
+ & \text{no ocurre que para toda traza }s=s_{0}'\rightarrow s_{1}'\rightarrow\ldots\text{ }\text{ existe }j\in\mathbb{N}\text{ tal que:}\\
+ & \mathcal{M},s_{j}'\vDash\neg\phi\text{ y \ensuremath{\mathcal{M},s_{i}'\vDash\top} para todo }i<j\\
+\iff & \left\langle \mathcal{M},s\vDash\top\text{ para todo }s\right\rangle \\
+ & \text{no ocurre que para toda traza }s=s_{0}'\rightarrow s_{1}'\rightarrow\ldots\text{ }\text{ existe }j\in\mathbb{N}:\mathcal{M},s_{j}'\vDash\neg\phi\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\neg\right\rangle \\
+ & \text{no ocurre que para toda traza }s=s_{0}'\rightarrow s_{1}'\rightarrow\ldots\text{ }\text{ existe }j\in\mathbb{N}:\mathcal{M},s_{j}'\nvDash\phi\\
+\iff & \left\langle \text{intercambio de cuantificadores}\right\rangle \\
+ & \text{para alguna traza }s=s_{0}'\rightarrow s_{1}'\rightarrow\ldots\text{ }\text{ no existe }j\in\mathbb{N}:\mathcal{M},s_{j}'\nvDash\phi\\
+\iff & \left\langle \text{intercambio de cuantificadores}\right\rangle \\
+ & \text{para alguna traza }s=s_{0}'\rightarrow s_{1}'\rightarrow\ldots\text{ }\text{ resulta }\mathcal{M},s_{j}'\vDash\phi\text{ para todo }j\in\mathbb{N}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Gamma\subseteq PROP$
+\end_inset
+
+.
+ Demuestre que si existe una valuacion 
+\begin_inset Formula $v$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left\llbracket \Gamma\right\rrbracket _{v}=T$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es consistente.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $v/\left\llbracket \Gamma\right\rrbracket _{v}=T$
+\end_inset
+
+.
+ Supongamos que 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es inconsistente, es decir 
+\begin_inset Formula $\Gamma\vdash\bot$
+\end_inset
+
+, luego por correctitud 
+\begin_inset Formula $\Gamma\vDash\bot$
+\end_inset
+
+.
+ Esto significa que para toda valuacion 
+\begin_inset Formula $b$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left\llbracket \Gamma\right\rrbracket _{b}=T$
+\end_inset
+
+ tambien resultara 
+\begin_inset Formula $\left\llbracket \bot\right\rrbracket _{b}=T$
+\end_inset
+
+.
+ Como consecuencia de esto, para la valuacion de la hipotesis resultara
+ 
+\begin_inset Formula $\left\llbracket \bot\right\rrbracket _{v}=T$
+\end_inset
+
+.
+ Absurdo.
+ Por lo tanto 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es consistente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Demuestre que todo conjunto consistente esta contenido en un conjunto consistent
+e maximal.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Notemos primero que 
+\begin_inset Formula $PROP$
+\end_inset
+
+ es numerable, luego podemos listar a todos sus elementos como 
+\begin_inset Formula $\phi_{0},\phi_{1},\ldots$
+\end_inset
+
+ Ahora definimos: 
+\begin_inset Formula $\Gamma_{0}=\Gamma$
+\end_inset
+
+ , 
+\begin_inset Formula 
+\[
+\text{\ensuremath{\Gamma_{n+1}=\begin{cases}
+\Gamma_{n}\cup\left\{ \phi_{n}\right\}  & \Gamma_{n}\cup\left\{ \phi_{n}\right\} \nvdash\bot\\
+\Gamma_{n} & \Gamma_{n}\cup\left\{ \phi_{n}\right\} \vdash\bot
+\end{cases}}}
+\]
+
+\end_inset
+
+ y sea 
+\begin_inset Formula ${\displaystyle \Gamma^{*}=\bigcup_{n\in\mathbb{N}}\Gamma_{n}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\Gamma\subseteq\Gamma^{*}}$
+\end_inset
+
+ pues 
+\begin_inset Formula $\Gamma^{*}=\Gamma_{0}\cup\ldots$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma_{0}=\Gamma$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\Gamma_{i}\text{ es consistente para todo }i}$
+\end_inset
+
+ pues 
+\begin_inset Formula $\Gamma_{0}=\Gamma$
+\end_inset
+
+ es consistente por hipotesis (caso base) y si 
+\begin_inset Formula $\Gamma_{n}$
+\end_inset
+
+ es consistente (hipotesis inductiva) entonces 
+\begin_inset Formula $\Gamma_{n+1}$
+\end_inset
+
+ tambien lo es pues por definicion de 
+\begin_inset Formula $\Gamma_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\Gamma\cup\left\{ \phi_{n}\right\} \vdash\bot$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\Gamma_{n+1}=\Gamma_{n}$
+\end_inset
+
+ (consistente por H.I.).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\Gamma\cup\left\{ \phi_{n}\right\} \nvdash\bot$
+\end_inset
+
+ (es consistente) entonces 
+\begin_inset Formula $\Gamma_{n+1}=\Gamma_{n}\cup\left\{ \phi_{n}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\Gamma^{*}\text{ es consistente}}$
+\end_inset
+
+.
+ En efecto supongamos lo contrario, es decir 
+\begin_inset Formula $\Gamma^{*}\vdash\bot$
+\end_inset
+
+, luego existe 
+\begin_inset Formula $\psi$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Gamma^{*}\vdash\psi$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma^{*}\vdash\neg\psi$
+\end_inset
+
+.
+ En ambas derivaciones hay un numero finito de premisas 
+\begin_inset Formula $\psi_{1},\ldots,\psi_{k}\in\Gamma^{*}$
+\end_inset
+
+.
+ Consideremos un subindice 
+\begin_inset Formula $j$
+\end_inset
+
+ tal que todas estas premisas esten en 
+\begin_inset Formula $\Gamma_{j}\subseteq\Gamma^{*}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\Gamma_{j}\vdash\psi$
+\end_inset
+
+ y 
+\begin_inset Formula $\Gamma_{j}\vdash\neg\psi$
+\end_inset
+
+ (
+\begin_inset Formula $\Gamma_{j}$
+\end_inset
+
+ es inconsistente) pero esto contradice el punto anterior.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\Gamma^{*}\text{ es maximal}}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ consistente tal que 
+\begin_inset Formula $\Gamma^{*}\subseteq\Delta$
+\end_inset
+
+, veremos que 
+\begin_inset Formula $\text{\ensuremath{\Gamma^{*}=\Delta}}$
+\end_inset
+
+ (es decir, 
+\begin_inset Formula $\Delta\subseteq\Gamma^{*}$
+\end_inset
+
+).
+ Para cualquier elemento 
+\begin_inset Formula $\phi_{m}\in\Delta$
+\end_inset
+
+, como 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ es consistente y 
+\begin_inset Formula $\Gamma_{m}\subseteq\Gamma^{*}\subseteq\Delta$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\Gamma_{m}\cup\left\{ \phi_{m}\right\} $
+\end_inset
+
+ es consistente; y por definicion 
+\begin_inset Formula $\Gamma_{m+1}=\Gamma_{m}\cup\left\{ \phi_{m}\right\} $
+\end_inset
+
+ de donde 
+\begin_inset Formula $\phi_{m}\in\Gamma_{m+1}\subseteq\Gamma^{*}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\phi_{m}\in\Gamma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+ 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Enunciado
+\end_layout
+
+\begin_layout Enumerate
+Defina recursivamente el conjunto de variables libres de una formula 
+\begin_inset Formula $\phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Describa el problema de captura de variables libres.
+\end_layout
+
+\begin_layout Enumerate
+¿Como se evita la captura de variables libres? Defina el concepto de termino
+ libre para una variable en una formula.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+Definimos la funcion 
+\begin_inset Formula $FV_{T}:TERM\to\mathcal{P}\left(Var\right)$
+\end_inset
+
+ que calcula el conjunto de variables libres de un termino como:
+\begin_inset Formula 
+\[
+FV_{T}\left(t\right)=\begin{cases}
+\emptyset & t\in\mathcal{F}\\
+\left\{ t\right\}  & t\in Var\\
+FV_{T}\left(t_{1}\right)\cup\ldots\cup FV_{T}\left(t_{n}\right) & t=f_{i}\left(t_{1},t_{2},\ldots,t_{n}\right)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Definimos el conjunto de variables libres de una formula 
+\begin_inset Formula $\phi$
+\end_inset
+
+ mediante la funcion 
+\begin_inset Formula $FV:FORM\to\mathcal{P}\left(Var\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+FV\left(\phi\right)=\begin{cases}
+\emptyset & \phi\equiv\bot\\
+\emptyset & \phi\in\mathcal{P}\\
+FV_{T}\left(t_{1}\right)\cup\ldots\cup FV_{T}\left(t_{n}\right) & \phi\equiv P_{i}\left(t_{1},\ldots,t_{n}\right)\\
+FV\left(\psi\right) & \phi\equiv\neg\psi\\
+FV\left(\psi_{1}\right)\cup FV\left(\psi_{2}\right) & \phi\equiv\psi_{1}\square\psi_{2}\\
+FV\left(\psi\right)-\left\{ x_{i}\right\}  & \phi\equiv\forall x_{i}\psi\\
+FV\left(\psi\right)-\left\{ x_{i}\right\}  & \phi\equiv\exists x_{i}\psi
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El problema de captura de variables significa que cuando realizamos una
+ substitucion en una formula con cuantificador, si la variable que estamos
+ introduciendo es la misma que la cuantificada, esta quedara 
+\begin_inset Quotes eld
+\end_inset
+
+capturada
+\begin_inset Quotes erd
+\end_inset
+
+ por el cuantificador, alterando de esta manera el significado semantico
+ de la forumula.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Para evitar la captura debemos debemos restringir las substituciones de
+ manera adecuada.
+ Para ello definimos el concepto de termino libre para una variable en una
+ formula: Diremos que un termino 
+\begin_inset Formula $t$
+\end_inset
+
+ esta libre para una variable 
+\begin_inset Formula $x$
+\end_inset
+
+ en una formula 
+\begin_inset Formula $\phi$
+\end_inset
+
+ si y solo si:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\phi$
+\end_inset
+
+ es atomica (no contiene conectivos).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi\equiv\phi_{1}\square\phi_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $t$
+\end_inset
+
+ esta libre para 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $\phi_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\phi_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi\equiv\neg\phi_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $t$
+\end_inset
+
+ esta libre para 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $\phi_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi\equiv\forall y\phi_{1}$
+\end_inset
+
+ y si 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+ se cumple:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $t$
+\end_inset
+
+ esta libre para 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $\phi_{1}$
+\end_inset
+
+ y
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\notin FV_{T}\left(t\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\phi\equiv\exists y\phi_{1}$
+\end_inset
+
+ y si 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+ se cumple:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $t$
+\end_inset
+
+ esta libre para 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $\phi_{1}$
+\end_inset
+
+ y
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\notin FV_{T}\left(t\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+ Enunciado
+\end_layout
+
+\begin_layout Standard
+Defina el concepto de modelo o interpretacion para una signatura 
+\begin_inset Formula $\left(\mathcal{F},\mathcal{P}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Dada una signatura 
+\begin_inset Formula $\left(\mathcal{F},\mathcal{P}\right)$
+\end_inset
+
+, un modelo 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ para dicha signatura consiste en:
+\end_layout
+
+\begin_layout Itemize
+Un conjunto no vacio que llamaremos universo y notaremos como 
+\begin_inset Formula $\mathcal{\left|M\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para cada constante 
+\begin_inset Formula $c\in\mathcal{F}$
+\end_inset
+
+, un elemento 
+\begin_inset Formula $c_{\mathcal{M}}\in\left|\mathcal{M}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para cada simbolo de funcion 
+\begin_inset Formula $f\in\mathcal{F}$
+\end_inset
+
+ (con aridad 
+\begin_inset Formula $n>0$
+\end_inset
+
+), una funcion 
+\begin_inset Formula $f_{\mathcal{M}}:\left|\mathcal{M}\right|^{n}\to\left|\mathcal{M}\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para cada simbolo de predicado 
+\begin_inset Formula $P\in\mathcal{P}$
+\end_inset
+
+ de aridad 
+\begin_inset Formula $n>0$
+\end_inset
+
+, un conjunto 
+\begin_inset Formula $P_{\mathcal{M}}\subseteq\left|\mathcal{M}\right|^{n}$
+\end_inset
+
+ (es decir, una relacion n-aria).
+\end_layout
+
+\begin_layout Itemize
+Para cada simbolo de predicado 
+\begin_inset Formula $P\in\mathcal{P}$
+\end_inset
+
+ de aridad 
+\begin_inset Formula $0$
+\end_inset
+
+, un conjunto 
+\begin_inset Formula $\text{P_{\mathcal{M}}\subseteq\left\{  \emptyset\right\}  }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Defina el concepto de entorno 
+\begin_inset Formula $s$
+\end_inset
+
+ y explique por que es necesaria su introduccion.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Llamamos entorno a una funcion 
+\begin_inset Formula $s:Var\to\left|\mathcal{M}\right|$
+\end_inset
+
+.
+ Su introduccion es necesaria pues de lo contrario no existiria ninguna
+ interpretacion para las variables libres por lo que existirian formulas
+ sin significado semantico.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left(\mathcal{F},\mathcal{P}\right)$
+\end_inset
+
+ una signatura.
+ Determine en cada caso si es posible encontrar formulas y modelos que satisfaga
+n cada una de las siguientes restricciones:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\phi,\psi,\mathcal{M}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\vdash\phi\rightarrow\psi,\mathcal{M}\vDash\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{M}\nvDash\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\phi,\mathcal{M},\mathcal{M}'$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left|\mathcal{M}\right|\subseteq\left|\mathcal{M}'\right|,\mathcal{M}'\vDash\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{M}\nvDash\phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{M},\phi$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\mathcal{M\nvDash\phi}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{M}\nvDash\neg\phi$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ Por correctitud 
+\begin_inset Formula $\vdash\phi\rightarrow\psi$
+\end_inset
+
+ implica 
+\begin_inset Formula $\vDash\phi\rightarrow\psi$
+\end_inset
+
+ sii 
+\begin_inset Formula $\phi\vDash\psi$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{M}\vDash\phi$
+\end_inset
+
+ luego necesariamente resultara 
+\begin_inset Formula $\mathcal{M}\vDash\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Verdadero.
+ Sean 
+\begin_inset Formula $\phi\equiv\exists x_{1}\exists x_{2}\neg\left(x_{1}\dot{=}x_{2}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left|\mathcal{M}\right|=\left\{ 1\right\} \subset\left\{ 1,2\right\} =\left|\mathcal{M}'\right|$
+\end_inset
+
+.
+ Tenemos:
+\begin_inset Formula 
+\[
+\begin{aligned} & \left\llbracket \exists x_{1}\exists x_{2}\neg\left(x_{1}\dot{=}x_{2}\right)\right\rrbracket _{\mathcal{M},s}=F\\
+\iff & \left\langle \text{unico caso}\right\rangle \\
+ & \left\llbracket \exists x_{2}\neg\left(x_{1}\dot{=}x_{2}\right)\right\rrbracket _{\mathcal{M},s\left[x_{1}\mapsto1\right]}=F\\
+\iff & \left\langle \text{unico caso}\right\rangle \\
+ & \left\llbracket \neg\left(x_{1}\dot{=}x_{2}\right)\right\rrbracket _{\mathcal{M},s\left[x_{1}\mapsto1\right]\left[x_{2}\mapsto1\right]}=F\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\neg\right\rangle \\
+ & \left\llbracket \left(x_{1}\dot{=}x_{2}\right)\right\rrbracket _{\mathcal{M},s\left[x_{1}\mapsto1\right]\left[x_{2}\mapsto1\right]}=T\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\dot{=}\right\rangle \\
+ & \left\llbracket x_{1}\right\rrbracket _{\mathcal{M},s\left[x_{1}\mapsto1\right]\left[x_{2}\mapsto1\right]}=\left\llbracket x_{2}\right\rrbracket _{\mathcal{M},s\left[x_{1}\mapsto1\right]\left[x_{2}\mapsto1\right]}\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para terminos}\right\rangle \\
+ & s\left[x_{1}\mapsto1\right]\left[x_{2}\mapsto1\right]\left(x_{1}\right)=s\left[x_{1}\mapsto1\right]\left[x_{2}\mapsto1\right]\left(x_{2}\right)\\
+\iff & \left\langle \text{definicion de }s\left[x_{1}\mapsto1\right]\left[x_{2}\mapsto1\right]\right\rangle \\
+ & 1=1\\
+ & \left\langle \text{lo cual vale}\right\rangle 
+\end{aligned}
+\]
+
+\end_inset
+
+y
+\begin_inset Formula 
+\[
+\begin{aligned} & \left\llbracket \exists x_{1}\exists x_{2}\neg\left(x_{1}\dot{=}x_{2}\right)\right\rrbracket _{\mathcal{M}',s}=T\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\exists\right\rangle \\
+ & \text{para algun }a\in\left|\mathcal{M}'\right|\text{ resulta }\left\llbracket \exists x_{2}\neg\left(x_{1}\dot{=}x_{2}\right)\right\rrbracket _{\mathcal{M}',s\left[x_{1}\mapsto a\right]}=T\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\exists\right\rangle \\
+ & \text{para algun }a\in\left|\mathcal{M}'\right|\text{, para algun }b\in\left|\mathcal{M}'\right|\text{ resulta }\left\llbracket \neg\left(x_{1}\dot{=}x_{2}\right)\right\rrbracket _{\mathcal{M}',s':=s\left[x_{1}\mapsto a\right]\left[x_{2}\mapsto b\right]}=T\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\neg\right\rangle \\
+ & \text{para algun }a\in\left|\mathcal{M}'\right|\text{, para algun }b\in\left|\mathcal{M}'\right|\text{ resulta }\left\llbracket x_{1}\dot{=}x_{2}\right\rrbracket _{\mathcal{M}',s'}=F\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para }\dot{=}\right\rangle \\
+ & \text{para algun }a\in\left|\mathcal{M}'\right|\text{, para algun }b\in\left|\mathcal{M}'\right|\text{ resulta }\left\llbracket x_{1}\right\rrbracket _{\mathcal{M}',s'}\neq\left\llbracket x_{2}\right\rrbracket _{\mathcal{M}',s'}\\
+\iff & \left\langle \text{definicion de }\vDash\text{ para terminos}\right\rangle \\
+ & \text{para algun }a\in\left|\mathcal{M}'\right|\text{, para algun }b\in\left|\mathcal{M}'\right|\text{ resulta }s'\left(x_{1}\right)\neq s'\left(x_{2}\right)\\
+\iff & \left\langle \text{definicion de }s'\right\rangle \\
+ & \text{para algun }a\in\left|\mathcal{M}'\right|\text{, para algun }b\in\left|\mathcal{M}'\right|\text{ resulta }a\neq b\\
+ & \left\langle \text{lo cual vale para }a=1\text{ y }b=2\right\rangle 
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Falso.
+ Sean 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ y 
+\begin_inset Formula $\phi$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\mathcal{M\nvDash\phi}\iff\left\llbracket \phi\right\rrbracket _{\mathcal{M},s}=F$
+\end_inset
+
+ luego 
+\begin_inset Formula $\mathcal{M\nvDash\neg\phi}\iff\left\llbracket \neg\phi\right\rrbracket _{\mathcal{M},s}=F\iff\left\llbracket \phi\right\rrbracket _{\mathcal{M},s}=T$
+\end_inset
+
+ lo cual no vale.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Se desea agregar los operadores 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ y 
+\begin_inset Formula $\forall!$
+\end_inset
+
+ a la lista de operadores de 
+\begin_inset Formula $CTL$
+\end_inset
+
+.
+ El significado de 
+\begin_inset Formula $!\phi$
+\end_inset
+
+ sera 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\phi$
+\end_inset
+
+ vale ahora y luego no vale mas
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Entonces:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists!\phi:$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\phi$
+\end_inset
+
+ vale ahora y hay un camino donde no vuelve a valer
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall!\phi:$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\phi$
+\end_inset
+
+ vale ahora y no existe un camino donde no vuelva a valer
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se pide:
+\end_layout
+
+\begin_layout Enumerate
+Dar definiciones de 
+\begin_inset Formula $\exists!$
+\end_inset
+
+ y 
+\begin_inset Formula $\forall!$
+\end_inset
+
+ basandose en los operadores ya definidos.
+\end_layout
+
+\begin_layout Enumerate
+Elegir uno de ellos y derivar su semantica.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\exists!\phi\equiv\phi\land\exists\fullmoon\exists\square\neg\phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall!\phi\equiv\phi\land\forall\fullmoon\forall\square\neg\phi$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Considere la siguiente instancia del problema de Post:
+\begin_inset Formula 
+\[
+\begin{aligned}s_{1}= & 100\\
+t_{1}= & 1\\
+s_{2}= & 0\\
+t_{2}= & 000
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Defina las formulas 
+\begin_inset Formula $\phi_{1},\phi_{2},\phi_{3}$
+\end_inset
+
+ asociadas a esta instancia.
+\end_layout
+
+\begin_layout Enumerate
+Demuestre que el problema tiene solucion utilizando derivacion en logica
+ de predicados.
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\phi_{1}\equiv P\left(f_{100}\left(e\right),f_{1}\left(e\right)\right)\land P\left(f_{0}\left(e\right),f_{000}\left(e\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi_{2}\equiv\forall v\forall w\left\{ P\left(v,w\right)\rightarrow\left[P\left(f_{100}\left(v\right),f_{1}\left(w\right)\right)\land P\left(f_{0}\left(v\right),f_{000}\left(w\right)\right)\right]\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\phi_{3}\equiv\exists zP\left(z,z\right)$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{logicproof}{1}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{subproof}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+phi_1 
+\backslash
+land 
+\backslash
+phi_2 & Hipotesis 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+phi_1 
+\backslash
+equiv P(f_{100}(e),f_1(e)) 
+\backslash
+land P(f_0(e),f_{000}(e)) & $e_{
+\backslash
+land 1}(1)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+phi_2 
+\backslash
+equiv 
+\backslash
+forall v 
+\backslash
+forall w 
+\backslash
+{ P(v,w) 
+\backslash
+rightarrow [ P(f_{100}(v),f_1(w)) 
+\backslash
+land P(f_0(v),f_{000}(w)) ] 
+\backslash
+} & $e_{
+\backslash
+land 2}(1)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		P(f_0(e),f_{000}(e)) & $e_{
+\backslash
+land 2}(2)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+forall w 
+\backslash
+{ P(f_0(e),w) 
+\backslash
+rightarrow [ P(f_{100}(f_0(e)),f_1(w)) 
+\backslash
+land P(f_0(f_0(e)),f_{000}(w)) ] 
+\backslash
+} & $e_
+\backslash
+forall(3)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+forall w 
+\backslash
+{ P(f_0(e),w) 
+\backslash
+rightarrow [ P(f_{1000}(e),f_1(w)) 
+\backslash
+land P(f_{00}(e),f_{000}(w)) ] 
+\backslash
+} & Trivial (5)
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		P(f_0(e),f_{000}(e)) 
+\backslash
+rightarrow [ P(f_{1000}(e),f_1(f_{000}(e))) 
+\backslash
+land P(f_{00}(e),f_{000}(f_{000}(e))) ] & $e_
+\backslash
+forall(6)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		P(f_{1000}(e),f_1(f_{000}(e))) 
+\backslash
+land P(f_{00}(e),f_{000}(f_{000}(e))) & $e_
+\backslash
+rightarrow(7)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		P(f_{1000}(e),f_{1000}(e)) & $e_{
+\backslash
+land 1}(8)$
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+phi_3 
+\backslash
+equiv 
+\backslash
+exists z P(z,z) & $i_
+\backslash
+exists(9)$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{subproof}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+phi_1 
+\backslash
+land 
+\backslash
+phi_2 
+\backslash
+rightarrow 
+\backslash
+phi_3 & $i_
+\backslash
+rightarrow (1-10)$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{logicproof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
