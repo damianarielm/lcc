@@ -1,0 +1,1271 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Modelos Fisicos
+\end_layout
+
+\begin_layout Author
+Practica 2
+\end_layout
+
+\begin_layout Enumerate
+Una particula se mueve a lo largo de una recta de forma que su posicion
+ sigue la ley (en el SI) 
+\begin_inset Formula $x\left(t\right)=t^{3}-33t^{2}+216t$
+\end_inset
+
+ entre 
+\begin_inset Formula $t=0$
+\end_inset
+
+ y 
+\begin_inset Formula $t=24$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcule la velocidad y la aceleracion de este movimiento.
+\end_layout
+
+\begin_layout Enumerate
+¿Cual es la maxima distancia de la posicion inicial a la que llega a encontrarse
+ esta particula?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuanto vale el desplazamiento neto a lo largo del intervalo?
+\end_layout
+
+\begin_layout Enumerate
+¿Y la distancia total recorrida?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuanto valen la maxima y la minima velocidad de este movimiento?
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $v\left(t\right)=3t^{2}-66t+216$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\left(t\right)=6t-66$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $v\left(t\right)=3t^{2}-66t+216=0\iff t=18\lor t=4$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(0\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(4\right)=400$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(18\right)=-972$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(24\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La maxima distancia es 
+\begin_inset Formula $972m$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $400m+400m+972m+972m=2744m$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\left(t\right)=6t-66=0\iff t=11$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $v\left(0\right)=-66$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v\left(11\right)=-146$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v\left(24\right)=360$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La velocidad maxima es 
+\begin_inset Formula $360m/s$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Dos moviles pasan simultaneamente, con movimiento rectilineo y uniforme
+ por dos posiciones A y B distantes entre si 3km, con velocidades de 54
+ km/h y 36 km/h respectivamente, paralelas al segmento AB y del mismo sentido.
+ Hallar analitica y graficamente la posicion y el instante de encuentro.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $a_{A}\left(t\right)=a_{B}\left(t\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{A}\left(t\right)=v_{0_{A}}=54$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{B}\left(t\right)=v_{0_{B}}=36$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{A}\left(t\right)=54t+x_{0_{A}}=54t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{B}\left(t\right)=36t+x_{0_{B}}=36t+3$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}\left(t\right)-x_{B}\left(t\right)=0\iff54t-36t-3=0\iff t=1/6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se encuentran a 
+\begin_inset Formula $x_{A}\left(1/6\right)=9km$
+\end_inset
+
+ de la posicion inicial de A luego de 10 minutos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dos moviles pasan simultaneamente, con movimiento rectilineo uniforme por
+ dos posiciones A y B distantes entre si 6km, con velocidades de 36 km/h
+ y 72 km/h respectivamente, paralelas al segmento AB y de sentidos opuestos.
+ Hallar analitica y graficamente la posicion y el instante de encuentro.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $a_{A}\left(t\right)=a_{B}\left(t\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{A}\left(t\right)=v_{0_{A}}=36$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{B}\left(t\right)=v_{0_{B}}=-72$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{A}\left(t\right)=36t+x_{0_{A}}=36t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{x_{B}\left(t\right)=-72t+x_{0_{B}}=-72t+6}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{A}\left(t\right)-x_{B}\left(t\right)=0\iff36t+72t-6=0\iff t=1/18$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se encuentran a 
+\begin_inset Formula $x_{A}\left(1/18\right)=2km$
+\end_inset
+
+ de la posicion inicial de A luego de 
+\begin_inset Formula $1/18$
+\end_inset
+
+ horas.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dos moviles parten simultaneamente con MRU en sentidos opuestos de dos puntos
+ A y B ubicados a 100m uno del otro.
+ El movil que parte de A tiene una velocidad cuyo modulo es 10m/s y el que
+ parte de B, 40 m/s.
+ Calcular la posicion y el instante en que se encuentran y representar graficame
+nte la posicion en funcion del tiempo para ambos moviles.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dos particulas A y B se mueven con velocidad constante sobre un mismo eje
+ OX en sentido contrario de manera que en 
+\begin_inset Formula $t=0$
+\end_inset
+
+ cuando B pasa por Q su velocidad es 
+\begin_inset Formula $vB\left(0\right)=5m/s$
+\end_inset
+
+, A pasa por 
+\begin_inset Formula $P$
+\end_inset
+
+ con velocidad 
+\begin_inset Formula $vA\left(0\right)=6m/s$
+\end_inset
+
+.
+ La distancia entre los puntos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ es 142m.
+ Determine las desaceleraciones constantes que deben aplicar ambas particulas
+ para que se detengan simultaneamente justo antes de chocar.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $a_{A}\left(t\right)=k_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{B}\left(t\right)=k_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{A}\left(t\right)=v_{0_{A}}+k_{1}t=6+k_{1}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{B}\left(t\right)=v_{0_{B}}+k_{2}t=-5+k_{2}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{x_{A}\left(t\right)=x_{0_{A}}+6t+\frac{1}{2}k_{1}t^{2}=6t+\frac{1}{2}k_{1}t^{2}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{x_{B}\left(t\right)=x_{0_{B}}-5t+\frac{1}{2}k_{2}t^{2}=142-5t+\frac{1}{2}k_{2}t^{2}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Buscamos 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+ tales que para algun tiempo 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ resulten 
+\begin_inset Formula $\text{\ensuremath{x_{A}\left(\alpha\right)=x_{B}\left(\alpha\right)}}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{A}\left(\alpha\right)=v_{B}\left(\alpha\right)=0$
+\end_inset
+
+.
+ Por un lado tenemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{\ensuremath{x_{A}\left(\alpha\right)=x_{B}\left(\alpha\right)}}\iff6\alpha+\frac{1}{2}k_{1}\alpha^{2}-142+5\alpha-\frac{1}{2}k_{2}\alpha^{2}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+y por el otro:
+\begin_inset Formula 
+\[
+6+k_{1}\alpha=0\iff\boxed{k_{1}\alpha=-6}\land-5+k_{2}\alpha=0\iff\boxed{k_{2}\alpha=5}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Reemplazando obtenemos: 
+\begin_inset Formula $11\alpha-142-\frac{6}{2}\alpha-\frac{5}{2}\alpha=0\Rightarrow\alpha=\frac{284}{11}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Luego: 
+\begin_inset Formula $k_{1}=-\frac{33}{142}$
+\end_inset
+
+ y 
+\begin_inset Formula $k_{2}=\frac{55}{284}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hallar a que velocidad hay que realizar un tiro parabolico para que llegue
+ a una altura maxima de 100m si el angulo de tiro es de 30.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{a}\left(t\right)=\left(a_{x}\left(t\right),a_{y}\left(t\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{x}\left(t\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{y}\left(t\right)=-g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{v}\left(t\right)=\left(v_{x}\left(t\right),v_{y}\left(t\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{x}\left(t\right)=v_{0x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{y}\left(t\right)=v_{0y}-gt$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v\left(t\right)=\sqrt{v_{0x}^{2}+\left(v_{0y}-gt\right)^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{p}\left(t\right)=\left(x\left(t\right),y\left(t\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\left(t\right)=v_{0x}t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y\left(t\right)=v_{0y}t-\frac{1}{2}gt^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\alpha/v_{y}\left(\alpha\right)=0\iff v_{0y}=g\alpha\iff\alpha=v_{0y}/g$
+\end_inset
+
+, luego en dicho tiempo la altura sera maxima.
+\end_layout
+
+\begin_layout Standard
+Ahora: 
+\begin_inset Formula $100=y\left(\alpha\right)=y\left(v_{0y}/g\right)=\frac{v_{0y}^{2}}{g}-\frac{1}{2}\frac{v_{0y}^{2}}{g}=\frac{1}{2}\frac{v_{0y}^{2}}{g}$
+\end_inset
+
+ de donde 
+\begin_inset Formula $\text{\ensuremath{v_{0y}=\sqrt{200g}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ademas 
+\begin_inset Formula $v_{0x}=v\left(0\right)\cos\left(30\right)\iff v_{0x}=\sqrt{v_{0x}^{2}+200g}\cos\left(30\right)$
+\end_inset
+
+ de donde 
+\begin_inset Formula $v_{0x}^{2}=\left(v_{0x}^{2}+200g\right)\cos\left(30\right)^{2}\iff v_{0x}^{2}\left[1-\cos\left(30\right)^{2}\right]=200g\cos\left(30\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finalmente 
+\begin_inset Formula $v_{0x}=\frac{\sqrt{200g}\cos\left(30\right)}{\sin\left(30\right)}=\sqrt{200g}\cot\left(\pi/6\right)$
+\end_inset
+
+.
+ En resumen:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{0x}\approx76,68$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{0y}\approx44,27$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{0}\approx88,54$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hallar a que angulo 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ hay que realizar un tiro parabolico para que el alcance y la altura maxima
+ sean iguales.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $\alpha\neq0/y\left(\alpha\right)=0$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta/v_{y}\left(\beta\right)=0$
+\end_inset
+
+, luego el alcance sera 
+\begin_inset Formula $x\left(\alpha\right)$
+\end_inset
+
+ y la altura maxima 
+\begin_inset Formula $y\left(\beta\right)$
+\end_inset
+
+ de donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{0=v_{0y}\alpha-\frac{1}{2}g\alpha^{2}=\alpha\left(v_{0y}-\frac{1}{2}g\alpha\right)\iff0=v_{0y}-\frac{1}{2}g\alpha\iff\alpha=2v_{0y}/g}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0=v_{0y}-g\beta\iff\beta=v_{0y}/g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Buscamos que 
+\begin_inset Formula $x\left(\alpha\right)=y\left(\beta\right)$
+\end_inset
+
+, es decir: 
+\begin_inset Formula 
+\[
+\frac{2v_{0y}v_{0x}}{g}=\frac{v_{0y}^{2}}{g}-\frac{1}{2}\frac{v_{0y}^{2}}{g}=\frac{1}{2}\frac{v_{0y}^{2}}{g}\iff v_{0y}v_{0x}=v_{0y}^{2}\iff v_{0x}=v_{0y}
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $\text{\ensuremath{v\left(0\right)\cos\left(\gamma\right)=v\left(0\right)\sin\left(\gamma\right)\iff\cos\left(\gamma\right)=\sin\left(\gamma\right)\iff\gamma=45}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Desde el origen de un sistema de coordenadas se lanza una particula con
+ velocidad v0 formando un angulo de 37 con la horizontal y choca al cabo
+ de 3s con una pared en el punto 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+.
+ Si se cambia el angulo de lanzamiento a 53 con la horizontal, manteniendo
+ la misma velocidad de lanzamiento v0, la particula impacta en la pared
+ en el punto 
+\begin_inset Formula $\left(x,y+7\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determinar el tiempo que demora el proyectil lanzado a 53 sobre la horizontal
+ en llegar a la pared.
+\end_layout
+
+\begin_layout Enumerate
+Determine la velocidad de lanzamiento de la particula.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Desde una altura de 20m, con respecto al eje X de un sistema de coordenadas
+ ubicado en Tierra, se lanza una particula A con una velocidad de 50m/s
+ y formando un angulo de 30 con la horizontal.
+ Simultaneamente y desde la posicion X=200m se dispara verticalmente hacia
+ arriba un proyectil B de modo que cuando la particula A llega a Tierra,
+ el proyectil B esta en su altura maxima.
+ Calcular:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El tiempo transcurrido para que la distancia que separa A de B sea minima.
+\end_layout
+
+\begin_layout Enumerate
+La velocidad relativa de A respecto a B en m/s.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hallar la aceleracion de un esquiador que se desliza por la ladera de una
+ colina inclinada 30 con la horizontal, con rozamiento despreciable.
+ ¿Cual sera la inclinacion de la pista, cuando su aceleracion sea 8m/s?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sobre el esquiador actuan dos fuerzas: su peso y la normal.
+ Ubicando el eje y en la direccion de la fuerza normal obtenemos:
+\end_layout
+
+\begin_layout Itemize
+Eje y: La sumatoria de las fuerzas es 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Eje x: 
+\begin_inset Formula $g\sin\left(30\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La aceleracion es aproximadamente 
+\begin_inset Formula $4.9m/s^{2}$
+\end_inset
+
+.
+ Si la aceleracion es 
+\begin_inset Formula $8m/s^{2}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $8=g\sin\left(\alpha\right)\iff\alpha=\arcsin\left(8/g\right)\approx54,72$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Desde el piso, se lanza hacia arriba una pelota con una velocidad de 40m/s.
+ Calcule el tiempo transcurrido entre los dos instantes en que su velocidad
+ tiene una magnitud de 2,5m/s y la distancia respecto al piso que se encuentra
+ le pelota en ese instante.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La longitud de un resorte en reposo es 20cm.
+ Sabiendo que su constante elastica es 50N/m, hallar su nueva longitud si
+ se le estira aplicando una fuerza de 2,5N.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2,5=50\delta\iff\delta=0,05$
+\end_inset
+
+.
+ Su nueva longitud es 
+\begin_inset Formula $25cm$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un resorte vertical se estira 10cm cuando se pone una masa de 1,5kg.
+ Calcule:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Constante del resorte.
+\end_layout
+
+\begin_layout Enumerate
+Fuerza que se debe hacer para que se estire 15cm.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1,5g=k\cdot0,1\iff k=147$
+\end_inset
+
+.
+ La constante del resorte es 
+\begin_inset Formula $147N/m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F=147\cdot0,15=22,05$
+\end_inset
+
+.
+ La fuerza necesaria es de 
+\begin_inset Formula $22,05N$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dos resortes S1 y S2 de longitudes iguales a 0,5m pero con diferentes constantes
+ elasticas K1 = 50 N/m y K2 = 100 N/m, estan unidos a dos soportes A y B,
+ que se encuentran a la misma altura.
+ Un cuerpo C de masa 2,5 kg, esta entre los dos resortes y es estirado hacia
+ abajo hasta que la longitud de los resortes se duplica.
+ ¿Cual es la aceleracion que adquiere el cuerpo C cuando se deja libre?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Sobre el cuerpo 
+\begin_inset Formula $C$
+\end_inset
+
+ actuan tres fuerzas: 
+\begin_inset Formula $F_{A}$
+\end_inset
+
+, 
+\begin_inset Formula $F_{B}$
+\end_inset
+
+ y 
+\begin_inset Formula $P$
+\end_inset
+
+; todas sobre el eje y, 
+\begin_inset Formula $P$
+\end_inset
+
+ hacia abajo y las restantes hacia arriba.
+ En total:
+\begin_inset Formula 
+\[
+K_{1}0,5+K_{2}0,5-2,5g=50,5
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $F=ma$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $50,5=2,5a\iff a=20,2$
+\end_inset
+
+.
+ Por lo tanto la aceleracion es de 
+\begin_inset Formula $20,2m/s^{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una particula de masa 1kg se mueve a lo largo del eje X bajo la accion de
+ una fuerza cuya magnitud es F = 42 sin 8t, donde F esta medido en N y t
+ en s.
+ Cuando t = 0s la velocidad de la particula es 40m/s.
+ Calcule:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+La velocidad de la particula cuando t = 0,2s.
+\end_layout
+
+\begin_layout Enumerate
+Si en t = 0s, x = 0m, determine la posicion de la particula en t = 0,2s.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sobre un cuerpo de masa 2kg que apoya sobre una superficie horizontal sin
+ rozamiento, se le aplica una fuerza F = 10N, que forma un angulo de 60
+ respecto a la masa.
+ Determine la aceleracion del cuerpo que apoya sobre la superficie respecto
+ a un sistema referencial inercial.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un hombre cuya masa es de 80kg se pesa en un ascensor.
+ ¿Cuanto indicara la balanaza en los siguientes casos?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El ascensor sube con velocidad constante de 2m/s.
+\end_layout
+
+\begin_layout Enumerate
+El ascensor baja con velocidad constante de 2m/s.
+\end_layout
+
+\begin_layout Enumerate
+El ascensor empieza a subir aumentando su velocida a razon de 2m/s por segundo.
+\end_layout
+
+\begin_layout Enumerate
+El ascensor sube frenando con una aceleracion de 2m/s.
+\end_layout
+
+\begin_layout Enumerate
+El ascensor empieza a bajar con una aceleracion de 2m/s.
+\end_layout
+
+\begin_layout Enumerate
+El ascensor baja frenando con una aceleracion de 2m/s.
+\end_layout
+
+\begin_layout Enumerate
+Se corta la soga del ascensor.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El paracaidista junto con el paracaidas tienen una masa de 120kg.
+ Si la fuerza de rozamiento con el aire es de 1100N.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Esquematizar las fuerzas aplicadas sobre el paracaidista.
+\end_layout
+
+\begin_layout Enumerate
+¿Cual sera la aceleracion del paracaidista?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuanto deberia valer la fuerza de rozamiento con el aire para que el paracaidas
+ caiga con velocidad constante?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
