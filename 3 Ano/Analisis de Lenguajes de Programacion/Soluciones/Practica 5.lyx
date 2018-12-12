@@ -1,0 +1,3264 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Functores
+\end_layout
+
+\begin_layout Enumerate
+Demostrar que los siguientes tipos de datos son functores.
+ Es decir, dar su instancia de la clase Functor correspondiente y probar
+ que se cumplen las leyes de los functores.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Pair a = P (a,a)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Tree a = Empty | Branch a (Tree a) (Tree a)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data GenTree a = Gen a [GenTree a]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Cont a = C ((a -> Int)  Int)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\normalsize},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Functor Pair where
+\end_layout
+
+\begin_layout Plain Layout
+
+	fmap g (P (x,x)) = P (g x, g x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\normalsize},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap id (P (x,x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+P (id x, id x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+P(x,x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id (P (x,x))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap (f.g) (P (x,x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+P ((f.g) x, (f.g) x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+P (f (g x), f (g x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap f (P (g x, g x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\normalsize},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap f (fmap g (P (x,x)))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Functor Tree where
+\end_layout
+
+\begin_layout Plain Layout
+
+	fmap g Empty = Empty
+\end_layout
+
+\begin_layout Plain Layout
+
+	fmap g (Branch x l r) = Branch (g x) (fmap g l) (fmap g r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap id Empty
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Empty
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle de.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id Empty
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\normalsize},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap id (Branch x l r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Branch (id x) (fmap id l) (fmap id r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle H.I\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Branch (id x) (id l) (id r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Branch x l r
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id (Branch x l r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap (f.g) Empty
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Empty
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap g Empty
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle fmap\text{ }g\text{ }Empty\equiv Empty+def.fmap.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap f (fmap g Empty)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap (f.g) (Branch x l r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Branch ((f.g) x) (fmap (f.g) l) (fmap (f.g) r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Branch (f (g x)) (fmap (f.g) l) (fmap (f.g) r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Branch (f (g x)) (fmap f (fmap g l)) (fmap f (fmap g r))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap f (Branch (g x) (fmap g l) (fmap g r))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap f (fmap g (Branch x l r))
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que las siguientes instancias no son correctas (no se cumplen las
+ leyes de los functores).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell,fontfamily=tt,fontsize={\small},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Func a = Func (a -> a)
+\end_layout
+
+\begin_layout Plain Layout
+
+	instance Functor Func where
+\end_layout
+
+\begin_layout Plain Layout
+
+		fmap g (Func h) = Func id
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell,fontfamily=tt,fontsize={\small},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Br b a = B b (a,a)
+\end_layout
+
+\begin_layout Plain Layout
+
+	instance Functor (Br b) where
+\end_layout
+
+\begin_layout Plain Layout
+
+		fmap f (B x (y,z)) = B x (f z, f y)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap id (Func f)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Func id
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\not\equiv$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Func f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id (Func f)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap id (B x (y,z))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+B x (id z, id y)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+B x (z,y)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\not\equiv$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+B x (y,z)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id (B x (y,z))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Monadas como substitucion
+\end_layout
+
+\begin_layout Enumerate-Resume
+Consideremos el siguiente (AST de un) lenguaje:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,fontfamily=tt,fontsize={\small},breaklines=true,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data A a = Num Int | Sum (A a) (A a) | Mul (A a) (A a)
+\end_layout
+
+\begin_layout Plain Layout
+
+         | Res (A a) (A a) | Var a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+para el cual implementamos sustitucion simultanea:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,fontfamily=tt,fontsize={\small},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(>>=) :: A a -> (a -> A b) -> A b
+\end_layout
+
+\begin_layout Plain Layout
+
+Num n >>= v = Num n
+\end_layout
+
+\begin_layout Plain Layout
+
+Sum t u >>= v = Sum (t >>= v) (u >>= v)
+\end_layout
+
+\begin_layout Plain Layout
+
+Mul t u >>= v = Mul (t >>= v) (u >>= v)
+\end_layout
+
+\begin_layout Plain Layout
+
+Res t u >>= v = Res (t >>= v) (u >>= v)
+\end_layout
+
+\begin_layout Plain Layout
+
+Var a >>= v = v a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dados los terminos 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+x = Var 
+\begin_inset Quotes cld
+\end_inset
+
+x
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+y = Var 
+\begin_inset Quotes cld
+\end_inset
+
+y
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+z = Var 
+\begin_inset Quotes cld
+\end_inset
+
+z
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, dar el tipo y definicion de 
+\begin_inset Formula $g$
+\end_inset
+
+ y 
+\begin_inset Formula $h$
+\end_inset
+
+ tal que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,fontfamily=tt,fontsize={\small},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Sum x (Mul y z) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.g\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Sum (Var 1)(Mul (Res (Var 3) (Var 1)) (Mul (Var 2) (Var 2)))
+\end_layout
+
+\end_inset
+
+y
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,fontfamily=tt,fontsize={\small},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Sum x (Mul y z) >>= h
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.h\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Sum (Var 1) (Res (Var 2) (Var 3))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+¿Cuantas soluciones existen en cada caso?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+g :: String -> A Int
+\end_layout
+
+\begin_layout Plain Layout
+
+g 
+\begin_inset Quotes cld
+\end_inset
+
+x
+\begin_inset Quotes crd
+\end_inset
+
+ = Var 1
+\end_layout
+
+\begin_layout Plain Layout
+
+g 
+\begin_inset Quotes cld
+\end_inset
+
+y
+\begin_inset Quotes crd
+\end_inset
+
+ = Res (Var 3) (Var 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+g 
+\begin_inset Quotes cld
+\end_inset
+
+z
+\begin_inset Quotes crd
+\end_inset
+
+ = Mul (Var 2) (Var 2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+No existen soluciones.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Dado el tipo de datos
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,fontfamily=tt,fontsize={\small},tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data BT a = IfBoton (Bool -> BT a)
+\end_layout
+
+\begin_layout Plain Layout
+
+          | Beep (BT a)
+\end_layout
+
+\begin_layout Plain Layout
+
+          | Var a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+IfBoton
+\end_layout
+
+\end_inset
+
+ detecta la pulsacion de un boton y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Beep
+\end_layout
+
+\end_inset
+
+ produce un beep, escribir un programa que haga un beep cada dos pulsaciones
+ de boton.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+beep2 = beep2' 0 where
+\end_layout
+
+\begin_layout Plain Layout
+
+  beep2' 0 = IfBoton (
+\backslash
+b -> if b then beep2' 1 else beep2)
+\end_layout
+
+\begin_layout Plain Layout
+
+  beep2' 1 = IfBoton (
+\backslash
+b -> if b
+\end_layout
+
+\begin_layout Plain Layout
+
+                            then (Beep $ Var ()) >> beep2
+\end_layout
+
+\begin_layout Plain Layout
+
+                            else beep2' 1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+beep2 = Var 0 >>= g where
+\end_layout
+
+\begin_layout Plain Layout
+
+	g 0 = IfBoton (
+\backslash
+b -> if b then Var 1 >>= g else Var 0 >>= g)
+\end_layout
+
+\begin_layout Plain Layout
+
+	g 1 = IfBoton (
+\backslash
+b -> if b then Beep (Var 2) >>= g else Var 1 >>= g)
+\end_layout
+
+\begin_layout Plain Layout
+
+	g 2 = Var 0 >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Definimos el AST de un lenguaje entrada/salida de la siguiente manera:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data ES = Read (Char -> ES) | Write Char (ES)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si el lenguaje lee un caracter de entrada y en base a eso decide como seguir
+ o escribe un caracter y continua la ejecucion ¿Que hacen los siguientes
+ programas?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+t1 = Read (
+\backslash
+c -> Write c (Write c t1))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+t2 = Read (
+\backslash
+c -> Write 
+\begin_inset Quotes cld
+\end_inset
+
+(
+\begin_inset Quotes cld
+\end_inset
+
+ (Write c (Write 
+\begin_inset Quotes cld
+\end_inset
+
+)
+\begin_inset Quotes crd
+\end_inset
+
+ t2)))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+t3 = Write 
+\begin_inset Quotes cld
+\end_inset
+
+(
+\begin_inset Quotes cld
+\end_inset
+
+ (Read (
+\backslash
+c -> Write c (Write 
+\begin_inset Quotes cld
+\end_inset
+
+)
+\begin_inset Quotes crd
+\end_inset
+
+ t3)))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+t4 = Read (
+\backslash
+_ -> t4)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Cada caracter leido, es escrito dos veces en pantalla.
+\end_layout
+
+\begin_layout Enumerate
+Cada caracter leido, es escrito entre parentesis.
+\end_layout
+
+\begin_layout Enumerate
+Escribe en pantalla 
+\begin_inset Quotes cld
+\end_inset
+
+(
+\begin_inset Quotes cld
+\end_inset
+
+, lee un caracter y lo imprime, y antes de volver a empezar escribe 
+\begin_inset Quotes cld
+\end_inset
+
+)
+\begin_inset Quotes crd
+\end_inset
+
+ en pantalla.
+\end_layout
+
+\begin_layout Enumerate
+No imprime los caracteres leidos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Teniendo en cuenta los siguientes tipos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data ES a = Read (Char -> ES a) | Write Char (ES a) | Var a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Escribir un programa:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+writeChar :: Char -> ES ()
+\end_layout
+
+\end_inset
+
+ que escriba su argumento y finalice con una variable 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+()
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+readChar :: ES Char
+\end_layout
+
+\end_inset
+
+ que lea un caracter y finalice con la variable cuyo nombre es el caracter
+ leido.
+\end_layout
+
+\begin_layout Enumerate
+Usando 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+writeChar
+\end_layout
+
+\end_inset
+
+, escribir un programa 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+writeStr :: String -> ES ()
+\end_layout
+
+\end_inset
+
+ que imprima la cadena que se pasa como argumento.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+writeChar c = Write c (Var ())
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+readChar = Read (
+\backslash
+c -> Var c)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+writeStr [] = Var ()
+\end_layout
+
+\begin_layout Plain Layout
+
+writeStr (x:xs) = writeChar x >> writeStr xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+Dada la siguiente implementacion de la sustitucion para terminos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(>>=) :: ES a -> (a -> ES b) -> ES b
+\end_layout
+
+\begin_layout Plain Layout
+
+Read k >>= v = Read (
+\backslash
+c -> k c >>= v)
+\end_layout
+
+\begin_layout Plain Layout
+
+Write c t >>= v = Write c (t >>= v)
+\end_layout
+
+\begin_layout Plain Layout
+
+Var a >>= v = v a
+\end_layout
+
+\end_inset
+
+¿Que hace el siguiente programa?
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f :: ES String
+\end_layout
+
+\begin_layout Plain Layout
+
+f = readChar >>= g where g '
+\backslash
+n' = Var []
+\end_layout
+
+\begin_layout Plain Layout
+
+                         g c = f >>= 
+\backslash
+xs -> Var (c:xs)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+Lee caracteres (sin imprimirlos) hasta presionar enter, y el estado terminal
+ es la cadena leida.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Uso de Monadas y notacion do
+\end_layout
+
+\begin_layout Enumerate-Resume
+Probar que toda monada es un functor, es decir, proveer una instacia
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monad m => Functor m where
+\end_layout
+
+\begin_layout Plain Layout
+
+	fmap...
+\end_layout
+
+\end_inset
+
+y probar que las leyes de los functores se cumplen para su definicion de
+ fmap.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monad m => Functor m where
+\end_layout
+
+\begin_layout Plain Layout
+
+	fmap f m = m >>= (return.f)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap id m
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= (return.id)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle f\circ id\equiv f\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\left\langle monad.law.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id m
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap (f.g) m
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= (return.(f.g))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle \eta-redex+def.\circ+def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= (
+\backslash
+x -> return (f (g x)))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= (
+\backslash
+x -> (return.f) (g x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle monad.law.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= (
+\backslash
+x -> return (g x) >>= (return.f))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= (
+\backslash
+x -> (return.g) x >>= (return.f))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle monad.law.3\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+m >>= (return.g) >>= (return.f)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap f (m >>= (return.g))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.fmap\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fmap f (fmap g m)
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Definir las siguientes funciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate-Resume
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+mapM :: Monad m => (a -> m b) -> [a] -> m [b]
+\end_layout
+
+\end_inset
+
+, tal que 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+mapM f xs
+\end_layout
+
+\end_inset
+
+ aplique la funcion monadica 
+\begin_inset Formula $f$
+\end_inset
+
+ a cada elemento de la lista 
+\begin_inset Formula $xs$
+\end_inset
+
+, retornando la lista de resultados encapsulada en la monada.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+foldM :: Monad m => (a -> b -> m a) -> a -> [b] -> m a
+\end_layout
+
+\end_inset
+
+, analogamente a 
+\begin_inset Formula $foldl$
+\end_inset
+
+ para listas, pero con su resultado encapsulado en la monada.
+ Ejemplo:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+foldM f e1 [x1, x2, x3] = do e2 <- f e1 x1
+\end_layout
+
+\begin_layout Plain Layout
+
+                             e3 <- f e2 x2
+\end_layout
+
+\begin_layout Plain Layout
+
+                             f e3 x3
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mapM _ [] = return []
+\end_layout
+
+\begin_layout Plain Layout
+
+mapM f (x:xs) = do x' <- f x
+\end_layout
+
+\begin_layout Plain Layout
+
+                   xs' <- mapM f xs
+\end_layout
+
+\begin_layout Plain Layout
+
+                   return $ x':xs'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+foldM _ e1 [] = return e1
+\end_layout
+
+\begin_layout Plain Layout
+
+foldM f e1 (x:xs) = do e2 <- f e1 x
+\end_layout
+
+\begin_layout Plain Layout
+
+                       foldM f e2 xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Escribir el siguiente fragmento de programa monadico usando notacion do:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(m >>= 
+\backslash
+x -> h x) >>= 
+\backslash
+y -> f y >>= 
+\backslash
+z -> return (g z)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+do x <- m
+\end_layout
+
+\begin_layout Plain Layout
+
+   y <- h x
+\end_layout
+
+\begin_layout Plain Layout
+
+   z <- f y
+\end_layout
+
+\begin_layout Plain Layout
+
+   return (g z)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Escribir el siguiente fragmento de programa en terminos de 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+>>=
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+return
+\end_layout
+
+\end_inset
+
+:
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+do x <- (do z <- y
+\end_layout
+
+\begin_layout Plain Layout
+
+            w <- f z
+\end_layout
+
+\begin_layout Plain Layout
+
+            return (g w z))
+\end_layout
+
+\begin_layout Plain Layout
+
+   y <- h x 3
+\end_layout
+
+\begin_layout Plain Layout
+
+   if y then return 7
+\end_layout
+
+\begin_layout Plain Layout
+
+        else do z <- h x 2
+\end_layout
+
+\begin_layout Plain Layout
+
+                return (k z)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(y >>= 
+\backslash
+z -> (f z >>= 
+\backslash
+w -> return $ g w z)) >>=
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+x -> (h x 3 >>= 
+\backslash
+y -> if y
+\end_layout
+
+\begin_layout Plain Layout
+
+                       then return 7
+\end_layout
+
+\begin_layout Plain Layout
+
+                       else h x 2 >>= 
+\backslash
+z -> return $ k z)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Escribir las leyes de las monadas usando la notacion do.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+do { x <- return a; f x }
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=TeX,tabsize=2"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+f a
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+do { x <- m; return x }
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=TeX,tabsize=2"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+m
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+do x <- m
+\end_layout
+
+\begin_layout Plain Layout
+
+   y <- f x
+\end_layout
+
+\begin_layout Plain Layout
+
+   g y
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+do x <- m
+\end_layout
+
+\begin_layout Plain Layout
+
+   do y <- f x
+\end_layout
+
+\begin_layout Plain Layout
+
+      g y
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+I/O Monadico
+\end_layout
+
+\begin_layout Enumerate-Resume
+Escribir y 
+\emph on
+compilar
+\emph default
+ un programa (usando ghc en lugar de ghci) que imprima en pantalla la cadena
+ 
+\begin_inset Quotes cld
+\end_inset
+
+Hola mundo!
+\begin_inset Quotes crd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+main = putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+Hola mundo!
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Escribir un programa interactivo que implemente un juego en el que hay que
+ adivinar un numero secreto predefinido.
+ El jugador ingresa por teclado un numero y la computadora le dice si el
+ numero ingresado es menor o mayor que el numero secreto o si el jugador
+ adivino, en cuyo caso el juego termina.
+ Ayuda: para convertir una String en Int pude sar la funcion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+read :: String -> Int
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import System.IO
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+getPass = do hSetEcho stdin False
+\end_layout
+
+\begin_layout Plain Layout
+
+             pass <- getPass'
+\end_layout
+
+\begin_layout Plain Layout
+
+             hSetEcho stdin True
+\end_layout
+
+\begin_layout Plain Layout
+
+             return pass
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+getPass' = do x <- getChar
+\end_layout
+
+\begin_layout Plain Layout
+
+              if x == '
+\backslash
+n' then do putChar x
+\end_layout
+
+\begin_layout Plain Layout
+
+                                   return []
+\end_layout
+
+\begin_layout Plain Layout
+
+                           else do putChar '*'
+\end_layout
+
+\begin_layout Plain Layout
+
+                                   xs <- getPass'
+\end_layout
+
+\begin_layout Plain Layout
+
+                                   return (x:xs)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+game :: Int -> Int -> IO ()
+\end_layout
+
+\begin_layout Plain Layout
+
+game n 0 = do putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+El juego ha finalizado.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+game n t = do putStrLn $ 
+\begin_inset Quotes cld
+\end_inset
+
+Intentos restantes: 
+\begin_inset Quotes cld
+\end_inset
+
+ ++ show t
+\end_layout
+
+\begin_layout Plain Layout
+
+              putStr 
+\begin_inset Quotes cld
+\end_inset
+
+Ingrese un numero: 
+\begin_inset Quotes cld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+              x <- getLine
+\end_layout
+
+\begin_layout Plain Layout
+
+              guess n t (read x)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+guess n t x | x < n = do putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+Incorrecto.
+ El numero es mas grande.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                         game n (t - 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+            | x > n = do putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+Incorrecto.
+ El numero es mas chico.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                         game n (t - 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+            | otherwise = do putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+Correcto!
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+main = do putStr 
+\begin_inset Quotes cld
+\end_inset
+
+Ingrese el numero secreto: 
+\begin_inset Quotes cld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+          n <- getPass
+\end_layout
+
+\begin_layout Plain Layout
+
+          putStr 
+\begin_inset Quotes cld
+\end_inset
+
+Ingrese la cantidad de intentos: 
+\begin_inset Quotes cld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+          t <- getLine
+\end_layout
+
+\begin_layout Plain Layout
+
+          game (read n) (read t)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+El juego Nim consiste en un tablero de 5 filas numeradas de asteriscos.
+ El tablero inicial es el siguiente:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate-Resume
+*****
+\end_layout
+
+\begin_layout Enumerate-Resume
+****
+\end_layout
+
+\begin_layout Enumerate-Resume
+***
+\end_layout
+
+\begin_layout Enumerate-Resume
+**
+\end_layout
+
+\begin_layout Enumerate-Resume
+*
+\end_layout
+
+\begin_layout Standard
+Dos jugadores se turnan para sacar una o mas estrellas de alguna fila.
+ El ganador es el jugador que saca la ultima estrella.
+ Implementar el juego en Haskell.
+ Ayuda: para convertir una String en Int puede usar la funcion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+read :: String -> Int
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell,tabsize=2"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+printB []     = do putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+printB (x:xs) = do putStrLn x
+\end_layout
+
+\begin_layout Plain Layout
+
+                   printB xs
+\end_layout
+
+\begin_layout Plain Layout
+
+valid 1 (x:xs) = (not.null) x
+\end_layout
+
+\begin_layout Plain Layout
+
+valid n b@(x:xs)
+\end_layout
+
+\begin_layout Plain Layout
+
+    | n <= 0 || n > length b = False
+\end_layout
+
+\begin_layout Plain Layout
+
+    | otherwise = valid (n-1) xs
+\end_layout
+
+\begin_layout Plain Layout
+
+play 1 (xs:xss) = (tail xs):xss
+\end_layout
+
+\begin_layout Plain Layout
+
+play n (xs:xss) = xs : (play (n-1) xss)
+\end_layout
+
+\begin_layout Plain Layout
+
+winner [] = True
+\end_layout
+
+\begin_layout Plain Layout
+
+winner (xs:xss) = (null xs) && (winner xss)
+\end_layout
+
+\begin_layout Plain Layout
+
+ask player board = do printB board
+\end_layout
+
+\begin_layout Plain Layout
+
+                      putStr $ 
+\begin_inset Quotes cld
+\end_inset
+
+Jugador 
+\begin_inset Quotes cld
+\end_inset
+
+ ++
+\end_layout
+
+\begin_layout Plain Layout
+
+                               (show $ player+1) ++
+\end_layout
+
+\begin_layout Plain Layout
+
+                               
+\begin_inset Quotes cld
+\end_inset
+
+, ingrese su jugada: 
+\begin_inset Quotes cld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                      c <- getLine
+\end_layout
+
+\begin_layout Plain Layout
+
+                      if valid (read c) board then
+\end_layout
+
+\begin_layout Plain Layout
+
+                         let newboard = play (read c) board
+\end_layout
+
+\begin_layout Plain Layout
+
+                         in  if winner newboard
+\end_layout
+
+\begin_layout Plain Layout
+
+                             then putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+Usted ha ganado.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                             else ask (mod (player+1) 2) newboard
+\end_layout
+
+\begin_layout Plain Layout
+
+                      else do putStrLn 
+\begin_inset Quotes cld
+\end_inset
+
+JUGADA INVALIDA!
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                              ask player board
+\end_layout
+
+\begin_layout Plain Layout
+
+main = ask 0 start [
+\begin_inset Quotes cld
+\end_inset
+
+*****
+\begin_inset Quotes crd
+\end_inset
+
+, 
+\begin_inset Quotes cld
+\end_inset
+
+****
+\begin_inset Quotes crd
+\end_inset
+
+, 
+\begin_inset Quotes cld
+\end_inset
+
+***
+\begin_inset Quotes crd
+\end_inset
+
+, 
+\begin_inset Quotes cld
+\end_inset
+
+**
+\begin_inset Quotes crd
+\end_inset
+
+, 
+\begin_inset Quotes cld
+\end_inset
+
+*
+\begin_inset Quotes crd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Un programa pasa todos los caracteres de un archivo de entrada a mayusculas
+ y los guarda en un archivo de salida.
+ Hacer un programa compilado que lo implemente tomando dos argumentos en
+ la linea de comandos, el nombre de un archivo de entrada y el nombre de
+ un archivo de salida.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

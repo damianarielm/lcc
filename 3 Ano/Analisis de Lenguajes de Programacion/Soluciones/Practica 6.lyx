@@ -1,0 +1,4481 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swiss
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Demostrar que los siguientes tipos son monadas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+newtype Id a = Id a
+\end_layout
+
+\begin_layout Plain Layout
+
+data Maybe a = Nothing | Just a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir:
+\end_layout
+
+\begin_layout Enumerate
+Dar la instancia de Monad para cada uno de ellos.
+\end_layout
+
+\begin_layout Enumerate
+Demostrar que para cada instancia valen las leyes de las monadas.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+return a = Id a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Id a >>= f = f a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+return a = Just a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nothing >>= f = Nothing
+\end_layout
+
+\begin_layout Plain Layout
+
+Just a >>= f = f a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return a >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Id a >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Id a >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return a
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Id a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(Id a >>= f) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(f a) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Id a >>= (
+\backslash
+x -> f x >>= g)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return a >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Just a >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nothing >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nothing
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Just a >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return a
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Just a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(Nothing >>= f) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nothing >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nothing
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nothing >>= (
+\backslash
+x -> f x >>= g)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(Just a >>= f) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f a >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Just a >>= (
+\backslash
+x -> f x >>= g)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Demostrar que el constructor de tipo [] (lista) es una monada.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monad [] where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x = [x]
+\end_layout
+
+\begin_layout Plain Layout
+
+  xs >>= f = concat $ map f xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return x >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[x] >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+concat $ map f [x]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.map\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+concat [f x]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.concat\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+xs >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+concat $ map return xs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+concat $ [xs]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.concat\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se desea modelar computaciones con un estado global 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Para esto se define el siguiente tipo de datos e instancia de monada:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+newtype State s a = St { runState :: s -> (a, s) }
+\end_layout
+
+\begin_layout Plain Layout
+
+instance Monad (State s) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x     = St (
+\backslash
+s -> (x, s))
+\end_layout
+
+\begin_layout Plain Layout
+
+  (St h) >>= f = St (
+\backslash
+s -> let (x, s') = h s
+\end_layout
+
+\begin_layout Plain Layout
+
+                           in runState (f x) s')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Probar que la instancia efectivamente define una monada.
+\end_layout
+
+\begin_layout Enumerate
+Definir operaciones 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+set :: s -> State s ()
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+get :: State s s
+\end_layout
+
+\end_inset
+
+ que permiten actualizar el estado y leerlo, respectivamente.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return x >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> (x, s)) >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> let (x, s') = (
+\backslash
+s -> (x, s)) s
+\end_layout
+
+\begin_layout Plain Layout
+
+          in runState (f x) s')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv_{\beta}$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> let (x, s') = (x, s)
+\end_layout
+
+\begin_layout Plain Layout
+
+          in runState (f x) s')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> runState (f x) s)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv_{\eta}$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (runState (f x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle St\circ Runstate\equiv id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(St h) >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> let (x, s') = h s
+\end_layout
+
+\begin_layout Plain Layout
+
+          in runState (return x) s')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> let (x, s') = h s
+\end_layout
+
+\begin_layout Plain Layout
+
+          in runState (St (
+\backslash
+s -> (x, s))) s')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.runState\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> let (x, s') = h s
+\end_layout
+
+\begin_layout Plain Layout
+
+          in (
+\backslash
+s -> (x, s)) s')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv_{\beta}$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> let (x, s') = h s
+\end_layout
+
+\begin_layout Plain Layout
+
+          in (x, s'))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St (
+\backslash
+s -> h s)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv_{\eta}$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+St h
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+set s = St (
+\backslash
+s' -> ((), s))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+get = St (
+\backslash
+s -> (s, s))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Dado el tipo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data Tree a = Leaf a | Branch (Tree a) (Tree a)
+\end_layout
+
+\end_inset
+
+ y su correspondiente instancia de Functor:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Functor Tree where
+\end_layout
+
+\begin_layout Plain Layout
+
+  fmap f (Leaf a)     = Leaf (f a)
+\end_layout
+
+\begin_layout Plain Layout
+
+  fmap f (Branch l r) = Branch (fmap f l) (fmap f r)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La funcion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+numTree :: Tree a -> Tree Int
+\end_layout
+
+\end_inset
+
+, permite numerar las hojas de un arbol de izquierda a derecha.
+ Definir la funcion auxiliar:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mapTreeNro :: (a -> Int -> (b, Int)) -> Tree a -> Int -> (Tree b, Int)
+\end_layout
+
+\end_inset
+
+de forma que la siguiente definicion de 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+numTree
+\end_layout
+
+\end_inset
+
+ sea correcta:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+numTree :: Tree a -> Tree Int
+\end_layout
+
+\begin_layout Plain Layout
+
+numTree t = fst (mapTreeNro update t 0) where update a n = (n, n+1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para generalizar el caso del item anterior, se puede pensar que en lugar
+ 
+\begin_inset Formula $Int$
+\end_inset
+
+ se lleva un estado de tipo 
+\begin_inset Formula $s$
+\end_inset
+
+, quedando una funcion con la forma:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mapTreeSt :: (a -> s -> (b, s)) -> Tree a -> s -> (Tree b, s)
+\end_layout
+
+\end_inset
+
+Esto conduce directamente a la utilizacion de la monada State s con la siguiente
+ funcion:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mapTreeM :: (a -> State s b) -> Tree a -> State s (Tree b)
+\end_layout
+
+\end_inset
+
+Definir con notacion do la funcion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+mapTreeM
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mapTreeNro f (Leaf a) n = let (b, i) = f a n
+\end_layout
+
+\begin_layout Plain Layout
+
+                          in (Leaf b, i)
+\end_layout
+
+\begin_layout Plain Layout
+
+mapTreeNro f (Branch l r) n = let (l', i) = mapTreeNro f l n
+\end_layout
+
+\begin_layout Plain Layout
+
+                                  (r', j) = mapTreeNro f r i
+\end_layout
+
+\begin_layout Plain Layout
+
+                              in (Branch l' r', j)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mapTreeM f (Leaf a) = do b <- f a
+\end_layout
+
+\begin_layout Plain Layout
+
+                         return $ Leaf b
+\end_layout
+
+\begin_layout Plain Layout
+
+mapTreeM f (Branch l r) = do l' <- mapTreeM f l
+\end_layout
+
+\begin_layout Plain Layout
+
+                             r' <- mapTreeM f r
+\end_layout
+
+\begin_layout Plain Layout
+
+                             return $ Branch l' r'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La clase Monoid clasifica los tipos que son monoides y esta definida de
+ la siguiente manera:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+class Monoid m where
+\end_layout
+
+\begin_layout Plain Layout
+
+  mempty  :: m
+\end_layout
+
+\begin_layout Plain Layout
+
+  mappend :: m -> m -> m
+\end_layout
+
+\end_inset
+
+Se requiere que las instancias hagan cumplir que mappend sea asociativa,
+ y que mempty sea un elemento neutro de mappend por izquierda y derecha.
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $String$
+\end_inset
+
+ es un monoide.
+\end_layout
+
+\begin_layout Enumerate
+Probar que el siguiente constructor de tipos es una monada, (asumiendo que
+ el parametro 
+\begin_inset Formula $w$
+\end_inset
+
+ es un monoide):
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+newtype Output w a = Out (a, w)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dar una instancia diferente de Monad para el mismo tipo.
+ Esto prueba que un mismo tipo de datos puede tener diferentes instancias
+ de monadas.
+\end_layout
+
+\begin_layout Enumerate
+Definir una operacion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+write :: Monoid w => w -> Output w ()
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Usando Output String, modificar el evaluador monadico basico de la teoria
+ para agregar una traza de cada operacion.
+ Por ejemplo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+> eval (Div (Con 14) (Con 2))
+\end_layout
+
+\begin_layout Plain Layout
+
+El termino (Con 14) tiene valor 14.
+\end_layout
+
+\begin_layout Plain Layout
+
+El termino (Con 2) tiene valor 2.
+\end_layout
+
+\begin_layout Plain Layout
+
+El termino (Div (Con 14) (Con 2)) tiene valor 7.
+\end_layout
+
+\begin_layout Plain Layout
+
+7.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monoid String where
+\end_layout
+
+\begin_layout Plain Layout
+
+  mempty            = []
+\end_layout
+
+\begin_layout Plain Layout
+
+  mappend mempty ys = ys
+\end_layout
+
+\begin_layout Plain Layout
+
+  mappend (x:xs) ys = x:(xs `mappend` ys)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mempty `mappend` xs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mappend\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+xs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mempty `mappend` mempty
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mappend\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mempty
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(x:xs) `mappend` mempty
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mappend\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x:(xs `mappend` mempty)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x:xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(mempty `mappend` ys) `mappend` zs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle monoid.law.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+ys `mappend` zs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle monoid.law.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mempty `mappend` (ys `mappend` zs)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+((x:xs) `mappend` ys) `mappend` zs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mappend\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(x: (xs `mappend` ys)) `mappend` zs
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mappend\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x: ((xs `mappend` ys) `mappend` zs)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x: (xs `mappend` (ys `mappend` zs))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mappend\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(x:xs) `mappend` (ys `mappend` zs))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monoid w => Monad (Output w) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x = Out (x, mempty)
+\end_layout
+
+\begin_layout Plain Layout
+
+  Out (a, w) >>= f = let Out (a' ,w') = (f a)
+\end_layout
+
+\begin_layout Plain Layout
+
+                     in Out (a', w `mappend` w')
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return x >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Out (x, mempty) >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a' ,w') = (f x)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a', mempty `mappend` w')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle monoid.law.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a' ,w') = (f x)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a', w')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f x
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Out (a, w) >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a' ,w') = (return a)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a', w `mappend` w')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a' ,w') = Out (a, mempty)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a', w `mappend` w')
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Out (a, w `mappend` mempty)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle monid.law.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Out (a, w)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(Out (a1, w1) >>= f) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+ in Out (a2, w1 `mappend` w2)) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a3, w3) = let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+                   in Out (a2, w1 `mappend` w2)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a3, w3) >>= g
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a3, w3) = let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+                   in Out (a2, w1 `mappend` w2)
+\end_layout
+
+\begin_layout Plain Layout
+
+in let Out (a4, w4) = g a3
+\end_layout
+
+\begin_layout Plain Layout
+
+   in Out (a4, w3 `mappend` w4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+    Out (a3, w3) = Out (a2, w1 `mappend` w2)
+\end_layout
+
+\begin_layout Plain Layout
+
+in let Out (a4, w4) = g a3
+\end_layout
+
+\begin_layout Plain Layout
+
+   in Out (a4, w3 `mappend` w4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+    Out (a3, w3) = Out (a2, w1 `mappend` w2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    Out (a4, w4) = g a3
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a4, w3 `mappend` w4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.a3,w3\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+    Out (a4, w4) = g a2
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a4, (w1 `mappend` w2) `mappend` w4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle monoid.law.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+    Out (a4, w4) = g a2
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a4, w1 `mappend` (w2 `mappend` w4))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.a3,w3\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+    Out (a4, w4) = g a2
+\end_layout
+
+\begin_layout Plain Layout
+
+    Out (a3, w3) = Out (a4, w2 `mappend` w4)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a3, w1 `mappend` w3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a3, w3) = let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+                       Out (a4, w4) = g a2
+\end_layout
+
+\begin_layout Plain Layout
+
+                   in Out (a4, w2 `mappend` w4)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a3, w1 `mappend` w3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let Out (a3, w3) = let Out (a2, w2) = f a1
+\end_layout
+
+\begin_layout Plain Layout
+
+                   in let Out (a4, w4) = g a2
+\end_layout
+
+\begin_layout Plain Layout
+
+                      in Out (a4, w2 `mappend` w4)
+\end_layout
+
+\begin_layout Plain Layout
+
+in Out (a3, w1 `mappend` w3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv_{\beta}\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Out (a1, w1) >>= (
+\backslash
+x -> let Out (a2, w2) = f x
+\end_layout
+
+\begin_layout Plain Layout
+
+                        in let Out (a4, w4) = g a2
+\end_layout
+
+\begin_layout Plain Layout
+
+                           in Out (a4, w2 `mappend` w4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Out (a1, w1) >>= (
+\backslash
+x -> let Out (a2, w2) = f x
+\end_layout
+
+\begin_layout Plain Layout
+
+                        in Out (a2, w2) >>= g)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.let\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Out (a1, w1) >>= (
+\backslash
+x -> f x >>= g)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monoid w => Monad (Output w) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x = Out (x, mempty)
+\end_layout
+
+\begin_layout Plain Layout
+
+  Out (a, w) >>= f = let Out (a', w') = (f a)
+\end_layout
+
+\begin_layout Plain Layout
+
+                     in Out (a', w' `mappend` w)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+write w = Out ((), w)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+trace :: (Show t, Show m) => t -> m -> Output String ()
+\end_layout
+
+\begin_layout Plain Layout
+
+trace t m = write $ 
+\begin_inset Quotes cld
+\end_inset
+
+El termino 
+\begin_inset Quotes cld
+\end_inset
+
+   ++ (show t) ++ 
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\begin_inset Quotes cld
+\end_inset
+
+ tiene valor 
+\begin_inset Quotes cld
+\end_inset
+
+ ++ (show m) ++ 
+\begin_inset Quotes cld
+\end_inset
+
+
+\backslash
+n
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+eval :: Exp -> Output String Int
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Const n)  = return n
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Plus t u) = do m <- eval t
+\end_layout
+
+\begin_layout Plain Layout
+
+                     trace t m
+\end_layout
+
+\begin_layout Plain Layout
+
+                     n <- eval u
+\end_layout
+
+\begin_layout Plain Layout
+
+                     return (m+n)
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Div t u)  = do m <- eval t
+\end_layout
+
+\begin_layout Plain Layout
+
+                     trace t m
+\end_layout
+
+\begin_layout Plain Layout
+
+                     n <- eval u
+\end_layout
+
+\begin_layout Plain Layout
+
+                     return (m+n) 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+doEval :: Exp -> IO ()
+\end_layout
+
+\begin_layout Plain Layout
+
+doEval e = let Out (a, w) = eval e
+\end_layout
+
+\begin_layout Plain Layout
+
+           in putStr $ w ++ (show a) ++ 
+\begin_inset Quotes cld
+\end_inset
+
+
+\backslash
+n
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $M$
+\end_inset
+
+ una monada.
+ Dados los siguientes operadores:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(>>)  :: M a -> M b -> M b
+\end_layout
+
+\begin_layout Plain Layout
+
+(>>=) :: M a -> (a -> M b) -> M b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+De ser posible, escribir 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+>>
+\end_layout
+
+\end_inset
+
+ en funcion de 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+>>=
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+De ser posible, escribir 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+>>=
+\end_layout
+
+\end_inset
+
+ en funcion de 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+>>
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x >> y = x >>= (
+\backslash
+_ -> y)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+No es posible.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Las siguientes funciones se definen sobre un constructor de tipos 
+\begin_inset Formula $m$
+\end_inset
+
+ arbitrario:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Definir la funcion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+sequence :: Monad m => [m a] -> m [a]
+\end_layout
+
+\end_inset
+
+, de una manera tal que 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+sequence xs
+\end_layout
+
+\end_inset
+
+ evalue todos los valores monadicos en la lista 
+\begin_inset Formula $xs$
+\end_inset
+
+, de izquierda a derecha, y devuelva un valor en la misma monada que calcule
+ la lista de los 
+\begin_inset Quotes cld
+\end_inset
+
+resultados
+\begin_inset Quotes crd
+\end_inset
+
+ de dichas evaluaciones.
+ Por ejemplo si 
+\begin_inset Formula $xs=\left[m1,m2\right]$
+\end_inset
+
+ entonces:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sequence xs = m1 >>= 
+\backslash
+x1 ->
+\end_layout
+
+\begin_layout Plain Layout
+
+              m2 >>= 
+\backslash
+x2 ->
+\end_layout
+
+\begin_layout Plain Layout
+
+              return [x1, x2]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Definir la funcion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+liftM :: Monad m => (a -> b) -> m a -> m b
+\end_layout
+
+\end_inset
+
+, tal que 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+liftM f x
+\end_layout
+
+\end_inset
+
+ aplique 
+\begin_inset Formula $f$
+\end_inset
+
+ al contenido de 
+\begin_inset Formula $x$
+\end_inset
+
+ dentro de la monada 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Por ejemplo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+liftM sum (Just [1..10]) = Just 55
+\end_layout
+
+\end_inset
+
+.
+ Notar que 
+\begin_inset Formula $liftM$
+\end_inset
+
+ coincide con 
+\begin_inset Formula $fmap$
+\end_inset
+
+ (ejercicio de la practica anterior).
+\end_layout
+
+\begin_layout Enumerate
+Definir la funcion 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+liftM2 :: Monad m => (a -> b -> c) -> m a -> m b -> m c
+\end_layout
+
+\end_inset
+
+, tal que 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+liftM2 f m1 m2
+\end_layout
+
+\end_inset
+
+ aplique la funcion binaria 
+\begin_inset Formula $f$
+\end_inset
+
+ a los contenidos de 
+\begin_inset Formula $m1$
+\end_inset
+
+ y 
+\begin_inset Formula $m2$
+\end_inset
+
+ dentro de la monada 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Por ejemplo:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+liftM2 (&&) [True, False] [True, True] = [True, True, False, False]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Expresar 
+\begin_inset Formula $sequence$
+\end_inset
+
+ como un 
+\begin_inset Formula $foldr$
+\end_inset
+
+.
+ (Sugerencia: usar 
+\begin_inset Formula $liftM2$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sequence = mapM id
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+liftM f x = x >>= (return .
+ f)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+liftM2 f ma mb = do a <- ma
+\end_layout
+
+\begin_layout Plain Layout
+
+                    b <- mb
+\end_layout
+
+\begin_layout Plain Layout
+
+                    return $ f a b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sequence = foldr (liftM2 (:)) (return [])
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dado el siguiente tipo de datos: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data Error e a = Raise e | Return a
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demostrar que es una monada.
+\end_layout
+
+\begin_layout Enumerate
+Dar una definicion total de las siguientes funciones, utilizando la monada
+ 
+\begin_inset Formula $Error$
+\end_inset
+
+ 
+\begin_inset Formula $String$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $shead$
+\end_inset
+
+ y 
+\begin_inset Formula $stail$
+\end_inset
+
+, correspondientes a las operaciones sobre listas.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $spush$
+\end_inset
+
+ y 
+\begin_inset Formula $spop$
+\end_inset
+
+, correspondientes a las operaciones sobre pilas.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monad (Error e) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return         = Return
+\end_layout
+
+\begin_layout Plain Layout
+
+  Raise  x >>= _ = Raise x
+\end_layout
+
+\begin_layout Plain Layout
+
+  Return x >>= f = f x
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return x >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Return x >>= f
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Raise x >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Raise x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Return x >>= return
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.>>=\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+return x
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.return\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Return x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+shead [] = Raise 
+\begin_inset Quotes cld
+\end_inset
+
+Head de lista vacia.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+shead (x:xs) = Return x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+stail [] = Raise 
+\begin_inset Quotes cld
+\end_inset
+
+Tail de lista vacia.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+stail (x:xs) = Return xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+spush x p = do p' <- p
+\end_layout
+
+\begin_layout Plain Layout
+
+               return $ x:p'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+spop p = do p' <- p
+\end_layout
+
+\begin_layout Plain Layout
+
+            h <- shead p'
+\end_layout
+
+\begin_layout Plain Layout
+
+            t <- stail p'
+\end_layout
+
+\begin_layout Plain Layout
+
+            return $ (h, t)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se desea implementar un evaluador para un lenguaje sencillo, cuyos terminos
+ seran representados por el tipo de datos: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data T = Con Int | Div T T
+\end_layout
+
+\end_inset
+
+.
+ Se busca que el evaluador cuente la cantidad de divisiones, y reporte los
+ errores de division por cero.
+ Se plantea el siguiente tipo de datos para representar una monada de evaluacion
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+newtype M s e a = M { runM :: s -> Error e (a, s) }
+\end_layout
+
+\end_inset
+
+ y entonces el evaluador puede escribirte de esta manera:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+eval            :: T -> M Int String Int
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Con n)     = return n
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Div t1 t2) = do v1 <- eval t1
+\end_layout
+
+\begin_layout Plain Layout
+
+                   do v2 <- eval t2
+\end_layout
+
+\begin_layout Plain Layout
+
+                      if v2 == 0 then raise 
+\begin_inset Quotes cld
+\end_inset
+
+Error: Division por cero.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                                 else do modify (+1)
+\end_layout
+
+\begin_layout Plain Layout
+
+                                         return (div v1 v2)
+\end_layout
+
+\end_inset
+
+y el computo resultante se podria ejecutar mediante una funcion auxiliar:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+doEval :: T -> Error String (Int, Int)
+\end_layout
+
+\begin_layout Plain Layout
+
+doEval t = runM (eval t) 0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dar la instancia de la monada 
+\begin_inset Formula $M$
+\end_inset
+
+ 
+\begin_inset Formula $s$
+\end_inset
+
+ 
+\begin_inset Formula $e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar el tipo de las funciones 
+\begin_inset Formula $raise$
+\end_inset
+
+ y 
+\begin_inset Formula $modify$
+\end_inset
+
+, y dar su definicion.
+\end_layout
+
+\begin_layout Enumerate
+Reescribir 
+\begin_inset Formula $eval$
+\end_inset
+
+, sin usar notacion do y luego expandir las definiciones de 
+\begin_inset Formula $>>=$
+\end_inset
+
+, 
+\begin_inset Formula $return$
+\end_inset
+
+, 
+\begin_inset Formula $raise$
+\end_inset
+
+ y 
+\begin_inset Formula $modify$
+\end_inset
+
+, para obtener un evaluador no monadico.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monad (M s e) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x = M (
+\backslash
+s -> Return (x, s))
+\end_layout
+
+\begin_layout Plain Layout
+
+  M f >>= g = M (
+\backslash
+s-> let m = f s
+\end_layout
+
+\begin_layout Plain Layout
+
+                      in m >>= 
+\backslash
+(a, s') -> runM (g a) s')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+raise :: a -> M b a b
+\end_layout
+
+\begin_layout Plain Layout
+
+raise a = M (
+\backslash
+_ -> Raise a)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+modify :: (s -> s) -> M s e ()
+\end_layout
+
+\begin_layout Plain Layout
+
+modify f = M (
+\backslash
+s -> Return ((), f s))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+eval (Con n)     = return n
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Div t1 t2) = eval t1 >>= 
+\backslash
+v1 ->
+\end_layout
+
+\begin_layout Plain Layout
+
+                   eval t2 >>= 
+\backslash
+v2 ->
+\end_layout
+
+\begin_layout Plain Layout
+
+                   if v2 == 0
+\end_layout
+
+\begin_layout Plain Layout
+
+                   then raise 
+\begin_inset Quotes cld
+\end_inset
+
+Error: Division por cero.
+\begin_inset Quotes crd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                   else (modify (+1)) >> (return $ div v1 v2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+El tipo de datos 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Cont r a
+\end_layout
+
+\end_inset
+
+ representa 
+\emph on
+continuaciones
+\emph default
+ en las que dado el resultado de una funcion (de tipo 
+\begin_inset Formula $a$
+\end_inset
+
+) y la continuacion de la computacion 
+\begin_inset Formula $\left(a\to r\right)$
+\end_inset
+
+, devuelve un valor en 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Probar que 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Cont r
+\end_layout
+
+\end_inset
+
+ es una monada.
+ Ayuda: Guiarse con los tipos.
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Cont r a = C ((a -> r) -> r)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solucion
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monad (Cont r) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x  = C (
+\backslash
+f -> f x)
+\end_layout
+
+\begin_layout Plain Layout
+
+  C f >>= g = C (
+\backslash
+br -> f (
+\backslash
+a -> let C h = g a
+\end_layout
+
+\begin_layout Plain Layout
+
+                                 in h br))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dado el siguiente tipo de datos: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data M m a = Mk (m (Maybe a))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que para toda monada 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+M m
+\end_layout
+
+\end_inset
+
+ es una monada.
+\end_layout
+
+\begin_layout Enumerate
+Definir una operacion auxiliar 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+throw :: Monad m => M m a
+\end_layout
+
+\end_inset
+
+ que lanza una excepcion.
+\end_layout
+
+\begin_layout Enumerate
+Dada la monada de estado 
+\begin_inset Formula $StInt$
+\end_inset
+
+ y el siguiente tipo 
+\begin_inset Formula $N$
+\end_inset
+
+:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data StInt a = St (Int -> (a, Int))
+\end_layout
+
+\begin_layout Plain Layout
+
+type N a = M StInt a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Definir opreaciones 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+get :: N Int
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+put :: Int -> N ()
+\end_layout
+
+\end_inset
+
+, que lean y actualizen (respectivamente) el estado de la monada.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Usando 
+\begin_inset Formula $N$
+\end_inset
+
+, definir un interprete monadico para un lenguaje de expresiones aritmeticas
+ y una sola variable dado por el siguiente AST:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Expr = Var
+\end_layout
+
+\begin_layout Plain Layout
+
+          | Cont Int
+\end_layout
+
+\begin_layout Plain Layout
+
+          | Let Expr Expr
+\end_layout
+
+\begin_layout Plain Layout
+
+          | Add Expr Expr
+\end_layout
+
+\begin_layout Plain Layout
+
+          | Div Expr Expr
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+El constructor 
+\begin_inset Formula $Var$
+\end_inset
+
+ corresponde a dereferenciar la unica variable, 
+\begin_inset Formula $Con$
+\end_inset
+
+ corresponde a una constante entera, 
+\begin_inset Formula $Let\text{ }t$
+\end_inset
+
+, a asignar a la unica variable el valor de la expresion 
+\begin_inset Formula $t$
+\end_inset
+
+, y 
+\begin_inset Formula $Add$
+\end_inset
+
+ y 
+\begin_inset Formula $Div$
+\end_inset
+
+ corresponden a la suma y la division respectivamente.
+ La variable tiene un valor inicial 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ El interprete debe ser una funcion total que devuelva el valor de la expresion
+ y el valor de la (unica) variable.
+ Por ejemplo, si llamamos a la unica variable 
+\begin_inset Formula $\square$
+\end_inset
+
+, la expresion: 
+\begin_inset Formula $let\square=\left(2+3\right)in\square/7$
+\end_inset
+
+, queda representada en el AST por la expresion: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Let (Add (Con 2) (Con 3)) (Div Var (Con 7))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+instance Monad m => Monad (M m) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  return x = Mk (return (Just x))
+\end_layout
+
+\begin_layout Plain Layout
+
+  Mk x >>= f = Mk $ do x' <- x
+\end_layout
+
+\begin_layout Plain Layout
+
+                       case x' of
+\end_layout
+
+\begin_layout Plain Layout
+
+                         Nothing -> return Nothing
+\end_layout
+
+\begin_layout Plain Layout
+
+                         Just a  -> let Mk y = f a in y
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+throw = Mk (return Nothing)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+get = Mk (St (
+\backslash
+s -> (Just s, s)))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+put s = Mk (St (
+\backslash
+_ -> (Just (), s)))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+eval :: Expr -> N Int
+\end_layout
+
+\begin_layout Plain Layout
+
+eval Var       = get
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Cont x)  = return x
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Let x y) = do s <- eval x
+\end_layout
+
+\begin_layout Plain Layout
+
+                    put s
+\end_layout
+
+\begin_layout Plain Layout
+
+                    eval y
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Add x y) = do x' <- eval x
+\end_layout
+
+\begin_layout Plain Layout
+
+                    y' <- eval y
+\end_layout
+
+\begin_layout Plain Layout
+
+                    return $ x' + y'
+\end_layout
+
+\begin_layout Plain Layout
+
+eval (Div x y) = do x' <- eval x
+\end_layout
+
+\begin_layout Plain Layout
+
+                    y' <- eval y
+\end_layout
+
+\begin_layout Plain Layout
+
+                    if y' == 0 then throw
+\end_layout
+
+\begin_layout Plain Layout
+
+                               else return $ div x' y'
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+doEval :: Expr -> (Maybe Int, Int)
+\end_layout
+
+\begin_layout Plain Layout
+
+doEval e = let Mk (St runSt) = eval e
+\end_layout
+
+\begin_layout Plain Layout
+
+           in runSt 0
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
