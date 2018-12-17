@@ -275,7 +275,7 @@ Abstracción de datos
 
 \begin_layout Standard
 Para que el sistema sea útil debe recuperar los datos eficientemente.
- La necesidad de eficiencia ha lle- vado a los diseñadores a usar estructuras
+ La necesidad de eficiencia ha llevado a los diseñadores a usar estructuras
  de datos complejas para la representación de los datos en la base de datos.
  Dado que muchos de los usuarios de sistemas de bases de datos no tienen
  formación en informática, los desarrolladores ocultan esa complejidad a
@@ -315,13 +315,13 @@ Nivel lógico
 \noun on
 Nivel de vistas
 \noun default
-: El nivel más elevado de abstracción sólo describe parte de la base de
+: El nivel más elevado de abstracción solo describe parte de la base de
  datos.
- Aun- que el nivel lógico usa estructuras más simples, queda algo de complejidad
+ Aunque el nivel lógico usa estructuras más simples, queda algo de complejidad
  debido a la variedad de información almacenada en las grandes bases de
  datos.
  Muchos usuarios del sistema de bases de datos no necesitan toda esta informació
-n; en su lugar sólo necesitan tener acceso a una parte de la base de datos.
+n; en su lugar solo necesitan tener acceso a una parte de la base de datos.
  El nivel de abstracción de vistas existe para simplificar su interacción
  con el sistema.
  El sistema puede proporcionar muchas vistas para la misma base de datos.
@@ -829,7 +829,7 @@ Los esquemas de las bases de datos se especifican mediante un conjunto de
 \end_layout
 
 \begin_layout Standard
-El DDL , al igual que cualquier otro lenguaje de programación, obtiene como
+El DDL, al igual que cualquier otro lenguaje de programación, obtiene como
  entrada algunas instrucciones y genera una salida.
  La salida del DDL se coloca en el diccionario de datos, que contiene metadatos,
  es decir, datos sobre datos.
@@ -1568,7 +1568,7 @@ Puede que un conjunto de entidades no tenga suficientes atributos para formar
 Para que un conjunto de entidades débiles tenga sentido, debe estar asociado
  con otro conjunto de entidades, denominado conjunto de entidades identificadora
 s o propietarias.
- Cada entidad débil de- be estar asociada con una entidad identificadora;
+ Cada entidad débil debe estar asociada con una entidad identificadora;
  es decir, se dice que el conjunto de entidades débiles depende existencialmente
  del conjunto de entidades identificadoras.
 \end_layout
@@ -1797,7 +1797,7 @@ La correspondencia de cardinalidades, o razón de cardinalidad, expresa el
  número de entidades a las que otra entidad se puede asociar mediante un
  conjunto de relaciones.
  La correspondencia de cardinalidades resulta muy útil para describir conjuntos
- de relaciones bina- rias, aunque pueda contribuir a la descripción de conjuntos
+ de relaciones binarias, aunque pueda contribuir a la descripción de conjuntos
  de relaciones que impliquen más de dos conjuntos de entidades.
 \begin_inset Newpage pagebreak
 \end_inset
@@ -4520,7 +4520,7 @@ donde
 \begin_inset Formula $x_{1},\ldots,x_{n}$
 \end_inset
 
- representan variables de dominio, 
+ representan variables de dominio y 
 \begin_inset Formula $P$
 \end_inset
 
@@ -4668,7 +4668,7 @@ Si
 \end_layout
 
 \begin_layout Section
-Equivalencia con álgebra relacional
+Equivalencia con calculo de tuplas
 \end_layout
 
 \begin_layout Itemize
@@ -4816,7 +4816,7 @@ donde cada
 \end_inset
 
  es un predicado.
- Si se pretenden todos los atributos puede utilizarse el simbolo 
+ Si se pretenden todos los atributos puede utilizarse el símbolo 
 \begin_inset Quotes fld
 \end_inset
 
@@ -4825,7 +4825,11 @@ donde cada
 \end_inset
 
 .
- Al omitirse la cláusula where, el predicado 
+ Al omitirse la cláusula 
+\emph on
+where
+\emph default
+, el predicado 
 \begin_inset Formula $P$
 \end_inset
 
@@ -4974,9 +4978,17 @@ count
 \end_layout
 
 \begin_layout Standard
-Los datos de entrada para sum y avg deben ser una colección de números,
- pero los otros operadores también pueden operar sobre colecciones de datos
- de tipo no numérico como las cadenas de caracteres.
+Los datos de entrada para 
+\emph on
+sum
+\emph default
+ y 
+\emph on
+avg
+\emph default
+ deben ser una colección de números, pero los otros operadores también pueden
+ operar sobre colecciones de datos de tipo no numérico como las cadenas
+ de caracteres.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -5741,7 +5753,7 @@ donde
 \begin_inset Formula $P$
 \end_inset
 
- es un predicado.
+ es un predicado que deben cumplir los atributos.
 \end_layout
 
 \begin_layout Standard
@@ -5896,12 +5908,12 @@ CREATE TABLE nombre (a1 d1,...,an dn,
 
 \begin_layout Plain Layout
 
-                     [ON UPDATE RESTRICTED|CASCADE|NULLIFIES)]
+                     [ON UPDATE RESTRICT|CASCADE|SET NULL)]
 \end_layout
 
 \begin_layout Plain Layout
 
-                     [ON DELETE RESTRICTED|CASCADE|NULLIFIES)]
+                     [ON DELETE RESTRICT|CASCADE|SET NULL)]
 \end_layout
 
 \begin_layout Plain Layout
@@ -6402,7 +6414,7 @@ Optimizaciones
 
 \begin_layout Standard
 La optimización de consultas es el proceso de selección del plan de evaluación
- de las consultas más efi- ciente de entre las muchas estrategias generalmente
+ de las consultas más eficiente de entre las muchas estrategias generalmente
  disponibles para el procesamiento de una consulta dada, especialmente si
  la consulta es compleja.
  No se espera que los usuarios escriban las consultas de modo que puedan
@@ -6429,28 +6441,10 @@ A modo de ejemplo, consideremos la siguiente consulta, donde la tabla autores
 
 \begin_layout Standard
 \align center
-\begin_inset listings
-lstparams "language=SQL"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-SELECT DISTINCT nombre FROM libros, autores
-\end_layout
-
-\begin_layout Plain Layout
-
-WHERE autores.id = libros.autor AND genero = 
-\begin_inset Quotes fld
-\end_inset
-
-Terror
-\begin_inset Quotes frd
-\end_inset
-
-
-\end_layout
+\begin_inset Formula 
+\[
+\Pi_{nombre}\left[\sigma_{autor=id\land genero=rerror}\left(libros\times autores\right)\right]
+\]
 
 \end_inset
 
@@ -6475,34 +6469,7 @@ e:
 
 \begin_layout Standard
 \align center
-\begin_inset listings
-lstparams "language=SQL"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-SELECT nombre FROM
-\end_layout
-
-\begin_layout Plain Layout
-
-autores, (SELECT autor FROM libros WHERE genero = 
-\begin_inset Quotes fld
-\end_inset
-
-Terror
-\begin_inset Quotes frd
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Plain Layout
-
-WHERE id = autor
-\end_layout
-
+\begin_inset Formula $\Pi_{nombre}\left\{ \sigma_{id=autor}\left[\sigma_{genero=terror}\left(libros\right)\times autores\right]\right\} $
 \end_inset
 
 
@@ -6513,18 +6480,18 @@ WHERE id = autor
 \end_inset
 
 De esta manera necesitamos 10.000 accesos al disco para producir las primeras
- 50 filas y luego leemos los 100 autores para juntar los resultados, que
- ahora si entran en memoria.
- En total hemos necesitado 10.000 accesos al disco para generar la misma
+ 50 filas y luego leemos 50 veces los 100 autores para juntar los resultados,
+ que ahora si entran en memoria.
+ En total hemos necesitado 15.000 accesos al disco para generar la misma
  consulta.
  Con solo cambiar el orden de las operaciones, hemos obtenido una consulta
- 300 veces mas rápida.
+ 200 veces mas rápida.
 \end_layout
 
 \begin_layout Standard
 Ademas, si la tabla de libros estuviera indexada por genero, solo necesitaríamos
  50 accesos a disco en vez de 10.000.
- Esto incrementa notablemente a una perfomance 20.000 veces mas rápida.
+ Esto incrementa notablemente a una perfomance 600 veces mas rápida.
 \end_layout
 
 \begin_layout Standard
@@ -6544,7 +6511,7 @@ Otra estrategia de optimización es convertir cada condición de restricción
  a una condición en forma normal conjuntiva.
  Es decir, a un conjunto de disyunciones enlazadas por conjunciones.
  Por ejemplo: 
-\begin_inset Formula $p\lor\left(q\land r\right)\equiv\left(p\lor q\right)\land\left(p\lor r\right)$
+\begin_inset Formula $\text{\ensuremath{p\lor\left(q\land r\right)\equiv\left(p\lor q\right)\land\left(p\lor r\right)}}$
 \end_inset
 
 .
@@ -10338,8 +10305,7 @@ Si ambos saldos iniciales eran de
 
 \begin_layout Standard
 A diferencia del ejemplo anterior, en este caso A no depende en absoluto
- de una modificación no comprometida , pues B compromete todas sus modificacione
-s.
+ de una modificación no comprometida, pues B compromete todas sus modificaciones.
 \end_layout
 
 \begin_layout Subsection
@@ -13347,6 +13313,43 @@ Independencia de red
 Independencia de DBMS
 \noun default
 : Los DBMS en los distintos sitios deben manejar la misma interfaz.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+literal "false"
+
+\end_inset
+
+
+\noun on
+Abraham Silberschatz & Henry Korth
+\noun default
+ - Fundamentos de Bases de Datos (
+\emph on
+5ta edición
+\emph default
+).
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
+\noun on
+Claudia Deco
+\noun default
+ - Cátedra de Teoría de Bases de Datos (
+\emph on
+FCEIA
+\emph default
+).
 \end_layout
 
 \end_body
