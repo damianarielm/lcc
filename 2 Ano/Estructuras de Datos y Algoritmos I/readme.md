@@ -1,6 +1,6 @@
-Año 2017
+###### Año 2017
 
-Federico Severino Guimpel
-Gerardo Huck
-Marcos Pividori
-Maria Eugenia Simich
+* Federico Severino Guimpel
+* Gerardo Huck
+* Marcos Pividori
+* Maria Eugenia Simich

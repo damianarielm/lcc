@@ -1,7 +1,7 @@
-Año 2017
+###### Año 2017
 
-Dante Zanarini
-Pablo Verdes
-Gabina Luz Bianchi
-Marcos Pividori
-Hernan Gurmendi
+* Dante Zanarini
+* Pablo Verdes
+* Gabina Luz Bianchi
+* Marcos Pividori
+* Hernan Gurmendi

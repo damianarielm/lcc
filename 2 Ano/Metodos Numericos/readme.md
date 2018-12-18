@@ -1,5 +1,5 @@
-Año 2017
+###### Año 2017
 
-Alejandro Marchetti
-Juan Manuel Rabasedas
-Nicolas Rodriguez Castro
+* Alejandro Marchetti
+* Juan Manuel Rabasedas
+* Nicolas Rodriguez Castro

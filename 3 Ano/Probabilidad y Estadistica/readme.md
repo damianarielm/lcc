@@ -1,5 +1,5 @@
-Año 2017
+###### Año 2017
 
-Nora Arnesi
-Gustavo Galizzi
-Gabina Luz Bianchi
+* Nora Arnesi
+* Gustavo Galizzi
+* Gabina Luz Bianchi

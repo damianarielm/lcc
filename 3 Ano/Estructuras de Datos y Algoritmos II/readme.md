@@ -1,5 +1,5 @@
-Año 2018
+###### Año 2018
 
-Mauro Jaskelioff
-Cecilia Manzino
-Juan Manuel Rabasedas
+* Mauro Jaskelioff
+* Cecilia Manzino
+* Juan Manuel Rabasedas

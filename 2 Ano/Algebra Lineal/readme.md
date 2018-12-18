@@ -1,5 +1,5 @@
-Año 2017
+###### Año 2017
 
-Elina Mafalda Mancinelli
-Ana Cosgaya
-Maria Ines Lopez Pujato
+* Elina Mafalda Mancinelli
+* Ana Cosgaya
+* Maria Ines Lopez Pujato

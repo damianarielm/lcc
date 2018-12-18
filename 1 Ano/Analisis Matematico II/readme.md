@@ -1,5 +1,5 @@
-Año 2016
+###### Año 2016
 
-Eduardo Andres Phillip
-Paula Cardone
-Alejandra Francisca Zorzi
+* Eduardo Andres Phillip
+* Paula Cardone
+* Alejandra Francisca Zorzi

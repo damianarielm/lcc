@@ -1,6 +1,6 @@
-Año 2016
+###### Año 2016
 
-Gabriela Ruth Argiroffo
-Melani Barrios
-Facundo Martinez
-Natalie Romina Vanteenkiste
+* Gabriela Ruth Argiroffo
+* Melani Barrios
+* Facundo Martinez
+* Natalie Romina Vanteenkiste
