@@ -308,6 +308,94 @@ Solución
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Verdadero: 
+\begin_inset Formula $0\leq n^{2}\leq cn^{3}\iff0\leq1\leq cn$
+\end_inset
+
+.
+ Basta tomar 
+\begin_inset Formula $\text{\ensuremath{c=n_{0}=1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falso: 
+\begin_inset Formula $0\leq cn^{3}\leq n^{2}\iff0\leq cn\leq1\iff0\leq n\leq1/c$
+\end_inset
+
+.
+ Para que esto ocurra, 
+\begin_inset Formula $n$
+\end_inset
+
+ debe estar acotado por una constante.
+\end_layout
+
+\begin_layout Enumerate
+Verdadero: 
+\begin_inset Formula $0\leq c_{2}2^{n+1}\leq2^{n}\leq c_{1}2^{n+1}\iff\text{\ensuremath{0\leq c_{2}2\leq1\leq c_{1}2}}\iff0\leq c_{2}\leq1/2\leq c_{1}$
+\end_inset
+
+.
+ Basta tomar 
+\begin_inset Formula $c_{1}=c_{2}=1/2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falso: 
+\begin_inset Formula $\text{\ensuremath{0\leq c\left(n+1\right)!\leq n!\iff0\leq c\left(n+1\right)\leq1\iff n\leq\frac{1}{c}-1}}$
+\end_inset
+
+.
+ Para que esto ocurra, 
+\begin_inset Formula $n$
+\end_inset
+
+ debe estar acotado por una constante.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Demostrar que 
@@ -333,6 +421,70 @@ Demostrar que
 
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Por hipótesis 
+\begin_inset Formula $f\in O\left(g\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $f\in\Omega\left(g\right)$
+\end_inset
+
+; y por definición tenemos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{2}:0\leq f\left(n\right)\leq c_{2}g\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{1}:0\leq c_{1}g\left(n\right)\leq f\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego tomando 
+\begin_inset Formula $n_{0}=\max\left\{ n_{1},n_{2}\right\} $
+\end_inset
+
+ valen ambas desigualdades.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Por definición tenemos 
+\begin_inset Formula $f\in O\left(g\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $f\in\Omega\left(g\right)$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{f\in\Theta\left(g\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Sean 
 \begin_inset Formula $f,g:\mathbb{N}\to\mathbb{R}$
@@ -353,6 +505,63 @@ h\left(n\right)\in\Theta\left(\max\left\{ f\left(n\right),g\left(n\right)\right\
 
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son asintoticamente no negativas, 
+\begin_inset Formula $\text{\ensuremath{\forall n>n_{1}:f\left(n\right)\geq0}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\forall n>n_{2}:g\left(n\right)\geq0$
+\end_inset
+
+; tomando 
+\begin_inset Formula $n_{0}=\max\left\{ n_{1},n_{2}\right\} $
+\end_inset
+
+ resulta 
+\begin_inset Formula $h$
+\end_inset
+
+ ser asintoticamente no negativa.
+ Ademas, tomando 
+\begin_inset Formula $c_{1}=2$
+\end_inset
+
+ y 
+\begin_inset Formula $c_{2}=1/2$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0\leq f\left(n\right)+g\left(n\right)\leq c_{1}\max\left\{ f\left(n\right),g\left(n\right)\right\} \Rightarrow h\in O\left(\max\left\{ f\left(n\right),g\left(n\right)\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0\leq c_{2}\max\left\{ f\left(n\right),g\left(n\right)\right\} \leq f\left(n\right)+g\left(n\right)\Rightarrow h\in\Omega\left(\max\left\{ f\left(n\right),g\left(n\right)\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Dadas 
 \begin_inset Formula $f,g:\mathbb{N}\to\mathbb{R}$
@@ -410,6 +619,34 @@ Dadas
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
