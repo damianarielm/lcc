@@ -1,0 +1,9 @@
+' ': ' ' Black Black
+'*': ' ' Blue Blue
+'-': ' ' Red Red
+'+': ' ' Yellow Yellow
+
+State == '*': '-'
+State == '-': '+'
+State == '+' && Chebyshev('*',1) == 1: '*'
+State == '+' && Chebyshev('*',1) == 2: '*'

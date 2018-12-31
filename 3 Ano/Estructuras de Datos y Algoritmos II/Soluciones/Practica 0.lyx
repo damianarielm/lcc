@@ -626,21 +626,208 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f,g,h$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f\in O\left(g\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $g\in O\left(h\right)$
+\end_inset
+
+, sabemos que existen 
+\begin_inset Formula $c_{1},c_{2},n_{1},n_{2}$
+\end_inset
+
+ tales que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{1}:0\leq f\left(n\right)\leq c_{1}g\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{2}:0\leq g\left(n\right)\leq c_{2}h\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego tomando 
+\begin_inset Formula $n_{0}=\max\left\{ n_{1},n_{2}\right\} $
+\end_inset
+
+ valen ambas desigualdades, por lo tanto:
+\begin_inset Formula 
+\[
+\forall n\geq n_{0}:0\leq f\left(n\right)\leq c_{1}g\left(n\right)\leq\underbrace{c_{1}c_{2}}_{c}h\left(n\right)\Rightarrow f\in O\left(h\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que existe 
+\begin_inset Formula $n_{0}/\forall n\geq n_{0}:f\left(n\right)\geq0$
+\end_inset
+
+, luego tomando 
+\begin_inset Formula $c=1$
+\end_inset
+
+ resultan: 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{0}:0\leq f\left(n\right)\leq cf\left(n\right)\Rightarrow f\in O\left(f\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{0}:0\leq cf\left(n\right)\leq f\left(n\right)\Rightarrow f\in\Omega\left(f\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $f,g/f\in\Theta\left(g\right)$
+\end_inset
+
+, luego existen 
+\begin_inset Formula $n_{0},c_{1},c_{2}$
+\end_inset
+
+ tal que:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall n\geq n_{0}:0\leq c_{1}g\left(n\right)\leq f\left(n\right)\leq c_{2}g\left(n\right)
+\]
+
+\end_inset
+
+luego, dividiendo por 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ y por 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{0}:0\leq g\left(n\right)\leq\frac{1}{c_{1}}f\left(n\right)\Rightarrow g\in O\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall n\geq n_{0}:0\leq\frac{1}{c_{2}}f\left(n\right)\leq g\left(n\right)\Rightarrow g\in\Omega\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sabemos que existen 
+\begin_inset Formula $n_{0},c$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\text{\ensuremath{\forall n\geq n_{0}:0\leq f\left(n\right)\leq cg\left(n\right)}}$
+\end_inset
+
+ y dividiendo por 
+\begin_inset Formula $c$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+0\leq\frac{1}{c}f\left(n\right)\leq g\left(n\right)\Rightarrow g\in\Omega\left(f\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sabemos que existen 
+\begin_inset Formula $n_{0},c$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\text{\ensuremath{\forall n\geq n_{0}:0\leq cf\left(n\right)\leq g\left(n\right)}}$
+\end_inset
+
+ y dividiendo por 
+\begin_inset Formula $c$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+0\leq f\left(n\right)\leq\frac{1}{c}g\left(n\right)\Rightarrow f\in O\left(g\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -677,6 +864,18 @@ Sean
 .
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Demostrar que dadas dos funciones 
@@ -698,6 +897,16 @@ Demostrar que dadas dos funciones
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Encontrar dos funciones 
 \begin_inset Formula $f,g:\mathbb{N}\to\mathbb{N}^{+}$
@@ -715,6 +924,16 @@ Encontrar dos funciones
  Probar la respuesta.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Probar usando propiedades aritméticas que 
 \begin_inset Formula ${\displaystyle \sum_{i=1}^{n}}i^{k}\in\Theta\left(n^{k+1}\right)$
@@ -727,5 +946,15 @@ Probar usando propiedades aritméticas que
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
