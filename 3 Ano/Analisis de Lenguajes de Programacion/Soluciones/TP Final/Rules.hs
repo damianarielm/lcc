@@ -11,18 +11,20 @@ manhattan (x,y) d = [(x+i,y+j) | i <- [(-d)..d], j <- [(-d)..d], (abs i)+(abs j)
 
 frontier :: Frontier -> Point -> Matrix -> Char
 frontier (Open c) (x,y) m | outside (x,y) (rows m) (cols m) = c
-                          | otherwise                       = m !! x !! y
-frontier Wrap     (x,y) m | outside (x,y) (rows m) (cols m) = let (a,b) = wrap (x,y) (rows m) (cols m) in m !! a !! b
-                          | otherwise                       = m !! x !! y
-frontier Reflect  (x,y) m | outside (x,y) (rows m) (cols m) = let (a,b) = reflect (x,y) (rows m) (cols m) in m !! a !! b
-                          | otherwise                       = m !! x !! y
+                          | otherwise = m !! x !! y
+frontier Wrap     (x,y) m | outside (x,y) (rows m) (cols m) = let (a,b) = wrap (x,y) (rows m) (cols m)
+                                                              in m !! a !! b
+                          | otherwise = m !! x !! y
+frontier Reflect  (x,y) m | outside (x,y) (rows m) (cols m) = let (a,b) = reflect (x,y) (rows m) (cols m)
+                                                              in m !! a !! b
+                          | otherwise = m !! x !! y
 
 neighbours :: Frontier -> Char -> Point -> Matrix -> Neighbours -> Int -> Int
 neighbours z c (i,j) m f d = length $ filter (== c) [frontier z (x,y) m | (x,y) <- f (i,j) d]
 
 makeTransition :: Frontier -> [Rule] -> Transition
-makeTransition _ [] (x,y) m                                = m !! x !! y
-makeTransition _ (([],c'):_) _ _                           = c'
+makeTransition _ [] (x,y) m      = m !! x !! y
+makeTransition _ (([],c'):_) _ _ = c'
 makeTransition f ((condition:conditions,c'):rules) (x,y) m =
   case condition of
   State c             -> try (==) c (m !! x !! y)

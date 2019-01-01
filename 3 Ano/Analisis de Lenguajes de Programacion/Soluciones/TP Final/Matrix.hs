@@ -1,7 +1,6 @@
 module Matrix where
 
 import Types (Point, Matrix, Transition)
-import Control.Parallel
 import Data.List.Split
 
 rows :: Matrix -> Int
@@ -31,8 +30,8 @@ reflect (x,y) r c | x < 0     = reflect (0, y) r c
 
 fill :: Matrix -> Matrix
 fill m = map f m where
-       c = cols m
-       f r = r ++ (replicate (c - (length r)) ' ')
+         c = cols m
+         f r = r ++ (replicate (c - (length r)) ' ')
 
 fromString :: String -> Matrix
 fromString = fill . lines
@@ -40,8 +39,4 @@ fromString = fill . lines
 step :: Transition -> Matrix -> Matrix
 step f m = let r = (rows m) - 1
                c = (cols m) - 1
-           in chunksOf (c+1) $ parallel [(i,j) | i <- [0..r], j <- [0..c]] f m
-           -- [ [f (i,j) m | j <- [0..c]] | i <- [0..r] ]
-
-parallel []     _ _ = []
-parallel (x:xs) f m = f x m `par` (parallel xs f m) `par` (f x m) : (parallel xs f m)
+           in [ [f (i,j) m | j <- [0..c]] | i <- [0..r] ]
