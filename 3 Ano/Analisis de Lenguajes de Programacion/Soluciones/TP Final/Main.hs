@@ -1,5 +1,3 @@
--- runhaskell --ghc-arg=-XRankNTypes Main.hs examples/langton/langton.atm examples/langton/langton.ini
-
 module Main where
 
 import Types
