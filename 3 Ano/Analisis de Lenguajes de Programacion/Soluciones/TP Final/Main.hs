@@ -1,4 +1,3 @@
--- happy Parser.y & ghci Main.hs -XRankNTypes
 -- runhaskell --ghc-arg=-XRankNTypes Main.hs examples/langton/langton.atm examples/langton/langton.ini
 
 module Main where
