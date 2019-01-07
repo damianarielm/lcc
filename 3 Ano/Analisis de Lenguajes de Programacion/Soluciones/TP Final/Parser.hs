@@ -516,7 +516,7 @@ happyReduction_12 ((HappyAbsSyn7  happy_var_10) `HappyStk`
 	_ `HappyStk`
 	happyRest)
 	 = HappyAbsSyn7
-		 (([State happy_var_4], happy_var_8) : happy_var_10
+		 ((happy_var_4,[], happy_var_8) : happy_var_10
 	) `HappyStk` happyRest
 
 happyReduce_13 = happyReduce 11 7 happyReduction_13
@@ -533,7 +533,7 @@ happyReduction_13 ((HappyAbsSyn7  happy_var_11) `HappyStk`
 	_ `HappyStk`
 	happyRest)
 	 = HappyAbsSyn7
-		 (((State happy_var_4 : happy_var_6), happy_var_9) : happy_var_11
+		 ((happy_var_4, happy_var_6, happy_var_9) : happy_var_11
 	) `HappyStk` happyRest
 
 happyReduce_14 = happySpecReduce_0  7 happyReduction_14
@@ -552,11 +552,11 @@ happyReduction_15 ((HappyAbsSyn8  happy_var_12) `HappyStk`
 	(HappyTerminal (TChar happy_var_5)) `HappyStk`
 	_ `HappyStk`
 	_ `HappyStk`
-	_ `HappyStk`
+	(HappyAbsSyn9  happy_var_2) `HappyStk`
 	_ `HappyStk`
 	happyRest)
 	 = HappyAbsSyn8
-		 ((Chebyshev happy_var_5 happy_var_8 happy_var_10 happy_var_11) : happy_var_12
+		 ((happy_var_2 happy_var_5 happy_var_8 happy_var_10 happy_var_11) : happy_var_12
 	) `HappyStk` happyRest
 
 happyReduce_16 = happyReduce 10 8 happyReduction_16
@@ -743,15 +743,12 @@ happyThen1 m k tks = (>>=) m (\a -> k a tks)
 happyReturn1 :: () => a -> b -> HappyIdentity a
 happyReturn1 = \a tks -> (return) a
 happyError' :: () => ([(Token)], [String]) -> HappyIdentity a
-happyError' = HappyIdentity . (\(tokens, _) -> parseError tokens)
+happyError' = HappyIdentity . (\(tokens, _) -> error "Error de parseo en automata" tokens)
 parse tks = happyRunIdentity happySomeParser where
  happySomeParser = happyThen (happyParse action_0 tks) (\x -> case x of {HappyAbsSyn4 z -> happyReturn z; _other -> notHappyAtAll })
 
 happySeq = happyDontSeq
 
-
-parseError :: [Token] -> a
-parseError ts = error $ "La lista de tokens es: " ++ show ts
 
 lexer :: String -> [Token]
 lexer [] = []
@@ -766,11 +763,11 @@ lexer ('>':cs)     = TGreater : lexer cs
 lexer ('(':cs)     = TPOpen : lexer cs
 lexer (')':cs)     = TPClose : lexer cs
 lexer (',':cs)     = TSemiColon : lexer cs
+lexer (':':cs)     = TColon : lexer cs
 lexer (c:cs)
       | isSpace c  = lexer cs
       | isAlpha c  = lexVar (c:cs)
       | isDigit c  = lexNum (c:cs)
-lexer (':':cs)     = TColon : lexer cs
 
 lexNum cs = TInt (read num) : lexer rest where
             (num, rest) = span isDigit cs

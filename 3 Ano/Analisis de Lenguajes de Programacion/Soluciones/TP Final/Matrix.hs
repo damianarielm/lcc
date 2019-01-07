@@ -1,7 +1,9 @@
 module Matrix where
 
 import Types (Point, Matrix, Transition)
-import Data.List.Split
+
+(!!!) :: Matrix -> Point -> Char
+(!!!) m (x,y) = m !! x !! y
 
 rows :: Matrix -> Int
 rows = length
@@ -10,23 +12,26 @@ cols :: Matrix -> Int
 cols = maximum . map length
 
 outside :: Point -> Int -> Int -> Bool
-outside (x,y) _ _ | x < 0   || y < 0   = True
-outside (x,y) r c | x+1 > r || y+1 > c = True
-outside _ _ _     | otherwise          = False
+outside (x,y) r c
+  | x < 0   || y < 0   = True
+  | x+1 > r || y+1 > c = True
+  | otherwise          = False
 
 wrap :: Point -> Int -> Int -> Point
-wrap (x,y) r c | x < 0     = wrap (r+x, y) r c
-               | y < 0     = wrap (x, c+y) r c
-               | x+1 > r   = wrap (r-x, y)  r c
-               | y+1 > c   = wrap (x, c-y) r c
-               | otherwise = (x,y)
+wrap (x,y) r c
+  | x < 0     = wrap (r+x, y) r c
+  | y < 0     = wrap (x, c+y) r c
+  | x+1 > r   = wrap (r-x, y)  r c
+  | y+1 > c   = wrap (x, c-y) r c
+  | otherwise = (x,y)
 
 reflect :: Point -> Int -> Int -> Point
-reflect (x,y) r c | x < 0     = reflect (0, y) r c
-                  | y < 0     = reflect (x, 0) r c
-                  | x+1 > r   = reflect (r-1, y)  r c
-                  | y+1 > c   = reflect (x, c-1) r c
-                  | otherwise = (x,y)
+reflect (x,y) r c
+  | x < 0     = reflect (0, y) r c
+  | y < 0     = reflect (x, 0) r c
+  | x+1 > r   = reflect (r-1, y)  r c
+  | y+1 > c   = reflect (x, c-1) r c
+  | otherwise = (x,y)
 
 fill :: Matrix -> Matrix
 fill m = map f m where

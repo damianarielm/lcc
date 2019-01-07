@@ -8,7 +8,7 @@ import UI.NCurses (Color (..))
 
 %name parse
 %tokentype { Token }
-%error { parseError }
+%error { error "Error de parseo en automata" }
 
 %token
   Chebyshev     { TChebyshev }
@@ -65,12 +65,12 @@ Color      : Black                                                          { Co
            | White                                                          { ColorWhite }
 
 Rules      ::                                                               { [Rule] }
-Rules      : State Eq '\'' Char '\'' ':' '\'' Char '\'' Rules               { ([State $4], $8) : $10 }
-	   | State Eq '\'' Char '\'' Comparsion ':' '\'' Char '\'' Rules    { ((State $4 : $6), $9) : $11  }
+Rules      : State Eq '\'' Char '\'' ':' '\'' Char '\'' Rules               { ($4,[], $8) : $10 }
+	   | State Eq '\'' Char '\'' Comparsion ':' '\'' Char '\'' Rules    { ($4, $6, $9) : $11  }
            | {- empty -}                                                    { [] }
 
 Comparsion ::                                                               { [Condition] }
-Comparsion : And Distance '(' '\'' Char '\'' ',' Int ')' Cmp Int Comparsion { (Chebyshev $5 $8 $10 $11) : $12 } 
+Comparsion : And Distance '(' '\'' Char '\'' ',' Int ')' Cmp Int Comparsion { ($2 $5 $8 $10 $11) : $12 } 
 	   | And Cardinal '(' Int ')' Cmp '\'' Char '\'' Comparsion         { ($2 $4 $6 $8) : $10 }
 	   | {- empty -}                                                    { [] }
 
@@ -97,9 +97,6 @@ Cmp        : Eq                                                             { (=
            | Neq                                                            { (/=) }
 
 {
-parseError :: [Token] -> a
-parseError ts = error $ "La lista de tokens es: " ++ show ts
-
 lexer :: String -> [Token]
 lexer [] = []
 lexer ('\'':c:'\'':cs) = TApostrophe : (TChar c) : TApostrophe : lexer cs
@@ -113,11 +110,11 @@ lexer ('>':cs)     = TGreater : lexer cs
 lexer ('(':cs)     = TPOpen : lexer cs
 lexer (')':cs)     = TPClose : lexer cs
 lexer (',':cs)     = TSemiColon : lexer cs
+lexer (':':cs)     = TColon : lexer cs
 lexer (c:cs)
       | isSpace c  = lexer cs
       | isAlpha c  = lexVar (c:cs)
       | isDigit c  = lexNum (c:cs)
-lexer (':':cs)     = TColon : lexer cs
 
 lexNum cs = TInt (read num) : lexer rest where
             (num, rest) = span isDigit cs
