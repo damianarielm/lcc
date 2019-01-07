@@ -1,6 +1,18 @@
 # DSL: Automatas Celulares
 ## Dependencias
-apt install c2hs & cabal install ncurses
+Para poder correr el programa debera contar con un compilador de Haskell y la libreria UI.NCurses.
+Puede installar el compilador de Haskell GHC con la instruccion:
+```shell
+apt install gch
+```
+Para instalar la libreria UI.NCurses necesitara instalar previamente los paquetes c2hs y cabal-install que podra instalar de la siguiente manera:
+```shell
+apt install cabal-install c2hs
+```
+A continuacion bastara con ejecutar:
+```shell
+cabal install ncurses
+```
 ## Manual de uso
 ### Instrucciones de compilacion
 #### Generacion de parser
