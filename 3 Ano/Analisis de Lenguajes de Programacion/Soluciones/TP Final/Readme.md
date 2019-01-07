@@ -28,11 +28,15 @@ donde *AUTOMATA* es el archivo de definicion del automata y *INICIAL* es el esta
 De lo contrario puede ejecutar el programa de la siguiente manera:
 ```shell
 runhaskell --ghc-arg=-XRankNTypes Main.hs AUTOMATA INICIAL [FRONTIER START FRAMES SKIP TIME]
-```shell
+```
 #### Opciones
-- *FRONTIER*:
-- *START*:
-- *FRAMES*:
-- *SKIP*:
-- *TIME*:
+- *FRONTIER*: Determina el tipo de frontera del automata. Las opciones disponibles son:
+  - *Wrap*: Se considera al universo como si sus extremos se tocaran.
+  - *Reflect*: Se considera que las celulas fuera del univers reflejan los valores de aquellas dentro del universo.
+  - *c*: Se considera que las celulas fuera del universo tienen todas el valor fijo *c*.
+- *START*: Generacion inicial del automata.
+- *FRAMES*: Generaciones totales del automata.
+- *SKIP*: Salto entre generaciones.
+- *TIME*: Pausa entre generaciones.
 #### Ejemplos
+## Definicion de automatas
