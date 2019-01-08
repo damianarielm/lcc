@@ -829,7 +829,40 @@ luego, dividiendo por
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Puesto que 
+\begin_inset Formula $f\left(n\right)\in O\left[g\left(n\right)\right]$
+\end_inset
+
+ sabemos que existen 
+\begin_inset Formula $n_{0},c$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\forall n\geq n_{0}:0\leq f\left(n\right)\leq cg\left(n\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $k\in\mathbb{R}^{+}$
+\end_inset
+
+, luego multiplicando por 
+\begin_inset Formula $k$
+\end_inset
+
+ en la inecuacion anterior obtenemos: 
+\begin_inset Formula 
+\[
+\forall n\geq n_{0}:0\leq kf\left(n\right)\leq kcg\left(n\right)
+\]
+
+\end_inset
+
+es decir, 
+\begin_inset Formula $kf\in O\left(g\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -869,13 +902,65 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $n_{0}>a$
+\end_inset
+
+ luego: 
+\begin_inset Formula $\forall n\geq n_{0}:0\leq\left(n+a\right)^{b}\leq\left(2n\right)^{b}=2^{b}n^{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $n_{0}\geq0$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+\forall n\geq n_{0}:0\leq a\iff0\leq n\leq n+a\iff0\leq n^{b}\leq\left(n+a\right)^{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0\leq b^{n}\leq b^{n}=\left(1/b^{a}\right)b^{a}b^{n}=\left(1/b^{a}\right)b^{n+a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0\leq\left(1/b^{a}\right)b^{n+a}\leq\left(1/b^{a}\right)b^{n+a}=b^{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Demostrar que dadas dos funciones 
@@ -922,6 +1007,10 @@ Encontrar dos funciones
 
 .
  Probar la respuesta.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper

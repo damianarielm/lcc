@@ -1,8 +1,9 @@
 # DSL: Automatas Celulares
 ## Descripcion
 ### Idea general
-El presente lenguaje de dominio especifico pretende permitir indicar el comportamiento de automatas celulares, asi como tambien observar su comportamiento.
-La motivacion principal es proveer una manera sencilla y general de estudiarlos, sin necesidad de tener conocimientos de programacion.
+El presente lenguaje de dominio especifico pretende permitir indicar el comportamiento de automatas celulares, asi como tambien observar su evolucion.
+
+La motivacion principal es proveer una manera sencilla y general de estudiarlos, sin necesidad de tener conocimientos previos de programacion.
 ### Alcances
 Es posible especificar automatas en terminos de vecindad de Moore y vecindad de von Neumann, con funciones de transicion que pueden contar y comprar elementos de su vecindad.
 ## Dependencias
@@ -58,9 +59,12 @@ runhaskell --ghc-arg=-XRankNTypes Main.hs AUTOMATA INICIAL [FRONTIER START FRAME
 - *TIME*: Milisegundos de pausa entre generaciones.
 ## Definicion de automatas
 ### Gramatica
+COMPLETAR:
 ### Ejemplos
+COMPLETAR
 ## Informacion adicional
 ### Distribucion de modulos
+COMPLETAR
 ### Bibliografia
 Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia* que sirvieron de ayuda e inspiracion en este trabajo:
 - [Automata Celular](https://es.wikipedia.org/wiki/Aut%C3%B3mata_celular)
@@ -70,10 +74,12 @@ Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia*
 - [Geometria del taxista](https://es.wikipedia.org/wiki/Geometr%C3%ADa_del_taxista)
 - [Juego de la Vida](https://es.wikipedia.org/wiki/Juego_de_la_vida)
 - [Hormiga de Langton](https://es.wikipedia.org/wiki/Hormiga_de_Langton)
-- [Seeds](https://en.wikipedia.org/wiki/Seeds_(cellular_automaton)
+- [Seeds](https://en.wikipedia.org/wiki/Seeds_(cellular_automaton))
 - [Brian's Brain](https://en.wikipedia.org/wiki/Brian%27s_Brain)
 - [Wireworld](https://en.wikipedia.org/wiki/Wireworld)
+
 Sirvieron ademas de inspiracion la documentacion de [Happy](https://www.haskell.org/happy/doc/html/sec-using.html) y de [UI.NCurses](http://hackage.haskell.org/package/ncurses).
 ### Acerca del autor
 Mi nombre es Damian Ariel, soy estudiante del tercer año de la carrera de Licenciatura en Ciencias de la Computacion en la Facultad de Ciencias Exactas, Ingenieria y Agrimensura de la ciudad de Rosario.
+
 Este trabajo fue presentado en el marco de la catedra de Analisis de Lenguajes de Programacion.
