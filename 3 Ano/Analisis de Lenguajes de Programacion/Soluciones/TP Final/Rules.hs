@@ -27,7 +27,7 @@ neighbours f c (i,j) m n d = length $ filter (== c) [frontier f (x,y) m | (x,y) 
 makeTransition :: Frontier -> [[Rule]] -> Transition
 makeTransition _ [] (x,y) m = m !!! (x,y)
 makeTransition f (conditions@((c,_,_):_):rules) (x,y) m
-  | c == (m !! x !! y) = tryConditions f conditions rules (x,y) m
+  | c == (m !!! (x,y)) = tryConditions f conditions rules (x,y) m
   | otherwise          = makeTransition f rules (x,y) m
 
 tryConditions :: Frontier -> [Rule] -> [[Rule]] -> Transition

@@ -1,9 +1,10 @@
 module Types where
 
+import Data.Vector (Vector)
 import UI.NCurses (Color, ColorID)
 
-type Matrix = [String]
-type Animation = [Matrix]
+type Matrix = Vector (Vector Char)
+type Animation = Vector Matrix
 type Point  = (Int, Int)
 type Neighbours = Point -> Int -> [Point]
 type Transition = Point -> Matrix -> Char

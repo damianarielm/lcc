@@ -35,7 +35,7 @@ happy Parser.y
 #### Programa principal
 Para compilar el programa basta escribir la orden:
 ```shell
-ghc Main.hs -XRankNTypes
+ghc Main.hs -XRankNTypes -O2
 ```
 ### Instrucciones de ejecucion
 #### Linea de comandos
@@ -48,15 +48,16 @@ De lo contrario puede ejecutar el programa de la siguiente manera:
 ```shell
 runhaskell --ghc-arg=-XRankNTypes Main.hs AUTOMATA INICIAL [FRONTIER START FRAMES SKIP TIME]
 ```
+Sin embargo si opta por esta manera, la perfomance sera notablemente mas baja.
 #### Opciones
-- *FRONTIER*: Determina el tipo de frontera del automata. Las opciones disponibles son:
+- *FRONTIER*: Determina el tipo de frontera del automata. Valor por defecto: *Wrap*. Las opciones disponibles son:
   - *Wrap*: Se considera al universo como si sus extremos se tocaran.
   - *Reflect*: Se considera que las celulas fuera del univers reflejan los valores de aquellas dentro del universo.
   - *c*: Se considera que las celulas fuera del universo tienen todas el valor fijo *c*.
-- *START*: Numero de generacion inicial del automata.
-- *FRAMES*: Numero de generaciones totales del automata.
-- *SKIP*: Salto entre generaciones.
-- *TIME*: Milisegundos de pausa entre generaciones.
+- *START*: Numero de generacion inicial del automata. Valor por defecto: 0.
+- *FRAMES*: Numero de generaciones totales del automata. Valor por defecto: 10900.
+- *SKIP*: Salto entre generaciones. Valor por defecto: 0.
+- *TIME*: Milisegundos de pausa entre generaciones. Valor por defecto: 0.
 ## Definicion de automatas
 ### Gramatica
 COMPLETAR:
@@ -78,7 +79,7 @@ Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia*
 - [Brian's Brain](https://en.wikipedia.org/wiki/Brian%27s_Brain)
 - [Wireworld](https://en.wikipedia.org/wiki/Wireworld)
 
-Sirvieron ademas de inspiracion la documentacion de [Happy](https://www.haskell.org/happy/doc/html/sec-using.html) y de [UI.NCurses](http://hackage.haskell.org/package/ncurses).
+Sirvieron ademas de inspiracion la documentacion de [Happy](https://www.haskell.org/happy/doc/html/sec-using.html) y de [UI.NCurses](http://hackage.haskell.org/package/ncurses), asi como tambien el libro [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/) de Miran Lipovača.
 ### Acerca del autor
 Mi nombre es Damian Ariel, soy estudiante del tercer año de la carrera de Licenciatura en Ciencias de la Computacion en la Facultad de Ciencias Exactas, Ingenieria y Agrimensura de la ciudad de Rosario.
 

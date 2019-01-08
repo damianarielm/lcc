@@ -1,15 +1,17 @@
 module Matrix where
 
+import Prelude as P hiding (length, maximum, (++), replicate)
+import Data.Vector as V ((!), length, maximum, map, (++), replicate, fromList)
 import Types (Point, Matrix, Transition)
 
 (!!!) :: Matrix -> Point -> Char
-(!!!) m (x,y) = m !! x !! y
+(!!!) m (x,y) = m ! x ! y
 
 rows :: Matrix -> Int
 rows = length
 
 cols :: Matrix -> Int
-cols = maximum . map length
+cols = maximum . V.map length
 
 outside :: Point -> Int -> Int -> Bool
 outside (x,y) r c
@@ -34,14 +36,14 @@ reflect (x,y) r c
   | otherwise = (x,y)
 
 fill :: Matrix -> Matrix
-fill m = map f m where
+fill m = V.map f m where
          c = cols m
          f r = r ++ (replicate (c - (length r)) ' ')
 
 fromString :: String -> Matrix
-fromString = fill . lines
+fromString = fill . fromList . P.map fromList . lines
 
 step :: Transition -> Matrix -> Matrix
 step f m = let r = (rows m) - 1
                c = (cols m) - 1
-           in [ [f (i,j) m | j <- [0..c]] | i <- [0..r] ]
+           in fromList $ P.map fromList [ [f (i,j) m | j <- [0..c]] | i <- [0..r] ]

@@ -4,13 +4,15 @@ import Types
 import Matrix
 import Rules
 import UI.NCurses
+import Prelude hiding (drop, null, head, tail)
+import Data.Vector as V (drop, null, head, tail, iterateN, toList)
 import Parser (lexer, parse)
 import System.Environment (getArgs, getProgName)
 
 parseCmd :: [String] -> (String, String, Frontier, Int, Int, Int, Int)
-parseCmd (a:i:[]) = (a,i,Wrap,0,0,0,0)
-parseCmd (a:i:f:[]) = (a,i,read f,0,0,0,0)
-parseCmd (a:i:f:s:[]) = (a,i,read f,read s,0,0,0)
+parseCmd (a:i:[]) = (a,i,Wrap,0,10900,0,0)
+parseCmd (a:i:f:[]) = (a,i,read f,0,10900,0,0)
+parseCmd (a:i:f:s:[]) = (a,i,read f,read s,10900,0,0)
 parseCmd (a:i:f:s:e:[]) = (a,i,read f,read s,read e,0,0)
 parseCmd (a:i:f:s:e:k:[]) = (a,i,read f,read s,read e,read k,0)
 parseCmd (a:i:f:s:e:k:t:r) = (a,i,read f,read s,read e,read k, read t)
@@ -23,8 +25,7 @@ readConfig args =
          m = fromString s
          r = toInteger $ rows m + 3
          c = toInteger $ cols m + 2
-         x = drop start $ iterate (step $ makeTransition frontier (optimize rules)) m
-         animation = if frames == 0 then x else take frames x
+         animation = drop start $ iterateN frames (step $ makeTransition frontier (optimize rules)) m
      return (states, r, c, animation, start, toInteger time, skip)
 
 startCurses (states,r,c,animation,start,time,skip) = runCurses $ do
@@ -44,32 +45,41 @@ main = do prog <- getProgName
                   startCurses config
 
 play :: Animation -> Window -> Int -> ColorTable -> Integer -> Int -> Curses ()
-play []     w g _ s x = do updateWindow w $ do
-                             moveCursor 1 1
-                             drawString $ "Generacion: " ++ show g ++ ". Fin de la simulacion."
-                           render
-                           getEvent w Nothing
-                           return ()
-play (f:fs) w g t s x = do updateWindow w $ do
-                             drawBorder Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
-                             moveCursor 1 1
-                             drawString $ "Generacion: " ++ show g
-                             frame 2 f t
-                           render
-                           handleKeys w x fs g t s
+play a w g t s x | null a = do updateWindow w $ do
+                                 moveCursor 1 1
+                                 drawString $ "Generacion: " ++ show g ++ ". Fin de la simulacion."
+                               render
+                               getEvent w Nothing
+                               return ()
+                 | otherwise = let (f,fs) = (head a, tail a)
+                               in do updateWindow w $ do
+                                       drawBorder Nothing Nothing Nothing Nothing Nothing Nothing Nothing Nothing
+                                       moveCursor 1 1
+                                       drawString $ "Generacion: " ++ show g
+                                       frame 2 f t
+                                     render
+                                     e <- getEvent w (Just 0)
+                                     handleKeys w x fs g t s e
 
-handleKeys w x fs g t s = do e <- getEvent w (Just 0)
-                             if e == Just (EventCharacter ' ') 
-                             then do getEvent w Nothing
-                                     play (drop x fs) w (g+x+1) t s x
-                             else do getEvent w (Just s)
-                                     play (drop x fs) w (g+x+1) t s x
+handleKeys w x fs g t s e
+  | e == (Just (EventCharacter ' ')) = do getEvent w Nothing
+                                          play (drop x fs) w (g+x+1) t s x
+  | e == (Just (EventSpecialKey KeyRightArrow)) = do updateWindow w $ do
+                                                       frame 2 (head fs) t
+                                                       moveCursor 1 1
+                                                       drawString $ "Generacion: " ++ show (g+1)
+                                                     render
+                                                     e' <- getEvent w Nothing
+                                                     handleKeys w x (drop 1 fs) (g+1) t s e'
+  | otherwise = do getEvent w (Just s)
+                   play (drop x fs) w (g+x+1) t s x
 
 frame :: Integer -> Matrix -> ColorTable -> Update ()
-frame _ []         _ = do return ()
-frame r (row:rest) t = do moveCursor r 1
-                          mapM_ drawGlyph [paint c t | c <- row]
-                          frame (r+1) rest t
+frame r m t | null m  = do return ()
+            | otherwise = let (row, rest) = (head m, tail m)
+                          in do moveCursor r 1
+                                mapM_ drawGlyph [paint c t | c <- toList row]
+                                frame (r+1) rest t
 
 paint :: Char -> ColorTable -> Glyph
 paint c l = let l' = filter ((==c) . fst') l
