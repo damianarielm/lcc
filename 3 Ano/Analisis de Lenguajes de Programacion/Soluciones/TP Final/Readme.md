@@ -35,7 +35,7 @@ happy Parser.y
 #### Programa principal
 Para compilar el programa basta escribir la orden:
 ```shell
-ghc Main.hs -XRankNTypes -O2
+ghc Main.hs -O2
 ```
 ### Instrucciones de ejecucion
 #### Linea de comandos
@@ -46,14 +46,14 @@ Si dispone del programa ya compilado puede utilizar la siguiente instruccion par
 donde *AUTOMATA* es el archivo de definicion del automata y *INICIAL* es el estado inicial.
 De lo contrario puede ejecutar el programa de la siguiente manera:
 ```shell
-runhaskell --ghc-arg=-XRankNTypes Main.hs AUTOMATA INICIAL [FRONTIER START FRAMES SKIP TIME]
+runhaskell Main.hs AUTOMATA INICIAL [FRONTIER START FRAMES SKIP TIME]
 ```
 Sin embargo si opta por esta manera, la perfomance sera notablemente mas baja.
 #### Opciones
 - *FRONTIER*: Determina el tipo de frontera del automata. Valor por defecto: *Wrap*. Las opciones disponibles son:
   - *Wrap*: Se considera al universo como si sus extremos se tocaran.
   - *Reflect*: Se considera que las celulas fuera del univers reflejan los valores de aquellas dentro del universo.
-  - *c*: Se considera que las celulas fuera del universo tienen todas el valor fijo *c*.
+  - *"Open" 'c'"*: Se considera que las celulas fuera del universo tienen todas el valor fijo *c*.
 - *START*: Numero de generacion inicial del automata. Valor por defecto: 0.
 - *FRAMES*: Numero de generaciones totales del automata. Valor por defecto: 10900.
 - *SKIP*: Salto entre generaciones. Valor por defecto: 0.

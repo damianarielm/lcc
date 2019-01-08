@@ -1,4 +1,6 @@
 {-# OPTIONS_GHC -w #-}
+{-# LANGUAGE RankNTypes #-}
+
 module Parser where
 
 import Types 

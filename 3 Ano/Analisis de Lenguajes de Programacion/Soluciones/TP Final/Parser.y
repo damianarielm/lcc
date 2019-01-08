@@ -1,4 +1,6 @@
 {
+{-# LANGUAGE RankNTypes #-}
+
 module Parser where
 
 import Types 
