@@ -1,11 +1,17 @@
 # DSL: Automatas Celulares
+## Descripcion
+### Idea general
+El presente lenguaje de dominio especifico pretende permitir indicar el comportamiento de automatas celulares, asi como tambien observar su comportamiento.
+La motivacion principal es proveer una manera sencilla y general de estudiarlos, sin necesidad de tener conocimientos de programacion.
+### Alcances
+Es posible especificar automatas en terminos de vecindad de Moore y vecindad de von Neumann, con funciones de transicion que pueden contar y comprar elementos de su vecindad.
 ## Dependencias
 Para poder correr el programa debera contar con un compilador de *Haskell* y la libreria *UI.NCurses*.
 Si utiliza *Ubuntu*, puede instalar el compilador *GHC* con la instruccion:
 ```shell
 sudo apt install ghc
 ```
-Para instalar la libreria *UI.NCurses* necesitara instalar previamente los paquetes *c2hs* y *cabal-install* que podra instalar en *Ubuntu* de la siguiente manera:
+Para instalar la libreria *UI.NCurses* necesitara instalar previamente los paquetes *c2hs* y *cabal-install* para lo cual en *Ubuntu* puede utilizar el siguiente comando:
 ```shell
 sudo apt install cabal-install c2hs
 ```
@@ -17,7 +23,7 @@ sudo cabal install ncurses
 ### Instrucciones de compilacion
 #### Generacion de parser
 Si por alguna razon desea modificar el modulo de parseo, debera contar con la herramienta de generacion de parsers *Happy*.
-Para instalar dicha herramienta puede utilizar la instruccion:
+Para instalar dicha herramienta en *Ubuntu* puede utilizar la instruccion:
 ```shell
 sudo cabal install happy
 ```
@@ -46,13 +52,28 @@ runhaskell --ghc-arg=-XRankNTypes Main.hs AUTOMATA INICIAL [FRONTIER START FRAME
   - *Wrap*: Se considera al universo como si sus extremos se tocaran.
   - *Reflect*: Se considera que las celulas fuera del univers reflejan los valores de aquellas dentro del universo.
   - *c*: Se considera que las celulas fuera del universo tienen todas el valor fijo *c*.
-- *START*: Generacion inicial del automata.
-- *FRAMES*: Generaciones totales del automata.
+- *START*: Numero de generacion inicial del automata.
+- *FRAMES*: Numero de generaciones totales del automata.
 - *SKIP*: Salto entre generaciones.
-- *TIME*: Pausa entre generaciones.
+- *TIME*: Milisegundos de pausa entre generaciones.
 ## Definicion de automatas
 ### Gramatica
 ### Ejemplos
 ## Informacion adicional
-### Inspiracion
+### Distribucion de modulos
+### Bibliografia
+Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia* que sirvieron de ayuda e inspiracion en este trabajo:
+- [Automata Celular](https://es.wikipedia.org/wiki/Aut%C3%B3mata_celular)
+- [Vecindad de Moore](https://es.wikipedia.org/wiki/Juego_de_la_vida)
+- [Vecindad de von Neumann](https://es.wikipedia.org/wiki/Vecindad_de_von_Neumann)
+- [Distancia de Chebyshov](https://es.wikipedia.org/wiki/Distancia_de_Chebyshov)
+- [Geometria del taxista](https://es.wikipedia.org/wiki/Geometr%C3%ADa_del_taxista)
+- [Juego de la Vida](https://es.wikipedia.org/wiki/Juego_de_la_vida)
+- [Hormiga de Langton](https://es.wikipedia.org/wiki/Hormiga_de_Langton)
+- [Seeds](https://en.wikipedia.org/wiki/Seeds_(cellular_automaton)
+- [Brian's Brain](https://en.wikipedia.org/wiki/Brian%27s_Brain)
+- [Wireworld](https://en.wikipedia.org/wiki/Wireworld)
+Sirvieron ademas de inspiracion la documentacion de [Happy](https://www.haskell.org/happy/doc/html/sec-using.html) y de [UI.NCurses](http://hackage.haskell.org/package/ncurses).
 ### Acerca del autor
+Mi nombre es Damian Ariel, soy estudiante del tercer año de la carrera de Licenciatura en Ciencias de la Computacion en la Facultad de Ciencias Exactas, Ingenieria y Agrimensura de la ciudad de Rosario.
+Este trabajo fue presentado en el marco de la catedra de Analisis de Lenguajes de Programacion.

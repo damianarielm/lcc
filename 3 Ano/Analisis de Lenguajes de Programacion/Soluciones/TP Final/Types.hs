@@ -7,6 +7,7 @@ type Animation = [Matrix]
 type Point  = (Int, Int)
 type Neighbours = Point -> Int -> [Point]
 type Transition = Point -> Matrix -> Char
+type State = (Char, Char, Color, Color)
 type ColorTable = [(Char, Char, ColorID)]
 type Rule = (Char, [Condition], Char)
 

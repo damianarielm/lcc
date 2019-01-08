@@ -47,10 +47,10 @@ import UI.NCurses (Color (..))
 
 %%
 
-Automata   ::                                                               { ([(Char,Char,Color,Color)], [Rule]) }
+Automata   ::                                                               { ([State], [Rule]) }
 Automata   : States Rules                                                   { ($1, $2) }
 
-States     ::                                                               { [(Char,Char,Color,Color)] }
+States     ::                                                               { [State] }
 States     : '\'' Char '\'' ':' '\'' Char '\'' Color Color States           { ($2, $6, $8, $9) : $10 }
            | {- empty -}                                                    { [] }
 

@@ -14,8 +14,8 @@ import Control.Monad (ap)
 data HappyAbsSyn 
 	= HappyTerminal (Token)
 	| HappyErrorToken Int
-	| HappyAbsSyn4 (([(Char,Char,Color,Color)], [Rule]))
-	| HappyAbsSyn5 ([(Char,Char,Color,Color)])
+	| HappyAbsSyn4 (([State], [Rule]))
+	| HappyAbsSyn5 ([State])
 	| HappyAbsSyn6 (Color)
 	| HappyAbsSyn7 ([Rule])
 	| HappyAbsSyn8 ([Condition])

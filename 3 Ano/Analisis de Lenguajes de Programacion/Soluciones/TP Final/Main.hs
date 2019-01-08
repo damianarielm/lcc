@@ -3,9 +3,9 @@ module Main where
 import Types
 import Matrix
 import Rules
+import UI.NCurses
 import Parser (lexer, parse)
 import System.Environment (getArgs, getProgName)
-import UI.NCurses -- apt install c2hs & cabal install ncurses 
 
 parseCmd :: [String] -> (String, String, Frontier, Int, Int, Int, Int)
 parseCmd (a:i:[]) = (a,i,Wrap,0,0,0,0)
@@ -27,13 +27,12 @@ readConfig args =
          animation = if frames == 0 then x else take frames x
      return (states, r, c, animation, start, toInteger time, skip)
 
-startCurses (states,r,c,animation,start,time,skip) =
-  runCurses $ do
-    colors <- sequence [newColorID c1 c2 i | ((_, _, c1, c2), i) <- zip states [1..]]
-    setCursorMode CursorInvisible
-    setEcho False
-    w <- newWindow r c 0 0
-    play animation w start (zipWith (\(c1,c2,_,_) c -> (c1,c2,c)) states colors) time skip
+startCurses (states,r,c,animation,start,time,skip) = runCurses $ do
+  colors <- sequence [newColorID c1 c2 i | ((_, _, c1, c2), i) <- zip states [1..]]
+  setCursorMode CursorInvisible
+  setEcho False
+  w <- newWindow r c 0 0
+  play animation w start (zipWith (\(c1,c2,_,_) c -> (c1,c2,c)) states colors) time skip
 
 main :: IO ()
 main = do prog <- getProgName
@@ -57,15 +56,17 @@ play (f:fs) w g t s x = do updateWindow w $ do
                              drawString $ "Generacion: " ++ show g
                              frame 2 f t
                            render
-                           e <- getEvent w (Just 0)
-                           case e of
-                             (Just (EventCharacter ' ')) -> do getEvent w Nothing
-                                                               play (drop x fs) w (g+x+1) t s x
-                             _ -> do getEvent w (Just s)
+                           handleKeys w x fs g t s
+
+handleKeys w x fs g t s = do e <- getEvent w (Just 0)
+                             if e == Just (EventCharacter ' ') 
+                             then do getEvent w Nothing
+                                     play (drop x fs) w (g+x+1) t s x
+                             else do getEvent w (Just s)
                                      play (drop x fs) w (g+x+1) t s x
 
 frame :: Integer -> Matrix -> ColorTable -> Update ()
-frame _ []         _ = do moveCursor 0 0
+frame _ []         _ = do return ()
 frame r (row:rest) t = do moveCursor r 1
                           mapM_ drawGlyph [paint c t | c <- row]
                           frame (r+1) rest t

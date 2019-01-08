@@ -21,15 +21,15 @@ wrap :: Point -> Int -> Int -> Point
 wrap (x,y) r c
   | x < 0     = wrap (r+x, y) r c
   | y < 0     = wrap (x, c+y) r c
-  | x+1 > r   = wrap (r-x, y)  r c
+  | x+1 > r   = wrap (r-x, y) r c
   | y+1 > c   = wrap (x, c-y) r c
   | otherwise = (x,y)
 
 reflect :: Point -> Int -> Int -> Point
 reflect (x,y) r c
-  | x < 0     = reflect (0, y) r c
-  | y < 0     = reflect (x, 0) r c
-  | x+1 > r   = reflect (r-1, y)  r c
+  | x < 0     = reflect (0, y)   r c
+  | y < 0     = reflect (x, 0)   r c
+  | x+1 > r   = reflect (r-1, y) r c
   | y+1 > c   = reflect (x, c-1) r c
   | otherwise = (x,y)
 
