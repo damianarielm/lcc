@@ -7,7 +7,7 @@ La motivacion principal es proveer una manera sencilla y general de estudiarlos,
 ### Alcances
 Es posible especificar automatas en terminos de vecindad de Moore y vecindad de von Neumann, con funciones de transicion que pueden contar y comprar elementos de su vecindad.
 ## Dependencias
-Para poder correr el programa debera contar con un compilador de *Haskell* y la libreria *UI.NCurses*.
+Para poder correr el programa debera contar con un compilador de *Haskell* y las libreria *UI.NCurses* y *Data.Vector*.
 Si utiliza *Ubuntu*, puede instalar el compilador *GHC* con la instruccion:
 ```shell
 sudo apt install ghc
@@ -18,7 +18,7 @@ sudo apt install cabal-install c2hs
 ```
 A continuacion bastara con ejecutar:
 ```shell
-sudo cabal install ncurses
+sudo cabal install ncurses vector
 ```
 ## Manual de uso
 ### Instrucciones de compilacion
@@ -60,12 +60,12 @@ Sin embargo si opta por esta manera, la perfomance sera notablemente mas baja.
 - *TIME*: Milisegundos de pausa entre generaciones. Valor por defecto: 0.
 ## Definicion de automatas
 ### Gramatica
-COMPLETAR:
+COMPLETAR.
 ### Ejemplos
-COMPLETAR
+COMPLETAR.
 ## Informacion adicional
 ### Distribucion de modulos
-COMPLETAR
+COMPLETAR.
 ### Bibliografia
 Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia* que sirvieron de ayuda e inspiracion en este trabajo:
 - [Automata Celular](https://es.wikipedia.org/wiki/Aut%C3%B3mata_celular)
