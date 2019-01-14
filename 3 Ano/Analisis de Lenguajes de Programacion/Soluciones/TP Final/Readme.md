@@ -66,6 +66,15 @@ COMPLETAR.
 ## Informacion adicional
 ### Distribucion de modulos
 COMPLETAR.
+### Desiciones de diseño
+#### Libreria *UI.NCurses*
+Originalmente para mostrar el estado de un autiomata en pantalla se utilizaba la funcion `putStrLn` seguido de `clearScreen`. Sin embargo esto producia perdida de rendimiento y parpadeo en la pantalla.
+La libreria *UI.NCurses* no borra la pantalla, sino que redibuja sobre el estado anterior, y ademas solo lo hace en las partes de la pantalla que hayan cambiado. Esto soluciona ambos problemas.
+#### Libreria *Data.Vector*
+La perfomance ofrecida por las listas secuenciales de Haskell no son adecuadas para este programa, pues es necesario acceder a los diferentes elementos de un estado de manera eficiente.
+El acceso en tiempo constante ofrecido por esta libreria es una solucion a los problemas presentados en la implementacion original.
+#### Extension *XRankNTypes*
+COMPLETAR.
 ### Bibliografia
 Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia* que sirvieron de ayuda e inspiracion en este trabajo:
 - [Automata Celular](https://es.wikipedia.org/wiki/Aut%C3%B3mata_celular)

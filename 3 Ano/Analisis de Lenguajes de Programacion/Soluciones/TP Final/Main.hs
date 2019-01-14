@@ -15,7 +15,7 @@ parseCmd (a:i:f:[]) = (a,i,read f,0,10900,0,0)
 parseCmd (a:i:f:s:[]) = (a,i,read f,read s,10900,0,0)
 parseCmd (a:i:f:s:e:[]) = (a,i,read f,read s,read e,0,0)
 parseCmd (a:i:f:s:e:k:[]) = (a,i,read f,read s,read e,read k,0)
-parseCmd (a:i:f:s:e:k:t:r) = (a,i,read f,read s,read e,read k, read t)
+parseCmd (a:i:f:s:e:k:t:_) = (a,i,read f,read s,read e,read k, read t)
 
 readConfig args =
   do let (definition,initial,frontier,start,frames,skip,time) = parseCmd args
@@ -33,7 +33,7 @@ startCurses (states,r,c,animation,start,time,skip) = runCurses $ do
   setCursorMode CursorInvisible
   setEcho False
   w <- newWindow r c 0 0
-  play animation w start (zipWith (\(c1,c2,_,_) c -> (c1,c2,c)) states colors) time skip
+  play animation w start (zipWith (\(c1,c2,_,_) c5 -> (c1,c2,c5)) states colors) time skip
 
 main :: IO ()
 main = do prog <- getProgName
@@ -61,6 +61,7 @@ play a w g t s x | null a = do updateWindow w $ do
                                      e <- getEvent w (Just 0)
                                      handleKeys w x fs g t s e
 
+handleKeys :: Window -> Int -> Animation -> Int -> ColorTable -> Integer -> Maybe Event -> Curses ()
 handleKeys w x fs g t s e
   | e == (Just (EventCharacter ' ')) = do getEvent w Nothing
                                           play (drop x fs) w (g+x+1) t s x

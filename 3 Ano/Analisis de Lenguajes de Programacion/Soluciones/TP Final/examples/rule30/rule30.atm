@@ -1,0 +1,11 @@
+' ': ' ' Black Black
+'*': ' ' White White
+
+State == '*' && West(1) == '*' && East(1) == '*': ' '
+State == '*' && West(1) == '*' && East(1) == ' ': ' '
+State == ' ' && West(1) == '*' && East(1) == '*': ' '
+State == ' ' && West(1) == '*' && East(1) == ' ': '*'
+State == '*' && West(1) == ' ' && East(1) == '*': '*'
+State == '*' && West(1) == ' ' && East(1) == ' ': '*'
+State == ' ' && West(1) == ' ' && East(1) == '*': '*'
+State == ' ' && West(1) == ' ' && East(1) == '*': ' '

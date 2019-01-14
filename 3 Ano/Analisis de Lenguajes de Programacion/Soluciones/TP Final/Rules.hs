@@ -31,7 +31,7 @@ makeTransition f (conditions@((c,_,_):_):rules) (x,y) m
   | otherwise          = makeTransition f rules (x,y) m
 
 tryConditions :: Frontier -> [Rule] -> [[Rule]] -> Transition
-tryConditions f [] rules (x,y) m = m !!! (x,y)
+tryConditions _ [] _ (x,y) m = m !!! (x,y)
 tryConditions _ ((_,[],c'):_) _ _ _ = c'
 tryConditions f ((z,condition:conditions,c'):moreConditions) rules (x,y) m =
   case condition of
@@ -46,8 +46,9 @@ tryConditions f ((z,condition:conditions,c'):moreConditions) rules (x,y) m =
   SW    i cmp c       -> try cmp (frontier f (x+i,y-i) m) c
   SE    i cmp c       -> try cmp (frontier f (x+i,y+i) m) c
   where
-  try cmp o1 o2 | cmp o1 o2 = tryConditions f ((z,conditions,c'):moreConditions) rules (x,y) m
-  try cmp o1 o2 | otherwise = tryConditions f moreConditions rules (x,y) m
+  try cmp o1 o2
+    | cmp o1 o2 = tryConditions f ((z,conditions,c'):moreConditions) rules (x,y) m
+    | otherwise = tryConditions f moreConditions rules (x,y) m
 
 optimize :: [Rule] -> [[Rule]]
 optimize xs = groupBy (\(x,_,_) (y,_,_) -> x == y) $ sortBy (\(x,_,_) (y,_,_) -> compare x y) xs
