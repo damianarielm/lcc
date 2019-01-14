@@ -7,7 +7,7 @@ La motivacion principal es proveer una manera sencilla y general de estudiarlos,
 ### Alcances
 Es posible especificar automatas en terminos de vecindad de Moore y vecindad de von Neumann, con funciones de transicion que pueden contar y comprar elementos de su vecindad.
 ## Dependencias
-Para poder correr el programa debera contar con un compilador de *Haskell* y las libreria *UI.NCurses* y *Data.Vector*.
+Para poder compilar el programa debera contar con un compilador de *Haskell* y las libreria *UI.NCurses* y *Data.Vector*.
 Si utiliza *Ubuntu*, puede instalar el compilador *GHC* con la instruccion:
 ```shell
 sudo apt install ghc
@@ -37,6 +37,7 @@ Para compilar el programa basta escribir la orden:
 ```shell
 ghc Main.hs -O2
 ```
+El uso de la opcion *-O2* no es obligatorio, sin embargo el impacto en la perfomance es notorio.
 ### Instrucciones de ejecucion
 #### Linea de comandos
 Si dispone del programa ya compilado puede utilizar la siguiente instruccion para correr el programa:
@@ -78,7 +79,7 @@ El acceso en tiempo constante ofrecido por esta libreria es una solucion a los p
 #### Extension *XRankNTypes*
 Las funciones de comparacion tienen tipo `Int -> Int -> Bool` o `Char -> Char -> Bool`. Podemos generalizar esto como `Ord a => a -> a -> Bool`.
 
-Por una cuestion de diseño del generador de parsers Happy, esto no era posible. Inicialmente se opto por definir un nuevo tipo de datos que era manipulado por la funcion de observacion, sin embargo el uso de esta extension del lenguaje permitio implementar la idea original, logrando un codigo mas claro.
+Por una cuestion de diseño del generador de parsers *Happy*, esto no era posible. Inicialmente se opto por definir un nuevo tipo de datos que era manipulado por la funcion de observacion, sin embargo el uso de esta extension del lenguaje permitio implementar la idea original, logrando un codigo mas claro.
 ### Bibliografia
 Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia* que sirvieron de ayuda e inspiracion en este trabajo:
 - [Automata Celular](https://es.wikipedia.org/wiki/Aut%C3%B3mata_celular)
@@ -92,7 +93,7 @@ Para mayor conocimiento, puede consultar los siguientes articulos de *Wikipedia*
 - [Brian's Brain](https://en.wikipedia.org/wiki/Brian%27s_Brain)
 - [Wireworld](https://en.wikipedia.org/wiki/Wireworld)
 
-Sirvieron ademas de inspiracion la documentacion de [Happy](https://www.haskell.org/happy/doc/html/sec-using.html) y de [UI.NCurses](http://hackage.haskell.org/package/ncurses), asi como tambien el libro [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/) de Miran Lipovača.
+Tambien contribuyeron a la confeccion de este programa, la documentacion de [Happy](https://www.haskell.org/happy/doc/html/sec-using.html) y de [UI.NCurses](http://hackage.haskell.org/package/ncurses), asi como tambien el libro [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/) de Miran Lipovača y el material de estudio de la catedra de Analisis de Lenguajes de Programacion de la Facultad de Ciencias Exactas, Ingenieria y Agrimensura provisto por los profesores Mauro Jaskelioff, Cecilia Manzino, Aldana Ramirez y Juan Manuel Rabasedas.
 ### Acerca del autor
 Mi nombre es Damian Ariel, soy estudiante del tercer año de la carrera de Licenciatura en Ciencias de la Computacion en la Facultad de Ciencias Exactas, Ingenieria y Agrimensura de la ciudad de Rosario.
 
