@@ -1,0 +1,914 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Probar utilizando el método de sustitución que 
+\begin_inset Formula $T\left(n\right)\in O\left(\log_{2}\left(n\right)\right)$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+T\left(n\right)=\begin{cases}
+1 & n=1\\
+T\left(\left\lfloor n/2\right\rfloor \right)+1 & n>1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $n=2$
+\end_inset
+
+: 
+\begin_inset Formula $0\leq2=T\left(n\right)\leq2\log_{2}\left(n\right)=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo: Supongamos que para 
+\begin_inset Formula $n=1,\ldots,\left\lfloor \frac{k+1}{2}\right\rfloor ,\ldots,k$
+\end_inset
+
+ vale que 
+\begin_inset Formula $0\leq T\left(n\right)\leq2\log_{2}\left(n\right)$
+\end_inset
+
+.
+ Luego:
+\begin_inset Formula 
+\[
+T\left(k+1\right)=T\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+1\leq2\log_{2}\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+1\leq2\log_{2}\left(\frac{k+1}{2}\right)+1=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2\left[\log_{2}\left(k+1\right)-\log_{2}\left(2\right)\right]+1=2\log_{2}\left(k+1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $a,b\in\mathbb{R}^{+}$
+\end_inset
+
+, utilizar el método de sustitución para encontrar funciones 
+\begin_inset Formula $f\left(n\right)$
+\end_inset
+
+ tales que 
+\begin_inset Formula $T\left(n\right)\in\Theta\left[f\left(n\right)\right]$
+\end_inset
+
+ para las siguientes recurrencias:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=\begin{cases}
+a & n=1\\
+2T\left(\left\lfloor n/2\right\rfloor \right)+b & n>1
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=\begin{cases}
+a & n=1\\
+2T\left(\left\lfloor n/2\right\rfloor \right)+n & n>1
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Ayuda
+\emph default
+: Recuerde las propiedades:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\neq1\Rightarrow\sum_{j=0}^{n}ax^{j}=\frac{a-ax^{n+1}}{1-x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Notese que para 
+\begin_inset Formula $n=2^{k}$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+T\left(n\right)=2T\left(2^{k-1}\right)+b=2\left[2T\left(2^{k-2}\right)+b\right]+b=2^{2}T\left(2^{k-2}\right)+3b=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2^{3}T\left(2^{k-1}\right)+2^{2}b+2b+b=\ldots=2^{k}a+\sum_{i=0}^{k-1}2^{i}b=2^{k}a+b\sum_{i=0}^{k-1}2^{i}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2^{k}a+b\frac{1-2^{k}}{1-2}=2^{k}a-b\left(1-2^{k}\right)=2^{k}a-b+b2^{k}=2^{k}\left(a+b\right)-b=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=n\left(a+b\right)+b\in O\left(n\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in O\left(n\right)}$
+\end_inset
+
+: Probaremos por inducción que 
+\begin_inset Formula $\text{\ensuremath{0\leq T\left(n\right)\leq\left(a+b\right)n-b}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $n=1$
+\end_inset
+
+: 
+\begin_inset Formula $T\left(n\right)=a\leq a+b-b\leq n\left(a+b-b\right)=\left(a+b\right)n-nb\leq\left(a+b\right)n-b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo: Supongamos que para 
+\begin_inset Formula $n=1,\ldots,\left\lfloor \frac{k+1}{2}\right\rfloor ,\ldots,k$
+\end_inset
+
+ vale que 
+\begin_inset Formula $0\leq T\left(n\right)\leq\left(a+b\right)n-b$
+\end_inset
+
+.
+ Luego:
+\begin_inset Formula 
+\[
+T\left(k+1\right)=2T\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+b\leq2\left(a+b\right)\left\lfloor \frac{k+1}{2}\right\rfloor -2b+b=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2\left(a+b\right)\left\lfloor \frac{k+1}{2}\right\rfloor -b\leq\left(a+b\right)\left(k+1\right)-b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y como 
+\begin_inset Formula $b\geq0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $0\leq T\left(n\right)\leq\left(a+b\right)n-b\leq\left(a+b\right)n$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $T\left(n\right)\in O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in\Omega\left(n\right)}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que pasa para 
+\begin_inset Formula $n=2^{k}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+T\left(n\right)=2T\left(2^{k-1}\right)+2^{k}=2\left[2T\left(2^{k-2}\right)+2^{k-1}\right]+2^{k}=2^{2}T\left(2^{k-2}\right)+2\cdot2^{k-1}+2^{k}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2^{2}\left[2T\left(2^{k-3}\right)+2^{k-2}\right]+2\cdot2^{k-1}+2^{k}=2^{3}T\left(2^{k-3}\right)+2^{2}\cdot2^{k-2}+2\cdot2^{k-1}+2^{k}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=2^{3}T\left(2^{k-3}\right)+2^{k}+2^{k}+2^{k}=\ldots=2^{k}a+k2^{k}=na+\log_{2}\left(n\right)n\in O\left[n\log_{2}\left(n\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in O\left(n\right)}$
+\end_inset
+
+: Probaremos por inducción que 
+\begin_inset Formula $\text{\ensuremath{0\leq T\left(n\right)\leq cn\log_{2}\left(n\right)}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $n=2$
+\end_inset
+
+: 
+\begin_inset Formula $T\left(n\right)=a\leq cn\log_{2}\left(n\right)=2\iff a/2\leq c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo: Supongamos que para 
+\begin_inset Formula $n=1,\ldots,\left\lfloor \frac{k+1}{2}\right\rfloor ,\ldots,k$
+\end_inset
+
+ vale que 
+\begin_inset Formula $0\leq T\left(n\right)\leq cn\log_{2}\left(n\right)$
+\end_inset
+
+.
+ Luego:
+\begin_inset Formula 
+\[
+T\left(k+1\right)=2T\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+k+1\leq c\left(k+1\right)\log_{2}\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+k+1=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\leq c\left(k+1\right)\left[\log_{2}\left(k+1\right)-1\right]+k+1=c\left(k+1\right)\log_{2}\left(k+1\right)-\left(c-1\right)\left(k+1\right)
+\]
+
+\end_inset
+
+Finalmente, tomando 
+\begin_inset Formula $c=\max\left\{ a/2,1\right\} $
+\end_inset
+
+ vale:
+\begin_inset Formula 
+\[
+c\left(k+1\right)\log_{2}\left(k+1\right)-\left(1-c\right)\left(k+1\right)<c\left(k+1\right)\log_{2}\left(k+1\right)
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $T\left(n\right)\in O\left[n\log_{2}\left(n\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in\Omega\left(n\right)}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Utilice un árbol de recurrencia para encontrar una cota asintotica 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ para la recurrencia 
+\begin_inset Formula $T\left(n\right)=4T\left(\left\lceil n/2\right\rceil \right)+cn$
+\end_inset
+
+ donde 
+\begin_inset Formula $c$
+\end_inset
+
+ es una constante.
+ Verifique que la cota encontrada es correcta.
+\end_layout
+
+\begin_layout Enumerate
+Utilizar un arbol de recurrencia para obtener una cota asintotica para
+\begin_inset Formula 
+\[
+T\left(n\right)=\begin{cases}
+c' & n\leq a\\
+T\left(n-1\right)+T\left(a\right)+cn & n>a
+\end{cases}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $a\geq1$
+\end_inset
+
+, 
+\begin_inset Formula $c>0$
+\end_inset
+
+ son constantes.
+\end_layout
+
+\begin_layout Enumerate
+Utilizar el teorema maestro para encontrar cotas asintoticas 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ para las siguientes recurrencias (asumir que 
+\begin_inset Formula $T\left(1\right)>0$
+\end_inset
+
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=4T\left(n/2\right)+n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=4T\left(n/2\right)+n^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=4T\left(n/2\right)+n^{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para cada una de las siguientes funciones, determinar si son suaves o no.
+ Demostrar.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\ln\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n^{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar cotas asintoticas 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ para cada una de las siguientes recurrencias y demostrarlas.
+ Asumir que 
+\begin_inset Formula $T\left(1\right)>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=T\left(n/2\right)+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=T\left(n-1\right)+n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\left(n\right)=T\left(\left\lfloor \sqrt{n}\right\rfloor \right)+1$
+\end_inset
+
+.
+ Ayuda: use 
+\begin_inset Quotes fld
+\end_inset
+
+renombre de variable
+\begin_inset Quotes frd
+\end_inset
+
+ con 
+\begin_inset Formula $n=2^{k}$
+\end_inset
+
+.
+ En otras palabras, calcule primero una cota 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ para 
+\begin_inset Formula $T\circ2^{k}$
+\end_inset
+
+, usando 
+\begin_inset Formula $T\left(2^{k}\right)=T\left(\left\lfloor 2^{k/2}\right\rfloor \right)+1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dadas las siguientes definiciones en pseudocodigo de 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+exp1
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+exp2
+\end_layout
+
+\end_inset
+
+, calcular el trabajo de cada una de ellas y determinar que función es mas
+ eficiente.
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+exp1 0 = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+exp1 n = 2 * exp1 (n-1)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+exp2 0 = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+exp2 n = if   even n
+\end_layout
+
+\begin_layout Plain Layout
+
+         then square (exp2 (div n 2))
+\end_layout
+
+\begin_layout Plain Layout
+
+         else 2 * (exp2 (n-1))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dados los siguientes pseudocodigos que implementan distintos algoritmos
+ para invertir los elementos de una lista, calcular el trabajo de 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reverse1
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reverse2
+\end_layout
+
+\end_inset
+
+ y determinar que función es mas eficiente.
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+reverse1 :: [a] -> [a]
+\end_layout
+
+\begin_layout Plain Layout
+
+reverse1 []     = []
+\end_layout
+
+\begin_layout Plain Layout
+
+reverse1 (x:xs) = (reverse1 xs) ++ [x]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+(++) :: [a] -> [a]
+\end_layout
+
+\begin_layout Plain Layout
+
+(++) [] ys     = ys
+\end_layout
+
+\begin_layout Plain Layout
+
+(++) (x:xs) ys = x : (xs ++ ys)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+revStack :: [a] -> [a]
+\end_layout
+
+\begin_layout Plain Layout
+
+revStack [] ys     = ys
+\end_layout
+
+\begin_layout Plain Layout
+
+revStack (x:xs) ys = revStack xs (x:ys)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+reverse2 :: [a] -> [a]
+\end_layout
+
+\begin_layout Plain Layout
+
+reverse2 xs = revStack xs []
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dado el siguiente pseudocodigo de un algoritmo que construye un árbol binario
+ a partir de una lista:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data Tree a = Empty | Leaf a | Node (Tree a) (Tree a)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+split :: [a] -> ([a], [a])
+\end_layout
+
+\begin_layout Plain Layout
+
+split []     = ([], [])
+\end_layout
+
+\begin_layout Plain Layout
+
+split [x]    = ([x], [])
+\end_layout
+
+\begin_layout Plain Layout
+
+split (x:xs) = let (ys, zs) = split xs
+\end_layout
+
+\begin_layout Plain Layout
+
+               in (x:ys, y:zs)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+toTree :: [a] -> Tree a
+\end_layout
+
+\begin_layout Plain Layout
+
+toTree []       = Empty
+\end_layout
+
+\begin_layout Plain Layout
+
+toTree [x]      = Leaf x
+\end_layout
+
+\begin_layout Plain Layout
+
+toTree (x:y:xs) = let (ys, zs) = split (x:y:xs)
+\end_layout
+
+\begin_layout Plain Layout
+
+                      (t1, t2) = toTree ys ||| toTree zs
+\end_layout
+
+\begin_layout Plain Layout
+
+                  in Node t1 t2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Expresar las recurrencias correspondientes al trabajo y a la profundidad
+ de la función 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+toTree
+\end_layout
+
+\end_inset
+
+, asumiendo que 
+\begin_inset Formula $\text{\ensuremath{W_{split}\left(n\right)=S_{split}\left(n\right)=O\left(n\right)}}$
+\end_inset
+
+, siendo 
+\begin_inset Formula $n$
+\end_inset
+
+ la longitud de la lista que recibe.
+\end_layout
+
+\begin_layout Enumerate
+Resolver la recurrencia encontrada en el apartado anterior utilizando el
+ teorema maestro.
+ Expresar la solución utilizando la notación 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

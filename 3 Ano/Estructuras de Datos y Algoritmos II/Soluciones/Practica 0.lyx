@@ -850,7 +850,7 @@ Puesto que
 \begin_inset Formula $k$
 \end_inset
 
- en la inecuacion anterior obtenemos: 
+ en la inecuación anterior obtenemos: 
 \begin_inset Formula 
 \[
 \forall n\geq n_{0}:0\leq kf\left(n\right)\leq kcg\left(n\right)
@@ -922,7 +922,19 @@ Sea
 \end_layout
 
 \begin_layout Itemize
-Sea 
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $a\geq0$
+\end_inset
+
+: Sea 
 \begin_inset Formula $n_{0}\geq0$
 \end_inset
 
@@ -937,6 +949,31 @@ Sea
 
 \end_layout
 
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $a\leq0$
+\end_inset
+
+: Sea 
+\begin_inset Formula $\text{\ensuremath{n_{0}\geq-2a\iff-n_{0}\leq2a\iff-n_{0}/2\leq a}}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\forall n\geq n_{0}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+-\frac{n}{2}\leq a\iff n-\frac{n}{2}=\frac{n}{2}\leq n+a\iff\left(\frac{n}{2}\right)^{b}=\frac{1}{2^{b}}n^{b}\leq\left(n+a\right)^{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
@@ -989,6 +1026,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1007,10 +1048,6 @@ Encontrar dos funciones
 
 .
  Probar la respuesta.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1019,7 +1056,58 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $f\left(x\right)=\begin{cases}
+n^{2} & \text{si }n\text{ es impar}\\
+n & \text{si }n\text{ es par}
+\end{cases}$
+\end_inset
+
+ y 
+\begin_inset Formula $g\left(x\right)=\begin{cases}
+n & \text{si }n\text{ es impar}\\
+n^{2} & \text{si }n\text{ es par}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Supongamos 
+\begin_inset Formula $f\left(n\right)\in O\left[g\left(n\right)\right]$
+\end_inset
+
+, luego existen 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+ tales que:
+\begin_inset Formula 
+\[
+\forall n\geq n_{0}:0\leq f\left(n\right)\leq cg\left(n\right)
+\]
+
+\end_inset
+
+En particular para 
+\begin_inset Formula $n$
+\end_inset
+
+ impar 
+\begin_inset Formula $0\leq n^{2}\leq cn\iff0\leq n\leq c$
+\end_inset
+
+.
+ Absurdo.
+\end_layout
+
+\begin_layout Itemize
+Análogo.
 \end_layout
 
 \end_deeper
@@ -1040,10 +1128,29 @@ Probar usando propiedades aritméticas que
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}}i^{k}=1^{k}+2^{k}+\ldots+n^{k}\leq n^{k}+\ldots+n^{+}=nn^{k}=n^{k+1}$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{{\displaystyle \sum_{i=1}^{n}}i^{k}=1^{k}+\ldots+\left(\frac{n}{2}\right)^{k}+\ldots+n^{k}\geq\left(\frac{n}{2}\right)^{k}+\ldots+n^{k}\geq\left(\frac{n}{2}\right)^{k}+\ldots+\left(\frac{n}{2}\right)^{k}=}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left(\frac{n}{2}\right)\left(\frac{n}{2}\right)^{k}=\left(\frac{n}{2}\right)^{k+1}=\left(\frac{1}{2^{k+1}}\right)n^{k+1}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document
