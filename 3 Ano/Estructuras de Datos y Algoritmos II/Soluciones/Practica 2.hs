@@ -181,7 +181,17 @@ vmod (v:vs) = modulus v : vmod vs
 -- COMPLETAR
 
 -- Ejercicio 13
--- COMPLETAR
+divisors :: Int -> [Int]
+divisors x = [ y | y <- [1..x], mod x y == 0 ]
+
+matches :: Int -> [Int] -> [Int]
+matches x xs = [ y | y <- xs, x == y ]
+
+cuadruplas :: Int -> [(Int, Int, Int, Int)]
+cuadruplas = undefined -- COMPLETAR
+
+unique :: [Int] -> [Int]
+unique = undefined -- COMPLETAR
 
 -- Ejercicio 14
 scalarproduct xs ys = let zs = zip xs ys

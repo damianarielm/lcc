@@ -115,3 +115,14 @@ maximumBST (NodeB l x r)     = maximumBST r
 
 checkBST :: Ord a => BinTree a -> Bool
 checkBST = undefined -- COMPLETAR
+
+member :: Ord a => BinTree a -> a -> Bool
+member EmptyB _ = False
+member t@(NodeB l m r) x | x <= m = member' l x m
+                         | otherwise = member r x
+                         where member' EmptyB x y = x == y
+                               member' (NodeB l m r) x y | x <= m = member' l x m
+                                                         | otherwise = member' r x y
+
+data ColorRB  = R | B
+data RBTree a = EmptyRB | NodeRB ColorRB (RBTree a) a (RBTree a)
