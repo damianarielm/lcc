@@ -79,7 +79,7 @@
 
 \begin_layout Enumerate
 Probar utilizando el método de sustitución que 
-\begin_inset Formula $T\left(n\right)\in O\left(\log_{2}\left(n\right)\right)$
+\begin_inset Formula $T\left(n\right)\in O\left[\log_{2}\left(n\right)\right]$
 \end_inset
 
 .
@@ -134,7 +134,7 @@ T\left(k+1\right)=T\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+1\leq2\
 
 \begin_inset Formula 
 \[
-=2\left[\log_{2}\left(k+1\right)-\log_{2}\left(2\right)\right]+1=2\log_{2}\left(k+1\right)
+=2\left[\log_{2}\left(k+1\right)-\log_{2}\left(2\right)\right]+1=2\log_{2}\left(k+1\right)-1\leq2\log_{2}\left(k+1\right)
 \]
 
 \end_inset
@@ -185,26 +185,11 @@ a & n=1\\
 \emph on
 Ayuda
 \emph default
-: Recuerde las propiedades:
-\end_layout
-
-\begin_layout Itemize
+: Recuerde la siguiente propiedad: 
 \begin_inset Formula $x\neq1\Rightarrow\sum_{j=0}^{n}ax^{j}=\frac{a-ax^{n+1}}{1-x}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-COMPLETAR.
-\end_layout
-
-\begin_layout Itemize
-COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -243,7 +228,7 @@ T\left(n\right)=2T\left(2^{k-1}\right)+b=2\left[2T\left(2^{k-2}\right)+b\right]+
 
 \begin_inset Formula 
 \[
-=n\left(a+b\right)+b\in O\left(n\right)
+=n\left(a+b\right)-b\in\Theta\left(n\right)
 \]
 
 \end_inset
@@ -354,13 +339,9 @@ T\left(n\right)=2T\left(2^{k-1}\right)+2^{k}=2\left[2T\left(2^{k-2}\right)+2^{k-
 
 \begin_inset Formula 
 \[
-=2^{3}T\left(2^{k-3}\right)+2^{k}+2^{k}+2^{k}=\ldots=2^{k}a+k2^{k}=na+\log_{2}\left(n\right)n\in O\left[n\log_{2}\left(n\right)\right]
+=2^{3}T\left(2^{k-3}\right)+2^{k}+2^{k}+2^{k}=\ldots=2^{k}a+k2^{k}=na+\log_{2}\left(n\right)n\in\Theta\left[n\log_{2}\left(n\right)\right]
 \]
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -385,7 +366,7 @@ Caso base
 \end_inset
 
 : 
-\begin_inset Formula $T\left(n\right)=a\leq cn\log_{2}\left(n\right)=2\iff a/2\leq c$
+\begin_inset Formula $T\left(n\right)=2a+2=2\left(a+1\right)\leq cn\log_{2}\left(n\right)=2c\iff a+1\leq c$
 \end_inset
 
 .
@@ -404,7 +385,7 @@ Caso inductivo: Supongamos que para
  Luego:
 \begin_inset Formula 
 \[
-T\left(k+1\right)=2T\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+k+1\leq c\left(k+1\right)\log_{2}\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+k+1=
+T\left(k+1\right)=2T\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+k+1\leq c\left(k+1\right)\log_{2}\left(\left\lfloor \frac{k+1}{2}\right\rfloor \right)+k+1\leq
 \]
 
 \end_inset
@@ -442,6 +423,10 @@ por lo que
 \end_inset
 
 : COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -452,24 +437,229 @@ Utilice un árbol de recurrencia para encontrar una cota asintotica
 \end_inset
 
  para la recurrencia 
-\begin_inset Formula $T\left(n\right)=4T\left(\left\lceil n/2\right\rceil \right)+cn$
+\begin_inset Formula $T\left(n\right)=4T\left(\left\lceil n/2\right\rceil \right)+kn$
 \end_inset
 
  donde 
-\begin_inset Formula $c$
+\begin_inset Formula $k$
 \end_inset
 
  es una constante.
  Verifique que la cota encontrada es correcta.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Ayuda
+\emph default
+: Recuerde la siguiente propiedad: 
+\begin_inset Formula $a^{\log_{b}\left(n\right)}=n^{\log_{b}\left(a\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $kn\left.\underleftrightarrow{\begin{cases}
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)\\
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)\\
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)\\
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)
+\end{cases}}\right\updownarrow $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $hojas=4^{\log_{2}\left(n\right)}=n^{\log_{2}\left(4\right)}=n^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $altura=\log_{2}\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T\left(n\right)=kn+4k\left(n/2\right)+4^{2}k\left(n/4\right)+\ldots+n^{2}T\left(1\right)=\sum_{i=0}^{\log_{2}\left(n\right)-1}{\displaystyle \frac{4^{i}kn}{2^{i}}}+n^{2}T\left(1\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=kn\sum_{i=0}^{\log_{2}\left(n\right)-1}2^{i}+n^{2}T\left(1\right)=kn\frac{1-2^{\log_{2}\left(n\right)}}{1-2}+n^{2}T\left(1\right)=-kn\left(1-n\right)+n^{2}T\left(1\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=kn^{2}-kn+n^{2}T\left(1\right)\in\Theta\left(n^{2}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in O\left(n\right)}$
+\end_inset
+
+: Probaremos por inducción que 
+\begin_inset Formula $\text{\ensuremath{0\leq T\left(n\right)\leq cn^{2}}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $n=1$
+\end_inset
+
+: 
+\begin_inset Formula $T\left(n\right)=T\left(1\right)\leq cn²\iff T\left(1\right)\leq c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo: Supongamos que para 
+\begin_inset Formula $\text{\ensuremath{n=1,\ldots,\left\lceil \frac{q}{2}\right\rceil ,\ldots,q-1}}$
+\end_inset
+
+ vale que 
+\begin_inset Formula $0\leq T\left(n\right)\leq cn^{2}$
+\end_inset
+
+.
+ Luego:
+\begin_inset Formula 
+\[
+T\left(q\right)=4T\left(\left\lceil \frac{q}{2}\right\rceil \right)+kq\leq4c\left\lceil \frac{q}{2}\right\rceil ^{2}+kq\leq4c\left(\frac{q+1}{2}\right)^{2}+kq=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=c\left(q+1\right)^{2}+kq=cq^{2}+2cq+c+kq\leq cq^{2}+3cq+kq
+\]
+
+\end_inset
+
+Finalmente 
+\begin_inset Formula $cq^{2}+3cq+kq\leq cq²\iff3cq+kq\leq0\iff3c+k\leq0\iff c\leq-\frac{k}{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in\Omega\left(n\right)}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-Utilizar un arbol de recurrencia para obtener una cota asintotica para
+Utilizar un árbol de recurrencia para obtener una cota asintotica para
 \begin_inset Formula 
 \[
 T\left(n\right)=\begin{cases}
-c' & n\leq a\\
-T\left(n-1\right)+T\left(a\right)+cn & n>a
+k' & n\leq a\\
+T\left(n-1\right)+T\left(a\right)+kn & n>a
 \end{cases}
 \]
 
@@ -480,12 +670,66 @@ donde
 \end_inset
 
 , 
-\begin_inset Formula $c>0$
+\begin_inset Formula $k>0$
 \end_inset
 
  son constantes.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+k'+nk\to k'+\left(n-1\right)k\to k'+\left(n-2\right)k\to\ldots\to k'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T\left(n\right)=\left(n-a+1\right)k'+k\sum_{i=a+1}^{n}i=\left(n-a+1\right)k'+k\left[\frac{\left(n+a+1\right)\left(n-a\right)}{2}\right]=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(n-a+1\right)k'+\frac{k}{2}\left[n^{2}+na+n-na-a^{2}-a\right]\in\Theta\left(n^{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in O\left(n\right)}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{T\left(n\right)\in\Omega\left(n\right)}$
+\end_inset
+
+: COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Utilizar el teorema maestro para encontrar cotas asintoticas 
 \begin_inset Formula $\Theta$
@@ -520,6 +764,70 @@ Utilizar el teorema maestro para encontrar cotas asintoticas
 .
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $\epsilon=2$
+\end_inset
+
+ resulta 
+\begin_inset Formula $n\in O\left(n^{\log_{2}\left(4-\epsilon\right)}\right)$
+\end_inset
+
+ luego 
+\begin_inset Formula $T\left(n\right)\in\Theta\left[n^{\log_{2}\left(4\right)}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Puesto que 
+\begin_inset Formula $n^{2}\in\Theta\left(n^{\log_{2}\left(4\right)}\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $T\left(n\right)\in\Theta\left[n^{\log_{2}\left(4\right)}\log_{2}\left(n\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\epsilon=4$
+\end_inset
+
+, 
+\begin_inset Formula $c=4/8$
+\end_inset
+
+ y 
+\begin_inset Formula $N=0$
+\end_inset
+
+ luego 
+\begin_inset Formula $n^{3}\in\Omega\left(n^{\log_{2}\left(4+\epsilon\right)}\right)$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $4\left(n/2\right)^{3}\leq cn^{3}$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $n>N$
+\end_inset
+
+; por lo tanto 
+\begin_inset Formula $T\left(n\right)\in\Theta\left(n^{3}\right)$
+\end_inset
+
+.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Para cada una de las siguientes funciones, determinar si son suaves o no.
@@ -546,6 +854,58 @@ Para cada una de las siguientes funciones, determinar si son suaves o no.
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Sabemos que 
+\begin_inset Formula $\ln\left(n\right)$
+\end_inset
+
+ es estrictamente creciente y ademas para 
+\begin_inset Formula $b=e$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\ln\left(en\right)=1+\ln\left(n\right)\in O\left[\ln\left(n\right)\right]$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $\ln$
+\end_inset
+
+ es suave.
+\end_layout
+
+\begin_layout Enumerate
+Sabemos que para 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ es estrictamente creciente y ademas para 
+\begin_inset Formula $b=2$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\left(2n\right)^{2}\in O\left(n^{2}\right)$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $n^{2}$
+\end_inset
+
+ es suave.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -609,6 +969,30 @@ renombre de variable
 
 .
  
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Como 
+\begin_inset Formula $1\in\Theta\left[n^{\log_{2}\left(1\right)}\right]$
+\end_inset
+
+, por el teorema maestro 
+\begin_inset Formula $T\left(n\right)\in\Theta\left[n^{\log_{2}\left(1\right)}\log_{2}\left(n\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -685,6 +1069,100 @@ exp2 n = if   even n
 
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $exp_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $W_{exp1}\left(0\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{exp1}\left(n\right)=1+W_{exp1}\left(n-1\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{exp1}\in\Theta\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $exp_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $W_{exp2}\left(0\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{exp2}\left(n\right)=1+\begin{cases}
+1+W_{exp2}\left(n/2\right) & \text{n es par}\\
+1+W_{exp2}\left(n-1\right) & \text{n es impar}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Para potencias de 
+\begin_inset Formula $2$
+\end_inset
+
+, por el teorema maestro resulta 
+\begin_inset Formula $\text{\ensuremath{W_{exp2}\in\Theta\left[\log_{2}\left(n\right)\right]}}$
+\end_inset
+
+ y como 
+\begin_inset Formula $\log_{2}$
+\end_inset
+
+ es suave, podemos concluir que 
+\begin_inset Formula $W_{exp2}\in\Theta\left[\log_{2}\left(n\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+El algoritmo mas eficiente es 
+\begin_inset Formula $exp_{2}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Dados los siguientes pseudocodigos que implementan distintos algoritmos
  para invertir los elementos de una lista, calcular el trabajo de 
@@ -721,25 +1199,6 @@ status open
 
 \begin_layout Plain Layout
 
-reverse1 :: [a] -> [a]
-\end_layout
-
-\begin_layout Plain Layout
-
-reverse1 []     = []
-\end_layout
-
-\begin_layout Plain Layout
-
-reverse1 (x:xs) = (reverse1 xs) ++ [x]
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
 (++) :: [a] -> [a]
 \end_layout
 
@@ -751,6 +1210,25 @@ reverse1 (x:xs) = (reverse1 xs) ++ [x]
 \begin_layout Plain Layout
 
 (++) (x:xs) ys = x : (xs ++ ys)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+reverse1 :: [a] -> [a]
+\end_layout
+
+\begin_layout Plain Layout
+
+reverse1 []     = []
+\end_layout
+
+\begin_layout Plain Layout
+
+reverse1 (x:xs) = (reverse1 xs) ++ [x]
 \end_layout
 
 \begin_layout Plain Layout
@@ -791,6 +1269,80 @@ reverse2 xs = revStack xs []
 
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $reverse_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $W_{r1}\left(0\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{r1}\left(n\right)=W_{r1}\left(n-1\right)+\underbrace{W_{++}\left(n-1\right)}_{\in\Theta\left(n\right)}+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{r1}\in\Theta\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $reverse_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $W_{rs}\left(0\right)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{rs}\left(n\right)=W_{rs}\left(n-1\right)+1\in\Theta\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{r2}\left(n\right)=W_{rs}\left(n\right)\in\Theta\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Ambas funciones son igualmente eficientes.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Dado el siguiente pseudocodigo de un algoritmo que construye un árbol binario
  a partir de una lista:
@@ -907,6 +1459,14 @@ Resolver la recurrencia encontrada en el apartado anterior utilizando el
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
 \end_layout
 
 \end_deeper
