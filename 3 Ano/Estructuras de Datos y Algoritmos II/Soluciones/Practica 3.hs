@@ -97,8 +97,11 @@ seval (Div x y) = do x' <- seval x
                      if y' == 0 then Nothing
                                 else return $ div x' y'
 
-data GenTree a = EmptyG | NodeG a [GenTree a]
+data GenTree a = EmptyG | NodeG a [GenTree a] deriving Show
 data BinTree a = EmptyB | NodeB (BinTree a) a (BinTree a)
+instance Show a => Show (BinTree a) where
+  show EmptyB = "X"
+  show (NodeB l m r) = "[" ++ show l ++ " < " ++ show m ++ " > " ++ show r ++ "]"
 
 completo :: a -> Int -> BinTree a
 completo = undefined -- COMPLETAR
@@ -107,14 +110,43 @@ balanceado :: a -> Int -> BinTree a
 balanceado = undefined -- COMPLETAR
 
 g2bt :: GenTree a -> BinTree a
-g2bt = undefined -- COMPLETAR
+g2bt EmptyG                      = EmptyB
+g2bt (NodeG m xs)                = NodeB (g2bt' xs) m EmptyB
+  where g2bt' []                 = EmptyB
+        g2bt' ((NodeG m xs):ys)  = NodeB (g2bt' xs) m (g2bt' ys)
+
+-- Ejemplo
+nodoa = NodeG 'a' [nodob, nodoc, nodod, nodoe, nodof, nodog]
+nodob = NodeG 'b' [nodoq, nodoh, nodoi]
+nodoq = NodeG 'q' [nodom, nodon]
+nodom = NodeG 'm' []
+nodon = NodeG 'n' []
+nodoh = NodeG 'h' []
+nodoi = NodeG 'i' []
+nodoc = NodeG 'c' []
+nodod = NodeG 'd' []
+nodoe = NodeG 'e' [nodoj, nodok]
+nodoj = NodeG 'j' [nodoo]
+nodoo = NodeG 'o' []
+nodok = NodeG 'k' [nodop]
+nodop = NodeG 'p' []
+nodof = NodeG 'f' []
+nodog = NodeG 'g' [nodol]
+nodol = NodeG 'l' []
 
 maximumBST :: Ord a => BinTree a -> a
-maximumBST (NodeB l x EmptyB) = x
-maximumBST (NodeB l x r)     = maximumBST r
+maximumBST (NodeB _ x EmptyB) = x
+maximumBST (NodeB _ _ r)      = maximumBST r
+
+value :: BinTree a -> a
+value (NodeB _ x _) = x
 
 checkBST :: Ord a => BinTree a -> Bool
-checkBST = undefined -- COMPLETAR
+checkBST EmptyB                  = True
+checkBST (NodeB EmptyB m EmptyB) = True
+checkBST (NodeB EmptyB m r)      = checkBST r && m <  value r
+checkBST (NodeB l m EmptyB)      = checkBST l && m >= value l
+checkBST (NodeB l m r)           = checkBST l && checkBST r && m < value r && m >= value l
 
 member :: Ord a => BinTree a -> a -> Bool
 member EmptyB _ = False
@@ -126,3 +158,44 @@ member t@(NodeB l m r) x | x <= m = member' l x m
 
 data ColorRB  = R | B
 data RBTree a = EmptyRB | NodeRB ColorRB (RBTree a) a (RBTree a)
+
+insert :: Ord a => a -> RBTree a -> RBTree a
+insert x t = makeBlack (insert' x t)
+  where insert' x EmptyRB = NodeRB R EmptyRB x EmptyRB
+        insert' x t@(NodeRB c l m r) | x <  m = balance c (insert' x l) m r -- COMPLETAR
+                                     | x >  m = balance c l m (insert' x r) -- COMPLETAR
+                                     | x == m = t
+        makeBlack EmptyRB            = EmptyRB
+        makeBlack (NodeRB _ l m r)   = NodeRB B l m r
+
+balance :: ColorRB -> RBTree a -> a -> RBTree a -> RBTree a
+balance B (NodeRB R (NodeRB R a x b) y c) z d = NodeRB R (NodeRB B a x b) y (NodeRB B c z d)
+balance B (NodeRB R a x (NodeRB R b y c)) z d = NodeRB R (NodeRB B a x b) y (NodeRB B c z d)
+balance B a x (NodeRB R (NodeRB R b y c) z d) = NodeRB R (NodeRB B a x b) y (NodeRB B c z d)
+balance B a x (NodeRB r b y (NodeRB R c z d)) = NodeRB R (NodeRB B a x b) y (NodeRB B c z d)
+balance c l a r = NodeRB c l a r
+
+lbalance = undefined -- COMPLETAR
+rbalance = undefined -- COMPLETAR
+
+data Heap a = E | N Int (Heap a) a (Heap a) deriving Show
+
+merge :: Ord a => Heap a -> Heap a -> Heap a
+merge h1 E = h1
+merge E h2 = h2
+merge h1@(N _ l1 m1 r1) h2@(N _ l2 m2 r2) | m1 <= m2 = makeH m1 l1 (merge r1 h2)
+                                          | m1 >  m2 = makeH m2 l2 (merge h1 r2)
+
+rank :: Heap a -> Int
+rank E = 0
+rank (N r _ _ _) = r
+
+makeH :: a -> Heap a -> Heap a -> Heap a
+makeH x h1 h2 | rank h1 >= rank h2 = N (rank h2 + 1) h1 x h2
+              | otherwise          = N (rank h1 + 1) h2 x h1
+
+fromList :: Ord a => [a] -> Heap a
+fromList []                = E
+fromList [x]               = N 1 E x E
+fromList (x:y:zs) | x <= y = merge (N 1 (N 1 E y E) x E) (fromList zs)
+                  | x >  y = merge (N 1 (N 1 E x E) y E) (fromList zs)

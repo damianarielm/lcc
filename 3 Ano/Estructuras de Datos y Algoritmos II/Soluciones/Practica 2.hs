@@ -191,7 +191,8 @@ cuadruplas :: Int -> [(Int, Int, Int, Int)]
 cuadruplas = undefined -- COMPLETAR
 
 unique :: [Int] -> [Int]
-unique = undefined -- COMPLETAR
+unique [] = []
+unique (x:xs) = x : (unique [ y | y <- xs, y /= x ])
 
 -- Ejercicio 14
 scalarproduct xs ys = let zs = zip xs ys
