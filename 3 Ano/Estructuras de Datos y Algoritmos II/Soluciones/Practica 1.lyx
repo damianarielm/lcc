@@ -204,7 +204,7 @@ Notese que para
  resulta:
 \begin_inset Formula 
 \[
-T\left(n\right)=2T\left(2^{k-1}\right)+b=2\left[2T\left(2^{k-2}\right)+b\right]+b=2^{2}T\left(2^{k-2}\right)+3b=
+T\left(n\right)=2T\left(2^{k-1}\right)+b=2\left[2T\left(2^{k-2}\right)+b\right]+b=2^{2}T\left(2^{k-2}\right)+2b+b=
 \]
 
 \end_inset
@@ -212,7 +212,7 @@ T\left(n\right)=2T\left(2^{k-1}\right)+b=2\left[2T\left(2^{k-2}\right)+b\right]+
 
 \begin_inset Formula 
 \[
-=2^{3}T\left(2^{k-1}\right)+2^{2}b+2b+b=\ldots=2^{k}a+\sum_{i=0}^{k-1}2^{i}b=2^{k}a+b\sum_{i=0}^{k-1}2^{i}=
+=2^{3}T\left(2^{k-3}\right)+2^{2}b+2^{1}b+b=\ldots=2^{k}a+\sum_{i=0}^{k-1}2^{i}b=2^{k}a+b\sum_{i=0}^{k-1}2^{i}=
 \]
 
 \end_inset
@@ -263,7 +263,7 @@ Caso base
 
 \begin_layout Itemize
 Caso inductivo: Supongamos que para 
-\begin_inset Formula $n=1,\ldots,\left\lfloor \frac{k+1}{2}\right\rfloor ,\ldots,k$
+\begin_inset Formula $n=2,\ldots,\left\lfloor \frac{k+1}{2}\right\rfloor ,\ldots,k$
 \end_inset
 
  vale que 
@@ -769,40 +769,75 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-Para 
+El teorema maestro nos dice que:
+\begin_inset Formula 
+\[
+T\left(n\right)\in\begin{cases}
+\Theta\left[n^{\log_{2}\left(4\right)}\right] & \text{si }\exists\epsilon>0/n\in O\left[n^{\log_{2}\left(4-\epsilon\right)}\right]\\
+\vdots & \vdots
+\end{cases}
+\]
+
+\end_inset
+
+y para 
 \begin_inset Formula $\epsilon=2$
 \end_inset
 
  resulta 
-\begin_inset Formula $n\in O\left(n^{\log_{2}\left(4-\epsilon\right)}\right)$
+\begin_inset Formula $n\in O\left(n\right)$
 \end_inset
 
  luego 
-\begin_inset Formula $T\left(n\right)\in\Theta\left[n^{\log_{2}\left(4\right)}\right]$
+\begin_inset Formula $T\left(n\right)\in\Theta\left(n^{2}\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-Puesto que 
-\begin_inset Formula $n^{2}\in\Theta\left(n^{\log_{2}\left(4\right)}\right)$
+El teorema maestro nos dice que:
+\begin_inset Formula 
+\[
+T\left(n\right)\in\begin{cases}
+\vdots & \vdots\\
+\Theta\left[n^{\log_{2}\left(4\right)}\log_{2}\left(n\right)\right] & \text{si }n^{2}\in\Theta\left[n^{\log_{2}\left(4\right)}\right]\\
+\vdots & \vdots
+\end{cases}
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $n^{2}\in\Theta\left(n^{2}\right)$
 \end_inset
 
  entonces 
-\begin_inset Formula $T\left(n\right)\in\Theta\left[n^{\log_{2}\left(4\right)}\log_{2}\left(n\right)\right]$
+\begin_inset Formula $T\left(n\right)\in\Theta\left[n^{2}\log_{2}\left(n\right)\right]$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
+El teorema maestro nos dice que:
+\begin_inset Formula 
+\[
+T\left(n\right)\in\begin{cases}
+\vdots & \vdots\\
+\Theta\left(n^{3}\right) & \text{si }\exists\epsilon>0/n^{3}\in\Omega\left[n^{\log_{2}\left(4+\epsilon\right)}\right]\\
+ & \text{y }\exists c<1,N\in\mathbb{N}/\forall n>N\Rightarrow4\left(n/2\right)^{3}\leq cn^{3}
+\end{cases}
+\]
+
+\end_inset
+
 Sean 
 \begin_inset Formula $\epsilon=4$
 \end_inset
 
 , 
-\begin_inset Formula $c=4/8$
+\begin_inset Formula $c=1/2$
 \end_inset
 
  y 
@@ -810,11 +845,11 @@ Sean
 \end_inset
 
  luego 
-\begin_inset Formula $n^{3}\in\Omega\left(n^{\log_{2}\left(4+\epsilon\right)}\right)$
+\begin_inset Formula $n^{3}\in\Omega\left[n^{\log_{2}\left(4+\epsilon\right)}\right]$
 \end_inset
 
  y ademas 
-\begin_inset Formula $4\left(n/2\right)^{3}\leq cn^{3}$
+\begin_inset Formula $4\left(n/2\right)^{3}=\frac{1}{2}n^{3}\leq cn^{3}$
 \end_inset
 
  para cualquier 
@@ -822,7 +857,7 @@ Sean
 \end_inset
 
 ; por lo tanto 
-\begin_inset Formula $T\left(n\right)\in\Theta\left(n^{3}\right)$
+\begin_inset Formula $\text{\ensuremath{T\left(n\right)\in\Theta\left(n^{3}\right)}}$
 \end_inset
 
 .
@@ -866,11 +901,11 @@ Sabemos que
 \end_inset
 
  es estrictamente creciente y ademas para 
-\begin_inset Formula $b=e$
+\begin_inset Formula $\text{\ensuremath{b=e\geq2}}$
 \end_inset
 
  resulta 
-\begin_inset Formula $\ln\left(en\right)=1+\ln\left(n\right)\in O\left[\ln\left(n\right)\right]$
+\begin_inset Formula $\ln\left(bn\right)=1+\ln\left(n\right)\in O\left[\ln\left(n\right)\right]$
 \end_inset
 
  por lo tanto 
@@ -1156,10 +1191,6 @@ El algoritmo mas eficiente es
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1267,6 +1298,10 @@ reverse2 xs = revStack xs []
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1297,7 +1332,7 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $W_{r1}\in\Theta\left(n\right)$
+\begin_inset Formula $W_{r1}\in\Theta\left(n^{2}\right)$
 \end_inset
 
 
@@ -1335,11 +1370,11 @@ Solución
 
 \end_deeper
 \begin_layout Standard
-Ambas funciones son igualmente eficientes.
-\begin_inset Newpage pagebreak
+La función mas eficiente es 
+\begin_inset Formula $reverse_{2}$
 \end_inset
 
-
+.
 \end_layout
 
 \end_deeper

@@ -144,7 +144,7 @@ Caso base
 \end_inset
 
 : 
-\begin_inset Formula ${\displaystyle \sum_{i=1}^{n}}F_{i}=F_{1}=1=1+1-1=F_{2}+F_{1}-1=F_{3}-1$
+\begin_inset Formula $\text{\ensuremath{{\displaystyle \sum_{i=1}^{n}}F_{i}=F_{1}=1=2-1=F_{2}+F_{1}-1=F_{3}-1}}$
 \end_inset
 
 .
@@ -329,7 +329,11 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-Verdadero: 
+
+\emph on
+Verdadero
+\emph default
+: 
 \begin_inset Formula $0\leq n^{2}\leq cn^{3}\iff0\leq1\leq cn$
 \end_inset
 
@@ -342,7 +346,11 @@ Verdadero:
 \end_layout
 
 \begin_layout Enumerate
-Falso: 
+
+\emph on
+Falso
+\emph default
+: 
 \begin_inset Formula $0\leq cn^{3}\leq n^{2}\iff0\leq cn\leq1\iff0\leq n\leq1/c$
 \end_inset
 
@@ -355,7 +363,11 @@ Falso:
 \end_layout
 
 \begin_layout Enumerate
-Verdadero: 
+
+\emph on
+Verdadero
+\emph default
+: 
 \begin_inset Formula $0\leq c_{2}2^{n+1}\leq2^{n}\leq c_{1}2^{n+1}\iff\text{\ensuremath{0\leq c_{2}2\leq1\leq c_{1}2}}\iff0\leq c_{2}\leq1/2\leq c_{1}$
 \end_inset
 
@@ -368,7 +380,11 @@ Verdadero:
 \end_layout
 
 \begin_layout Enumerate
-Falso: 
+
+\emph on
+Falso
+\emph default
+: 
 \begin_inset Formula $\text{\ensuremath{0\leq c\left(n+1\right)!\leq n!\iff0\leq c\left(n+1\right)\leq1\iff n\leq\frac{1}{c}-1}}$
 \end_inset
 
@@ -541,7 +557,7 @@ Como
 \end_inset
 
  y 
-\begin_inset Formula $c_{2}=1/2$
+\begin_inset Formula $c_{2}=1$
 \end_inset
 
 :
@@ -555,7 +571,7 @@ Como
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $0\leq c_{2}\max\left\{ f\left(n\right),g\left(n\right)\right\} \leq f\left(n\right)+g\left(n\right)\Rightarrow h\in\Omega\left(\max\left\{ f\left(n\right),g\left(n\right)\right\} \right)$
+\begin_inset Formula $0\leq c_{2}\max\left\{ f\left(n\right),g\left(n\right)\right\} \leq\underbrace{f\left(n\right)}_{\geq0}+\underbrace{g\left(n\right)}_{\geq0}\Rightarrow h\in\Omega\left(\max\left\{ f\left(n\right),g\left(n\right)\right\} \right)$
 \end_inset
 
 .
@@ -686,7 +702,7 @@ Luego tomando
 
 \end_deeper
 \begin_layout Itemize
-COMPLETAR.
+Analogo.
 \end_layout
 
 \end_deeper
@@ -866,7 +882,7 @@ es decir,
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Análogo.
 \end_layout
 
 \end_deeper
@@ -910,22 +926,25 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-Sea 
+\begin_inset Formula $\boxed{\left(n+a\right)^{b}\in O\left(n^{b}\right)}$
+\end_inset
+
+: Sea 
 \begin_inset Formula $n_{0}>a$
 \end_inset
 
  luego: 
-\begin_inset Formula $\forall n\geq n_{0}:0\leq\left(n+a\right)^{b}\leq\left(2n\right)^{b}=2^{b}n^{b}$
+\begin_inset Formula $\text{\ensuremath{\forall n\geq n_{0}:0\leq\left(n+a\right)^{b}\leq\left(2n\right)^{b}=2^{b}n^{b}}}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset space ~
+\begin_inset Formula $\boxed{\left(n+a\right)^{b}\in\Omega\left(n\right)^{n}}$
 \end_inset
 
-
+:
 \end_layout
 
 \begin_deeper
