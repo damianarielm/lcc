@@ -6993,6 +6993,11 @@ status open
 
 \begin_layout Plain Layout
 
+size :: Arbol a -> Int
+\end_layout
+
+\begin_layout Plain Layout
+
 size (Hoja _)     = 1
 \end_layout
 
@@ -7007,21 +7012,654 @@ size (Nodo _ l r) = 1 + size l + size r
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Hoja x
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+size (Hoja _)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.size.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle k=0\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2k+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Nodo x l r
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+size (Nodo _ l r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.size.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1 + size l + size r
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1 + (2k'+1) + (2k''+1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle k=k'+k''+1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2k+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mirror :: Arbol a -> Arbol a
+\end_layout
+
+\begin_layout Plain Layout
+
+mirror (Hoja x)     = Hoja x
+\end_layout
+
+\begin_layout Plain Layout
+
+mirror (Nodo x l r) = Nodo x (mirror r) (mirror l)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Hoja x
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(mirror .
+ mirror) (Hoja x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mirror (mirror (Hoja x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mirror.1;def.mirror.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Hoja x
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id (Hoja x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Nodo x l r
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(mirror .
+ mirror) Nodo x l r
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mirror (mirror (Nodo x l r))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mirror.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mirror (Nodo x (mirror r) (mirror l))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mirror.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nodo x (mirror (mirror l)) (mirror (mirror r))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nodo x ((mirror .
+ mirror) l) ((mirror .
+ mirror) r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle H.I.;def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Nodo x l r
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.id\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+id (Nodo x l r)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Hoja x
 \end_layout
 
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hojas (Hoja x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.hojas.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $<$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2^1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.altura.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2^(altura (Hoja x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Nodo x l r
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hojas (Nodo x l r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.hojas.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hojas l + hojas r
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $<\left\langle H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2^(altura l) + 2^(altura r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $<$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2 * 2^(altura l `max` altura r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2^(1 + (altura l `max` altura r))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.altura.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+2^(altura (Nodo x l r))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dadas las siguientes definiciones:
@@ -7149,17 +7787,181 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+alturaAGT (Node _ []) = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+alturaAGT (Node _ xs) = 1 + maximum (map alturaAGT xs)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maxAGT (Node x []) = x
+\end_layout
+
+\begin_layout Plain Layout
+
+maxAGT (Node x xs) = max x (maximum (map maxAGT xs))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Node x []
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+alturaAGT (Node _ [])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.alturaAGT.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.maxAGT.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maxAGT (Node 1 [])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.map.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maxAGT (Node 1 (map (ponerProfs 2) []))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ;def.ponerProfs\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(maxAGT .
+ (ponerProfs 1)) Node _ []
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Node x (y:ys)
+\end_layout
+
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dadas las siguientes definiciones:
@@ -7246,22 +8048,318 @@ flatten .
 .
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
-Dada la siguiente definición:
+Dada la siguiente definición,
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+join []       = xs
+\end_layout
+
+\begin_layout Plain Layout
+
+join (xs:xss) = xs ++ join xss
+\end_layout
+
+\end_inset
+
+demostrar:
 \end_layout
 
 \begin_layout Enumerate
-Dadas las funciones
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+join
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+concat .
+ (map id)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-Dadas las definición de funciones que implementan
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+join .
+ join
 \end_layout
 
+\end_inset
+
+ 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+join .
+ (map join)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dadas las funciones 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+insert :: Ord a => a -> Bin a -> Bin a
+\end_layout
+
+\end_inset
+
+, que agrega un elemento a un 
+\begin_inset Formula $BST$
+\end_inset
+
+ dado, y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+inorder :: Ord a => Bin a -> [a]
+\end_layout
+
+\end_inset
+
+, que realiza un recorrido 
+\begin_inset Formula $inorder$
+\end_inset
+
+ sobre un 
+\begin_inset Formula $BST$
+\end_inset
+
+, dadas en clase de teoría, probar las siguientes propiedades sobre las
+ funciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $t$
+\end_inset
+
+ es un 
+\begin_inset Formula $BST$
+\end_inset
+
+, entonces 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+insert x t
+\end_layout
+
+\end_inset
+
+ es un 
+\begin_inset Formula $BST$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $t$
+\end_inset
+
+ es 
+\begin_inset Formula $BST$
+\end_inset
+
+, entonces 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+inorder t
+\end_layout
+
+\end_inset
+
+ es una lista ordenada.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dadas las definición de funciones que implementan 
+\emph on
+leftist heaps
+\emph default
+, dadas en clase, probar que si
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ l1
+\end_layout
+
+\end_inset
+
+ y
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ l2
+\end_layout
+
+\end_inset
+
+ son leftist heaps, entonces 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+merge l1 l2
+\end_layout
+
+\end_inset
+
+ es un leftist heap.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Dar el principio de inducción estructural para el siguiente tipo de datos:
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data F = Zero | One F | Two (Bool -> F)
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
