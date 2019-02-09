@@ -1894,58 +1894,6 @@ isEmpty
 \end_inset
 
  
-\begin_inset Formula $\left\langle \right\rangle $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\equiv$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-True
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-isEmpty 
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula $\left\langle x_{1},\ldots,x_{n}\right\rangle $
 \end_inset
 
@@ -1976,6 +1924,46 @@ False
 
  (si 
 \begin_inset Formula $n>0$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
+\end_inset
+
+ (si 
+\begin_inset Formula $n=0$
 \end_inset
 
 )
@@ -4371,7 +4359,7 @@ Poner x p (union c q)
 
 \begin_layout Itemize
 \begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="2">
+<lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -4496,7 +4484,7 @@ primero
 \end_inset
 
  
-\begin_inset Formula $\left\{ \left(x,p\right)\right\} $
+\begin_inset Formula $C=\left\{ \left(x_{1},p_{1}\right),\ldots,\left(x_{n},p_{n}\right)\right\} $
 \end_inset
 
 
@@ -4512,131 +4500,11 @@ primero
 \end_inset
 
  
-\begin_inset Formula $\left(x,p\right)$
+\begin_inset Formula $\left(x_{i},p_{i}\right)$
 \end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-primero
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(x,p\right),\left(y,q\right)\right\} \cup C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\equiv$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-if p > q
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-  then primero
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(x,p\right)\right\} \cup C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-  else primero
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(y,q\right)\right\} \cup C$
+ donde 
+\begin_inset Formula $p_{i}=\max\left\{ p_{1},\ldots,p_{n}\right\} $
 \end_inset
 
 
@@ -4663,7 +4531,7 @@ sacar
 \end_inset
 
  
-\begin_inset Formula $\left\{ \left(x,p\right)\right\} $
+\begin_inset Formula $C=\left\{ \left(x_{1},p_{1}\right),\ldots,\left(x_{n},p_{n}\right)\right\} $
 \end_inset
 
 
@@ -4679,217 +4547,7 @@ sacar
 \end_inset
 
  
-\begin_inset Formula $\left\{ \right\} $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-sacar
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(x,p\right),\left(y,q\right)\right\} \cup C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\equiv$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-if p > q
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-  then
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(y,q\right)\right\} \cup$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-sacar
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(x,p\right)\right\} \cup C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-  else
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(x,p\right)\right\} \cup$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-sacar
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \left(y,q\right)\right\} \cup C$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-esVacia
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \right\} $
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\equiv$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-True
-\end_layout
-
+\begin_inset Formula $\left\{ \left(x_{i},p_{i}\right)\in C/p_{i}\neq\max\left\{ p_{1},\ldots,p_{n}\right\} \right\} $
 \end_inset
 
 
@@ -4959,26 +4617,6 @@ False
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-union
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\{ \right\} $
-\end_inset
-
- 
-\begin_inset Formula $Q$
-\end_inset
-
 
 \end_layout
 
@@ -4992,10 +4630,23 @@ union
 \end_inset
 
  
-\begin_inset Formula $Q$
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
 \end_inset
 
+ (si 
+\begin_inset Formula $n=0$
+\end_inset
 
+)
 \end_layout
 
 \end_inset
@@ -5019,11 +4670,11 @@ union
 \end_inset
 
  
-\begin_inset Formula $\left\{ \left(x,p\right)\right\} \cup C$
+\begin_inset Formula $A=\left\{ \left(a_{1},b_{1}\right),\ldots,\left(a_{n},b_{n}\right)\right\} $
 \end_inset
 
  
-\begin_inset Formula $Q$
+\begin_inset Formula $B$
 \end_inset
 
  
@@ -5035,32 +4686,11 @@ union
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\left\{ \left(x,p\right)\right\} \cup\left\{ \left(a,b\right)\in\right.$
+\begin_inset Formula $\equiv$
 \end_inset
 
  
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-union
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $C$
-\end_inset
-
- 
-\begin_inset Formula $Q$
-\end_inset
-
- 
-\begin_inset Formula $/b\neq p\left.\right\} $
+\begin_inset Formula $A\cup\left\{ \left(x,y\right)\in B/y\notin\left\{ b_{1},\ldots,b_{n}\right\} \right\} $
 \end_inset
 
 
@@ -5071,6 +4701,10 @@ union
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -5536,10 +5170,6 @@ status open
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -5576,9 +5206,17 @@ expose
 
 \begin_layout Paragraph
 Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -5797,24 +5435,7 @@ status open
 
 \begin_layout Plain Layout
 
-  Nothing -> t
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\equiv$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-Empty
+  Nothing -> t = Empty
 \end_layout
 
 \end_inset
@@ -5846,24 +5467,7 @@ status open
 
 \begin_layout Plain Layout
 
-  Just (l, x, r) -> t
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\equiv$
-\end_inset
-
- 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-join l (Just x) r
+  Just (l, x, r) -> t = join l (Just x) r
 \end_layout
 
 \end_inset
@@ -5876,6 +5480,10 @@ join l (Just x) r
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -5994,10 +5602,6 @@ uncurry f p = f (fst p) (snd p)
 p -> f (fst p) (snd p)
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -6281,10 +5885,6 @@ id ((x,y):ps)
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -6442,6 +6042,10 @@ length (x:xs) = 1 + length xs
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -6545,10 +6149,6 @@ status open
 length [] * maxl []
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -6686,6 +6286,10 @@ status open
 length (x:xs) * maxl (x:xs)
 \end_layout
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -6974,10 +6578,6 @@ status open
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -7045,7 +6645,7 @@ status open
 
 \begin_layout Plain Layout
 
-size (Hoja _)
+size (Hoja x)
 \end_layout
 
 \end_inset
@@ -7079,9 +6679,13 @@ status open
 
 \begin_layout Plain Layout
 
-2k+1
+2k + 1
 \end_layout
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -7293,14 +6897,22 @@ id (Hoja x)
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
 Caso inductivo 
 \begin_inset listings
 lstparams "language=Haskell"
@@ -7437,6 +7049,19 @@ id (Nodo x l r)
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -7529,10 +7154,6 @@ status open
 2^(altura (Hoja x))
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -7826,10 +7447,6 @@ maxAGT (Node x xs) = max x (maximum (map maxAGT xs))
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -7866,7 +7483,7 @@ status open
 
 \begin_layout Plain Layout
 
-alturaAGT (Node _ [])
+alturaAGT (Node x [])
 \end_layout
 
 \end_inset
@@ -7935,7 +7552,7 @@ status open
 \begin_layout Plain Layout
 
 (maxAGT .
- (ponerProfs 1)) Node _ []
+ (ponerProfs 1)) Node x []
 \end_layout
 
 \end_inset

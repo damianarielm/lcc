@@ -195,5 +195,4 @@ unique [] = []
 unique (x:xs) = x : (unique [ y | y <- xs, y /= x ])
 
 -- Ejercicio 14
-scalarproduct xs ys = let zs = zip xs ys
-                      in  sum [x*y | (x,y) <- zs]
+scalarproduct xs ys = sum [x*y | (x,y) <- zip xs ys]

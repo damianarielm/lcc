@@ -1325,12 +1325,29 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $W_{r1}\left(n\right)=W_{r1}\left(n-1\right)+\underbrace{W_{++}\left(n-1\right)}_{\in\Theta\left(n\right)}+1$
+\begin_inset Formula $W_{r1}\left(n\right)=W_{r1}\left(n-1\right)+W_{++}\left(n-1\right)+1=$
 \end_inset
 
 
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=W_{r1}\left(n-2\right)+W_{++}\left(n-2\right)+1+W_{++}\left(n-1\right)+1=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\ldots=n+{\displaystyle \sum_{i=0}^{n-1}}\underbrace{W_{++}\left(i\right)}_{\in\Theta\left(n\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $W_{r1}\in\Theta\left(n^{2}\right)$
 \end_inset
@@ -1338,7 +1355,6 @@ Solución
 
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $reverse_{2}$
 \end_inset
@@ -1454,6 +1470,10 @@ toTree (x:y:xs) = let (ys, zs) = split (x:y:xs)
                   in Node t1 t2
 \end_layout
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
