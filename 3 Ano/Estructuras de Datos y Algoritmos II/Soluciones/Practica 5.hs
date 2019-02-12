@@ -2,7 +2,7 @@ infix 1 |||
 (|||) :: a -> b -> (a,b)
 (|||) = (,)
 
-data BTree a = Empty | Node Int (BTree a ) a (BTree a)
+data BTree a = Empty | Node Int (BTree a ) a (BTree a) deriving Show
 
 nodes :: BTree a -> Int
 nodes Empty          = 0
@@ -47,7 +47,7 @@ drop' n (Node s l m r) | n == (nodes l) = Node (s-n) Empty m r
                        | n <  (nodes l) = Node (s-n) (drop' n l) m r
                        | otherwise      = drop' (n-(nodes l)-1) r
 
-data Tree a = E | Leaf a | Join (Tree a) (Tree a)
+data Tree a = E | Leaf a | Join (Tree a) (Tree a) deriving (Show, Eq)
 
 mapT :: (a -> b) -> Tree a -> Tree b
 mapT f E          = E
@@ -74,10 +74,13 @@ mcss t = fst' $ mapreduce f g (0,0,0,0) t where
   g (a,b,c,d) (w,x,y,z) = (maximum [a, w, c+x],max b (d + x),max y (z+c),d+z)
 
 mejorGanancia :: Tree Int -> Int
-mejorGanancia = undefined -- COMPLETAR
+mejorGanancia t = maxT $ mapT (\(x,y) -> maxT y - x) (conSufijos t)
 
 sufijos :: Tree Int -> Tree (Tree Int)
-sufijos = undefined -- COMPLETAR
+sufijos t = sufijos' t E where
+  sufijos' (Leaf _)   a = Leaf a
+  sufijos' (Join l r) a = let (l', r') = sufijos' l (Join r a) ||| sufijos' r a
+                          in Join l' r'
 
 conSufijos :: Tree Int -> Tree (Int, Tree Int)
 conSufijos = undefined -- COMPLETAR
@@ -95,16 +98,23 @@ altura X         = 0
 altura (N l m r) = 1 + max (altura l) (altura r)
 
 combinar :: T a -> T a -> T a
-combinar = undefined -- COMPLETAR
+combinar X t2         = t2
+combinar (N l m r) t2 = N (combinar l r) m t2
 
 filterT :: (a -> Bool) -> T a -> T a
-filterT = undefined -- COMPLETAR
+filterT p X         = X
+filterT p (N l m r) = let (l',r') = filterT p l ||| filterT p r
+                      in if p m then N l' m r' else combinar l' r'
 
 quicksortT :: T Int -> T Int
-quicksortT = undefined -- COMPLETAR
+quicksortT X         = X
+quicksortT (N l m r) = let (l', r')  = filterT (<= m) l ||| filterT (<= m) r
+                           (l'',r'') = filterT (>  m) l ||| filterT (>  m) r
+                           (menores, mayores) = quicksortT (combinar l' r') ||| quicksortT (combinar l'' r'')
+                       in N menores m mayores
 
-splitAt :: BTree a -> Int -> (BTree a, BTree a)
-splitAt = undefined -- COMPLETAR
+splitAt' :: BTree a -> Int -> (BTree a, BTree a)
+splitAt' t n = take' n t ||| drop' n t
 
 rebalance :: BTree a -> BTree a
 rebalance = undefined -- COMPLETAR
