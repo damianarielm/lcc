@@ -1,4 +1,3 @@
-
 module Par ((|||)) where
 
 import Control.Parallel

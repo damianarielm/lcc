@@ -813,7 +813,7 @@ null
 \end_inset
 
  
-\begin_inset Formula $\left\langle \right\rangle $
+\begin_inset Formula $\left\langle x_{1},\ldots,x_{n}\right\rangle $
 \end_inset
 
 
@@ -841,7 +841,11 @@ True
 
 \end_inset
 
+ (si 
+\begin_inset Formula $n=0$
+\end_inset
 
+)
 \end_layout
 
 \end_inset
@@ -852,22 +856,6 @@ True
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-null 
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\left\langle x_{1},\ldots,x_{n}\right\rangle $
-\end_inset
-
 
 \end_layout
 
@@ -7377,7 +7365,8 @@ status open
 
 \begin_layout Plain Layout
 
-alturaAGT
+maxAGT .
+ (ponerProfs 1)
 \end_layout
 
 \end_inset
@@ -7394,8 +7383,7 @@ status open
 
 \begin_layout Plain Layout
 
-maxAGT .
- (ponerProfs 1)
+alturaAGT
 \end_layout
 
 \end_inset
@@ -7441,7 +7429,7 @@ maxAGT (Node x []) = x
 
 \begin_layout Plain Layout
 
-maxAGT (Node x xs) = max x (maximum (map maxAGT xs))
+maxAGT (Node x xs) = maximum (x:(map maxAGT xs))
 \end_layout
 
 \end_inset
@@ -7483,58 +7471,8 @@ status open
 
 \begin_layout Plain Layout
 
-alturaAGT (Node x [])
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\equiv\left\langle def.alturaAGT.1\right\rangle $
-\end_inset
-
-
-\begin_inset listings
-lstparams "language=Haskell"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-1
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\equiv\left\langle def.maxAGT.1\right\rangle $
-\end_inset
-
-
-\begin_inset listings
-lstparams "language=Haskell"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-maxAGT (Node 1 [])
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\equiv\left\langle def.map.1\right\rangle $
-\end_inset
-
-
-\begin_inset listings
-lstparams "language=Haskell"
-inline false
-status open
-
-\begin_layout Plain Layout
-
-maxAGT (Node 1 (map (ponerProfs 2) []))
+(maxAGT .
+ (ponerProfs 1)) Node x []
 \end_layout
 
 \end_inset
@@ -7551,8 +7489,58 @@ status open
 
 \begin_layout Plain Layout
 
-(maxAGT .
- (ponerProfs 1)) Node x []
+maxAGT (Node 1 (map (ponerProfs 2) []))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.map.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maxAGT (Node 1 [])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.maxAGT.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.alturaAGT.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+alturaAGT (Node x [])
 \end_layout
 
 \end_inset
@@ -7562,6 +7550,115 @@ status open
 
 \end_deeper
 \begin_layout Itemize
+Lema 1 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ponerProfs (n+1)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+mapT (+1) .
+ ponerProfs n
+\end_layout
+
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Lema 2 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+maxAGT .
+ mapT (+1)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+(+1) .
+ maxAGT
+\end_layout
+
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Lema 3 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+alturaAGT t
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\geq$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+: COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Caso inductivo 
 \begin_inset listings
 lstparams "language=Haskell"
@@ -7570,12 +7667,202 @@ status open
 
 \begin_layout Plain Layout
 
-Node x (y:ys)
+Node x xs
 \end_layout
 
 \end_inset
 
-: COMPLETAR.
+:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(maxAGT .
+ (ponerProfs 1)) (Node x xs)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ;def.ponerProfs.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maxAGT (Node 1 (map (ponerProfs 2) xs))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.maxAGT.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maximum (1:(map maxAGT (map (ponerProfs 2) xs)))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop.map\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maximum (1:(map (maxAGT .
+ (ponerProfs 2)) xs))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle lema.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maximum (1:(map (maxAGT .
+ mapT (+1) .
+ ponerProfs 1) xs))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle lema.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maximum (1:(map ((+1) .
+ maxAGT .
+ ponerProfs 1) xs))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop.map\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maximum (1:(map (+1) (map (maxAGT.
+ ponerProfs 1) xs)))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.map;H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maximum (1:(map (+1) (map alturaAGT xs)))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle lema.3\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+maximum (map (+1) (map alturaAGT xs))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1 + maximum (map alturaAGT xs)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.alturaAGT.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+alturaAGT (Node x xs)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -7974,7 +8261,125 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una propiedad definida sobre elementos de 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $P$
+\end_inset
+
+ vale en 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Zero
+\end_layout
+
+\end_inset
+
+ y ademas;
+\end_layout
+
+\begin_layout Itemize
+si 
+\begin_inset Formula $P$
+\end_inset
+
+ vale en
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ f
+\end_layout
+
+\end_inset
+
+ también vale en 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+One f
+\end_layout
+
+\end_inset
+
+ y ademas;
+\end_layout
+
+\begin_layout Itemize
+para cualquier
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ g
+\end_layout
+
+\end_inset
+
+ también vale en 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Two (g True)
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Two (g False)
+\end_layout
+
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+entonces 
+\begin_inset Formula $P$
+\end_inset
+
+ vale para todos los elementos de 
+\begin_inset Formula $F$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
