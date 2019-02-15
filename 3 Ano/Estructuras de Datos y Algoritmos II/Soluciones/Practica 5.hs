@@ -1,6 +1,4 @@
-infix 1 |||
-(|||) :: a -> b -> (a,b)
-(|||) = (,)
+import Par
 
 data BTree a = Empty | Node Int (BTree a ) a (BTree a) deriving Show
 
@@ -25,12 +23,12 @@ tabulate :: (Int -> a) -> Int -> BTree a
 tabulate f 0 = Empty
 tabulate f n = let half = div n 2
                    f' = \x -> f (x+half+1)
-                   (l,r) = (tabulate f half) ||| (tabulate f' (div (n-1) 2))
-               in Node n l (f half) r
+                   ((l,m),r) = (tabulate f half) ||| f half ||| (tabulate f' (div (n-1) 2))
+               in Node n l m r
 
 map' :: (a -> b) -> BTree a -> BTree b
 map' _ Empty          = Empty
-map' f (Node s l m r) = let (l', (m', r')) = (map' f l ||| (f m ||| map' f r))
+map' f (Node s l m r) = let ((l',m'),r') = map' f l ||| f m ||| map' f r
                         in Node s l' m' r'
 
 take' :: Int -> BTree a -> BTree a
@@ -79,11 +77,19 @@ mejorGanancia t = maxT $ mapT (\(x,y) -> maxT y - x) (conSufijos t)
 sufijos :: Tree Int -> Tree (Tree Int)
 sufijos t = sufijos' t E where
   sufijos' (Leaf _)   a = Leaf a
-  sufijos' (Join l r) a = let (l', r') = sufijos' l (Join r a) ||| sufijos' r a
+  sufijos' (Join l r) a = let (l', r') = if (a == E)
+                                         then (sufijos' l r, sufijos' r E)
+                                         else sufijos' l (Join r a) ||| sufijos' r a
                           in Join l' r'
 
+-- Se asumen arboles con la misma estructura
+zipT :: Tree a -> Tree b -> Tree (a,b)
+zipT (Leaf x) (Leaf y) = Leaf (x,y)
+zipT (Join l r) (Join l' r') = Join (zipT l l') (zipT r r')
+zipT _ _ = E
+
 conSufijos :: Tree Int -> Tree (Int, Tree Int)
-conSufijos = undefined -- COMPLETAR
+conSufijos t = zipT t (sufijos t)
 
 maxT :: Tree Int -> Int
 maxT = reduceT max 0
@@ -95,7 +101,8 @@ data T a = X | N (T a) a (T a)
 
 altura :: T a -> Int
 altura X         = 0
-altura (N l m r) = 1 + max (altura l) (altura r)
+altura (N l m r) = let (hl, hr) = altura l ||| altura r
+                   in 1 + max hl hr
 
 combinar :: T a -> T a -> T a
 combinar X t2         = t2
@@ -103,8 +110,8 @@ combinar (N l m r) t2 = N (combinar l r) m t2
 
 filterT :: (a -> Bool) -> T a -> T a
 filterT p X         = X
-filterT p (N l m r) = let (l',r') = filterT p l ||| filterT p r
-                      in if p m then N l' m r' else combinar l' r'
+filterT p (N l m r) = let ((l',r'),p') = filterT p l ||| filterT p r ||| p m
+                      in if p' then N l' m r' else combinar l' r'
 
 quicksortT :: T Int -> T Int
 quicksortT X         = X

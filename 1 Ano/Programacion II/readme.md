@@ -1,6 +1,6 @@
 ###### Año 2016
 
-* Federico Severino Guimpel
+* Federico Guillermo Severino Guimpel
 * Pamela Viale
 * Jose Luis Diaz
 * Natalia Colussi
