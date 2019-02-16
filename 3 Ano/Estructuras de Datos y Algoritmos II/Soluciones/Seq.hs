@@ -6,6 +6,7 @@ data ListView a t = NIL | CONS a t
 class Seq s where
    -- Constructores
    emptyS          :: s a
+   consS           :: a -> s a -> s a
    singletonS      :: a -> s a
    tabulateS       :: (Int -> a) -> Int -> s a
    fromList        :: [a] -> s a
@@ -26,7 +27,7 @@ class Seq s where
 
    -- Modificadores
    appendS         :: s a -> s a -> s a
-   updateS         :: s a -> (Int, a) -> s a
+   updateS         :: s a -> Int -> a -> s a
    injectS         :: s a -> s (Int, a) -> s a
    joinS           :: s (s a) -> s a
    zipS            :: s a -> s b -> s (a, b)
