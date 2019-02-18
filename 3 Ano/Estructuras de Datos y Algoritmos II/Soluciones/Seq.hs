@@ -41,6 +41,7 @@ class Seq s where
    mapS            :: (a -> b) -> s a -> s b 
    filterS         :: (a -> Bool) -> s a -> s a 
    foldlS          :: (b -> a -> b) -> b -> s a -> b
+   foldrS          :: (a -> b -> b) -> b -> s a -> b
    contractS       :: (a -> a -> a) -> s a -> s a
    reduceS         :: (a -> a -> a) -> a -> s a -> a
    scanS           :: (a -> a -> a) -> a -> s a -> (s a, a)
@@ -55,5 +56,5 @@ class Seq s where
    sortS           :: (a -> a -> Ordering) -> s a -> s a
    maxES           :: (a -> a -> Ordering) -> s a -> a
    maxSS           :: (a -> a -> Ordering) -> s a -> Int
-   groupS          :: (a -> a -> Ordering) -> (a -> a -> a) -> a -> s a -> s a
+   groupS          :: (a -> a -> Ordering) -> (a -> a -> a) -> s a -> s a
    collectS        :: (a -> a -> Ordering) -> s (a, b) -> s (a, s b)

@@ -57,8 +57,10 @@ instance Seq [] where
   filterS _ [] = []
   filterS p (x:xs) = let (b, xs') = p x ||| filterS p xs
                      in if b then consS x xs' else xs'
-  foldlS _ e []     = e
-  foldlS f e (x:xs) = foldlS f (f e x) xs
+  foldlS _ b []     = b
+  foldlS f b (x:xs) = foldlS f (f b x) xs
+  foldrS _ b []     = b
+  foldrS f b (x:xs) = f x (foldrS f b xs)
   contractS op (x:y:zs) = let (xy, zs') = (op x y) ||| contractS op zs
                           in consS xy zs'
   contractS _ xs = xs
@@ -77,7 +79,7 @@ instance Seq [] where
                   ELT x    -> m x
                   NODE l r -> let (l',r') = dyc m op b l ||| dyc m op b r
                               in op l' r'
-  mcrS = undefined -- COMPLETAR
+  mcrS cmp m r = mapS r . collectS cmp . joinS . mapS m
 
   -- Ejercicio 6
   mergeS _ [] ys = ys
@@ -86,6 +88,11 @@ instance Seq [] where
                            | otherwise     = consS y (mergeS cmp (x:xs) ys)
   sortS cmp = (reduceS (mergeS cmp) emptyS) . (mapS singletonS)
   maxES cmp xs = reduceS (\x y -> if cmp x y == LT then y else x) (firstS xs) xs
-  maxSS = undefined
-  groupS = undefined
-  collectS = undefined
+  maxSS = undefined -- COMPLETAR
+  groupS cmp op (x:y:zs) | cmp x y == EQ = let (xy, zs') = op x y ||| groupS cmp op zs
+                                           in groupS cmp op $ xy : zs'
+                         | otherwise     = x : (groupS cmp op (y:zs))
+  groupS _   _  xs       = xs
+  collectS cmp xs = let f (x,_) (y,_) = cmp x y
+                        g (k,xs) (_,ys) = (k, appendS xs ys)
+                    in groupS f g $ sortS f $ mapS (\(a,b) -> (a, singletonS b)) xs
