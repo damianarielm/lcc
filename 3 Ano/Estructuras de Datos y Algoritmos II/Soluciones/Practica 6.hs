@@ -64,4 +64,4 @@ countCaract xss = let m xs = mapS (\c -> (c,1)) xs
                   in mcrS compare m r xss
 
 huffman :: Seq s => s (s Char) -> s (Int, s Char)
-huffman = undefined -- COMPLETAR
+huffman = collectS compare . mapS (\(x,y) -> (y,x)) . countCaract

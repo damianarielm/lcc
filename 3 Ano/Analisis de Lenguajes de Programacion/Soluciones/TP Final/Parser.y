@@ -10,7 +10,7 @@ import UI.NCurses (Color (..))
 
 %name parse
 %tokentype { Token }
-%error { error "Error de parseo en automata" }
+%error { error "Error de parseo en definicion de automata" }
 
 %token
   Chebyshev     { TChebyshev }
@@ -47,6 +47,10 @@ import UI.NCurses (Color (..))
   SE            { TSE }
   SW            { TSW }
 
+%left '\''
+%right ':'
+%left And
+%right Char
 %%
 
 Automata   ::                                                               { ([State], [Rule]) }
@@ -68,13 +72,13 @@ Color      : Black                                                          { Co
 
 Rules      ::                                                               { [Rule] }
 Rules      : State Eq '\'' Char '\'' ':' '\'' Char '\'' Rules               { ($4,[], $8) : $10 }
-	   | State Eq '\'' Char '\'' Comparsion ':' '\'' Char '\'' Rules    { ($4, $6, $9) : $11  }
+	   | State Eq '\'' Char '\'' And Comparsion ':' '\'' Char '\'' Rules{ ($4, $7, $10) : $12  }
            | {- empty -}                                                    { [] }
 
 Comparsion ::                                                               { [Condition] }
-Comparsion : And Distance '(' '\'' Char '\'' ',' Int ')' Cmp Int Comparsion { ($2 $5 $8 $10 $11) : $12 } 
-	   | And Cardinal '(' Int ')' Cmp '\'' Char '\'' Comparsion         { ($2 $4 $6 $8) : $10 }
-	   | {- empty -}                                                    { [] }
+Comparsion : Distance '(' '\'' Char '\'' ',' Int ')' Cmp Int Comparsion     { ($1 $4 $7 $9 $10) : $11 } 
+           | Cardinal '(' Int ')' Cmp '\'' Char '\'' Comparsion             { ($1 $3 $5 $7) : $9 }
+           | {- empty -}                                                    { [] }
 
 Distance   ::                                                               { Char -> Int -> (Int -> Int -> Bool) -> Int -> Condition }
 Distance   : Chebyshev                                                      { Chebyshev }
