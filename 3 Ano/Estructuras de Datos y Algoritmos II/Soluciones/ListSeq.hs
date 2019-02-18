@@ -72,7 +72,11 @@ instance Seq [] where
   contractExpandS op e b f []  = b
   contractExpandS op e b f [x] = f x
   contractExpandS op e b f xs  = e xs $ contractExpandS op e b f $ contractS op xs
-  mapReduceS m op b xs = reduceS op b $ mapS m xs
+  dyc m op b xs = case showtS xs of
+                  EMPTY    -> b
+                  ELT x    -> m x
+                  NODE l r -> let (l',r') = dyc m op b l ||| dyc m op b r
+                              in op l' r'
   mcrS = undefined -- COMPLETAR
 
   -- Ejercicio 6
@@ -80,7 +84,7 @@ instance Seq [] where
   mergeS _ xs [] = xs
   mergeS cmp (x:xs) (y:ys) | cmp x y == LT = consS x (mergeS cmp xs (y:ys))
                            | otherwise     = consS y (mergeS cmp (x:xs) ys)
-  sortS cmp = mapReduceS singletonS (mergeS cmp) emptyS
+  sortS cmp = (reduceS (mergeS cmp) emptyS) . (mapS singletonS)
   maxES cmp xs = reduceS (\x y -> if cmp x y == LT then y else x) (firstS xs) xs
   maxSS = undefined
   groupS = undefined

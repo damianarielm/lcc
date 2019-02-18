@@ -47,7 +47,7 @@ class Seq s where
 
    -- Algoritmos genericos
    contractExpandS :: (a -> a -> a) -> (s a -> b -> b) -> b -> (a -> b) -> s a -> b
-   mapReduceS      :: (a -> b) -> (b -> b -> b) -> b -> s a -> b
+   dyc             :: (a -> b) -> (b -> b -> b) -> b -> s a -> b
    mcrS            :: (a -> a -> Ordering) -> (b -> s (a, c)) -> ((a, s c) -> d) -> s b -> s d
 
    -- Ejercicio 6

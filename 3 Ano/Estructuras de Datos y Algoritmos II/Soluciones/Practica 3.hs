@@ -104,7 +104,9 @@ instance Show a => Show (BinTree a) where
   show (NodeB l m r) = "[" ++ show l ++ " < " ++ show m ++ " > " ++ show r ++ "]"
 
 completo :: a -> Int -> BinTree a
-completo = undefined -- COMPLETAR
+completo _ 0 = EmptyB
+completo x n = let t = completo x (n-1)
+               in NodeB t x t
 
 balanceado :: a -> Int -> BinTree a
 balanceado = undefined -- COMPLETAR
