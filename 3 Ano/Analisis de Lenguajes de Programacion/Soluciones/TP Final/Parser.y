@@ -47,10 +47,6 @@ import UI.NCurses (Color (..))
   SE            { TSE }
   SW            { TSW }
 
-%left '\''
-%right ':'
-%left And
-%right Char
 %%
 
 Automata   ::                                                               { ([State], [Rule]) }
@@ -76,9 +72,10 @@ Rules      : State Eq '\'' Char '\'' ':' '\'' Char '\'' Rules               { ($
            | {- empty -}                                                    { [] }
 
 Comparsion ::                                                               { [Condition] }
-Comparsion : Distance '(' '\'' Char '\'' ',' Int ')' Cmp Int Comparsion     { ($1 $4 $7 $9 $10) : $11 } 
-           | Cardinal '(' Int ')' Cmp '\'' Char '\'' Comparsion             { ($1 $3 $5 $7) : $9 }
-           | {- empty -}                                                    { [] }
+Comparsion : Distance '(' '\'' Char '\'' ',' Int ')' Cmp Int And Comparsion { ($1 $4 $7 $9 $10) : $12 } 
+           | Cardinal '(' Int ')' Cmp '\'' Char '\'' And Comparsion         { ($1 $3 $5 $7) : $10 }
+           | Distance '(' '\'' Char '\'' ',' Int ')' Cmp Int                { ($1 $4 $7 $9 $10) : [] } 
+           | Cardinal '(' Int ')' Cmp '\'' Char '\''                        { ($1 $3 $5 $7) : [] }
 
 Distance   ::                                                               { Char -> Int -> (Int -> Int -> Bool) -> Int -> Condition }
 Distance   : Chebyshev                                                      { Chebyshev }

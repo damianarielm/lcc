@@ -188,7 +188,7 @@ RULES      ::= Lambda
 
 \begin_layout Plain Layout
 
-             | State == 'CHAR' COMPARISON: 'CHAR' RULES
+             | State == 'CHAR' && COMPARISON: 'CHAR' RULES
 \end_layout
 
 \begin_layout Plain Layout
@@ -198,17 +198,22 @@ RULES      ::= Lambda
 
 \begin_layout Plain Layout
 
-COMPARISON ::= && DISTANCE('CHAR',INT) CMP INT COMPARISON
+COMPARISON ::= DISTANCE('CHAR',INT) CMP INT && COMPARISON
 \end_layout
 
 \begin_layout Plain Layout
 
-             | && CARDINAL(INT) CMP 'CHAR' COMPARISON
+             | CARDINAL(INT) CMP 'CHAR' && COMPARISON
 \end_layout
 
 \begin_layout Plain Layout
 
-             | Lambda
+             | DISTANCE('CHAR',INT) CMP INT
+\end_layout
+
+\begin_layout Plain Layout
+
+             | CARDINAL(INT) CMP 'CHAR'
 \end_layout
 
 \begin_layout Plain Layout
