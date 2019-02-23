@@ -57,6 +57,7 @@ ejemplo3 = fromList [1,4,6,7,8,9,10,3] :: [Int]
 
 datosIngreso :: Seq s => s (String, s Int) -> s (Int, Int)
 datosIngreso = undefined -- COMPLETAR
+                      
 
 countCaract :: Seq s => s (s Char) -> s (Char, Int)
 countCaract xss = let m xs = mapS (\c -> (c,1)) xs

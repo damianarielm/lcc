@@ -7956,10 +7956,312 @@ flatten .
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Leaf x
 \end_layout
 
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+((map f) .
+ flaten) (Leaf x)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+map f (flaten (Leaf x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.flatten.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+map f (x:[])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.map.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(f x) : (map f [])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.map.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(f x) : []
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.flatten.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+flatten (Leaf (f x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.mapTree.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+flatten (mapTree f (Leaf x))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(flatten .
+ (mapTree f)) (Leaf x)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Node x l r
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+((map f) .
+ flaten) (Node x l r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ;def.flatten.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+map f (flaten l ++ [x] ++ flatten r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle prop.map\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+map f (flaten l) ++ map f [x] ++ map f (flatten r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ;H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(flatten .
+ (mapTree f)) l ++ map f [x] ++ (flatten .
+ (mapTree f)) r
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.flatten.2;def.map;def.\circ\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+flatten (Node (f x) (mapTree f l) (mapTree f r))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\circ;def.mapTree.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(flatten .
+ (mapTree f)) (Node x l r)
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dada la siguiente definición,
@@ -8234,6 +8536,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper

@@ -197,7 +197,7 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-Notese que para 
+Nótese que para 
 \begin_inset Formula $n=2^{k}$
 \end_inset
 
@@ -945,7 +945,7 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-Encontrar cotas asintoticas 
+Encontrar cotas asintóticas 
 \begin_inset Formula $\Theta$
 \end_inset
 
@@ -1428,12 +1428,12 @@ split [x]    = ([x], [])
 
 \begin_layout Plain Layout
 
-split (x:xs) = let (ys, zs) = split xs
+split (x:y:xs) = let (ys, zs) = split xs
 \end_layout
 
 \begin_layout Plain Layout
 
-               in (x:ys, y:zs)
+                 in (x:ys, y:zs)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1517,13 +1517,134 @@ Resolver la recurrencia encontrada en el apartado anterior utilizando el
 \end_layout
 
 \begin_layout Paragraph
-Solución
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $W_{tt}\left(0\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{tt}\left(1\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{tt}\left(n\right)=2W_{tt}\left(n/2\right)+W_{s}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{tt}\left(0\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{tt}\left(1\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{tt}\left(n\right)=S_{tt}\left(n/2\right)+S_{s}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El teorema maestro nos dice que:
+\begin_inset Formula 
+\[
+W_{tt}\left(n\right)\in\begin{cases}
+\vdots & \vdots\\
+\Theta\left[n^{\log_{2}\left(2\right)}\log_{2}\left(n\right)\right] & \text{si }n\in\Theta\left[n^{\log_{2}\left(2\right)}\right]\\
+\vdots & \vdots
+\end{cases}
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $n\in\Theta\left(n\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $W_{tt}\left(n\right)\in\Theta\left[n\log_{2}\left(n\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Ademas:
+\begin_inset Formula 
+\[
+S_{tt}\left(n\right)\in\begin{cases}
+\vdots & \vdots\\
+\Theta\left(n\right) & \text{si }\exists\epsilon>0/n\in\Omega\left[n^{\log_{2}\left(1+\epsilon\right)}\right]\\
+ & \text{y }\exists c<1,N\in\mathbb{N}/\forall n>N\Rightarrow n/2\leq cn
+\end{cases}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $\epsilon=1$
+\end_inset
+
+, 
+\begin_inset Formula $c=1/2$
+\end_inset
+
+ y 
+\begin_inset Formula $N=0$
+\end_inset
+
+ luego 
+\begin_inset Formula $n\in\Omega\left[n^{\log_{2}\left(1+\epsilon\right)}\right]$
+\end_inset
+
+ y ademas 
+\begin_inset Formula $n/2=\leq cn=n/2$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $n>N$
+\end_inset
+
+; por lo tanto 
+\begin_inset Formula $\text{\ensuremath{S_{tt}\left(n\right)\in\Theta\left(n\right)}}$
+\end_inset
+
+.
 \end_layout
 
+\end_deeper
 \end_deeper
 \end_body
 \end_document

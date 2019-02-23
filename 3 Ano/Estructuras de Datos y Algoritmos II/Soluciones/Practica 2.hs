@@ -188,7 +188,7 @@ matches :: Int -> [Int] -> [Int]
 matches x xs = [ y | y <- xs, x == y ]
 
 cuadruplas :: Int -> [(Int, Int, Int, Int)]
-cuadruplas = undefined -- COMPLETAR
+cuadruplas n = [(a,b,c,d) | a <- [0..n], b <- [0..n], c <- [0..n], d <- [0..n], (a^2)+(b^2) == (c^2)+(d^2)]
 
 unique :: [Int] -> [Int]
 unique xs = [ x | (x,i) <- zip xs [0..], not (elem x (take i xs))]
