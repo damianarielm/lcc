@@ -32,10 +32,9 @@ instance Seq [] where
 
   -- Modificadores
   appendS = (++)
-  updateS s i e = updateS' s i e 0 where
-    updateS' []     _ _ _ = emptyS
-    updateS' (x:xs) i e n | n == i    = consS e xs
-                          | otherwise = consS x (updateS' xs i e (n+1))
+  updateS []     _ _ = emptyS
+  updateS (x:xs) 0 e = consS e xs
+  updateS (x:xs) i e = consS x (updateS xs (i-1) e)
   injectS = undefined -- COMPLETAR
   joinS = concat
   zipS = zip
@@ -57,10 +56,8 @@ instance Seq [] where
   filterS _ [] = []
   filterS p (x:xs) = let (b, xs') = p x ||| filterS p xs
                      in if b then consS x xs' else xs'
-  foldlS _ b []     = b
-  foldlS f b (x:xs) = foldlS f (f b x) xs
-  foldrS _ b []     = b
-  foldrS f b (x:xs) = f x (foldrS f b xs)
+  foldlS = foldl
+  foldrS = foldr
   contractS op (x:y:zs) = let (xy, zs') = (op x y) ||| contractS op zs
                           in consS xy zs'
   contractS _ xs = xs
