@@ -1459,7 +1459,7 @@ Si tomamos como modelos a las secuencias, podemos especificar las operaciones
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
@@ -2405,11 +2405,506 @@ Inducción
 \begin_layout Standard
 Los programas funcionales interesantes usan recursivo.
  Para poder probar propiedades acerca de programas recursivos usualmente
- es necesario utilizar inducción.
+ es necesario utilizar el principio de inducción.
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Para un tipo de datos recursivo, si lográramos demostrar que el hecho de
+ que una propiedad valga en ciertos valores implica que también debe valer
+ para los valores que podemos construir a partir de ellos y ademas; la propiedad
+ también vale para cualquier constructor no recursivo, entonces naturalmente
+ dicha propiedad debe valer para todos los valores de ese tipo de datos.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo el principio de inducción para listas es el siguiente:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una propiedad definida sobre listas,
+\end_layout
+
+\begin_layout Itemize
+Si la propiedad vale en la lista vacía y ademas;
+\end_layout
+
+\begin_layout Itemize
+el hecho de que la propiedad valga en una lista 
+\begin_inset Formula $xs$
+\end_inset
+
+ implica que también vale en 
+\begin_inset Formula $x:xs$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+entonces la propiedad vale para cualquier lista.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Para arboles generales definidos como 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data AGT a = Node a [AGT a]
+\end_layout
+
+\end_inset
+
+ el principio es como sigue:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una propiedad definida sobre arboles generales,
+\end_layout
+
+\begin_layout Itemize
+Si la propiedad vale en 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Node x []
+\end_layout
+
+\end_inset
+
+ y ademas;
+\end_layout
+
+\begin_layout Itemize
+el hecho de que la propiedad valga para cada árbol general en 
+\begin_inset Formula $xs$
+\end_inset
+
+ implica que también vale en 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Node x xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+entonces la propiedad vale para cualquier árbol general.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A modo de ejemplo, para el tipo de datos 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data BIN = Null | Leaf | Node Bin Bin
+\end_layout
+
+\end_inset
+
+ probaremos que 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+cantleaf t
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\leq$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+cantnode t + 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Null
+\end_layout
+
+\end_inset
+
+:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+canleaf Null
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.cantleaf.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+0
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\leq$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+0+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.cantnode.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cantnode Null + 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Leaf
+\end_layout
+
+\end_inset
+
+:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+canleaf Leaf
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.cantleaf.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\leq$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+0+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.cantnode.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cantnode Leaf + 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Node u v
+\end_layout
+
+\end_inset
+
+:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+canleaf (Node u v)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.cantleaf.3\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cantleaf u + cantleaf v
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\leq\left\langle H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cantnode u + 1 + cantnode v + 1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.cantnode.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cantnode (Node u v) + 1
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter

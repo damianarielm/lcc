@@ -8634,7 +8634,7 @@ One f
 \end_layout
 
 \begin_layout Itemize
-para cualquier
+si para cualquier
 \begin_inset listings
 lstparams "language=Haskell"
 inline true
@@ -8647,7 +8647,37 @@ status open
 
 \end_inset
 
- también vale en 
+, 
+\begin_inset Formula $P$
+\end_inset
+
+ vale en
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ g True
+\end_layout
+
+\end_inset
+
+ y
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ g True
+\end_layout
+
+\end_inset
+
+ entonces también vale en 
 \begin_inset listings
 lstparams "language=Haskell"
 inline true
