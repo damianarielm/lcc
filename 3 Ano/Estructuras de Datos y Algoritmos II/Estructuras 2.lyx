@@ -1,0 +1,2432 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Estructuras de datos y algoritmos II
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Análisis de algoritmos
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+Supongamos que las computadoras fueran infinitamente rápidas y completamente
+ gratuitas.
+ Dados dos algoritmos que resuelven correctamente el mismo problema: ¿Existe
+ alguna razón para utilizar uno en vez de otro? Mas allá de la facilidad
+ de implementación y claridad del código, no habría mas razones para optar
+ por alguno.
+\end_layout
+
+\begin_layout Standard
+Desafortunadamente las computadoras no son infinitamente rápidas y tampoco
+ son gratuitas, por lo tanto, el tiempo computacional es un recurso acotado
+ que debe ser aprovechado sabiamente y el análisis de eficiencia de algoritmos
+ es la herramienta para realizar dicha tarea.
+\end_layout
+
+\begin_layout Standard
+¿Como puede compararse la eficiencia de dos algoritmos? Un primer enfoque
+ podría ser, correr el algoritmo para diferentes tamaños de entrada y comparar
+ los tiempos de ejecución.
+ Sin embargo esta idea tiene algunos inconvenientes:
+\end_layout
+
+\begin_layout Itemize
+Podría ocurrir que para algunos tamaños de entrada sea mas rápido un algoritmo
+ y para otros tamaños sea mas eficiente el otro.
+\end_layout
+
+\begin_layout Itemize
+Algunos algoritmos podrían tener diferentes tiempos de ejecución dependiendo
+ de la arquitectura en donde se ejecuten.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por ejemplo supongamos que un algoritmo para ordenar una lista de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos tarda 
+\begin_inset Formula $2\cdot n^{2}+1$
+\end_inset
+
+ segundos y otro algoritmo tarda 
+\begin_inset Formula $7\cdot n\cdot\log_{2}\left(n\right)+5$
+\end_inset
+
+ segundos.
+\end_layout
+
+\begin_layout Itemize
+Para ordenar una lista de 
+\begin_inset Formula $4$
+\end_inset
+
+ elementos el primer algoritmo tarda 
+\begin_inset Formula $\text{\ensuremath{2\cdot4\cdot4+1=33}}$
+\end_inset
+
+ y el segundo 
+\begin_inset Formula $7\cdot4\cdot2+5=61$
+\end_inset
+
+.
+ Aparentemente el primer algoritmo es dos veces mas rápido que el segundo.
+\end_layout
+
+\begin_layout Itemize
+Para ordenar una lista de 
+\begin_inset Formula $1024$
+\end_inset
+
+ elementos el primer algoritmo tarda 
+\begin_inset Formula $\text{\ensuremath{2\cdot1024\cdot1024+1=2097153}}$
+\end_inset
+
+ y el segundo 
+\begin_inset Formula $7\cdot1024\cdot10+5=7168$
+\end_inset
+
+.
+ Aparentemente el segundo algoritmo es 290 veces mas rápido que el primero.
+\end_layout
+
+\begin_layout Standard
+Para entradas chicas el primer algoritmo es ligeramente mejor, pero para
+ entradas grandes el segundo algoritmo es mucho mejor.
+ Sin importar que tan grande sea el factor constante que multiplica al factor
+ variable, siempre habrá un tamaño de entrada a partir del cual el segundo
+ algoritmo es mejor.
+ 
+\end_layout
+
+\begin_layout Standard
+El análisis asintótico de funciones nos permite hacer la comparación que
+ necesitamos.
+ Es decir, analizamos el comportamiento de las funciones a medida que las
+ entradas tienden a infinito.
+\end_layout
+
+\begin_layout Section
+Notación asintótica
+\end_layout
+
+\begin_layout Standard
+La notación asintótica nos comparar el orden de crecimiento de dos funciones
+ de manera sencilla (evitando el calculo de limites).
+\end_layout
+
+\begin_layout Subsection
+Notación O
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g:\mathbb{N}\to\mathbb{R}$
+\end_inset
+
+, decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene orden de crecimiento 
+\begin_inset Formula $O\left(g\right)$
+\end_inset
+
+ (y lo notamos 
+\begin_inset Formula $f\in O\left(g\right)$
+\end_inset
+
+) si existen constantes 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $n_{0}\in\mathbb{N}$
+\end_inset
+
+ tales que:
+\begin_inset Formula 
+\[
+\forall n\geq n_{0}:0\leq f\left(n\right)\leq c\cdot g\left(n\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una función que indica el tiempo que tarda un algoritmo en retornar
+ el resultado en relación al tamaño de la entrada, 
+\begin_inset Formula $f\in O\left(g\right)$
+\end_inset
+
+ nos indica que para entradas lo suficientemente grandes (a partir de 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+), el peor comportamiento que podemos esperar es el de 
+\begin_inset Formula $g$
+\end_inset
+
+ multiplicada por alguna constante.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A modo de ejemplo, consideremos un típico algoritmo que determine si un
+ elemento se encuentra en una lista simplemente enlazada.
+ Para una lista de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos, en el peor caso este algoritmo realizara 
+\begin_inset Formula $n$
+\end_inset
+
+ comparaciones.
+ Si cada comparación tarda 2 segundos y retornar un valor tarda 1 segundo,
+ la función que expresa el tiempo que tarda el algoritmo para retornar el
+ resultado es 
+\begin_inset Formula $f\left(n\right)=2n+1$
+\end_inset
+
+.
+ Si tomamos 
+\begin_inset Formula $n_{0}=1$
+\end_inset
+
+, podemos ver que 
+\begin_inset Formula $f\in O\left(n\right)$
+\end_inset
+
+ de la siguiente manera:
+\begin_inset Formula 
+\[
+0\leq1\leq n\iff2n\leq\underbrace{2n+1}_{f\left(n\right)}\leq\underbrace{3n}_{cg\left(n\right)}
+\]
+
+\end_inset
+
+Un análisis mas profundo nos revela que 
+\begin_inset Formula $f\in O\left(g\right)$
+\end_inset
+
+ independientemente del coeficiente lineal y el termino independiente, por
+ lo cual podemos comparar dos algoritmos sin importar cuanto tarda cada
+ comparación.
+ Ademas, aunque para entradas chicas un algoritmo 
+\begin_inset Formula $f'\left(n\right)\in O\left(n^{2}\right)$
+\end_inset
+
+ puede resolver el problema en menos tiempo, para entradas grandes 
+\begin_inset Formula $f$
+\end_inset
+
+ siempre será mejor.
+\end_layout
+
+\begin_layout Standard
+Notese que el elemento buscado no siempre va a estar al final de la lista,
+ es por eso que también nos interesa preguntarnos cual es la complejidad
+ en el mejor de los casos.
+\end_layout
+
+\begin_layout Subsection
+Notación 
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g:\mathbb{N}\to\mathbb{R}$
+\end_inset
+
+, decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene orden de crecimiento 
+\begin_inset Formula $\Omega\left(g\right)$
+\end_inset
+
+ (y lo notamos 
+\begin_inset Formula $f\in\Omega\left(g\right)$
+\end_inset
+
+) si existen constantes 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $n_{0}\in\mathbb{N}$
+\end_inset
+
+ tales que:
+\begin_inset Formula 
+\[
+\forall n\geq n_{0}:0\leq c\cdot g\left(n\right)\leq f\left(n\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es decir que en el mejor de los casos, podemos esperar que 
+\begin_inset Formula $f$
+\end_inset
+
+ se comporte como 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ En nuestro ejemplo de buscar un elemento en una lista enlazada, si el elemento
+ buscado es el primero el algoritmo tardara 
+\begin_inset Formula $f\left(n\right)=2+1$
+\end_inset
+
+.
+ Podemos ver que 
+\begin_inset Formula $f\in\Omega\left(1\right)$
+\end_inset
+
+ de la siguiente forma:
+\begin_inset Formula 
+\[
+0\leq\underbrace{3\cdot1}_{cg\left(n\right)}\leq\underbrace{2+1}_{f\left(n\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Notación 
+\begin_inset Formula $\Theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Decimos que 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene orden de crecimiento 
+\begin_inset Formula $\Theta\left(g\right)$
+\end_inset
+
+ (y lo notamos 
+\begin_inset Formula $f\in\Theta\left(g\right)$
+\end_inset
+
+) si 
+\begin_inset Formula $f\in O\left(g\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $f\in\Omega\left(g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La notación Theta expresa una cota justa del comportamiento asintótico de
+ una función, es decir que podemos acotar inferior y superiormente por la
+ misma función.
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Conclusión
+\end_layout
+
+\begin_layout Standard
+En definitiva la notación asintótica nos permite comparar algoritmos para
+ entradas grandes en el peor y mejor de los casos.
+ Hay que tener en cuenta que dos funciones con el mismo orden de crecimiento
+ no son igualmente eficientes, por ejemplo 
+\begin_inset Formula $3n^{2}+2n+7$
+\end_inset
+
+ y 
+\begin_inset Formula $n^{2}+n+2$
+\end_inset
+
+ tiene ambas orden 
+\begin_inset Formula $O\left(n^{2}\right)$
+\end_inset
+
+ pero sin embargo la segunda es mas eficiente.
+\end_layout
+
+\begin_layout Standard
+Finalmente terminamos con una lista de las complejidades mas frecuentes
+ en orden creciente:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log_{2}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n\cdot\log_{2}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n^{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $2^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Modelo de costos
+\end_layout
+
+\begin_layout Standard
+Para especificar cual es el costo de un algoritmo para una entrada determinada
+ es necesario establecer un modelo de costos.
+\end_layout
+
+\begin_layout Standard
+Para ello definiremos el trabajo (costo del algoritmo con un solo procesador)
+ y profundidad (costo del algoritmos con infinitos procesadores) basados
+ en un lenguaje.
+\end_layout
+
+\begin_layout Subsection
+Trabajo
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W\left(c\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W\left(op\text{ }e\right)=1+W\left(e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W\left(e_{1},e_{2}\right)=1+W\left(e_{1}\right)+W\left(e_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W\left(e_{1}||e_{2}\right)=1+W\left(e_{1}\right)+W\left(e_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W\left(\text{let }x=e_{1}\text{ in }e_{2}\right)=1+W\left(e_{1}\right)+W\left(e_{2}\left[x:=Eval\left(e_{1}\right)\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W\left(\left\{ f\left(x\right)/x\in A\right\} \right)=1+{\displaystyle \sum_{x\in A}}W\left(f\left(x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A modo de ejemplo, analicemos el trabajo de un algoritmo que calcula la
+ longitud de una lista simplemente enlazada:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+length []     = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+length (x:xs) = 1 + length xs
+\end_layout
+
+\end_inset
+
+Para una lista de longitud 0 (primer caso) el algoritmo retorna una expresión
+ constante (0), es decir que su trabajo será 
+\begin_inset Formula $W\left(0\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para una lista de longitud 
+\begin_inset Formula $n$
+\end_inset
+
+ (segundo caso) el algoritmo opera (suma) sobre dos expresiones (1 y length
+ xs), por lo que su trabajo será:
+\begin_inset Formula 
+\[
+W\left(n\right)=1+W\left(1,length\text{ }xs\right)=1+1+W\left(n-1\right)
+\]
+
+\end_inset
+
+Si continuamos desarrollando la expresión observaremos que sumaremos 
+\begin_inset Formula $1+1$
+\end_inset
+
+ por cada elemento de la lista, es decir que su trabajo será 
+\begin_inset Formula $W\left(n\right)=2n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para poder realizar este análisis fue indispensable notar que el llamado
+ recursivo se realiza sobre una lista de 
+\begin_inset Formula $n-1$
+\end_inset
+
+ elementos.
+\end_layout
+
+\begin_layout Subsection
+Profundidad
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S\left(c\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S\left(op\text{ }e\right)=1+S\left(e\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S\left(e_{1},e_{2}\right)=1+S\left(e_{1}\right)+S\left(e_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S\left(e_{1}||e_{2}\right)=1+\max\left\{ S\left(e_{1}\right),S\left(e_{2}\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S\left(\text{let }x=e_{1}\text{ in }e_{2}\right)=1+S\left(e_{1}\right)+S\left(e_{2}\left[x:=Eval\left(e_{1}\right)\right]\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S\left(\left\{ f\left(x\right)/x\in A\right\} \right)=1+{\displaystyle \max_{x\in A}}S\left(f\left(x\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Calculemos la profundidad de un algoritmo que determina la pertenencia de
+ un elemento a un árbol binario balanceado con información en las hojas:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+member x E          = False
+\end_layout
+
+\begin_layout Plain Layout
+
+member x (Leaf y)   = if x == y then True else False
+\end_layout
+
+\begin_layout Plain Layout
+
+member x (Node l r) = let (a,b) = member x l || member x r
+\end_layout
+
+\begin_layout Plain Layout
+
+                      in a or b
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para un árbol vacío (0 elementos) su profundidad es la de una constante
+ (False) por lo tanto tiene profundidad 
+\begin_inset Formula $S\left(0\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para un árbol con una sola hoja (1 elemento) su profundidad es la de operar
+ (comparar) dos expresiones (x e y), operar (decidir) según su resultado
+ y retornar una constante (True o False).
+ Es decir: 
+\begin_inset Formula $S\left(1\right)=1+1+1=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finalmente para un árbol balanceado completo de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos su profundidad es:
+\begin_inset Formula 
+\[
+S\left(n\right)=1+\max\left\{ member\text{ }x\text{ }l,member\text{ }x\text{ }r\right\} =1+S\left(n/2\right)
+\]
+
+\end_inset
+
+Si continuamos desarrollando esa suma observaremos que sumamos una unidad,
+ 
+\begin_inset Formula $\log_{2}\left(n\right)$
+\end_inset
+
+ veces, y una vez mas al llegar a una hoja, es decir 
+\begin_inset Formula $\text{\ensuremath{S\left(n\right)=\log_{2}\left(n\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vale la pena observar que en un árbol binario balanceado y completo cada
+ rama contiene la mitad de los elementos.
+\end_layout
+
+\begin_layout Subsection
+Paralelismo
+\end_layout
+
+\begin_layout Standard
+El paralelismo es una medida de la cantidad de procesadores que pueden utilizars
+e de forma eficiente.
+ Dado un algoritmo con trabajo en el orden de 
+\begin_inset Formula $O\left(f\left(n\right)\right)$
+\end_inset
+
+ y profundidad en 
+\begin_inset Formula $O\left(g\left(n\right)\right)$
+\end_inset
+
+ calculamos el paralelismo como:
+\begin_inset Formula 
+\[
+P=\frac{f\left(n\right)}{g\left(n\right)}
+\]
+
+\end_inset
+
+A la hora de buscar algoritmos eficientes, buscamos aquellos que tengan
+ el mejor trabajo y entre todos ellos, elegimos el de mayor paralelismo.
+\end_layout
+
+\begin_layout Standard
+En una maquina con 
+\begin_inset Formula $p$
+\end_inset
+
+ procesadores, un algoritmo con trabajo 
+\begin_inset Formula $W$
+\end_inset
+
+ y profundidad 
+\begin_inset Formula $S$
+\end_inset
+
+ puede correr en un tiempo
+\begin_inset Formula 
+\[
+T<\frac{W}{p}+S=\frac{W}{p}+\frac{W}{P}=\frac{W}{p}\left(1+\frac{p}{P}\right)
+\]
+
+\end_inset
+
+suponiendo que el repartidor de tareas cada vez que haya un procesador libre
+ y tareas pendientes por ejecutar, las asigne inmediatamente; y que los
+ costos de comunicación (latencia y ancho de banda) sean bajos.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $P$
+\end_inset
+
+ es considerablemente mas grande que 
+\begin_inset Formula $p$
+\end_inset
+
+, entonces la cota es prácticamente optima.
+\end_layout
+
+\begin_layout Section
+Resolución de recurrencias
+\end_layout
+
+\begin_layout Standard
+Al plantear el trabajo y profundidad de algoritmos recursivos surgen expresiones
+ recursivas que será necesario resolver.
+ En esta sección se estudiaran varias técnicas.
+\end_layout
+
+\begin_layout Subsection
+Método inductivo (substitución)
+\end_layout
+
+\begin_layout Standard
+Una forma de resolver la complejidad de un trabajo expresado en forma recursiva
+ es intentar adivinar cual puede ser la solución, y luego demostrarlo por
+ inducción.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, supongamos un algoritmo que para una entrada de 
+\begin_inset Formula $0$
+\end_inset
+
+ elementos tiene trabajo 
+\begin_inset Formula $W\left(0\right)=c_{1}$
+\end_inset
+
+, para una entrada de un elemento 
+\begin_inset Formula $W\left(1\right)=c_{2}$
+\end_inset
+
+ y para 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos 
+\begin_inset Formula $W\left(n\right)=2\cdot W\left(\left\lfloor n/2\right\rfloor \right)+c_{3}n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para facilitar el análisis haremos caso omiso de la función piso, y mas
+ adelante estudiaremos en que situaciones es correcto hacer esta omisión.
+\end_layout
+
+\begin_layout Standard
+Si observamos la recurrencia podemos intuir que sumaremos 
+\begin_inset Formula $c_{3}n$
+\end_inset
+
+, 
+\begin_inset Formula $\log_{2}\left(n\right)$
+\end_inset
+
+ veces, por lo que adivinamos que 
+\begin_inset Formula $W\left(n\right)\in O\left(n\cdot\log_{2}\left(n\right)\right)$
+\end_inset
+
+.
+ A continuación realizamos la prueba:
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $n=2$
+\end_inset
+
+: 
+\begin_inset Formula $W\left(n\right)=2\cdot W\left(1\right)+2c_{3}=2\cdot c_{2}+2c_{3}=2\left(c_{2}+c_{3}\right)=nc\cdot1=nc\cdot\log_{2}\left(n\right)\in O\left(n\cdot\log_{2}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo\SpecialChar endofsentence
+ Supongamos que para 
+\begin_inset Formula $3\leq n<k$
+\end_inset
+
+ resulta que 
+\begin_inset Formula $\text{\ensuremath{W\left(n\right)\in O\left(n\cdot\log_{2}\left(n\right)\right)}}$
+\end_inset
+
+ es decir, 
+\begin_inset Formula $0\leq2\cdot W\left(n/2\right)+c_{3}n\leq cn\cdot\log_{2}\left(n\right)$
+\end_inset
+
+.
+ En particular también vale para 
+\begin_inset Formula $k/2$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+W\left(k\right)=2\cdot W\left(k/2\right)+c_{3}k\leq2\cdot\left[c\left(k/2\right)\cdot\log_{2}\left(k/2\right)\right]+c_{3}k=ck\cdot\log_{2}\left(k/2\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=ck\cdot\log_{2}\left(k\right)-ck\cdot\log_{2}\left(2\right)+c_{3}k=ck\cdot\log_{2}\left(k\right)-ck+c_{3}k\leq ck\cdot\log_{2}\left(k\right)
+\]
+
+\end_inset
+
+La ultima desigualdad se cumple si tomamos 
+\begin_inset Formula $c\geq c_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Arboles de recurrencia
+\end_layout
+
+\begin_layout Standard
+Una técnica general para resolver recurrencias son lo árboles de recurrencia.
+ Hacemos un árbol que en su raíz tiene el costo no recursivo para la entrada
+ inicial y cada rama indica cada una de las llamadas recursivas.
+ Luego expandimos las ramas correspondientes a las llamadas recursivas hasta
+ llegar a las hojas.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo para 
+\begin_inset Formula $f\left(n\right)=4f\left(n/2\right)+kn$
+\end_inset
+
+ el primer paso nos da un arbol así:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $kn\begin{cases}
+f\left(n/2\right)\\
+f\left(n/2\right)\\
+f\left(n/2\right)\\
+f\left(n/2\right)
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego expandimos cada rama hasta llegar a una hoja:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $kn\left.\underleftrightarrow{\begin{cases}
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)\\
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)\\
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)\\
+k\left(n/2\right) & \begin{cases}
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)\\
+k\left(n/4\right)
+\end{cases}\ldots T\left(1\right)
+\end{cases}}\right\updownarrow $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $hojas=4^{\log_{2}\left(n\right)}=n^{\log_{2}\left(4\right)}=n^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $altura=\log_{2}\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente sumamos cada nivel, y el costo total es la suma de todos los
+ niveles:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T\left(n\right)=kn+4k\left(n/2\right)+4^{2}k\left(n/4\right)+\ldots+n^{2}T\left(1\right)=\sum_{i=0}^{\log_{2}\left(n\right)-1}{\displaystyle \frac{4^{i}kn}{2^{i}}}+n^{2}T\left(1\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=kn\sum_{i=0}^{\log_{2}\left(n\right)-1}2^{i}+n^{2}T\left(1\right)=kn\frac{1-2^{\log_{2}\left(n\right)}}{1-2}+n^{2}T\left(1\right)=-kn\left(1-n\right)+n^{2}T\left(1\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=kn^{2}-kn+n^{2}T\left(1\right)\in\Theta\left(n^{2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si somos prolijos, el método nos da una solución exacta.
+ Si no, al menos tenemos un candidato para probar por inducción.
+\end_layout
+
+\begin_layout Subsection
+Regla de suavidad
+\end_layout
+
+\begin_layout Standard
+En los análisis de algoritmos, frecuentemente aparecen funciones piso y
+ techo: 
+\begin_inset Formula $\left\lfloor x/b\right\rfloor $
+\end_inset
+
+ y 
+\begin_inset Formula $\left\lceil x/b\right\rceil $
+\end_inset
+
+.
+ Si en vez de considerar 
+\begin_inset Formula $x$
+\end_inset
+
+ cualesquiera solamente consideramos potencias de 
+\begin_inset Formula $b$
+\end_inset
+
+, entonces podemos omitir dichas funciones de nuestro análisis pues para
+ 
+\begin_inset Formula $n=b^{k}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $n/b=\left\lfloor x/b\right\rfloor =\left\lceil x/b\right\rceil $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sin embargo el resultado al que llegamos es solamente el comportamiento
+ de la función para este tipo particular de entradas, pero podría ocurrir
+ que para otro tipo de entradas no lo sea.
+\end_layout
+
+\begin_layout Standard
+La regla de suavidad nos dice que si 
+\begin_inset Formula $f$
+\end_inset
+
+ es una función suave y 
+\begin_inset Formula $g$
+\end_inset
+
+ eventualmente no decreciente, si 
+\begin_inset Formula $b\geq2$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+g\left(b^{k}\right)\in\Theta\left(f\left(b^{k}\right)\right)\Rightarrow g\left(n\right)\in\Theta\left(f\left(n\right)\right)
+\]
+
+\end_inset
+
+Es decir, si para nuestro análisis consideramos exclusivamente a potencias
+ de 
+\begin_inset Formula $b$
+\end_inset
+
+, podemos omitir pisos y techos; y si el resultado al que llegamos es una
+ función suave, entonces nuestro análisis es correcto para cualquier entrada.
+\end_layout
+
+\begin_layout Subsection
+Teorema maestro
+\end_layout
+
+\begin_layout Standard
+Las recurrencias que aparecen en los algoritmos 
+\begin_inset Quotes fld
+\end_inset
+
+Divide & Conquer
+\begin_inset Quotes frd
+\end_inset
+
+ usualmente tienen la forma 
+\begin_inset Formula $T\left(n\right)=aT\left(n/b\right)+f\left(n\right)$
+\end_inset
+
+.
+ En general podemos resolver este tipo de recurrencias mediante el siguiente
+ teorema: Dados 
+\begin_inset Formula $a\geq1$
+\end_inset
+
+ y 
+\begin_inset Formula $b>1$
+\end_inset
+
+, entonces
+\begin_inset Formula 
+\[
+T\left(n\right)\in\begin{cases}
+\Theta\left(n^{\log_{b}\left(a\right)}\right) & \text{si }\exists\epsilon>0/f\left(n\right)\in O\left(n^{\log_{b}\left(a-\epsilon\right)}\right)\\
+\Theta\left(n^{\log_{b}\left(a\right)}\cdot\log_{2}\left(n\right)\right) & \text{si }f\left(n\right)\in\Theta\left(n^{\log_{b}\left(a\right)}\right)\\
+\Theta\left(f\left(n\right)\right) & \text{si }\exists\epsilon>0/f\left(n\right)\in\Omega\left(n^{\log_{b}\left(a+\epsilon\right)}\right)\\
+ & \text{y }\exists c<1,n_{0}\in\mathbb{N}/\forall n>n_{0}:af\left(n/b\right)\leq cf\left(n\right)
+\end{cases}
+\]
+
+\end_inset
+
+Si bien los tres casos son disjuntos, hay que tener en cuenta que no cubren
+ todas las posibilidades.
+\end_layout
+
+\begin_layout Subsection
+Propiedades útiles
+\end_layout
+
+\begin_layout Standard
+COMPLETAR
+\end_layout
+
+\begin_layout Chapter
+Tipos abstractos de datos
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+La idea de un tito abstracto de datos es abstraer detalles de implementación.
+ Es una descripción que debe indicar como se comporta la estructura sin
+ indicar como esta programada.
+ Dicha tarea sea trabajo del implementador, que debe proveer funciones que
+ respeten el comportamiento esperado.
+ El usuario es alguien que utiliza la abstracción asumiendo unicamente el
+ comportamiento que el TAD describe.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, una cola es una estructura en la cual podemos agregar elementos,
+ quitar el primero de ellos, podemos preguntar si esta vacía y ademas existe
+ una relación entre el orden en el que se agregan y quitan elementos.
+ Como programadores podemos implementar este tipo con listas, arboles, arreglos
+ o cualquier otro tipo de estructura; pero como usuarios no tenemos ninguna
+ idea de como esta programada, solamente sabemos que respeta los puntos
+ mencionados anteriormente.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un TAD se compone de dos partes: por un lado debe proveer una lista de operacion
+es que soporta, junto con los tipos esperados; y por el otro una especificación
+ algebraica o matemática sobre como deben comportarse.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo el TAD cola soporta las siguientes operaciones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+TAD Cola (a :: Set) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  import Bool
+\end_layout
+
+\begin_layout Plain Layout
+
+  Vacia   :: Cola a
+\end_layout
+
+\begin_layout Plain Layout
+
+  Poner   :: a -> Cola a -> Cola a
+\end_layout
+
+\begin_layout Plain Layout
+
+  primero :: Cola a -> a
+\end_layout
+
+\begin_layout Plain Layout
+
+  sacar   :: Cola a -> Cola a
+\end_layout
+
+\begin_layout Plain Layout
+
+  esVacia :: Cola a -> Bool
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Especificación
+\end_layout
+
+\begin_layout Subsection
+Especificación algebraica
+\end_layout
+
+\begin_layout Standard
+Una especificación algebraica describe operaciones y ecuaciones entre operacione
+s.
+ En general en una especificación algebraica los constructores de un TAD
+ no se describen, pues solo cumplen la función de construir valores; pero
+ en algunos casos los valores se construyen de acuerdo a algún comportamiento
+ especifico.
+\end_layout
+
+\begin_layout Standard
+Continuando con nuestro ejemplo de la cola, podemos describir el comportamiento
+ deseado de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+primero (poner x Vacia) = x
+\end_layout
+
+\begin_layout Plain Layout
+
+primero (poner x (poner y c)) = primero (poner y c)
+\end_layout
+
+\begin_layout Plain Layout
+
+sacar   (poner x Vacia) = Vacia
+\end_layout
+
+\begin_layout Plain Layout
+
+sacar   (poner x (poner y c)) = poner x (sacar (poner y c))
+\end_layout
+
+\begin_layout Plain Layout
+
+esVacia Vacia = True
+\end_layout
+
+\begin_layout Plain Layout
+
+esVacia (poner x c) = False
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Especificación con modelo matemático
+\end_layout
+
+\begin_layout Standard
+Una especificación matemática toma un modelo matemático conocido y describe
+ los constructores y operaciones en términos del modelo elegido.
+\end_layout
+
+\begin_layout Standard
+Si tomamos como modelos a las secuencias, podemos especificar las operaciones
+ del TAD cola de la siguiente manera:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+vacia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\equiv\left\langle \right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+poner
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\left\langle x_{1},\ldots,x_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\equiv\left\langle x,x_{1},\ldots,x_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+sacar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\langle x_{1},\ldots,x_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\equiv\left\langle x_{1},\ldots,x_{n-1}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+primero
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\langle x_{1},\ldots,x_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\equiv x_{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+esVacia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\langle x_{1},\ldots,x_{n}\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\equiv\begin{cases}
+True & n=0\\
+False & n>0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementación
+\end_layout
+
+\begin_layout Standard
+Es importante no confundir la especificación con la implementación.
+ Tanto en la especificación algebraica como en la matemática, solo hemos
+ descrito el comportamiento de las operaciones.
+ Cada TAD admite diferentes implementaciones y cada una de ellas tendrá
+ diferentes costos.
+ Dependiendo del uso que le de el usuario al TAD, puede convenir una implementac
+ión u otra, por lo tanto es importante tener una especificación de costo
+ para cada implementación.
+\end_layout
+
+\begin_layout Standard
+Veremos a continuación dos implementaciones diferentes del TAD cola: una
+ con listas y otra con pares de listas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+type Cola a = [a]
+\end_layout
+
+\begin_layout Plain Layout
+
+vacia = []
+\end_layout
+
+\begin_layout Plain Layout
+
+poner = (:)
+\end_layout
+
+\begin_layout Plain Layout
+
+primero [x] = x
+\end_layout
+
+\begin_layout Plain Layout
+
+primero (_:xs) = primero xs
+\end_layout
+
+\begin_layout Plain Layout
+
+sacar [x] = []
+\end_layout
+
+\begin_layout Plain Layout
+
+sacar (x:xs) = x : (sacar xs)
+\end_layout
+
+\begin_layout Plain Layout
+
+esVacia = null
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{vacia}=S_{vacia}=\Theta\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{poner}=S_{poner}=\Theta\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{primero}=S_{primero}=\Theta\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{sacar}=S_{sacar}=\Theta\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{esVacia}=S_{esVacia}=\Theta\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si implementamos colas con un par de listas 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+(xs,ys)
+\end_layout
+
+\end_inset
+
+ donde el orden de los elementos es
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ xs ++ reverse ys
+\end_layout
+
+\end_inset
+
+ y respetamos como invariante que si 
+\begin_inset Formula $xs$
+\end_inset
+
+ es vacía también lo es 
+\begin_inset Formula $ys$
+\end_inset
+
+, podemos implementar colas de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+type Cola a = ([a],[a])
+\end_layout
+
+\begin_layout Plain Layout
+
+vacia = ([],[])
+\end_layout
+
+\begin_layout Plain Layout
+
+poner x (ys,zs) = validar (ys, x:zs)
+\end_layout
+
+\begin_layout Plain Layout
+
+primero (x:_,_) = x
+\end_layout
+
+\begin_layout Plain Layout
+
+sacar (_:xs,ys) = validar (xs,ys)
+\end_layout
+
+\begin_layout Plain Layout
+
+esVacia = null .
+ fst
+\end_layout
+
+\begin_layout Plain Layout
+
+validar (xs,ys) | null xs   = (reverse ys, [])
+\end_layout
+
+\begin_layout Plain Layout
+
+                | otherwise = (xs,ys)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{vacia}=S_{vacia}=\Theta\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{poner}=S_{poner}=\Theta\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{primero}=S_{primero}=\Theta\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{sacar}=S_{sacar}=O\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{esVacia}=S_{esVacia}=\Theta\left(1\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Verificación
+\end_layout
+
+\begin_layout Standard
+Una implementación de un TAD es correcta si implementa las operaciones indicadas
+ y dichas operaciones verifican la especificación.
+\end_layout
+
+\begin_layout Standard
+En Haskell, el sistema te tipos asegura que los tipos de las operaciones
+ son correctos, pero la verificación de la especificación debe hacerla manualmen
+te el programador.
+\end_layout
+
+\begin_layout Standard
+Para la primer implementación de colas, la verificación es la siguiente:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+primero (poner x vacia)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.vacia\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+primero (poner x [])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.poner\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+primero (x:[])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.primero.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+primero (poner x (poner y c))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.poner\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+primero (x : (poner y c))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.primero.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+primero (poner y c)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+esVacia vacia
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.vacia\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+esVacia []
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.esVacia\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+null []
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.null.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+esVacia (poner x c)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.poner\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+esVacia (x:c)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.esVacia\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+null (x:c)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.null.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+False
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sacar (poner x vacia)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.vacia\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sacar (poner x [])
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.poner\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sacar [x]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.sacar.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+[]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.vacia\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+vacia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sacar (poner x (poner y c))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.poner\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+sacar (x:(poner y c))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.sacar.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x:(sacar (poner y c))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.poner\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+poner x (sacar (poner y c))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Inducción
+\end_layout
+
+\begin_layout Standard
+Los programas funcionales interesantes usan recursivo.
+ Para poder probar propiedades acerca de programas recursivos usualmente
+ es necesario utilizar inducción.
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Chapter
+Estructuras de datos
+\end_layout
+
+\begin_layout Section
+Programación en paralelo
+\end_layout
+
+\begin_layout Section
+Árboles
+\end_layout
+
+\begin_layout Section
+Secuencias
+\end_layout
+
+\end_body
+\end_document
