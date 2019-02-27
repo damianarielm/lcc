@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass book
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish-mexico
@@ -600,7 +604,7 @@ Trabajo
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $W\left(e_{1}||e_{2}\right)=1+W\left(e_{1}\right)+W\left(e_{2}\right)$
+\begin_inset Formula $W\left(e_{1}|||e_{2}\right)=1+W\left(e_{1}\right)+W\left(e_{2}\right)$
 \end_inset
 
 .
@@ -711,7 +715,7 @@ Profundidad
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $S\left(e_{1}||e_{2}\right)=1+\max\left\{ S\left(e_{1}\right),S\left(e_{2}\right)\right\} $
+\begin_inset Formula $S\left(e_{1}|||e_{2}\right)=1+\max\left\{ S\left(e_{1}\right),S\left(e_{2}\right)\right\} $
 \end_inset
 
 .
@@ -733,7 +737,7 @@ Profundidad
 
 \begin_layout Standard
 Calculemos la profundidad de un algoritmo que determina la pertenencia de
- un elemento a un árbol binario balanceado con información en las hojas:
+ un elemento a un árbol binario completo con información en las hojas:
 \begin_inset listings
 lstparams "language=Haskell"
 inline false
@@ -751,12 +755,12 @@ member x (Leaf y)   = if x == y then True else False
 
 \begin_layout Plain Layout
 
-member x (Node l r) = let (a,b) = member x l || member x r
+member x (Node l r) = let (a,b) = member x l ||| member x r
 \end_layout
 
 \begin_layout Plain Layout
 
-                      in a or b
+                      in a || b
 \end_layout
 
 \end_inset
@@ -766,7 +770,11 @@ member x (Node l r) = let (a,b) = member x l || member x r
 
 \begin_layout Standard
 Para un árbol vacío (0 elementos) su profundidad es la de una constante
- (False) por lo tanto tiene profundidad 
+ (
+\begin_inset Formula $False$
+\end_inset
+
+) por lo tanto tiene profundidad 
 \begin_inset Formula $S\left(0\right)=1$
 \end_inset
 
@@ -775,8 +783,23 @@ Para un árbol vacío (0 elementos) su profundidad es la de una constante
 
 \begin_layout Standard
 Para un árbol con una sola hoja (1 elemento) su profundidad es la de operar
- (comparar) dos expresiones (x e y), operar (decidir) según su resultado
- y retornar una constante (True o False).
+ (comparar) dos expresiones (
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+), operar (decidir) según su resultado y retornar una constante (
+\begin_inset Formula $True$
+\end_inset
+
+ o 
+\begin_inset Formula $False$
+\end_inset
+
+).
  Es decir: 
 \begin_inset Formula $S\left(1\right)=1+1+1=3$
 \end_inset
@@ -785,7 +808,7 @@ Para un árbol con una sola hoja (1 elemento) su profundidad es la de operar
 \end_layout
 
 \begin_layout Standard
-Finalmente para un árbol balanceado completo de 
+Finalmente para un árbol completo de 
 \begin_inset Formula $n$
 \end_inset
 
@@ -803,15 +826,15 @@ Si continuamos desarrollando esa suma observaremos que sumamos una unidad,
 \end_inset
 
  veces, y una vez mas al llegar a una hoja, es decir 
-\begin_inset Formula $\text{\ensuremath{S\left(n\right)=\log_{2}\left(n\right)}}$
+\begin_inset Formula $\text{\ensuremath{S\left(n\right)=\log_{2}\left(n\right)+1}}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-Vale la pena observar que en un árbol binario balanceado y completo cada
- rama contiene la mitad de los elementos.
+Vale la pena observar que en un árbol binario completo cada rama contiene
+ la mitad de los elementos.
 \end_layout
 
 \begin_layout Subsection
@@ -2588,7 +2611,7 @@ status open
 
 \begin_layout Plain Layout
 
-data BIN = Null | Leaf | Node Bin Bin
+data BIN = Null | Leaf | Node BIN BIN
 \end_layout
 
 \end_inset
@@ -2912,11 +2935,1083 @@ Estructuras de datos
 \end_layout
 
 \begin_layout Section
-Programación en paralelo
+Árbol binario
+\end_layout
+
+\begin_layout Standard
+Un árbol binario es una estructura donde cada nodo tiene exactamente dos
+ hijos.
+ En Haskell podemos representar dicho árbol con la siguiente definición:
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+data Bin a = E | N (Bin a) a (Bin a)
+\end_layout
+
+\end_inset
+
+.
+ Esto nos permite en cada paso de la recursión, dividir los datos en dos
+ partes.
+ Si no lo hacemos de forma inteligente, la estructura no nos provee ninguna
+ ventaja.
+\end_layout
+
+\begin_layout Standard
+Una función que determina si un elemento se encuentra en el árbol es como
+ sigue:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+member x E         = False
+\end_layout
+
+\begin_layout Plain Layout
+
+member x (N l y r) | x == y = True
+\end_layout
+
+\begin_layout Plain Layout
+
+                   | x /= y = let (a,b) member x l ||| member x r
+\end_layout
+
+\begin_layout Plain Layout
+
+                              in a || b
+\end_layout
+
+\end_inset
+
+Si decidimos guardar los elementos en una sola rama del árbol, vemos que
+ 
+\begin_inset Formula $W_{member}\left(n\right)\in O\left(n\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{member}\left(n\right)\in O\left(n\right)$
+\end_inset
+
+.
+ Esto es igual que en una lista simplemente enlazada.
+ Lo que ocurre aquí es que en cada paso de la recursion, estamos trabajando
+ con un árbol de un solo elemento menos.
+\end_layout
+
+\begin_layout Standard
+Una idea mas interesante es mantener el árbol balanceado, de manera tal
+ de que en cada paso de la recursion trabajemos con un árbol de la mitad
+ de elementos.
+ En este caso logramos 
+\begin_inset Formula $W_{member}\left(n\right)\in O\left(n\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{S_{member}\left(n\right)\in O\left(\log_{2}\left(n\right)\right)}}$
+\end_inset
+
+, aunque para insertar elementos de forma eficiente necesitamos algún cambio
+ en la estructura.
 \end_layout
 
 \begin_layout Section
-Árboles
+Árbol binario de búsqueda
+\end_layout
+
+\begin_layout Standard
+Un árbol binario de búsqueda es un árbol binario que o bien es una hoja,
+ o bien es un árbol donde la rama izquierda es un BST cuyos valores son
+ menores o iguales al del árbol y los rama derecha es un BST cuyos valores
+ son mayores.
+\end_layout
+
+\begin_layout Standard
+Podemos reimplementar nuestra función para que sea mas eficiente, si tenemos
+ en cuenta el invariante:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+member x E         = False
+\end_layout
+
+\begin_layout Plain Layout
+
+member x (N l y r) | x == y = True
+\end_layout
+
+\begin_layout Plain Layout
+
+                   | x <  y = member x l
+\end_layout
+
+\begin_layout Plain Layout
+
+                   | x >  y = member x r
+\end_layout
+
+\end_inset
+
+Insertar elementos en este tipo de arboles es sencillo: simplemente basta
+ comparar el elemento a insertar con el nodo actual, y luego se inserta
+ recursivamente en alguna de las ramas, hasta llegar a una hoja.
+\end_layout
+
+\begin_layout Standard
+Para borrar elementos tenemos que prestar mas atención.
+ En primer lugar recorremos el árbol hasta encontrarlo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+delete _ E         = E
+\end_layout
+
+\begin_layout Plain Layout
+
+delete x t@(N l y r) | x <  y = N (delete x l) y r
+\end_layout
+
+\begin_layout Plain Layout
+
+                     | x >  y = N l y (delete x r)
+\end_layout
+
+\begin_layout Plain Layout
+
+                     | x == y = delete' t where
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si el nodo donde esta el elemento no tiene ramas, devolvemos el árbol vacío,
+ si tiene una sola rama la devolvemos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+delete _ E         = E
+\end_layout
+
+\begin_layout Plain Layout
+
+delete x t@(N l y r) | x <  y = N (delete x l) y r
+\end_layout
+
+\begin_layout Plain Layout
+
+                     | x >  y = N l y (delete x r)
+\end_layout
+
+\begin_layout Plain Layout
+
+                     | x == y = delete' t where
+\end_layout
+
+\begin_layout Plain Layout
+
+                       delete' (N E _ E) = E
+\end_layout
+
+\begin_layout Plain Layout
+
+                       delete' (N l _ E) = l
+\end_layout
+
+\begin_layout Plain Layout
+
+                       delete' (N E _ r) = r
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+Finalmente si nada de lo anterior ocurre no podemos dejar un hueco en el
+ árbol: debemos buscar alguno de sus hijos que nos sirva como reemplazo
+ y cambiarlo de lugar.
+ Para no violar el invariante debemos buscar un elemento que sea mayor que
+ todos los de la izquierda y menor que todos los de la derecha.
+ Tanto el mayor de la izquierda como el menor de la derecha cumplen los
+ requisitos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+delete _ E         = E
+\end_layout
+
+\begin_layout Plain Layout
+
+delete x t@(N l y r) | x <  y = N (delete x l) y r
+\end_layout
+
+\begin_layout Plain Layout
+
+                     | x >  y = N l y (delete x r)
+\end_layout
+
+\begin_layout Plain Layout
+
+                     | x == y = delete' t where
+\end_layout
+
+\begin_layout Plain Layout
+
+                       delete' (N E _ E) = E
+\end_layout
+
+\begin_layout Plain Layout
+
+                       delete' (N l _ E) = l
+\end_layout
+
+\begin_layout Plain Layout
+
+                       delete' (N E _ r) = r
+\end_layout
+
+\begin_layout Plain Layout
+
+                       delete' (N l _ r) = let z = minimum r
+\end_layout
+
+\begin_layout Plain Layout
+
+                                           in N l z (delete z r)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aun cuando en un caso promedio hayamos mejorado la eficiencia, la complejidad
+ sigue dependiendo del balance del árbol.
+ Es por eso que para garantizar la mejoría, utilizamos otra estructura que
+ nos facilita el balanceo al insertar.
+\end_layout
+
+\begin_layout Section
+Árboles Red-Black
+\end_layout
+
+\begin_layout Standard
+Un árbol Red-Black es un árbol binario de búsqueda con nodos 
+\begin_inset Quotes fld
+\end_inset
+
+coloreados
+\begin_inset Quotes frd
+\end_inset
+
+ que cumple los siguientes invariantes:
+\end_layout
+
+\begin_layout Enumerate
+La raíz es negra.
+\end_layout
+
+\begin_layout Enumerate
+Ningún nodo rojo tiene hijos rojos.
+\end_layout
+
+\begin_layout Enumerate
+Todos los caminos de la raíz a una hoja tienen el mismo numero de nodos
+ negros (altura negra).
+\end_layout
+
+\begin_layout Standard
+En un RBT, el camino mas largo es a lo sumo el doble que el camino mas corto.
+ El camino más corto posible tiene todos sus nodos negros, y el más largo
+ alterna entre nodos rojos y negros.
+ Esto significa que la altura está siempre en 
+\begin_inset Formula $O\left(\log_{2}\left(n\right)\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Veamos algunos ejemplos:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 3.5cm/#1, level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node [circle, white, draw=black, fill=black] {13}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child {node [circle, red, draw=red, very thick] {8}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child {node [circle, white, draw=black, fill=black] {1} child {} child
+ {node [circle, red, draw=red, very thick] {6}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child {node [circle, white, draw=black, fill=black] {11}}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    child {node [circle, red, draw=red, very thick] {17}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child {node [circle, white, draw=black, fill=black] {15}}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child {node [circle, white, draw=black, fill=black] {25} child {node
+ [circle, red, draw=red, very thick] {22}} child {node [circle, red, draw=red,
+ very thick] {27}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 3.7cm/#1,   level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node [circle, white, draw=black, fill=black] {7}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node [circle, white, draw=black, fill=black] {3} }
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node [circle, red, draw=red, very thick] {18}
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node [circle, white, draw=black, fill=black] {10}
+\end_layout
+
+\begin_layout Plain Layout
+
+                child { node [circle, red, draw=red, very thick] {8} } child
+ { node [circle, red, draw=red, very thick] {11} }
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node [circle, white, draw=black, fill=black] {22}
+\end_layout
+
+\begin_layout Plain Layout
+
+                child { node {} }
+\end_layout
+
+\begin_layout Plain Layout
+
+                child { node [circle, red, draw=red, very thick] {26} }
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El código para buscar un elemento es el mismo que para arboles binarios
+ de búsqueda, simplemente ignoramos el color.
+\end_layout
+
+\begin_layout Standard
+A la hora de insertar un nuevo elemento lo insertaremos siempre de color
+ rojo, de esta manera nos garantizamos que seguimos cumpliendo el invariante
+ 3.
+ Sin embargo, si el nodo que insertamos tiene un padre rojo, estaríamos
+ violando el invariante 2.
+ Es por ello que luego de insertarlo debemos rebalancear el árbol.
+ Luego del rebalanceo la raíz podría quedar roja, por lo tanto hay que volver
+ a pintarla.
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+insert x = makeBlack (ins x t) where
+\end_layout
+
+\begin_layout Plain Layout
+
+  ins x E           = N R E x E
+\end_layout
+
+\begin_layout Plain Layout
+
+  ins x (N c l y r) | x <  y = balance c (ins x l) y r
+\end_layout
+
+\begin_layout Plain Layout
+
+                    | x >  y = balance c l y (ins x r)
+\end_layout
+
+\begin_layout Plain Layout
+
+                    | x == y = N c l y r
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pensemos ahora como hacer el rebalanceo.
+ La única violación puede ocurrir en el nodo que acabamos de insertar y
+ ocurrirá en un camino Black-Red-Red:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 2.0cm/#1,   level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node [circle, white, draw=black, fill=black] {z}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node [circle, red, draw=red, very thick] {x}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node {a} }
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node [circle, red, draw=red, very thick] {y}
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {b} }
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {c} }
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node {d} };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 2.0cm/#1,   level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node [circle, white, draw=black, fill=black] {x}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node {a} }
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node [circle, red, draw=red, very thick] {z}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node [circle, red, draw=red, very thick] {y}
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {b} }
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {c} }
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node {d} }
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 2.0cm/#1,   level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node [circle, white, draw=black, fill=black] {x}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node {a} }
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node [circle, red, draw=red, very thick] {y}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node {b} }
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node [circle, red, draw=red, very thick] {z}
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {c} }
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {d} }
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 2.0cm/#1,   level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node [circle, white, draw=black, fill=black] {z}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node [circle, red, draw=red, very thick] {y}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node [circle, red, draw=red, very thick] {x}
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {a} }
+\end_layout
+
+\begin_layout Plain Layout
+
+          child { node {b} }
+\end_layout
+
+\begin_layout Plain Layout
+
+      }
+\end_layout
+
+\begin_layout Plain Layout
+
+      child { node {c} }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node {d} };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+En todos los casos la solución es la misma: reescribir el nodo como un padre
+ rojo con dos hijos negros:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 2.0cm/#1,   level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node [circle, red, draw=red, very thick] {y}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node [circle, white, draw=black, fill=black] {x}
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {a} }
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {b} }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node [circle, white, draw=black, fill=black] {z}
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {c} }
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {d} }
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La implementación en Haskell es trivial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+balance B (N R (N R a x b) y c) z d = N R (N B a x b) y (N B c z d)
+\end_layout
+
+\begin_layout Plain Layout
+
+balance B (N R a x (N R b y c)) z d = N R (N B a x b) y (N B c z d)
+\end_layout
+
+\begin_layout Plain Layout
+
+balance B a x (N R (N R b y c) z d) = N R (N B a x b) y (N B c z d)
+\end_layout
+
+\begin_layout Plain Layout
+
+balance B a x (N R b y (N R c z d)) = N R (N B a x b) y (N B c z d)
+\end_layout
+
+\begin_layout Plain Layout
+
+balance c l a r = N c l a r
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con esta estructura hemos conseguido 
+\begin_inset Formula $W_{insert}\in O\left(\log_{2}\left(n\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Leftist Heaps
+\end_layout
+
+\begin_layout Standard
+Los heaps (o montículos) son árboles que permiten un acceso eficiente al
+ mínimo elemento.
+ Mantienen el invariante de que todo nodo es menor a todos los valores de
+ sus hijos, por lo tanto el mínimo siempre esta en la raíz.
+\end_layout
+
+\begin_layout Standard
+Un leftist heap es un heap donde el rango de cualquier hijo izquierdo es
+ mayor o igual que el de su hermano derecho, siendo el rango de un heap
+ la longitud del camino hacia la derecha hasta un nodo vacío (espina).
+\end_layout
+
+\begin_layout Standard
+Como consecuencia del invariante la espina derecha es el camino mas corto
+ a un nodo vacío, y ademas la longitud de la espina derecha es a lo sumo
+ 
+\begin_inset Formula $\log_{2}\left(n+1\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La operación mas importante en un leftist heap es fusionarlos.
+ Para ello, si alguno de los heaps es vacío, simplemente devolvemos el otro.
+\end_layout
+
+\begin_layout Standard
+De lo contrario observamos cual de las raíces es la menor y fusionamos su
+ rama derecha con el otro heap para mantener el invariante.
+\end_layout
+
+\begin_layout Standard
+De esta manera obtenemos dos subheaps que ubicaremos a izquierda o derecha
+ según su rango:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+merge h1 E = h1
+\end_layout
+
+\begin_layout Plain Layout
+
+merge E h2 = h2
+\end_layout
+
+\begin_layout Plain Layout
+
+merge h1@(N _ l1 x r1) h2@(N _ l2 y r2) | x <= y = makeH l1 x (merge r1
+ h2)
+\end_layout
+
+\begin_layout Plain Layout
+
+                                        | x >  y = makeH l2 y (merge h1
+ r2)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+makeH r a b | rank a >= rank b = N (rank b + 1) r a b
+\end_layout
+
+\begin_layout Plain Layout
+
+            | otherwise        = N (rank a + 1) r b a
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como la espina derecha es a lo sumo logarítmica, 
+\begin_inset Formula $W_{merge}\in O\left(\log_{2}\left(n\right)\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
