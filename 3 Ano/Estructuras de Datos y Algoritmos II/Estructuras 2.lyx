@@ -4018,5 +4018,2293 @@ Como la espina derecha es a lo sumo logarítmica,
 Secuencias
 \end_layout
 
+\begin_layout Standard
+Las secuencias son un TAD para representar una colección de elementos donde
+ a cada uno se le ha asignado un indice, es decir, una posición dentro del
+ conjunto.
+ A continuación veremos alguna de sus operaciones y las especificaremos
+ en términos de la noción matemática de secuencias.
+\end_layout
+
+\begin_layout Subsection
+Especificación
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+empty :: Seq a
+\end_layout
+
+\end_inset
+
+: Representa a la secuencia 
+\begin_inset Formula $\left\langle \right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+singleton :: a -> Seq a
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+singleton x
+\end_layout
+
+\end_inset
+
+ evalúa a la secuencia 
+\begin_inset Formula $\left\langle x\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+length :: Seq a -> Int
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+length s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset Formula $\left|s\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+nth :: Seq a -> Int -> a
+\end_layout
+
+\end_inset
+
+: Si 
+\begin_inset Formula $i$
+\end_inset
+
+ es un indice valido, entonces 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+nth s i
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+toSeq :: [a] -> Seq a
+\end_layout
+
+\end_inset
+
+: Dada una lista 
+\begin_inset Formula $xs$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+toSeq xs
+\end_layout
+
+\end_inset
+
+ nos da la representación de 
+\begin_inset Formula $xs$
+\end_inset
+
+ como una secuencia (respetando indices).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+tabulate :: (Int -> a) -> Int -> Seq a
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+tabulate f n
+\end_layout
+
+\end_inset
+
+ evalúa a la secuencia 
+\begin_inset Formula $\left\langle f\left(0\right),\dots,f\left(n-1\right)\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+map :: (a -> b) -> Seq a -> Seq b
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+map f s
+\end_layout
+
+\end_inset
+
+ evalúa a la secuencia 
+\begin_inset Formula $\left\langle f\left(s_{0}\right),\ldots,f\left(s_{\left|s\right|-1}\right)\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+filter :: (a -> Bool) -> Seq a -> Seq a
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+filter p s
+\end_layout
+
+\end_inset
+
+ evalúa a la subsecuencia mas larga en la que vale 
+\begin_inset Formula $p$
+\end_inset
+
+ para todos sus elementos.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+append :: Seq a -> Seq a -> Seq a
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+append s t
+\end_layout
+
+\end_inset
+
+ es la secuencia 
+\begin_inset Formula $\left\langle s_{0},\ldots,s_{\left|s\right|-1},\ldots,t_{0},\ldots,t_{\left|t\right|-1}\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+take :: Seq a -> Int -> Seq a
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+take s n
+\end_layout
+
+\end_inset
+
+ evalúa a la secuencia 
+\begin_inset Formula $\left\langle s_{0},\ldots,s_{\min\left\{ \left|s\right|,n\right\} -1}\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+drop :: Seq a -> Int Seq a
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+drop s n
+\end_layout
+
+\end_inset
+
+ evalúa a la secuencia 
+\begin_inset Formula $\left\langle s_{n},\ldots,s_{\left|s\right|-1}\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+showt :: Seq a -> TreeView a
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+si 
+\begin_inset Formula $\left|s\right|=0$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+showt s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+EMPTY
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+si 
+\begin_inset Formula $\left|s\right|=1$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+showt s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ELEMENT
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+si 
+\begin_inset Formula $\left|s\right|>1$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+showt s
+\end_layout
+
+\end_inset
+
+ evalúa a
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+let n = length s / 2 in VIEW (take s n) (drop s n)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+toTree :: Seq a -> BinTree a
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+si 
+\begin_inset Formula $\left|s\right|=1$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+toTree s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Leaf (nth s 0)
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+si 
+\begin_inset Formula $\left|s\right|>1$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+toTree s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Node (toTree (take s pp)) (toTree drop s pp))
+\end_layout
+
+\end_inset
+
+ donde 
+\begin_inset Formula $pp=2^{\left\lfloor \log_{2}\left(n-1\right)\right\rfloor }$
+\end_inset
+
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+foldr :: (a -> b -> b) -> b -> Seq a -> b
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+foldr op e s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset Formula $s_{0}\oplus\left(s_{1}\oplus\left(\ldots\left(s_{\left|s\right|-1}\oplus e\right)\ldots\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reduce :: (a -> a -> a) -> a -> Seq a -> a
+\end_layout
+
+\end_inset
+
+: Si 
+\begin_inset Formula $\oplus$
+\end_inset
+
+ es asociativa y 
+\begin_inset Formula $e$
+\end_inset
+
+ es neutro respecto de 
+\begin_inset Formula $\oplus$
+\end_inset
+
+, entonces 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reduce op e s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+foldr op e s
+\end_layout
+
+\end_inset
+
+.
+ Para generalizar el comportamiento de reduce a cualquier operador es necesario
+ especificar su orden de reducción.
+ Para ello especificaremos primero un reduce sobre arboles:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+reduceT op (Leaf x)   = x
+\end_layout
+
+\begin_layout Plain Layout
+
+reduceT op (Node l r) = (reduceT op l) `op` (reduceT op r)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+Ahora podemos especificar reduce sobre secuencias:
+\end_layout
+
+\begin_layout Itemize
+si 
+\begin_inset Formula $\left|s\right|=0$
+\end_inset
+
+, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reduce op b s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+b
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+si 
+\begin_inset Formula $\left|s\right|>0$
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reduceT op (toTree s)
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+v
+\end_layout
+
+\end_inset
+
+, entonces 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reduce op b s
+\end_layout
+
+\end_inset
+
+ evalúa a 
+\begin_inset Formula $b\oplus v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A modo de ejemplo, veamos cual es el orden de reducción para la secuencia
+ 
+\begin_inset Formula $s=\left\langle "d","a","m","i","a","n","!"\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Primero observemos 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+toTree s
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[level/.style={sibling distance = 2.0cm/#1,level distance
+ = 1.0cm}]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+node {s}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node {l1}
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {ll1}
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node {d} }
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node {a} }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {rl1}
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node {m} }
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node {i} }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    child { node {r1}
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {lr1}
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node {a} }
+\end_layout
+
+\begin_layout Plain Layout
+
+            child { node {n} }
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        child { node {!} }
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
+Luego el resultado de 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reduceT (++) (toTree s)
+\end_layout
+
+\end_inset
+
+ sera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+reduceT (++) s
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.reduceT.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(reduceT (++) l1) ++
+\end_layout
+
+\begin_layout Plain Layout
+
+(reduceT (++) r1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.reduceT.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(reduceT  (++) l1) ++
+\end_layout
+
+\begin_layout Plain Layout
+
+((reduceT (++) lr1) ++ (reduceT (++) (Leaf 
+\begin_inset Quotes fld
+\end_inset
+
+!
+\begin_inset Quotes frd
+\end_inset
+
+))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.reduceT.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(reduceT  (++) l1) ++
+\end_layout
+
+\begin_layout Plain Layout
+
+((reduceT (++) lr1) ++ 
+\begin_inset Quotes fld
+\end_inset
+
+!
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.reduceT.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(reduceT  (++) l1) ++
+\end_layout
+
+\begin_layout Plain Layout
+
+(((reduceT (++) (Leaf 
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+)) ++ (reduceT (++) (Leaf 
+\begin_inset Quotes fld
+\end_inset
+
+n
+\begin_inset Quotes frd
+\end_inset
+
+))) ++ 
+\begin_inset Quotes fld
+\end_inset
+
+!
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.reduceT.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(reduceT  (++) l1) ++
+\end_layout
+
+\begin_layout Plain Layout
+
+((
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+ ++ 
+\begin_inset Quotes fld
+\end_inset
+
+n
+\begin_inset Quotes frd
+\end_inset
+
+) ++ 
+\begin_inset Quotes fld
+\end_inset
+
+!
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+((
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+ ++ 
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+) ++ (
+\begin_inset Quotes fld
+\end_inset
+
+m
+\begin_inset Quotes frd
+\end_inset
+
+ ++ 
+\begin_inset Quotes fld
+\end_inset
+
+i
+\begin_inset Quotes frd
+\end_inset
+
+)) ++ ((
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+ ++ 
+\begin_inset Quotes fld
+\end_inset
+
+n
+\begin_inset Quotes frd
+\end_inset
+
+) ++ 
+\begin_inset Quotes fld
+\end_inset
+
+!
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.++\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(
+\begin_inset Quotes fld
+\end_inset
+
+da
+\begin_inset Quotes frd
+\end_inset
+
+ ++ 
+\begin_inset Quotes fld
+\end_inset
+
+mi
+\begin_inset Quotes frd
+\end_inset
+
+) ++ (
+\begin_inset Quotes fld
+\end_inset
+
+an
+\begin_inset Quotes frd
+\end_inset
+
+ ++ 
+\begin_inset Quotes fld
+\end_inset
+
+!
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.++\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Quotes fld
+\end_inset
+
+dami
+\begin_inset Quotes frd
+\end_inset
+
+ ++ 
+\begin_inset Quotes fld
+\end_inset
+
+an!
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.++\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Quotes fld
+\end_inset
+
+damian!
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+scan :: (a -> a -> a) -> a -> Seq a -> (Seq a, a)
+\end_layout
+
+\end_inset
+
+: Si 
+\begin_inset Formula $\oplus$
+\end_inset
+
+ es asociativa, 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+scan op b s
+\end_layout
+
+\end_inset
+
+ evalúa al par
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(tabulate (
+\backslash
+i -> reduce op b (take s i)) (length s), reduce op b s)
+\end_layout
+
+\end_inset
+
+Especificamos el orden de reducción de scan mediante el siguiente algoritmo
+ que la implementa:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+contract op (x:y:zs) = let (xy, zs') = (op x y) ||| contract op zs
+\end_layout
+
+\begin_layout Plain Layout
+
+                       in cons xy zs'
+\end_layout
+
+\begin_layout Plain Layout
+
+contract _ xs = xs
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+contractExpand op e b f []  = b
+\end_layout
+
+\begin_layout Plain Layout
+
+contractExpand op e b f [x] = f x
+\end_layout
+
+\begin_layout Plain Layout
+
+contractExpand op e b f xs = e xs (contractExpand op e b f (contract op
+ xs))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+scan op b s = contractExpand op e (empty, b) (
+\backslash
+x -> (singleton b, op b x)) s
+\end_layout
+
+\begin_layout Plain Layout
+
+   where f s s' i = if even i then nth s' (div i 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+                    else op (nth s' (div i 2)) (nth s (i-1))
+\end_layout
+
+\begin_layout Plain Layout
+
+         e s (s',t) = (tabulate (f s s') (length s), t)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Notar que el orden de reducción de scan no coincide con el de reduce sobre
+ los prefijos.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Análisis de costos
+\end_layout
+
+\begin_layout Standard
+Para analizar los costos de reduce y scan, debemos notar que el orden de
+ asociación impacta en la complejidad de la función.
+ Llamaremos 
+\begin_inset Formula $\mathcal{O}_{r}\left(\oplus,b,s\right)$
+\end_inset
+
+ al conjunto de aplicaciones de 
+\begin_inset Formula $\oplus$
+\end_inset
+
+ en reduce y 
+\begin_inset Formula $\mathcal{O}_{s}\left(\oplus,b,s\right)$
+\end_inset
+
+ al conjunto de aplicaciones de 
+\begin_inset Formula $\oplus$
+\end_inset
+
+ en scan.
+\end_layout
+
+\begin_layout Standard
+Para el ejemplo que vimos anteriormente, el conjunto de aplicaciones de
+ reduce es:
+\begin_inset Formula 
+\[
+\left\{ \underbrace{"d"}_{1}\oplus"a",\underbrace{"m"}_{1}\oplus"i",\underbrace{"a"}_{1}\oplus"n",\underbrace{"da"}_{2}\oplus"mi",\underbrace{"an"}_{2}\oplus"!",\underbrace{"dami"}_{4}\oplus"an!"\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Comparemoslo con el conjunto de aplicaciones en foldl:
+\begin_inset Formula 
+\[
+\left\{ \underbrace{"d"}_{1}\oplus"a",\underbrace{"da"}_{2}\oplus"m",\underbrace{"dam"}_{3}\oplus"i",\underbrace{"dami"}_{4}\oplus"a",\underbrace{"damia"}_{5}\oplus"n",\underbrace{"damian"}_{6}\oplus"!"\right\} 
+\]
+
+\end_inset
+
+Podemos notar a simple vista como un orden tiene complejidad 
+\begin_inset Formula $n²$
+\end_inset
+
+ mientras el otro 
+\begin_inset Formula $\log_{2}\left(n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación damos los costos del TAD para una implementación con arreglos:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trabajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Profundidad
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+empty
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+singleton
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+length
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+nth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+take
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+drop
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+showt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+showl
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+append s t
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\left|s\right|+\left|t\right|\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+fromList xs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\left|xs\right|\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\left|xs\right|\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+join s
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\left|s\right|\right)+{\displaystyle \sum_{i=0}^{\left|s\right|-1}}O\left(\left|s_{i}\right|\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+tabulate f n
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left({\displaystyle \sum_{i=0}^{n-1}}W\left(f\left(i\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left({\displaystyle \max_{i=0}^{n-1}}S\left(f\left(i\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+map f s
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left({\displaystyle \sum_{i=0}^{\left|s\right|-1}}W\left(f\left(s_{i}\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left({\displaystyle \max_{i=0}^{\left|s\right|-1}}S\left(f\left(s_{i}\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+filter f s
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left({\displaystyle \sum_{i=0}^{\left|s\right|-1}}W\left(f\left(s_{i}\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)+{\displaystyle \max_{i=0}^{\left|s\right|-1}}S\left(f\left(s_{i}\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+reduce op b s
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\left|s\right|+{\displaystyle \sum_{\left(x\oplus y\right)\in\mathcal{O}_{r}\left(\oplus,b,s\right)}}W\left(x\oplus y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)+{\displaystyle \max_{\left(x\oplus y\right)\in\mathcal{O}_{r}\left(\oplus,b,s\right)}}S\left(x\oplus y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+scan op b s
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\left|s\right|+{\displaystyle \sum_{\left(x\oplus y\right)\in\mathcal{O}_{s}\left(\oplus,b,s\right)}}W\left(x\oplus y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)+{\displaystyle \max_{\left(x\oplus y\right)\in\mathcal{O}_{s}\left(\oplus,b,s\right)}}S\left(x\oplus y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
