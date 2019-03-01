@@ -773,7 +773,7 @@ El teorema maestro nos dice que:
 \begin_inset Formula 
 \[
 T\left(n\right)\in\begin{cases}
-\Theta\left[n^{\log_{2}\left(4\right)}\right] & \text{si }\exists\epsilon>0/n\in O\left[n^{\log_{2}\left(4-\epsilon\right)}\right]\\
+\Theta\left[n^{\log_{2}\left(4\right)}\right] & \text{si }\exists\epsilon>0/n\in O\left[n^{\log_{2}\left(4\right)-\epsilon}\right]\\
 \vdots & \vdots
 \end{cases}
 \]
@@ -781,7 +781,7 @@ T\left(n\right)\in\begin{cases}
 \end_inset
 
 y para 
-\begin_inset Formula $\epsilon=2$
+\begin_inset Formula $\epsilon=1$
 \end_inset
 
  resulta 
@@ -825,7 +825,7 @@ El teorema maestro nos dice que:
 \[
 T\left(n\right)\in\begin{cases}
 \vdots & \vdots\\
-\Theta\left(n^{3}\right) & \text{si }\exists\epsilon>0/n^{3}\in\Omega\left[n^{\log_{2}\left(4+\epsilon\right)}\right]\\
+\Theta\left(n^{3}\right) & \text{si }\exists\epsilon>0/n^{3}\in\Omega\left[n^{\log_{2}\left(4\right)+\epsilon}\right]\\
  & \text{y }\exists c<1,N\in\mathbb{N}/\forall n>N\Rightarrow4\left(n/2\right)^{3}\leq cn^{3}
 \end{cases}
 \]
@@ -833,7 +833,7 @@ T\left(n\right)\in\begin{cases}
 \end_inset
 
 Sean 
-\begin_inset Formula $\epsilon=4$
+\begin_inset Formula $\epsilon=1$
 \end_inset
 
 , 

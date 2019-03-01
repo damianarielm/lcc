@@ -3,7 +3,6 @@ module ListSeq where
 import Par
 import Seq
 
-
 instance Seq [] where
   -- Constructores
   emptyS = []
@@ -40,7 +39,7 @@ instance Seq [] where
   zipS = zip
   enumerateS xs = zipS xs [0..]
 
-  -- Listas
+  -- Vistas
   showtS [] = EMPTY
   showtS [x] = ELT x
   showtS xs = let half = div (lengthS xs) 2

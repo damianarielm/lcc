@@ -1,6 +1,7 @@
 module Lab01 where
 
 import Data.List
+import Data.Char
 
 {-
 1) Corregir los siguientes programas de modo que sean aceptados por GHCi.
@@ -154,7 +155,7 @@ donde 0 <= a, b, c, d <= 'n'
 'xs' sin elementos repetidos
 -}
 
-divisors = undefined -- COMPLETAR
+divisors x = [ y | y <- [1..x], mod x y == 0 ]
 
 matches n xs = [x | x <- xs, x == n]
 
@@ -213,3 +214,40 @@ lista de aquellos que son letras (minúsculas o mayúsculas)
 k) 'masDe', que dada una lista de listas 'xss' y un
 número 'n', devuelve la lista de aquellas listas de 'xss'
 con longitud mayor que 'n' -}
+
+suma :: Num a => [a] -> a
+suma []     = 0
+suma (x:xs) = x + suma xs
+
+alguno :: [Bool] -> Bool
+alguno []     = False
+alguno (x:xs) = x || alguno xs
+
+todos :: [Bool] -> Bool
+todos []     = True
+todos (x:xs) = x && todos xs
+
+codes :: [Char] -> [Int]
+codes []     = []
+codes (x:xs) = (ord x) : codes xs
+
+restos = undefined -- COMPLETAR
+
+cuadrados :: Num a => [a] -> [a]
+cuadrados []     = []
+cuadrados (x:xs) = x^2 : cuadrados xs
+
+longitudes :: [[a]] -> [Int]
+longitudes []       = []
+longitudes (xs:xss) = length xs : longitudes xss
+
+orden :: (Num a, Ord a) => [(a,a)] -> [(a,a)]
+orden []         = []
+orden ((x,y):xs) | x < 3*y = (x,y) : orden xs
+                 | otherwise = orden xs
+
+pares = undefined -- COMPLETAR
+
+letras = undefined -- COMPLETAR
+
+masDe = undefined -- COMPLETAR

@@ -1274,7 +1274,25 @@ Divide & Conquer
 \begin_inset Formula $T\left(n\right)=aT\left(n/b\right)+f\left(n\right)$
 \end_inset
 
-.
+, donde 
+\begin_inset Formula $n$
+\end_inset
+
+ representa el tamaño total del problema, 
+\begin_inset Formula $a$
+\end_inset
+
+ es la cantidad de subproblemas en los que se divide el problema original,
+ 
+\begin_inset Formula $n/b$
+\end_inset
+
+ es el tamaño de subproblema y 
+\begin_inset Formula $f\left(n\right)$
+\end_inset
+
+ es el costo de realizar las llamadas recursivas (incluye el trabajo de
+ dividir y volver a unir).
  En general podemos resolver este tipo de recurrencias mediante el siguiente
  teorema: Dados 
 \begin_inset Formula $a\geq1$
@@ -1288,9 +1306,9 @@ Divide & Conquer
 \begin_inset Formula 
 \[
 T\left(n\right)\in\begin{cases}
-\Theta\left(n^{\log_{b}\left(a\right)}\right) & \text{si }\exists\epsilon>0/f\left(n\right)\in O\left(n^{\log_{b}\left(a-\epsilon\right)}\right)\\
+\Theta\left(n^{\log_{b}\left(a\right)}\right) & \text{si }\exists\epsilon>0/f\left(n\right)\in O\left(n^{\log_{b}\left(a\right)-\epsilon}\right)\\
 \Theta\left(n^{\log_{b}\left(a\right)}\cdot\log_{2}\left(n\right)\right) & \text{si }f\left(n\right)\in\Theta\left(n^{\log_{b}\left(a\right)}\right)\\
-\Theta\left(f\left(n\right)\right) & \text{si }\exists\epsilon>0/f\left(n\right)\in\Omega\left(n^{\log_{b}\left(a+\epsilon\right)}\right)\\
+\Theta\left(f\left(n\right)\right) & \text{si }\exists\epsilon>0/f\left(n\right)\in\Omega\left(n^{\log_{b}\left(a\right)+\epsilon}\right)\\
  & \text{y }\exists c<1,n_{0}\in\mathbb{N}/\forall n>n_{0}:af\left(n/b\right)\leq cf\left(n\right)
 \end{cases}
 \]
@@ -6243,7 +6261,7 @@ reduce op b s
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)+{\displaystyle \max_{\left(x\oplus y\right)\in\mathcal{O}_{r}\left(\oplus,b,s\right)}}S\left(x\oplus y\right)\right)$
+\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)\cdot{\displaystyle \max_{\left(x\oplus y\right)\in\mathcal{O}_{r}\left(\oplus,b,s\right)}}S\left(x\oplus y\right)\right)$
 \end_inset
 
 
@@ -6290,7 +6308,7 @@ scan op b s
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)+{\displaystyle \max_{\left(x\oplus y\right)\in\mathcal{O}_{s}\left(\oplus,b,s\right)}}S\left(x\oplus y\right)\right)$
+\begin_inset Formula $O\left(\log_{2}\left(\left|s\right|\right)\cdot{\displaystyle \max_{\left(x\oplus y\right)\in\mathcal{O}_{s}\left(\oplus,b,s\right)}}S\left(x\oplus y\right)\right)$
 \end_inset
 
 
