@@ -1,0 +1,3271 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 3cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "54page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Próxima instrucción: 13
+\begin_inset listings
+lstparams "language=C,numbers=left"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+int f(char a, int b, char c, long d, char e, short f, int g, int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &a);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+b
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &b);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &c);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &d);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+e
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &e);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &f);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+g
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &g);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+h
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &h);
+\end_layout
+
+\begin_layout Plain Layout
+
+	return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return f('1',2,'3',4,'5',6,7,8);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Registros
+\end_layout
+
+\begin_layout Itemize
+RDI: argc
+\end_layout
+
+\begin_layout Itemize
+RSI: argv
+\end_layout
+
+\begin_layout Itemize
+RDX: ?
+\end_layout
+
+\begin_layout Itemize
+RCX: ?
+\end_layout
+
+\begin_layout Itemize
+R8: ?
+\end_layout
+
+\begin_layout Itemize
+R9: ?
+\end_layout
+
+\begin_layout Itemize
+RAX: ?
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "19page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Pila
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ main
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ %rsp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los argumentos a, c y e van en los registros RDI, RDX, R8; y ocupan 8 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos b, d y f van en los registros RSI, RCX, R9; y ocupan 32 bits,
+ 64 bits, 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos g y h van en la pila y ocupan 64 bits en memoria.
+\end_layout
+
+\begin_layout Itemize
+Todo esto dependerá de la arquitectura, compilador y convención de llamada.
+\end_layout
+
+\begin_layout Itemize
+Como los printf van a imprimir direcciones de memoria pero esos valores
+ se encuentran en registros, el compilador cargará dichos valores en la
+ pila para poder imprimir esa dirección.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "54page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+Próxima instrucción: 14
+\begin_inset listings
+lstparams "language=C,numbers=left"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+int f(char a, int b, char c, long d, char e, short f, int g, int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &a);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+b
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &b);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &c);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &d);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+e
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &e);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &f);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+g
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &g);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+h
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &h);
+\end_layout
+
+\begin_layout Plain Layout
+
+	return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return f('1',2,'3',4,'5',6,7,8);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Registros
+\end_layout
+
+\begin_layout Itemize
+RDI: argc
+\end_layout
+
+\begin_layout Itemize
+RSI: argv
+\end_layout
+
+\begin_layout Itemize
+RDX: ?
+\end_layout
+
+\begin_layout Itemize
+RCX: ?
+\end_layout
+
+\begin_layout Itemize
+R8: ?
+\end_layout
+
+\begin_layout Itemize
+R9: ?
+\end_layout
+
+\begin_layout Itemize
+RAX: ?
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "19page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Pila
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ main
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ %rsp = %rbp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los argumentos a, c y e van en los registros RDI, RDX, R8; y ocupan 8 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos b, d y f van en los registros RSI, RCX, R9; y ocupan 32 bits,
+ 64 bits, 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos g y h van en la pila y ocupan 64 bits en memoria.
+\end_layout
+
+\begin_layout Itemize
+Todo esto dependerá de la arquitectura, compilador y convención de llamada.
+\end_layout
+
+\begin_layout Itemize
+Como los printf van a imprimir direcciones de memoria pero esos valores
+ se encuentran en registros, el compilador cargará dichos valores en la
+ pila para poder imprimir esa dirección.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "54page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Próxima instrucción: 2
+\begin_inset listings
+lstparams "language=C,numbers=left"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+int f(char a, int b, char c, long d, char e, short f, int g, int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &a);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+b
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &b);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &c);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &d);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+e
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &e);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &f);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+g
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &g);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+h
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &h);
+\end_layout
+
+\begin_layout Plain Layout
+
+	return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return f('1',2,'3',4,'5',6,7,8);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Registros
+\end_layout
+
+\begin_layout Itemize
+RDI: 49
+\end_layout
+
+\begin_layout Itemize
+RSI: 2
+\end_layout
+
+\begin_layout Itemize
+RDX: 51
+\end_layout
+
+\begin_layout Itemize
+RCX: 4
+\end_layout
+
+\begin_layout Itemize
+R8: 53
+\end_layout
+
+\begin_layout Itemize
+R9: 6
+\end_layout
+
+\begin_layout Itemize
+RAX: ?
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "19page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Pila
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ main
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ %rbp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ %rsp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los argumentos a, c y e van en los registros RDI, RDX, R8; y ocupan 8 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos b, d y f van en los registros RSI, RCX, R9; y ocupan 32 bits,
+ 64 bits, 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos g y h van en la pila y ocupan 64 bits en memoria.
+\end_layout
+
+\begin_layout Itemize
+Todo esto dependerá de la arquitectura, compilador y convención de llamada.
+\end_layout
+
+\begin_layout Itemize
+Como los printf van a imprimir direcciones de memoria pero esos valores
+ se encuentran en registros, el compilador cargará dichos valores en la
+ pila para poder imprimir esa dirección.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "54page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Próxima instrucción: 3
+\begin_inset listings
+lstparams "language=C,numbers=left"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+int f(char a, int b, char c, long d, char e, short f, int g, int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &a);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+b
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &b);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &c);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &d);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+e
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &e);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &f);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+g
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &g);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+h
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &h);
+\end_layout
+
+\begin_layout Plain Layout
+
+	return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return f('1',2,'3',4,'5',6,7,8);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Registros
+\end_layout
+
+\begin_layout Itemize
+RDI: 49
+\end_layout
+
+\begin_layout Itemize
+RSI: 2
+\end_layout
+
+\begin_layout Itemize
+RDX: 51
+\end_layout
+
+\begin_layout Itemize
+RCX: 4
+\end_layout
+
+\begin_layout Itemize
+R8: 53
+\end_layout
+
+\begin_layout Itemize
+R9: 6
+\end_layout
+
+\begin_layout Itemize
+RAX: ?
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "19page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+Pila
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ main
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ %rsp = %rbp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los argumentos a, c y e van en los registros RDI, RDX, R8; y ocupan 8 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos b, d y f van en los registros RSI, RCX, R9; y ocupan 32 bits,
+ 64 bits, 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos g y h van en la pila y ocupan 64 bits en memoria.
+\end_layout
+
+\begin_layout Itemize
+Todo esto dependerá de la arquitectura, compilador y convención de llamada.
+\end_layout
+
+\begin_layout Itemize
+Como los printf van a imprimir direcciones de memoria pero esos valores
+ se encuentran en registros, el compilador cargará dichos valores en la
+ pila para poder imprimir esa dirección.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "54page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Próxima instrucción: 11
+\begin_inset listings
+lstparams "language=C,numbers=left"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+int f(char a, int b, char c, long d, char e, short f, int g, int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &a);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+b
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &b);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &c);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &d);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+e
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &e);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &f);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+g
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &g);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+h
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &h);
+\end_layout
+
+\begin_layout Plain Layout
+
+	return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return f('1',2,'3',4,'5',6,7,8);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+Registros
+\end_layout
+
+\begin_layout Itemize
+RDI: ?
+\end_layout
+
+\begin_layout Itemize
+RSI: ?
+\end_layout
+
+\begin_layout Itemize
+RDX: ?
+\end_layout
+
+\begin_layout Itemize
+RCX: ?
+\end_layout
+
+\begin_layout Itemize
+R8: ?
+\end_layout
+
+\begin_layout Itemize
+R9: ?
+\end_layout
+
+\begin_layout Itemize
+RAX: 18
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "19page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Pila
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ main
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ %rsp = %rbp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los argumentos a, c y e van en los registros RDI, RDX, R8; y ocupan 8 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos b, d y f van en los registros RSI, RCX, R9; y ocupan 32 bits,
+ 64 bits, 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos g y h van en la pila y ocupan 64 bits en memoria.
+\end_layout
+
+\begin_layout Itemize
+Todo esto dependerá de la arquitectura, compilador y convención de llamada.
+\end_layout
+
+\begin_layout Itemize
+Como los printf van a imprimir direcciones de memoria pero esos valores
+ se encuentran en registros, el compilador cargará dichos valores en la
+ pila para poder imprimir esa dirección.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "54page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Próxima instrucción: 12
+\begin_inset listings
+lstparams "language=C,numbers=left"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+int f(char a, int b, char c, long d, char e, short f, int g, int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &a);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+b
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &b);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &c);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &d);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+e
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &e);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &f);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+g
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &g);
+\end_layout
+
+\begin_layout Plain Layout
+
+	printf(
+\begin_inset Quotes fld
+\end_inset
+
+h
+\begin_inset Quotes frd
+\end_inset
+
+: %p
+\backslash
+n
+\begin_inset Quotes frd
+\end_inset
+
+, &h);
+\end_layout
+
+\begin_layout Plain Layout
+
+	return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	return f('1',2,'3',4,'5',6,7,8);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "12page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Registros
+\end_layout
+
+\begin_layout Itemize
+RDI: ?
+\end_layout
+
+\begin_layout Itemize
+RSI: ?
+\end_layout
+
+\begin_layout Itemize
+RDX: ?
+\end_layout
+
+\begin_layout Itemize
+RCX: ?
+\end_layout
+
+\begin_layout Itemize
+R8: ?
+\end_layout
+
+\begin_layout Itemize
+R9: ?
+\end_layout
+
+\begin_layout Itemize
+RAX: 0
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+
+\begin_inset Box Doublebox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "19page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+Pila
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ main
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+R.A.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ex %rbp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+ %rsp = %rbp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Los argumentos a, c y e van en los registros RDI, RDX, R8; y ocupan 8 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos b, d y f van en los registros RSI, RCX, R9; y ocupan 32 bits,
+ 64 bits, 16 bits.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos g y h van en la pila y ocupan 64 bits en memoria.
+\end_layout
+
+\begin_layout Itemize
+Todo esto dependerá de la arquitectura, compilador y convención de llamada.
+\end_layout
+
+\begin_layout Itemize
+Como los printf van a imprimir direcciones de memoria pero esos valores
+ se encuentran en registros, el compilador cargará dichos valores en la
+ pila para poder imprimir esa dirección.
+\end_layout
+
+\end_body
+\end_document

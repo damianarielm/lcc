@@ -1,0 +1,3 @@
+Lo que ocurre es que la instruccion se desarma en varias.
+Por un lado se escribe el valor (o direccion de memoria) directamente en el segmento de texto, que sera cargado en memoria.
+Luego se hace referencia a dicho valor a partir del PC.
