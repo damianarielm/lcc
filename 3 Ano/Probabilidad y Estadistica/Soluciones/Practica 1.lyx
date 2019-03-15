@@ -114,11 +114,19 @@ ente extiende la vida.
 
 \begin_layout Enumerate
 Basado en una encuesta previa, el porcentaje de personas que dijeron que
- votarían al candidato A fue 50%.
+ votarían al candidato 
+\begin_inset Formula $A$
+\end_inset
+
+ fue 50%.
  Todos los candidatos presidenciales tendrán comerciales televisivos diarios
  y un debate político final durante la semana anterior a las elecciones.
  Quieres probar la hipótesis de que la proporción de personas que dicen
- que votarán al candidato A ha cambiado.
+ que votarán al candidato 
+\begin_inset Formula $A$
+\end_inset
+
+ ha cambiado.
 \end_layout
 
 \begin_layout Paragraph
@@ -203,16 +211,22 @@ Test unilateral a la derecha.
 \begin_inset Formula $H_{0}$
 \end_inset
 
-: La proporción de personas que dicen que votaran al candidato A luego de
- los comerciales y el debate es del 50%.
+: La proporción de personas que dicen que votaran al candidato 
+\begin_inset Formula $A$
+\end_inset
+
+ luego de los comerciales y el debate es del 50%.
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $H_{1}$
 \end_inset
 
-: La proporción de personas que dicen que votaran al candidato A luego de
- los comerciales y el debate no es del 50%.
+: La proporción de personas que dicen que votaran al candidato 
+\begin_inset Formula $A$
+\end_inset
+
+ luego de los comerciales y el debate no es del 50%.
 \end_layout
 
 \begin_layout Itemize
@@ -322,7 +336,15 @@ Los gráficos de frecuencia que siguen proveen los modelos para un dado legal
 \begin_inset Quotes frd
 \end_inset
 
- cuando tiras el dado legal es 3/18 y cuando tiras el cargado es 5/18.
+ cuando tiras el dado legal es 
+\begin_inset Formula $\frac{3}{18}$
+\end_inset
+
+ y cuando tiras el cargado es 
+\begin_inset Formula $\frac{5}{18}$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1314,6 +1336,9 @@ Considera dos bolsas, cada una conteniendo muchos billetes, e iguales por
 
 \begin_deeper
 \begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1421,6 +1446,11 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Se te permite extraer sólo un billete de la bolsa y debes decidir rechazar
  o no 
@@ -1485,6 +1515,9 @@ Unilateral a derecha.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1601,7 +1634,15 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1718,11 +1759,19 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 Mayor.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1839,7 +1888,15 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_deeper
+\begin_layout Standard
+\begin_inset Preview
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -1957,6 +2014,11 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 $3 es estadisticamente significativo pues es un valor mas extremo que $2.6.
 \end_layout
@@ -1964,11 +2026,23 @@ $3 es estadisticamente significativo pues es un valor mas extremo que $2.6.
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-La máquina A produce partes cuya longitud promedio es de 4.6mm.
- La máquina B produce partes cuyas longitudes varían similarmente, pero
- con un promedio de 4.9mm.
+La máquina 
+\begin_inset Formula $A$
+\end_inset
+
+ produce partes cuya longitud promedio es de 4.6mm.
+ La máquina 
+\begin_inset Formula $B$
+\end_inset
+
+ produce partes cuyas longitudes varían similarmente, pero con un promedio
+ de 4.9mm.
  Supone que tienes una caja de partes que crees que vienen de la máquina
- A, pero no estás seguro.
+ 
+\begin_inset Formula $A$
+\end_inset
+
+, pero no estás seguro.
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -1985,14 +2059,22 @@ Probarás las siguientes hipótesis seleccionando al azar una pieza de la
 \begin_inset Formula $H_{0}$
 \end_inset
 
-: Las partes fueron producidas por la máquina A.
+: Las partes fueron producidas por la máquina 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $H_{1}$
 \end_inset
 
-: Las partes fueron producidas por la máquina B.
+: Las partes fueron producidas por la máquina 
+\begin_inset Formula $B$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2000,6 +2082,9 @@ Las hipótesis para la distribución de la longitud de la pieza (en mm) se
  presentan a continuación como las versiones suavizadas de los gráficos
  de frecuencia:
 \end_layout
+
+\begin_layout Standard
+\begin_inset Preview
 
 \begin_layout Standard
 \begin_inset ERT
@@ -2109,6 +2194,11 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 ¿Cuál es la dirección del test?
 \end_layout
@@ -2169,7 +2259,19 @@ No es estadisticamente significativo pues no se rechazo
 
 \end_deeper
 \begin_layout Enumerate
-Se tienen tres bolsas idénticas, A, B y C.
+Se tienen tres bolsas idénticas, 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+.
  Cada una contiene 30 vales y se te mostrará sólo una de ellas.
  Se plantean las siguientes hipótesis:
 \end_layout
@@ -2179,14 +2281,26 @@ Se tienen tres bolsas idénticas, A, B y C.
 \begin_inset Formula $H_{0}$
 \end_inset
 
-: La bolsa mostrada es la A.
+: La bolsa mostrada es la 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $H_{1}$
 \end_inset
 
-: La bolsa mostrada es la B o la C.
+: La bolsa mostrada es la 
+\begin_inset Formula $B$
+\end_inset
+
+ o la 
+\begin_inset Formula $C$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -2233,7 +2347,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bolsa A
+Bolsa 
+\begin_inset Formula $A$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3012,7 +3130,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bolsa B
+Bolsa 
+\begin_inset Formula $B$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -3972,7 +4094,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bolsa C
+Bolsa 
+\begin_inset Formula $C$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -4950,13 +5076,28 @@ Recuerda que
 \begin_inset Formula $H_{1}$
 \end_inset
 
- fuese verdadera, la bolsa mostrada es la B o la C.
+ fuese verdadera, la bolsa mostrada es la 
+\begin_inset Formula $B$
+\end_inset
+
+ o la 
+\begin_inset Formula $C$
+\end_inset
+
+.
  Calcula 
 \begin_inset Formula $\beta$
 \end_inset
 
- suponiendo que la bolsa mostrada es la B por un lado, y por otro suponiendo
- que la bolsa mostrada es la C.
+ suponiendo que la bolsa mostrada es la 
+\begin_inset Formula $B$
+\end_inset
+
+ por un lado, y por otro suponiendo que la bolsa mostrada es la 
+\begin_inset Formula $C$
+\end_inset
+
+.
  
 \end_layout
 
@@ -5002,14 +5143,22 @@ Considera nuevamente dos bolsas idénticas.
 \begin_inset Formula $H_{0}$
 \end_inset
 
-: La bolsa mostrada es la A.
+: La bolsa mostrada es la 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $H_{1}$
 \end_inset
 
-: La bolsa mostrada es la B.
+: La bolsa mostrada es la 
+\begin_inset Formula $B$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -5045,7 +5194,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bolsa A
+Bolsa 
+\begin_inset Formula $A$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5456,7 +5609,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bolsa B
+Bolsa 
+\begin_inset Formula $B$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -5846,6 +6003,18 @@ Conociendo solamente el contenido de cada bolsa, ¿puedes calcular
  Si es no, explica por qué.
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+No es posible determinar 
+\begin_inset Formula $\beta$
+\end_inset
+
+ pues este depende de una regla de decisión.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Determinar para cada una de las siguientes afirmaciones si es verdadera
@@ -5888,6 +6057,39 @@ Rechazar
  
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Falso: 
+\begin_inset Formula $\beta$
+\end_inset
+
+ depende de la distribución de probabilidades de 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Falso: si la hipótesis nula es verdadera, solo cabe la posibilidad de un
+ error tipo I.
+\end_layout
+
+\begin_layout Enumerate
+Verdadero.
+\end_layout
+
+\begin_layout Enumerate
+Falso: Solamente implica que es mas probable 
+\begin_inset Formula $H_{1}$
+\end_inset
+
+.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 En la prueba de hipótesis, si se elige un nivel de significación de 0.05,
@@ -5923,10 +6125,30 @@ El 5% de las veces
  es verdadera.
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ es verdadera, la chance de rechazarla incorrectamente es 0.05.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
-Supone que se tienen dos cajas, A y B, que contienen 25 fichas iguales con
- valores monetarios inscriptos en ellas, cada una.
+Supone que se tienen dos cajas, 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, que contienen 25 fichas iguales con valores monetarios inscriptos en ellas,
+ cada una.
  La tabla de frecuencia para cada caja es:
 \end_layout
 
@@ -5961,7 +6183,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bolsa A
+Bolsa 
+\begin_inset Formula $A$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -6155,7 +6381,11 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-Bolsa B
+Bolsa 
+\begin_inset Formula $B$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -6323,9 +6553,17 @@ Bolsa B
 \end_layout
 
 \begin_layout Standard
-Se te muestra sólo una de las cajas y se piensa que es la A.
+Se te muestra sólo una de las cajas y se piensa que es la 
+\begin_inset Formula $A$
+\end_inset
+
+.
  Debes decidir si esto es cierto estadísticamente al seleccionar al azar
  una ficha.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -6353,6 +6591,1644 @@ Escribe una regla de decisión tal que la probabilidad de cometer un error
 \begin_layout Enumerate
 Supone que seleccionas una ficha inscripta con $5.
  Usando la regla de decisión de c), ¿qué concluyes? 
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $H_{0}$
+\end_inset
+
+: La caja mostrada es la 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{1}$
+\end_inset
+
+: La caja mostrada es la 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Unilateral a izquierda.
+\end_layout
+
+\begin_layout Enumerate
+Rechazar 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ si la ficha es de valor 
+\begin_inset Formula $\leq5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha=\frac{2}{25}$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta=\frac{14}{25}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Los datos son estadisticamente significativos (rechazamos 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Las máquinas 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son las únicas que producen varillas de acero en una fábrica de acero.
+ Los gráficos de frecuencia que siguen dan la distribución del número de
+ fallas en las varillas y se basan en un total de 15 varillas producidas
+ por la máquina 
+\begin_inset Formula $A$
+\end_inset
+
+ y otras 15 por la máquina 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Máquina 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Máquina 
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bullet$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tienes una caja de varillas de acero a la que le han quitado la etiqueta
+ que aclaraba a cuál de las dos máquinas pertenece esta producción.
+ Seleccionarás una varilla de la caja y contarás el número de fallas que
+ presenta.
+ Se desean probar las siguientes hipótesis:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{0}:$
+\end_inset
+
+ La caja de varillas fue producida por la máquina 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{1}:$
+\end_inset
+
+ La caja de varillas fue producida por la máquina 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la dirección del test? 
+\end_layout
+
+\begin_layout Enumerate
+Se decide rechazar 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ si el número observado de fallas de la varilla de acero seleccionada es
+ 2 o más extremo.
+ Calcula las probabilidades de error de tipo I y de tipo II.
+\end_layout
+
+\begin_layout Enumerate
+El número observado de fallas en la varilla de acero seleccionada es 4.
+ ¿Cuál es el p-value?
+\end_layout
+
+\begin_layout Enumerate
+¿Son los datos estadísticamente significativos al nivel de significación
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ de la parte b)?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Unilateral a izquierda.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha=\frac{3}{15}$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta=\frac{9}{15}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\frac{10}{15}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+No.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Responde cada una de las siguientes preguntas acerca del p-value de un test:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Escribe dos posibles p-values para datos que son estadísticamente significativos
+ al 0.01.
+\end_layout
+
+\begin_layout Enumerate
+Escribe dos posibles p-values para datos que son estadísticamente significativos
+ al 0.05, pero no al 0.01.
+\end_layout
+
+\begin_layout Enumerate
+Escribe dos posibles p-values para datos que no son estadísticamente significati
+vos al 0.10.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+0.001; 0.005.
+\end_layout
+
+\begin_layout Enumerate
+0.04; 0.03.
+\end_layout
+
+\begin_layout Enumerate
+0.15; 0.2.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Examina la siguiente información de un artículo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Quotes fld
+\end_inset
+
+
+\emph on
+Los chicos miran más y más televisión
+\emph default
+.
+ Un nuevo estudio acerca de los hábitos de los niños frente a la televisión
+ reveló que los chicos entre 2 y 11 años miraron un promedio de 312.5 horas
+ de programas infantiles en el año, mientras que el año anterior el mismo
+ promedio fue de 295.5 horas.
+ Los varones miran en promedio 53 horas más que las chicas por año.
+ El estudio también encontró que el 42% de los niños entre 6 y 11 años tienen
+ televisor en sus habitaciones, mientras que cerca del 25% de los pequeños
+ entre 2 y 5 tienen el suyo propio
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Considera las siguientes hipótesis a ser probadas:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{0}:$
+\end_inset
+
+ El promedio de horas que los chicos entre 2 y 11 años miran programas infantile
+s es el mismo que el año anterior.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{1}:$
+\end_inset
+
+ El promedio de horas que los chicos entre 2 y 11 años miran programas infantile
+s se ha incrementado con respecto al año anterior.
+\end_layout
+
+\begin_layout Standard
+Este test no fue estadísticamente significativo a un nivel de significación
+ del 10%.
+\end_layout
+
+\begin_layout Enumerate
+¿Qué hipótesis fue sustentada?
+\end_layout
+
+\begin_layout Enumerate
+¿Qué puedes decir acerca del p-value del test?
+\end_layout
+
+\begin_layout Enumerate
+¿Qué tipo de error pudo haberse cometido?
+\end_layout
+
+\begin_layout Enumerate
+¿La región de rechazo es unilateral a la derecha, unilateral a la izquierda
+ o bilateral? Explica.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Fue mayor que 
+\begin_inset Formula $\frac{10}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Error tipo II.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se realizó un test estadístico para probar las siguientes hipótesis, y los
+ datos resultaron ser estadísticamente significativos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $H_{0}$
+\end_inset
+
+: El peso promedio de una aspirina Bayer es 325 mg.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{1}$
+\end_inset
+
+: El peso promedio de una aspirina Bayer no es 325 mg.
+\end_layout
+
+\begin_layout Enumerate
+¿Qué hipótesis fue sustentada?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la dirección de este test?
+\end_layout
+
+\begin_layout Enumerate
+Suponga que el nivel de significación fue 0.05.
+ Escriba dos posibles valores del p-value.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $H_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Al periódico de una universidad le gustaría publicar un artículo acerca
+ de los costos de continuar alguna carrera de grado.
+ Una parte del artículo tratará el tema de los alquileres de departamentos.
+ Un libro de referencia acerca de los costos de asistir a la universidad
+ habla de un alquiler mensual promedio de $350 para departamentos de un
+ dormitorio, en un radio de 20 manzanas de la universidad.
+ Los redactores del periódico deciden probar las hipótesis:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $H_{0}$
+\end_inset
+
+: El verdadero alquiler promedio es $350.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{0}$
+\end_inset
+
+: El verdadero alquiler promedio es mayor que $350.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Basándose en la información recolectada, la hipótesis nula fue rechazada
+ con un 
+\begin_inset Formula $\alpha=0.10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Qué tipo de error se pudo haber cometido?
+\end_layout
+
+\begin_layout Enumerate
+Explicar cuál podría ser la consecuencia del error que elegiste en a).
+\end_layout
+
+\begin_layout Enumerate
+¿Qué puedes decir acerca del p-value para este test?
+\end_layout
+
+\begin_layout Enumerate
+¿Son los resultados estadísticamente significativos?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Error tipo I.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Fue menor a 
+\begin_inset Formula $0.10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Influye el ejercicio en el peso de nacimiento de las cabras? Un estudio
+ fue diseñado para responder esta pregunta en el cual se entrenó a cabras
+ preñadas para que caminen en una cinta.
+ La media del peso de nacimiento de cabras nacidas de cabras que no hicieron
+ ejercicio fue de 1600 gramos.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Escribe las hipótesis a ser probadas.
+\end_layout
+
+\begin_layout Enumerate
+Los datos no fueron estadísticamente significativos al 1%.
+ ¿Qué hipótesis fue sustentada? ¿Qué tipo de error pudo haberse cometido?
+\end_layout
+
+\begin_layout Enumerate
+Escribe un posible p-value para este test.
+\end_layout
+
+\begin_layout Enumerate
+Supone que los datos fueron estadísticamente significativos al 5%, pero
+ no al 1%.
+ ¿Tienes que cambiar el p-value que propusiste en c)? Si no, explica por
+ qué.
+ Si lo tienes que cambiar, propone otro p-value adecuado.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Fue sustentada 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+ Puede haberse cometido error tipo II.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La tabla que sigue provee información sobre las hipótesis y los resultados
+ de tres estudios diferentes:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="50text%">
+<column alignment="center" valignment="top" width="50text%">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hipótesis nula
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hipótesis alternativa
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p-value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Estudio 
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La verdadera esperanza de vida es 73 años.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La verdadera esperanza de vida es mayor a 73 años.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Estudio 
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El tiempo promedio de recuperación con el tratamiento I es el mismo que
+ con el tratamiento II.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+El tiempo promedio de recuperación con el tratamiento I no es el mismo que
+ con el tratamiento II.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Estudio 
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La verdadera proporción de estudiantes que tienen un trabajo de medio tiempo
+ es 0.40.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La verdadera proporción de estudiantes que tienen un trabajo de medio tiempo
+ es menor a 0.40.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Completa la tabla con posibles p-values para cada estudio de modo que sean
+ ciertas las siguientes afirmaciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Para el Estudio 
+\begin_inset Formula $A$
+\end_inset
+
+, los datos fueron estadísticamente significativos al 10% y 1%.
+\end_layout
+
+\begin_layout Enumerate
+Para el Estudio 
+\begin_inset Formula $B$
+\end_inset
+
+, los datos no fueron estadísticamente significativos al 5%.
+\end_layout
+
+\begin_layout Enumerate
+Para el Estudio 
+\begin_inset Formula $C$
+\end_inset
+
+, los datos fueron estadísticamente significativos al 5% pero no al 1%.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para cada estudio, determina si la región de rechazo habrá sido unilateral
+ por izquierda o derecha, o bilateral.
+\end_layout
+
+\begin_layout Enumerate
+¿Para cuál de los estudios los resultados mostraron mayor evidencia a favor
+ de la hipótesis nula? Explica.
+\end_layout
+
+\begin_layout Enumerate
+Supone que en el Estudio 
+\begin_inset Formula $A$
+\end_inset
+
+ se concluyó que los datos sustentaron la hipótesis alternativa, es decir,
+ que la verdadera esperanza de vida es mayor a 73 años, pero en realidad
+ no lo es.
+ En nuestro lenguaje estadístico, ¿esto recibe el nombre de error de tipo
+ I o error de tipo II?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Error tipo I.
 \end_layout
 
 \end_deeper
