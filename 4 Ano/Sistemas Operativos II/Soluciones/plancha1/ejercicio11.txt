@@ -1,0 +1,5 @@
+¿Cual es la diferencia entre las clases List y SynchList?
+
+La clase List define una lista simplemente enlazada normal.
+
+La clase SynchList son listas simplemente enlazadas que solo pueden ser accedidas de a un thread por vez, y ademas un thread que intente remover un elemento de una lista vacia debera esperar hasta que haya algun elemento.

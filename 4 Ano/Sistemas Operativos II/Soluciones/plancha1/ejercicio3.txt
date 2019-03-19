@@ -1,0 +1,12 @@
+¿De que tamaño es un disco?
+
+/*
+NUM_SECTORS = SECTORS_PER_TRACK * NUM_TRACKS
+            = 32 * 32 = 1024
+
+DISK_SIZE = MAGIC_SIZE + NUM_SECTORS * SECTOR_SIZE
+          = sizeof(int) + 1024 * 128
+          = sizeof(int) + 131072
+*/
+
+El tamaño es 128kb.

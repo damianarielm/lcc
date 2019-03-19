@@ -1,0 +1,32 @@
+¿Cuantas instrucciones de MIPS simula Nachos?
+
+De las 63 instrucciones solo simula 56:
+
+* ADD     * ADDI
+* ADDIU   * AADU
+* AND     * ANDI
+* BEQ     * BGEZAL
+* BGEZ    * BGTZ
+* BLEZ    * BLTZAL
+* BLTZ    * BNE
+* DIV     * DIVU
+* JAL     * J
+* JALR    * JR
+* LBU     * LHU
+* LUI     * LW
+* LWL     * LWR
+* MFHI    * MFLO
+* MTHI    * MTLO
+* MULT    * MULTU
+* NOR     * OR
+* ORI     * SB
+* SH      * SLL
+* SLLV    * SLT
+* SLTI    * SLTIU
+* SLTU    * SRA
+* SRAV    * SRL
+* SRLV    * SUB
+* SUBU    * SW
+* SWL     * SWR
+* SYSCALL * XOR
+* XORI    * UNIMP

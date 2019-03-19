@@ -1,0 +1,5 @@
+Que efecto hacen las macros ASSERT y DEBUG definidas en lib/utility.
+
+ASSERT aborta el programa en caso de que una condicion no se cumpla, mostrando informacion relativa a ella.
+
+DEBUG se encarga de el manejo de depuracion del sistema. Verifica si una bandera esta habilitada y en tal caso muestra la informacion de depuracion.
