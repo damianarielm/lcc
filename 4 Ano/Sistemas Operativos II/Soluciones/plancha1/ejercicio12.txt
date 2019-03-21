@@ -1,5 +1,7 @@
 ¿En que archivos esta definida la funcion main? ¿En que archivo esta definida la funcion main del ejecutable nachos del directorio userprog?
 
+Los siguientes archivos definen una funcion main:
+
 * bin/fuse/nachosfuse.c
 * bin/coff2noff.c
 * bin/coff2flat.c
@@ -14,3 +16,5 @@
 * userland/sort.c
 * userland/matmult.c
 * userland/halt.c
+
+La funcion main del ejecutable del directorio userprog esta definida en el directorio threads.
