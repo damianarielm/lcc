@@ -55,7 +55,7 @@ multicol
 \suppress_date false
 \justification true
 \use_refstyle 1
-\use_minted 0
+\use_minted 1
 \index Index
 \shortcut idx
 \color #008000
@@ -214,35 +214,49 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall x\left(\neg P\left(x\right)\lor\neg\forall y\left(\neg Q\left(x,y\right)\lor P\left(f\left(x,y\right)\right)\right)\right)$
+\begin_inset Formula $\forall x\left(\neg P\left(x\right)\lor\exists y\neg\left(\neg Q\left(x,y\right)\lor\exists zP\left(z\right)\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall x\left(\neg P\left(x\right)\lor\neg\left(\neg Q\left(x,y\right)\lor P\left(f\left(x,y\right)\right)\right)\right)$
+\begin_inset Formula $\forall x\left(\neg P\left(x\right)\lor\exists y\left(Q\left(x,y\right)\land\neg\exists zP\left(z\right)\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\neg P\left(x\right)\lor\neg\left(\neg Q\left(x,y\right)\lor P\left(f\left(x,y\right)\right)\right)$
+\begin_inset Formula $\forall x\left(\neg P\left(x\right)\lor\exists y\left(Q\left(x,y\right)\land\forall z\neg P\left(z\right)\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\neg P\left(x\right)\lor\left(Q\left(x,y\right)\land\neg P\left(f\left(x,y\right)\right)\right)$
+\begin_inset Formula $\forall x\exists y\forall z\left(\neg P\left(x\right)\lor\left(Q\left(x,y\right)\land\neg P\left(z\right)\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(\neg P\left(x\right)\lor Q\left(x,y\right)\right)\land\left(\neg P\left(x\right)\lor\neg P\left(f\left(x,y\right)\right)\right)$
+\begin_inset Formula $\forall x\forall z\left(\neg P\left(x\right)\lor\left(Q\left(x,f\left(x\right)\right)\land\neg P\left(z\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg P\left(x\right)\lor\left(Q\left(x,f\left(x\right)\right)\land\neg P\left(z\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(\neg P\left(x\right)\lor Q\left(x,f\left(x\right)\right)\right)\land\left(\neg P\left(x\right)\lor\neg P\left(z\right)\right)$
 \end_inset
 
 
@@ -260,7 +274,7 @@ Soluciones
 \end_inset
 
  de 
-\begin_inset Formula $\underbrace{\left(\neg p\to q\right)}_{a}\land\underbrace{\left(p\to q\right)}_{b}\land\underbrace{\left(\neg p\to\neg q\right)}_{c}$
+\begin_inset Formula $\left(\neg p\to q\right)\land\left(p\to q\right)\land\left(\neg p\to\neg q\right)$
 \end_inset
 
 ? Contestar utilizando el método de resolución para la lógica proposicional.
@@ -269,645 +283,91 @@ Soluciones
 \begin_deeper
 \begin_layout Paragraph
 Solución
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="10">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $p$
+1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $p\lor q$
 \end_inset
 
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $q$
+2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg p\lor q$
 \end_inset
 
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $\neg p$
+3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $p\lor\neg q$
 \end_inset
 
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $\neg q$
+4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg p\lor\neg q$
 \end_inset
 
 
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $b$
-\end_inset
-
-
+5)
 \end_layout
 
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
-\begin_inset Formula $c$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\land b$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\land b\land c$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $a\land b\land c\to p\land q$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
 
+\begin_inset Formula $\emptyset$
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $F$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
 
+ (4 y 1)
 \end_layout
 
 \end_deeper
@@ -1278,27 +738,10 @@ status open
 \end_inset
 
 
-\begin_inset Formula $e$
+\begin_inset Formula $\emptyset$
 \end_inset
 
- (11 y 5)
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-13)
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\bot$
-\end_inset
-
- (12 y 6)
+ (11 y 7)
 \end_layout
 
 \end_inset
@@ -1391,10 +834,6 @@ status open
 Resolviendo:
 \end_layout
 
-\begin_layout Standard
-\begin_inset Flex Multiple Columns
-status open
-
 \begin_layout Enumerate
 \begin_inset Argument item:1
 status open
@@ -1439,20 +878,10 @@ status open
 
 \end_inset
 
-
-\begin_inset Formula $\bot$
-\end_inset
-
- (1 y 2 
-\begin_inset Formula $\left[c/f\left(y\right)\right]$
-\end_inset
-
-)
+No es posible unificar.
 \end_layout
 
-\end_inset
-
-
+\begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -1506,10 +935,6 @@ status open
 Resolviendo:
 \end_layout
 
-\begin_layout Standard
-\begin_inset Flex Multiple Columns
-status open
-
 \begin_layout Enumerate
 \begin_inset Argument item:1
 status open
@@ -1555,7 +980,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\bot$
+\begin_inset Formula $\emptyset$
 \end_inset
 
  (1 y 2 
@@ -1563,11 +988,6 @@ status open
 \end_inset
 
 )
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1821,11 +1241,11 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\bot$
+\begin_inset Formula $\emptyset$
 \end_inset
 
  (5 y 6 
-\begin_inset Formula $\left[c/y\right]$
+\begin_inset Formula $\left[x/y\right]$
 \end_inset
 
 )
@@ -1942,7 +1362,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\bot$
+\begin_inset Formula $\emptyset$
 \end_inset
 
  (3 y 4)
@@ -1963,39 +1383,39 @@ Dados los siguientes hechos y relaciones,
 \begin_inset Flex Multiple Columns
 status open
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Un ungulado es un animal.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Un pez es un animal.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Una cebra es un ungulado.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Un arenque es un pez.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Un tiburón es un pez.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 La cebra vive en la tierra.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 La rana vive en la tierra y en el agua.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Los peces viven en el agua.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 Un animal que vive en el agua puede nadar.
 \end_layout
 
@@ -2007,6 +1427,431 @@ Un animal que vive en el agua puede nadar.
 \begin_layout Standard
 utilizar resolución para contestar si existen animales que pueden nadar.
  Encontrar a partir del relato, que animal/es pueden nadar.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $U\left(x\right)\to A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(x\right)\to A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $U\left(cebra\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(arenque\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(tiburon\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(cebra,tierra\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(rana,tierra\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(rana,agua\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(x\right)\to V\left(x,agua\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(A\left(x\right)\land V\left(x,agua\right)\right)\to N\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore\exists xA\left(x\right)\land N\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg U\left(x\right)\lor A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg P\left(x\right)\lor A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $U\left(cebra\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $P\left(arenque\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $P\left(tiburon\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $V\left(cebra,tierra\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $V\left(rana,tierra\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $V\left(rana,agua\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg P\left(x\right)\lor V\left(x,agua\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+10)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg A\left(x\right)\lor\neg V\left(x,agua\right)\lor N\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+11)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg A\left(x\right)\lor\neg N\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+12)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg P\left(x\right)\lor\neg N\left(x\right)$
+\end_inset
+
+ (11 y 2)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+13)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg N\left(arenque\right)$
+\end_inset
+
+ (4 y 12 
+\begin_inset Formula $\left[arenque/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+14)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $V\left(arenque,agua\right)$
+\end_inset
+
+ (4 y 9 
+\begin_inset Formula $\left[arenque/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+15)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg A\left(arenque\right)\lor N\left(arenque\right)$
+\end_inset
+
+ (10 y 14 
+\begin_inset Formula $\left[arenque/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+16)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $A\left(arenque\right)$
+\end_inset
+
+ (2 y 4 
+\begin_inset Formula $\left[arenque/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+17)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $N\left(arenque\right)$
+\end_inset
+
+ (15 y 16)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+18)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ (13 y 17)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pueden nadar la rana, el tiburón y el arenque.
 \end_layout
 
 \end_deeper
@@ -2052,6 +1897,18 @@ Sue come todo lo que come Bill.
 Utilizar resolución para mostrar que a John le gustan los cacahuetes.
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
@@ -2089,6 +1946,41 @@ Juan, Pedro o María mataron a la gata de Luis que se llama Iris.
 \begin_layout Standard
 Probar que María mató a Iris, usando resolución.
  Analizar las adaptaciones necesarias para resolver utilizando PROLOG.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+animal(perro).
+\end_layout
+
+\begin_layout Plain Layout
+
+animal(gato).
+\end_layout
+
+\begin_layout Plain Layout
+
+tiene(juan,perro).
+\end_layout
+
+\begin_layout Plain Layout
+
+tiene(pedro,gato).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
