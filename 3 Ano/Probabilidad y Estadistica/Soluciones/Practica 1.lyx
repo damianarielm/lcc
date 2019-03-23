@@ -1313,8 +1313,12 @@ Unilateral a izquierda.
 \begin_inset Formula $\alpha=\frac{6}{18}$
 \end_inset
 
- y 
+, 
 \begin_inset Formula $\beta=\frac{8}{18}$
+\end_inset
+
+, potencia: 
+\begin_inset Formula $1-\beta=\frac{10}{18}$
 \end_inset
 
 .
@@ -2020,6 +2024,131 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  no markers, domain=-4:8, samples=100,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines*=left,
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  enlargelimits=false, clip=false, axis on top,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = major
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [fill=cyan!20, draw=none, domain=2.6:8] {gauss(4,1)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [very thick,cyan!50!black] {gauss(0,1)} node[pos=0.3,above left]
+ {$H_0$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [very thick,cyan!50!black] {gauss(4,1)} node[pos=0.7,above right]
+ {$H_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 $3 es estadisticamente significativo pues es un valor mas extremo que $2.6.
 \end_layout
 
@@ -2043,10 +2172,6 @@ La máquina
 \end_inset
 
 , pero no estás seguro.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -2227,6 +2352,10 @@ La longitud de la parte seleccionada es 4.7mm.
 
 \begin_layout Enumerate
 ¿Es el resultado en c) estadísticamente significativo? Explica.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2251,10 +2380,6 @@ No es estadisticamente significativo pues no se rechazo
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -5030,6 +5155,10 @@ Se te permite seleccionar sólo un vale de la bolsa y debes decidir rechazar
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -6013,6 +6142,10 @@ No es posible determinar
 \end_inset
 
  pues este depende de una regla de decisión.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -6135,6 +6268,10 @@ Si
 \end_inset
 
  es verdadera, la chance de rechazarla incorrectamente es 0.05.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -6560,10 +6697,6 @@ Se te muestra sólo una de las cajas y se piensa que es la
 .
  Debes decidir si esto es cierto estadísticamente al seleccionar al azar
  una ficha.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -7519,10 +7652,6 @@ Máquina
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7702,6 +7831,10 @@ s se ha incrementado con respecto al año anterior.
 \begin_layout Standard
 Este test no fue estadísticamente significativo a un nivel de significación
  del 10%.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -7719,10 +7852,6 @@ Este test no fue estadísticamente significativo a un nivel de significación
 \begin_layout Enumerate
 ¿La región de rechazo es unilateral a la derecha, unilateral a la izquierda
  o bilateral? Explica.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -7798,11 +7927,15 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Bilateral.
 \end_layout
 
 \begin_layout Enumerate
 0.04; 0.03.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -7825,14 +7958,10 @@ Al periódico de una universidad le gustaría publicar un artículo acerca
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $H_{0}$
+\begin_inset Formula $H_{1}$
 \end_inset
 
 : El verdadero alquiler promedio es mayor que $350.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -7891,6 +8020,10 @@ Si.
  preñadas para que caminen en una cinta.
  La media del peso de nacimiento de cabras nacidas de cabras que no hicieron
  ejercicio fue de 1600 gramos.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -7913,10 +8046,6 @@ Supone que los datos fueron estadísticamente significativos al 5%, pero
  ¿Tienes que cambiar el p-value que propusiste en c)? Si no, explica por
  qué.
  Si lo tienes que cambiar, propone otro p-value adecuado.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -7937,11 +8066,14 @@ Fue sustentada
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+0.5.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\frac{3}{100}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -7975,8 +8107,8 @@ status open
 <lyxtabular version="3" rows="4" columns="4">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
-<column alignment="center" valignment="top" width="50text%">
-<column alignment="center" valignment="top" width="50text%">
+<column alignment="center" valignment="top" width="60text%">
+<column alignment="center" valignment="top" width="60text%">
 <column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
@@ -8156,6 +8288,10 @@ La verdadera proporción de estudiantes que tienen un trabajo de medio tiempo
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -8186,10 +8322,6 @@ Para el Estudio
 \end_inset
 
 , los datos fueron estadísticamente significativos al 5% pero no al 1%.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper

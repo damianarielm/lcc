@@ -1,0 +1,1068 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{multicol}
+
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.statistics}
+\usepgfplotslibrary{statistics}
+\pgfplotsset{width=13cm,compat=1.16}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Las edades de los sujetos sometidos a un estudio de reproducibilidad son
+ las siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{7}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+22
+\end_layout
+
+\begin_layout Itemize
+22
+\end_layout
+
+\begin_layout Itemize
+23
+\end_layout
+
+\begin_layout Itemize
+24
+\end_layout
+
+\begin_layout Itemize
+25
+\end_layout
+
+\begin_layout Itemize
+25
+\end_layout
+
+\begin_layout Itemize
+26
+\end_layout
+
+\begin_layout Itemize
+27
+\end_layout
+
+\begin_layout Itemize
+28
+\end_layout
+
+\begin_layout Itemize
+29
+\end_layout
+
+\begin_layout Itemize
+29
+\end_layout
+
+\begin_layout Itemize
+29
+\end_layout
+
+\begin_layout Itemize
+29
+\end_layout
+
+\begin_layout Itemize
+29
+\end_layout
+
+\begin_layout Itemize
+31
+\end_layout
+
+\begin_layout Itemize
+31
+\end_layout
+
+\begin_layout Itemize
+32
+\end_layout
+
+\begin_layout Itemize
+33
+\end_layout
+
+\begin_layout Itemize
+34
+\end_layout
+
+\begin_layout Itemize
+35
+\end_layout
+
+\begin_layout Itemize
+35
+\end_layout
+
+\begin_layout Itemize
+35
+\end_layout
+
+\begin_layout Itemize
+36
+\end_layout
+
+\begin_layout Itemize
+38
+\end_layout
+
+\begin_layout Itemize
+39
+\end_layout
+
+\begin_layout Itemize
+39
+\end_layout
+
+\begin_layout Itemize
+42
+\end_layout
+
+\begin_layout Itemize
+42
+\end_layout
+
+\begin_layout Itemize
+44
+\end_layout
+
+\begin_layout Itemize
+44
+\end_layout
+
+\begin_layout Itemize
+45
+\end_layout
+
+\begin_layout Itemize
+45
+\end_layout
+
+\begin_layout Itemize
+45
+\end_layout
+
+\begin_layout Itemize
+47
+\end_layout
+
+\begin_layout Itemize
+48
+\end_layout
+
+\begin_layout Itemize
+52
+\end_layout
+
+\begin_layout Itemize
+59
+\end_layout
+
+\begin_layout Itemize
+66
+\end_layout
+
+\begin_layout Itemize
+67
+\end_layout
+
+\begin_layout Itemize
+69
+\end_layout
+
+\begin_layout Itemize
+69
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Defina y clasifique la variable en estudio.
+\end_layout
+
+\begin_layout Enumerate
+Guarde los valores correspondientes a la variable edad en un vector.
+\end_layout
+
+\begin_layout Enumerate
+Ensaye comandos R a fin de obtener:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Tamaño de la muestra.
+\end_layout
+
+\begin_layout Enumerate
+Media, mediana, moda y cuartiles.
+\end_layout
+
+\begin_layout Enumerate
+Rango, rango intercuartílico.
+ Desviación estándar.
+ Variancia.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Percentil 10 y percentil 50.
+\end_layout
+
+\begin_layout Enumerate
+Mínimo y máximo y cuartiles, todos mediante un único comando.
+\end_layout
+
+\begin_layout Enumerate
+Diagrama de caja.
+\end_layout
+
+\begin_layout Enumerate
+Diagrama tallo-hoja.
+\end_layout
+
+\begin_layout Enumerate
+Histograma.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Interprete los resultados obtenidos en el ítem c).
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Cuantitativa continua.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+edades = c(22,22,23,24,25,25,26,27,28,29,29,29,29,29,31,31,
+\end_layout
+
+\begin_layout Plain Layout
+
+32,33,34,35,35,35,36,38,39,39,42,42,44,44,45,45,45,47,48,
+\end_layout
+
+\begin_layout Plain Layout
+
+52,59,66,67,69,69)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tamaño = length(edades)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+media = mean(edades)
+\end_layout
+
+\begin_layout Plain Layout
+
+mediana = median(edades)
+\end_layout
+
+\begin_layout Plain Layout
+
+# moda = COMPLETAR
+\end_layout
+
+\begin_layout Plain Layout
+
+cuartiles = quantile(edades)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rango = max(edades) - min(edades)
+\end_layout
+
+\begin_layout Plain Layout
+
+ri = IQR(edades)
+\end_layout
+
+\begin_layout Plain Layout
+
+desviacion = sd(edades)
+\end_layout
+
+\begin_layout Plain Layout
+
+variancia = var(edades)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+percentiles = quantile(edades, p=c(0.1,0.5))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+resumen = summary(edades)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+boxplot(edades)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+stem(edades)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hist(edades)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se realiza un estudio acerca de los efectos del tabaquismo sobre los patrones
+ de sueño.
+ La medición que se observa es el tiempo, en minutos, que toma quedar dormido.
+ Se obtienen estos datos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fumadores:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+69.3
+\end_layout
+
+\begin_layout Itemize
+56.0
+\end_layout
+
+\begin_layout Itemize
+22.1
+\end_layout
+
+\begin_layout Itemize
+47.6
+\end_layout
+
+\begin_layout Itemize
+53.2
+\end_layout
+
+\begin_layout Itemize
+48.1
+\end_layout
+
+\begin_layout Itemize
+52.7
+\end_layout
+
+\begin_layout Itemize
+34.4
+\end_layout
+
+\begin_layout Itemize
+60.2
+\end_layout
+
+\begin_layout Itemize
+43.8
+\end_layout
+
+\begin_layout Itemize
+23.2
+\end_layout
+
+\begin_layout Itemize
+13.8
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+No fumadores:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{multicols}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+28.6
+\end_layout
+
+\begin_layout Itemize
+25.1
+\end_layout
+
+\begin_layout Itemize
+26.4
+\end_layout
+
+\begin_layout Itemize
+34.9
+\end_layout
+
+\begin_layout Itemize
+29.8
+\end_layout
+
+\begin_layout Itemize
+28.4
+\end_layout
+
+\begin_layout Itemize
+38.5
+\end_layout
+
+\begin_layout Itemize
+30.2
+\end_layout
+
+\begin_layout Itemize
+30.6
+\end_layout
+
+\begin_layout Itemize
+31.8
+\end_layout
+
+\begin_layout Itemize
+41.6
+\end_layout
+
+\begin_layout Itemize
+21.1
+\end_layout
+
+\begin_layout Itemize
+36.0
+\end_layout
+
+\begin_layout Itemize
+37.9
+\end_layout
+
+\begin_layout Itemize
+13.9
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encuentre la media de la muestra para cada grupo.
+\end_layout
+
+\begin_layout Enumerate
+Encuentre la desviación estándar de la muestra para cada grupo.
+\end_layout
+
+\begin_layout Enumerate
+Usando un diagrama de caja comparativo grafique los conjuntos de datos fumadores
+ vs.
+ no fumadores.
+\end_layout
+
+\begin_layout Enumerate
+Comente qué clase de impacto parece tener el hecho de fumar sobre el tiempo
+ que se requiere para quedarse dormido.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Fumadores: 47.85; No fumadores: 30.2.
+\end_layout
+
+\begin_layout Enumerate
+Fumadores: 16.92776; No fumadores: 7.127833.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[y=2cm, axis y line=none]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+ [boxplot]
+\end_layout
+
+\begin_layout Plain Layout
+
+        table[row sep=
+\backslash
+
+\backslash
+,y index=0] {
+\end_layout
+
+\begin_layout Plain Layout
+
+            data
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            69.3
+\backslash
+
+\backslash
+ 56.0
+\backslash
+
+\backslash
+ 22.1
+\backslash
+
+\backslash
+ 47.6
+\backslash
+
+\backslash
+ 53.2
+\backslash
+
+\backslash
+ 48.1
+\backslash
+
+\backslash
+ 52.7
+\backslash
+
+\backslash
+ 34.4
+\backslash
+
+\backslash
+ 60.2
+\backslash
+
+\backslash
+ 43.8
+\backslash
+
+\backslash
+ 23.2
+\backslash
+
+\backslash
+ 13.8
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+ [boxplot]
+\end_layout
+
+\begin_layout Plain Layout
+
+        table[row sep=
+\backslash
+
+\backslash
+,y index=0] {
+\end_layout
+
+\begin_layout Plain Layout
+
+            data
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+           28.6
+\backslash
+
+\backslash
+ 25.1
+\backslash
+
+\backslash
+ 26.4
+\backslash
+
+\backslash
+ 34.9
+\backslash
+
+\backslash
+ 29.8
+\backslash
+
+\backslash
+ 28.4
+\backslash
+
+\backslash
+ 38.5
+\backslash
+
+\backslash
+ 30.2
+\backslash
+
+\backslash
+ 30.6
+\backslash
+
+\backslash
+   31.8
+\backslash
+
+\backslash
+ 41.6
+\backslash
+
+\backslash
+ 21.1
+\backslash
+
+\backslash
+ 36.0
+\backslash
+
+\backslash
+ 37.9
+\backslash
+
+\backslash
+ 13.9
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En un debate sobre contaminación ambiental se está evaluando la concentración
+ de monóxido de carbono en las esquinas de la ciudad en los momentos de
+ mayor tráfico (los viernes a la tarde).
+ Interesa estimar p, la probabilidad de que una esquina de la ciudad elegida
+ al azar presente valores de monóxido inferiores a 12 ppm (partes por millón).
+ Para ello se recolecta una muestra de 120 valores correspondientes al nivel
+ de monóxido de carbono en esquinas de la ciudad elegidas al azar un viernes
+ a la tarde.
+ Los datos obtenidos se representan en el siguiente histograma, en el cual
+ lamentablemente se omitió el rótulo del eje de las ordenadas.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+COMPLETAR
+\end_layout
+
+\begin_layout Enumerate
+Especifíque el rótulo omitido.
+\end_layout
+
+\begin_layout Enumerate
+Construya a partir del histograma la tabla de distribución de frecuencias,
+ interpreta la cuarta fila y calcule todas las medidas descriptivas que
+ conoce y describa la forma de la distribución.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Analice en forma completa el conjunto de datos 'chickwts' (paquete:datasets).
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Analice el conjunto de datos del archivo environmental.txt.
+ (adjunto).
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
