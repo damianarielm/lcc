@@ -367,7 +367,8 @@ status open
 \begin_inset Formula $\emptyset$
 \end_inset
 
- (4 y 1)
+ (4 y 1).
+ PREGUNTAR.
 \end_layout
 
 \end_deeper
@@ -487,7 +488,7 @@ Nuestro argumento es:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\left(ll\to r\right)\land\left(r\to p\right)\land\left(\left(ll\to p\right)\to\neg c\right)\land\left(c\lor e\right)\to e$
+\begin_inset Formula $\left(\left(ll\to r\right)\land\left(r\to p\right)\land\left(\left(ll\to p\right)\to\neg c\right)\land\left(c\lor e\right)\right)\to e$
 \end_inset
 
 
@@ -1952,6 +1953,63 @@ Probar que María mató a Iris, usando resolución.
 Solución
 \end_layout
 
+\begin_layout Itemize
+Argumento:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\exists x\exists y\left(Perro\left(x\right)\land Gato\left(y\right)\land Tiene\left(Juan,x\right)\land Tiene\left(Pedro,y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\forall y\left(Tiene\left(x,y\right)\land Mascota\left(y\right)\to\left(\forall z\left(Animal\left(z\right)\to Ama\left(x,z\right)\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\forall y\left(Animal\left(y\right)\land Ama\left(x,y\right)\to\neg Mata\left(x,y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Gato\left(Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Tiene\left(Luis,Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore Mata\left(Juan,Iris\right)\lor Mata\left(Pedro,Iris\right)\lor Mata\left(Maria,Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Forma clausal: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+En PROLOG:
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset listings
 lstparams "language=Prolog"
@@ -1968,6 +2026,7 @@ COMPLETAR.
 
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 \begin_inset space ~

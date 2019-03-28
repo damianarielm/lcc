@@ -59,12 +59,11 @@ ThreadTest()
     s = new Semaphore("semaphore",3);
     #endif
 
-    for (int i = 2; i <= 5; i++) {
+    for (int i = 1; i <= 5; i++) {
         char *name = new char[2];
-	name[0] = i + '0'; name[1] = '\0';
-	Thread *newThread = new Thread(name);
-	newThread->Fork(SimpleThread, (void *) name);
+        name[0] = i + '0'; name[1] = '\0';
+        Thread *newThread = new Thread(name);
+        newThread->Fork(SimpleThread, (void *) name);
     }
 
-    SimpleThread((void *) "1");
 }

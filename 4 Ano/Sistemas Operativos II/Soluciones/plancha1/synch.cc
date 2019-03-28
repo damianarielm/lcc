@@ -61,7 +61,7 @@ Semaphore::GetName() const
 void
 Semaphore::P()
 {
-    DEBUG('s', "Thread haciendo P\n");
+    DEBUG('s', "Thread %s haciendo P en semaforo %s con valor %d\n", currentThread->GetName(), name, value);
     IntStatus oldLevel = interrupt->SetLevel(INT_OFF);
       // Disable interrupts.
 
@@ -82,7 +82,8 @@ Semaphore::P()
 void
 Semaphore::V()
 {
-    DEBUG('s', "Thread haciendo V\n");
+    DEBUG('s', "Thread %s haciendo V en semaforo %s con valor %d\n", currentThread->GetName(), name, value);
+
     IntStatus oldLevel = interrupt->SetLevel(INT_OFF);
 
     Thread *thread = queue->Pop();
