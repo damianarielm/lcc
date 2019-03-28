@@ -1,5 +1,5 @@
 ###### Año 2017
 
 * Pablo Gabriel Fekete
-* Natalie Romina Vanteenkiste
+* Natali Romina Vanteenkiste
 * Gerardo Huck

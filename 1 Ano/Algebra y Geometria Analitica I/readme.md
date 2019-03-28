@@ -3,4 +3,4 @@
 * Gabriela Ruth Argiroffo
 * Melani Barrios
 * Facundo Martinez
-* Natalie Romina Vanteenkiste
+* Natali Romina Vanteenkiste

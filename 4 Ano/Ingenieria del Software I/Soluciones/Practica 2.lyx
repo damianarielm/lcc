@@ -643,7 +643,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $par:MSG\to\mathbb{B}$
+\begin_inset Formula $par:MSG\to\left\{ true,false\right\} $
 \end_inset
 
 
@@ -1980,7 +1980,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $peliculas:seq\left(NOMBRE\times iseq_{1}\mathbb{N}\times iseq_{1}\mathbb{N}\right)$
+\begin_inset Formula $peliculas:seq\left(NOMBRE\times iseq_{1}\mathbb{N}_{1}\times iseq_{1}\mathbb{N}_{1}\right)$
 \end_inset
 
 
@@ -2598,7 +2598,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $id?\leq\#directores$
+\begin_inset Formula $id?\in dom\left(directores\right)$
 \end_inset
 
 
@@ -2804,7 +2804,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $idd?:iseq_{1}\mathbb{N}$
+\begin_inset Formula $idd?:iseq_{1}\mathbb{N}_{1}$
 \end_inset
 
 
@@ -2836,7 +2836,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $idg?:iseq_{1}\mathbb{N}$
+\begin_inset Formula $idg?:iseq_{1}\mathbb{N}_{1}$
 \end_inset
 
 
@@ -2900,7 +2900,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $max\left(ran\left(idd\right)\right)\leq\#directores$
+\begin_inset Formula $idd\subseteq dom\left(directores\right)$
 \end_inset
 
 
@@ -2932,7 +2932,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $max\left(ran\left(idg\right)\right)\leq\#guionistas$
+\begin_inset Formula $idg\subseteq dom\left(guionistas\right)$
 \end_inset
 
 
@@ -3170,7 +3170,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $id?\leq\#peliculas$
+\begin_inset Formula $id?\in dom\left(peliculas\right)$
 \end_inset
 
 
@@ -3286,6 +3286,216 @@ Solución
 </row>
 </lyxtabular>
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $BuscarPorDirectorOk$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\Xi BaseDatos$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $id?:\mathbb{N}_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r!:seq\left(NOMBRE\times iseq_{1}\mathbb{N}_{1}\times iseq_{1}\mathbb{N}_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $id?\in dom\left(directores\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r!=peliculas\triangleright\left\{ x:ran\left(peliculas\right)|id?\in x.2\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -3422,6 +3632,10 @@ El CVS lleva un registro de todos los programas almacenados en la línea
  base y los usuarios y roles autorizados a trabajar.
  Además lleva la historia de todas las versiones de cada uno de los programas.
  El CVS identifica un programa por su nombre.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
