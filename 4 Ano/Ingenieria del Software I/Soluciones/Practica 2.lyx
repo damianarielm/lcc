@@ -2012,7 +2012,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $directores:seqNombre$
+\begin_inset Formula $directores:seqNOMBRE$
 \end_inset
 
 
@@ -2044,7 +2044,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $guionistas:seqNombre$
+\begin_inset Formula $guionistas:seqNOMBRE$
 \end_inset
 
 
@@ -3202,7 +3202,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $peliculas'=peliculas\backslash\left\langle id\mapsto peliculas\left(id?\right)\right\rangle $
+\begin_inset Formula $peliculas'=squash\left(peliculas\backslash\left\{ id\mapsto peliculas\left(id?\right)\right\} \right)$
 \end_inset
 
 
@@ -3472,7 +3472,7 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $r!=peliculas\triangleright\left\{ x:ran\left(peliculas\right)|id?\in x.2\right\} $
+\begin_inset Formula $r!=peliculas\upharpoonright\left\{ x:ran\left(peliculas\right)|id?\in x.2\right\} $
 \end_inset
 
 

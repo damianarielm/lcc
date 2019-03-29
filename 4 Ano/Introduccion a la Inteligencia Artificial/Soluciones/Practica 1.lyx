@@ -283,7 +283,34 @@ Soluciones
 \begin_deeper
 \begin_layout Paragraph
 Solución
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
 
 \begin_layout Enumerate
 \begin_inset Argument item:1
@@ -347,7 +374,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg p\lor\neg q$
+\begin_inset Formula $\neg p$
 \end_inset
 
 
@@ -364,11 +391,194 @@ status open
 \end_inset
 
 
+\begin_inset Formula $q$
+\end_inset
+
+ (4 y 1)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg q$
+\end_inset
+
+ (4 y 3)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7)
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $\emptyset$
 \end_inset
 
- (4 y 1).
- PREGUNTAR.
+ (5 y 6)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $p\lor q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg p\lor q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $p\lor\neg q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ (4 y 1)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg p$
+\end_inset
+
+ (4 y 2)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ (5 y 6)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -492,6 +702,10 @@ Nuestro argumento es:
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -527,9 +741,6 @@ En forma clausal:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
 Agregamos 
 \begin_inset Formula $\neg e$
 \end_inset
@@ -1966,14 +2177,14 @@ Argumento:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall x\forall y\left(Tiene\left(x,y\right)\land Mascota\left(y\right)\to\left(\forall z\left(Animal\left(z\right)\to Ama\left(x,z\right)\right)\right)\right)$
+\begin_inset Formula $\forall x\forall y\left(\left(Tiene\left(x,y\right)\land Mascota\left(y\right)\right)\to\left(\forall z\left(Animal\left(z\right)\to Ama\left(x,z\right)\right)\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall x\forall y\left(Animal\left(y\right)\land Ama\left(x,y\right)\to\neg Mata\left(x,y\right)\right)$
+\begin_inset Formula $\forall x\forall y\left(\left(Animal\left(y\right)\land Ama\left(x,y\right)\right)\to\neg Mata\left(x,y\right)\right)$
 \end_inset
 
 
@@ -2015,7 +2226,7 @@ Argumento:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\therefore Mata\left(Juan,Iris\right)\lor Mata\left(Pedro,Iris\right)\lor Mata\left(Maria,Iris\right)$
+\begin_inset Formula $Mata\left(Juan,Iris\right)\lor Mata\left(Pedro,Iris\right)\lor Mata\left(Maria,Iris\right)$
 \end_inset
 
 
@@ -2023,9 +2234,524 @@ Argumento:
 
 \end_deeper
 \begin_layout Itemize
-Forma clausal: COMPLETAR.
+Forma clausal:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Perro\left(a\right)\land Gato\left(b\right)\land Tiene\left(Juan,a\right)\land Tiene\left(Pedro,b\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg Tiene\left(x,y\right)\lor\neg Mascota\left(y\right)\lor\neg Animal\left(z\right)\lor Ama\left(x,z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg Animal\left(y\right)\lor\neg Ama\left(x,y\right)\lor\neg Mata\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg Gato\left(x\right)\lor Mascota\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg Perro\left(x\right)\lor Mascota\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg Mascota\left(x\right)\lor Animal\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Gato\left(Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Tiene\left(Luis,Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Mata\left(Juan,Iris\right)\lor Mata\left(Pedro,Iris\right)\lor Mata\left(Maria,Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Resolución:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Perro\left(a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Gato\left(b\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Tiene\left(Juan,a\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Tiene\left(Pedro,b\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg Tiene\left(x,y\right)\lor\neg Mascota\left(y\right)\lor\neg Animal\left(z\right)\lor Ama\left(x,z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg Animal\left(y\right)\lor\neg Ama\left(x,y\right)\lor\neg Mata\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg Gato\left(x\right)\lor Mascota\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg Perro\left(x\right)\lor Mascota\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg Mascota\left(x\right)\lor Animal\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+10)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Gato\left(Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+11)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Tiene\left(Luis,Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+12)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Mata\left(Juan,Iris\right)\lor Mata\left(Pedro,Iris\right)\lor Mata\left(Maria,Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+13)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg Mata\left(Maria,Iris\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+14)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $Mata\left(Juan,Iris\right)\lor Mata\left(Pedro,Iris\right)$
+\end_inset
+
+ (12 y 11)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+15)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Animal\left(Iris\right)\lor\neg Ama\left(Juan,Iris\right)\lor Mata\left(Pedro,Iris\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(13 y 6 
+\begin_inset Formula $\left[Juan/x\right]\left[Iris/y\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+16)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Animal\left(Iris\right)\lor\neg Ama\left(Juan,Iris\right)$
+\end_inset
+
+ (14 y 6 
+\begin_inset Formula $\left[Pedro/x\right]\left[Iris/y\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+17)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Tiene\left(Juan,y\right)\lor\neg Mascota\left(y\right)\lor\neg Animal\left(Iris\right)\lor\neg Animal\left(Iris\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(15 y 5 
+\begin_inset Formula $\left[Juan/x\right]\left[Iris/z\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+18)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Mascota\left(a\right)\lor\neg Animal\left(Iris\right)\lor\neg Animal\left(Iris\right)$
+\end_inset
+
+ (16 y 3 
+\begin_inset Formula $\left[a/y\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+19)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Mascota\left(a\right)$
+\end_inset
+
+ (1 y 8 
+\begin_inset Formula $\left[a/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+20)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Animal\left(Iris\right)\lor\neg Animal\left(Iris\right)$
+\end_inset
+
+ (17 y 18)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+21)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Mascota\left(Iris\right)$
+\end_inset
+
+ (10 y 7 
+\begin_inset Formula $\left[Iris/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+22)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Animal\left(Iris\right)$
+\end_inset
+
+ (21 y 9 
+\begin_inset Formula $\left[Iris/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+23)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Animal\left(Iris\right)$
+\end_inset
+
+ (22 y 20)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+24)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ (22 y 23)
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 En PROLOG:
 \end_layout
@@ -2042,6 +2768,10 @@ status open
 COMPLETAR.
 \end_layout
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
