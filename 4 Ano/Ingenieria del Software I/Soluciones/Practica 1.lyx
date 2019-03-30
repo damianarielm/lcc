@@ -277,7 +277,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $NuevoCliente==NuevoClienteOk\lor ClienteExiste\lor MontoInsuficiente$
+\begin_inset Formula $NuevoCliente\triangleq NuevoClienteOk\lor ClienteExiste\lor MontoInsuficiente$
 \end_inset
 
 
@@ -872,7 +872,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $ExtraerCA==ExtraerCAOk\lor ClienteInexistente\lor MontoIncorrecto\lor MontoInadmisible$
+\begin_inset Formula $ExtraerCA\triangleq ExtraerCAOk\lor ClienteInexistente\lor MontoIncorrecto\lor MontoInadmisible$
 \end_inset
 
 
@@ -2734,7 +2734,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $CAExtraer==CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
+\begin_inset Formula $CAExtraer\triangleq CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
 \end_inset
 
 
@@ -2799,7 +2799,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $Depositar==DepositarOk\lor DepositarE\lor CuentaInvalida$
+\begin_inset Formula $Depositar\triangleq DepositarOk\lor DepositarE\lor CuentaInvalida$
 \end_inset
 
 
@@ -3910,7 +3910,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $CA2DepositarOk\approx CADepositarOk$
+\begin_inset Formula $CA2DepositarOk\triangleq\left[CADepositarOk|tits'=tits\right]$
 \end_inset
 
 
@@ -4237,7 +4237,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $CAExtraer==CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
+\begin_inset Formula $CAExtraer\triangleq CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
 \end_inset
 
 
@@ -4619,7 +4619,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $ca'=ca\cup\left\{ n?\mapsto\lblot saldo:0;his:\left\langle \right\rangle \rblot\right\} $
+\begin_inset Formula $ca'=ca\cup\left\{ n?\mapsto\lblot saldo==0,his==\left\langle \right\rangle \rblot\right\} $
 \end_inset
 
 
