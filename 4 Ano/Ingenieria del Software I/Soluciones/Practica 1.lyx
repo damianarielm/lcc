@@ -6,7 +6,10 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage[colour]{czt}
+\usepackage{czt}
+\usepackage{colortbl}
+\definecolor{darkgreen}{RGB}{20,155,82}
+\definecolor{purple}{RGB}{141,24,143}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -82,9 +85,13 @@
 
 \begin_layout Enumerate
 Defina el tipo 
+\color purple
+
 \begin_inset Formula $MENSAJES$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -94,6 +101,8 @@ Solución
 \end_layout
 
 \begin_layout Standard
+
+\color purple
 \begin_inset Formula $MENSAJES::=ok|numeroClienteEnUso$
 \end_inset
 
@@ -103,9 +112,13 @@ Solución
 \end_deeper
 \begin_layout Enumerate
 Escriba en C un programa que implemente la operación 
+\color purple
+
 \begin_inset Formula $NuevoCliente$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -169,13 +182,21 @@ MENSAJES nuevocliente(DNI d) {
 \begin_layout Enumerate
 Respecto del ejercicio 2, ¿que diferencias tiene con el modelo? ¿Como implementó
  el tipo 
+\color purple
+
 \begin_inset Formula $DNI$
 \end_inset
 
+
+\color inherit
 ? ¿Su implementación es isomorfa al tipo 
+\color purple
+
 \begin_inset Formula $DNI$
 \end_inset
 
+
+\color inherit
 ? ¿Puede garantizar que su implementación verifica la especificación? ¿Como
  lo haría?
 \end_layout
@@ -219,6 +240,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $montoMinimo:\text{\ensuremath{\mathbb{N}}}$
 \end_inset
 
@@ -233,6 +256,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $montoMinimo=200$
 \end_inset
 
@@ -250,6 +275,8 @@ Solución
 \end_layout
 
 \begin_layout Standard
+
+\color purple
 \begin_inset Formula $NuevoCliente==NuevoClienteOk\lor ClienteExiste\lor MontoInsuficiente$
 \end_inset
 
@@ -277,6 +304,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $NuevoClienteOk$
 \end_inset
 
@@ -289,6 +318,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -309,6 +352,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco$
 \end_inset
 
@@ -341,6 +386,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -373,6 +420,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?:DINERO$
 \end_inset
 
@@ -405,6 +454,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:MENSAJES$
 \end_inset
 
@@ -437,6 +488,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\notin dom\left(a\right)$
 \end_inset
 
@@ -469,6 +522,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?\geq montoMinimo$
 \end_inset
 
@@ -501,6 +556,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca'=ca\cup\left\{ d?\mapsto m?\right\} $
 \end_inset
 
@@ -533,6 +590,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=ok$
 \end_inset
 
@@ -579,6 +638,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $MontoInsuficiente$
 \end_inset
 
@@ -591,6 +652,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -611,6 +686,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?:DINERO$
 \end_inset
 
@@ -643,6 +720,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:MENSAJES$
 \end_inset
 
@@ -675,6 +754,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?<montoMinimo$
 \end_inset
 
@@ -707,6 +788,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=montoInsuficiente$
 \end_inset
 
@@ -750,28 +833,50 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 Complete la especificación de 
+\color purple
+
 \begin_inset Formula $ExtraerCA$
 \end_inset
 
+
+\color inherit
  con todos los esquemas de error necesarios.
  
 \emph on
 Ayuda
 \emph default
 : no olvide los esquemas ya definidos para 
+\color purple
+
 \begin_inset Formula $Extraer$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
 \begin_deeper
 \begin_layout Paragraph
 Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+
+\color purple
 \begin_inset Formula $ExtraerCA==ExtraerCAOk\lor ClienteInexistente\lor MontoIncorrecto\lor MontoInadmisible$
+\end_inset
+
+
+\begin_inset Newline newline
 \end_inset
 
 
@@ -798,6 +903,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $MontoInadmisible$
 \end_inset
 
@@ -810,6 +917,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -830,6 +951,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Xi Banco$
 \end_inset
 
@@ -862,6 +985,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -894,6 +1019,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?:DINERO$
 \end_inset
 
@@ -926,6 +1053,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:MENSAJES$
 \end_inset
 
@@ -958,6 +1087,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?>\min\left\{ ca\left(d?\right),limiteExtrCA\right\} $
 \end_inset
 
@@ -990,6 +1121,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=montoInadmisible$
 \end_inset
 
@@ -1032,13 +1165,21 @@ Solución
 
 \begin_layout Standard
 Debe cambiarse 
+\color purple
+
 \begin_inset Formula $\min\left\{ ca\left(d?\right),limiteExtrCA\right\} $
 \end_inset
 
+
+\color inherit
  por 
+\color purple
+
 \begin_inset Formula $\left\{ ca\left(d?\right)\right\} $
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -1064,7 +1205,7 @@ Solución
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="3">
+<lyxtabular version="3" rows="9" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -1083,6 +1224,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ExtraerCAOk$
 \end_inset
 
@@ -1095,6 +1238,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1115,6 +1272,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco$
 \end_inset
 
@@ -1147,6 +1306,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -1179,6 +1340,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?:DINERO$
 \end_inset
 
@@ -1211,6 +1374,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:MENSAJES$
 \end_inset
 
@@ -1243,6 +1408,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\in dom\left(a\right)$
 \end_inset
 
@@ -1275,39 +1442,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0<m?$
-\end_inset
 
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $m?\leq\min\left\{ ca\left(d?\right)*50/100,limiteExtrCA\right\} $
+\color purple
+\begin_inset Formula $0<m?\leq\min\left\{ ca\left(d?\right)*50/100,limiteExtrCA\right\} $
 \end_inset
 
 
@@ -1339,6 +1476,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca'=ca\cup\left\{ d?\mapsto m?\right\} $
 \end_inset
 
@@ -1371,6 +1510,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=ok$
 \end_inset
 
@@ -1436,6 +1577,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ListarSaldosOk$
 \end_inset
 
@@ -1448,6 +1591,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1468,6 +1625,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Xi Banco$
 \end_inset
 
@@ -1500,6 +1659,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:\mathbb{P}DNI$
 \end_inset
 
@@ -1532,7 +1693,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $rep!:DNI\nrightarrow DINERO$
+
+\color purple
+\begin_inset Formula $rep!:\mathbb{P}DINERO$
 \end_inset
 
 
@@ -1564,6 +1727,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\subseteq dom\left(ca\right)$
 \end_inset
 
@@ -1596,7 +1761,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $rep!=d?\triangleleft ca$
+
+\color purple
+\begin_inset Formula $rep!=ran\left(d?\triangleleft ca\right)$
 \end_inset
 
 
@@ -1664,6 +1831,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $CerrarCajasOk$
 \end_inset
 
@@ -1676,6 +1845,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1696,6 +1879,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco$
 \end_inset
 
@@ -1728,6 +1913,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:\mathbb{P}DNI$
 \end_inset
 
@@ -1760,6 +1947,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\subseteq dom\left(ca\right)$
 \end_inset
 
@@ -1792,6 +1981,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ran\left(d?\triangleleft ca\right)=\left\{ 0\right\} $
 \end_inset
 
@@ -1824,6 +2015,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca'=d?\ndres ca$
 \end_inset
 
@@ -1868,9 +2061,13 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 Definir el estado inicial para 
+\color purple
+
 \begin_inset Formula $CajaAhorros$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -1908,6 +2105,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $CajaAhorrosInit$
 \end_inset
 
@@ -1920,6 +2119,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -1940,6 +2153,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $CajaAhorros$
 \end_inset
 
@@ -1972,6 +2187,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $saldo=0$
 \end_inset
 
@@ -2004,6 +2221,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $his=\left\langle \right\rangle $
 \end_inset
 
@@ -2024,10 +2243,6 @@ Solución
 </row>
 </lyxtabular>
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -2073,6 +2288,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $CAPedirSaldo$
 \end_inset
 
@@ -2085,6 +2302,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2105,6 +2336,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Xi CajaAhorros$
 \end_inset
 
@@ -2137,6 +2370,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:DINERO$
 \end_inset
 
@@ -2169,6 +2404,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=saldo$
 \end_inset
 
@@ -2215,6 +2452,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $CAExtraerOk$
 \end_inset
 
@@ -2227,6 +2466,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2247,6 +2500,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta CajaAhorros$
 \end_inset
 
@@ -2279,6 +2534,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?:DINERO$
 \end_inset
 
@@ -2311,6 +2568,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:MENSAJES$
 \end_inset
 
@@ -2343,6 +2602,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $0<m?\leq saldo$
 \end_inset
 
@@ -2375,6 +2636,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $his'=his^{\smallfrown}\left\langle -m?\right\rangle $
 \end_inset
 
@@ -2407,6 +2670,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $saldo'=saldo-m?$
 \end_inset
 
@@ -2439,6 +2704,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=ok$
 \end_inset
 
@@ -2464,16 +2731,33 @@ Solución
 
 \end_layout
 
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $CAExtraer==CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 ¿Por qué no incluimos 
+\color purple
+
 \begin_inset Formula $m?$
 \end_inset
 
+
+\color inherit
  como variable de entrada y 
+\color purple
+
 \begin_inset Formula $rep!$
 \end_inset
 
+
+\color inherit
  como variable de salida? Justifique.
 \end_layout
 
@@ -2484,18 +2768,26 @@ Solución
 
 \begin_layout Standard
 Ambas estarán definidas al haber incluido el subesquema 
+\color purple
+
 \begin_inset Formula $CADepositarOK$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 Modele la operación total 
+\color purple
+
 \begin_inset Formula $Depositar$
 \end_inset
 
+
+\color inherit
 ; es decir, describa los casos erróneos.
 \end_layout
 
@@ -2505,6 +2797,8 @@ Solución
 \end_layout
 
 \begin_layout Standard
+
+\color purple
 \begin_inset Formula $Depositar==DepositarOk\lor DepositarE\lor CuentaInvalida$
 \end_inset
 
@@ -2513,7 +2807,7 @@ Solución
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="3">
+<lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -2532,6 +2826,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $DepositarE$
 \end_inset
 
@@ -2544,6 +2840,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2564,6 +2874,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Xi Banco2$
 \end_inset
 
@@ -2596,6 +2908,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $CAMontoIncorrecto$
 \end_inset
 
@@ -2628,39 +2942,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?:NUMCTA$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $n?\in dom\left(ca\right)$
 \end_inset
 
 
@@ -2692,7 +2976,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros$
+
+\color purple
+\begin_inset Formula $n?\in dom\left(ca\right)$
 \end_inset
 
 
@@ -2715,18 +3001,18 @@ Solución
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 Defina el estado inicial del banco usando el esquema de estados 
+\color purple
+
 \begin_inset Formula $Banco3$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -2764,6 +3050,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $Banco3Init$
 \end_inset
 
@@ -2776,6 +3064,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2796,6 +3098,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $Banco3$
 \end_inset
 
@@ -2828,6 +3132,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $clis=\emptyset$
 \end_inset
 
@@ -2860,6 +3166,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca=\emptyset$
 \end_inset
 
@@ -2892,6 +3200,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $tits=\emptyset$
 \end_inset
 
@@ -2915,14 +3225,22 @@ Solución
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 Modele la operación de deposito pero usando el esquema de estados 
+\color purple
+
 \begin_inset Formula $Banco3$
 \end_inset
 
+
+\color inherit
 .
  ¿Necesita usar promoción de operaciones?
 \end_layout
@@ -2961,6 +3279,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $DepositarOk$
 \end_inset
 
@@ -2973,6 +3293,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2993,6 +3327,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco3$
 \end_inset
 
@@ -3025,6 +3361,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -3057,6 +3395,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?:NUMCTA$
 \end_inset
 
@@ -3089,6 +3429,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?:DINERO$
 \end_inset
 
@@ -3121,6 +3463,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:MENSAJES$
 \end_inset
 
@@ -3153,6 +3497,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\mapsto n?\in tits$
 \end_inset
 
@@ -3185,6 +3531,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?\in dom\left(ca\right)$
 \end_inset
 
@@ -3217,6 +3565,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?>0$
 \end_inset
 
@@ -3249,7 +3599,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ca'=ca\oplus\left\{ n?\mapsto\left(first\left(ca\left(n?\right)\right)+m?,second\left(ca\left(n?\right)\right)^{\smallfrown}\left\langle m?\right\rangle \right)\right\} $
+
+\color purple
+\begin_inset Formula $ca'=ca\oplus\left\{ n?\mapsto\left(ca\left(n?\right).1+m?,ca\left(n?\right).2^{\smallfrown}\left\langle m?\right\rangle \right)\right\} $
 \end_inset
 
 
@@ -3281,6 +3633,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $clis'=clis$
 \end_inset
 
@@ -3313,6 +3667,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $tits'=tits$
 \end_inset
 
@@ -3345,6 +3701,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=ok$
 \end_inset
 
@@ -3373,9 +3731,13 @@ Solución
 \end_deeper
 \begin_layout Enumerate
 Defina el estado inicial del banco usando el esquema de estados 
+\color purple
+
 \begin_inset Formula $Banco4$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -3413,6 +3775,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $Banco4Init$
 \end_inset
 
@@ -3425,6 +3789,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -3445,6 +3823,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $Banco4$
 \end_inset
 
@@ -3477,7 +3857,341 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca=\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Modele la operación de deposito pero usando el esquema de estados 
+\color purple
+
+\begin_inset Formula $Banco4$
+\end_inset
+
+
+\color inherit
+.
+ ¿Necesita usar promoción de operaciones?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $CA2DepositarOk\approx CADepositarOk$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $Banco4DepositarOk$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Delta Banco4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $CA2DepositarOk$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $d?:DNI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?:NUMCTA$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?\in dom\left(ca\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ca'=ca\oplus\left\{ n?\mapsto\Theta CajaAhorros2'\right\} $
 \end_inset
 
 
@@ -3504,29 +4218,14 @@ Solución
 
 \end_deeper
 \begin_layout Enumerate
-Modele la operación de deposito pero usando el esquema de estados 
-\begin_inset Formula $Banco4$
-\end_inset
-
-.
- ¿Necesita usar promoción de operaciones?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Complete la operación 
+\color purple
+
 \begin_inset Formula $CAExtraer$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -3536,6 +4235,8 @@ Solución
 \end_layout
 
 \begin_layout Standard
+
+\color purple
 \begin_inset Formula $CAExtraer==CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
 \end_inset
 
@@ -3545,9 +4246,13 @@ Solución
 \end_deeper
 \begin_layout Enumerate
 ¿Por qué decimos que esta forma de definir 
+\color purple
+
 \begin_inset Formula $PedirSaldo$
 \end_inset
 
+
+\color inherit
  es artificiosa? ¿Qué es lo que la diferencia de las otras dos?
 \end_layout
 
@@ -3563,9 +4268,13 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 Modelar la operación 
+\color purple
+
 \begin_inset Formula $CAPedirSaldo$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -3576,6 +4285,10 @@ Solución
 
 \begin_layout Standard
 ¿Ejercicio 13?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3618,6 +4331,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $NuevaCuentaOk$
 \end_inset
 
@@ -3630,6 +4345,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -3650,6 +4379,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco2$
 \end_inset
 
@@ -3682,6 +4413,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -3714,6 +4447,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?:NUMCTA$
 \end_inset
 
@@ -3746,6 +4481,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:MENSAJES$
 \end_inset
 
@@ -3778,6 +4515,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\in dom\left(clis\right)$
 \end_inset
 
@@ -3810,7 +4549,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $d?\mapsto n?\notin tits$
+
+\color purple
+\begin_inset Formula $\left(d?,n?\right)\notin tits$
 \end_inset
 
 
@@ -3842,6 +4583,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?\notin dom\left(ca\right)$
 \end_inset
 
@@ -3874,7 +4617,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ca'=ca\cup\left\{ n?\mapsto CajaAhorrosInit\right\} $
+
+\color purple
+\begin_inset Formula $ca'=ca\cup\left\{ n?\mapsto\lblot saldo:0;his:\left\langle \right\rangle \rblot\right\} $
 \end_inset
 
 
@@ -3906,39 +4651,43 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $tits'=tits\cup\left\{ \left(d?,n?\right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $clis'=clis$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $tits'=tits$
 \end_inset
 
 
@@ -3970,6 +4719,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=ok$
 \end_inset
 
@@ -3995,13 +4746,525 @@ Solución
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $BorrarCuentaOk$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Delta Banco2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $d?:DNI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?:NUMCTA$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $rep!:MENSAJES$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $d?\in dom\left(clis\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?\in dom\left(ca\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $dom\left(tits\triangleright n?\right)=\left\{ d?\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $saldo=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ca'=\left\{ n?\right\} \ndres ca$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $tits'=tits\backslash\left\{ \left(d?,n?\right)\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $clis'=clis$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $rep!=ok$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Modele las operaciones de extracción, alta y baja de un cliente y pedido
  de saldo utilizando el esquema de estados 
+\color purple
+
 \begin_inset Formula $Banco3$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -4039,6 +5302,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $PedirSaldoOk$
 \end_inset
 
@@ -4051,6 +5316,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -4071,6 +5350,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Xi Banco3$
 \end_inset
 
@@ -4103,6 +5384,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?:NUMCTA$
 \end_inset
 
@@ -4135,6 +5418,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -4167,6 +5452,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:DINERO$
 \end_inset
 
@@ -4199,7 +5486,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\left(d?\mapsto n?\right)\in tits$
+
+\color purple
+\begin_inset Formula $\left(d?,n?\right)\in tits$
 \end_inset
 
 
@@ -4231,6 +5520,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?\in dom\left(ca\right)$
 \end_inset
 
@@ -4263,7 +5554,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $rep!=first\left(ca\left(n?\right)\right)$
+
+\color purple
+\begin_inset Formula $rep!=ca\left(n?\right).1$
 \end_inset
 
 
@@ -4309,6 +5602,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ExtraerOk$
 \end_inset
 
@@ -4321,6 +5616,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -4341,6 +5650,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco3$
 \end_inset
 
@@ -4373,6 +5684,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?:NUMCTA$
 \end_inset
 
@@ -4405,6 +5718,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -4437,6 +5752,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $m?:DINERO$
 \end_inset
 
@@ -4469,7 +5786,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\left(d?\mapsto n?\right)\in tits$
+
+\color purple
+\begin_inset Formula $\left(d?,n?\right)\in tits$
 \end_inset
 
 
@@ -4501,6 +5820,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?\in dom\left(ca\right)$
 \end_inset
 
@@ -4533,7 +5854,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $0<m?\leq first\left(ca\left(n?\right)\right)$
+
+\color purple
+\begin_inset Formula $0<m?\leq ca\left(n?\right).1$
 \end_inset
 
 
@@ -4565,7 +5888,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $ca'=ca\oplus\left\{ n?\mapsto\left(first\left(ca\left(n?\right)\right)-m?,second\left(ca\left(n?\right)\right)^{\smallfrown}\left\langle -m?\right\rangle \right)\right\} $
+
+\color purple
+\begin_inset Formula $ca'=ca\oplus\left\{ n?\mapsto\left(ca\left(n?\right).1-m?,ca\left(n?\right).2^{\smallfrown}\left\langle -m?\right\rangle \right)\right\} $
 \end_inset
 
 
@@ -4597,6 +5922,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $clis'=clis$
 \end_inset
 
@@ -4629,6 +5956,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $tits'=tits$
 \end_inset
 
@@ -4675,6 +6004,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $NuevoClienteOk$
 \end_inset
 
@@ -4687,6 +6018,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -4707,6 +6052,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco3$
 \end_inset
 
@@ -4739,6 +6086,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?:NOMBRE$
 \end_inset
 
@@ -4771,6 +6120,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $c?:DOMICILIO$
 \end_inset
 
@@ -4803,6 +6154,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -4835,6 +6188,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\notin dom\left(clis\right)$
 \end_inset
 
@@ -4867,6 +6222,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $clis'=clis\cup\left\{ d?\mapsto\left(n?,c?\right)\right\} $
 \end_inset
 
@@ -4899,6 +6256,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca'=ca$
 \end_inset
 
@@ -4931,6 +6290,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $tits'=tits$
 \end_inset
 
@@ -4977,6 +6338,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $BorrarClienteOk$
 \end_inset
 
@@ -4989,6 +6352,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -5009,6 +6386,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Delta Banco3$
 \end_inset
 
@@ -5041,6 +6420,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -5073,6 +6454,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\in dom\left(clis\right)$
 \end_inset
 
@@ -5105,6 +6488,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?\triangleleft tits=\emptyset$
 \end_inset
 
@@ -5137,7 +6522,9 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $clis'=d?\ndres clis$
+
+\color purple
+\begin_inset Formula $clis'=\left\{ d?\right\} \ndres clis$
 \end_inset
 
 
@@ -5169,6 +6556,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca'=ca$
 \end_inset
 
@@ -5201,6 +6590,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $tits'=tits$
 \end_inset
 
@@ -5230,9 +6621,13 @@ Solución
 \begin_layout Enumerate
 Modele las operaciones de extracción, alta y baja de un cliente y pedido
  de saldo utilizando el esquema de estados 
+\color purple
+
 \begin_inset Formula $Banco4$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -5270,6 +6665,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $PedirSaldoOk$
 \end_inset
 
@@ -5282,6 +6679,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -5302,6 +6713,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Xi Banco4$
 \end_inset
 
@@ -5334,6 +6747,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?:NUMCTA$
 \end_inset
 
@@ -5366,6 +6781,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?:DNI$
 \end_inset
 
@@ -5398,6 +6815,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!:DINERO$
 \end_inset
 
@@ -5430,6 +6849,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $n?\in dom\left(ca\right)$
 \end_inset
 
@@ -5462,6 +6883,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros2$
 \end_inset
 
@@ -5494,6 +6917,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $d?=\Theta Cliente2.dni$
 \end_inset
 
@@ -5526,6 +6951,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $\Theta Cliente2\in tits$
 \end_inset
 
@@ -5558,6 +6985,8 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\color purple
 \begin_inset Formula $rep!=saldo$
 \end_inset
 
@@ -5584,15 +7013,485 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ExtraerOk$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Delta Banco4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?:NUMCTA$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $d?:DNI$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $m?:DINERO$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?\in dom\left(ca\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $d?=\Theta Cliente2.dni$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Theta Cliente2\in tits$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $0<m?\leq saldo$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Theta CajaAhorros2'.saldo'=saldo-m?$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Theta CajaAhorros2'.his'=his^{\smallfrown}\left\langle -m?\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Theta CajaAhorros2'.tits'=tits$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 En el esquema marco de promoción 
+\color purple
+
 \begin_inset Formula $CajaAhorrosABanco$
 \end_inset
 
+
+\color inherit
  hay una precondición para la cual no se ha escrito ningún esquema de error
  para ninguna de las operaciones.
  ¿Por qué?
@@ -5610,9 +7509,13 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 Falta modelar un esquema de error para la operación 
+\color purple
+
 \begin_inset Formula $Extraer$
 \end_inset
 
+
+\color inherit
 .
  Hágalo.
 \end_layout
@@ -5624,10 +7527,6 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -5662,13 +7561,21 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 ¿Por qué 
+\color purple
+
 \begin_inset Formula $CAExtraerOk\left[no?/n?\right]$
 \end_inset
 
+
+\color inherit
  es igual a 
+\color purple
+
 \begin_inset Formula $CAExtraerOk$
 \end_inset
 
+
+\color inherit
 ?
 \end_layout
 
@@ -5678,19 +7585,35 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Por que 
+\color purple
+
+\begin_inset Formula $n?$
+\end_inset
+
+
+\color inherit
+ no aparece en el esquema.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 ¿Qué ocurre si 
+\color purple
+
 \begin_inset Formula $no?$
 \end_inset
 
+
+\color inherit
  y 
+\color purple
+
 \begin_inset Formula $nd?$
 \end_inset
 
+
+\color inherit
  son iguales? ¿Es necesario que sean diferentes? Si lo es, modifique el
  modelo para que lo sean.
 \end_layout
@@ -5702,18 +7625,30 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 Definir la operación de transferencia usando los esquemas de estados 
+\color purple
+
 \begin_inset Formula $Banco3$
 \end_inset
 
+
+\color inherit
  y 
+\color purple
+
 \begin_inset Formula $Banco4$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -5738,6 +7673,8 @@ Determine, justificando formalmente su respuesta, si las dos expresiones
 \end_inset
 
 
+\color purple
+
 \begin_inset Formula $ExtraerOk\left[no?/n?\right]\fatsemi DepositarOk\left[nd?/n?,saldo_{1}/saldo,saldo_{2}/saldo,his_{1}/his,his_{2}/his''\right]$
 \end_inset
 
@@ -5746,6 +7683,8 @@ Determine, justificando formalmente su respuesta, si las dos expresiones
 
 \begin_deeper
 \begin_layout Standard
+
+\color purple
 \begin_inset Formula $DepositarOk\left[no?/n?\right]\fatsemi ExtraerOk\left[nd?/n?,saldo_{1}/saldo,saldo_{2}/saldo,his_{1}/his,his_{2}/his''\right]$
 \end_inset
 
@@ -5758,10 +7697,6 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -5801,7 +7736,7 @@ Agregar un titular a una caja de ahorros; solo uno de los titulares puede
 \end_layout
 
 \begin_layout Paragraph
-Solución
+Soluciones
 \end_layout
 
 \begin_layout Standard
@@ -5812,51 +7747,13 @@ COMPLETAR.
 \begin_layout Enumerate
 Complete en C++ la implementación de todas las operaciones definidas sobre
  
+\color purple
+
 \begin_inset Formula $Banco2$
 \end_inset
 
-.
-\end_layout
 
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Especifique el operador 
-\begin_inset Formula $sumSeq$
-\end_inset
-
-, el cual retorna la suma de una secuencia de números enteros.
- ¿Qué parágrafo Z utilizará? ¿Un esquema, una definición axiomática, una
- definición genérica?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Defina el mismo invariante para los esquemas de estado 
-\begin_inset Formula $Banco3$
-\end_inset
-
- y 
-\begin_inset Formula $Banco4$
-\end_inset
-
+\color inherit
 .
 \end_layout
 
@@ -5868,6 +7765,456 @@ Solución
 \begin_layout Standard
 COMPLETAR.
 \begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Especifique el operador 
+\color purple
+
+\begin_inset Formula $sumSeq$
+\end_inset
+
+
+\color inherit
+, el cual retorna la suma de una secuencia de números enteros.
+ ¿Qué parágrafo Z utilizará? ¿Un esquema, una definición axiomática, una
+ definición genérica?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $sumSeq:seq\mathbb{Z}\to\mathbb{Z}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $sumSeq\left(\left\langle \right\rangle \right)=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $sumSeq\left(S\right)=head\left(s\right)+sumSeq\left(tail\left(S\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Defina el mismo invariante para los esquemas de estado 
+\color purple
+
+\begin_inset Formula $Banco3$
+\end_inset
+
+
+\color inherit
+ y 
+\color purple
+
+\begin_inset Formula $Banco4$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $InvBanco3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $Banco3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $dom\left(ca\right)=ran\left(tits\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $dom\left(clis\right)=dom\left(tits\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\forall x:ran\left(ca\right)\bullet sumSeq\left(x.2\right)=x.1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $InvBanco4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $Banco4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\forall c:ran\left(ca\right)\bullet sumSeq\left(c.his\right)=c.saldo$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
 \end_inset
 
 
@@ -5894,6 +8241,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -5907,8 +8258,332 @@ Escriba las designaciones de los requerimientos enunciados en la sección
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+La operación finalizo con éxito 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $ok$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La persona ya es cliente del banco 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $numeroClienteEnUso$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+La persona no es cliente del banco 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $clienteInexsistente$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El monto de dinero es incorrecto 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $montoNulo$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El cliente no tiene suficiente saldo 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $noPoseeSaldoSuficiente$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+La caja de ahorros aun posee saldo 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $saldoNoNulo$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Monto insuficiente para crear la caja de ahorros 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $montoInsuficiente$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+No se puede retirar tanto dinero 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $montoInadmisible$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El limite para la extracción establecido por el BRCA es 
+\begin_inset Formula $limiteExtrCA\approx$
+\end_inset
+
+
+\color purple
+ 
+\begin_inset Formula $limiteExtrCA$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+ es un DNI 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $n\in DNI$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x$
+\end_inset
+
+ es un monto de dinero positivo 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $x\in DINERO$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La persona con DNI 
+\begin_inset Formula $x$
+\end_inset
+
+ es cliente del banco y su saldo es 
+\begin_inset Formula $y\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $ca\left(x\right)=y$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se crea una cuenta para la persona con DNI 
+\begin_inset Formula $d?$
+\end_inset
+
+ y se comunica el resultado 
+\begin_inset Formula $rep!$
+\end_inset
+
+ de la operación 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $NuevoCliente\left(d?,rep!\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La persona con DNI 
+\begin_inset Formula $d?$
+\end_inset
+
+ realiza un deposito de cantidad 
+\begin_inset Formula $m?$
+\end_inset
+
+ en su cuenta, y se comunica el resultado 
+\begin_inset Formula $rep!$
+\end_inset
+
+ de la operación 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $Depositar\left(d?,m?,rep!\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El cliente con DNI 
+\begin_inset Formula $d?$
+\end_inset
+
+ retira la cantidad 
+\begin_inset Formula $m?$
+\end_inset
+
+ de su cuenta, y se comunica el resultado 
+\begin_inset Formula $rep!$
+\end_inset
+
+ de la operación 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $Extraer\left(d?,m?,rep!\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+La persona con DNI 
+\begin_inset Formula $d?$
+\end_inset
+
+ quiere conocer su saldo 
+\begin_inset Formula $saldo!$
+\end_inset
+
+, y se comunica el resultado de la operación 
+\begin_inset Formula $rep!$
+\end_inset
+
+ 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $PedirSaldo\left(d?,m?,rep!\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El cliente con DNI 
+\begin_inset Formula $d?$
+\end_inset
+
+ cierra su cuenta y se comunica el resultado 
+\begin_inset Formula $rep!$
+\end_inset
+
+ de la operación 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $CerrarCaja\left(d?,rep!\right)$
+\end_inset
+
+
+\color inherit
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -5930,9 +8605,13 @@ COMPLETAR.
 \begin_layout Enumerate
 ¿Necesita escribir nuevas designaciones o modificar las que escribió en
  el problema 40 para el modelo basando en 
+\color purple
+
 \begin_inset Formula $Banco3$
 \end_inset
 
+
+\color inherit
 ?
 \end_layout
 

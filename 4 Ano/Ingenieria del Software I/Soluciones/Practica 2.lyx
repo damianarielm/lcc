@@ -6,7 +6,10 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage[colour]{czt}
+\usepackage{czt}
+\usepackage{colortbl}
+\definecolor{darkgreen}{RGB}{20,155,82}
+\definecolor{purple}{RGB}{141,24,143}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -948,6 +951,20 @@ Solución
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
