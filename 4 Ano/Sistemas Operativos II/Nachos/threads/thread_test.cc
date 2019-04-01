@@ -13,6 +13,10 @@
 
 #include "system.hh"
 
+#ifdef SEMAPHORE_TEST
+#include "synch.hh"
+Semaphore *s;
+#endif
 
 /// Loop 10 times, yielding the CPU to another ready thread each iteration.
 ///
@@ -21,6 +25,10 @@
 void
 SimpleThread(void *name_)
 {
+    #ifdef SEMAPHORE_TEST
+    s->P();
+    #endif
+
     // Reinterpret arg `name` as a string.
     char *name = (char *) name_;
 
@@ -32,6 +40,10 @@ SimpleThread(void *name_)
         currentThread->Yield();
     }
     printf("!!! Thread `%s` has finished\n", name);
+
+    #ifdef SEMAPHORE_TEST
+    s->V();
+    #endif
 }
 
 /// Set up a ping-pong between several threads.
@@ -43,10 +55,15 @@ ThreadTest()
 {
     DEBUG('t', "Entering thread test\n");
 
-    char *name = new char [64];
-    strncpy(name, "2nd", 64);
-    Thread *newThread = new Thread(name);
-    newThread->Fork(SimpleThread, (void *) name);
+    #ifdef SEMAPHORE_TEST
+    s = new Semaphore("semaphore",3);
+    #endif
 
-    SimpleThread((void *) "1st");
+    for (int i = 1; i <= 5; i++) {
+        char *name = new char[2];
+        name[0] = i + '0'; name[1] = '\0';
+        Thread *newThread = new Thread(name);
+        newThread->Fork(SimpleThread, (void *) name);
+    }
+
 }

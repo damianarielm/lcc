@@ -106,6 +106,8 @@ private:
 
     /// For debugging.
     const char *name;
+    Thread *owner;
+    Semaphore *s;
 
     // Add other needed fields here.
 };

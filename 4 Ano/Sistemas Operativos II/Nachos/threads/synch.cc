@@ -61,6 +61,7 @@ Semaphore::GetName() const
 void
 Semaphore::P()
 {
+    DEBUG('s', "Thread %s haciendo P en semaforo %s con valor %d\n", currentThread->GetName(), name, value);
     IntStatus oldLevel = interrupt->SetLevel(INT_OFF);
       // Disable interrupts.
 
@@ -81,6 +82,8 @@ Semaphore::P()
 void
 Semaphore::V()
 {
+    DEBUG('s', "Thread %s haciendo V en semaforo %s con valor %d\n", currentThread->GetName(), name, value);
+
     IntStatus oldLevel = interrupt->SetLevel(INT_OFF);
 
     Thread *thread = queue->Pop();
@@ -98,10 +101,16 @@ Semaphore::V()
 /// case in the network assignment will not work!
 
 Lock::Lock(const char *debugName)
-{}
+{
+    name = debugName;
+    owner = nullptr;
+    s = new Semaphore(name,1);
+}
 
 Lock::~Lock()
-{}
+{
+    delete s;
+}
 
 const char *
 Lock::GetName() const
@@ -111,15 +120,28 @@ Lock::GetName() const
 
 void
 Lock::Acquire()
-{}
+{
+    DEBUG('l', "Thread %s haciendo Acquire en lock %s\n", currentThread->GetName(), name);
+
+    s->P();
+    owner = currentThread;
+}
 
 void
 Lock::Release()
-{}
+{
+    DEBUG('l', "Thread %s haciendo Release en lock %s\n", currentThread->GetName(), name);
+    ASSERT(IsHeldByCurrentThread());
+
+    owner = nullptr;
+    s->V();
+}
 
 bool
 Lock::IsHeldByCurrentThread() const
-{}
+{
+    return owner == currentThread;
+}
 
 Condition::Condition(const char *debugName, Lock *conditionLock)
 {}
