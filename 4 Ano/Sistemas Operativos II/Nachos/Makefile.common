@@ -1,0 +1,167 @@
+# This is part of a GNU Makefile, included by the Makefiles in
+# each of the subdirectories.
+#
+# This file includes all of the baseline code provided by Nachos.
+# Whenever you add a `.h`, `.hh` or `.cc` file, put it in the appropriate
+# `_H`, `_C`, or `_O` list.
+#
+# The dependency graph between assignments is:
+#
+# 1. `THREADS` before everything else.
+# 2. `USERPROG` must come before `VMEM`.
+# 3. `USERPROG` can come before or after `FILESYS`, but if `USERPROG` comes
+#    before (as in this distribution), then it must define `FILESYS_STUB`.
+#
+# Other than that, you have complete flexibility.
+#
+# Also whenever you change the include structure of your program, you should
+# do a `make depend` in the subdirectory -- this will modify the Makefile
+# to keep track of the new dependency.
+
+# You might want to play with the `CFLAGS`, but if you use `-O` it may
+# break the thread system.  You might want to use `-fno-inline` if
+# you need to call some inline functions from the debugger.
+
+# Copyright (c) 1992      The Regents of the University of California.
+#               2016-2019 Docentes de la Universidad Nacional de Rosario.
+# All rights reserved.  See `copyright.h` for copyright notice and
+# limitation of liability and disclaimer of warranty provisions.
+
+CXXFLAGS = -std=c++11 -g -Wall -Wshadow $(INCLUDE_DIRS) $(DEFINES) $(HOST)
+LDFLAGS  =
+
+# These definitions may change as the software is updated.
+# Some of them are also system dependent
+CXX = g++
+LD  = g++
+
+PROGRAM = nachos
+
+THREAD_HDR = ../threads/copyright.h   \
+             ../threads/scheduler.hh  \
+             ../threads/synch.hh      \
+             ../threads/synch_list.hh \
+             ../threads/system.hh     \
+             ../threads/thread.hh     \
+             ../lib/debug.hh          \
+             ../lib/list.hh           \
+             ../lib/utility.hh        \
+             ../machine/interrupt.hh  \
+             ../machine/system_dep.hh \
+             ../machine/statistics.hh \
+             ../machine/timer.hh      \
+             ../threads/preemptive.hh
+THREAD_SRC = ../threads/main.cc        \
+             ../threads/scheduler.cc   \
+             ../threads/synch.cc       \
+             ../threads/system.cc      \
+             ../threads/switch.S       \
+             ../threads/thread.cc      \
+             ../lib/debug.cc           \
+             ../lib/utility.cc         \
+             ../threads/thread_test.cc \
+             ../machine/interrupt.cc   \
+             ../machine/system_dep.cc  \
+             ../machine/statistics.cc  \
+             ../machine/timer.cc       \
+             ../threads/preemptive.cc
+THREAD_OBJ = main.o        \
+             scheduler.o   \
+             synch.o       \
+             system.o      \
+             thread.o      \
+             debug.o       \
+             utility.o     \
+             thread_test.o \
+             interrupt.o   \
+             statistics.o  \
+             system_dep.o  \
+             switch.o      \
+             timer.o       \
+             preemptive.o
+
+USERPROG_HDR = ../userprog/address_space.hh            \
+               ../userprog/debugger.hh                 \
+               ../userprog/debugger_command_manager.hh \
+               ../userprog/transfer.hh                 \
+               ../filesys/file_system.hh               \
+               ../filesys/open_file.hh                 \
+               ../lib/bitmap.hh                        \
+               ../machine/console.hh                   \
+               ../machine/encoding.hh                  \
+               ../machine/endianness.hh                \
+               ../machine/exception_type.hh            \
+               ../machine/instruction.hh               \
+               ../machine/machine.hh                   \
+               ../machine/mmu.hh                       \
+               ../machine/translation_entry.hh
+USERPROG_SRC = ../userprog/address_space.cc            \
+               ../userprog/debugger.cc                 \
+               ../userprog/debugger_command_manager.cc \
+               ../userprog/exception.cc                \
+               ../userprog/prog_test.cc                \
+               ../userprog/transfer.cc                 \
+               ../lib/bitmap.cc                        \
+               ../machine/console.cc                   \
+               ../machine/encoding.cc                  \
+               ../machine/endianness.cc                \
+               ../machine/exception_type.cc            \
+               ../machine/instruction.cc               \
+               ../machine/machine.cc                   \
+               ../machine/mips_sim.cc                  \
+               ../machine/mmu.cc
+USERPROG_OBJ = address_space.o            \
+               bitmap.o                   \
+               debugger.o                 \
+               debugger_command_manager.o \
+               exception.o                \
+               exception_type.o           \
+               prog_test.o                \
+               console.o                  \
+               encoding.o                 \
+               endianness.o               \
+               instruction.o              \
+               machine.o                  \
+               mips_sim.o                 \
+               mmu.o                      \
+               transfer.o
+
+VMEM_HDR =
+VMEM_SRC =
+VMEM_OBJ =
+
+FILESYS_HDR = ../filesys/directory.hh       \
+              ../filesys/directory_entry.hh \
+              ../filesys/file_header.hh     \
+              ../filesys/file_system.hh     \
+              ../filesys/open_file.hh       \
+              ../filesys/raw_directory.hh   \
+              ../filesys/raw_file_header.hh \
+              ../filesys/synch_disk.hh      \
+              ../machine/disk.hh
+FILESYS_SRC = ../filesys/directory.cc   \
+              ../filesys/file_header.cc \
+              ../filesys/file_system.cc \
+              ../filesys/fs_test.cc     \
+              ../filesys/open_file.cc   \
+              ../filesys/synch_disk.cc  \
+              ../machine/disk.cc
+FILESYS_OBJ = directory.o   \
+              file_header.o \
+              file_system.o \
+              fs_test.o     \
+              open_file.o   \
+              synch_disk.o  \
+              disk.o
+
+NETWORK_HDR = ../network/post.hh \
+              ../machine/network.hh
+NETWORK_SRC = ../network/net_test.cc \
+              ../network/post.cc     \
+              ../machine/network.cc
+NETWORK_OBJ = net_test.o \
+              post.o     \
+              network.o
+
+
+include ../Makefile.rules
