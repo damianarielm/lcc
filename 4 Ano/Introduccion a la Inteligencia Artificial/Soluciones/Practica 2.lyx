@@ -1,0 +1,1157 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Hello World
+\end_layout
+
+\begin_layout Standard
+No se puede aprender un nuevo lenguaje de programación sin hacer el Hello
+ World.
+ Por tanto tendremos que hacerlo, entra al intérprete y escribe:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+write('Hello World').
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sócrates
+\end_layout
+
+\begin_layout Standard
+Haremos ahora el famoso ejemplo de 
+\begin_inset Quotes fld
+\end_inset
+
+Todos los hombres son mortales, Sócrates es hombre
+\begin_inset Quotes frd
+\end_inset
+
+ para ver si de esto se deduce "Sócrates es mortal".
+ Abre un archivo nuevo y escribe:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mortal(X) :- hombre(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+hombre(socrates).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consultar el archivo y pregunta:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+mortal(socrates).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Parentesco Familiar
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora trabajaremos con un ejemplo clásico: definir relaciones de parentesco
+ familiar.
+ Ingresemos las siguientes cláusulas (o el árbol genealógico familiar de
+ cada uno):
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(juan, luis).
+\end_layout
+
+\begin_layout Plain Layout
+
+padre(juan, lia).
+\end_layout
+
+\begin_layout Plain Layout
+
+padre(luis, jorge).
+\end_layout
+
+\begin_layout Plain Layout
+
+padre(luis, ines).
+\end_layout
+
+\begin_layout Plain Layout
+
+padre(jorge, diego).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego consultar:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(juan, X).
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hacer además, las siguientes consultas:
+\end_layout
+
+\begin_layout Enumerate
+¿Quién es el padre de Inés?
+\end_layout
+
+\begin_layout Enumerate
+¿Es Luis padre de Jorge?
+\end_layout
+
+\begin_layout Enumerate
+¿Es Jorge padre de María?
+\end_layout
+
+\begin_layout Enumerate
+¿Quién es el padre de María?
+\end_layout
+
+\begin_layout Enumerate
+Indicar una consulta para que retorne la relación padre completa.
+\end_layout
+
+\begin_layout Enumerate
+Consultar si Juan es padre.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(X, ines).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(luis, jorge).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(jorge, maria).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(X, maria).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(X, Y).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(juan, X).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definir la relación abuelopaterno de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abuelopaterno(X, Z) :- padre(X, Y), padre(Y, Z).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Realizar las siguientes consultas:
+\end_layout
+
+\begin_layout Enumerate
+¿Quién es el abuelo de Diego?
+\end_layout
+
+\begin_layout Enumerate
+Obtener todos los pares de la relación abuelopaterno.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abuelopaterno(X, diego).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abuelopaterno(X, Y).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Incorporar los siguientes hechos:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+madre(ana, luis).
+\end_layout
+
+\begin_layout Plain Layout
+
+madre(lia, maria).
+\end_layout
+
+\begin_layout Plain Layout
+
+madre(lia, rosa).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definir la relación abuelomaterno.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abuelomaterno(X, Z) :- padre(X, Y), madre(Y, Z).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definir la relación abuelo, de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abuelo(X, Y) :- abuelopaterno(X, Y).
+\end_layout
+
+\begin_layout Plain Layout
+
+abuelo(X, Y) :- abuelomaterno(X, Y).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consultar por todos los pares de la relación abuelo.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abuelo(X, Y).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definir la relación hermano y obtener todos los pares de la misma.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+COMPLETAR.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definir la relación tío.
+ Nota: hacemos distinción entre tíos directos y tíos políticos.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+COMPLETAR.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Defina la relación ancestro como clausura transitiva de las relaciones madre
+ y padre según la siguiente definición:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes fld
+\end_inset
+
+Una persona 
+\begin_inset Formula $X$
+\end_inset
+
+ es el ancestro de una persona 
+\begin_inset Formula $Y$
+\end_inset
+
+; si 
+\begin_inset Formula $X$
+\end_inset
+
+ es el padre o madre de 
+\begin_inset Formula $Y$
+\end_inset
+
+, o si existe una persona 
+\begin_inset Formula $Z$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Z$
+\end_inset
+
+ es padre o madre de 
+\begin_inset Formula $Y$
+\end_inset
+
+ y además 
+\begin_inset Formula $X$
+\end_inset
+
+ es ancestro de ese mismo 
+\begin_inset Formula $Z$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+COMPLETAR.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La familia Adams está compuesta por Homero, Morticia, Pericles, Merlina,
+ Tío Cosa, Tío Lucas, la Abuela y Largo.
+ Homero es hermano de Lucas y Cosa, todos ellos son hijos de la Abuela.
+ Morticia es esposa de Homero y tiene dos hijos: Pericles y Merlina.
+\end_layout
+
+\begin_layout Standard
+Generar las reglas y hechos en Prolog utilizando los siguientes predicados:
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+varon(nombre)
+\end_layout
+
+\begin_layout Itemize
+mujer(nombre)
+\end_layout
+
+\begin_layout Itemize
+progenitor(nombre, nombre)
+\end_layout
+
+\begin_layout Itemize
+padre(nombre, nombre)
+\end_layout
+
+\begin_layout Itemize
+madre(nombre, nombre)
+\end_layout
+
+\begin_layout Itemize
+hijo(nombre, nombre)
+\end_layout
+
+\begin_layout Itemize
+hija(nombre, nombre)
+\end_layout
+
+\begin_layout Itemize
+hermana(nombre, nombre)
+\end_layout
+
+\begin_layout Itemize
+tio(nombre, nombre)
+\end_layout
+
+\begin_layout Itemize
+abuela(nombre, nombre)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se deben responder las siguientes consultas:
+\end_layout
+
+\begin_layout Enumerate
+¿Es Pericles hijo de Homero?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Quién es hija de Homero?
+\end_layout
+
+\begin_layout Enumerate
+¿Quién es el padre de Pericles? 
+\end_layout
+
+\begin_layout Enumerate
+¿Quiénes son tíos de la familia?
+\end_layout
+
+\begin_layout Enumerate
+¿Quién es la abuela de Pericles?
+\end_layout
+
+\begin_layout Enumerate
+¿Quién tiene hermana en la familia?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+%% HECHOS
+\end_layout
+
+\begin_layout Plain Layout
+
+varon(homero).
+\end_layout
+
+\begin_layout Plain Layout
+
+varon(pericles).
+\end_layout
+
+\begin_layout Plain Layout
+
+varon(cosa).
+\end_layout
+
+\begin_layout Plain Layout
+
+varon(lucas).
+\end_layout
+
+\begin_layout Plain Layout
+
+varon(largo).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+mujer(morticia).
+\end_layout
+
+\begin_layout Plain Layout
+
+mujer(merlina).
+\end_layout
+
+\begin_layout Plain Layout
+
+mujer(abuela).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+hijo(homero,abuela).
+\end_layout
+
+\begin_layout Plain Layout
+
+hijo(lucas,abuela).
+\end_layout
+
+\begin_layout Plain Layout
+
+hijo(cosa,abuela).
+\end_layout
+
+\begin_layout Plain Layout
+
+hijo(pericles,morticia).
+\end_layout
+
+\begin_layout Plain Layout
+
+hijo(pericles,homero).
+\end_layout
+
+\begin_layout Plain Layout
+
+hija(merlina,homero).
+\end_layout
+
+\begin_layout Plain Layout
+
+hija(merlina,morticia).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+hermano(homero,lucas).
+\end_layout
+
+\begin_layout Plain Layout
+
+hermano(homero,cosa).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%% REGLAS
+\end_layout
+
+\begin_layout Plain Layout
+
+hermano(X,Y) :- progenitor(Z,X), progenitor(Z,Y), varon(X), X 
+\backslash
+= Y.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+hermana(X,Y) :- progenitor(Z,X), progenitor(Z,Y), mujer(X), X 
+\backslash
+= Y.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+progenitor(X,Y) :- hijo(Y,X).
+\end_layout
+
+\begin_layout Plain Layout
+
+progenitor(X,Y) :- hija(Y,X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+abuela(X,Z) :- progenitor(X,Y), progenitor(Y,Z), mujer(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+padre(X,Y) :- progenitor(X,Y), varon(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+tio(X,Y) :- hermano(X,Z), progenitor(Z,Y), varon(X).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hijo(pericles,homero).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hija(X,homero).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+padre(X,pericles).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tio(X,Y).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+abuela(X,pericles).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hermana(X,Y).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Club de Ping-pong
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+El predicado not
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+Muerte de un gato
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+Señor de los anillos
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+Fauna
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+Comidas
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_body
+\end_document
