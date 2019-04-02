@@ -122,14 +122,14 @@ La lampara esta encendida
 \end_layout
 
 \begin_layout Itemize
-Se presiona alguno de los botones 
+La lampara esta apagada 
 \begin_inset Formula $\approx$
 \end_inset
 
  
 \color purple
 
-\begin_inset Formula $Presionar$
+\begin_inset Formula $off$
 \end_inset
 
 
@@ -146,6 +146,22 @@ La lampara se encuentra en el estado
 \color purple
 
 \begin_inset Formula $Sistema\left(l\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se presiona alguno de los botones 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $Presionar$
 \end_inset
 
 
@@ -864,7 +880,7 @@ El despachante se encuentra en el estado
 \begin_inset Formula $s$
 \end_inset
 
- y almacena los mensajes 
+ y almacena los mensajes en el buffer 
 \begin_inset Formula $buffer$
 \end_inset
 
@@ -907,7 +923,7 @@ Mientras el despachante esta recibiendo, se recibe por el canal
  
 \color purple
 
-\begin_inset Formula $Canal_{n}$
+\begin_inset Formula $Canal_{n}\left(c_{n}?,e_{n}!\right)$
 \end_inset
 
 
@@ -939,7 +955,7 @@ El despachante está enviando de a uno los mensajes a través del canal
  
 \color purple
 
-\begin_inset Formula $bufferVaciando$
+\begin_inset Formula $bufferVaciando\left(r!\right)$
 \end_inset
 
 
@@ -1654,7 +1670,7 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="3">
+<lyxtabular version="3" rows="7" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -1766,74 +1782,6 @@ arrayrulecolor{darkgreen}%
 \end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $\#buffer\leq9$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $s=recibiendo$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2879,7 +2827,147 @@ No hubo un error en la operación
 \end_layout
 
 \begin_layout Itemize
-COMPLETAR.
+La base de datos almacena las películas 
+\begin_inset Formula $peliculas\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $BaseDatos\left(peliculas\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se modifica el director 
+\begin_inset Formula $do?$
+\end_inset
+
+ de la película 
+\begin_inset Formula $p?$
+\end_inset
+
+ por el director 
+\begin_inset Formula $dn?$
+\end_inset
+
+ y se informa el resultado 
+\begin_inset Formula $e!$
+\end_inset
+
+ de la operación 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $ModificarDirector\left(p?,do?,dn?,e!\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se agrega a la base de datos la película 
+\begin_inset Formula $p?$
+\end_inset
+
+ dirigida por los directores 
+\begin_inset Formula $ds?$
+\end_inset
+
+ y guionada por los guionistas 
+\begin_inset Formula $gs?$
+\end_inset
+
+, informando el resultado 
+\begin_inset Formula $e!$
+\end_inset
+
+ de la operación 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $NuevaPelicula\left(d?,ds?,gs?,e!\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se borra la película 
+\begin_inset Formula $p?$
+\end_inset
+
+ de la base de datos y se informa el resultado 
+\begin_inset Formula $e!$
+\end_inset
+
+ de la operación 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $BorrarPelicula\left(p?,e!\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se buscan todas las películas 
+\begin_inset Formula $r!$
+\end_inset
+
+ dirigidas por 
+\begin_inset Formula $d?\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $BuscarPorDirector\left(d?,r!\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se buscan todas las películas 
+\begin_inset Formula $r!$
+\end_inset
+
+ guionadas por 
+\begin_inset Formula $g?\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $BuscarPorDirector\left(d?,g!\right)$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \begin_layout Standard
@@ -3333,7 +3421,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -3469,7 +3557,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -3517,7 +3605,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $ModificarDirectorError1$
+\begin_inset Formula $PeliculaInvalida$
 \end_inset
 
 
@@ -3633,7 +3721,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -3701,7 +3789,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=yes$
+\begin_inset Formula $e!=yes$
 \end_inset
 
 
@@ -3749,7 +3837,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $ModificarDirectorError2$
+\begin_inset Formula $DirectorInvalido$
 \end_inset
 
 
@@ -3899,7 +3987,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -3967,7 +4055,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=yes$
+\begin_inset Formula $e!=yes$
 \end_inset
 
 
@@ -3995,7 +4083,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $ModificarDirector\triangleq ModificarDirectorOk\lor ModificarDirectorError1\lor ModificarDirectorError2$
+\begin_inset Formula $ModificarDirector\triangleq ModificarDirectorOk\lor PeliculaInvalida\lor DirectorInvalido$
 \end_inset
 
 
@@ -4208,7 +4296,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -4310,7 +4398,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -4358,7 +4446,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $NuevaPeliculaError$
+\begin_inset Formula $PeliculaExistente$
 \end_inset
 
 
@@ -4474,7 +4562,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -4542,7 +4630,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=yes$
+\begin_inset Formula $e!=yes$
 \end_inset
 
 
@@ -4570,7 +4658,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $NuevaPelicula\triangleq NuevaPeliculaOk\lor NuevaPeliculaError$
+\begin_inset Formula $NuevaPelicula\triangleq NuevaPeliculaOk\lor PeliculaExistente$
 \end_inset
 
 
@@ -4715,7 +4803,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -4749,7 +4837,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $p?\in peliculas$
+\begin_inset Formula $p?\in dom\left(peliculas\right)$
 \end_inset
 
 
@@ -4817,239 +4905,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="6" columns="3">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top" width="75text%">
-<row>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $BorrarPeliculaError$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-tabularnewline
-\backslash
-arrayrulecolor{darkgreen}%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $\Xi BaseDatos$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $p?:PELICULA$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $rep!:error$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $p?\notin peliculas$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $rep!=yes$
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -5077,7 +4933,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $BorrarPelicula\triangleq BorrarPeliculaOk\lor BorrarPeliculaError$
+\begin_inset Formula $BorrarPelicula\triangleq BorrarPeliculaOk\lor PeliculaInvalida$
 \end_inset
 
 
@@ -5222,7 +5078,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:\mathbb{P}PELICULA$
+\begin_inset Formula $r!:\mathbb{P}PELICULA$
 \end_inset
 
 
@@ -5256,7 +5112,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=\left\{ p:PELICULA|p\in dom\left(peliculas\right)\land d?\in peliculas\left(p\right).1\right\} $
+\begin_inset Formula $r!=\left\{ p:PELICULA|p\in dom\left(peliculas\right)\land d?\in peliculas\left(p\right).1\right\} $
 \end_inset
 
 
@@ -5420,7 +5276,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:\mathbb{P}PELICULA$
+\begin_inset Formula $r!:\mathbb{P}PELICULA$
 \end_inset
 
 
@@ -5454,7 +5310,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=\left\{ p:PELICULA|p\in dom\left(peliculas\right)\land g?\in peliculas\left(p\right).2\right\} $
+\begin_inset Formula $r!=\left\{ p:PELICULA|p\in dom\left(peliculas\right)\land g?\in peliculas\left(p\right).2\right\} $
 \end_inset
 
 
@@ -5484,7 +5340,7 @@ Solución con subesquemas
 \end_layout
 
 \begin_layout Itemize
-COMPLETAR.
+COMPLETAR DESIGNACIONES.
 \end_layout
 
 \begin_layout Standard
@@ -5863,7 +5719,205 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="12" columns="3">
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $BuscarPorDirectorOk$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Xi BaseDatos$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $d?:DIRECTOR$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $r!:\mathbb{P}NOMBRE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $r!=dom\left(bd\triangleright\left\{ p:PELICULA|d?\in p.ds\right\} \right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -6068,7 +6122,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -6257,6 +6311,40 @@ arrayrulecolor{darkgreen}%
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $bd'=bd\oplus\left\{ p?\mapsto\Theta PELICULA'\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -6272,7 +6360,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -6323,7 +6411,9 @@ arrayrulecolor{darkgreen}%
 \begin_inset Formula $NuevaPeliculaOk$
 \end_inset
 
-
+ 
+\color black
+(Versión 1)
 \end_layout
 
 \end_inset
@@ -6470,7 +6560,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -6538,7 +6628,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $bd'=bd\oplus\left\{ n?\mapsto p?\right\} $
+\begin_inset Formula $bd'=bd\cup\left\{ n?\mapsto p?\right\} $
 \end_inset
 
 
@@ -6572,7 +6662,411 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
+\begin_inset Formula $e!=no$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="75text%">
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $NuevaPeliculaOk$
+\end_inset
+
+ 
+\color black
+(Versión 2)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Delta BaseDatos$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?:NOMBRE$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ds?:\mathbb{P}_{1}DIRECTOR$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $gs?:\mathbb{P}_{1}GUIONISTA$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $e!:error$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?\notin dom\left(bd\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Theta PELICULA.ds=ds?$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Theta PELICULA.gs=gs?$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $bd'=bd\cup\left\{ n?\mapsto\Theta PELICULA\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -6736,7 +7230,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -6838,205 +7332,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top" width="75text%">
-<row>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $BuscarPorDirectorOk$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-tabularnewline
-\backslash
-arrayrulecolor{darkgreen}%
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $\Xi BaseDatos$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $d?:DIRECTOR$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $rep!:\mathbb{P}NOMBRE$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $rep!=dom\left(bd\triangleright\left\{ \Theta PELICULA:PELICULA|d?\in\Theta PELICULA.ds\right\} \right)$
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -7063,14 +7359,10 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Paragraph
 Solución sencilla
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-
-\begin_inset Newline newline
-\end_inset
-
-
+\begin_layout Itemize
+COMPLETAR DESIGNACIONES.
 \end_layout
 
 \begin_layout Standard
@@ -7410,7 +7702,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -7580,7 +7872,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -7812,7 +8104,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -7880,7 +8172,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $ds'=ds\oplus\left\{ p?\mapsto ds?\right\} $
+\begin_inset Formula $ds'=ds\cup\left\{ p?\mapsto ds?\right\} $
 \end_inset
 
 
@@ -7914,7 +8206,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $gs'=gs\oplus\left\{ p?\mapsto gs?\right\} $
+\begin_inset Formula $gs'=gs\cup\left\{ p?\mapsto gs?\right\} $
 \end_inset
 
 
@@ -7948,7 +8240,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=no$
+\begin_inset Formula $e!=no$
 \end_inset
 
 
@@ -8112,11 +8404,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:\mathbb{P}PELICULA$
-\end_inset
-
- 
-\begin_inset Formula $\left\{ x\in ds|d?\in x.2\bullet x.1\right\} $
+\begin_inset Formula $r!:\mathbb{P}PELICULA$
 \end_inset
 
 
@@ -8150,7 +8438,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=dom\left(ds\triangleright\left\{ x:\mathbb{P}DIRECTOR|d?\in x\right\} \right)$
+\begin_inset Formula $r!=dom\left(ds\triangleright\left\{ x:\mathbb{P}DIRECTOR|d?\in x\right\} \right)$
 \end_inset
 
 
@@ -8216,7 +8504,7 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-COMPLETAR.
+COMPLETAR DESIGNACIONES.
 \end_layout
 
 \begin_layout Standard
@@ -9368,7 +9656,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $u?\in dom\left(checkPassword\right)\lor checkPassword\left(u?\right)=p?$
+\begin_inset Formula $u?\notin dom\left(checkPassword\right)\lor checkPassword\left(u?\right)\neq p?$
 \end_inset
 
 
@@ -9609,7 +9897,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:CONTENIDO$
+\begin_inset Formula $r!:CONTENIDO$
 \end_inset
 
 
@@ -9711,7 +9999,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $a?\in archivos$
+\begin_inset Formula $a?\in dom\left(archivos\right)$
 \end_inset
 
 
@@ -9745,7 +10033,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=getFile\left(a?\right)$
+\begin_inset Formula $r!=archivos\left(a?\right)$
 \end_inset
 
 
@@ -9943,7 +10231,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -10011,7 +10299,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=yes$
+\begin_inset Formula $e!=yes$
 \end_inset
 
 
@@ -10175,7 +10463,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -10243,7 +10531,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=yes$
+\begin_inset Formula $e!=yes$
 \end_inset
 
 
@@ -10818,7 +11106,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!:error$
+\begin_inset Formula $e!:error$
 \end_inset
 
 
@@ -10886,7 +11174,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $rep!=yes$
+\begin_inset Formula $e!=yes$
 \end_inset
 
 
@@ -11316,10 +11604,6 @@ El CVS lleva un registro de todos los programas almacenados en la línea
  base y los usuarios y roles autorizados a trabajar.
  Además lleva la historia de todas las versiones de cada uno de los programas.
  El CVS identifica un programa por su nombre.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -11386,15 +11670,515 @@ Para cada uno de los ejercicios se deberá escribir las designaciones de
  En todos los problemas el objetivo es programar un software que controle
  los dispositivos fı́sicos mencionados según los requerimientos que se expresan
  en cada caso.
- En cada problema fijarse con qué lenguajes debe resolverse.
+ Resuelva cada problema en todos los lenguajes.
 \end_layout
 
 \begin_layout Enumerate
 Describa un sistema de iluminación consistente en una lámpara y dos botones.
  Si la lámpara está apagada, al pulsar cualquiera de los dos botones se
  enciende y viceversa.
- Resolver en: Todos los lenguajes.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Las puertas de los aeropuertos están provistas de un mecanismo que permite
+ que una persona no necesite abrirla o cerrarla cada vez que la va a atravesar.
+ Para ello poseen detectores de ambos lados que le permiten saber cuando
+ una persona se encuentra en una zona determinada cercana a la misma, lo
+ cual es un indicio de que se inentará atravesarla.
+ Una vez que la persona se retira de esta zona de influencia y transcurren
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ unidades de tiempo, la puerta se cierra.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describa el funcionamiento de un mouse de tres botones.
+ El botón central no tiene asignada ninguna función.
+ Con el botón derecho solo se puede hacer click simple, y arrastrar.
+ Con el botón izquierdo click simple, doble click y arrastrar.
+ Pulsar más de un botón al mismo tiempo no tiene efecto.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Los pacientes de una guardia de terapia intensiva son monitoreados por dispositi
+vos electrónicos analógicos adosados a sus cuerpos mediante sensores de
+ varias clases.
+ A través de los sensores los dispositivos miden los signos vitales de los
+ pacientes: un dispositivo mide el pulso, otro la temperatura, otro la presión
+ sanguı́nea.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se necesita un programa que lea los signos vitales, con una frecuencia especific
+ada para cada paciente.
+ Los factores leı́dos será comparados con rangos de seguridad especifica-
+ dos para cada paciente y las lecturas que excedan dichos rangos serán reportada
+s con mensajes de alarma en el monitor del box de enfermerı́a.
+ También debe mostrarse un mensaje apropiado si falla alguno de los dispositivos.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sobre una calle de un solo sentido existe un cruce peatonal.
+ Para mayor seguridad de las personas que lo utilizan se decide colocar
+ un semáforo con dos grupos de botones ubicados a cada uno de los lados
+ de la calle.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Cuando el semáforo está en verde y se presiona uno de los botones, debe
+ pasar 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ unidades de tiempo para que se encienda la luz amarilla del semáforo y
+ 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ para que se encienda la roja.
+ Esta última permanecerá encendida por 
+\begin_inset Formula $T_{3}$
+\end_inset
+
+ unidades de tiempo.
+\end_layout
+
+\begin_layout Standard
+Presionar alguno de los botones no tendrá ningún efecto, hasta que hayan
+ pasado al menos 
+\begin_inset Formula $T_{4}$
+\end_inset
+
+ unidades de tiempo desde la última vez que se presionó uno.
+\end_layout
+
+\begin_layout Standard
+Analizar la situación cuando hay 2 semáforos (cada uno con su propia botonera),
+ los cuales deben respetar los mismos requerimientos dados en la parte inicial
+ del ejercicio.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una celda de producción muy simple consta de dos cintas transportadoras
+ que funcionan concurrentemente y un robot que toma ı́tems de una u otra
+ según lo que ordene la computadora que controla la celda y luego los suelta
+ en algún lugar.
+ Se puede detener o reanudar la marcha de cada cinta (independientemente)
+ por medio de una única señal por cinta.
+ Hay sensores que detectan el paso de un ı́tem por cada una de las cintas.
+ Estos sensores pueden ser configurados para que emitan las señales apropiadas
+ en caso de que dos ı́tem sobre la misma o diferentes cintas estén demasiado
+ juntos.
+ Dos ı́tem están demasiado juntos si el robot no es capaz de tomarlos a
+ ambos sin que uno se caiga.
+ El requerimiento para el sistema de control es que no debe caerse ningún
+ ı́tem de ninguna cinta.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considere el problema 6.
+ Suponga que los sensores no son tan inteligentes como para poder indicar
+ la proximidad de dos ı́tem.
+ Es decir, sólo son capaces de emitir una señal cada vez que pasa un ı́tem.
+ Por otro lado, el robot demora un tiempo 
+\begin_inset Formula $T_{r}$
+\end_inset
+
+ para tomar un ı́tem, soltarlo y volver a estar en condiciones de tomar
+ otro.
+ Los requerimientos para el sistema de control son los siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No debe caerse ningún ı́tem.
+\end_layout
+
+\begin_layout Itemize
+Eventualmente todos los ı́tems de ambas cintas será tomados por el robot.
+\end_layout
+
+\begin_layout Itemize
+Por razones de eficiencia se espera que se tomen ı́tems de ambas cintas
+ de forma más o menos regular (siempre que haya alguno disponible).
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Problema 5 de la sección anterior.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El automóvil tiene una llave de encendido; la misma puede estar en tres
+ posiciones, apagado, contacto o encendido.
+ Se pasa de la primera posición a la segunda, de la segunda a la tercera
+ y viceversa.
+ Cuando la llave esta en contacto se pueden subir y bajar los vidrios.
+ Cuando la llave esta en encendido se puede conducir.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Este automóvil tiene caja de cambios automática, es decir que los cambios
+ de marcha se efectúan automáticamente con el aumento o disminución de la
+ velocidad.
+ Posee 4 marchas y punto muerto.
+ Está en punto muerto cuando el auto esta frenado, Está en 1ra cuando su
+ velocidad está entre 0.1 y 30km/h, 2da entre 30,1 y 50km/h, 3ra entre 50,1
+ y 70 km/h, y 4ta con mas de 70km/h.
+\end_layout
+
+\begin_layout Standard
+Cuando la llave se apaga se tienen 20'' extras por si se quieren subir o
+ bajar los vidrios.
+ Las luces del auto se controlan con una perilla mecánica, de tres posiciones:
+ apagadas, posición y cortas.
+ Las luces sólo están encendidas (en posición o cortas) cuando la llave
+ de encendido del auto está en contacto o encendido.
+\end_layout
+
+\begin_layout Standard
+Al pasar la llave a 
+\begin_inset Quotes fld
+\end_inset
+
+apagado
+\begin_inset Quotes frd
+\end_inset
+
+, se apagan las luces, pero la perilla mecánica se mantiene en su estado.
+ Al volver a pasar la llave a posición, el estado de las luces dependerá
+ del estado de la perilla.
+ Esto implica que la perilla mecánica es independiente de la llave del auto,
+ pero el estado de las luces no.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El termómetro posee una tapa que al abrirse muestra un display (apagado)
+ más dos botones, uno para encender el termómetro y otro para seleccionar
+ la escala de temperaturas (
+\begin_inset Formula $F^{\circ}$
+\end_inset
+
+ o 
+\begin_inset Formula $C^{\circ}$
+\end_inset
+
+).
+ El termómetro se apaga al cerrar la tapa o cuando se termina la batería.
+ Además, el termómetro posee una punta que se introduce en el oído del paciente
+ y un botón que debe ser pulsado al menos un segundo para que la lectura
+ sea exitosa.
+ Deben mediar 10 segundos entre dos mediciones consecutivas.
+ El display muestra un indicador de batería, la temperatura medida (o nada
+ si recién se encendió) y la escala de temperaturas seleccionada (este dato
+ es 
+\begin_inset Quotes fld
+\end_inset
+
+recordado
+\begin_inset Quotes frd
+\end_inset
+
+ por el termómetro aun luego de ser apagado).
+ Si una medición de temperatura es fallida, se muestra una 
+\begin_inset Formula $E$
+\end_inset
+
+ invertida.
+ Una vez pulsado el botón de encendido, el termómetro chequea su funcionamiento
+ durante 5 segundos y luego emite los datos iniciales al display (cualquier
+ acción que se intente antes de esos 5 segundos debe ser obviada).
+ Un dato importante que se registra durante el chequeo es el estado de la
+ baterı́a.
+ Esta pierde un quanto de energı́a cada un segundo si sólo se usa el display,
+ 3 quantos si se cambia la escala y 5 en cada medición errónea o no de temperatu
+ra.
+ Cuando quedan 10 quantos de energı́a se enciende un icono en el display.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El horno microondas posee un panel de control semejante a algunos modelos
+ populares.
+ Los botones numerados del 1 al 4 se utilizan para fijar la potencia de
+ cocción.
+ La perilla circular puede girar en ambos sentidos y sirve para fijar el
+ tiempo de cocción: si lo hace en sentido horario aumenta el tiempo de a
+ 5 segundos, en el sentido contrario disminuye en la misma cantidad.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Normalmente, en el display se muestra la hora actual pero cuando se fija
+ el tiempo de cocción se la reemplaza por el tiempo que el usuario selecciona
+ a medida que hace girar la perilla.
+ Una vez que detiene la perilla, debe seleccionar una de las potencias de
+ cocción y finalmente pulsar el botón Start.
+ Al hacerlo la puerta debe estar cerrada y en el display se comienza a decrement
+ar el tiempo de a un segundo.
+\end_layout
+
+\begin_layout Itemize
+Si se pulsa Stop se borra el tiempo de cocción, se resetea la selección
+ de la potencia y se vuelve a mostrar la hora.
+\end_layout
+
+\begin_layout Itemize
+Si durante la cocción se abre la puerta, se detiene el tiempo de cocción
+ y si se vuelve a cerrar se deberá pulsar Start nuevamente para continuar
+ la cocción desde el punto donde se la abandonó.
+\end_layout
+
+\begin_layout Itemize
+Se puede cambiar la potencia de cocción mientras se está cocinando.
+\end_layout
+
+\begin_layout Itemize
+Si durante la cocción el usuario hace girar la perilla, el tiempo de cocción
+ debe actualizarse.
+\end_layout
+
+\begin_layout Standard
+La cocción se detendrá automáticamente cuando el tiempo llegue a cero, luego
+ de lo cual se volverá a mostrar la hora y se reseteará la potencia seleccionada.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un barco de guerra cuenta con un radar principal (
+\begin_inset Formula $RP$
+\end_inset
+
+), dos cañones idénticos (
+\begin_inset Formula $C1$
+\end_inset
+
+ y 
+\begin_inset Formula $C2$
+\end_inset
+
+) cada uno con su radar (
+\begin_inset Formula $RS1$
+\end_inset
+
+ y 
+\begin_inset Formula $RS2$
+\end_inset
+
+) y una sala de comando desde donde se indica si un objetivo apuntado por
+ alguno de los dos cañones debe ser abandonado o destruido
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+El 
+\begin_inset Formula $RP$
+\end_inset
+
+ está permanentemente escrutando el área de disparo en busca de objetivos.
+ Cada vez que 
+\begin_inset Formula $RP$
+\end_inset
+
+ encuentra uno se lo debe asignar a uno de los dos cañones si alguno está
+ libre (sin objetivo en su mira); al asignarlo se le indica la posición
+ y la trayectoria del objetivo
+\end_layout
+
+\begin_layout Standard
+La posición inicial del cañón al asignársele un nuevo objetivo es conocida
+ por el software.
+ En función de la posición inicial y de los datos transmitidos por el 
+\begin_inset Formula $RP$
+\end_inset
+
+, el software apunta el cañón y el 
+\begin_inset Formula $RS$
+\end_inset
+
+ al objetivo.
+ Normalmente, un 
+\begin_inset Formula $RS$
+\end_inset
+
+ está inactivo hasta que le es asignado un objetivo.
+ Desde ese momento el 
+\begin_inset Formula $RS$
+\end_inset
+
+ comienza a seguir su objetivo hasta que:
+\end_layout
+
+\begin_layout Itemize
+Recibe la orden de disparar;
+\end_layout
+
+\begin_layout Itemize
+Recibe la orden de abandonar el objetivo;
+\end_layout
+
+\begin_layout Itemize
+El objetivo se va fuera de alcance.
+\end_layout
+
+\begin_layout Standard
+En cualquiera de los tres casos, el 
+\begin_inset Formula $RS$
+\end_inset
+
+ luego pasa a estar inactivo.
+ El seguimiento del objetivo por parte de un 
+\begin_inset Formula $RS$
+\end_inset
+
+ implica mover el cañón lo cual está a cargo de un motor.
+ El software tiene a su cargo emitir las ordenes de movimiento del motor
+ las cuales tienen la forma: 
+\begin_inset Formula $Arriba(ang)$
+\end_inset
+
+, 
+\begin_inset Formula $Abajo(ang)$
+\end_inset
+
+, 
+\begin_inset Formula $GiroA(ang)$
+\end_inset
+
+ y 
+\begin_inset Formula $GiroH(ang)$
+\end_inset
+
+, donde 
+\begin_inset Formula $ang$
+\end_inset
+
+ es un ángulo.
+\end_layout
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Standard
+Resolver en CSP y TLA.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
