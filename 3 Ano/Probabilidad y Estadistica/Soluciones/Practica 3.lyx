@@ -1,0 +1,1477 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Simule estas situaciones y concluya:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Se tira una moneda equilibrada 10 veces y se observa qué proporción de veces
+ salió cara en las sucesivas tiradas, se repite el experimento en condiciones
+ similares pero aumentando sucesivamente el número de tiradas hasta llegar
+ a 1000000.
+ Se realiza un gráfico de puntos en el plano XY donde el eje X representa
+ el número de lanzamientos y el eje Y la frecuencia relativa de caras en
+ cada uno de los ensayos.
+\end_layout
+
+\begin_layout Enumerate
+Repita el procedimiento llevado a cabo en el ítem anterior, pero en este
+ caso la experiencia consiste en tirar un dado equilibrado y registrar la
+ frecuencia relativa de la aparición de cada una de las caras.
+ Graficar sólo el caso para una de las caras.
+\end_layout
+
+\begin_layout Enumerate
+En cierto país existe un control de natalidad, con lo cual a las parejas
+ que deciden tener hijos se les impone el siguiente plan familiar: Se pueden
+ tener hijos hasta que ocurra una de estas dos situaciones: tener 3 hijos
+ o que nazca un varón (lo que ocurra primero).
+ ¿Cuál es la probabilidad de tener un hijo varón bajo esta regla?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=R"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cantidades = c(1:10, seq(20,100,5), seq(150,1000,50), 
+\end_layout
+
+\begin_layout Plain Layout
+
+               seq(5000,100000,5000), 1000000)
+\end_layout
+
+\begin_layout Plain Layout
+
+l = length(cantidades)
+\end_layout
+
+\begin_layout Plain Layout
+
+fr = vector(length = l)
+\end_layout
+
+\begin_layout Plain Layout
+
+for (i in 1:l) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  fr[i] <- mean(sample(c(1, 0), cantidades[i], replace = T))
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+dotchart(x)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{semilogxaxis}[ymin=0,ymax=1,xlabel=Numero de lanzamiento de monedas,ylabel
+=Frecuencia relativa de caras]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot[scatter, only marks]
+\end_layout
+
+\begin_layout Plain Layout
+
+    coordinates{
+\end_layout
+
+\begin_layout Plain Layout
+
+(1,0) (2,0) (3,0) (4,0.5) (5,0.6) (6,0.666666666666667) (7,0.571428571428571)
+ (8,0.5) (9,0.333333333333333) (10,0.3) (20,0.35) (25,0.56) (30,0.4) (35,0.428571428571
+429) (40,0.425) (45,0.533333333333333) (50,0.54) (55,0.472727272727273) (60,0.55)
+ (65,0.338461538461538) (70,0.457142857142857) (75,0.493333333333333) (80,0.5125)
+ (85,0.435294117647059) (90,0.455555555555556) (95,0.473684210526316) (100,0.46)
+ (150,0.56) (200,0.52) (250,0.528) (300,0.486666666666667) (350,0.517142857142857)
+ (400,0.485) (450,0.508888888888889) (500,0.498) (550,0.512727272727273) (600,0.485)
+ (650,0.507692307692308) (700,0.501428571428571) (750,0.5) (800,0.4825) (850,0.522352
+941176471) (900,0.532222222222222) (950,0.510526315789474) (1000,0.499) (5000,0.5028
+) (10000,0.489) (15000,0.5046) (20000,0.50335) (25000,0.49776) (30000,0.5004)
+ (35000,0.501057142857143) (40000,0.49755) (45000,0.500644444444444) (50000,0.49904)
+ (55000,0.499090909090909) (60000,0.505716666666667) (65000,0.497692307692308)
+ (70000,0.502385714285714) (75000,0.500186666666667) (80000,0.4974875) (85000,0.5014
+70588235294) (90000,0.500422222222222) (95000,0.501221052631579) (1e+05,0.49964)
+ (1e+06,0.500233)
+\end_layout
+
+\begin_layout Plain Layout
+
+};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{semilogxaxis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Simule la distribución de la suma de los números que salen al tirar 4 dados
+ para una muestra de tamaño 10000.
+\end_layout
+
+\begin_layout Enumerate
+Tabule los resultados.
+\end_layout
+
+\begin_layout Enumerate
+Represente los resultados gráficamente.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dada una urna con 3 bolas blancas y 5 bolas negras, realice las siguientes
+ simulaciones y sus correspondientes diagramas de barras:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Se observa la extracción de una bola
+\end_layout
+
+\begin_layout Enumerate
+Se observan 8 extracciones con reposición
+\end_layout
+
+\begin_layout Enumerate
+Se observa la cantidad de bolas negras que salen al extraer 30 bolas (con
+ reposición).
+ Este procedimiento se repite 10000 veces.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En cada uno de los siguientes casos, determinar un espacio muestral asociado
+ a la experiencia y el cardinal del mismo:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Extraemos una carta de una baraja española y anotamos el número.
+\end_layout
+
+\begin_layout Enumerate
+Extraemos una carta de una baraja española y anotamos el palo.
+\end_layout
+
+\begin_layout Enumerate
+Extraemos sendas cartas de dos barajas españolas distintas y anotamos el
+ palo de cada una.
+\end_layout
+
+\begin_layout Enumerate
+Extraemos sendas cartas de dos barajas españolas distintas y anotamos el
+ palo de la primera y el número de la segunda.
+\end_layout
+
+\begin_layout Enumerate
+Lanzamos una moneda y anotamos el resultado.
+\end_layout
+
+\begin_layout Enumerate
+Lanzamos dos monedas distintas y anotamos el resultado.
+\end_layout
+
+\begin_layout Enumerate
+Lanzamos tres monedas distintas y anotamos el resultado.
+\end_layout
+
+\begin_layout Enumerate
+Lanzamos tres monedas distintas y anotamos el número de caras.
+\end_layout
+
+\begin_layout Enumerate
+Lanzamos una moneda sucesivas veces hasta que salga cara.
+ y anotamos el número de lanzamientos que fueron necesarios.
+\end_layout
+
+\begin_layout Enumerate
+Lanzamos dos dados y observamos la suma de los números que se obtienen.
+\end_layout
+
+\begin_layout Enumerate
+Anotamos el número de llamadas a un teléfono en un intervalo de tiempo [0;
+ t].
+\end_layout
+
+\begin_layout Enumerate
+Anotamos el tiempo que media entre dos llamadas a un teléfono.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ son sucesos de un mismo espacio muestral.
+ Expresar, en función de operaciones entre ellos, los siguientes sucesos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ocurre alguno de los tres.
+\end_layout
+
+\begin_layout Enumerate
+No ocurre ninguno de los tres.
+\end_layout
+
+\begin_layout Enumerate
+Ocurren los tres.
+\end_layout
+
+\begin_layout Enumerate
+Ocurren dos de los tres.
+\end_layout
+
+\begin_layout Enumerate
+Ocurren al menos dos de los tres.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En familias de tres hijos se estudia la distribución de sexos de los hijos.
+ Por ejemplo 
+\begin_inset Formula $\left(V,M,M\right)$
+\end_inset
+
+ representa que el mayor de los hijos es varón y las otras dos, mujeres.
+ ¿Cuántos elementos tiene el espacio muestral asociado a esta experiencia?
+ Describir los siguientes sucesos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+: la menor es mujer.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B$
+\end_inset
+
+: el mayor es varón.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\cup B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se arroja un dado equilibrado dos veces y se observa el par ordenado de
+ números que se obtiene.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describa el espacio muestral asociado a la experiencia.
+\end_layout
+
+\begin_layout Enumerate
+Describa los siguientes sucesos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En el primer lanzamiento se obtiene un número par.
+\end_layout
+
+\begin_layout Enumerate
+En el segundo lanzamiento se obtiene un número impar.
+\end_layout
+
+\begin_layout Enumerate
+Se obtienen par y par o impar e impar.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos sucesos de un espacio muestral 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Determinar si 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son o no excluyentes cuando se cuenta con la siguiente información:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(A\cup B\right)=\frac{2}{3};P\left(A\right)=\frac{1}{4};P\left(B\right)=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos sucesos de un espacio muestral 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Sabiendo que 
+\begin_inset Formula $P\left(A\cup B\right)=\frac{3}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $P(\overline{B})=\frac{2}{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $P\left(A\cap B\right)=\frac{1}{4}$
+\end_inset
+
+; calcular 
+\begin_inset Formula $P(B)$
+\end_inset
+
+; 
+\begin_inset Formula $P(A)$
+\end_inset
+
+ y 
+\begin_inset Formula $P\left(\overline{A}\cap B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Analizar la validez de la siguiente afirmación: Si la probabilidad de que
+ ocurran dos sucesos a la vez es menor que 1/2, la suma de las probabilidades
+ de ambos por separado no puede ser mayor que 3/2.
+\end_layout
+
+\begin_layout Enumerate
+Calcule las probabilidades de los sucesos definidos en a), b) y c) del ejercicio
+ 6 y b) del ejercicio 7.
+ Especifique los supuestos que ha realizado.
+\end_layout
+
+\begin_layout Enumerate
+Se debe formar una comisión de cuatro personas, elegidas al azar entre las
+ siguientes: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nombre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Profesión
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Edad
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ingeniera
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Miguel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ingeniero
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+39
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beatriz
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lic.
+ en Letras
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+42
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Carlos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquitecto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Arquitecta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+33
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pedro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Historiador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+53
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Juan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abogado
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mónica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Abogada
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+55
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que los integrantes de la comisión sean todos
+ mayores de 31 años?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que la comisión no incluya arquitectos?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se forma una comisión constituida por un presidente, un vicepresidente,
+ un secretario y un tesorero, quienes son elegidos al azar entre las personas
+ de la tabla del ejercicio anterior.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que el presidente sea mujer?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que el tesorero sea mayor de 50 años?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que el secretario sea abogado y el vicepresidente
+ licenciado en letras?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ana, Pedro, Manuel, Margarita y Alicia se sacarán una foto sentados en línea
+ y orden acomodándose al azar.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que los hombres queden en los extremos?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que se alternen los sexos?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que Margarita quede en el centro de la foto?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que Manuel quede en el extremo derecho y Margarita,
+ en el centro de la foto?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Las letras de la palabra CLASE se colocan al azar y en línea.
+ ¿Cuál es la probabilidad de que las vocales queden juntas?
+\end_layout
+
+\begin_layout Enumerate
+Se lanzan sucesivamente cuatro monedas al aire.
+ ¿Cuál es la probabilidad de obtener:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+al menos una cara?
+\end_layout
+
+\begin_layout Enumerate
+a lo sumo tres cruces?
+\end_layout
+
+\begin_layout Enumerate
+exactamente dos caras?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En el juego de generala mediante un tiro, calcule la probabilidad de obtener:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Generala servida.
+\end_layout
+
+\begin_layout Enumerate
+Póker servido.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una caja contiene bolas blancas y negras de tal manera que, al extraer dos,
+ la probabilidad de que sean ambas blancas es 1/2.
+ Determine el número mínimo de bolas que hay en la caja.
+\end_layout
+
+\begin_layout Enumerate
+En un centro hay 1000 alumnos repartidos del siguiente modo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chicos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chicas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Usan anteojos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+187
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+113
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No usan anteojos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+413
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+287
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se elige al azar uno de ellos.
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+sea chico?
+\end_layout
+
+\begin_layout Enumerate
+sea chica?
+\end_layout
+
+\begin_layout Enumerate
+use anteojos?
+\end_layout
+
+\begin_layout Enumerate
+no use anteojos?
+\end_layout
+
+\begin_layout Enumerate
+sea chica y use anteojos?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Nos dicen que el alumno elegido resultó una chica, ¿cuál es la probabilidad
+ de que use anteojos? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En una ciudad se publican los diarios 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Una encuesta indica que el 20% de la población lee 
+\begin_inset Formula $A$
+\end_inset
+
+, el 16% lee 
+\begin_inset Formula $B$
+\end_inset
+
+, el 14% lee 
+\begin_inset Formula $C$
+\end_inset
+
+, el 8% lee 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, el 5% lee 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+, el 4% lee 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+, y el 2% lee 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Se elige una persona al azar.
+ Calcule la probabilidad de que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+no lea ninguno de los diarios,
+\end_layout
+
+\begin_layout Enumerate
+lea alguno de los diarios,
+\end_layout
+
+\begin_layout Enumerate
+lea solamente uno de los diarios,
+\end_layout
+
+\begin_layout Enumerate
+lea los diarios 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ sabiendo que al menos lee uno de los diarios.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un estudiante afirma que si se arroja un dado equilibrado tres veces y se
+ suman los números obtenidos, la probabilidad de que la suma sea 9 es igual
+ a la probabilidad de que la suma sea 10.
+ Basa su afirmación en que, en ambos casos, hay 6 posibilidades de lograr
+ esas sumas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Suma 9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+126
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+135
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+144
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+225
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+234
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+333
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Suma 10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+136
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+145
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+244
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+226
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+235
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+334
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analice la afirmación del estudiante.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En un mazo de cartas se han retirado varias de ellas.
+ Entre las que quedan, se sabe que el 15% son reyes, el 30% son bastos,
+ el 60% ni reyes ni bastos.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Está entre ellas el rey de bastos? ¿Qué probabilidad hay de extraerla?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuántas cartas quedan en el mazo?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En un centro hay 1000 alumnos repartidos del siguiente modo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chicos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chicas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Usan anteojos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+187
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+113
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No usan anteojos
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+413
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+287
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se elige al azar uno de ellos.
+\end_layout
+
+\begin_layout Enumerate
+Se sabe que el alumno elegido resultó una chica, ¿cuál es la probabilidad
+ de que use anteojos?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que el alumno elegido resulte una chica, dado
+ que usa anteojos?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que el alumno elegido resulte un chico, dado
+ que usa anteojos?
+\end_layout
+
+\begin_layout Enumerate
+Se sabe que el alumno elegido no usa anteojos, ¿cuál es la probabilidad
+ de que resulte un chico?
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
