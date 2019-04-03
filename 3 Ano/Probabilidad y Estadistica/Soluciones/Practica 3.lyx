@@ -12,6 +12,9 @@
 \pgfplotsset{compat=1.9}
 \end_preamble
 \use_default_options true
+\begin_modules
+multicol
+\end_modules
 \maintain_unincluded_children false
 \language spanish-mexico
 \language_package default
@@ -81648,6 +81651,31 @@ P\left(A\cup B\right)=\frac{2}{3};P\left(A\right)=\frac{1}{4};P\left(B\right)=\f
 
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son excluyentes, luego 
+\begin_inset Formula $P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)\iff\frac{2}{3}=\frac{3}{4}$
+\end_inset
+
+.
+ Absurdo.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Sean 
@@ -81690,18 +81718,212 @@ Sean
 .
 \end_layout
 
-\begin_layout Enumerate
-Analizar la validez de la siguiente afirmación: Si la probabilidad de que
- ocurran dos sucesos a la vez es menor que 1/2, la suma de las probabilidades
- de ambos por separado no puede ser mayor que 3/2.
+\begin_deeper
+\begin_layout Paragraph
+Solución
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\right)=1-P\left(\overline{B}\right)=\frac{1}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)\iff\frac{3}{4}=P\left(A\right)+\frac{1}{3}-\frac{1}{4}\iff P\left(A\right)=\frac{2}{3}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Recordemos que 
+\begin_inset Formula $\overline{A}\cap B=B-A$
+\end_inset
+
+.
+ Ademas observemos que 
+\begin_inset Formula $B-A$
+\end_inset
+
+ y 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ son disjuntos, luego:
+\begin_inset Formula 
+\[
+P\left[\left(B-A\right)\cup\left(A\cap B\right)\right]=P\left(B-A\right)+P\left(A\cap B\right)=P\left(B-A\right)+\frac{1}{4}
+\]
+
+\end_inset
+
+ Como 
+\begin_inset Formula $B=\left(B-A\right)\cup\left(A\cap B\right)$
+\end_inset
+
+ entonces:
+\begin_inset Formula 
+\[
+P\left(B\right)=P\left(B-A\right)+\frac{1}{4}\iff P\left(B-A\right)=\boxed{\frac{1}{12}}=P\left(\overline{A}\cap B\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+En general: 
+\begin_inset Formula $P\left(X-Y\right)=P\left(X\right)-P\left(X\cap Y\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Analizar la validez de la siguiente afirmación: Si la probabilidad de que
+ ocurran dos sucesos a la vez es menor que 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+, la suma de las probabilidades de ambos por separado no puede ser mayor
+ que 
+\begin_inset Formula $\frac{3}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(A\cap B\right)<\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+0<\frac{1}{2}-P\left(A\cap B\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(A\right)+P\left(B\right)<\frac{1}{2}-P\left(A\cap B\right)+P\left(A\right)+P\left(B\right)=\frac{1}{2}+P\left(A\cup B\right)<\frac{1}{2}+1=\frac{3}{2}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Calcule las probabilidades de los sucesos definidos en a), b) y c) del ejercicio
  6 y b) del ejercicio 7.
  Especifique los supuestos que ha realizado.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+Ejercicio 6:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\right)=\frac{4}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\right)=\frac{4}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cup B\right)=\frac{5}{8}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ejercicio 7:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\right)=\frac{18}{36}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\right)=\frac{18}{36}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(C\right)=\frac{9}{36}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Se debe formar una comisión de cuatro personas, elegidas al azar entre las
  siguientes: 
@@ -81991,6 +82213,32 @@ Abogada
 
 \begin_layout Enumerate
 ¿Cuál es la probabilidad de que la comisión no incluya arquitectos?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\#S=8\cdot7\cdot6\cdot5=1680$
+\end_inset
+
+; 
+\begin_inset Formula $P=\frac{5\cdot4\cdot3\cdot2}{1680}=\frac{120}{1680}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=1-\frac{6\cdot5\cdot4\cdot3}{1680}=1-\frac{360}{1680}=\frac{1320}{1680}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -82626,6 +82874,741 @@ Se sabe que el alumno elegido resultó una chica, ¿cuál es la probabilidad
 \begin_layout Enumerate
 Se sabe que el alumno elegido no usa anteojos, ¿cuál es la probabilidad
  de que resulte un chico?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En un lote de 100 artículos se sabe que hay 75 buenos y 25 defectuosos.
+ Se extraen de ese lote 2 artículos al azar en forma sucesiva y sin reposición.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sabiendo que el primer artículo resultó defectuoso, ¿cuál es la probabilidad
+ de que el segundo sea bueno?
+\end_layout
+
+\begin_layout Enumerate
+Sabiendo que el primer artículo resultó defectuoso, ¿cuál es la probabilidad
+ de que el segundo también lo sea?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que ambos artículos resulten defectuosos? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un conjunto electrónico consta de dos sistemas 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ A partir de una serie de pruebas previas se han asignado las siguientes
+ probabilidades:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+la probabilidad de que sólo 
+\begin_inset Formula $B$
+\end_inset
+
+ falle es 0.15,
+\end_layout
+
+\begin_layout Itemize
+la probabilidad de que 
+\begin_inset Formula $A$
+\end_inset
+
+ falle es 0.2,
+\end_layout
+
+\begin_layout Itemize
+la probabilidad de que 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ fallen es 0.15.
+\end_layout
+
+\begin_layout Standard
+Calcule:
+\end_layout
+
+\begin_layout Enumerate
+La probabilidad de que 
+\begin_inset Formula $A$
+\end_inset
+
+ falle dado que 
+\begin_inset Formula $B$
+\end_inset
+
+ ha fallado.
+\end_layout
+
+\begin_layout Enumerate
+La probabilidad de que falle sólo 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El sistema de líneas que une dos centrales telefónicas 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ está representado en el siguiente diagrama, donde 
+\begin_inset Formula $C$
+\end_inset
+
+ es una central intermedia:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (0,0) node[anchor=north]{$A$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      -- (4,-2) node[anchor=north]{$C$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      -- (7,1) node[anchor=south]{$B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+      -- cycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En ciertos horarios las líneas pueden saturarse por exceso de llamadas.
+ Sean los sucesos siguientes:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{1}=\left\{ \text{la linea AB se encuentra libre}\right\} $
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{2}=\left\{ \text{la linea AC se encuentra libre}\right\} $
+\end_inset
+
+ y
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{3}=\left\{ \text{la linea BC se encuentra libre}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se conoce que 
+\begin_inset Formula $P\left(E_{1}\right)=\frac{2}{5}$
+\end_inset
+
+ , 
+\begin_inset Formula $P\left(E_{2}\right)=\frac{3}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $P\left(E_{3}\right)=\frac{2}{3}$
+\end_inset
+
+, 
+\begin_inset Formula $P\left(E_{3}|E_{2}\right)=\frac{4}{5}$
+\end_inset
+
+ y 
+\begin_inset Formula $P\left(E_{1}E_{2}\cap E_{3}\right)=\frac{1}{2}$
+\end_inset
+
+.
+ ¿Cuál es la probabilidad de que:
+\end_layout
+
+\begin_layout Enumerate
+la línea 
+\begin_inset Formula $ACB$
+\end_inset
+
+ se encuentre libre?
+\end_layout
+
+\begin_layout Enumerate
+las tres líneas estén libres?
+\end_layout
+
+\begin_layout Enumerate
+una llamada que llega a 
+\begin_inset Formula $A$
+\end_inset
+
+ pueda ser transmitida a 
+\begin_inset Formula $B$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una central recibe mensajes de dos fuentes 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Se conoce que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La probabilidad de recibir un mensaje proveniente de 
+\begin_inset Formula $A$
+\end_inset
+
+ es 0.2.
+\end_layout
+
+\begin_layout Itemize
+La probabilidad de que un mensaje posea una longitud superior a 
+\begin_inset Formula $k$
+\end_inset
+
+ caracteres si proviene de 
+\begin_inset Formula $A$
+\end_inset
+
+ es 0.1.
+\end_layout
+
+\begin_layout Itemize
+La probabilidad de que un mensaje posea una longitud superior a 
+\begin_inset Formula $k$
+\end_inset
+
+ caracteres si proviene de 
+\begin_inset Formula $B$
+\end_inset
+
+ es 0.15.
+\end_layout
+
+\begin_layout Standard
+¿Cuál es la probabilidad de recibir un mensaje de más de 
+\begin_inset Formula $k$
+\end_inset
+
+ caracteres?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Tres empresas 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+ licitan un contrato para la construcción de un puente.
+ Las probabilidades de que 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ obtengan el contrato son respectivamente 0.5, 0.3 y 0.2.
+ Si el contrato es obtenido por 
+\begin_inset Formula $A$
+\end_inset
+
+, ésta contratará a su vez a la empresa 
+\begin_inset Formula $E$
+\end_inset
+
+ con probabilidad 0.8.
+ Si el contrato es obtenido por 
+\begin_inset Formula $B$
+\end_inset
+
+, ésta contratará a 
+\begin_inset Formula $E$
+\end_inset
+
+ con probabilidad 0.4.
+ Si el contrato es obtenido por 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $E$
+\end_inset
+
+ será contratada con probabilidad 0.1.
+ ¿Cuál es la probabilidad de que la empresa 
+\begin_inset Formula $E$
+\end_inset
+
+ obtenga un subcontrato en la construcción del puente?
+\end_layout
+
+\begin_layout Enumerate
+Se tienen dos bolsas idénticas por fuera.
+ La bolsa 
+\begin_inset Formula $A$
+\end_inset
+
+ contiene 12 caramelos de menta, 4 de frutilla y 6 de limón.
+ La bolsa 
+\begin_inset Formula $B$
+\end_inset
+
+ contiene 3 caramelos de menta y 6 de limón.
+ Se extrae un caramelo al azar de una de las bolsas, sin saber de cuál de
+ ellas.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El caramelo resulta ser de menta.
+ ¿Cuál es la probabilidad de que provenga de la bolsa 
+\begin_inset Formula $A$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+El caramelo resulta ser de limón.
+ ¿Cuál es la probabilidad de que provenga de la bolsa 
+\begin_inset Formula $A$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+El caramelo resulta ser de frutilla.
+ ¿Cuál es la probabilidad de que provenga de la bolsa 
+\begin_inset Formula $A$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En una fábrica de pernos, las máquinas 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ fabrican el 40%, 35%, 25% de la producción total, respectivamente.
+ De lo que producen, 4%, 5% y 2% es defectuoso.
+ Se elige un perno al azar y se encuentra que es defectuoso, ¿cuál es la
+ probabilidad de que provenga de 
+\begin_inset Formula $B$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Enumerate
+En cierto país donde una enfermedad es endémica, se sabe que un 12% de la
+ población padece dicha enfermedad.
+ Se dispone de una prueba para detectar la enfermedad.
+ Dicha prueba no es totalmente fiable puesto que resulta positiva en el
+ 90% de personas realmente enfermas y también resulta positiva en el 5%
+ de personas sanas.
+ ¿Cuál es la probabilidad de que una persona a la que la prueba le ha dado
+ positiva, esté sana?
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos sucesos de un espacio muestral 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $P\left(A\right)=\frac{1}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $P\left(B\right)=\frac{1}{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $P\left(A|B\right)=\frac{1}{4}$
+\end_inset
+
+, analice la veracidad de las siguientes proposiciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son excluyentes,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(\overline{A}|\overline{B}\right)=\frac{1}{4}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A|B\right)+P\left(A|\overline{B}\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Pruebe que si 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son sucesos mutuamente excluyentes, con 
+\begin_inset Formula $P\left(B\right)\neq0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P\left(A|B\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Pruebe que si 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son sucesos independientes de un mismo espacio muestral 
+\begin_inset Formula $S$
+\end_inset
+
+, entonces:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{B}$
+\end_inset
+
+ son independientes.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son independientes.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{B}$
+\end_inset
+
+ son independientes.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ son sucesos independientes, demostrar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B\cup C$
+\end_inset
+
+ son independientes.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B\cap C$
+\end_inset
+
+ son independientes.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B-C$
+\end_inset
+
+ son independientes.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Pruebe que si 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son sucesos de un mismo espacio muestral y 
+\begin_inset Formula $P\left(A\right)>P\left(B\right)$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P\left(A|B\right)>P\left(B|A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Un número binario está formado por 
+\begin_inset Formula $n$
+\end_inset
+
+ dígitos.
+ La probabilidad de que aparezca un dígito incorrecto es 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Si los errores en dígitos diferentes son independientes uno de otro, ¿cuál
+ es la probabilidad de formar un número incorrecto?
+\end_layout
+
+\begin_layout Enumerate
+Se arroja un dado equilibrado dos veces y se observa el par ordenado de
+ números que se obtiene.
+ Se definen los sucesos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\left\{ \text{en el primer lanzamiento se obtiene un número par}\right\} $
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\left\{ \text{en el segundo lanzamiento se obtiene un número impar}\right\} $
+\end_inset
+
+ y
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=\left\{ \text{se obtienen par y par o impar e impar}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Probar que:
+\end_layout
+
+\begin_layout Enumerate
+los sucesos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son independientes;
+\end_layout
+
+\begin_layout Enumerate
+los sucesos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ son independientes;
+\end_layout
+
+\begin_layout Enumerate
+los sucesos 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ son independientes;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(A\cap B\cap C\right)\neq P\left(A\right)P\left(B\right)P\left(C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Son 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ independientes?
 \end_layout
 
 \end_deeper
