@@ -2173,21 +2173,14 @@ Versión simplificada:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall x\left(AmaAnimales\left(x\right)\to\left(\forall y\left(\neg MataA\left(x,y\right)\right)\right)\right)$
+\begin_inset Formula $\forall x\left(AmaAnimales\left(x\right)\to\neg MataIris\left(x\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $TieneAnimal\left(Luis,Iris\right)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $MataA\left(Juan,Iris\right)\lor MataA\left(Pedro,Iris\right)\lor MataA\left(Maria,Iris\right)$
+\begin_inset Formula $MataIris\left(Juan\right)\lor MataIris\left(Pedro\right)\lor MataIris\left(Maria\right)$
 \end_inset
 
 
@@ -2261,7 +2254,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg AmaAnimales\left(x\right)\lor\neg MataA\left(x,y\right)$
+\begin_inset Formula $\neg AmaAnimales\left(x\right)\lor\neg MataIris\left(x\right)$
 \end_inset
 
 
@@ -2278,7 +2271,7 @@ status open
 \end_inset
 
  
-\begin_inset Formula $TieneAnimal\left(Luis,Iris\right)$
+\begin_inset Formula $MataIris\left(Juan\right)\lor MataIris\left(Pedro\right)\lor MataIris\left(Maria\right)$
 \end_inset
 
 
@@ -2295,10 +2288,10 @@ status open
 \end_inset
 
  
-\begin_inset Formula $MataA\left(Juan,Iris\right)\lor MataA\left(Pedro,Iris\right)\lor MataA\left(Maria,Iris\right)$
+\begin_inset Formula $\neg MataIris\left(Maria\right)$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -2312,10 +2305,10 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg MataA\left(Maria,Iris\right)$
+\begin_inset Formula $MataIris\left(Juan\right)\lor MataIris\left(Pedro\right)$
 \end_inset
 
- 
+ (5 y 6)
 \end_layout
 
 \begin_layout Enumerate
@@ -2329,10 +2322,14 @@ status open
 \end_inset
 
  
-\begin_inset Formula $MataA\left(Juan,Iris\right)\lor MataA\left(Pedro,Iris\right)$
+\begin_inset Formula $\neg AmaAnimales\left(Juan\right)\lor MataIris\left(Pedro\right)$
 \end_inset
 
- (6 y 7)
+ (7 y 4 
+\begin_inset Formula $\left[Juan/x\right]$
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Enumerate
@@ -2346,11 +2343,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg AmaAnimales\left(Juan\right)\lor MataA\left(Pedro,Iris\right)$
+\begin_inset Formula $\neg TieneAnimal\left(Juan,y\right)\lor MataIris\left(Pedro\right)$
 \end_inset
 
- (8 y 4 
-\begin_inset Formula $\left[Juan/x,Iris/y\right]$
+ (8 y 3 
+\begin_inset Formula $\left[Juan/x\right]$
 \end_inset
 
 )
@@ -2367,11 +2364,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg TieneAnimal\left(Juan,y\right)\lor MataA\left(Pedro,Iris\right)$
+\begin_inset Formula $MataIris\left(Pedro\right)$
 \end_inset
 
- (9 y 3 
-\begin_inset Formula $\left[Juan/x\right]$
+ (9 y 1 
+\begin_inset Formula $\left[a/y\right]$
 \end_inset
 
 )
@@ -2388,11 +2385,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula $MataA\left(Pedro,Iris\right)$
+\begin_inset Formula $\neg AmaAnimales\left(Pedro\right)$
 \end_inset
 
- (10 y 1 
-\begin_inset Formula $\left[a/y\right]$
+ (10 y 4 
+\begin_inset Formula $\left[Pedro/x\right]$
 \end_inset
 
 )
@@ -2409,11 +2406,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg AmaAnimales\left(Pedro\right)$
+\begin_inset Formula $\neg TieneAnimal\left(Pedro,y\right)$
 \end_inset
 
- (11 y 4 
-\begin_inset Formula $\left[Pedro/x,Iris/y\right]$
+ (11 y 3 
+\begin_inset Formula $\left[Pedro/x\right]$
 \end_inset
 
 )
@@ -2430,31 +2427,10 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg TieneAnimal\left(Pedro,y\right)$
-\end_inset
-
- (12 y 3 
-\begin_inset Formula $\left[Pedro/x\right]$
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-14)
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula $\emptyset$
 \end_inset
 
- (13 y 2 
+ (12 y 2 
 \begin_inset Formula $\left[b/y\right]$
 \end_inset
 
@@ -2463,7 +2439,76 @@ status open
 
 \end_deeper
 \begin_layout Itemize
-En Prolog: PREGUNTAR.
+En Prolog: 
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tieneanimal(juan, a).
+\end_layout
+
+\begin_layout Plain Layout
+
+tieneanimal(pedro, b).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+amaanimales(X) :- tieneanimal(X,Y).
+\end_layout
+
+\begin_layout Plain Layout
+
+nomatairis(X) :- amaanimales(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+sospechoso(juan).
+\end_layout
+
+\begin_layout Plain Layout
+
+sospechoso(pedro).
+\end_layout
+
+\begin_layout Plain Layout
+
+sospechoso(maria).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+matairis(X) :- sospechoso(X), not(nomatairis(X)).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%% matairis(X).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
