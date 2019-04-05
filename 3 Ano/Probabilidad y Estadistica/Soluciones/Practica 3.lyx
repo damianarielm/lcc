@@ -81890,6 +81890,11 @@ Ejercicio 6:
 .
 \end_layout
 
+\begin_layout Plain Layout
+Suponemos que es tan probable tener un varón como una mujer y que el sexo
+ de un hijo no condiciona el del siguiente.
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
 Ejercicio 7:
@@ -81915,6 +81920,10 @@ Ejercicio 7:
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Plain Layout
+Suponemos que el resultado de una tirada no influye en la siguiente.
 \end_layout
 
 \end_deeper
@@ -82220,18 +82229,18 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\#S=8\cdot7\cdot6\cdot5=1680$
+\begin_inset Formula $\#S=\binom{8}{4}=70$
 \end_inset
 
 ; 
-\begin_inset Formula $P=\frac{5\cdot4\cdot3\cdot2}{1680}=\frac{120}{1680}$
+\begin_inset Formula $P=\binom{5}{4}/70=\frac{5}{70}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=1-\frac{6\cdot5\cdot4\cdot3}{1680}=1-\frac{360}{1680}=\frac{1320}{1680}$
+\begin_inset Formula $P=\binom{6}{4}/70=\boxed{\frac{15}{70}}=1-\frac{\left[\binom{6}{3}\cdot2+\binom{6}{2}\right]}{70}=1-\frac{\left[20\cdot2+15\right]}{70}=1-\frac{55}{70}$
 \end_inset
 
 .
@@ -82262,6 +82271,35 @@ Se forma una comisión constituida por un presidente, un vicepresidente,
  licenciado en letras?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\#S=8\cdot7\cdot6\cdot5=1680$
+\end_inset
+
+; 
+\begin_inset Formula $P=\frac{4\cdot7\cdot6\cdot5}{1680}=\frac{840}{1680}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\frac{2\cdot7\cdot6\cdot5}{1680}=\frac{420}{1680}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\frac{2\cdot1\cdot6\cdot5}{1680}=\frac{60}{1680}$
+\end_inset
+
+.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Ana, Pedro, Manuel, Margarita y Alicia se sacarán una foto sentados en línea
@@ -82286,12 +82324,66 @@ Ana, Pedro, Manuel, Margarita y Alicia se sacarán una foto sentados en línea
  en el centro de la foto?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\#S=5!=120$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P=\frac{2\cdot1\cdot3!}{120}=\frac{12}{120}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\frac{3\cdot2\cdot2\cdot1\cdot1}{120}=\frac{12}{120}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\frac{1\cdot4!}{120}=\frac{24}{120}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\frac{1\cdot1\cdot3!}{120}=\frac{6}{120}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Las letras de la palabra CLASE se colocan al azar y en línea.
  ¿Cuál es la probabilidad de que las vocales queden juntas?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=\frac{2\cdot4\cdot3!}{5!}=\frac{48}{120}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Se lanzan sucesivamente cuatro monedas al aire.
  ¿Cuál es la probabilidad de obtener:
@@ -82310,6 +82402,22 @@ a lo sumo tres cruces?
 exactamente dos caras?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 En el juego de generala mediante un tiro, calcule la probabilidad de obtener:
@@ -82325,13 +82433,43 @@ Póker servido.
  
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Una caja contiene bolas blancas y negras de tal manera que, al extraer dos,
- la probabilidad de que sean ambas blancas es 1/2.
+ la probabilidad de que sean ambas blancas es 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
  Determine el número mínimo de bolas que hay en la caja.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 En un centro hay 1000 alumnos repartidos del siguiente modo:
 \end_layout
