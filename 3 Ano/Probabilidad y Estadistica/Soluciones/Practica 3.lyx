@@ -7,6 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage{pgfplots}
+\usepackage{venndiagram}
 \usetikzlibrary{pgfplots.statistics}
 \usepgfplotslibrary{statistics}
 \pgfplotsset{compat=1.9}
@@ -41065,7 +41066,7 @@ addplot [ybar, bar width=0.5cm]
 
 \begin_layout Plain Layout
 
-        coordinates{(N,2) (B,6)};
+        coordinates{(N,6) (B,2)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -81704,11 +81705,11 @@ Sean
 \end_inset
 
 ; calcular 
-\begin_inset Formula $P(B)$
+\begin_inset Formula $P\left(B\right)$
 \end_inset
 
 ; 
-\begin_inset Formula $P(A)$
+\begin_inset Formula $P\left(A\right)$
 \end_inset
 
  y 
@@ -81744,6 +81745,10 @@ Recordemos que
 
 .
  Ademas observemos que 
+\begin_inset Formula $\text{\ensuremath{B=\left(B-A\right)\cup\left(A\cap B\right)}}$
+\end_inset
+
+ y como 
 \begin_inset Formula $B-A$
 \end_inset
 
@@ -81751,22 +81756,10 @@ Recordemos que
 \begin_inset Formula $A\cap B$
 \end_inset
 
- son disjuntos, luego:
+ son disjuntos, resulta:
 \begin_inset Formula 
 \[
-P\left[\left(B-A\right)\cup\left(A\cap B\right)\right]=P\left(B-A\right)+P\left(A\cap B\right)=P\left(B-A\right)+\frac{1}{4}
-\]
-
-\end_inset
-
- Como 
-\begin_inset Formula $B=\left(B-A\right)\cup\left(A\cap B\right)$
-\end_inset
-
- entonces:
-\begin_inset Formula 
-\[
-P\left(B\right)=P\left(B-A\right)+\frac{1}{4}\iff P\left(B-A\right)=\boxed{\frac{1}{12}}=P\left(\overline{A}\cap B\right)
+P\left(B\right)=P\left(B-A\right)+P\left(A\cap B\right)\iff\frac{1}{3}=P\left(B-A\right)+\frac{1}{4}\iff P\left(B-A\right)=\frac{1}{12}
 \]
 
 \end_inset
@@ -81835,10 +81828,6 @@ P\left(A\right)+P\left(B\right)<\frac{1}{2}-P\left(A\cap B\right)+P\left(A\right
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -81846,6 +81835,10 @@ P\left(A\right)+P\left(B\right)<\frac{1}{2}-P\left(A\cap B\right)+P\left(A\right
 Calcule las probabilidades de los sucesos definidos en a), b) y c) del ejercicio
  6 y b) del ejercicio 7.
  Especifique los supuestos que ha realizado.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -82232,15 +82225,26 @@ Soluciones
 \begin_inset Formula $\#S=\binom{8}{4}=70$
 \end_inset
 
-; 
-\begin_inset Formula $P=\binom{5}{4}/70=\frac{5}{70}$
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Los integrantes son todos mayores de 31 años}\right\} $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Enumerate
-\begin_inset Formula $P=\binom{6}{4}/70=\boxed{\frac{15}{70}}=1-\frac{\left[\binom{6}{3}\cdot2+\binom{6}{2}\right]}{70}=1-\frac{\left[20\cdot2+15\right]}{70}=1-\frac{55}{70}$
+\begin_layout Itemize
+\begin_inset Formula $\#A=\binom{5}{4}=5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\right)=\frac{\#A}{\#S}=\frac{5}{70}$
 \end_inset
 
 .
@@ -82252,6 +82256,70 @@ Soluciones
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{La comisión no incluye arquitectos}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#B=\binom{6}{4}=15$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \text{La comisión tiene exactamente un arquitecto}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{\#C=2\cdot\binom{6}{3}=40}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{La comisión tiene exactamente dos arquitecto}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{\#D=\binom{6}{2}=15}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overline{B}=C\cup D$
+\end_inset
+
+; 
+\begin_inset Formula $C\cap D=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(B\right)=\frac{\#B}{\#S}=\boxed{\frac{15}{70}}=1-P\left(\overline{B}\right)=1-\left[P\left(C\right)+P\left(D\right)\right]=1-\left[\frac{55}{70}\right]}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
 Se forma una comisión constituida por un presidente, un vicepresidente,
  un secretario y un tesorero, quienes son elegidos al azar entre las personas
  de la tabla del ejercicio anterior.
@@ -82259,7 +82327,7 @@ Se forma una comisión constituida por un presidente, un vicepresidente,
 
 \begin_deeper
 \begin_layout Enumerate
-¿Cuál es la probabilidad de que el presidente sea mujer?
+¿Cuál es la probabilidad de que la presidente sea mujer?
 \end_layout
 
 \begin_layout Enumerate
@@ -82279,27 +82347,92 @@ Soluciones
 \begin_inset Formula $\#S=8\cdot7\cdot6\cdot5=1680$
 \end_inset
 
-; 
-\begin_inset Formula $P=\frac{4\cdot7\cdot6\cdot5}{1680}=\frac{840}{1680}$
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{La presidente es mujer}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A=4\cdot7\cdot6\cdot5=840$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\right)=\frac{\#A}{\#S}=\frac{840}{1680}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{2\cdot7\cdot6\cdot5}{1680}=\frac{420}{1680}$
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{El tesorero es mayor de 50 años}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#B=2\cdot7\cdot6\cdot5=420$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\right)=\frac{\#B}{\#S}=\frac{420}{1680}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{2\cdot1\cdot6\cdot5}{1680}=\frac{60}{1680}$
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \text{El secretario es abogado y el vice es Lic. en letras}\right\} $
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\#C=2\cdot1\cdot6\cdot5=60$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(C\right)=\frac{\#C}{\#S}=\frac{60}{1680}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Ana, Pedro, Manuel, Margarita y Alicia se sacarán una foto sentados en línea
@@ -82332,37 +82465,70 @@ Soluciones
 \begin_inset Formula $\#S=5!=120$
 \end_inset
 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Los hombres estan en los extremos}\right\} $
+\end_inset
+
 .
  
-\begin_inset Formula $P=\frac{2\cdot1\cdot3!}{120}=\frac{12}{120}$
+\begin_inset Formula $\#A=2\cdot3!=12$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\right)=\frac{\#A}{\#S}=\frac{12}{120}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{Los sexos estan alternados}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#B=2\cdot3!=12$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=\frac{\#B}{\#S}=\frac{12}{120}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(C\right)=\frac{1\cdot4!}{\#S}=\frac{24}{120}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{3\cdot2\cdot2\cdot1\cdot1}{120}=\frac{12}{120}$
+\begin_inset Formula $P\left(D\right)=\frac{1\cdot1\cdot3!}{\#S}=\frac{6}{120}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $P=\frac{1\cdot4!}{120}=\frac{24}{120}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $P=\frac{1\cdot1\cdot3!}{120}=\frac{6}{120}$
-\end_inset
-
-.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -82376,11 +82542,34 @@ Las letras de la palabra CLASE se colocan al azar y en línea.
 Solución
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula $P=\frac{2\cdot4\cdot3!}{5!}=\frac{48}{120}$
+\begin_layout Itemize
+\begin_inset Formula $\#S=5!=120$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Las letras A y E estan juntas}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A=2\cdot4\cdot3!=48$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=\frac{\#A}{\#S}=\frac{48}{120}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -82407,26 +82596,90 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\#S=16$
+\begin_inset Formula $\#S=2^{4}=16$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A_{1}=\left\{ \text{Sale exactamente una cara}\right\} $
 \end_inset
 
 .
  
-\begin_inset Formula $P=\frac{8+4+2+1}{16}=\frac{15}{16}$
+\begin_inset Formula $\#A_{1}=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{2}=\left\{ \text{Salen exactamente dos caras}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A_{2}=6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{3}=\left\{ \text{Salen exactamente tres caras}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A_{3}=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{4}=\left\{ \text{Salen exactamente cuatro caras}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A_{4}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=A_{1}\cup A_{2}\cup A_{3}\cup A_{4}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A=\#A_{1}+\#A_{2}+\#A_{3}+\#A_{4}=15$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\right)=\frac{\#A}{\#S}=\frac{15}{16}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(B\right)=\frac{4+6+4}{\#S}=\frac{14}{16}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{15}{16}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $P=\frac{3+2+1}{16}=\frac{6}{16}$
+\begin_inset Formula $P\left(A_{2}\right)=\frac{6}{16}$
 \end_inset
 
 .
@@ -82451,31 +82704,41 @@ Póker servido.
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \begin_inset Formula $\#S=6^{5}$
 \end_inset
 
 .
- 
-\begin_inset Formula $P=\frac{1}{6^{5}}$
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(A\right)=\frac{1}{6^{5}}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{5}{6^{5}}$
+\begin_inset Formula $P\left(B\right)=\frac{6\cdot6}{6^{5}}=\frac{36}{6^{5}}$
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
+\end_inset
+
 Una caja contiene bolas blancas y negras de tal manera que, al extraer dos,
  la probabilidad de que sean ambas blancas es 
 \begin_inset Formula $\frac{1}{2}$
@@ -82492,6 +82755,19 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -82649,35 +82925,35 @@ Soluciones
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{600}{1000}$
+\begin_inset Formula $P\left(A_{1}\right)=\frac{600}{1000}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{400}{1000}$
+\begin_inset Formula $P\left(A_{2}\right)=\frac{400}{1000}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{300}{1000}$
+\begin_inset Formula $P\left(A_{3}\right)=\frac{300}{1000}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{700}{1000}$
+\begin_inset Formula $P\left(A_{4}\right)=\frac{700}{1000}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{113}{1000}$
+\begin_inset Formula $P\left(A_{5}\right)=\frac{113}{1000}$
 \end_inset
 
 .
@@ -82685,7 +82961,7 @@ Soluciones
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset Formula $P=\frac{113}{400/1000}$
+\begin_inset Formula $P=\frac{113}{400}$
 \end_inset
 
 .
@@ -82785,6 +83061,357 @@ lea los diarios
  
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Personas que leen el diario }A\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=\frac{20}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{Personas que leen el diario }B\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(B\right)=\frac{16}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \text{Personas que leen el diario }C\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(C\right)=\frac{14}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cap B\right)=\frac{8}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cap C\right)=\frac{5}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\cap C\right)=\frac{4}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cap B\cap C\right)=\frac{2}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="17text%">
+<column alignment="center" valignment="middle" width="85text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{venndiagram3sets}[tikzoptions={scale=0.5}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fillNotABC
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{venndiagram3sets}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(\overline{A}\cap\overline{B}\cap\overline{C}\right)=P\left(\overline{A\cup B\cup C}\right)=1-\left[P\left(A\cup B\cup C\right)\right]=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=1-\left[P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)+P\left(C\right)-P\left(A\cap C\right)\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left.-P\left(B\cap C\right)+P\left(A\cap B\cap C\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $=1-\left[\frac{20+16-8+14-5-4+2}{100}\right]=1-\left[\frac{35}{100}\right]=\frac{65}{100}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="17text%">
+<column alignment="center" valignment="middle" width="85text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{venndiagram3sets}[tikzoptions={scale=0.5}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fillA
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fillB
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fillC
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{venndiagram3sets}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(A\cup B\cup C\right)=1-P\left(\overline{A}\cap\overline{B}\cap\overline{C}\right)=\frac{35}{100}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="17text%">
+<column alignment="center" valignment="middle" width="95text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{venndiagram3sets}[tikzoptions={scale=0.5}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fillOnlyA
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fillOnlyB
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fillOnlyC
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{venndiagram3sets}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X=A\cap\overline{B}\cap\overline{C}\right)=\frac{20-8-5+2}{100}=\frac{9}{100}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(Y=\overline{A}\cap B\cap\overline{C}\right)=\frac{16-8-4+2}{100}=\frac{6}{100}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(Z=\overline{A}\cap\overline{B}\cap C\right)=\frac{14-5-4+2}{100}=\frac{7}{100}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X\cup Y\cup Z\right)=\frac{9+6+7}{100}=\frac{22}{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)=\frac{20}{100}+\frac{16}{100}+\frac{14}{100}=\frac{50}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cap B|A\cup B\right)=\frac{P\left[\left(A\cap B\right)\cap\left(A\cup B\right)\right]}{P\left(A\cup B\right)}=\frac{P\left(A\cap B\right)}{P\left(A\cup B\right)}=\frac{8/100}{50/100}=\frac{8}{50}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Un estudiante afirma que si se arroja un dado equilibrado tres veces y se
@@ -82947,6 +83574,49 @@ Suma 10
 Analice la afirmación del estudiante.
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+No es correcto pues los resultados no son igualmente probables:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(126\right)=\frac{6}{27}=P\left(135\right)=P\left(234\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(144\right)=\frac{3}{27}=P\left(225\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(333\right)=\frac{1}{27}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(136\right)=\frac{6}{27}=P\left(145\right)=P\left(235\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(244\right)=\frac{3}{27}=P\left(226\right)=P\left(334\right)$
+\end_inset
+
+.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 En un mazo de cartas se han retirado varias de ellas.
@@ -82961,6 +83631,80 @@ En un mazo de cartas se han retirado varias de ellas.
 
 \begin_layout Enumerate
 ¿Cuántas cartas quedan en el mazo?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\#S=12\cdot4=48$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Q=\left\{ \text{Cartas que quedan}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(Q\right)=\frac{\#Q}{\#S}=\frac{\#Q}{48}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R=\left\{ \text{Reyes}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#R=4$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(R|Q\right)=\frac{15}{100}=\frac{P\left(R\cap Q\right)}{P\left(Q\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{Bastos}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#B=12$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(B|Q\right)=\frac{30}{100}=\frac{P\left(B\cap Q\right)}{P\left(Q\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(\overline{R\cap B}|Q\right)=\frac{60}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -83092,6 +83836,83 @@ Se sabe que el alumno elegido resultó una chica, ¿cuál es la probabilidad
 \begin_layout Enumerate
 Se sabe que el alumno elegido no usa anteojos, ¿cuál es la probabilidad
  de que resulte un chico?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $M=\left\{ \text{El alumno elegido es mujer}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#M=400$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V=\left\{ \text{El alumno elegido es varón}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#V=600$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{El alumno elegido usa lentes}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A=300$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#\overline{A}=700$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(A|M\right)=\boxed{\frac{113}{400}}=\frac{P\left(A\cap B\right)}{P\left(M\right)}=\frac{113/1000}{400/1000}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(M|A\right)=\frac{113}{300}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(V|A\right)=\boxed{\frac{187}{300}}=P\left(\overline{M}|A\right)=1-P\left(M|A\right)=1-\frac{113}{300}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(V|\overline{A}\right)=\frac{413}{700}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -83248,6 +84069,9 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
 En ciertos horarios las líneas pueden saturarse por exceso de llamadas.
  Sean los sucesos siguientes:
 \end_layout
@@ -83437,8 +84261,100 @@ Tres empresas
 \end_inset
 
  obtenga un subcontrato en la construcción del puente?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Gana el contraro la empresa }A\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=0.5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{Gana el contraro la empresa }B\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(B\right)=0.3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \text{Gana el contraro la empresa }C\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(C\right)=0.2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E=\left\{ \text{Fue contratada la empresa }E\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(E|A\right)=0.8$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(E|B\right)=0.4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(E|C\right)=0.1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(E\right)=P\left(E\cap A\right)+P\left(E\cap B\right)+P\left(E\cap C\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=P\left(E|A\right)\cdot P\left(A\right)+P\left(E|B\right)\cdot P\left(B\right)+P\left(E|C\right)\cdot P\left(C\right)=0.54$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 Se tienen dos bolsas idénticas por fuera.
  La bolsa 
@@ -83504,9 +84420,101 @@ En una fábrica de pernos, las máquinas
 \begin_inset Formula $B$
 \end_inset
 
-? 
+?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{El perno fue fabricado por la máquina }A\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=0.4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{El perno fue fabricado por la máquina }B\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(B\right)=0.35$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \text{El perno fue fabricado por la máquina }C\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(C\right)=0.25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{El perno es defectuoso}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(D|A\right)=0.04$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D|B\right)=0.05$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D|C\right)=0.02$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(B|D\right)=\frac{P\left(B\cap D\right)}{P\left(D\right)}=\frac{P\left(D|B\right)\cdot P\left(B\right)}{P\left(D\right)}=\frac{P\left(D|B\right)\cdot P\left(B\right)}{P\left(D\cap A\right)+P\left(D\cap B\right)+P\left(D\cap C\right)}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{P\left(D|B\right)\cdot P\left(B\right)}{P\left(D|A\right)\cdot P\left(A\right)+P\left(D|B\right)\cdot P\left(B\right)+P\left(D|C\right)\cdot P\left(C\right)}=0.45$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 En cierto país donde una enfermedad es endémica, se sabe que un 12% de la
  población padece dicha enfermedad.
@@ -83599,6 +84607,10 @@ Pruebe que si
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
