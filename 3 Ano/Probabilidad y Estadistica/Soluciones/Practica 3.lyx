@@ -83638,7 +83638,7 @@ Solución
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\#S=12\cdot4=48$
+\begin_inset Formula $S=\left\{ \text{Cartas que quedan}\right\} $
 \end_inset
 
 .
@@ -83646,65 +83646,54 @@ Solución
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $Q=\left\{ \text{Cartas que quedan}\right\} $
+\begin_inset Formula $R=\left\{ \text{Reyes que quedan}\right\} $
 \end_inset
 
 .
  
-\begin_inset Formula $P\left(Q\right)=\frac{\#Q}{\#S}=\frac{\#Q}{48}$
+\begin_inset Formula $P\left(R\right)=\frac{15}{100}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $R=\left\{ \text{Reyes}\right\} $
+\begin_inset Formula $B=\left\{ \text{Bastos que quedan}\right\} $
 \end_inset
 
 .
  
-\begin_inset Formula $\#R=4$
-\end_inset
-
-.
- 
-\begin_inset Formula $P\left(R|Q\right)=\frac{15}{100}=\frac{P\left(R\cap Q\right)}{P\left(Q\right)}$
+\begin_inset Formula $P\left(B\right)=\frac{30}{100}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $B=\left\{ \text{Bastos}\right\} $
+\begin_inset Formula $\text{\ensuremath{P\left(\overline{R}\cap\overline{B}\right)=\frac{60}{100}=P\left(\overline{R\cup B}\right)=1-P\left(R\cup B\right)\iff P\left(R\cup B\right)=\frac{40}{100}}}$
 \end_inset
 
-.
- 
-\begin_inset Formula $\#B=12$
-\end_inset
 
-.
- 
-\begin_inset Formula $P\left(B|Q\right)=\frac{30}{100}=\frac{P\left(B\cap Q\right)}{P\left(Q\right)}$
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(R\cup B\right)=P\left(R\right)+P\left(B\right)-P\left(R\cap B\right)\iff P\left(R\cap B\right)=\frac{5}{100}}}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $P\left(\overline{R\cap B}|Q\right)=\frac{60}{100}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-COMPLETAR.
+\begin_layout Standard
+Como la probabilidad de sacar el rey de bastos de entre las cartas que quedan
+ es mayor a 0, entonces efectivamente el rey de bastos esta allí.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(R\cap B\right)=\frac{1}{\#S}=\frac{5}{100}\iff\#S=20$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -83933,7 +83922,94 @@ Sabiendo que el primer artículo resultó defectuoso, ¿cuál es la probabilidad
 \end_layout
 
 \begin_layout Enumerate
-¿Cuál es la probabilidad de que ambos artículos resulten defectuosos? 
+¿Cuál es la probabilidad de que ambos artículos resulten buenos?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\#S=100\cdot99=9900$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{El primer arituclo extraido fue defectuoso}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\#A=25\cdot99$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\right)=\frac{25\cdot99}{9900}=\frac{25}{100}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{El segundo arituclo extraido fue bueno}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\#B=75\cdot99$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\right)=\frac{75\cdot}{9900}=\frac{75}{100}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cap B\right)=\frac{25\cdot75}{9900}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(B|A\right)=\frac{P\left(A\cap B\right)}{P\left(A\right)}=\frac{25\cdot75/9900}{25/100}=\frac{75}{99}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(\overline{B}|A\right)=\boxed{\frac{24}{99}}=1-P\left(B|A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(\overline{A}|B\right)=\frac{74}{99}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -83978,6 +84054,10 @@ la probabilidad de que
 \end_inset
 
  fallen es 0.15.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -83999,6 +84079,57 @@ La probabilidad de que
 \begin_layout Enumerate
 La probabilidad de que falle sólo 
 \begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\cap\overline{A}\right)=\frac{15}{100}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=\frac{20}{100}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\cap B\right)=\frac{15}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\cap\overline{A}\right)=\frac{15}{100}=P\left(B-A\right)=P\left(B\right)-P\left(A\cap B\right)\iff P\left(B\right)=\frac{30}{100}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(A|B\right)=\frac{15/100}{30/100}=\frac{15}{30}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(A\cap\overline{B}\right)=P\left(A-B\right)=P\left(A\right)-P\left(A\cap B\right)=\frac{5}{100}$
 \end_inset
 
 .
@@ -84069,9 +84200,6 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
 En ciertos horarios las líneas pueden saturarse por exceso de llamadas.
  Sean los sucesos siguientes:
 \end_layout
@@ -84095,6 +84223,10 @@ En ciertos horarios las líneas pueden saturarse por exceso de llamadas.
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -84144,6 +84276,22 @@ una llamada que llega a
 \end_inset
 
 ?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -84199,6 +84347,14 @@ La probabilidad de que un mensaje posea una longitud superior a
 \end_inset
 
  caracteres?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -84399,6 +84555,22 @@ El caramelo resulta ser de frutilla.
 ?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 En una fábrica de pernos, las máquinas 
@@ -84421,10 +84593,6 @@ En una fábrica de pernos, las máquinas
 \end_inset
 
 ?
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -84526,6 +84694,16 @@ En cierto país donde una enfermedad es endémica, se sabe que un 12% de la
  positiva, esté sana?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Sean 
 \begin_inset Formula $A$
@@ -84556,7 +84734,7 @@ Sean
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A$
 \end_inset
 
@@ -84567,25 +84745,49 @@ Sean
  son excluyentes,
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $A\subseteq B$
 \end_inset
 
 ,
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $P\left(\overline{A}|\overline{B}\right)=\frac{1}{4}$
 \end_inset
 
 ,
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $P\left(A|B\right)+P\left(A|\overline{B}\right)=1$
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -84607,12 +84809,18 @@ Pruebe que si
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Pruebe que si 
 \begin_inset Formula $A$
@@ -84661,6 +84869,22 @@ Pruebe que si
 \end_inset
 
  son independientes.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -84714,6 +84938,22 @@ Si
  son independientes.
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Pruebe que si 
@@ -84735,6 +84975,16 @@ Pruebe que si
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Un número binario está formado por 
 \begin_inset Formula $n$
@@ -84750,6 +85000,16 @@ Un número binario está formado por
  es la probabilidad de formar un número incorrecto?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Se arroja un dado equilibrado dos veces y se observa el par ordenado de
  números que se obtiene.
@@ -84757,21 +85017,21 @@ Se arroja un dado equilibrado dos veces y se observa el par ordenado de
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate
+\begin_layout Itemize
 \begin_inset Formula $A=\left\{ \text{en el primer lanzamiento se obtiene un número par}\right\} $
 \end_inset
 
 ,
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \begin_inset Formula $B=\left\{ \text{en el segundo lanzamiento se obtiene un número impar}\right\} $
 \end_inset
 
  y
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \begin_inset Formula $C=\left\{ \text{se obtienen par y par o impar e impar}\right\} $
 \end_inset
 
@@ -84839,6 +85099,30 @@ los sucesos
 \end_inset
 
  independientes?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
