@@ -84247,7 +84247,7 @@ Se conoce que
 \end_inset
 
  y 
-\begin_inset Formula $P\left(E_{1}E_{2}\cap E_{3}\right)=\frac{1}{2}$
+\begin_inset Formula $P\left(E_{1}|E_{2}\cap E_{3}\right)=\frac{1}{2}$
 \end_inset
 
 .
@@ -84283,15 +84283,24 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(E_{3}|E_{2}\right)=\frac{4}{5}=\frac{P\left(E_{2}\cap E_{3}\right)}{P\left(E_{2}\right)}=\frac{P\left(E_{2}\cap E_{3}\right)}{3/4}\iff P\left(E_{2}\cap E_{3}\right)=\frac{12}{20}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(E_{1}|E_{2}\cap E_{3}\right)=\frac{1}{2}=\frac{P\left(E_{1}\cap E_{2}\cap E_{3}\right)}{12/20}\iff P\left(E_{1}\cap E_{2}\cap E_{3}\right)=\frac{12}{40}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(E_{1}|E_{2}\right)=$
+\end_inset
+
+ PREGUNTAR.
 \end_layout
 
 \end_deeper
@@ -84354,7 +84363,41 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Asumimos que no se puede recibir UN mensaje desde dos fuentes, es decir,
+ que 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son mutuamente excluyentes.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(K|A\right)=\frac{10}{100}=\frac{P\left(A\cap K\right)}{20/100}\iff P\left(A\cap K\right)=\frac{2}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(K|B\right)=\frac{10}{100}=\frac{P\left(B\cap K\right)}{15/100}\iff P\left(B\cap K\right)=\frac{15}{1000}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(K\right)=P\left(\left(A\cap K\right)\cup\left(B\cap K\right)\right)=\frac{2}{100}+\frac{15}{1000}-0=\frac{35}{1000}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -84417,10 +84460,6 @@ Tres empresas
 \end_inset
 
  obtenga un subcontrato en la construcción del puente?
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -84557,18 +84596,246 @@ El caramelo resulta ser de frutilla.
 
 \begin_layout Paragraph
 Soluciones
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Menta
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Limón
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Frutilla
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+31
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(A|M\right)=\frac{12}{15}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(A|L\right)=\frac{6}{12}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(A|F\right)=1$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -84764,10 +85031,6 @@ Sean
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -84775,21 +85038,59 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Falso: 
+\begin_inset Formula $P\left(A\cap B\right)=P\left(A|B\right)\cdot P\left(B\right)=\frac{1}{8}\neq0\Rightarrow A\cap B\neq\emptyset$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Falso: Si 
+\begin_inset Formula $A\subseteq B$
+\end_inset
+
+ entonces 
+\begin_inset Formula $P\left(B|A\right)=1\neq\frac{1/8}{1/4}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Falso:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(A|B\right)=\frac{1}{4}=\frac{P\left(A\cap B\right)}{1/2}\iff P\left(A\cap B\right)=\frac{1}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(\overline{A}|\overline{B}\right)=\frac{P\left(\overline{A}\cap\overline{B}\right)}{7/8}=\frac{P\left(\overline{A\cup B}\right)}{7/8}=\frac{1-P\left(A\cup B\right)}{7/8}=\frac{1-\left[\frac{1}{4}+\frac{1}{2}-\frac{1}{4}\right]}{7/8}=\frac{8}{14}\neq\frac{1}{4}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Verdadero:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(A|B\right)+P\left(A|\overline{B}\right)=\frac{1}{4}+\frac{P\left(A-B\right)}{1/2}=\frac{1}{4}+\frac{1/4-1/8}{1/2}=\frac{1}{4}+\frac{1}{4}=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Pruebe que si 
@@ -84817,7 +85118,10 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula $P\left(A|B\right)=\frac{P\left(A\cap B\right)}{P\left(B\right)}=\frac{0}{P\left(B\right)}=0$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -84943,9 +85247,35 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(A\cap\left(B\cup C\right)\right)=P\left(\left(A\cap B\right)\cup\left(A\cap C\right)\right)=$
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=P\left(A\cap B\right)+P\left(A\cap C\right)-P\left(A\cap B\cap C\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=P\left(A\right)P\left(B\right)+P\left(A\right)P\left(C\right)-P\left(A\right)P\left(B\right)P\left(C\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=P\left(A\right)\left[P\left(B\right)+P\left(C\right)-P\left(B\right)P\left(C\right)\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -85007,6 +85337,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -85079,7 +85413,7 @@ los sucesos
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P\left(A\cap B\cap C\right)\neq P\left(A\right)P\left(B\right)P\left(C\right)$
+\begin_inset Formula $P\left(A\cap B\cap C\right)\neq P\left(A\right)\cdot P\left(B\right)\cdot P\left(C\right)$
 \end_inset
 
 .
@@ -85105,20 +85439,63 @@ los sucesos
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $\#S=36$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\#A=18=\#B=\#C$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=\frac{18}{36}=P\left(B\right)=P\left(C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\#A\cap B=9=\#A\cap C=\#B\cap C$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{P\left(A\cap B\right)=\frac{9}{36}=P\left(A\cap C\right)=P\left(B\cap C\right)}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(A\cap B\right)=\frac{9}{36}=\frac{18}{36}\cdot\frac{18}{36}=P\left(A\right)\cdot P\left(B\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(A\cap C\right)=\frac{9}{36}=\frac{18}{36}\cdot\frac{18}{36}=P\left(A\right)\cdot P\left(C\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(B\cap C\right)=\frac{9}{36}=\frac{18}{36}\cdot\frac{18}{36}=P\left(B\right)\cdot P\left(C\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(A\cap B\cap C\right)=0\neq\left(\frac{18}{36}\right)^{3}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
