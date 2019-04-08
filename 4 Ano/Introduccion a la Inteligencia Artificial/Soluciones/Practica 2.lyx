@@ -566,6 +566,10 @@ abuelo(X, Y).
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -591,7 +595,25 @@ status open
 
 \begin_layout Plain Layout
 
-COMPLETAR.
+hermano(X,Y) :- padre(Z,X), padre(Z,Y), X
+\backslash
+=Y.
+\end_layout
+
+\begin_layout Plain Layout
+
+hermano(X,Y) :- madre(Z,X), madre(Z,Y), X
+\backslash
+=Y.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%% hermano(X,Y).
 \end_layout
 
 \end_inset
@@ -702,7 +724,12 @@ status open
 
 \begin_layout Plain Layout
 
-COMPLETAR.
+ancestro(X,Y) :- padre(X,Y); madre(X,Y).
+\end_layout
+
+\begin_layout Plain Layout
+
+ancestro(X,Y) :- (padre(Z,Y); madre(Z,Y)), ancestro(X,Z).
 \end_layout
 
 \end_inset
@@ -722,6 +749,10 @@ La familia Adams está compuesta por Homero, Morticia, Pericles, Merlina,
  Tío Cosa, Tío Lucas, la Abuela y Largo.
  Homero es hermano de Lucas y Cosa, todos ellos son hijos de la Abuela.
  Morticia es esposa de Homero y tiene dos hijos: Pericles y Merlina.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -776,10 +807,6 @@ abuela(nombre, nombre)
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -790,7 +817,6 @@ Se deben responder las siguientes consultas:
 ¿Es Pericles hijo de Homero?
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
 ¿Quién es hija de Homero?
 \end_layout
@@ -876,6 +902,22 @@ mujer(abuela).
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 hijo(homero,abuela).
 \end_layout
 
@@ -901,6 +943,10 @@ hijo(pericles,homero).
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\begin_layout Plain Layout
+
 hija(merlina,homero).
 \end_layout
 
@@ -921,18 +967,6 @@ hermano(homero,lucas).
 \begin_layout Plain Layout
 
 hermano(homero,cosa).
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -1104,9 +1138,179 @@ hermana(X,Y).
 
 \end_layout
 
-\end_deeper
 \begin_layout Section
 Club de Ping-pong
+\end_layout
+
+\begin_layout Subsection
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Realice un programa en Prolog que a partir del predicado 
+\begin_inset listings
+lstparams "language=Prolog"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+jugador(nombre,edad)
+\end_layout
+
+\end_inset
+
+ y los siguientes hechos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+jugador(pedro,9).
+\end_layout
+
+\begin_layout Plain Layout
+
+jugador(pablo,10).
+\end_layout
+
+\begin_layout Plain Layout
+
+jugador(cristian,9).
+\end_layout
+
+\begin_layout Plain Layout
+
+jugador(susana,9).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+organice un torneo de ping-pong entre niños de 9 años.
+\end_layout
+
+\begin_layout Standard
+A partir de este ejemplo discutiremos los pasos que sigue PROLOG en la resolució
+n del problema.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Control de Backtracking
+\end_layout
+
+\begin_layout Standard
+En el ejercicio anterior, notamos que PROLOG devuelve algunos resultados
+ redundantes.
+ Para controlar el backtracking hay dos mecanismos: el predicado 
+\emph on
+fail
+\emph default
+ y el predicado 
+\emph on
+cut
+\emph default
+ (representado por !).
+\end_layout
+
+\begin_layout Standard
+Es mucho lo que hay por decir sobre estos mecanismos.
+ Por ahora se pretende solamente intentar la modificiación del programa
+ del ejercicio anterior para evitar los resultados redundantes.
+ y analizar el siguiente ejemplo que realiza un proceso repetitivo con el
+ uso del fail:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+country("England").
+\end_layout
+
+\begin_layout Plain Layout
+
+country("France").
+\end_layout
+
+\begin_layout Plain Layout
+
+country("Germany").
+\end_layout
+
+\begin_layout Plain Layout
+
+country("Denmark").
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+print_countries:-
+\end_layout
+
+\begin_layout Plain Layout
+
+    country(X),
+\end_layout
+
+\begin_layout Plain Layout
+
+    write(X), /* write the value of X */
+\end_layout
+
+\begin_layout Plain Layout
+
+    nl,       /* start a new line */
+\end_layout
+
+\begin_layout Plain Layout
+
+    fail.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+print_countries.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
 \end_layout
 
 \begin_layout Standard
@@ -1118,15 +1322,121 @@ El predicado not
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Es importante notar que el predicado 
+\emph on
+not
+\emph default
+ tiene éxito si la meta no se puede probar verdadera.
+\end_layout
+
+\begin_layout Standard
+Realizar un programa que decida a quién le gusta realizar compras, sabiendo
+ que si una persona tiene tarjeta de crédito y no está vencida disfruta
+ de hacer compras y que: Chris tiene las tarjetas Visa y Diners, Joe y Sam
+ tienen Mastercard y Sam también tiene Citibank.
+ Además se sabe que Chirs tiene vencidas ambas tarjetas y que Sam tiene
+ vencida la Mastercard.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+tiene(chris,visa).
+\end_layout
+
+\begin_layout Plain Layout
+
+tiene(chris,diners).
+\end_layout
+
+\begin_layout Plain Layout
+
+tiene(joe,mastercard).
+\end_layout
+
+\begin_layout Plain Layout
+
+tiene(sam,mastercard).
+\end_layout
+
+\begin_layout Plain Layout
+
+tiene(sam,citibank).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+vencida(chris,visa).
+\end_layout
+
+\begin_layout Plain Layout
+
+vencida(chris,diners).
+\end_layout
+
+\begin_layout Plain Layout
+
+vencida(sam,mastercard).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+disfrutacompras(X) :- tiene(X,Y), not(vencida(X,Y)).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Muerte de un gato
 \end_layout
 
+\begin_layout Itemize
+Juan tiene un perro y Pedro tiene un gato.
+\end_layout
+
+\begin_layout Itemize
+Todos los que tienen una mascota aman a los animales.
+\end_layout
+
+\begin_layout Itemize
+Nadie que ame a los animales los mata.
+\end_layout
+
+\begin_layout Itemize
+Juan, Pedro o María mataron a la gata de Luis que se llama Iris.
+\end_layout
+
 \begin_layout Standard
-COMPLETAR.
+Probar que María mató a Iris, usando resolución.
+ Resolver utilizando PROLOG.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Practica 1.
 \end_layout
 
 \begin_layout Section
@@ -1134,7 +1444,7 @@ Señor de los anillos
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Practica 1.
 \end_layout
 
 \begin_layout Section
@@ -1142,11 +1452,278 @@ Fauna
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Dados los siguientes hechos y relaciones,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+Un ungulado es un animal.
+\end_layout
+
+\begin_layout Enumerate
+Un pez es un animal.
+\end_layout
+
+\begin_layout Enumerate
+Una cebra es un ungulado.
+\end_layout
+
+\begin_layout Enumerate
+Un arenque es un pez.
+\end_layout
+
+\begin_layout Enumerate
+Un tiburón es un pez.
+\end_layout
+
+\begin_layout Enumerate
+La cebra vive en la tierra.
+\end_layout
+
+\begin_layout Enumerate
+La rana vive en la tierra y en el agua.
+\end_layout
+
+\begin_layout Enumerate
+Los peces viven en el agua.
+\end_layout
+
+\begin_layout Enumerate
+Un animal que vive en el agua puede nadar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+realizar un programa PROLOG que decida que animal puede nadar (seguir el
+ programa con el Trace).
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+animal(X) :- unglado(X).
+ animal(X) :- pez(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+unglado(X) :- cebra(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pez(arenque).
+ pez(tiburon).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+vive(cebra,tierra).
+\end_layout
+
+\begin_layout Plain Layout
+
+vive(rana,tierra).
+\end_layout
+
+\begin_layout Plain Layout
+
+vive(rana,agua).
+\end_layout
+
+\begin_layout Plain Layout
+
+vive(X,agua) :- pez(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+nada(X) :- vive(X,agua).
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Comidas
+\end_layout
+
+\begin_layout Standard
+Considérense las siguientes sentencias:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+A John le gusta toda clase de comida.
+\end_layout
+
+\begin_layout Itemize
+Las manzanas son comida.
+\end_layout
+
+\begin_layout Itemize
+El pollo es comida.
+\end_layout
+
+\begin_layout Itemize
+Cualquier cosa que uno coma y no le mate es comida.
+\end_layout
+
+\begin_layout Itemize
+Bill come cacahuetes y aún está vivo.
+\end_layout
+
+\begin_layout Itemize
+Sue come todo lo que come Bill.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hacer un programa PROLOG y mostrar que a John le gustan los cacahuetes.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+comida(manzana).
+\end_layout
+
+\begin_layout Plain Layout
+
+comida(pollo).
+\end_layout
+
+\begin_layout Plain Layout
+
+comida(Y) :- come(X,Y), nomata(Y,X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+come(bill,cacahuetes).
+\end_layout
+
+\begin_layout Plain Layout
+
+come(sue,X) :- come(bill,X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+nomata(cacahuetes,bill).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+gusta(john,X) :- comida(X).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Club de bridge
+\end_layout
+
+\begin_layout Itemize
+Los miembros del club de bridge de la calle Elm son Joe, Sally, Bill y Ellen.
+\end_layout
+
+\begin_layout Itemize
+Joe está casado con Sally.
+\end_layout
+
+\begin_layout Itemize
+Bill es hermano de Ellen.
+\end_layout
+
+\begin_layout Itemize
+El cónyuge de cada persona casada del club también está en el club.
+\end_layout
+
+\begin_layout Itemize
+La última reunión fue en la casa de Joe.
+\end_layout
+
+\begin_layout Standard
+A partir de estos hechos (y algunos hechos de conocimiento del dominio)
+ realizar un programa que determine si 
+\begin_inset Quotes fld
+\end_inset
+
+La última reunión fue en casa de Sally
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
 \end_layout
 
 \begin_layout Standard

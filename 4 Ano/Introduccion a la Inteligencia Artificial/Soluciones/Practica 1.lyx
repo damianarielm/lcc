@@ -1557,7 +1557,7 @@ status open
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(A\left(x\right)\land V\left(x,agua\right)\right)\to N\left(x\right)$
+\begin_inset Formula $\text{\ensuremath{\left(A\left(x\right)\land V\left(x,agua\right)\right)\to N\left(x\right)}}$
 \end_inset
 
 
@@ -1958,11 +1958,300 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
-\begin_inset Newpage pagebreak
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{samepage}
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\left(Comida\left(x\right)\to Gusta\left(John,x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\left(Manzana\left(x\right)\to Comida\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Comida\left(Pollo\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\forall y\left(\left(Come\left(x,y\right)\land\neg Mata\left(y,x\right)\right)\to Comida\left(y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Come\left(Bill,Cacahuetes\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\neg Mata\left(Cacahuetes,Bill\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\left(Come\left(Bill,x\right)\to Come\left(Sue,x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{samepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Comida\left(x\right)\lor Gusta\left(John,x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Manzana\left(x\right)\lor Comida\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Comida\left(Pollo\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Come\left(x,y\right)\lor Mata\left(y,x\right)\lor Comida\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Come\left(Bill,Cacahuetes\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Mata\left(Cacahuetes,Bill\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Come\left(Bill,x\right)\lor Come\left(Sue,x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Gusta\left(John,Cacahuetes\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Comida\left(Cacahuetes\right)$
+\end_inset
+
+ (8 y 1 
+\begin_inset Formula $\left[Cacahuetes/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+10)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Come\left(x,Cacahuetes\right)\lor Mata\left(Cacahuetes,x\right)$
+\end_inset
+
+ (9 y 4 
+\begin_inset Formula $\left[Cacahuetes/y\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+11)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Come\left(Bill,Cacahuetes\right)$
+\end_inset
+
+ (10 y 6 
+\begin_inset Formula $\left[Bill/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+12)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ (11 y 5)
 \end_layout
 
 \end_deeper
@@ -2002,6 +2291,10 @@ Juan, Pedro o María mataron a la gata de Luis que se llama Iris.
 \begin_layout Standard
 Probar que María mató a Iris, usando resolución.
  Analizar las adaptaciones necesarias para resolver utilizando PROLOG.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2181,6 +2474,10 @@ Versión simplificada:
 
 \begin_layout Itemize
 \begin_inset Formula $MataIris\left(Juan\right)\lor MataIris\left(Pedro\right)\lor MataIris\left(Maria\right)$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -2509,6 +2806,10 @@ matairis(X) :- sospechoso(X), not(nomatairis(X)).
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2567,6 +2868,369 @@ Probar si odia Frodo a Sauron aplicando resolución.
  odia a Sauron.
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Hobbit\left(Frodo\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Hobbit\left(Sam\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Hobbit\left(x\right)\lor Comarca\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Comarca\left(x\right)\lor Media\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Media\left(x\right)\lor Leal\left(x,Sauron\right)\lor Odia\left(x,Sauron\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Leal\left(x,f\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg IDestruir\left(x,y\right)\lor\neg Leal\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $IDestruir\left(Frodo,Sauron\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Odia\left(Frodo,Sauron\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+10)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Media\left(Frodo\right)\lor Leal\left(Frodo,Sauron\right)$
+\end_inset
+
+ (9 y 5 
+\begin_inset Formula $\left[Frodo/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+11)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Comarca\left(Frodo\right)\lor Leal\left(Frodo,Sauron\right)$
+\end_inset
+
+ (10 y 4 
+\begin_inset Formula $\left[Frodo/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+12)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg Hobbit\left(Frodo\right)\lor Leal\left(Frodo,Sauron\right)$
+\end_inset
+
+ (11 y 3 
+\begin_inset Formula $\left[Frodo/x\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+13)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $Leal\left(Frodo,Sauron\right)$
+\end_inset
+
+ (12 y 1)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+14)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\neg IDestruir\left(Frodo,Sauron\right)$
+\end_inset
+
+ (13 y 7 
+\begin_inset Formula $\left[Frodo/x,Sauron/y\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+15)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ (14 y 8)
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Prolog"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hobbit(frodo).
+\end_layout
+
+\begin_layout Plain Layout
+
+hobbit(sam).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+comarca(X) :- hobbit(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+media(X) :- comarca(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lealoodia(X,sauron) :- media(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+noleal(X,Y) :- idestruir(X,Y).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+odia(X,Y) :- lealoodia(X,Y), noleal(X,Y).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+idestruir(frodo,sauron).
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%% comcarca(X), odia(X,sauron).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
@@ -2608,6 +3272,14 @@ La última reunión fue en la casa de Joe
 \begin_layout Standard
 A partir de estos hechos (y algunos hechos de conocimiento del dominio)
  determine usando resolución si “La última reunión fue en casa de Sally.”
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
 \end_layout
 
 \end_deeper
