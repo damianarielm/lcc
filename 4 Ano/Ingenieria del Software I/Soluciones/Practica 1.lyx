@@ -277,7 +277,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $NuevoCliente\triangleq NuevoClienteOk\lor ClienteExiste\lor MontoInsuficiente$
+\begin_inset Formula $NuevoCliente==NuevoClienteOk\lor ClienteExiste\lor MontoInsuficiente$
 \end_inset
 
 
@@ -872,7 +872,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $ExtraerCA\triangleq ExtraerCAOk\lor ClienteInexistente\lor MontoIncorrecto\lor MontoInadmisible$
+\begin_inset Formula $ExtraerCA==ExtraerCAOk\lor ClienteInexistente\lor MontoIncorrecto\lor MontoInadmisible$
 \end_inset
 
 
@@ -2734,7 +2734,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $CAExtraer\triangleq CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
+\begin_inset Formula $CAExtraer==CAExtraerOk\lor CAMontoIncorrecto\lor CASaldoInsuficiente$
 \end_inset
 
 
@@ -2799,7 +2799,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $Depositar\triangleq DepositarOk\lor DepositarE\lor CuentaInvalida$
+\begin_inset Formula $Depositar==DepositarOk\lor DepositarE\lor CuentaInvalida$
 \end_inset
 
 
@@ -2807,7 +2807,7 @@ Solución
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -2963,6 +2963,40 @@ arrayrulecolor{darkgreen}%
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $n?\in dom\left(ca\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -2978,7 +3012,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $n?\in dom\left(ca\right)$
+\begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros$
 \end_inset
 
 
@@ -2986,7 +3020,7 @@ arrayrulecolor{darkgreen}%
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3222,10 +3256,6 @@ arrayrulecolor{darkgreen}%
 </row>
 </lyxtabular>
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -3882,10 +3912,6 @@ arrayrulecolor{darkgreen}%
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -3910,7 +3936,7 @@ Solución
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $CA2DepositarOk\triangleq\left[CADepositarOk|tits'=tits\right]$
+\begin_inset Formula $CA2DepositarOk==\left[CADepositarOk;tits,tits':\mathbb{P}Cliente2|tits'=tits\right]$
 \end_inset
 
 
@@ -4288,16 +4314,16 @@ Solución
 
 \begin_layout Standard
 ¿Ejercicio 13?
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 Modelar el alta y la baja de una caja de ahorros.
  ¿Puede utilizar el esquema marco de promoción? ¿Por que?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4751,7 +4777,7 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="14" columns="3">
+<lyxtabular version="3" rows="13" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -5058,41 +5084,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $saldo=0$
+\begin_inset Formula $ca\left(n?\right).saldo=0$
 \end_inset
 
 
@@ -5251,10 +5243,6 @@ arrayrulecolor{darkgreen}%
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -5269,6 +5257,10 @@ Modele las operaciones de extracción, alta y baja de un cliente y pedido
 
 \color inherit
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6649,7 +6641,7 @@ Solución
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="3">
+<lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -6888,75 +6880,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $ca\left(n?\right)=\Theta CajaAhorros2$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $d?=\Theta Cliente2.dni$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $\Theta Cliente2\in tits$
+\begin_inset Formula $d?\in\left\{ c:Cliente2|c\in ca\left(n?\right).tits\bullet c.dni\right\} $
 \end_inset
 
 
@@ -7095,6 +7019,40 @@ arrayrulecolor{darkgreen}%
 \end_inset
 </cell>
 <cell multicolumn="2" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $\Delta CajaAhorros2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -7290,74 +7248,6 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $d?=\Theta Cliente2.dni$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
-\begin_inset Formula $\Theta Cliente2\in tits$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\color purple
 \begin_inset Formula $0<m?\leq saldo$
 \end_inset
 
@@ -7392,7 +7282,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\Theta CajaAhorros2'.saldo'=saldo-m?$
+\begin_inset Formula $d?\in\left\{ c:Cliente2|c\in tits\bullet c.dni\right\} $
 \end_inset
 
 
@@ -7426,7 +7316,41 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\Theta CajaAhorros2'.his'=his^{\smallfrown}\left\langle -m?\right\rangle $
+\begin_inset Formula $saldo'=saldo-m?$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $his'=his^{\smallfrown}\left\langle -m?\right\rangle $
 \end_inset
 
 
@@ -7460,7 +7384,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\Theta CajaAhorros2'.tits'=tits$
+\begin_inset Formula $tits'=tits$
 \end_inset
 
 
@@ -7483,6 +7407,10 @@ arrayrulecolor{darkgreen}%
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -7628,10 +7556,6 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -7767,10 +7691,6 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -8244,10 +8164,6 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -8583,10 +8499,6 @@ El cliente con DNI
 
 \color inherit
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
