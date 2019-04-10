@@ -115,7 +115,7 @@ Considere la siguiente especificación Z:
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $A\triangleq\left[\ldots\right]$
+\begin_inset Formula $A==\left[\ldots\right]$
 \end_inset
 
 
@@ -124,7 +124,7 @@ Considere la siguiente especificación Z:
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $Op_{A}^{1}\triangleq\left[\Delta A\ldots\right]$
+\begin_inset Formula $Op_{A}^{1}==\left[\Delta A\ldots\right]$
 \end_inset
 
 
@@ -133,7 +133,7 @@ Considere la siguiente especificación Z:
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $Op_{A}^{2}\triangleq\left[\Delta A\ldots\right]$
+\begin_inset Formula $Op_{A}^{2}==\left[\Delta A\ldots\right]$
 \end_inset
 
 
@@ -142,7 +142,7 @@ Considere la siguiente especificación Z:
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $E\triangleq\left[f:\mathbb{N}\nrightarrow A\right]$
+\begin_inset Formula $E==\left[f:\mathbb{N}\nrightarrow A\right]$
 \end_inset
 
 
@@ -1138,7 +1138,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $esperando'=esperando\backslash\left\{ next\left(esperando\right)\right\} $
+\begin_inset Formula $esperando'=esperando\backslash\left\{ next\left(esperando\right)\right\} \cup\left\{ activo\right\} $
 \end_inset
 
 
@@ -1267,7 +1267,7 @@ Solución incorrecta
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $edad::=adulto|niño$
+\begin_inset Formula $edad::=mayor|menor$
 \end_inset
 
 
@@ -1330,7 +1330,7 @@ Solución correcta
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $adultos:\mathbb{P}PERSONA$
+\begin_inset Formula $mayores:\mathbb{P}PERSONA$
 \end_inset
 
 
@@ -1501,7 +1501,7 @@ Observemos primero que las funciones no son un tipo, sino un conjunto.
  es simplemente un sinónimo de 
 \color purple
 
-\begin_inset Formula $X\times Y$
+\begin_inset Formula $\mathbb{P}\left(X\times Y\right)$
 \end_inset
 
 
@@ -4851,7 +4851,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $n=\in dom\left(us\right)\land n?\notin dom\left(gs\right)$
+\begin_inset Formula $n\in dom\left(us\right)\land n?\notin dom\left(gs\right)$
 \end_inset
 
 
@@ -6781,7 +6781,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $Login\triangleq LoginOk\lor WrongUser\lor AlreadyLogged\lor InvalidLogin$
+\begin_inset Formula $Login==LoginOk\lor WrongUser\lor AlreadyLogged\lor InvalidLogin$
 \end_inset
 
 
@@ -9905,7 +9905,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $a'=random\left(dom\left(ps'\right)\right)$
+\begin_inset Formula $a'=random\left(\left\{ x:ID|x\in dom\left(ps'\right)\land ps\left(x\right).e=activo\right\} \right)$
 \end_inset
 
 
@@ -10237,7 +10237,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\forall i:ID|i\in dom\left(ps\right)\bullet\exists PROCESOKillOk$
+\begin_inset Formula $\forall i:ID|i\in dom\left(ps\right)\bullet\exists PROCESOSuspendOk$
 \end_inset
 
 
@@ -10337,7 +10337,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $PROCESOKillNowOk\triangleq PROCESOSuspendOk\fatsemi PROCESOKillOk$
+\begin_inset Formula $PROCESOKillNowOk==PROCESOSuspendOk\fatsemi PROCESOKillOk$
 \end_inset
 
 
@@ -10346,7 +10346,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $SistemaKillNowOk\triangleq SistemaSuspendOk\fatsemi SistemaKillOk$
+\begin_inset Formula $SistemaKillNowOk==SistemaSuspendOk\fatsemi SistemaKillOk$
 \end_inset
 
 
@@ -10739,7 +10739,7 @@ Definiciones axiomáticas
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $in:USUARIO\nrightarrow GRUPO$
+\begin_inset Formula $in:GRUPO\leftrightarrow USUARIO$
 \end_inset
 
 
@@ -11486,7 +11486,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $AddUser\triangleq AddUserOk\lor UsuarioTienePermiso$
+\begin_inset Formula $AddUser==AddUserOk\lor UsuarioTienePermiso$
 \end_inset
 
 
@@ -11959,7 +11959,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $AddGrp\triangleq AddGrpOk\lor GrupoTienePermiso$
+\begin_inset Formula $AddGrp==AddGrpOk\lor GrupoTienePermiso$
 \end_inset
 
 
@@ -12138,7 +12138,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $u?\mapsto reader\in us\lor reader\in ran\left(\left(ran\left(u?\triangleleft in\right)\right)\triangleleft gs\right)$
+\begin_inset Formula $u?\mapsto reader\in us\lor dom\left(gs\triangleright\left\{ reader\right\} \right)\triangleleft in\triangleright\left\{ u\right\} \neq\emptyset$
 \end_inset
 
 
@@ -12370,7 +12370,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $u?\mapsto reader\notin us\land reader\notin ran\left(\left(ran\left(u?\triangleleft in\right)\right)\triangleleft gs\right)$
+\begin_inset Formula $u?\mapsto reader\notin us\land dom\left(gs\triangleright\left\{ reader\right\} \right)\triangleleft in\triangleright\left\{ u\right\} =\emptyset$
 \end_inset
 
 
@@ -12432,7 +12432,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $IsReader\triangleq IsReaderOk\lor IsReaderError$
+\begin_inset Formula $IsReader==IsReaderOk\lor IsReaderError$
 \end_inset
 
 
@@ -12611,7 +12611,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $u?\mapsto writer\in us\lor writer\in ran\left(\left(ran\left(u?\triangleleft in\right)\right)\triangleleft gs\right)$
+\begin_inset Formula $u?\mapsto writer\in us\lor dom\left(gs\triangleright\left\{ writer\right\} \right)\triangleleft in\triangleright\left\{ u\right\} =\emptyset$
 \end_inset
 
 
@@ -12843,7 +12843,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $u?\mapsto writer\notin us\land writer\notin ran\left(\left(ran\left(u?\triangleleft in\right)\right)\triangleleft gs\right)$
+\begin_inset Formula $u?\mapsto writer\notin us\land dom\left(gs\triangleright\left\{ writer\right\} \right)\triangleleft in\triangleright\left\{ u\right\} =\emptyset$
 \end_inset
 
 
@@ -12905,7 +12905,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Standard
 
 \color purple
-\begin_inset Formula $IsWriter\triangleq IsWriterOk\lor IsWriterError$
+\begin_inset Formula $IsWriter==IsWriterOk\lor IsWriterError$
 \end_inset
 
 
@@ -13421,7 +13421,7 @@ Requerimientos
 \end_layout
 
 \begin_layout Standard
-Una solicitud de póliza de seguro de una cierta compaía de seguros debe
+Una solicitud de póliza de seguro de una cierta compañía de seguros debe
  pasar por varias etapas antes de ser comunicada la decisión de la empresa
  al solicitante.
  La solicitud consta de varios datos que debe llenar el solicitante y de
