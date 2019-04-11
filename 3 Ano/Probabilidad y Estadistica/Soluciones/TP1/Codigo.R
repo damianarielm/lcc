@@ -22,3 +22,5 @@ hist(inclinación, col="Green", breaks = 10, xlab = "Inclinación (grados)", ylab 
 hist(diametro, col="Green", breaks = 15, xlab = "Diámetro (cm)", ylab = "Cantidad de árboles", ylim=c(0,70), main="", xlim = c(0,180), axes=F)
 axis(1, at=seq(0,200,20))
 axis(2)
+
+boxplot(altura ~ especie)
