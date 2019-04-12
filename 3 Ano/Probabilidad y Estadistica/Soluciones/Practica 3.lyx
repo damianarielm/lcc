@@ -82672,7 +82672,7 @@ Soluciones
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset Formula $P\left(B\right)=\frac{4+6+4}{\#S}=\frac{14}{16}$
+\begin_inset Formula $P\left(B\right)=\frac{1+4+6+4}{\#S}=\frac{15}{16}$
 \end_inset
 
 .
@@ -83583,35 +83583,46 @@ No es correcto pues los resultados no son igualmente probables:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(126\right)=\frac{6}{27}=P\left(135\right)=P\left(234\right)$
+\begin_inset Formula $P\left(126\right)=\frac{6}{6^{3}}=P\left(135\right)=P\left(234\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(144\right)=\frac{3}{27}=P\left(225\right)$
+\begin_inset Formula $P\left(144\right)=\frac{3}{6^{3}}=P\left(225\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(333\right)=\frac{1}{27}$
+\begin_inset Formula $P\left(333\right)=\frac{1}{6^{3}}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(136\right)=\frac{6}{27}=P\left(145\right)=P\left(235\right)$
+\begin_inset Formula $P\left(136\right)=\frac{6}{6^{3}}=P\left(145\right)=P\left(235\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(244\right)=\frac{3}{27}=P\left(226\right)=P\left(334\right)$
+\begin_inset Formula $P\left(244\right)=\frac{3}{6^{3}}=P\left(226\right)=P\left(334\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(9\right)=\frac{25}{6^{3}}$
+\end_inset
+
+; 
+\begin_inset Formula $P\left(10\right)=\frac{27}{6^{3}}$
 \end_inset
 
 .
@@ -83898,10 +83909,6 @@ Soluciones
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -83922,7 +83929,7 @@ Sabiendo que el primer artículo resultó defectuoso, ¿cuál es la probabilidad
 \end_layout
 
 \begin_layout Enumerate
-¿Cuál es la probabilidad de que ambos artículos resulten buenos?
+¿Cuál es la probabilidad de que ambos artículos resulten defectuosos?
 \end_layout
 
 \begin_layout Paragraph
@@ -83976,7 +83983,7 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(B\right)=\frac{75\cdot}{9900}=\frac{75}{100}$
+\begin_inset Formula $P\left(B\right)=\frac{75\cdot99}{9900}=\frac{75}{100}$
 \end_inset
 
 .
@@ -84006,7 +84013,7 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P\left(\overline{A}|B\right)=\frac{74}{99}$
+\begin_inset Formula $P\left(A\cap\overline{B}\right)=P\left(\overline{\overline{A}\cup B}\right)=1-P\left(\overline{A}\cup B\right)=1-\left[\frac{25}{100}+\frac{75}{100}-\frac{25\cdot75}{9900}\right]$
 \end_inset
 
 .
@@ -84873,7 +84880,7 @@ Solución
 
 .
  
-\begin_inset Formula $P\left(A\right)=0.4$
+\begin_inset Formula $P\left(A\right)=\frac{40}{100}$
 \end_inset
 
 .
@@ -84885,7 +84892,7 @@ Solución
 
 .
  
-\begin_inset Formula $P\left(B\right)=0.35$
+\begin_inset Formula $P\left(B\right)=\frac{35}{100}$
 \end_inset
 
 .
@@ -84897,7 +84904,7 @@ Solución
 
 .
  
-\begin_inset Formula $P\left(C\right)=0.25$
+\begin_inset Formula $P\left(C\right)=\frac{25}{100}$
 \end_inset
 
 .
@@ -84912,21 +84919,21 @@ Solución
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $P\left(D|A\right)=0.04$
+\begin_inset Formula $P\left(D|A\right)=\frac{4}{100}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(D|B\right)=0.05$
+\begin_inset Formula $P\left(D|B\right)=\frac{5}{100}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(D|C\right)=0.02$
+\begin_inset Formula $P\left(D|C\right)=\frac{2}{100}$
 \end_inset
 
 .
@@ -84942,7 +84949,7 @@ Solución
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $=\frac{P\left(D|B\right)\cdot P\left(B\right)}{P\left(D|A\right)\cdot P\left(A\right)+P\left(D|B\right)\cdot P\left(B\right)+P\left(D|C\right)\cdot P\left(C\right)}=0.45$
+\begin_inset Formula $=\frac{P\left(D|B\right)\cdot P\left(B\right)}{P\left(D|A\right)\cdot P\left(A\right)+P\left(D|B\right)\cdot P\left(B\right)+P\left(D|C\right)\cdot P\left(C\right)}=\frac{45}{100}$
 \end_inset
 
 .
@@ -85102,7 +85109,7 @@ Pruebe que si
 \end_inset
 
  son sucesos mutuamente excluyentes, con 
-\begin_inset Formula $P\left(B\right)\neq0$
+\begin_inset Formula $\text{\ensuremath{P\left(B\right)\neq0}}$
 \end_inset
 
 , entonces 
@@ -85499,7 +85506,11 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No lo son pues: 
+\begin_inset Formula $\text{\ensuremath{P\left(A\cap B\cap C\right)=P\left(\left(A\cap B\right)\cap C\right)=0\neq P\left(A\cap B\right)\cdot P\left(C\right)}}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
