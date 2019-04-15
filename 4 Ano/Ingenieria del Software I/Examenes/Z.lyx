@@ -13599,6 +13599,15 @@ Tipos
 \begin_layout Standard
 
 \color purple
+\begin_inset Formula $CADENA==seqCARACTER$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
 \begin_inset Formula $error::=si|no$
 \end_inset
 
@@ -13714,7 +13723,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $cuerpo:seq\left(seqCARACTER\right)$
+\begin_inset Formula $cuerpo:seq\left(CADENA\right)$
 \end_inset
 
 
@@ -13912,7 +13921,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $cadena?:seqCARACTER$
+\begin_inset Formula $cadena?:CADENA$
 \end_inset
 
 
@@ -14246,7 +14255,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $cadena?:seqCARACTER$
+\begin_inset Formula $cadena?:CADENA$
 \end_inset
 
 
@@ -14993,7 +15002,7 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="3">
+<lyxtabular version="3" rows="6" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -15164,45 +15173,7 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\forall i:ID|i\in dom\left(s\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset space \quad{}
-\end_inset
-
-
-\color purple
-
-\begin_inset Formula $\bullet\exists DOCUMENTOBuscarOk\left(s\left(i\right)=\Theta DOCUMENTO\land i\mapsto lineas!\in r!\right)$
+\begin_inset Formula $r!=\left\{ \left(x,y\right):ID\times\mathbb{P}\mathbb{N}_{1}|x\in dom\left(s\right)\land\right.$
 \end_inset
 
 
@@ -15234,9 +15205,13 @@ arrayrulecolor{darkgreen}%
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset space \quad{}
+\end_inset
+
 
 \color purple
-\begin_inset Formula $dom\left(r!\right)\subseteq dom\left(s\right)$
+
+\begin_inset Formula $\left.\exists DOCUMENTOBuscarOk\land s\left(x\right)=\Theta DOCUMENTO\land y=lineas!\right\} $
 \end_inset
 
 
@@ -15244,7 +15219,7 @@ arrayrulecolor{darkgreen}%
 
 \end_inset
 </cell>
-<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout

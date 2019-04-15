@@ -365,6 +365,123 @@ Calcule e interprete la esperanza matemática, varianza y desvío estándar
 .
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F\left(x\right)=P\left(X\leq x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $p\left(x\right)=P\left(X=x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $p\left(1\right)=F\left(1\right)=\frac{1}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(2\right)=F\left(2\right)-p\left(1\right)=\frac{1}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(3\right)=F\left(3\right)-\left[p\left(1\right)+p\left(2\right)\right]=F\left(3\right)-F\left(2\right)=\frac{3}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(4\right)=1-F\left(3\right)=\frac{1}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+AGREGAR GRAFICAS DE 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(1\leq X\leq3\right)=p\left(1\right)+p\left(2\right)+p\left(3\right)=F\left(3\right)=\frac{3}{4}=P\left(X\leq3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X<3\right)=p\left(1\right)+p\left(2\right)=F\left(2\right)=P\left(X\leq2\right)=\frac{3}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X>1,4\right)=P\left(X\geq2\right)=1-P\left(X<2\right)=1-P\left(X\leq1\right)=1-F\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E\left(X\right)=1\cdot p\left(1\right)+2\cdot p\left(2\right)+3\cdot p\left(3\right)+4\cdot p\left(4\right)=\frac{11}{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(X^{2}\right)=1^{2}p\left(1\right)+2^{2}p\left(2\right)+3^{2}p\left(3\right)+4^{2}p\left(4\right)=\frac{17}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(X\right)=E\left(\left[X-E\left(X\right)\right]^{2}\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\frac{17}{2}-\frac{121}{16}=\frac{15}{16}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 Algunas variables aleatorias discretas famosas
@@ -373,7 +490,11 @@ Algunas variables aleatorias discretas famosas
 \begin_layout Enumerate-Resume
 A fin de verificar sus estados financieros las compañías tienen auditores
  permanentes para revisar los asientos contables.
- Se sabe que un empleado efectúa un asiento erróneo con probabilidad 0,05.
+ Se sabe que un empleado efectúa un asiento erróneo con probabilidad 
+\begin_inset Formula $\frac{5}{100}$
+\end_inset
+
+.
  Un auditor verifica 3 asientos al azar.
 \end_layout
 
@@ -470,6 +591,80 @@ número de artículos defectuosos encontrados
  En ambos casos calcular la función de probabilidad acumulada.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: Extracción de tres articulos con reposición.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{Artículo defectuoso encontrado}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D\right)=\frac{4}{20}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim B\left(3,\frac{4}{20}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\in\left[0,3\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\binom{3}{x}\left(\frac{1}{5}\right)^{x}\left(\frac{4}{5}\right)^{3-x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{E}'$
+\end_inset
+
+: Extracción de tres articulos sin reposición.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim H\left(20,4,3\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\in\left[0,3\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\frac{\binom{4}{x}\cdot\binom{20-4}{3-x}}{\binom{20}{3}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate-Resume
 Un lote de 25 piezas contiene 3 que son defectuosas.
  Un comprador utiliza el siguiente plan de muestreo para la aceptación:
@@ -730,44 +925,527 @@ Para los valores de a) hallados, obtenga:
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+La función de probabilidad puntual de una variable aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ que determina la ganancia en millones de dólares de una empresa si realiza
+ una determinada operación está definida de la siguiente manera:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Halle:
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Cuánto espera ganar la empresa al realizar la operación.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $E\left(-X\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $V\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $E\left(X\right)=\left(-2\right)\cdot\frac{1}{3}+1\cdot\frac{1}{6}+3\cdot\frac{1}{2}=1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $E\left(-X\right)=\left(-1\right)\cdot E\left(X\right)=-1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\left[4\cdot\frac{1}{3}+1\cdot\frac{1}{6}+9\cdot\frac{1}{2}\right]-1=5$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un aparato consta de 15 componentes que funcionan independientemente.
+ La probabilidad de funcionamiento de una componente en un período de tiempo
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ es 0,97.
+ Calcule la probabilidad de que en un período de tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+fallen 2 componentes,
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+fallen a lo sumo 2 componentes,
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+fallen por lo menos 2 componentes,
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+funcionen por lo menos 13 componentes.
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Un fabricante de piezas las envía a sus clientes en lotes de 20.
+ La probabilidad de que una pieza resulte defectuosa es 
+\begin_inset Formula $\frac{6}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcule la probabilidad de que un lote no contenga piezas defectuosas.
+\end_layout
+
+\begin_layout Enumerate
+Calcule la esperanza matemática de número de piezas defectuosas por lote
+ e interprete su significado.
+\end_layout
+
+\begin_layout Enumerate
+Si un cliente recibe 10 lotes, calcule la esperanza matemática de la v.
+ a.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+número de lotes que tienen a lo sumo una pieza defectuosa
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{Pieza defectuosa}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D\right)=\frac{6}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+número de piezas defectuosas en un lote de 20
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim B\left(20,\frac{6}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=p\left(x\right)=\binom{20}{x}\cdot\left(\frac{6}{100}\right)^{x}\cdot\left(\frac{94}{100}\right)^{20-x}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x\in\left[0,20\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\left(0\right)=1\cdot1\cdot\left(\frac{94}{100}\right)^{20}=\left(\frac{94}{100}\right)^{20}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E\left(X\right)=20\cdot\frac{6}{100}=\frac{120}{100}$
+\end_inset
+
+.
+ En gerenal, la cantidad de piezas defectuosas en cada lote será 1.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $D'=\left\{ \text{Lote con a lo sumo una pieza defectuosa}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D'\right)=P\left(X\leq1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y\sim B\left(10,P\left(X\leq1\right)\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(Y=y\right)=\binom{10}{y}\cdot P\left(X\leq1\right)^{y}\cdot\left[1-P\left(X\leq1\right)\right]^{10-y}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $y\in\left[0,10\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(Y\right)=10\cdot P\left(X\leq1\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+En una fábrica dos máquinas producen el mismo artículo.
+ La máquina 
+\begin_inset Formula $A$
+\end_inset
+
+ produce diariamente el doble de artículos que la máquina 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ El 2% de los artículos producidos por la máquina 
+\begin_inset Formula $A$
+\end_inset
+
+ son defectuosos al igual que el 3% de los producidos por 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Si se combina la producción diaria de ambas máquinas y luego se toman al
+ azar 10 artículos.
+ ¿Cuál es la probabilidad de encontrar a lo sumo dos defectuosos?
+\end_layout
+
+\begin_layout Enumerate
+Un sistema de protección está constituido por n radares que funcionan independie
+ntemente.
+ La probabilidad de que un radar detecte un cohete que ingrese a la zona
+ de protección es 0,9.
+ ¿Cuál es el número de radares necesarios para que la probabilidad de detectar
+ un cohete que ingrese a la zona de protección sea 0, 999?
+\end_layout
+
+\begin_layout Enumerate
+Dos aparatos funcionan durante un tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ El primer aparato consta de 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ bloques, el segundo de 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+.
+ Durante el tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+ cada bloque del primer aparato falla independientemente de los otros con
+ probabilidad 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ y cada bloque del segundo aparato falla independientemente de los otros
+ con probabilidad 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+.
+ Los bloques del primer aparato fallan independientemente de los del segundo.
+ Calcule la probabilidad de que durante el tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+ fallen exactamente 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+ bloques del primer aparato y 
+\begin_inset Formula $m_{2}$
+\end_inset
+
+ del segundo.
+\end_layout
+
+\begin_layout Enumerate
+El 30% de los aspirantes a un trabajo tienen entrenamiento avanzado en programac
+ión.
+ Los aspirantes son entrevistados al azar y en forma sucesiva.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad de encontrar el primer aspirante con entrenamiento
+ avanzado en programación en la quinta entrevista?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de encontrar el quinto aspirante con entrenamiento
+ avanzado en programación en la décima entrevista?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El número de artículos demandados por semana en un negocio es una v.
+ a.
+ de Poisson con tasa 7 artículos/semana.
+ ¿Qué existencia de dicho artículo debe tener dicho negocio al comenzar
+ la semana, para satisfacer la demanda con probabilidad mayor o igual que
+ 0,99?
+\end_layout
+
+\begin_layout Enumerate
+En cierto punto de una ruta se coloca un dispositivo para contar el número
+ de autos que pasan por allí en un período de tiempo dado.
+ El número de autos que pasan por allí en un período de un minuto es una
+ v.
+ a.
+ de Poisson con tasa 
+\begin_inset Formula $\lambda=6$
+\end_inset
+
+.
+ El dispositivo puede fallar con una probabilidad 0,01 (se entiende por
+ fallar que pase un vehículo y el dispositivo no lo detecte).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcule la probabilidad de que en un período de 2 minutos pasen 7 autos.
+\end_layout
+
+\begin_layout Enumerate
+Calcule la probabilidad de que en un período de 2 minutos el dispositivo
+ registre 5 autos cuando en realidad pasaron 7.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una fábrica produce piezas de las cuales el 2% son defectuosas.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcule la probabilidad de que en un lote de 100 piezas no haya piezas defectuos
+as.
+\end_layout
+
+\begin_layout Enumerate
+Calcule la probabilidad de que en un lote de 100 piezas haya a lo sumo 3
+ piezas defectuosas.
+\end_layout
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Standard
+Aunque la variable aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+número de piezas defectuosas en un lote de 100 piezas
+\begin_inset Quotes frd
+\end_inset
+
+, tiene claramente distribución binomial, el problema puede aproximarse
+ utilizando una variable aleatoria con distribución de Poisson.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
