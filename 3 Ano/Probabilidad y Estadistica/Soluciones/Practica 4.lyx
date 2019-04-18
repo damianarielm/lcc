@@ -5,6 +5,9 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\end_preamble
 \use_default_options true
 \begin_modules
 multicol
@@ -110,6 +113,781 @@ Se arrojan en forma sucesiva dos dados.
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="12">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $11$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $12$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{4}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{5}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{6}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{5}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{4}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[ytick={1/36,2/36,3/36,4/36,5/36,6/36}, yticklabels={$1/36$,$2/36$,$3
+/36$,$4/36$,$5/36$,$6/36$}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[ycomb] plot coordinates
+\end_layout
+
+\begin_layout Plain Layout
+
+    {(2,1/36) (3,2/36) (4,3/36) (5,4/36) (6,5/36) (7,6/36) (8,5/36) (9,4/36)
+ (10,3/36) (11,2/36) (12,1/36)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="12">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $11$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $12$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(X\leq x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{6}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{10}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{15}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{21}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{26}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{30}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{33}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{35}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{36}{36}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[ytick={3/36,6/36,10/36,15/36,21/36,26/36,30/36,33/36,36/36},
+ yticklabels={$3/36$,$6/36$,$10/36$,$15/36$,$21/36$,$26/36$,$30/36$,$33/36$,$36/
+36$}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[jump mark left] coordinates
+\end_layout
+
+\begin_layout Plain Layout
+
+    {(2,1/36) (3,3/36) (4,6/36) (5,10/36) (6,15/36) (7,21/36) (8,26/36)
+ (9,30/36) (10,33/36) (11,35/36) (12,36/36)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{E\left(X\right)={\displaystyle \sum_{i=2}^{12}}x_{i}p\left(x_{i}\right)=2\cdot\frac{1}{36}+3\cdot\frac{2}{36}+4\cdot\frac{3}{36}+5\cdot\frac{4}{36}+\ldots+12\cdot\frac{1}{36}=\frac{252}{36}=7}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{E\left(X^{2}\right)={\displaystyle \sum_{i=2}^{12}}x_{i}^{2}p\left(x_{i}\right)=2^{2}\cdot\frac{1}{36}+3^{2}\cdot\frac{2}{36}+4^{2}\cdot\frac{3}{36}+5^{2}\cdot\frac{4}{36}+\ldots+12^{2}\cdot\frac{1}{36}=\frac{1974}{36}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\frac{1974}{36}-49=\frac{1974}{36}-\frac{1764}{36}=\frac{210}{36}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{X}=\sqrt{V\left(X\right)}=\frac{\sqrt{210}}{6}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 La función de distribución acumulada 
 \begin_inset Formula $F\left(t\right)$
@@ -131,6 +909,10 @@ F\left(t\right)=\begin{cases}
 \end{cases}
 \]
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -162,6 +944,91 @@ Calcule e interprete la esperanza matemática, varianza y desvío estándar
 .
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $p\left(3\right)=F\left(3\right)=\frac{1}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(4\right)=F\left(4\right)-F\left(3\right)=\frac{1}{2}-\frac{1}{3}=\frac{1}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(5\right)=F\left(5\right)-F\left(4\right)=\frac{2}{3}-\frac{1}{2}=\frac{1}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(6\right)=F\left(6\right)-F\left(5\right)=1-\frac{2}{3}=\frac{1}{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(3<T\leq5\right)=p\left(4\right)+p\left(5\right)=\frac{2}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{E\left(X\right)={\displaystyle \sum_{i=3}^{6}}x_{i}p\left(x_{i}\right)=3\cdot\frac{1}{3}+4\cdot\frac{1}{6}+5\cdot\frac{1}{6}+6\cdot\frac{1}{3}=\frac{27}{6}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{E\left(X^{2}\right)={\displaystyle \sum_{i=3}^{6}}x_{i}^{2}p\left(x_{i}\right)=3^{2}\cdot\frac{1}{3}+4^{2}\cdot\frac{1}{6}+5^{2}\cdot\frac{1}{6}+6^{2}\cdot\frac{1}{3}=\frac{131}{6}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\frac{131}{6}-\frac{27}{6}=\frac{104}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{X}=\sqrt{V\left(X\right)}=\sqrt{\frac{104}{6}}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 La siguiente tabla muestra la función de distribución acumulada de una variable
@@ -312,6 +1179,10 @@ La siguiente tabla muestra la función de distribución acumulada de una variabl
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -370,14 +1241,10 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $F\left(x\right)=P\left(X\leq x\right)$
+\begin_inset space ~
 \end_inset
 
-, 
-\begin_inset Formula $p\left(x\right)=P\left(X=x\right)$
-\end_inset
 
-.
 \end_layout
 
 \begin_deeper
@@ -389,33 +1256,21 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $p\left(2\right)=F\left(2\right)-p\left(1\right)=\frac{1}{4}$
+\begin_inset Formula $p\left(2\right)=F\left(2\right)-F\left(1\right)=\frac{2}{8}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $p\left(3\right)=F\left(3\right)-\left[p\left(1\right)+p\left(2\right)\right]=F\left(3\right)-F\left(2\right)=\frac{3}{8}$
+\begin_inset Formula $p\left(3\right)=F\left(3\right)-F\left(2\right)=\frac{3}{8}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $p\left(4\right)=1-F\left(3\right)=\frac{1}{4}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-AGREGAR GRAFICAS DE 
-\begin_inset Formula $P$
-\end_inset
-
- y 
-\begin_inset Formula $p$
+\begin_inset Formula $p\left(4\right)=F\left(4\right)-F\left(3\right)=\frac{2}{8}$
 \end_inset
 
 .
@@ -445,7 +1300,7 @@ AGREGAR GRAFICAS DE
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P\left(X>1,4\right)=P\left(X\geq2\right)=1-P\left(X<2\right)=1-P\left(X\leq1\right)=1-F\left(1\right)$
+\begin_inset Formula $\text{\ensuremath{P\left(X>1,4\right)=P\left(X\geq2\right)=1-P\left(X<2\right)=1-P\left(X\leq1\right)=1-F\left(1\right)=\frac{7}{8}}}$
 \end_inset
 
 .
@@ -461,24 +1316,28 @@ AGREGAR GRAFICAS DE
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $E\left(X\right)=1\cdot p\left(1\right)+2\cdot p\left(2\right)+3\cdot p\left(3\right)+4\cdot p\left(4\right)=\frac{11}{4}$
+\begin_inset Formula $E\left(X\right)=1\cdot p\left(1\right)+2\cdot p\left(2\right)+3\cdot p\left(3\right)+4\cdot p\left(4\right)=\frac{22}{8}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E\left(X^{2}\right)=1^{2}p\left(1\right)+2^{2}p\left(2\right)+3^{2}p\left(3\right)+4^{2}p\left(4\right)=\frac{17}{2}$
+\begin_inset Formula $E\left(X^{2}\right)=1^{2}p\left(1\right)+2^{2}p\left(2\right)+3^{2}p\left(3\right)+4^{2}p\left(4\right)=\frac{68}{8}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $V\left(X\right)=E\left(\left[X-E\left(X\right)\right]^{2}\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\frac{17}{2}-\frac{121}{16}=\frac{15}{16}$
+\begin_inset Formula $V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\frac{68}{8}-\frac{22}{8}=\frac{46}{8}$
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -529,6 +1388,94 @@ Nota
 No se considera la posibilidad de que el auditor cometa errores.
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Se auditan tres asientos al azar
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{El asiento tiene errores}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=\frac{5}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si consideramos que el tamaño de la muestra es despreciable con relación
+ al tamaño de la población, luego 
+\begin_inset Formula $Y\sim B\left(3,\frac{5}{100}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(0\right)=\binom{3}{0}\left(\frac{5}{100}\right)^{0}\left(\frac{95}{100}\right)^{3-0}=\left(\frac{95}{100}\right)^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(1\right)=\binom{3}{1}\left(\frac{5}{100}\right)^{1}\left(\frac{95}{100}\right)^{3-1}=3\cdot\left(\frac{5}{100}\right)\left(\frac{95}{100}\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(2\right)=\binom{3}{2}\left(\frac{5}{100}\right)^{2}\left(\frac{95}{100}\right)^{3-2}=3\cdot\left(\frac{5}{100}\right)^{2}\left(\frac{95}{100}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(3\right)=\binom{3}{3}\left(\frac{5}{100}\right)^{3}\left(\frac{95}{100}\right)^{3-3}=\left(\frac{5}{100}\right)^{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $p\left(2\right)+p\left(3\right)=3\cdot\left(\frac{5}{100}\right)^{2}\left(\frac{95}{100}\right)+\left(\frac{5}{100}\right)^{3}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate-Resume
 Considere en la situación del problema anterior la v.
@@ -549,7 +1496,7 @@ número de asientos revisados hasta encontrar el primer asiento erróneo
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Determine el recorrido de 
 \begin_inset Formula $Z$
 \end_inset
@@ -557,9 +1504,32 @@ Determine el recorrido de
 .
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule 
 \begin_inset Formula $P\left(Z=5\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R_{Z}=\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Z\sim G\left(\frac{5}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(Z=5\right)=\left(\frac{95}{100}\right)^{5-1}\left(\frac{5}{100}\right)=\left(\frac{95}{100}\right)^{4}\left(\frac{5}{100}\right)$
 \end_inset
 
 .
@@ -600,7 +1570,15 @@ Solución
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
-: Extracción de tres articulos con reposición.
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Extracción de tres artículos con reposición
+\begin_inset Quotes frd
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -609,19 +1587,19 @@ Solución
 
 .
  
-\begin_inset Formula $P\left(D\right)=\frac{4}{20}$
+\begin_inset Formula $P\left(D\right)=\frac{4}{20}=\frac{1}{5}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $X\sim B\left(3,\frac{4}{20}\right)$
+\begin_inset Formula $X\sim B\left(3,\frac{1}{5}\right)$
 \end_inset
 
 .
  
-\begin_inset Formula $x\in\left[0,3\right]$
+\begin_inset Formula $R_{X}=\left\{ 0,\ldots,3\right\} $
 \end_inset
 
 .
@@ -632,24 +1610,98 @@ Solución
 .
 \end_layout
 
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
 \begin_layout Itemize
-COMPLETAR.
+\begin_inset Formula $p\left(0\right)=1\cdot1\cdot\left(\frac{4}{5}\right)^{3}=\left(\frac{4}{5}\right)^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(1\right)=3\cdot\left(\frac{1}{5}\right)\left(\frac{4}{5}\right)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(2\right)=3\cdot\left(\frac{1}{5}\right)^{2}\left(\frac{4}{5}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(3\right)=1\cdot\left(\frac{1}{5}\right)^{3}=\left(\frac{1}{5}\right)^{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(0\right)=p\left(0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(1\right)=F\left(0\right)+p\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(2\right)=F\left(1\right)+p\left(2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(3\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 \begin_inset Formula $\mathcal{E}'$
 \end_inset
 
-: Extracción de tres articulos sin reposición.
+: Extracción de tres artículos sin reposición.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $X\sim H\left(20,4,3\right)$
+\begin_inset Formula $X'\sim H\left(20,4,3\right)$
 \end_inset
 
 .
  
-\begin_inset Formula $x\in\left[0,3\right]$
+\begin_inset Formula $R_{X'}=R_{X}$
 \end_inset
 
 .
@@ -721,7 +1773,7 @@ número de inspecciones necesarias para obtener la primera falla
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Determine la distribución de probabilidades de 
 \begin_inset Formula $X$
 \end_inset
@@ -729,12 +1781,12 @@ Determine la distribución de probabilidades de
 .
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Halle la probabilidad de que sean necesarios 5 días para encontrar la primera
  falla.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Halle 
 \begin_inset Formula $p$
 \end_inset
@@ -757,12 +1809,12 @@ gran
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que sea necesario seleccionar 8 llantas del lote
  para obtener 5 en buen estado.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule el número promedio de selecciones para obtener 5 llantas en buen
  estado.
 \end_layout
@@ -783,7 +1835,7 @@ El número de moléculas que hay en un
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que en 
 \begin_inset Formula $1cm^{3}$
 \end_inset
@@ -791,7 +1843,7 @@ Calcule la probabilidad de que en
  de aire no se encuentre ninguna molécula.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que en 
 \begin_inset Formula $1cm^{3}$
 \end_inset
@@ -799,7 +1851,7 @@ Calcule la probabilidad de que en
  de aire se encuentre a lo sumo dos moléculas.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 ¿Cuál es el mínimo volumen de aire en el que la probabilidad de encontrar
  por lo menos una molécula es mayor o igual que 0,99?
 \end_layout
@@ -819,12 +1871,12 @@ El número de clientes que entran en un negocio es una v.
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que en un período de 2 minutos no ingresen clientes
  al negocio.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Se observa el número de clientes que ingresan al negocio durante 15 intervalos
  de 2 minutos.
  Calcule la probabilidad de que en a lo sumo 5 de esos intervalos no se
@@ -845,17 +1897,17 @@ El número de defectos en un rollo de alambre de 100 metros es una v.
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que en 50 metros de alambre se encuentren a lo
  sumo dos defectos.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que en 10 rollos de 100 metros de alambre c/u,
  haya a lo sumo uno con uno o más defectos.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la esperanza matemática de la variable aleatoria 
 \begin_inset Quotes fld
 \end_inset
