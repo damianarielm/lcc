@@ -10,6 +10,10 @@
 \usepackage{colortbl}
 \definecolor{darkgreen}{RGB}{20,155,82}
 \definecolor{purple}{RGB}{141,24,143}
+
+\usepackage{tikz}
+\usepackage{tikz-uml}
+\tikzset{singlestate/.style={draw,fill=yellow!20, rounded corners}}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -89,7 +93,7 @@ Z
 
 \begin_layout Standard
 Para cada uno de los ejercicios se deberá escribir las designaciones de
- los términos for- males primitivos que se utilizarán en el modelo (según
+ los términos formales primitivos que se utilizarán en el modelo (según
  se explicó en el apunte mencionado) y luego se deberá escribir un modelo
  Z de los requerimientos.
 \end_layout
@@ -14329,8 +14333,45 @@ Describa un sistema de iluminación consistente en una lámpara y dos botones.
 Solución
 \end_layout
 
+\begin_layout Itemize
+Se presiona el botón 
+\begin_inset Formula $\approx$
+\end_inset
+
+ press.
+ Enviroment controled.
+ Shared.
+\end_layout
+
+\begin_layout Itemize
+Se enciende la lampara 
+\begin_inset Formula $\approx$
+\end_inset
+
+ on.
+ Machine controled.
+ Shared.
+\end_layout
+
+\begin_layout Itemize
+Se apaga la lampara 
+\begin_inset Formula $\approx$
+\end_inset
+
+ off.
+ Machine controled.
+ Shared.
+\end_layout
+
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Graphics
+	filename Images/iluminacion.png
+	scale 35
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -14353,8 +14394,86 @@ Las puertas de los aeropuertos están provistas de un mecanismo que permite
 Solución
 \end_layout
 
+\begin_layout Itemize
+Se abre la puerta 
+\begin_inset Formula $\approx$
+\end_inset
+
+ open.
+ Machine controled.
+ Shared.
+\end_layout
+
+\begin_layout Itemize
+Se cierra la puerta 
+\begin_inset Formula $\approx$
+\end_inset
+
+ close.
+ Machine controled.
+ Shared.
+\end_layout
+
+\begin_layout Itemize
+Hay al menos una persona en la zona 
+\begin_inset Formula $\approx$
+\end_inset
+
+ persona.
+ Enviroment controled.
+ Unshared.
+\end_layout
+
+\begin_layout Itemize
+Salen todas las personas de la zona 
+\begin_inset Formula $\approx$
+\end_inset
+
+ naie.
+ Enviroment controled.
+ Unshared.
+\end_layout
+
+\begin_layout Itemize
+El sensor detecta una persona 
+\begin_inset Formula $\approx$
+\end_inset
+
+ sensor.
+ Enviroment controled.
+ Shared.
+\end_layout
+
+\begin_layout Itemize
+Tiempo de cortesía 
+\begin_inset Formula $\approx$
+\end_inset
+
+ T.
+\end_layout
+
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Graphics
+	filename Images/aeropuerto1.png
+	scale 50
+	BoundingBox 10bp 0bp 500bp 302bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Images/aeropuerto2.png
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
