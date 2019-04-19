@@ -1740,6 +1740,80 @@ Calcule la probabilidad de que el lote sea aceptado.
  100 lotes.
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Extracción de tres artículos sin reposición
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{Artículo defectuoso encontrado}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D\right)=\frac{3}{25}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de piezas defectuosas en una muestra de tamaño 5
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim H\left(25,3,5\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{X}=\left\{ 0,\ldots,3\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\frac{\binom{3}{x}\cdot\binom{25-3}{5-x}}{\binom{25}{5}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=0\right)=\frac{1\cdot\binom{22}{5}}{\binom{25}{5}}=\frac{26334}{53130}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+PREGUNTAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate-Resume
 Supongamos que un mecanismo es inspeccionado regularmente al finalizar cada
@@ -1794,6 +1868,33 @@ Halle
  de modo que la probabilidad hallada en b) sea máxima.
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X\sim G\left(p\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=q^{x-1}p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X=5\right)=q^{4}p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+PREGUNTAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate-Resume
 Un 
@@ -1817,6 +1918,18 @@ Calcule la probabilidad de que sea necesario seleccionar 8 llantas del lote
 \begin_layout Enumerate
 Calcule el número promedio de selecciones para obtener 5 llantas en buen
  estado.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+PREGUNTAR.
+\end_layout
+
+\begin_layout Enumerate
+PREGUNTAR.
 \end_layout
 
 \end_deeper
@@ -1856,6 +1969,96 @@ Calcule la probabilidad de que en
  por lo menos una molécula es mayor o igual que 0,99?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X=0\right)=\frac{e^{-3}3^{0}}{0!}=e^{-3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X\leq2\right)=p\left(0\right)+p\left(1\right)+p\left(2\right)=e^{-3}+\frac{e^{-3}3^{1}}{1!}+\frac{e^{-3}3^{2}}{2!}=\frac{17}{2}e^{-3}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Recordemos que 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ representa el número de moléculas esperadas en un 
+\begin_inset Formula $cm^{3}$
+\end_inset
+
+ de aire.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y_{v}:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Número de moléculas en 
+\begin_inset Formula $v$
+\end_inset
+
+ 
+\begin_inset Formula $cm^{3}$
+\end_inset
+
+ de aire
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y_{v}\sim P\left(v\lambda\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(Y_{v}=y\right)=\frac{e^{-v\lambda}\left(v\lambda\right)^{y}}{y!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(Y_{v}\geq1\right)\geq0,99\iff P\left(Y_{v}=0\right)\leq0,01\iff e^{-v3}\leq0,01
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff-3v\leq\ln\left(0,01\right)\approx-4,605\iff v\apprge\frac{4,605}{3}=1,535
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Se sabe que el número de grietas que aparecen en una longitud dada de palanquill
