@@ -1,0 +1,889 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Variables aleatorias discretas
+\end_layout
+
+\begin_layout Chapter
+Distribución Binomial
+\end_layout
+
+\begin_layout Section
+Descripción
+\end_layout
+
+\begin_layout Standard
+La distribución binomial es una distribución de probabilidad discreta que
+ cuenta el número de éxitos en una secuencia de 
+\begin_inset Formula $n$
+\end_inset
+
+ ensayos de Bernoulli independientes entre sí, con una probabilidad fija
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ de ocurrencia del éxito entre los ensayos.
+\end_layout
+
+\begin_layout Standard
+Es decir, sean 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ un experimento, 
+\begin_inset Formula $S$
+\end_inset
+
+ el espacio muestral asociado a tal experimento y 
+\begin_inset Formula $A$
+\end_inset
+
+ un suceso del espacio con probabilidad 
+\begin_inset Formula $p$
+\end_inset
+
+, entonces 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de ocurrencias del suceso 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $n$
+\end_inset
+
+ repeticiones independientes de 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+ es una variable aleatoria con distribución binomial.
+\begin_inset Formula 
+\[
+X\sim B\left(n,p\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Características
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\left\{ 0,\ldots,n\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=x\right)=\binom{n}{x}p^{x}q^{n-x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X={\displaystyle \sum_{i=1}^{n}}Y$
+\end_inset
+
+ donde 
+\begin_inset Formula $Y$
+\end_inset
+
+ es la variable de Bernoulli 
+\begin_inset Formula $Y\left(y\right)=\begin{cases}
+1 & y=A\\
+0 & y=\overline{A}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Subsubsection
+Lanzamiento de monedas
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Se tira una moneda y se observa el resultado
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ \odot,\otimes\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#S=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Salio cara}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A=1$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de caras en 
+\begin_inset Formula $3$
+\end_inset
+
+ repeticiones independientes de 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{X\sim B\left(3,\frac{1}{2}\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(x_{1},x_{2},x_{3}\right)={\displaystyle \sum_{i=1}^{3}}Y\left(x_{i}\right)=Y\left(x_{1}\right)+Y\left(x_{2}\right)+Y\left(x_{3}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=x\right)=\binom{3}{x}\left(\frac{1}{2}\right)^{x}\left(\frac{1}{2}\right)^{3-x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\otimes,\otimes,\otimes\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\otimes,\otimes,\odot\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\otimes,\odot,\otimes\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\otimes,\odot,\odot\right)=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\left\{ 0,\ldots,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\odot,\otimes,\otimes\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\odot,\otimes,\odot\right)=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\odot,\odot,\otimes\right)=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\left(\odot,\odot,\odot\right)=3$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cual es la probabilidad de que salgan 2 caras en 3 repeticiones del experimento
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X=2\right)=\binom{3}{2}\left(\frac{1}{2}\right)^{2}\left(\frac{1}{2}\right)^{3-2}=3\cdot\frac{1}{4}\cdot\frac{1}{2}=\frac{3}{8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probabilidad clásica:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S'=\left\{ \left(x_{1},x_{2},x_{3}\right)/x_{i}\in S\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#S'=2^{3}=8$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{Salieron exactamente 2 caras}\right\} =\left\{ \left(\otimes,\odot,\odot\right),\left(\odot,\otimes,\odot\right),\left(\odot,\odot,\otimes\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(B\right)=\frac{\#B}{\#S'}=\frac{3}{8}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+¿Cual es la probabilidad de que salgan al menos 2 caras en 3 repeticiones
+ del experimento?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\text{\ensuremath{P\left(X\geq2\right)=p\left(2\right)+p\left(3\right)=\frac{3}{8}+\binom{3}{3}\left(\frac{1}{2}\right)^{3}\left(\frac{1}{2}\right)^{3-3}=\frac{3}{8}+1\cdot\frac{1}{8}\cdot1=\frac{4}{8}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probabilidad clásica:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \text{Salieron exactamente 3 caras}\right\} =\left\{ \left(\odot,\odot,\odot\right)\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{\#C=1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{Salieron al menos 2 caras}\right\} =B\cup C$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{\#D=3+1=4}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D\right)=\frac{\#D}{\#S'}=\frac{4}{8}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Apuestas a la ruleta
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Se tira la bolilla y se observa el resultado
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ 0,\ldots,36\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#S=37$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Sale un numero negro}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A=18$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=\frac{18}{37}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de números negros en 
+\begin_inset Formula $4$
+\end_inset
+
+ repeticiones independientes de 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{X\sim B\left(4,\frac{18}{37}\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=x\right)=\binom{4}{x}\left(\frac{18}{37}\right)^{x}\left(\frac{19}{37}\right)^{4-x}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{X}=\left\{ 0,\ldots,4\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Cual es la probabilidad de que la mayoría sean negros?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X>2\right)=p\left(3\right)+p\left(4\right)=\binom{4}{3}\left(\frac{18}{37}\right)^{3}\left(\frac{19}{37}\right)^{4-3}+\binom{4}{4}\left(\frac{18}{37}\right)^{4}\left(\frac{19}{37}\right)^{4-4}=\frac{16399584}{69343957}+\frac{104976}{1874161}\approx0,2925$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probabilidad clásica:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\#S'=37^{4}=1874161$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\left\{ \text{Hay exactamente 3 numeros negros}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{\#B=4\cdot19\cdot18^{3}=443232}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \text{Hay exactamente 4 numeros negros}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{\#C=18^{4}=104976}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{La mayoria son negros}\right\} =B\cup C$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#D=548208$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D\right)=\frac{\#D}{\#S'}=\frac{548208}{1874161}\approx0,2925$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Condición de cierre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Teorema del binomio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i\in R_{X}}P\left(X=i\right)=\sum_{i=0}^{n}\binom{n}{i}p^{i}q^{n-i}\underbrace{=}_{1}\left(p+q\right)^{n}=1^{n}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Esperanza
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}E\left(X\right)= & \sum_{i\in R_{X}}iP\left(X=i\right)=\sum_{i=0}^{n}i\binom{n}{i}p^{i}q^{n-i}=\sum_{i=0}^{n}i\binom{n}{i}p^{i}\left(1-p\right)^{n-i}=\\
+= & \sum_{i=1}^{n}i\frac{n!}{i!\left(n-i\right)!}p^{i}\left(1-p\right)^{n-i}=\sum_{i=1}^{n}\frac{n!}{\left(i-1\right)!\left(n-i\right)!}p^{i}\left(1-p\right)^{n-i}=\\
+= & \sum_{i=0}^{n-1}\frac{n!}{i!\left(n-\left[i+1\right]\right)!}p^{i+1}\left(1-p\right)^{n-\left(i+1\right)}=\sum_{i=0}^{n-1}\frac{n\left(n-1\right)!}{i!\left(n-i-1\right)!}pp^{i}\left(1-p\right)^{n-i-1}=\\
+= & np\sum_{i=0}^{n-1}\frac{\left(n-1\right)!}{i!\left(n-i-1\right)!}p^{i}\left(1-p\right)^{n-i-1}=np\sum_{i=0}^{n-1}\binom{n-1}{i}p^{i}\left(1-p\right)^{n-i-1}=\\
+\underbrace{=}_{1} & np\left[p+\left(1-p\right)\right]^{n-1}=np
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Alternativa
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $X\sim B\left(n,p\right)$
+\end_inset
+
+ podemos expresar a 
+\begin_inset Formula $X$
+\end_inset
+
+ como suma de 
+\begin_inset Formula $n$
+\end_inset
+
+ variables de Bernoulli 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $X={\displaystyle \sum_{i=1}^{n}}Y_{i}$
+\end_inset
+
+.
+ Luego:
+\begin_inset Formula 
+\[
+E\left(X\right)=E\left[\sum_{i=1}^{n}Y_{i}\right]=\sum_{i=1}^{n}E\left(Y_{i}\right)=\sum_{i=1}^{n}p=np
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Variancia y desvió estándar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V\left(Y_{i}\right)=E\left(Y_{i}^{2}\right)-\left[E\left(Y_{i}\right)^{2}\right]=p-p^{2}=p\left(1-p\right)=pq
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V\left(X\right)=V\left[\sum_{i=1}^{n}Y_{i}\right]\underbrace{=}\sum_{i=1}^{n}V\left(Y_{i}\right)=\sum_{i=1}^{n}pq=npq
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma_{X}=\sqrt{npq}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Distribución Geométrica
+\end_layout
+
+\begin_layout Section
+Descripción
+\end_layout
+
+\begin_layout Subsection
+Características
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Section
+Condición de cierre
+\end_layout
+
+\begin_layout Section
+Esperanza
+\end_layout
+
+\begin_layout Section
+Variancia y desvió estándar
+\end_layout
+
+\begin_layout Chapter
+Distribución Hipergeométrica
+\end_layout
+
+\begin_layout Section
+Descripción
+\end_layout
+
+\begin_layout Subsection
+Características
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Section
+Condición de cierre
+\end_layout
+
+\begin_layout Section
+Esperanza
+\end_layout
+
+\begin_layout Section
+Variancia y desvió estándar
+\end_layout
+
+\begin_layout Chapter
+Distribución de Pascal
+\end_layout
+
+\begin_layout Section
+Descripción
+\end_layout
+
+\begin_layout Subsection
+Características
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Section
+Condición de cierre
+\end_layout
+
+\begin_layout Section
+Esperanza
+\end_layout
+
+\begin_layout Section
+Variancia y desvió estándar
+\end_layout
+
+\begin_layout Chapter
+Distribución de Poisson
+\end_layout
+
+\begin_layout Section
+Descripción
+\end_layout
+
+\begin_layout Subsection
+Características
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Section
+Condición de cierre
+\end_layout
+
+\begin_layout Section
+Esperanza
+\end_layout
+
+\begin_layout Section
+Variancia y desvió estándar
+\end_layout
+
+\begin_layout Chapter
+Distribución Multinomial
+\end_layout
+
+\begin_layout Section
+Descripción
+\end_layout
+
+\begin_layout Subsection
+Características
+\end_layout
+
+\begin_layout Subsection
+Ejemplos
+\end_layout
+
+\begin_layout Section
+Condición de cierre
+\end_layout
+
+\begin_layout Section
+Esperanza
+\end_layout
+
+\begin_layout Section
+Variancia y desvió estándar
+\end_layout
+
+\end_body
+\end_document
