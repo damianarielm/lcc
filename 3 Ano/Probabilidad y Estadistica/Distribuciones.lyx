@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass book
+\begin_preamble
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+\end_preamble
 \use_default_options true
 \begin_modules
 multicol
@@ -161,9 +165,88 @@ Numero de ocurrencias del suceso
 \end_inset
 
  es una variable aleatoria con distribución binomial.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim B\left(n,p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\left\{ 0,\ldots,n\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Función de Probabilidad
+\end_layout
+
+\begin_layout Standard
+La probabilidad de que una variable aleatoria 
+\begin_inset Formula $X\sim B\left(n,p\right)$
+\end_inset
+
+ sea 
+\begin_inset Formula $x$
+\end_inset
+
+ es:
 \begin_inset Formula 
 \[
-X\sim B\left(n,p\right)
+P\left(X=x\right)=\binom{n}{x}p^{x}q^{n-x}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+Consideremos una sucesión 
+\begin_inset Formula $s$
+\end_inset
+
+ de ensayos del experimento 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ que satisfaga la condición de que 
+\begin_inset Formula $X\left(s\right)=x$
+\end_inset
+
+.
+ Tal resultado aparecería, por ejemplo, si las primeras 
+\begin_inset Formula $x$
+\end_inset
+
+ repeticiones del experimento resultasen en la ocurrencia de 
+\begin_inset Formula $A$
+\end_inset
+
+, mientras que las ultimas 
+\begin_inset Formula $n-x$
+\end_inset
+
+ resultasen 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+, es decir:
+\begin_inset Formula 
+\[
+\left(\underbrace{A,A,\ldots,A}_{x},\underbrace{\overline{A},\overline{A},\ldots,\overline{A}}_{n-x}\right)
 \]
 
 \end_inset
@@ -171,47 +254,161 @@ X\sim B\left(n,p\right)
 
 \end_layout
 
-\begin_layout Subsection
-Características
+\begin_layout Standard
+Puesto que todas las repeticiones son independientes, la probabilidad de
+ esta sucesión sería 
+\begin_inset Formula $p^{x}q^{n-x}$
+\end_inset
+
+, pero exactamente la misma probabilidad estaría asociada con cualquier
+ otro orden de dicha sucesión.
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $R_{X}=\left\{ 0,\ldots,n\right\} $
+\begin_layout Standard
+Debemos elegir 
+\begin_inset Formula $x$
+\end_inset
+
+ posiciones entre 
+\begin_inset Formula $n$
+\end_inset
+
+ para ubicar a las 
+\begin_inset Formula $A$
 \end_inset
 
 .
+ La cantidad total de dichas sucesiones es justamente 
+\begin_inset Formula $\binom{n}{x}$
+\end_inset
+
+ de donde sigue el resultado.
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $P\left(X=x\right)=\binom{n}{x}p^{x}q^{n-x}$
-\end_inset
-
-.
+\begin_layout Section
+Condición de cierre
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $X={\displaystyle \sum_{i=1}^{n}}Y$
+\begin_layout Standard
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Teorema del binomio
+\end_layout
+
 \end_inset
 
- donde 
-\begin_inset Formula $Y$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i\in R_{X}}P\left(X=i\right)=\sum_{i=0}^{n}\binom{n}{i}p^{i}q^{n-i}\underbrace{=}_{1}\left(p+q\right)^{n}=1^{n}=1
+\]
+
 \end_inset
 
- es la variable de Bernoulli 
-\begin_inset Formula $Y\left(y\right)=\begin{cases}
+
+\end_layout
+
+\begin_layout Section
+Esperanza
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}E\left(X\right)= & \sum_{i\in R_{X}}iP\left(X=i\right)=\sum_{i=0}^{n}i\binom{n}{i}p^{i}q^{n-i}=\sum_{i=0}^{n}i\binom{n}{i}p^{i}\left(1-p\right)^{n-i}=\\
+= & \sum_{i=1}^{n}i\frac{n!}{i!\left(n-i\right)!}p^{i}\left(1-p\right)^{n-i}=\sum_{i=1}^{n}\frac{n!}{\left(i-1\right)!\left(n-i\right)!}p^{i}\left(1-p\right)^{n-i}=\\
+= & \sum_{i=0}^{n-1}\frac{n!}{i!\left(n-\left[i+1\right]\right)!}p^{i+1}\left(1-p\right)^{n-\left(i+1\right)}=\sum_{i=0}^{n-1}\frac{n\left(n-1\right)!}{i!\left(n-i-1\right)!}pp^{i}\left(1-p\right)^{n-i-1}=\\
+= & np\sum_{i=0}^{n-1}\frac{\left(n-1\right)!}{i!\left(n-i-1\right)!}p^{i}\left(1-p\right)^{n-i-1}=np\sum_{i=0}^{n-1}\binom{n-1}{i}p^{i}\left(1-p\right)^{n-i-1}=\\
+\underbrace{=}_{1} & np\left[p+\left(1-p\right)\right]^{n-1}=np
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Alternativa
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $X\sim B\left(n,p\right)$
+\end_inset
+
+ podemos expresar a 
+\begin_inset Formula $X$
+\end_inset
+
+ como suma de 
+\begin_inset Formula $n$
+\end_inset
+
+ variables de Bernoulli 
+\begin_inset Formula $Y_{i}\left(y\right)=\begin{cases}
 1 & y=A\\
 0 & y=\overline{A}
 \end{cases}$
 \end_inset
 
+, es decir: 
+\begin_inset Formula $X={\displaystyle \sum_{i=1}^{n}}Y_{i}$
+\end_inset
+
 .
+ Luego:
+\begin_inset Formula 
+\[
+E\left(X\right)=E\left[\sum_{i=1}^{n}Y_{i}\right]=\sum_{i=1}^{n}E\left(Y_{i}\right)=\sum_{i=1}^{n}p=np
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
+Variancia y desvió estándar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V\left(Y_{i}\right)=E\left(Y_{i}^{2}\right)-\left[E\left(Y_{i}\right)^{2}\right]=p-p^{2}=p\left(1-p\right)=pq
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+V\left(X\right)=V\left[\sum_{i=1}^{n}Y_{i}\right]\underbrace{=}\sum_{i=1}^{n}V\left(Y_{i}\right)=\sum_{i=1}^{n}pq=npq
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma_{X}=\sqrt{npq}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Ejemplos
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Lanzamiento de monedas
 \end_layout
 
@@ -432,6 +629,10 @@ Probabilidad clásica:
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -472,7 +673,60 @@ Probabilidad clásica:
 
 \end_deeper
 \end_deeper
-\begin_layout Subsubsection
+\begin_layout Enumerate
+¿Cuantas caras se espera que salgan en 
+\begin_inset Formula $4$
+\end_inset
+
+ repeticiones del experimento?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E\left(X'\right)=\sum_{i=0}^{n}i\binom{n}{i}p^{i}q^{n-i}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=0+1\cdot4\cdot\left(\frac{1}{2}\right)^{1}\cdot\left(\frac{1}{2}\right)^{3}+2\cdot6\cdot\left(\frac{1}{2}\right)^{2}\cdot\left(\frac{1}{2}\right)^{2}+3\cdot4\cdot\left(\frac{1}{2}\right)^{3}\cdot\left(\frac{1}{2}\right)^{1}+4\cdot1\cdot\left(\frac{1}{2}\right)^{4}\cdot1=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=0+\frac{1}{4}+\frac{3}{4}+\frac{3}{4}+\frac{1}{4}=2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E\left(X'\right)=4\cdot\frac{1}{2}=2$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
 Apuestas a la ruleta
 \end_layout
 
@@ -570,6 +824,10 @@ Cantidad de números negros en
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -629,115 +887,53 @@ Probabilidad clásica:
 
 \end_deeper
 \end_deeper
-\begin_layout Section
-Condición de cierre
+\begin_layout Enumerate
+¿Cual es la probabilidad de que todos sean rojos?
 \end_layout
 
-\begin_layout Standard
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Teorema del binomio
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\sum_{i\in R_{X}}P\left(X=i\right)=\sum_{i=0}^{n}\binom{n}{i}p^{i}q^{n-i}\underbrace{=}_{1}\left(p+q\right)^{n}=1^{n}=1
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Esperanza
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\begin{aligned}E\left(X\right)= & \sum_{i\in R_{X}}iP\left(X=i\right)=\sum_{i=0}^{n}i\binom{n}{i}p^{i}q^{n-i}=\sum_{i=0}^{n}i\binom{n}{i}p^{i}\left(1-p\right)^{n-i}=\\
-= & \sum_{i=1}^{n}i\frac{n!}{i!\left(n-i\right)!}p^{i}\left(1-p\right)^{n-i}=\sum_{i=1}^{n}\frac{n!}{\left(i-1\right)!\left(n-i\right)!}p^{i}\left(1-p\right)^{n-i}=\\
-= & \sum_{i=0}^{n-1}\frac{n!}{i!\left(n-\left[i+1\right]\right)!}p^{i+1}\left(1-p\right)^{n-\left(i+1\right)}=\sum_{i=0}^{n-1}\frac{n\left(n-1\right)!}{i!\left(n-i-1\right)!}pp^{i}\left(1-p\right)^{n-i-1}=\\
-= & np\sum_{i=0}^{n-1}\frac{\left(n-1\right)!}{i!\left(n-i-1\right)!}p^{i}\left(1-p\right)^{n-i-1}=np\sum_{i=0}^{n-1}\binom{n-1}{i}p^{i}\left(1-p\right)^{n-i-1}=\\
-\underbrace{=}_{1} & np\left[p+\left(1-p\right)\right]^{n-1}=np
-\end{aligned}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Paragraph
-Alternativa
-\end_layout
-
-\begin_layout Standard
-Si 
-\begin_inset Formula $X\sim B\left(n,p\right)$
-\end_inset
-
- podemos expresar a 
-\begin_inset Formula $X$
-\end_inset
-
- como suma de 
-\begin_inset Formula $n$
-\end_inset
-
- variables de Bernoulli 
-\begin_inset Formula $Y_{i}$
-\end_inset
-
-, es decir: 
-\begin_inset Formula $X={\displaystyle \sum_{i=1}^{n}}Y_{i}$
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X=0\right)=\binom{4}{0}\left(\frac{18}{37}\right)^{0}\left(\frac{19}{37}\right)^{4-0}=1\cdot1\cdot\left(\frac{19}{37}\right)^{4}\approx0,0695$
 \end_inset
 
 .
- Luego:
-\begin_inset Formula 
-\[
-E\left(X\right)=E\left[\sum_{i=1}^{n}Y_{i}\right]=\sum_{i=1}^{n}E\left(Y_{i}\right)=\sum_{i=1}^{n}p=np
-\]
+\end_layout
 
+\begin_layout Enumerate
+Probabilidad clásica:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E=\left\{ \text{No hay ningún número negro}\right\} $
 \end_inset
 
+.
+ 
+\begin_inset Formula $\text{\ensuremath{\#E=19^{4}=130321}}$
+\end_inset
 
+.
 \end_layout
 
-\begin_layout Section
-Variancia y desvió estándar
+\begin_layout Itemize
+\begin_inset Formula $P\left(E\right)=\frac{\#E}{\#S'}=\frac{130321}{1874161}\approx0,0695$
+\end_inset
+
+.
 \end_layout
 
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+¿Cuantos números negros se esperan en 37 repeticiones del experimento?
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
-V\left(Y_{i}\right)=E\left(Y_{i}^{2}\right)-\left[E\left(Y_{i}\right)^{2}\right]=p-p^{2}=p\left(1-p\right)=pq
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-V\left(X\right)=V\left[\sum_{i=1}^{n}Y_{i}\right]\underbrace{=}\sum_{i=1}^{n}V\left(Y_{i}\right)=\sum_{i=1}^{n}pq=npq
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-\sigma_{X}=\sqrt{npq}
+E\left(X'\right)=37\cdot\frac{18}{37}=18
 \]
 
 \end_inset
@@ -745,6 +941,7 @@ V\left(X\right)=V\left[\sum_{i=1}^{n}Y_{i}\right]\underbrace{=}\sum_{i=1}^{n}V\l
 
 \end_layout
 
+\end_deeper
 \begin_layout Chapter
 Distribución Geométrica
 \end_layout
@@ -753,26 +950,350 @@ Distribución Geométrica
 Descripción
 \end_layout
 
-\begin_layout Subsection
-Características
+\begin_layout Standard
+La distribución geométrica es una distribución de probabilidad discreta
+ que cuenta el número repeticiones independientes necesarias hasta que ocurra
+ un determinado evento.
 \end_layout
 
-\begin_layout Subsection
-Ejemplos
+\begin_layout Standard
+Es decir, sean 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ un experimento, 
+\begin_inset Formula $S$
+\end_inset
+
+ el espacio muestral asociado a tal experimento y 
+\begin_inset Formula $A$
+\end_inset
+
+ un suceso del espacio con probabilidad 
+\begin_inset Formula $p$
+\end_inset
+
+, entonces 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de repeticiones independientes de 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ hasta que ocurre 
+\begin_inset Formula $A$
+\end_inset
+
+ por primera vez
+\begin_inset Quotes frd
+\end_inset
+
+ es una variable aleatoria con distribución geométrica.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim G\left(p\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\mathbb{N}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
-Condición de cierre
+Función de Probabilidad
+\end_layout
+
+\begin_layout Standard
+La probabilidad de que una variable aleatoria 
+\begin_inset Formula $X\sim G\left(p\right)$
+\end_inset
+
+ sea 
+\begin_inset Formula $x$
+\end_inset
+
+ es:
+\begin_inset Formula 
+\[
+P\left(X=x\right)=q^{x-1}p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+El resultado es trivial ya que 
+\begin_inset Formula $X=x$
+\end_inset
+
+ si y solo si las primeras 
+\begin_inset Formula $x-1$
+\end_inset
+
+ repeticiones de 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ resultaron 
+\begin_inset Formula $\overline{A}$
+\end_inset
+
+ mientras que la restante da por resultado 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Condición de Cierre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Convergencia de series geométricas (
+\begin_inset Formula $q<1$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{i\in R_{X}}P\left(X=i\right)=\sum_{i=1}^{\infty}q^{i-1}p=\sum_{i=0}^{\infty}q^{i}p\underbrace{=}_{2}\frac{p}{1-q}=\frac{p}{p}=1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Esperanza
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}E\left(X\right)= & \sum_{i\in R_{X}}iP\left(X=i\right)=\sum_{i=1}^{\infty}iP\left(X=i\right)=\sum_{i=1}^{\infty}iq^{i-1}p=p\sum_{i=0}^{\infty}iq^{i}=\\
+= & p\left[\frac{d}{dp}\left(\sum_{i=0}^{\infty}q^{i}\right)\right]=p\left[\frac{d}{dp}\left(-\frac{1}{p}\right)\right]=p\frac{1}{p^{2}}=\frac{1}{p}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Variancia y desvió estándar
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $V\left(X\right)=\frac{q}{p^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{X}=\frac{\sqrt{q}}{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Ejemplos
+\end_layout
+
+\begin_layout Subsection
+Juego de poker
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Se reparte una mano de poker
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C=\left\{ \left(x,y\right)/x\in\left\{ A,2,\ldots,10,J,Q,K\right\} \land y\in\left\{ \clubsuit,\heartsuit,\spadesuit,\diamondsuit\right\} \right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#C=52$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ X\in\mathcal{P}\left(C\right)/\left|X\right|=5\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#S=\binom{52}{5}=2598960$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\left\{ \text{Poker}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $\#A=13\cdot48=624$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(A\right)=\frac{624}{2598960}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de manos necesarias hasta que sale poker
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{X\sim G\left(\frac{624}{2598960}\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=x\right)=\left(\frac{2598336}{2598960}\right)^{x-1}\left(\frac{624}{2598960}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cual es la probabilidad de conseguir un poker en una partida de 15 manos?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(X\leq15\right)=\sum_{i=0}^{15}\left(\frac{2598336}{2598960}\right)^{i-1}\left(\frac{624}{2598960}\right)\approx0,0036
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuantas manos deben jugarse para que lo mas probable sea haber recibido
+ un poker?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(X\leq x\right)>\frac{1}{2}\iff\sum_{i=1}^{x}pq^{i-1}>\frac{1}{2}\iff p\frac{1-q^{x}}{1-q}>\frac{1}{2}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff1-q^{x}>\frac{1}{2}\iff\frac{1}{2}>q^{x}\iff\log_{\frac{2598336}{2598960}}\left(\frac{1}{2}\right)>?x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Deben jugarse 2887 manos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Luego de cuantas manos se espera recibir un poker?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E\left(X\right)=\frac{1}{p}=\frac{2598960}{624}=4165
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Chapter
 Distribución Hipergeométrica
 \end_layout
@@ -781,16 +1302,12 @@ Distribución Hipergeométrica
 Descripción
 \end_layout
 
-\begin_layout Subsection
-Características
-\end_layout
-
-\begin_layout Subsection
-Ejemplos
+\begin_layout Section
+Función de Probabilidad
 \end_layout
 
 \begin_layout Section
-Condición de cierre
+Condición de Cierre
 \end_layout
 
 \begin_layout Section
@@ -799,6 +1316,10 @@ Esperanza
 
 \begin_layout Section
 Variancia y desvió estándar
+\end_layout
+
+\begin_layout Section
+Ejemplos
 \end_layout
 
 \begin_layout Chapter
@@ -809,16 +1330,12 @@ Distribución de Pascal
 Descripción
 \end_layout
 
-\begin_layout Subsection
-Características
-\end_layout
-
-\begin_layout Subsection
-Ejemplos
+\begin_layout Section
+Función de Probabilidad
 \end_layout
 
 \begin_layout Section
-Condición de cierre
+Condición de Cierre
 \end_layout
 
 \begin_layout Section
@@ -827,6 +1344,10 @@ Esperanza
 
 \begin_layout Section
 Variancia y desvió estándar
+\end_layout
+
+\begin_layout Section
+Ejemplos
 \end_layout
 
 \begin_layout Chapter
@@ -837,24 +1358,85 @@ Distribución de Poisson
 Descripción
 \end_layout
 
-\begin_layout Subsection
-Características
-\end_layout
-
-\begin_layout Subsection
-Ejemplos
+\begin_layout Section
+Función de Probabilidad
 \end_layout
 
 \begin_layout Section
-Condición de cierre
+Condición de Cierre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{i\in R_{X}}P\left(X=i\right)=\sum_{i=0}^{\infty}\frac{e^{-\lambda}\lambda^{i}}{i!}=e^{-\lambda}\sum_{i=0}^{\infty}\lambda^{i}\frac{1}{i!}=e^{-\lambda}e^{\lambda}=1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Esperanza
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}E\left(X\right)= & \sum_{i\in R_{X}}iP\left(X=i\right)=\sum_{i=0}^{\infty}iP\left(X=i\right)=\sum_{i=0}^{\infty}i\frac{e^{-\lambda}\lambda^{i}}{i!}=e^{-\lambda}\sum_{i=1}^{\infty}i\frac{\lambda^{i}}{i!}=\\
+= & e^{-\lambda}\sum_{i=1}^{\infty}\frac{\lambda^{i}}{\left(i-1\right)!}=e^{-\lambda}\sum_{i=0}^{\infty}\frac{\lambda\lambda^{i}}{i!}=\lambda e^{-\lambda}\sum_{i=0}^{\infty}\lambda^{i}\frac{1}{i!}=\lambda e^{-\lambda}e^{\lambda}=\lambda
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Variancia y desvió estándar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}E\left(X^{2}\right)= & \sum_{i\in R_{X}}i^{2}P\left(X=i\right)=\sum_{i=0}^{\infty}i^{2}P\left(X=i\right)=\sum_{i=0}^{\infty}i^{2}\frac{e^{-\lambda}\lambda^{i}}{i!}=\sum_{i=1}^{\infty}i^{2}\frac{e^{-\lambda}\lambda^{i}}{i!}=\\
+= & \sum_{i=1}^{\infty}i\frac{e^{-\lambda}\lambda^{i}}{\left(i-1\right)!}=\sum_{i=0}^{\infty}\left(i+1\right)\frac{e^{-\lambda}\lambda\lambda^{i}}{i!}=\sum_{i=0}^{\infty}\left[i\frac{e^{-\lambda}\lambda\lambda^{i}}{i!}+\frac{e^{-\lambda}\lambda\lambda^{i}}{i!}\right]=\\
+= & \sum_{i=0}^{\infty}\left[\lambda\left(i\frac{e^{-\lambda}\lambda^{i}}{i!}+\frac{e^{-\lambda}\lambda^{i}}{i!}\right)\right]=\lambda\sum_{i=0}^{\infty}\left[i\frac{e^{-\lambda}\lambda^{i}}{i!}+\frac{e^{-\lambda}\lambda^{i}}{i!}\right]=\\
+= & \lambda\left[\underbrace{\sum_{i=0}^{\infty}i\frac{e^{-\lambda}\lambda^{i}}{i!}}_{\lambda}+\underbrace{\sum_{i=0}^{\infty}\frac{e^{-\lambda}\lambda^{i}}{i!}}_{1}\right]=\lambda^{2}+\lambda
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\lambda\text{²}+\lambda-\lambda^{2}=\lambda
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{X}=\sqrt{\lambda}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejemplos
 \end_layout
 
 \begin_layout Chapter
@@ -865,16 +1447,12 @@ Distribución Multinomial
 Descripción
 \end_layout
 
-\begin_layout Subsection
-Características
-\end_layout
-
-\begin_layout Subsection
-Ejemplos
+\begin_layout Section
+Función de Probabilidad
 \end_layout
 
 \begin_layout Section
-Condición de cierre
+Condición de Cierre
 \end_layout
 
 \begin_layout Section
@@ -883,6 +1461,10 @@ Esperanza
 
 \begin_layout Section
 Variancia y desvió estándar
+\end_layout
+
+\begin_layout Section
+Ejemplos
 \end_layout
 
 \end_body
