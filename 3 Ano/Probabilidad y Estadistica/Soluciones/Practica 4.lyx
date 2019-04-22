@@ -1811,7 +1811,12 @@ Numero de piezas defectuosas en una muestra de tamaño 5
 \end_layout
 
 \begin_layout Itemize
-PREGUNTAR.
+Se rechazaran en promedio: 
+\begin_inset Formula $E\left(X\right)\cdot100=\frac{3\cdot5}{25}\cdot100=60$
+\end_inset
+
+ lotes.
+ PREGUNTAR.
 \end_layout
 
 \end_deeper
@@ -1925,13 +1930,134 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-PREGUNTAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathcal{E}:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Se extrae una llanta del lote
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{La llanta es defectuosa}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D\right)=\frac{20}{100}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(\overline{D}\right)=\frac{80}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Número de llantas no defectuosas en 8 extracciones
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como el tamaño poblacional es 
+\begin_inset Quotes fld
+\end_inset
+
+grande
+\begin_inset Quotes frd
+\end_inset
+
+, podemos aproximar la variable con una distribución binomial.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $X\sim B\left(8,\frac{20}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\binom{8}{x}\left(\frac{20}{100}\right)^{x}\left(\frac{80}{100}\right)^{8-x}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(X=5\right)=\binom{8}{5}\left(\frac{20}{100}\right)^{5}\left(\frac{80}{100}\right)^{8-5}=56\cdot\frac{3200000}{10000000000}\cdot\frac{512000}{1000000}\approx0,009}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-PREGUNTAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X':$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Número de llantas no defectuosas en 
+\begin_inset Formula $n$
+\end_inset
+
+ extracciones
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X'\sim B\left(n,\frac{20}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $E\left(X'\right)=\frac{20n}{100}=5\iff n=\frac{500}{20}=25$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 El número de moléculas que hay en un 
@@ -1985,10 +2111,6 @@ Soluciones
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -2067,6 +2189,16 @@ a sigue una ley de Poisson.
 d de encontrar al menos una grieta en 4 metros sea menor que 0.5?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate-Resume
 El número de clientes que entran en un negocio es una v.
  a.
@@ -2086,6 +2218,79 @@ Se observa el número de clientes que ingresan al negocio durante 15 intervalos
  registren ingresos.
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\sim P\left(\frac{30}{60}\cdot2\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\frac{e^{-1}1^{x}}{x!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=0\right)=\frac{e^{-1}1^{0}}{0!}=e^{-1}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de intervalos de 2 minutos en los que no ingresan clientes de un
+ total de 15 intervalos
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y\sim B\left(15,e^{-1}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(Y\leq5\right)={\displaystyle \sum_{i=0}^{5}}\binom{15}{i}p^{i}q^{15-i}\approx0,5057$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 El número de defectos en un rollo de alambre de 100 metros es una v.
@@ -2121,6 +2326,22 @@ número de rollos de 100 metros entre los 10 rollos, que tienen al menos
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -2483,7 +2704,7 @@ número de piezas defectuosas en un lote de 20
 \end_inset
 
 .
- En gerenal, la cantidad de piezas defectuosas en cada lote será 1.
+ En general, la cantidad de piezas defectuosas en cada lote será 1.
 \end_layout
 
 \begin_layout Enumerate
@@ -2629,6 +2850,84 @@ ión.
  avanzado en programación en la décima entrevista?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Numero entrevistas hasta encontrar un aspirante con entrenamiento avanzado
+ en programación
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim G\left(\frac{30}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=5\right)=\left(\frac{70}{100}\right)^{5-1}\frac{30}{100}\approx0,072$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de entrevistas hasta encontrar el quinto aspirante con entrenamiento
+ avanzado en programación
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y\sim P\left(5,\frac{30}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=10\right)=\binom{10-1}{5-1}\cdot\left(\frac{30}{100}\right)^{5}\left(\frac{70}{100}\right)^{10-5}\approx0,051$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 El número de artículos demandados por semana en un negocio es una v.
@@ -2639,6 +2938,23 @@ El número de artículos demandados por semana en un negocio es una v.
  0,99?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(X\leq x\right)\geq0,99\iff\sum_{i=0}^{x}\frac{e^{-7}7^{x}}{x!}\geq0,99\iff x\geq14
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 En cierto punto de una ruta se coloca un dispositivo para contar el número
  de autos que pasan por allí en un período de tiempo dado.
