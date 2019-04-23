@@ -84304,10 +84304,7 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P\left(E_{1}|E_{2}\right)=$
-\end_inset
-
- PREGUNTAR.
+PREGUNTAR.
 \end_layout
 
 \end_deeper
@@ -84974,7 +84971,34 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula 
+\[
+S\begin{cases}
+E & \frac{12}{100}\begin{cases}
++ & \frac{90}{100}\\
+- & \frac{10}{100}
+\end{cases}\\
+\overline{E} & \frac{88}{100}\begin{cases}
++ & \frac{5}{100}\\
+- & \frac{95}{100}
+\end{cases}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(\overline{E}|+\right)=\frac{\frac{88}{100}\cdot\frac{5}{100}}{\frac{12}{100}\cdot\frac{90}{100}+\frac{88}{100}\cdot\frac{5}{100}}\approx\frac{29}{100}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -85187,7 +85211,10 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\text{\ensuremath{P\left(A\right)P\left(\overline{B}\right)=P\left(A\right)\left[1-P\left(B\right)\right]=P\left(A\right)-P\left(A\right)P\left(B\right)=P\left(A-B\right)=P\left(A\cap\overline{B}\right)}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -85343,11 +85370,15 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
-\begin_inset Newpage pagebreak
+La probabilidad de que el numero sea correcto será 
+\begin_inset Formula $\left(1-p\right)^{n}$
 \end_inset
 
+, luego la probabilidad de que sea incorrecto es: 
+\begin_inset Formula $1-\left(1-p\right)^{n}$
+\end_inset
 
+.
 \end_layout
 
 \end_deeper

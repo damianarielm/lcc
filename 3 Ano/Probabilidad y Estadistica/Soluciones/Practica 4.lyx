@@ -2375,8 +2375,11 @@ Una variable aleatoria
 
 \begin_deeper
 \begin_layout Enumerate
-Averigüe el o los valores de a para que ésta sea una distribución de probabilida
-des.
+Averigüe el o los valores de 
+\begin_inset Formula $a$
+\end_inset
+
+ para que ésta sea una distribución de probabilidades.
 \end_layout
 
 \begin_layout Enumerate
@@ -2396,6 +2399,78 @@ Para los valores de a) hallados, obtenga:
 \end_inset
 
 .
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\frac{\left(1+3a\right)}{4}+\frac{\left(1-a\right)}{4}+\frac{\left(1+2a\right)}{4}+\frac{\left(1-4a\right)}{4}=1\iff\frac{4}{4}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\left(1+3a\right)}{4}\geq0\iff a\geq-1/3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\left(1-a\right)}{4}\geq0\iff1\geq a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\left(1+2a\right)}{4}\geq0\iff a\geq-1/2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\left(1-4a\right)}{4}\geq0\iff1/4\geq a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore-1/3\leq a\leq1/4$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -2571,6 +2646,10 @@ Soluciones
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2604,6 +2683,69 @@ fallen por lo menos 2 componentes,
 
 \begin_layout Enumerate
 funcionen por lo menos 13 componentes.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de componentes que fallan en un período de tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+, de un total de 15 componentes independientes
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim B\left(15,\frac{3}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\binom{15}{x}\left(\frac{3}{100}\right)^{x}\left(\frac{97}{100}\right)^{15-x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X=2\right)=\binom{15}{2}\left(\frac{3}{100}\right)^{2}\left(\frac{97}{100}\right)^{15-2}=105\cdot\frac{9}{10000}\cdot\left(\frac{97}{100}\right)^{13}\approx0,063$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X\leq2\right)=p\left(0\right)+p\left(1\right)+p\left(2\right)\approx0,99$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X\geq2\right)=1-P\left(X<2\right)\approx0,347$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X\leq2\right)\approx0,99$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -2685,11 +2827,6 @@ número de piezas defectuosas en un lote de 20
 \end_inset
 
 .
- 
-\begin_inset Formula $x\in\left[0,20\right]$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Enumerate
@@ -2721,7 +2858,7 @@ número de piezas defectuosas en un lote de 20
 
 .
  
-\begin_inset Formula $P\left(D'\right)=P\left(X\leq1\right)$
+\begin_inset Formula $\text{\ensuremath{P\left(D'\right)=P\left(X\leq1\right)}}$
 \end_inset
 
 .
@@ -2733,18 +2870,6 @@ número de piezas defectuosas en un lote de 20
 
 .
  
-\begin_inset Formula $P\left(Y=y\right)=\binom{10}{y}\cdot P\left(X\leq1\right)^{y}\cdot\left[1-P\left(X\leq1\right)\right]^{10-y}$
-\end_inset
-
-.
- 
-\begin_inset Formula $y\in\left[0,10\right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $E\left(Y\right)=10\cdot P\left(X\leq1\right)$
 \end_inset
 
@@ -2778,15 +2903,81 @@ En una fábrica dos máquinas producen el mismo artículo.
  ¿Cuál es la probabilidad de encontrar a lo sumo dos defectuosos?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-Un sistema de protección está constituido por n radares que funcionan independie
-ntemente.
+Un sistema de protección está constituido por 
+\begin_inset Formula $n$
+\end_inset
+
+ radares que funcionan independientemente.
  La probabilidad de que un radar detecte un cohete que ingrese a la zona
  de protección es 0,9.
  ¿Cuál es el número de radares necesarios para que la probabilidad de detectar
  un cohete que ingrese a la zona de protección sea 0, 999?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de detecciones de un cohete en un sistema de 
+\begin_inset Formula $n$
+\end_inset
+
+ radares
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim B\left(n,\frac{90}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\binom{n}{x}\left(\frac{90}{100}\right)^{x}\left(\frac{10}{100}\right)^{n-x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X>0\right)=0,999\iff1-p\left(0\right)=0,999\iff$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\iff1-\left(\frac{10}{100}\right)^{n}=0,999\iff0,001=\left(\frac{10}{100}\right)^{n}\iff n=3$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 Dos aparatos funcionan durante un tiempo 
 \begin_inset Formula $t$
@@ -2833,6 +3024,16 @@ Dos aparatos funcionan durante un tiempo
  del segundo.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 El 30% de los aspirantes a un trabajo tienen entrenamiento avanzado en programac
 ión.
@@ -2980,6 +3181,18 @@ Calcule la probabilidad de que en un período de 2 minutos el dispositivo
  registre 5 autos cuando en realidad pasaron 7.
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Una fábrica produce piezas de las cuales el 2% son defectuosas.
@@ -3015,6 +3228,18 @@ número de piezas defectuosas en un lote de 100 piezas
 
 , tiene claramente distribución binomial, el problema puede aproximarse
  utilizando una variable aleatoria con distribución de Poisson.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
