@@ -84304,7 +84304,10 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-PREGUNTAR.
+\begin_inset Formula $\text{\ensuremath{P\left(E_{1}\cup\left(E_{2}\cap E_{3}\right)\right)=P\left(E_{1}\right)+P\left(E_{2}\cap E_{2}\right)-P\left(E_{1}\cap E_{2}\cap E_{3}\right)=\frac{7}{10}}}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -84387,14 +84390,14 @@ Asumimos que no se puede recibir UN mensaje desde dos fuentes, es decir,
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(K|B\right)=\frac{10}{100}=\frac{P\left(B\cap K\right)}{15/100}\iff P\left(B\cap K\right)=\frac{15}{1000}$
+\begin_inset Formula $P\left(K|B\right)=\frac{15}{100}=\frac{P\left(B\cap K\right)}{1-P\left(A\right)}\iff P\left(B\cap K\right)=\frac{12}{100}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(K\right)=P\left(\left(A\cap K\right)\cup\left(B\cap K\right)\right)=\frac{2}{100}+\frac{15}{1000}-0=\frac{35}{1000}$
+\begin_inset Formula $P\left(K\right)=P\left(\left(A\cap K\right)\cup\left(B\cap K\right)\right)=\frac{2}{100}+\frac{12}{100}-0=\frac{14}{100}$
 \end_inset
 
 .
@@ -84975,12 +84978,12 @@ Solución
 \[
 S\begin{cases}
 E & \frac{12}{100}\begin{cases}
-+ & \frac{90}{100}\\
-- & \frac{10}{100}
+\overline{N} & \frac{90}{100}=P\left(\overline{N}|E\right)\\
+N & \frac{10}{100}
 \end{cases}\\
 \overline{E} & \frac{88}{100}\begin{cases}
-+ & \frac{5}{100}\\
-- & \frac{95}{100}
+\overline{N} & \frac{5}{100}=P\left(\overline{N}|\overline{E}\right)\\
+N & \frac{95}{100}
 \end{cases}
 \end{cases}
 \]
@@ -84993,7 +84996,7 @@ E & \frac{12}{100}\begin{cases}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-P\left(\overline{E}|+\right)=\frac{\frac{88}{100}\cdot\frac{5}{100}}{\frac{12}{100}\cdot\frac{90}{100}+\frac{88}{100}\cdot\frac{5}{100}}\approx\frac{29}{100}
+P\left(\overline{E}|\overline{N}\right)=\frac{P\left(\overline{N}|\overline{E}\right)P\left(\overline{E}\right)}{P\left(\overline{N}|E\right)P\left(E\right)+P\left(\overline{N}|\overline{E}\right)P\left(\overline{E}\right)}=\frac{\frac{5}{100}\cdot\frac{88}{100}}{\frac{90}{100}\cdot\frac{12}{100}+\frac{5}{100}\cdot\frac{88}{100}}\approx\frac{29}{100}
 \]
 
 \end_inset
@@ -85021,7 +85024,7 @@ Sean
 \end_inset
 
 , 
-\begin_inset Formula $P\left(B\right)=\frac{1}{2}$
+\begin_inset Formula $\text{\ensuremath{P\left(B\right)=\frac{1}{2}}}$
 \end_inset
 
  y 
@@ -85119,6 +85122,10 @@ Verdadero:
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -85316,6 +85323,10 @@ COMPLETAR.
 
 \begin_layout Enumerate
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -85506,6 +85517,10 @@ Soluciones
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
