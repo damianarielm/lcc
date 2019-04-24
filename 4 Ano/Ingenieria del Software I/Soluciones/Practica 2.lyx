@@ -14317,7 +14317,7 @@ Para cada uno de los ejercicios se deberá escribir las designaciones de
  los fenómenos de interés y luego se deberá escribir un modelo Statechart
  para el DK, R y S.
  En todos los problemas el objetivo es programar un software que controle
- los dispositivos fı́sicos mencionados según los requerimientos que se expresan
+ los dispositivos físicos mencionados según los requerimientos que se expresan
  en cada caso.
  Resuelva cada problema en todos los lenguajes.
 \end_layout
@@ -14338,7 +14338,11 @@ Se presiona el botón
 \begin_inset Formula $\approx$
 \end_inset
 
- press.
+ 
+\color purple
+press
+\color inherit
+.
  Enviroment controled.
  Shared.
 \end_layout
@@ -14348,7 +14352,11 @@ Se enciende la lampara
 \begin_inset Formula $\approx$
 \end_inset
 
- on.
+ 
+\color purple
+on
+\color inherit
+.
  Machine controled.
  Shared.
 \end_layout
@@ -14358,7 +14366,11 @@ Se apaga la lampara
 \begin_inset Formula $\approx$
 \end_inset
 
- off.
+ 
+\color purple
+off
+\color inherit
+.
  Machine controled.
  Shared.
 \end_layout
@@ -14367,7 +14379,7 @@ Se apaga la lampara
 \align center
 \begin_inset Graphics
 	filename Images/iluminacion.png
-	scale 35
+	scale 17
 
 \end_inset
 
@@ -14399,7 +14411,11 @@ Se abre la puerta
 \begin_inset Formula $\approx$
 \end_inset
 
- open.
+ 
+\color purple
+open
+\color inherit
+.
  Machine controled.
  Shared.
 \end_layout
@@ -14409,7 +14425,11 @@ Se cierra la puerta
 \begin_inset Formula $\approx$
 \end_inset
 
- close.
+ 
+\color purple
+close
+\color inherit
+.
  Machine controled.
  Shared.
 \end_layout
@@ -14419,7 +14439,11 @@ Hay al menos una persona en la zona
 \begin_inset Formula $\approx$
 \end_inset
 
- persona.
+ 
+\color purple
+persona
+\color inherit
+.
  Enviroment controled.
  Unshared.
 \end_layout
@@ -14429,7 +14453,11 @@ Salen todas las personas de la zona
 \begin_inset Formula $\approx$
 \end_inset
 
- naie.
+ 
+\color purple
+nadie
+\color inherit
+.
  Enviroment controled.
  Unshared.
 \end_layout
@@ -14439,7 +14467,11 @@ El sensor detecta una persona
 \begin_inset Formula $\approx$
 \end_inset
 
- sensor.
+ 
+\color purple
+sensor
+\color inherit
+.
  Enviroment controled.
  Shared.
 \end_layout
