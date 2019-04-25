@@ -83945,7 +83945,7 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $A=\left\{ \text{El primer arituclo extraido fue defectuoso}\right\} $
+\begin_inset Formula $A=\left\{ \text{El primer aritíclo extraido fue defectuoso}\right\} $
 \end_inset
 
 .
@@ -83968,7 +83968,7 @@ Soluciones
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $B=\left\{ \text{El segundo arituclo extraido fue bueno}\right\} $
+\begin_inset Formula $B=\left\{ \text{El segundo aritíclo extraido fue bueno}\right\} $
 \end_inset
 
 .
@@ -84013,12 +84013,28 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P\left(A\cap\overline{B}\right)=P\left(\overline{\overline{A}\cup B}\right)=1-P\left(\overline{A}\cup B\right)=1-\left[\frac{25}{100}+\frac{75}{100}-\frac{25\cdot75}{9900}\right]$
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(\overline{A}\cap B\right)=\frac{75\cdot74}{9900}$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $P\left(A\cap\overline{B}\right)=P\left(\overline{\overline{A}\cup B}\right)=1-P\left(\overline{A}\cup B\right)=1-\left[\frac{75}{100}+\frac{75}{100}-\frac{75\cdot74}{9900}\right]=\frac{25\cdot24}{9900}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Un conjunto electrónico consta de dos sistemas 

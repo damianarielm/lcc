@@ -1,5 +1,5 @@
 ###### Año 2019
 
-* Nora Arnesi
-* Gustavo Galizzi
+* Nora Elba Arnesi
+* Gustavo Ernesto Galizzi
 * Gabina Luz Bianchi
