@@ -3275,13 +3275,105 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X_{t}:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Número de autos que pasan en un intervalo de 
+\begin_inset Formula $t$
+\end_inset
+
+ minutos
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{t}\sim P\left(\lambda t\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X_{t}=x\right)=\frac{e^{-\lambda t}\left(\lambda t\right)^{x}}{x!}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{x}=\mathbb{N}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X_{2}=7\right)=\frac{e^{-12}12^{7}}{7!}\approx0,0437$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{Auto detectado}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D\right)=1-P\left(\overline{D}\right)=\frac{99}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de autos detectados de un total de 7
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y\sim B\left(7,\frac{99}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(Y=5\right)=\binom{7}{5}\cdot\left(\frac{99}{100}\right)^{5}\left(\frac{1}{100}\right)^{2}\approx0,002$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Una fábrica produce piezas de las cuales el 2% son defectuosas.
@@ -3323,12 +3415,83 @@ número de piezas defectuosas en un lote de 100 piezas
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $D=\left\{ \text{La pieza es defectuosa}\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D\right)=\frac{2}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Número de piezas defectuosas en un total de 100 piezas
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim B\left(100,\frac{2}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)=\binom{100}{x}\cdot\left(\frac{2}{100}\right)^{x}\cdot\left(\frac{98}{100}\right)^{100-x}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(X=0\right)=\left(\frac{98}{100}\right)^{100}\approx0,13262$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X\leq3\right)=p\left(0\right)+p\left(1\right)+p\left(2\right)+p\left(3\right)\approx0,859$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\approx P\left(100,\frac{2}{100}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X=x\right)\approx\frac{e^{-2}2^{x}}{x!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X=0\right)\approx\frac{e^{-2}2^{0}}{0!}=e^{-2}\approx0,13533$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X\leq3\right)=p\left(0\right)+p\left(1\right)+p\left(2\right)+p\left(3\right)\approx0,857$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
