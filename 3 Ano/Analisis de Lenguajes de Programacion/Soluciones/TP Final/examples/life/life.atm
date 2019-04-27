@@ -1,9 +1,0 @@
-' ': ' ' Black Black
-'*': ' ' White White
-
-State == '*' && Chebyshev('*',1) <  2: ' '
-State == '*' && Chebyshev('*',1) == 2: '*'
-State == '*' && Chebyshev('*',1) == 3: '*'
-State == '*' && Chebyshev('*',1) >  3: ' '
-State == ' ' && Chebyshev('*',1) == 3: '*'
-

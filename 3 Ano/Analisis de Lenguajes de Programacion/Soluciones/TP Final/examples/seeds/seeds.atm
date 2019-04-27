@@ -1,5 +1,0 @@
-'*': ' ' White White
-' ': ' ' White Black
-
-State == ' ' && Chebyshev('*',1) == 2: '*'
-State == '*': ' '

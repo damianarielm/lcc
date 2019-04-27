@@ -1,7 +1,0 @@
-' ': ' ' Black Black
-'*': ' ' White White
-'-': ' ' Yellow Yellow
-
-State == '*': '-'
-State == '-': ' '
-State == ' ' && Manhattan('*',1) >  0: '*'
