@@ -374,7 +374,7 @@ E\left(X\right)=E\left[\sum_{i=1}^{n}Y_{i}\right]=\sum_{i=1}^{n}E\left(Y_{i}\rig
 \end_layout
 
 \begin_layout Section
-Variancia y desvió estándar
+Varianza y desvió estándar
 \end_layout
 
 \begin_layout Standard
@@ -477,7 +477,10 @@ Cantidad de caras en
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $\text{\ensuremath{X\sim B\left(3,\frac{1}{2}\right)}}$
 \end_inset
 
@@ -491,7 +494,6 @@ Cantidad de caras en
 .
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Flex Multiple Columns
 status open
@@ -795,7 +797,10 @@ Cantidad de números negros en
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $\text{\ensuremath{X\sim B\left(4,\frac{18}{37}\right)}}$
 \end_inset
 
@@ -807,13 +812,16 @@ Cantidad de números negros en
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $R_{X}=\left\{ 0,\ldots,4\right\} $
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 ¿Cual es la probabilidad de que la mayoría sean negros?
 \end_layout
@@ -1109,7 +1117,7 @@ Esperanza
 \end_layout
 
 \begin_layout Section
-Variancia y desvió estándar
+Varianza y desvió estándar
 \end_layout
 
 \begin_layout Itemize
@@ -1207,14 +1215,16 @@ Cantidad de manos necesarias hasta que sale poker
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $\text{\ensuremath{X\sim G\left(\frac{624}{2598960}\right)}}$
 \end_inset
 
 .
 \end_layout
 
-\begin_deeper
 \begin_layout Itemize
 \begin_inset Formula $R_{X}=\mathbb{N}$
 \end_inset
@@ -1294,6 +1304,102 @@ E\left(X\right)=\frac{1}{p}=\frac{2598960}{624}=4165
 \end_layout
 
 \end_deeper
+\begin_layout Subsection
+Reproducción Humana
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Se realiza el acto sexual en el día de ovulación
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p=\frac{30}{100}:$
+\end_inset
+
+ Probabilidad de quedar embarazada a los 25 años, teniendo sexo en el día
+ de la ovulación.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de relaciones sexuales durante la ovluación necesarias hasta quedar
+ embarazada
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\ensuremath{X\sim G\left(\frac{30}{100}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\mathbb{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=x\right)=\left(\frac{70}{100}\right)^{x-1}\left(\frac{30}{100}\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cual es la probabilidad de que sea necesario tener 13 relaciones durante
+ la ovluación para quedar embarazada a los 25 años?
+\begin_inset Formula 
+\[
+P\left(X=13\right)=\left(\frac{70}{100}\right)^{13-1}\left(\frac{30}{100}\right)\approx0,004
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Cuantas relaciones sexuales durante la ovulación se esperan sean necesarias
+ para quedar embarazada a los 25 años?
+\begin_inset Formula 
+\[
+E\left(X\right)=\frac{1}{p}=\frac{100}{30}\approx3,33
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 Distribución Hipergeométrica
 \end_layout
@@ -1302,8 +1408,148 @@ Distribución Hipergeométrica
 Descripción
 \end_layout
 
+\begin_layout Standard
+La distribución hipergeométrica es una distribución de probabilidad discreta
+ que cuenta el número de elementos que pertenecen a una determinada categoría
+ en una muestra simple sin reemplazo de una determinada población.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ la población en estudio y 
+\begin_inset Formula $A$
+\end_inset
+
+ un subconjunto de 
+\begin_inset Formula $S$
+\end_inset
+
+, entonces 
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de elementos de 
+\begin_inset Formula $A$
+\end_inset
+
+ en una muestra simple sin reemplazos de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos
+\begin_inset Quotes frd
+\end_inset
+
+ es una variable aleatoria con distribución hipergeométrica.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim H\left(\#S,\#A,n\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\left\{ \max\left(0,n+\#A-\#S\right),\ldots,\min\left(n,\#A\right)\right\} $
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Función de Probabilidad
+\end_layout
+
+\begin_layout Standard
+La probabilidad de que una variable aleatoria 
+\begin_inset Formula $X\sim H\left(\#S,\#A,n\right)$
+\end_inset
+
+ sea 
+\begin_inset Formula $x$
+\end_inset
+
+ es:
+\begin_inset Formula 
+\[
+P\left(X=x\right)=\frac{\binom{\#A}{x}\cdot\binom{\#S-\#A}{n-x}}{\binom{\#S}{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+Observemos que si 
+\begin_inset Formula $X=x$
+\end_inset
+
+ entonces nuestra muestra contiene 
+\begin_inset Formula $x$
+\end_inset
+
+ elementos de la categoría 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ La cantidad de formas diferentes de extraerlos es 
+\begin_inset Formula $\binom{\#A}{x}$
+\end_inset
+
+.
+ Por cada una de ellas habrá 
+\begin_inset Formula $\binom{\#S-\#A}{n-x}$
+\end_inset
+
+ formas de elegir los restantes elementos de la categoría complementaria.
+ En total hay 
+\begin_inset Formula $\binom{\#A}{x}\cdot\binom{\#S-\#A}{n-x}$
+\end_inset
+
+ formas de componer una muestra con 
+\begin_inset Formula $x$
+\end_inset
+
+ elementos de la categoría 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La cantidad de muestras diferentes de 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos de un total de 
+\begin_inset Formula $\#S$
+\end_inset
+
+ elementos es 
+\begin_inset Formula $\binom{\#S}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego, calculando el cociente entre los casos favorables y los posibles,
+ logramos derivar la función de probabilidad.
 \end_layout
 
 \begin_layout Section
@@ -1315,7 +1561,7 @@ Esperanza
 \end_layout
 
 \begin_layout Section
-Variancia y desvió estándar
+Varianza y desvió estándar
 \end_layout
 
 \begin_layout Section
@@ -1343,7 +1589,7 @@ Esperanza
 \end_layout
 
 \begin_layout Section
-Variancia y desvió estándar
+Varianza y desvió estándar
 \end_layout
 
 \begin_layout Section
@@ -1395,7 +1641,7 @@ Esperanza
 \end_layout
 
 \begin_layout Section
-Variancia y desvió estándar
+Varianza y desvió estándar
 \end_layout
 
 \begin_layout Standard
@@ -1460,11 +1706,537 @@ Esperanza
 \end_layout
 
 \begin_layout Section
-Variancia y desvió estándar
+Varianza y desvió estándar
 \end_layout
 
 \begin_layout Section
 Ejemplos
+\end_layout
+
+\begin_layout Chapter
+\start_of_appendix
+Resumen de distribuciones discretas
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distribución
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{X}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E\left(X\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V\left(X\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\approx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Be\left(p\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ 0,1\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p^{x}q^{1-x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $pq$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Bi\left(n,p\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ 0,\ldots,n\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{n}{x}p^{x}q^{n-x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $np$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $npq$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Po\left(np\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Pa\left(r,p\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ r,\ldots\right\} $
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\binom{x-1}{r-1}p^{r}q^{x-r}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{r}{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{rq}{p^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $G\left(p\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q^{x-1}p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{q}{p^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Pa\left(1,p\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $H\left(N,d,n\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\binom{d}{x}\cdot\binom{N-d}{n-x}}{\binom{N}{n}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $np$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $npq\frac{N-n}{N-1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Bi\left(n,\frac{d}{N}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Po\left(\lambda\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{N}_{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{e^{-\lambda}\lambda^{x}}{x!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_body
