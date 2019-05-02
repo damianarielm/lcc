@@ -2393,7 +2393,11 @@ El número de defectos en un rollo de alambre de 100 metros es una v.
 
 .
  La probabilidad de que un rollo de 100 metros de alambre tenga al menos
- un defecto es 0,4.
+ un defecto es 
+\begin_inset Formula $\frac{40}{100}$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -2418,6 +2422,10 @@ número de rollos de 100 metros entre los 10 rollos, que tienen al menos
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2425,9 +2433,37 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(X_{100}\geq1\right)=\frac{40}{100}\iff1-p\left(0\right)=\frac{40}{100}\iff$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\iff\frac{60}{100}=\frac{e^{-100\lambda}\left(100\lambda\right)^{0}}{0!}\iff100\lambda=-\ln\left(\frac{60}{100}\right)\iff\lambda\approx0,005}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(X_{50}\leq2\right)=e^{-50\lambda}+e^{-50\lambda}\cdot50\lambda+\frac{e^{-50\lambda}\left(50\lambda\right)^{2}}{2}\approx0,9978$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -2803,6 +2839,10 @@ Cantidad de componentes que fallan en un período de tiempo
 .
  
 \begin_inset Formula $P\left(X=x\right)=\binom{15}{x}\left(\frac{3}{100}\right)^{x}\left(\frac{97}{100}\right)^{15-x}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -3226,10 +3266,6 @@ ión.
 \begin_layout Enumerate
 ¿Cuál es la probabilidad de encontrar el quinto aspirante con entrenamiento
  avanzado en programación en la décima entrevista?
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -3331,6 +3367,10 @@ Solución
 P\left(X\leq x\right)\geq0,99\iff\sum_{i=0}^{x}\frac{e^{-7}7^{x}}{x!}\geq0,99\iff x\geq14
 \]
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
