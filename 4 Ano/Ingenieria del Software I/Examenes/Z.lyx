@@ -19550,7 +19550,7 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="3">
+<lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -19721,7 +19721,45 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\left(s?=auto\land dom\left(i?\right)\subseteq PATENTE\right)\lor\left(s?=casa\land dom\left(i?\right)\subseteq DOMICILIO\right)$
+\begin_inset Formula $\left(s?=auto\land\exists p:PATENTE\bullet patente\left(p\right)=i?\right)\lor$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Formula $\left(s?=casa\land\exists d:DOMICILIO\bullet domilicio\left(d\right)=i?\right)$
 \end_inset
 
 
@@ -19816,7 +19854,7 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="3">
+<lyxtabular version="3" rows="8" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -19987,7 +20025,45 @@ arrayrulecolor{darkgreen}%
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\left(s?=auto\land dom\left(i?\right)\subseteq DOMICILIO\right)\lor\left(s?=casa\land dom\left(i?\right)\subseteq PATENTE\right)$
+\begin_inset Formula $\left(s?=auto\land\exists d:DOMICILIO\bullet domilicio\left(d\right)=i?\right)\lor$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Formula $\left(s?=casa\land\exists p:PATENTE\bullet patente\left(p\right)=i?\right)$
 \end_inset
 
 
