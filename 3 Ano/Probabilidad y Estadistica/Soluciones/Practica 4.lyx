@@ -1826,12 +1826,12 @@ Numero de lotes rechazados de un total de 100 lotes
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $Y\sim B\left(100,\frac{26334}{53130}\right)$
+\begin_inset Formula $Y\sim B\left(100,1-\frac{26334}{53130}\right)$
 \end_inset
 
 .
  
-\begin_inset Formula $E\left(Y\right)=100\cdot\frac{26334}{53130}\approx49,56$
+\begin_inset Formula $E\left(Y\right)=100\cdot\frac{26796}{53130}\approx50,435$
 \end_inset
 
 .
