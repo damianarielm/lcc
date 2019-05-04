@@ -83394,14 +83394,14 @@ end{venndiagram3sets}
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)=\frac{20}{100}+\frac{16}{100}-\frac{8}{100}=\frac{44}{100}$
+\begin_inset Formula $P\left(A\cup B\right)=P\left(A\right)+P\left(B\right)-P\left(A\cap B\right)=\frac{20}{100}+\frac{16}{100}-\frac{8}{100}=\frac{28}{100}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(A\cap B|A\cup B\right)=\frac{P\left[\left(A\cap B\right)\cap\left(A\cup B\right)\right]}{P\left(A\cup B\right)}=\frac{P\left(A\cap B\right)}{P\left(A\cup B\right)}=\frac{8/100}{44/100}=\frac{8}{44}$
+\begin_inset Formula $P\left(A\cap B|A\cup B\cup C\right)=\frac{P\left[\left(A\cap B\right)\cap\left(A\cup B\cup C\right)\right]}{P\left(A\cup B\cup C\right)}=\frac{P\left(A\cap B\right)}{P\left(A\cup B\cup C\right)}=\frac{8/100}{35/100}=\frac{8}{35}$
 \end_inset
 
 .
