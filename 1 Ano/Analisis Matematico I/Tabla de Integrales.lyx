@@ -7,7 +7,7 @@
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language spanish-mexico
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -58,14 +58,16 @@
 \color #008000
 \end_index
 \leftmargin 0.2cm
+\topmargin 2cm
 \rightmargin 0.2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \is_math_indent 0
 \math_numbering_side default
-\quotes_style english
+\quotes_style french
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
@@ -83,7 +85,7 @@
 
 \size larger
 \begin_inset Tabular
-<lyxtabular version="3" rows="49" columns="3">
+<lyxtabular version="3" rows="53" columns="3">
 <features islongtable="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="0pt">
 <column alignment="center" valignment="top">
@@ -95,7 +97,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\int f(x)dx$
+\begin_inset Formula $\int f\left(x\right)dx$
 \end_inset
 
 
@@ -109,7 +111,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f(x)$
+\begin_inset Formula $f\left(x\right)$
 \end_inset
 
 
@@ -123,7 +125,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f'(x)$
+\begin_inset Formula $f'\left(x\right)$
 \end_inset
 
 
@@ -227,7 +229,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $a\int f(x)dx+b\int g(x)dx$
+\begin_inset Formula $\frac{x^{\frac{1}{n}+1}}{\frac{1}{n}+1}$
 \end_inset
 
 
@@ -241,7 +243,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $af(x)+bg(x)$
+\begin_inset Formula $\sqrt[n]{x}$
 \end_inset
 
 
@@ -255,7 +257,51 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $af'(x)+bg'(x)$
+\begin_inset Formula $\frac{1}{n\sqrt[n]{x^{n-1}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $a\int f\left(x\right)dx+b\int g\left(x\right)dx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $af\left(x\right)+bg\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $af'\left(x\right)+bg'\left(x\right)$
 \end_inset
 
 
@@ -280,7 +326,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f(x)g(x)$
+\begin_inset Formula $f\left(x\right)g\left(x\right)$
 \end_inset
 
 
@@ -294,7 +340,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f(x)g'(x)+g(x)f'(x)$
+\begin_inset Formula $f\left(x\right)g'\left(x\right)+g\left(x\right)f'\left(x\right)$
 \end_inset
 
 
@@ -319,7 +365,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{f(x)}{g(x)}$
+\begin_inset Formula $\frac{f\left(x\right)}{g\left(x\right)}$
 \end_inset
 
 
@@ -333,7 +379,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{f'(x)g(x)-g'(x)f(x)}{g(x)^{2}}$
+\begin_inset Formula $\frac{f'\left(x\right)g\left(x\right)-g'\left(x\right)f\left(x\right)}{g\left(x\right)^{2}}$
 \end_inset
 
 
@@ -349,7 +395,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $ln\left(\left|x\right|\right)+c$
+\begin_inset Formula $\ln\left(\left|x\right|\right)+c$
 \end_inset
 
 
@@ -451,7 +497,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sgn(x)$
+\begin_inset Formula $sgn\left(x\right)$
 \end_inset
 
 
@@ -481,7 +527,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{a^{x}}{ln(a)}+c$
+\begin_inset Formula $\frac{a^{x}}{\ln\left(a\right)}+c$
 \end_inset
 
 
@@ -509,7 +555,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $a^{x}ln(a)$
+\begin_inset Formula $a^{x}\ln\left(a\right)$
 \end_inset
 
 
@@ -525,11 +571,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xf^{-1}(x)-\int f(u)du$
-\end_inset
-
- donde 
-\begin_inset Formula $u=f^{-1}\left(x\right)$
+\begin_inset Formula $\underset{\text{donde }u=f^{-1}\left(x\right)}{xf^{-1}\left(x\right)-\int f\left(u\right)du}$
 \end_inset
 
 
@@ -543,7 +585,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f^{-1}(x)$
+\begin_inset Formula $f^{-1}\left(x\right)$
 \end_inset
 
 
@@ -573,7 +615,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{xln(x)-x}{ln(a)}+c$
+\begin_inset Formula $\frac{x\ln\left(x\right)-x}{\ln\left(a\right)}+c$
 \end_inset
 
 
@@ -587,7 +629,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $log_{a}(x)$
+\begin_inset Formula $\log_{a}\left(x\right)$
 \end_inset
 
 
@@ -601,7 +643,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{1}{xln(a)}$
+\begin_inset Formula $\frac{1}{x\ln\left(a\right)}$
 \end_inset
 
 
@@ -656,7 +698,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{b^{ax}}{aln(b)}+c$
+\begin_inset Formula $\frac{b^{ax}}{a\ln\left(b\right)}+c$
 \end_inset
 
 
@@ -684,7 +726,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $b^{ax}ln(b)a$
+\begin_inset Formula $b^{ax}\ln\left(b\right)a$
 \end_inset
 
 
@@ -723,7 +765,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $x^{x}\left[1+ln(x)\right]$
+\begin_inset Formula $x^{x}\left[1+\ln\left(x\right)\right]$
 \end_inset
 
 
@@ -739,7 +781,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-cos(x)+c$
+\begin_inset Formula $-\cos\left(x\right)+c$
 \end_inset
 
 
@@ -753,7 +795,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sen(x)$
+\begin_inset Formula $\sin\left(x\right)$
 \end_inset
 
 
@@ -767,7 +809,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cos(x)$
+\begin_inset Formula $\cos\left(x\right)$
 \end_inset
 
 
@@ -783,7 +825,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sen(x)+c$
+\begin_inset Formula $\sin\left(x\right)+c$
 \end_inset
 
 
@@ -797,7 +839,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cos(x)$
+\begin_inset Formula $\cos\left(x\right)$
 \end_inset
 
 
@@ -811,7 +853,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-sen(x)$
+\begin_inset Formula $-\sin\left(x\right)$
 \end_inset
 
 
@@ -827,7 +869,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-ln\left[\left|cos\left(x\right)\right|\right]+c$
+\begin_inset Formula $\frac{x+\sin\left(x\right)\cos\left(x\right)}{2}+c$
 \end_inset
 
 
@@ -841,7 +883,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $tan(x)$
+\begin_inset Formula $\cos^{2}\left(x\right)$
 \end_inset
 
 
@@ -855,7 +897,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sec^{2}(x)$
+\begin_inset Formula $-2\cos\left(x\right)\sin\left(x\right)$
 \end_inset
 
 
@@ -871,7 +913,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-ln\left[\left|csc\left(x\right)+cot\left(x\right)\right|\right]+c$
+\begin_inset Formula $\frac{x-\sin\left(x\right)\cos\left(x\right)}{2}+c$
 \end_inset
 
 
@@ -885,7 +927,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $csc(x)$
+\begin_inset Formula $\sin^{2}\left(x\right)$
 \end_inset
 
 
@@ -899,7 +941,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-csc(x)cot(x)$
+\begin_inset Formula $\cos\left(x\right)\sin\left(x\right)$
 \end_inset
 
 
@@ -915,7 +957,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $ln\left[\left|tan\left(x\right)+sec\left(x\right)\right|\right]+c$
+\begin_inset Formula $-\ln\left[\left|\cos\left(x\right)\right|\right]+c$
 \end_inset
 
 
@@ -929,7 +971,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sec(x)$
+\begin_inset Formula $\tan\left(x\right)$
 \end_inset
 
 
@@ -943,7 +985,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sec(x)tan(x)$
+\begin_inset Formula $\sec^{2}\left(x\right)$
 \end_inset
 
 
@@ -959,7 +1001,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $ln\left(\left|sen\left(x\right)\right|\right)+c$
+\begin_inset Formula $-\ln\left[\left|\csc\left(x\right)+\cot\left(x\right)\right|\right]+c$
 \end_inset
 
 
@@ -973,7 +1015,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cot(x)$
+\begin_inset Formula $\csc\left(x\right)$
 \end_inset
 
 
@@ -987,7 +1029,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-csc^{2}(x)$
+\begin_inset Formula $-\csc\left(x\right)\cot\left(x\right)$
 \end_inset
 
 
@@ -1003,7 +1045,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xsen^{-1}(x)+\sqrt{1-x^{2}}+c$
+\begin_inset Formula $\ln\left[\left|\tan\left(x\right)+\sec\left(x\right)\right|\right]+c$
 \end_inset
 
 
@@ -1017,7 +1059,95 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sen^{-1}(x)$
+\begin_inset Formula $\sec\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $\sec\left(x\right)\tan\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $\ln\left(\left|\sin\left(x\right)\right|\right)+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $\cot\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $-\csc^{2}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $x\sin^{-1}\left(x\right)+\sqrt{1-x^{2}}+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $\sin^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1047,7 +1177,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xcos^{-1}(x)-\sqrt{1-x^{2}}+c$
+\begin_inset Formula $x\cos^{-1}\left(x\right)-\sqrt{1-x^{2}}+c$
 \end_inset
 
 
@@ -1061,7 +1191,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cos^{-1}(x)$
+\begin_inset Formula $\cos^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1091,7 +1221,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xtan^{-1}(x)-\frac{ln\left(x^{2}+1\right)}{2}+c$
+\begin_inset Formula $x\tan^{-1}\left(x\right)-\frac{\ln\left(x^{2}+1\right)}{2}+c$
 \end_inset
 
 
@@ -1105,7 +1235,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $tan^{-1}(x)$
+\begin_inset Formula $\tan^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1135,7 +1265,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xcsc^{-1}(x)+ln\left(\left|\sqrt{x^{2}-1}+x\right|\right)+c$
+\begin_inset Formula $x\csc^{-1}\left(x\right)+\ln\left(\left|\sqrt{x^{2}-1}+x\right|\right)+c$
 \end_inset
 
 
@@ -1149,7 +1279,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $csc^{-1}(x)$
+\begin_inset Formula $\csc^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1179,7 +1309,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xsec^{-1}(x)-ln\left(\left|\sqrt{x^{2}-1}+x\right|\right)+c$
+\begin_inset Formula $x\sec^{-1}\left(x\right)-\ln\left(\left|\sqrt{x^{2}-1}+x\right|\right)+c$
 \end_inset
 
 
@@ -1193,7 +1323,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sec^{-1}(x)$
+\begin_inset Formula $\sec^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1223,7 +1353,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xcot^{-1}(x)+\frac{ln\left(x^{2}+1\right)}{2}+c$
+\begin_inset Formula $x\cot^{-1}\left(x\right)+\frac{\ln\left(x^{2}+1\right)}{2}+c$
 \end_inset
 
 
@@ -1237,7 +1367,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cot^{-1}(x)$
+\begin_inset Formula $\cot^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1267,7 +1397,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cosh(x)+c$
+\begin_inset Formula $\cosh\left(x\right)+c$
 \end_inset
 
 
@@ -1281,7 +1411,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $senh(x)$
+\begin_inset Formula $\sinh\left(x\right)$
 \end_inset
 
 
@@ -1295,7 +1425,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cosh(x)$
+\begin_inset Formula $\cosh\left(x\right)$
 \end_inset
 
 
@@ -1311,7 +1441,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $senh(x)+c$
+\begin_inset Formula $\sinh\left(x\right)+c$
 \end_inset
 
 
@@ -1325,7 +1455,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cosh(x)$
+\begin_inset Formula $\cosh\left(x\right)$
 \end_inset
 
 
@@ -1339,7 +1469,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $senh(x)$
+\begin_inset Formula $\sinh\left(x\right)$
 \end_inset
 
 
@@ -1355,7 +1485,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $ln\left[cosh\left(x\right)\right]+c$
+\begin_inset Formula $\ln\left[\cosh\left(x\right)\right]+c$
 \end_inset
 
 
@@ -1369,7 +1499,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $tanh(x)$
+\begin_inset Formula $\tanh\left(x\right)$
 \end_inset
 
 
@@ -1383,7 +1513,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $senh^{2}(x)$
+\begin_inset Formula $\sinh^{2}\left(x\right)$
 \end_inset
 
 
@@ -1399,7 +1529,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-ln\left[\left|csch(x)+cot(x)\right|\right]+c$
+\begin_inset Formula $-\ln\left[\left|csch\left(x\right)+\cot\left(x\right)\right|\right]+c$
 \end_inset
 
 
@@ -1413,7 +1543,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $csch(x)$
+\begin_inset Formula $csch\left(x\right)$
 \end_inset
 
 
@@ -1427,7 +1557,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-csch(x)coth(x)$
+\begin_inset Formula $-csch\left(x\right)\coth\left(x\right)$
 \end_inset
 
 
@@ -1443,7 +1573,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $tan^{-1}\left[senh\left(x\right)\right]+c$
+\begin_inset Formula $\tan^{-1}\left[\sinh\left(x\right)\right]+c$
 \end_inset
 
 
@@ -1457,7 +1587,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sech(x)$
+\begin_inset Formula $sech\left(x\right)$
 \end_inset
 
 
@@ -1471,7 +1601,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-sech(x)tanh(x)$
+\begin_inset Formula $-sech\left(x\right)\tanh\left(x\right)$
 \end_inset
 
 
@@ -1487,7 +1617,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $ln\left[senh\left(\left|x\right|\right)\right]+c$
+\begin_inset Formula $\ln\left[\sinh\left(\left|x\right|\right)\right]+c$
 \end_inset
 
 
@@ -1501,7 +1631,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $coth(x)$
+\begin_inset Formula $\coth\left(x\right)$
 \end_inset
 
 
@@ -1515,7 +1645,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-csch^{2}(x)$
+\begin_inset Formula $-csch^{2}\left(x\right)$
 \end_inset
 
 
@@ -1531,7 +1661,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xsinh^{-1}(x)-\sqrt{x^{2}+1}+c$
+\begin_inset Formula $x\sinh^{-1}\left(x\right)-\sqrt{x^{2}+1}+c$
 \end_inset
 
 
@@ -1545,7 +1675,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $senh^{-1}(x)$
+\begin_inset Formula $\sinh^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1575,7 +1705,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xcosh^{-1}(x)-\sqrt{x^{2}-1}+c$
+\begin_inset Formula $x\cosh^{-1}\left(x\right)-\sqrt{x^{2}-1}+c$
 \end_inset
 
 
@@ -1589,7 +1719,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cosh^{-1}(x)$
+\begin_inset Formula $\cosh^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1619,7 +1749,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xtanh^{-1}(x)+\frac{ln(\left|x^{2}-1\right|)}{2}+c$
+\begin_inset Formula $x\tanh^{-1}\left(x\right)+\frac{\ln\left(\left|x^{2}-1\right|\right)}{2}+c$
 \end_inset
 
 
@@ -1633,7 +1763,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $tanh^{-1}(x)$
+\begin_inset Formula $\tanh^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1663,7 +1793,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xcsch^{-1}(x)+ln\left(\left|\sqrt{x^{2}+1}+x\right|\right)+c$
+\begin_inset Formula $xcsch^{-1}\left(x\right)+\ln\left(\left|\sqrt{x^{2}+1}+x\right|\right)+c$
 \end_inset
 
 
@@ -1677,7 +1807,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $csch^{-1}(x)$
+\begin_inset Formula $csch^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1707,7 +1837,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xsech^{-1}(x)+sin^{-1}(x)+c$
+\begin_inset Formula $xsech^{-1}\left(x\right)+\sin^{-1}\left(x\right)+c$
 \end_inset
 
 
@@ -1721,7 +1851,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sech^{-1}(x)$
+\begin_inset Formula $sech^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1751,7 +1881,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $xcoth^{-1}(x)+\frac{ln(\left|x^{2}-1\right|)}{2}+c$
+\begin_inset Formula $x\coth^{-1}\left(x\right)+\frac{\ln\left(\left|x^{2}-1\right|\right)}{2}+c$
 \end_inset
 
 
@@ -1765,7 +1895,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $coth^{-1}(x)$
+\begin_inset Formula $\coth^{-1}\left(x\right)$
 \end_inset
 
 
@@ -1795,11 +1925,55 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\int f(u)du$
+\begin_inset Formula $\sin^{-1}\left(\frac{x}{a}\right)+c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $\frac{1}{\sqrt{a^{2}-x^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $\frac{x}{\left(a^{2}-x^{2}\right)^{\frac{3}{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size larger
+\begin_inset Formula $\int f\left(u\right)du$
 \end_inset
 
  donde 
-\begin_inset Formula $u=g(x)$
+\begin_inset Formula $u=g\left(x\right)$
 \end_inset
 
 
@@ -1843,7 +2017,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f(x)g(x)-\int f'(x)g(x)dx$
+\begin_inset Formula $f\left(x\right)g\left(x\right)-\int f'\left(x\right)g\left(x\right)dx$
 \end_inset
 
 
@@ -1857,7 +2031,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f(x)g'(x)$
+\begin_inset Formula $f\left(x\right)g'\left(x\right)$
 \end_inset
 
 
@@ -1871,7 +2045,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $f'(x)g'(x)+g''(x)f(x)$
+\begin_inset Formula $f'\left(x\right)g'\left(x\right)+g''\left(x\right)f\left(x\right)$
 \end_inset
 
 
@@ -1887,7 +2061,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{1}{a}tan^{-1}(\frac{x}{a})+c$
+\begin_inset Formula $\frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+c$
 \end_inset
 
 
@@ -1931,7 +2105,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{1}{2a}ln\left(\left|\frac{x+a}{x-a}\right|\right)+c$
+\begin_inset Formula $\frac{1}{2a}\ln\left(\left|\frac{x+a}{x-a}\right|\right)+c$
 \end_inset
 
 
@@ -1975,7 +2149,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{1}{2a}ln\left(\left|\frac{x-a}{x+a}\right|\right)+c$
+\begin_inset Formula $\frac{1}{2a}\ln\left(\left|\frac{x-a}{x+a}\right|\right)+c$
 \end_inset
 
 
@@ -2003,7 +2177,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-\frac{2x}{(x^{2}-a^{2})^{2}}$
+\begin_inset Formula $-\frac{2x}{\left(x^{2}-a^{2}\right)^{2}}$
 \end_inset
 
 
@@ -2019,7 +2193,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{ln\left(\left|mx+h\right|\right)}{m}+c$
+\begin_inset Formula $\frac{\ln\left(\left|mx+h\right|\right)}{m}+c$
 \end_inset
 
 
@@ -2063,7 +2237,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{2tan^{-1}\left(\frac{2ax+b}{\sqrt{-\varDelta}}\right)}{\sqrt{-\varDelta}}+C\text{'}$
+\begin_inset Formula $\frac{2\tan^{-1}\left(\frac{2ax+b}{\sqrt{-\varDelta}}\right)}{\sqrt{-\varDelta}}+C\text{'}$
 \end_inset
 
 
@@ -2111,7 +2285,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{tan^{-1}(x)}{2}+\frac{x}{2x^{2}+2}+c$
+\begin_inset Formula $\frac{tan^{-1}\left(x\right)}{2}+\frac{x}{2x^{2}+2}+c$
 \end_inset
 
 
@@ -2159,7 +2333,7 @@
 \end_inset
 
  donde 
-\begin_inset Formula $u=tan\left(\frac{x}{2}\right)$
+\begin_inset Formula $u=\tan\left(\frac{x}{2}\right)$
 \end_inset
 
 
@@ -2173,7 +2347,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $sen(x)$
+\begin_inset Formula $\sin\left(x\right)$
 \end_inset
 
 
@@ -2187,7 +2361,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $\frac{2}{tan^{2}\left(\frac{x}{2}\right)+1}-1$
+\begin_inset Formula $\frac{2}{\tan^{2}\left(\frac{x}{2}\right)+1}-1$
 \end_inset
 
 
@@ -2207,7 +2381,7 @@
 \end_inset
 
  donde 
-\begin_inset Formula $u=tan\left(\frac{x}{2}\right)$
+\begin_inset Formula $u=\tan\left(\frac{x}{2}\right)$
 \end_inset
 
 
@@ -2221,7 +2395,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $cos(x)$
+\begin_inset Formula $\cos\left(x\right)$
 \end_inset
 
 
@@ -2235,7 +2409,7 @@
 \begin_layout Plain Layout
 
 \size larger
-\begin_inset Formula $-\frac{2tan\left(\frac{x}{2}\right)}{tan^{2}\left(\frac{x}{2}\right)+1}$
+\begin_inset Formula $-\frac{2\tan\left(\frac{x}{2}\right)}{\tan^{2}\left(\frac{x}{2}\right)+1}$
 \end_inset
 
 
