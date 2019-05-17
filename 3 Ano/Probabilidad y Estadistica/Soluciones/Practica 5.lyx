@@ -199,9 +199,9 @@ Soluciones
 \end_deeper
 \begin_layout Enumerate
 \begin_inset Formula $F\left(x\right)=\begin{cases}
-0 & x\leq-1\\
-\left.y^{3}\right|_{-1}^{x} & -1\leq x\leq0\\
-1 & x\geq0
+0 & x<-1\\
+\left.y^{3}\right|_{-1}^{x}=x^{3}+1 & -1\leq x\leq0\\
+1 & x>0
 \end{cases}$
 \end_inset
 
@@ -209,7 +209,7 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $F\left(x^{*}\right)=\left.y^{3}\right|_{-1}^{x^{*}}=\left(x^{*}\right)^{3}+1=\frac{1}{2}\iff x^{*}=-\frac{1}{\sqrt[3]{2}}$
+\begin_inset Formula $F\left(x^{*}\right)=\left(x^{*}\right)^{3}+1=\frac{1}{2}\iff x^{*}=-\frac{1}{\sqrt[3]{2}}$
 \end_inset
 
 .
@@ -332,18 +332,122 @@ Si se instalan tres de tales tubos, calcule la probabilidad de que uno de
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Duración en horas de un cierto tipo de tubos
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(x\right)=\begin{cases}
+\int_{100}^{x}f\left(t\right)dt=\frac{x-100}{x} & x\geq100\\
+0 & x<100
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(X\leq200|X\geq150\right)=\frac{P\left(150\leq X\leq200\right)}{P\left(X\geq150\right)}=\frac{F\left(200\right)-F\left(150\right)}{1-F\left(150\right)}=\frac{\frac{1}{2}-\frac{1}{3}}{1-\frac{1}{3}}=\frac{1}{4}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de tubos que duran al lo sumo150 horas, de un total de 3
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y\sim\left(3,F\left(150\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p\left(1\right)=\binom{3}{1}\left(\frac{1}{3}\right)^{1}\left(\frac{2}{3}\right)^{2}=\frac{4}{9}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de tubos que duran al menos 150 horas, de un total de 
+\begin_inset Formula $n$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z\sim\left(n,1-F\left(150\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{p\left(n\right)=\binom{n}{n}\left(\frac{2}{3}\right)^{n}\left(\frac{1}{3}\right)^{0}=\left(\frac{2}{3}\right)^{n}\leq\frac{1}{2}\iff n>\log_{\frac{2}{3}}\left(\frac{1}{2}\right)\approx1,7095}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Deben colocarse al menos 2 tubos.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Un proceso químico puede producir un organismo de tipo 
