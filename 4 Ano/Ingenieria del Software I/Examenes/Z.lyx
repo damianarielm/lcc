@@ -26761,5 +26761,62 @@ arrayrulecolor{darkgreen}%
 Invariantes (COMPLETAR)
 \end_layout
 
+\begin_layout Subsection
+Administración de mapas
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un mapa se representa con una serie de puntos (en el plano) que corresponden
+ a su periímetro.
+ Existe una operación para agregar un punto al mapa; hay que controlar que
+ no existe el punto que se intenta agregar y que la componente horizontal
+ no exceda las constantes O y E; y que la componente vertical no exceda
+ N y S.
+ Además, el mapa se puede rotar un cierto ángulo lo que significa modificar
+ los puntos de su perimetro; la rotación es función del perímetro y del
+ ángulo.
+\end_layout
+
+\begin_layout Standard
+Luego, el mapa se incluye en un mapa de mayor tamaño que puede contener
+ varios mapas pequeños.
+ El agregado de un mapa a uno mayor puede hacerse solo si la superficie
+ ya cubierta del más grande no es excedida.
+ La superficie de un mapa es función de los puntos de su perimtero.
+\end_layout
+
+\begin_layout Standard
+Debe especificarse la operación que permite rotar el mapa mayor rotando
+ cada uno de los mapas que lo componen.
+\end_layout
+
+\begin_layout Standard
+Modele en Z utilizando promoción de operaciones los requerimientos anteriores.
+\end_layout
+
+\begin_layout Subsubsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsubsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsubsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsubsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsubsection
+COMPLETAR
+\end_layout
+
 \end_body
 \end_document
