@@ -1,0 +1,1080 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Vector aleatorio
+\end_layout
+
+\begin_layout Enumerate
+La distribución de probabilidad conjunta del vector 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+ está dada por 
+\begin_inset Formula $p\left(x,y\right)=\frac{x+y}{30}$
+\end_inset
+
+ con 
+\begin_inset Formula $x=0,1,2,3$
+\end_inset
+
+ e 
+\begin_inset Formula $y=0,1,2$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determine:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X\leq2,Y=1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X>2,Y\leq1\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X-Y>0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X+Y=4\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Obtenga las distribuciones marginales de 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ respectivamente..
+\end_layout
+
+\begin_layout Enumerate
+¿Son 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ variables aleatorias independientes?
+\end_layout
+
+\begin_layout Enumerate
+Calcule el coeficiente de correlación entre 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Obtenga las distribuciones condicionales.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El ejemplo siguiente ilustra que 
+\begin_inset Formula $\rho=0$
+\end_inset
+
+ no implica independencia.
+ Suponiendo que una variable aleatoria bidimensional 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+ tiene una distribución conjunta dada por
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Y/X$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $c>0$
+\end_inset
+
+, 
+\begin_inset Formula $d>0$
+\end_inset
+
+, 
+\begin_inset Formula $4c+4d=1$
+\end_inset
+
+, demuestre que:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ no son independientes.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se debe seleccionar un comité de tres personas elegidas al azar de un grupo
+ constituido por cuatro docentes y cinco estudiantes.
+ Sea 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+número de docentes en el comité
+\begin_inset Quotes erd
+\end_inset
+
+ y 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+: 
+\begin_inset Quotes eld
+\end_inset
+
+número de estudiantes en el comité
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determine la distribución de probabilidad conjunta de 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determine las distribuciones marginales de 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Son 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ independientes?
+\end_layout
+
+\begin_layout Enumerate
+Calcule 
+\begin_inset Formula $P\left(X_{1}=1|X_{2}\geq1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ la función densidad de probabilidad conjunta del vector aleatorio 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+, dada por:
+\begin_inset Formula 
+\[
+f\left(x,y\right)=\begin{cases}
+kx\left(x-y\right) & 0<x<2,-x<y<x\\
+0 & \text{en otro caso}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determine el valor de 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Obtenga las distribuciones marginales de 
+\begin_inset Formula $X$
+\end_inset
+
+e 
+\begin_inset Formula $Y$
+\end_inset
+
+ respectivamente.
+\end_layout
+
+\begin_layout Enumerate
+Calcule el coeficiente de correlación entre 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ la función densidad de probabilidad conjunta del vector aleatorio 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+, dada por:
+\begin_inset Formula 
+\[
+f\left(x,y\right)=\begin{cases}
+k & 0<x<1,x<y<x+1\\
+0 & \text{en otro caso}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determine el valor de 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Obtenga las distribuciones marginales de 
+\begin_inset Formula $X$
+\end_inset
+
+e 
+\begin_inset Formula $Y$
+\end_inset
+
+ respectivamente.
+\end_layout
+
+\begin_layout Enumerate
+Calcule el coeficiente de correlación entre 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un sistema electrónico opera con dos tipos de componentes.
+ Sean 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ las variables aleatorias tiempo de duración (en horas) de las componentes
+ de tipo 1 y 2 respectivamente.
+ La función densidad de probabilidad conjunta del vector 
+\begin_inset Formula $\left(T_{1},T_{2}\right)$
+\end_inset
+
+ es:
+\begin_inset Formula 
+\[
+f\left(t_{1},t_{2}\right)=\begin{cases}
+\frac{t_{1}}{8}e^{-\left(\frac{t_{1}+t_{2}}{2}\right)} & 0<t_{1},0<t_{2}\\
+0 & \text{en otro caso}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determine 
+\begin_inset Formula $P\left(T_{1}\geq1,T_{2}\geq1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Calcule la probabilidad de que una componente de tipo 2 tenga una duración
+ mayor que 2 horas.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Los tiempos en horas 
+\begin_inset Formula $T_{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{B}$
+\end_inset
+
+ que dos estudiantes 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ demoran en resolver un problema son variables aleatorias independientes
+ con distribución exponencial y esperanza 0,5 hs.
+ Calcule la probabilidad de que el estudiante A demore a lo sumo una hora
+ y el estudiante B demore como máximo 45 minutos.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se escoge al azar un punto de coordenadas reales en el triángulo limitado
+ por 
+\begin_inset Formula $y=0$
+\end_inset
+
+, 
+\begin_inset Formula $x=0$
+\end_inset
+
+, 
+\begin_inset Formula $y=2n-x$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determine la distribución conjunta de las coordenadas 
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determine las distribuciones marginales de 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determine la distribución condicional de 
+\begin_inset Formula $X$
+\end_inset
+
+ dado 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ variables aleatorias cuya distribución conjunta es uniforme en el triángulo
+ de vértices 
+\begin_inset Formula $\left(-1,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,1\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(1,0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Suma de variables aleatorias
+\end_layout
+
+\begin_layout Enumerate-Resume
+Un aparato de televisión puede tener dos tipos de roturas: debido a falla
+ de transistores o debido a la falla de condensadores.
+ Ambas fuentes de rotura son independientes.
+ El número de roturas debido a falla de transistores durante los dos primeros
+ años de utilización del aparato es una v.
+ a.
+ que sigue una ley de Poisson con promedio 1.
+ El número de roturas debido a la falla de condensadores, durante el mismo
+ período, sigue una ley de Poisson con promedio 2.
+ Calcule la probabilidad de que en el primer año de utilización del aparato,
+ éste tenga exactamente 2 roturas.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Ciertos elementos de un circuito eléctrico se protegen contra el exceso
+ de voltaje por medio de dos relevadores 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ que se ajustan para ser descargados en períodos 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ respectivamente, después que comienza el exceso de voltaje.
+ Estos períodos de descarga varían debido a pequeños factores incontrolables,
+ por lo que se puede suponer que 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ son v.
+ a.
+ normales independientes con tiempos medios de descarga 
+\begin_inset Formula $\mu_{1}=1s$
+\end_inset
+
+ y 
+\begin_inset Formula $\mu_{2}$
+\end_inset
+
+, y varianzas 
+\begin_inset Formula $\sigma_{12}=\sigma_{22}=\frac{1}{10}s^{2}$
+\end_inset
+
+.
+ Determine 
+\begin_inset Formula $\mu_{2}$
+\end_inset
+
+ de manera tal que la probabilidad de que 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ sea descargada antes que 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ sea a lo sumo 0,001.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sean 
+\begin_inset Formula $X_{1},\ldots,X_{n}$
+\end_inset
+
+; 
+\begin_inset Formula $n$
+\end_inset
+
+ variables aleatorias independientes distribuidas uniformemente en el intervalo
+ 
+\begin_inset Formula $\left(0,1\right)$
+\end_inset
+
+.
+ Encuentre la función de densidad de probabilidad de la variable aleatoria
+ 
+\begin_inset Formula $Z=X_{1}+\ldots+X_{60}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\end_body
+\end_document

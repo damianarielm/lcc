@@ -12797,7 +12797,7 @@ arrayrulecolor{darkgreen}%
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
+<lyxtabular version="3" rows="4" columns="3">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -12844,6 +12844,40 @@ arrayrulecolor{darkgreen}%
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $ACL$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -26771,13 +26805,13 @@ Requerimientos
 
 \begin_layout Standard
 Un mapa se representa con una serie de puntos (en el plano) que corresponden
- a su periímetro.
+ a su perímetro.
  Existe una operación para agregar un punto al mapa; hay que controlar que
  no existe el punto que se intenta agregar y que la componente horizontal
  no exceda las constantes O y E; y que la componente vertical no exceda
  N y S.
  Además, el mapa se puede rotar un cierto ángulo lo que significa modificar
- los puntos de su perimetro; la rotación es función del perímetro y del
+ los puntos de su perímetro; la rotación es función del perímetro y del
  ángulo.
 \end_layout
 
@@ -26786,7 +26820,7 @@ Luego, el mapa se incluye en un mapa de mayor tamaño que puede contener
  varios mapas pequeños.
  El agregado de un mapa a uno mayor puede hacerse solo si la superficie
  ya cubierta del más grande no es excedida.
- La superficie de un mapa es función de los puntos de su perimtero.
+ La superficie de un mapa es función de los puntos de su perímetro.
 \end_layout
 
 \begin_layout Standard
