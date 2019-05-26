@@ -5,6 +5,13 @@
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{pgfplots}
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+\end_preamble
 \use_default_options true
 \begin_modules
 enumitem
@@ -265,7 +272,7 @@ Soluciones
 \begin_layout Itemize
 \begin_inset Formula $F\left(y\right)=\begin{cases}
 0 & y<0\\
-\intop_{0}^{y}f\left(x\right)dx=1-e^{-y^{2}} & y\geq0
+1-e^{-y^{2}}=\intop_{0}^{y}f\left(x\right)dx & y\geq0
 \end{cases}$
 \end_inset
 
@@ -333,14 +340,14 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $X$
+\begin_inset Formula $T$
 \end_inset
 
 : 
 \begin_inset Quotes fld
 \end_inset
 
-Duración en horas de un cierto tipo de tubos
+Duración en horas de un cierto tipo de tubo
 \begin_inset Quotes frd
 \end_inset
 
@@ -348,9 +355,9 @@ Duración en horas de un cierto tipo de tubos
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $F\left(x\right)=\begin{cases}
-\int_{100}^{x}f\left(t\right)dt=\frac{x-100}{x} & x\geq100\\
-0 & x<100
+\begin_inset Formula $F\left(t\right)=\begin{cases}
+0+\int_{100}^{t}f\left(x\right)dx=\frac{t-100}{t} & t\geq100\\
+0 & t<100
 \end{cases}$
 \end_inset
 
@@ -362,7 +369,7 @@ Duración en horas de un cierto tipo de tubos
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $P\left(X\leq200|X\geq150\right)=\frac{P\left(150\leq X\leq200\right)}{P\left(X\geq150\right)}=\frac{F\left(200\right)-F\left(150\right)}{1-F\left(150\right)}=\frac{\frac{1}{2}-\frac{1}{3}}{1-\frac{1}{3}}=\frac{1}{4}$
+\begin_inset Formula $P\left(T\leq200|T\geq150\right)=\frac{P\left(150\leq T\leq200\right)}{P\left(T\geq150\right)}=\frac{F\left(200\right)-F\left(150\right)}{1-F\left(150\right)}=\frac{\frac{1}{2}-\frac{1}{3}}{1-\frac{1}{3}}=\frac{1}{4}$
 \end_inset
 
 .
@@ -384,13 +391,13 @@ Duración en horas de un cierto tipo de tubos
 \begin_inset Quotes fld
 \end_inset
 
-Cantidad de tubos que duran al lo sumo150 horas, de un total de 3
+Cantidad de tubos que duran al lo sumo 150 horas, de un total de 3
 \begin_inset Quotes frd
 \end_inset
 
 .
  
-\begin_inset Formula $Y\sim\left(3,F\left(150\right)\right)$
+\begin_inset Formula $Y\sim Bi\left(3,F\left(150\right)\right)$
 \end_inset
 
 .
@@ -430,7 +437,7 @@ Cantidad de tubos que duran al menos 150 horas, de un total de
 
 .
  
-\begin_inset Formula $Z\sim\left(n,1-F\left(150\right)\right)$
+\begin_inset Formula $Z\sim Bi\left(n,1-F\left(150\right)\right)$
 \end_inset
 
 .
@@ -535,8 +542,26 @@ Se propone clasificar el tipo de un organismo, en función de la proporción
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Proporción de la sustancia química presente en el organísmo
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(X>\frac{1}{3}/\text{el organismo es de tipo }A\right)=\intop_{\frac{1}{3}}^{1}4\left(1-x\right)^{3}dx=\left.-\left(x-1\right)^{4}\right|_{\frac{1}{3}}^{1}=\frac{16}{81}}}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -608,8 +633,11 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate-Resume
 El tiempo en minutos que una persona demora en ir de su casa a una estación
- de tren es una variable aleatoria T con distribución uniforme en el intervalo
- 
+ de tren es una variable aleatoria 
+\begin_inset Formula $T$
+\end_inset
+
+ con distribución uniforme en el intervalo 
 \begin_inset Formula $\left[20,25\right]$
 \end_inset
 
@@ -617,12 +645,12 @@ El tiempo en minutos que una persona demora en ir de su casa a una estación
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que si la persona deja su casa a las 07:05:00,
  alcance el tren que parte a las 07:28:00.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule el tiempo promedio que la persona demora en realizar el trayecto
  desde su casa a la estación de tren.
 \end_layout
@@ -631,12 +659,69 @@ Calcule el tiempo promedio que la persona demora en realizar el trayecto
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $T:$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Tiempo en minutos para ir desde la casa a la estación
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T\sim U\left[20,25\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f\left(t\right)=\begin{cases}
+\frac{1}{5} & 20\leq t\leq25\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F\left(t\right)=\begin{cases}
+0 & t<20\\
+\frac{t-20}{5} & 20\leq t\leq25\\
+1 & t>25
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(T\right)=\frac{20+25}{2}=\frac{45}{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V\left(T\right)=\frac{\left(25-20\right)^{2}}{12}=\frac{25}{12}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(T\leq23\right)=F\left(23\right)=\frac{23-20}{5}=\frac{3}{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E\left(T\right)=\frac{45}{2}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -704,12 +789,12 @@ El número de accidentes en una fábrica se puede representar por un proceso
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que el tiempo entre dos accidentes sea mayor
  que 3 días.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que el tiempo hasta el tercer accidente sea mayor
  que 12 días.
 \end_layout
@@ -724,6 +809,10 @@ COMPLETAR.
 
 \begin_layout Enumerate
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -736,32 +825,32 @@ El número de diarios que vende un canillita es una variable aleatoria
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que transcurran más de dos minutos entre dos
  ventas.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Si el canillita tarda 5 minutos en preparar y tomar un café, calcule la
  probabilidad de que realice esas acciones sin ser interrumpido por un cliente.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule el tiempo promedio que transcurre entre dos ventas.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que transcurran en total más de siete minutos
  para la siguiente venta, dado que ya han transcurrido cinco minutos desde
  la última.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que transcurran más de ocho minutos hasta la
  quinta venta.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule el tiempo promedio que transcurre hasta la quinta venta.
 \end_layout
 
@@ -769,28 +858,189 @@ Calcule el tiempo promedio que transcurre hasta la quinta venta.
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X_{t}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de diarios vendidos en 
+\begin_inset Formula $t$
+\end_inset
+
+ minutos
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=\frac{50}{60}\frac{diarios}{minuto}=\frac{5}{6}\frac{diarios}{minutos}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X_{t}\sim Po\left(\lambda t\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X_{t}=k\right)=\frac{e^{-\lambda t}\left(\lambda t\right)^{k}}{k!}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Tiempo en minutos entre dos ventas sucesivas
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y\sim Ex\left(\frac{5}{6}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f\left(y\right)=\begin{cases}
+0 & y\leq0\\
+\frac{5}{6}e^{-\frac{5}{6}y} & y>0
+\end{cases}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F\left(y\right)=\begin{cases}
+0 & y\leq0\\
+1-e^{-\frac{5}{6}y} & y>0
+\end{cases}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(Y\geq2\right)=1-F\left(2\right)\approx1-0,8111=0,1889$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(Y\geq5\right)=1-F\left(5\right)\approx1-0,9845=0,0155$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $E\left(Y\right)=\frac{6}{5}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $P\left(Y\geq7|Y\geq5\right)=P\left(Y\geq2\right)\approx0,1889$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Tiempo en minutos hasta la quinta venta
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z\sim Er\left(\frac{5}{6},5\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(z\right)=\begin{cases}
+\frac{5}{6}e^{-\frac{5}{6}z}\frac{\left(\frac{5}{6}z\right)^{5-1}}{\left(k-1\right)!} & z>0\\
+0 & z\leq0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(z\right)=\begin{cases}
+1-{\displaystyle \sum_{n=0}^{5-1}}e^{-\frac{5}{6}z}\left(\frac{5}{6}z\right)^{n}\frac{1}{n!} & z>0\\
+0 & z\leq0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(Z\geq8\right)=1-F\left(8\right)=1-\left[1-{\displaystyle \sum_{n=0}^{4}}e^{-\frac{5}{6}8}\left(\frac{5}{6}8\right)^{n}\frac{1}{n!}\right]=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $={\displaystyle \sum_{n=0}^{4}}e^{-\frac{40}{6}}\left(\frac{40}{6}\right)^{n}\frac{1}{n!}=e^{-\frac{40}{6}}\left[{\displaystyle \sum_{n=0}^{4}}\left(\frac{40}{6}\right)^{n}\frac{1}{n!}\right]=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=e^{-\frac{40}{6}}\left[1+\frac{40}{6}+\left(\frac{40}{6}\right)^{2}\frac{1}{2}+\left(\frac{40}{6}\right)^{3}\frac{1}{6}+\left(\frac{40}{6}\right)^{4}\frac{1}{24}\right]\approx e^{-\frac{40}{6}}\cdot161,576$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E\left(Z\right)=\frac{5}{\frac{5}{6}}=6$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -805,7 +1055,7 @@ Pruebe que si
 
  es una variable aleatoria con distribución normal con media 0 y desvío
  estándar 1, entonces 
-\begin_inset Formula $P\left(-a<Z<a\right)=2P\left(Z<a\right)-1$
+\begin_inset Formula $\text{\ensuremath{P\left(-a<Z<a\right)=2P\left(Z<a\right)-1}}$
 \end_inset
 
 .
@@ -915,11 +1165,11 @@ Supongamos que la duración de dos instrumentos electrónicos
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 ¿Cuál debería preferirse para ser usado durante un período de 45 hs?
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 ¿Cuál debería preferirse para ser usado durante un período de 48 hs?
 \end_layout
 
@@ -927,21 +1177,467 @@ Supongamos que la duración de dos instrumentos electrónicos
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $D_{i}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Duración en horas del instrumento 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{1}\sim N\left(40hs,36hs\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $D_{2}\sim N\left(45hs,9hs\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  no markers, domain=-60:145, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines*=left,
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  enlargelimits=false, clip=false, axis on top,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = major
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [fill=cyan!20, draw=none, domain=45:145] {gauss(40,36)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [fill=cyan!20, draw=none, domain=45:145] {gauss(45,9)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [very thick,cyan!50!black] {gauss(40,36)} node[pos=0.55,above left]
+ {$D_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [very thick,cyan!50!black] {gauss(45,9)} node[pos=0.55,above right]
+ {$D_2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{1}\geq45\right)=1-P\left(D_{1}<45\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z_{1}=\frac{D_{1}-40}{36}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $D_{1}<45\iff Z_{1}=\frac{D_{1}-40}{36}<\frac{45-40}{36}=\frac{5}{36}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(D_{1}\geq45\right)=1-P\left(Z_{1}<\frac{5}{36}\right)\approx1-0,55567=\boxed{0,44433}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{2}>45\right)=1-P\left(D_{2}<45\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z_{2}=\frac{D_{2}-45}{9}$
+\end_inset
+
+ 
+\begin_inset Formula $D_{2}<45\iff Z_{2}<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{2}\geq45\right)=1-P\left(Z_{2}<0\right)=1-\frac{1}{2}=\boxed{\frac{1}{2}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Es preferible usar 
+\begin_inset Formula $D_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  no markers, domain=-60:145, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines*=left,
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  enlargelimits=false, clip=false, axis on top,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = major
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [fill=cyan!20, draw=none, domain=48:145] {gauss(40,36)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [fill=cyan!20, draw=none, domain=48:145] {gauss(45,9)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [very thick,cyan!50!black] {gauss(40,36)} node[pos=0.55,above left]
+ {$D_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [very thick,cyan!50!black] {gauss(45,9)} node[pos=0.55,above right]
+ {$D_2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{1}\geq48\right)=1-P\left(D_{1}<48\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z_{1}=\frac{D_{1}-40}{36}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $D_{1}<48\iff Z_{1}=\frac{D_{1}-40}{36}<\frac{48-40}{36}=\frac{8}{36}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(D_{1}\geq48\right)=1-P\left(Z_{1}<\frac{8}{36}\right)\approx1-0,58706=\boxed{0,41294}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{2}>48\right)=1-P\left(D_{2}<48\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z_{2}=\frac{D_{2}-45}{9}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $D_{2}<48\iff Z_{2}<\frac{48-45}{9}=\frac{1}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{2}\geq48\right)=1-P\left(Z_{2}<\frac{1}{3}\right)\approx1-0,6293=\boxed{0,3707}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Es preferible usar 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 El tiempo de duración de una batería tiene una distribución normal con media
  280 hs.
  Determine el máximo valor admisible para el desvío estándar si se desea
  que la batería funcione menos de 320 hs.
- con probabilidad 0,9.
+ con probabilidad 
+\begin_inset Formula $\frac{90}{100}$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -951,6 +1647,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -963,7 +1663,11 @@ La venta semanal de nafta (en toneladas) de una estación de servicio es
  con distribución normal con media 100 y desvío estándar 10.
  Suponiendo que el camión de suministro viene una vez por semana, calcule
  la capacidad que debe tener la cisterna de la estación para poder satisfacer
- la demanda de sus clientes con probabilidad 0,99.
+ la demanda de sus clientes con probabilidad 
+\begin_inset Formula $\frac{99}{100}$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1019,7 +1723,11 @@ Se desea ajustar una máquina para envasar café en frascos de 180 grs.
 \end_inset
 
 ), de modo que la probabilidad de volcar café en el proceso de envasado
- sea a lo sumo 0,02.
+ sea a lo sumo 
+\begin_inset Formula $\frac{2}{100}$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1049,12 +1757,12 @@ Delicia Jamaiquina
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 ¿Cuál es la probabilidad que la máquina llenadora provoque un derrame en
  una lata?
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Las especificaciones del contenido son 300 
 \begin_inset Formula $\pm$
 \end_inset
@@ -1067,14 +1775,213 @@ Las especificaciones del contenido son 300
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Volumen vertido por la llenadora en ml
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $X\sim N\left(300ml,6ml\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  no markers, domain=300:320, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines*=left,
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis y label/.style={at=(current axis.above origin),anchor=south},
+\end_layout
+
+\begin_layout Plain Layout
+
+  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  enlargelimits=false, clip=false, axis on top,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = major
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [very thick,cyan!50!black] {gauss(300,6)} node[pos=0.55,above left]
+ {$D_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot [fill=cyan!20, draw=none, domain=315:320] {gauss(300,6)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(X>315\right)=1-F\left(315\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z=\frac{X-300}{6}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X<315\Rightarrow Z<\frac{315-300}{6}=\frac{15}{6}=2,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X>315\right)=1-P\left(Z<2,5\right)\approx1-0,99379=0,00621$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(X>280\right)=1-P\left(X<280\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X<280\iff Z<\frac{280-300}{6}=-\frac{10}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X>280\right)=1-P\left(Z<-\frac{10}{3}\right)\approx1-0,99957$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Section
 Función de variable aleatoria
@@ -1082,7 +1989,9 @@ Función de variable aleatoria
 
 \begin_layout Enumerate-Resume
 El número de días necesarios para concluir cierto proyecto de construcción
- es una v.a 
+ es una v.
+ a.
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -1264,7 +2173,7 @@ y la ganancia del contratista es
 .
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Determine la distribución de probabilidad de 
 \begin_inset Formula $Y$
 \end_inset
@@ -1272,7 +2181,7 @@ Determine la distribución de probabilidad de
 .
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule 
 \begin_inset Formula $E\left(X\right)$
 \end_inset
@@ -1326,7 +2235,7 @@ Sea
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Determine la distribución de probabilidad de 
 \begin_inset Formula $Y$
 \end_inset
@@ -1334,7 +2243,7 @@ Determine la distribución de probabilidad de
 .
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule 
 \begin_inset Formula $E\left(Y\right)$
 \end_inset
@@ -1378,7 +2287,7 @@ El contenido de magnesio en una aleación es una v.a.
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Determine la distribución de densidad de 
 \begin_inset Formula $G$
 \end_inset
@@ -1386,7 +2295,7 @@ Determine la distribución de densidad de
 .
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule 
 \begin_inset Formula $E\left(G\right)$
 \end_inset
@@ -1505,7 +2414,7 @@ Considere una v.a.
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset Formula $Y=a+\left(b-a\right)X$
 \end_inset
 
@@ -1516,7 +2425,7 @@ Considere una v.a.
 .
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 \begin_inset Formula $Y=-\frac{1}{\lambda}\ln\left(X\right)$
 \end_inset
 
@@ -1582,17 +2491,17 @@ En una empresa embotelladora de jugos, la cantidad de líquido por botella
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Calcule la probabilidad de que una botella contenga menos de 430 ml.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 Las botellas se venden en pack de 12 de ellas.
  Calcule la probabilidad de que, en un pack, por lo menos 3 de ellas contengan
  menos de 430 ml.
 \end_layout
 
-\begin_layout Enumerate-Resume
+\begin_layout Enumerate
 El costo de producción de cada botella es $0,20 y cada pack se vende al
  supermercadista a $4,80.
  Si en el pack se detectan 3 o más unidades con menos de 430 ml, el pack
