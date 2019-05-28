@@ -1045,36 +1045,370 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate-Resume
+El espesor de una lámina metálica (en mm) es una v.
+ a.
+ 
+\begin_inset Formula $X_{i}\sim N\left(0,5;0,05^{2}\right)$
+\end_inset
+
+.
+ El espesor de una lámina de papel aislante es también una v.
+ a.
+ 
+\begin_inset Formula $Y_{i}\sim N\left(0,5;0,02^{2}\right)$
+\end_inset
+
+).
+ Obtenga la distribución del núcleo de un transformador que consta de 50
+ capas de láminas metálicas y 49 láminas de papel aislante.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate-Resume
+Un ensamble eléctrico consta de 20 bloques de tipo 
+\begin_inset Formula $A$
+\end_inset
+
+ y 30 bloques de tipo 
+\begin_inset Formula $B$
+\end_inset
+
+ conectados en serie.
+ Los ensambles se colocan en recipientes cuya longitud (en cm) varía aleatoriame
+nte con distribución normal, media 65 y desviación estándar 0,5.
+ Se conoce además que la longitud (en cm) de un bloque de tipo 
+\begin_inset Formula $A$
+\end_inset
+
+ varía aleatoriamente con media 1,95 y desvío estándar 0,01 y la longitud
+ (en cm) de un bloque de tipo 
+\begin_inset Formula $B$
+\end_inset
+
+ varía aleatoriamente con media 0,83 y desviación estándar 0,02 cm.
+ Calcule la probabilidad de que un ensamble entre en un recipiente, cuando
+ ambos son elegidos al azar.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate-Resume
+Un sistema está formado por 100 componentes que funcionan independientemente.
+ La probabilidad de que cualquier componente falle durante el período de
+ operación es igual a 0,10.
+ Para que funcione el sistema completo, deben funcionar al menos 85 componentes.
+ Calcule la probabilidad de que el sistema funcione.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate-Resume
+El consumo de combustible en litros de un ómnibus que realiza el trayecto
+ Rosario-Santa Fe es una variable aleatoria normalmente distribuida con
+ media 20 litros y desviación estándar 2 litros.
+ Calcule la probabilidad de que 640 litros resulten insuficientes para realizar
+ 30 viajes.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate-Resume
+Un sistema está formado por 
+\begin_inset Formula $n$
+\end_inset
+
+ componentes, cada una con una probabilidad de que funcione de 0,9 El sistema
+ funcionará si funcionan correctamente al menos el 82% de las componentes.
+ Determine 
+\begin_inset Formula $n$
+\end_inset
+
+ de modo que el sistema tenga una probabilidad de funcionar de al menos
+ 0,95.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate-Resume
+Treinta instrumentos electrónicos 
+\begin_inset Formula $d_{1},\ldots,d_{30}$
+\end_inset
+
+ se usan para un control automático de la siguiente manera: cuando falla
+ 
+\begin_inset Formula $d_{1}$
+\end_inset
+
+ comienza a actuar 
+\begin_inset Formula $d_{2}$
+\end_inset
+
+, cuando falla 
+\begin_inset Formula $d_{2}$
+\end_inset
+
+ empieza 
+\begin_inset Formula $d_{3}$
+\end_inset
+
+, y así sucesivamente.
+ El tiempo para que falle 
+\begin_inset Formula $d_{i}$
+\end_inset
+
+ 
+\begin_inset Formula $\left(1=1,\ldots,30\right)$
+\end_inset
+
+ es una v.
+ a.
+ que se distribuye según una ley exponencial con parámetro 
+\begin_inset Formula $\alpha=0,1$
+\end_inset
+
+ (hora
+\begin_inset Formula $^{-1}$
+\end_inset
+
+).
+ Si se quiere obtener la distribución de 
+\begin_inset Formula $T$
+\end_inset
+
+, el tiempo total de la operación de los 30 instrumentos, ¿se podría recurrir
+ al Teorema central del límite?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate-Resume
+Una empresa dedicada a la venta de repuestos sabe que la demanda diaria
+ varía aleatoriamente con la siguiente distribución de probabilidad:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\left(D=d\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Desde el momento en que se hace el pedido hasta que el mismo ingresa al
+ stock transcurren 90 días.
+ Determine cuántas unidades deben tenerse en existencia en momento de hacer
+ el pedido si se quiere que la probabilidad de que la demanda durante los
+ 90 días supere la existencia sea 0,05.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate-Resume
+La demanda diaria de agua potable por habitante en una población de 10000
+ habitantes es una v.
+ a.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ con 
+\begin_inset Formula $E\left(X\right)=0,4m^{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $\sigma\left(X\right)=0,09m^{3}$
+\end_inset
+
+.
+ La disponibilidad de agua (en 
+\begin_inset Formula $m^{3}$
+\end_inset
+
+) para el consumo almacenado diariamente en una represa es una v.
+ a.
+ 
+\begin_inset Formula $Y\sim N\left(4500;450^{2}\right)$
+\end_inset
+
+.
+ ¿Cuál es la probabilidad de que en un día cualquiera no sea satisfecha
+ la demanda?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \end_body
 \end_document
