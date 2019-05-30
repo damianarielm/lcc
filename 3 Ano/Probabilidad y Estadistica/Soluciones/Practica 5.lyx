@@ -2636,13 +2636,222 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-1000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-2000$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E\left(X\right)=10\cdot0,2+11\cdot0,3+12\cdot0,3+13\cdot0,1+14\cdot0,1=11,6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(X^{2}\right)=10^{2}\cdot0,2+11^{2}\cdot0,3+12^{2}\cdot0,3+13^{2}\cdot0,1+14^{2}\cdot0,1=136$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=136-11,6^{2}=1,44$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
 COMPLETAR.
 \end_layout
 
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Sea 
@@ -2690,18 +2899,155 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $y=0\iff x=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y=1\iff x=1\lor x=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{6}+\frac{3}{6}=\frac{4}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E\left(Y\right)=0+\frac{4}{6}=\frac{4}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(Y^{2}\right)=0+\frac{4}{6}=\frac{4}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(Y\right)=\frac{4}{6}-\frac{16}{36}=\frac{8}{36}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate-Resume
-El contenido de magnesio en una aleación es una v.a.
+El contenido de magnesio en una aleación es una v.
+ a.
  con función de densidad 
-\begin_inset Formula $f\left(x\right)=\frac{x}{18}$
+\begin_inset Formula $f_{X}\left(x\right)=\frac{x}{18}$
 \end_inset
 
 , 
@@ -2738,13 +3084,112 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0\leq x\leq6\iff0\leq2x\leq12\iff10\leq g\leq22$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(G\leq g\right)=P\left(10+2X\leq g\right)=P\left(X\leq\frac{g-10}{2}\right)={\displaystyle \intop_{0}^{\frac{g-10}{2}}}\frac{x}{18}dx=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left.\frac{x^{2}}{36}\right|_{0}^{\frac{g-10}{2}}=\frac{1}{144}\left(g^{2}-20g+100\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $F_{G}\left(g\right)=\begin{cases}
+0 & g<10\\
+\frac{1}{144}\left(g^{2}-20g+100\right) & 10\leq g\leq22\\
+1 & g>22
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{G}\left(g\right)=\begin{cases}
+\frac{d}{dg}\frac{1}{144}\left(g^{2}-20g+100\right)=\frac{1}{72}\left(g-10\right) & 10\leq g\leq22\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Alternativa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{G}\left(g\right)=f_{X}\left(\frac{g-10}{2}\right)\left|\frac{d}{dg}\left(\frac{g-10}{2}\right)\right|=\frac{g-10}{36}\left|\frac{1}{2}\right|=\frac{1}{72}\left(g-10\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E\left(X\right)=\intop_{0}^{6}x\cdot\frac{x}{18}dx=\left.\frac{x^{3}}{54}\right|_{0}^{6}=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(X^{2}\right)=\intop_{0}^{6}x^{2}\cdot\frac{x}{18}dx=\left.\frac{x^{4}}{72}\right|_{0}^{6}=18$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{E\left(G\right)=E\left[\left(10+2X\right)^{2}\right]=E\left(4X^{2}+40X+100\right)=}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=4E\left(X^{2}\right)+40E\left(X\right)+100=4\cdot18+40\cdot4+100=332$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Determine la función densidad de la variable aleatoria 
@@ -2752,7 +3197,7 @@ Determine la función densidad de la variable aleatoria
 \end_inset
 
 , siendo 
-\begin_inset Formula $Y=4-X^{2}$
+\begin_inset Formula $\text{\ensuremath{Y=4-X^{2}}}$
 \end_inset
 
  y 
