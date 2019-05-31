@@ -14637,8 +14637,106 @@ COMPLETAR.
 CSP
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $DK\_SENSORES=\overline{c!x!y!z}\to DK\_SENSORES\sqcap falla\to DK\_SENSORES$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $DK\_PACIENTES=\stackrel[i=1]{n}{\parallel}i:DK\_SENSORES$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $\text{\ensuremath{LECTOR=c?x?y?z\to VERIFICARX\left(x,y,z\right)|falla\to\overline{error}\to LECTOR}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $\begin{aligned}VERIFICARX\left(x,y,z\right)= & \overline{xbien}\to VERIFICARY\left(y,z\right)\\
+ & \left\lceil x_{m}\leq x\leq x_{M}\right\rceil \\
+ & \overline{xmal}\to VERIFICARY\left(y,z\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $\begin{aligned}VERIFICARY\left(y,z\right)= & \overline{ybien}\to VERIFICARZ\left(z\right)\\
+ & \left\lceil y_{m}\leq y\leq y_{M}\right\rceil \\
+ & \overline{ymal}\to VERIFICARZ\left(z\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $\begin{aligned}VERIFICARZ\left(z\right)= & \overline{zbien}\overset{t}{\to}LECTOR\\
+ & \left\lceil z_{m}\leq z\leq z_{M}\right\rceil \\
+ & \overline{zmal}\overset{t}{\to}LECTOR
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $LECTORES=\stackrel[i=1]{n}{\parallel}i:LECTOR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $DK\_VISOR=\left\{ xbien,xmal,ybien,ymal,zbien,zmal,error\right\} \to DK\_VISOR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $DK\_DISPLAY=\stackrel[i=1]{n}{\parallel}i:DK\_VISOR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $\text{\ensuremath{SISTEMA=DK\_PACIENTES\parallel LECTORES\parallel DK\_VISOR\parallel RTR}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
