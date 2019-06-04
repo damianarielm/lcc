@@ -12,7 +12,6 @@
 \definecolor{purple}{RGB}{141,24,143}
 
 \usepackage{tikz}
-\usepackage{tikz-uml}
 \tikzset{singlestate/.style={draw,fill=yellow!20, rounded corners}}
 \end_preamble
 \use_default_options true
@@ -14980,8 +14979,169 @@ ra.
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DK\_TAPA=\overline{abierta}\to\overline{cerrada}\to DK\_TAPA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DK\_BENCENDIDO=\overline{encender}\to DK\_BENCENDIDO$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DK\_BESCALA=\overline{escala}\to DK\_BESCALA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DK\_BMEDIR=\overline{pulsar}\to\overline{soltar}\to DK\_BMEDIR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DK\_DISPLAY=on\to DISPLAYON\nabla cerrada\to DK\_DISPLAY$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DISPLAYON=DISPLAYB\parallel DISPLAYE\parallel DISPLAYT$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DISPLAYB=\left\{ baja,alta\right\} \to DISPLAYB$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DISPLAYE=\left\{ fahrenheit,celcius\right\} \to DISPLAYE$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $DISPLAYT=t?x\to DISPLAYT|borrar\to DISPLAYT$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\begin{aligned}DK\_TERMOMETRO= & on\to\left(\left\{ medir,abortar,t!x\right\} \to DK\_TERMOMETRO\right)\\
+ & \nabla cerrada\to DK\_TERMOMETRO
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\begin{aligned}DK\_BATERIA\left(b\right)= & ENCENDER\left(b\right)\nabla cerrada\to DK\_BATERIA\left(b\right)\left\lceil b>0\right\rceil STOP\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\begin{alignedat}{1}ENCENDER\left(b\right)= & encender\to\overline{on}\to1.start!1\to DESCARGAR\left(b\right)\\
+ & \left\lceil b>10\right\rceil \\
+ & encender\to\overline{on}\to\overline{baja}\to1.start!1\to DESCARGAR\left(b\right)
+\end{alignedat}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\begin{aligned}DESCARGAR\left(b\right)= & escala\to DESCARGAR\left(b-3\right)\left\lceil b\geq3\right\rceil DK\_BATERIA\left(0\right)\\
+| & pulsar\to DESCARGAR\left(b-5\right)\left\lceil b\geq5\right\rceil DK\_BATERIA\left(0\right)\\
+| & 1.timeout\to1.start!1\to DESCARGAR\left(b-1\right)\left\lceil b\geq1\right\rceil DK\_BATERIA\left(0\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\begin{aligned}DK\_MEMORIA\left(e\right)= & on\to\left(m!e\to DK\_MEMORIA\left(e\right)|m?x\to DK\_MEMORIA\left(x\right)\right)\\
+ & \nabla cerrada\to DK\_MEMORIA\left(e\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\color purple
+\begin_inset Formula $COMPLETAR$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
