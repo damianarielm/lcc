@@ -887,14 +887,151 @@ Calcule la probabilidad de que el tiempo hasta el tercer accidente sea mayor
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X_{t}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de accidentes en una fábrica en 
+\begin_inset Formula $t$
+\end_inset
+
+ días
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lambda=\frac{2}{7}\text{\ensuremath{\frac{accidentes}{dias}}}=$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X_{t}\sim Po\left(\lambda t\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Tiempo en días entre dos accidentes
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y\sim Ex\left(\frac{2}{7}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f\left(y\right)=\begin{cases}
+0 & y\leq0\\
+\frac{2}{7}e^{-\frac{2}{7}y} & y>0
+\end{cases}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F\left(y\right)=\begin{cases}
+0 & y\leq0\\
+1-e^{-\frac{2}{7}y} & y>0
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(Y>3\right)=1-F\left(3\right)=1-\left(1-e^{-\frac{2}{7}3}\right)=e^{-\frac{6}{7}}\approx0,42437$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Tiempo en minutos hasta el tercer accidente
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z\sim Er\left(\frac{2}{7},3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(z\right)=\begin{cases}
+\frac{2}{7}e^{-\frac{2}{7}z}\frac{\left(\frac{2}{7}z\right)^{3-1}}{\left(3-1\right)!} & z>0\\
+0 & z\leq0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(z\right)=\begin{cases}
+1-{\displaystyle \sum_{n=0}^{3-1}}e^{-\frac{2}{7}z}\left(\frac{2}{7}z\right)^{n}\frac{1}{n!} & z>0\\
+0 & z\leq0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(Z>12\right)=1-F\left(12\right)=1-\left\{ 1-\left[e^{-\frac{2}{7}12}\left(1+\frac{2}{7}12+\frac{4}{49}144\frac{1}{2}\right)\right]\right\} \approx0,33426}}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 El número de diarios que vende un canillita es una variable aleatoria 
@@ -932,10 +1069,6 @@ Calcule la probabilidad de que transcurran más de ocho minutos hasta la
 
 \begin_layout Enumerate
 Calcule el tiempo promedio que transcurre hasta la quinta venta.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -1042,6 +1175,10 @@ Tiempo en minutos entre dos ventas sucesivas
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1074,7 +1211,7 @@ Tiempo en minutos hasta la quinta venta
 
 \begin_layout Itemize
 \begin_inset Formula $f\left(z\right)=\begin{cases}
-\frac{5}{6}e^{-\frac{5}{6}z}\frac{\left(\frac{5}{6}z\right)^{5-1}}{\left(k-1\right)!} & z>0\\
+\frac{5}{6}e^{-\frac{5}{6}z}\frac{\left(\frac{5}{6}z\right)^{5-1}}{\left(5-1\right)!} & z>0\\
 0 & z\leq0
 \end{cases}$
 \end_inset
@@ -1121,10 +1258,6 @@ Tiempo en minutos hasta la quinta venta
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1178,6 +1311,10 @@ El tiempo de duración de cierta pila es una variable aleatoria
 
 \begin_layout Enumerate-Resume
 ¿Qué porcentaje de pilas duran menos de 450 hs?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -1906,10 +2043,6 @@ El tiempo de duración de una batería tiene una distribución normal con media
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -3167,7 +3300,7 @@ f_{G}\left(g\right)=f_{X}\left(\frac{g-10}{2}\right)\left|\frac{d}{dg}\left(\fra
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\text{\ensuremath{E\left(G\right)=E\left(10+2X\right)=10+2E\left(X\right)=10+8=8}}$
+\begin_inset Formula $\text{\ensuremath{E\left(G\right)=E\left(10+2X\right)=10+2E\left(X\right)=10+8=18}}$
 \end_inset
 
 
