@@ -1,0 +1,851 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{colortbl}
+\definecolor{darkgreen}{RGB}{20,155,82}
+\definecolor{purple}{RGB}{141,24,143}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Exámenes teóricos y prácticos de CSP y Statecharts
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicios teóricos
+\end_layout
+
+\begin_layout Enumerate
+Para cada uno de los procesos siguientes, encuentre el proceso secuencial
+ equivalente justificando cada paso de su calculo.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\color purple
+\begin_inset Formula $P=a\to b\to STOP\parallel\left(a\to a\to STOP\sqcap a\to c\to STOP\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\color purple
+\begin_inset Formula $Q=\left(b\to b\to STOP\square a\to b\to STOP\right)\parallel a\to c\to STOP$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\color purple
+\begin_inset Formula $R=c\to a\to STOP\parallel\left(a\to b\to STOP\square b\to b\to STOP\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+
+\color purple
+\begin_inset Formula $\boxed{\begin{aligned} & X=b\to STOP\parallel a\to STOP\\
+\equiv & \left\langle Interleaving\right\rangle \\
+ & b\to\left(STOP\parallel a\to STOP\right)\square a\to\left(b\to STOP\parallel STOP\right)\\
+\equiv & \left\langle 2*P\parallel STOP_{\emptyset}=P\right\rangle \\
+ & b\to a\to STOP\square a\to b\to STOP
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\boxed{\begin{aligned} & Y=b\to STOP\parallel c\to STOP\\
+\equiv & \left\langle Interleaving\right\rangle \\
+ & b\to\left(STOP\parallel c\to STOP\right)\square c\to\left(b\to STOP\parallel STOP\right)\\
+\equiv & \left\langle 2*P\parallel STOP_{\emptyset}=P\right\rangle \\
+ & b\to c\to STOP\square c\to b\to STOP
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\boxed{\begin{aligned} & P=a\to b\to STOP\parallel\left(a\to a\to STOP\sqcap a\to c\to STOP\right)\\
+\equiv & \left\langle e\to P\sqcap e\to Q=e\to\left(P\sqcap Q\right)\right\rangle \\
+ & a\to b\to STOP\parallel a\to\left(a\to STOP\sqcap c\to STOP\right)\\
+\equiv & \left\langle Sincronization\right\rangle \\
+ & a\to\left(b\to STOP\parallel\left(a\to STOP\sqcap c\to STOP\right)\right)\\
+\equiv & \left\langle P\parallel\left(Q\sqcap R\right)=\left(P\parallel Q\right)\sqcap\left(P\parallel R\right)\right\rangle \\
+ & a\to\left(X\sqcap Y\right)
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\color purple
+\begin_inset Formula $\boxed{\begin{aligned} & Q=\left(b\to b\to STOP\square a\to b\to STOP\right)\parallel a\to c\to STOP\\
+\equiv & \left\langle P\parallel\left(Q\square R\right)=\left(P\parallel Q\right)\square\left(P\parallel R\right)\right\rangle \\
+ & \left(a\to c\to STOP\parallel b\to b\to STOP\right)\square\left(a\to c\to STOP\parallel a\to b\to STOP\right)\\
+\equiv & \left\langle Sincronization\right\rangle \\
+ & \left(a\to c\to STOP\parallel b\to b\to STOP\right)\square\left(a\to Y\right)\\
+\equiv & \left\langle Interleaving\right\rangle \\
+\left(*\right) & \left(a\to\left(c\to STOP\parallel b\to b\to STOP\right)\square b\to\left(a\to c\to STOP\parallel b\to STOP\right)\right)\\
+ & \square\\
+ & \left(a\to Y\right)
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\boxed{\begin{aligned}\left(*\right) & a\to\left(c\to STOP\parallel b\to b\to STOP\right)\\
+ & \square\\
+ & b\to\left(a\to c\to STOP\parallel b\to STOP\right)\\
+\equiv & \left\langle 2*Interleaving\right\rangle \\
+ & a\to\left(c\to\left(STOP\parallel b\to b\to STOP\right)\square b\to Y\right)\\
+ & \square\\
+ & b\to\left(a\to Y\square b\to\left(a\to c\to STOP\parallel STOP\right)\right)\\
+\equiv & \left\langle 2*P\parallel STOP_{\emptyset}=P\right\rangle \\
+ & a\to\left(c\to b\to b\to STOP\square b\to Y\right)\\
+ & \square\\
+ & b\to\left(a\to Y\square b\to a\to c\to STOP\right)
+\end{aligned}
+}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Modele un proceso CSP que debe recibir cien señales en cualquier orden y,
+ una vez que las ha recibido a todas, debe comportarse como el proceso W.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explique en pocas líneas el concepto semántico utilizado en CSP que permite
+ formalizar la idea de no determinismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explique las diferencias y semejanzas entre los operadores CSP: 
+\size small
+\color purple
+
+\begin_inset Formula $|$
+\end_inset
+
+
+\size default
+\color inherit
+, 
+\size small
+\color purple
+
+\begin_inset Formula $\square$
+\end_inset
+
+
+\size default
+\color inherit
+, 
+\size small
+\color purple
+
+\begin_inset Formula $\sqcap$
+\end_inset
+
+
+\size default
+\color inherit
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explique con la debida precisión la semántica del modelo de concurrencia
+ de CSP.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Escriba en CSP y explique cada una de las siguientes leyes: 
+\begin_inset Quotes fld
+\end_inset
+
+Interleaving
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+Deadlock
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+Sincronization
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+IEOF
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determine si la siguiente proposición es correcta o no (es decir si la igualdad
+ es correcta o no) y justifique su respuesta:
+\size small
+\color purple
+
+\begin_inset Formula 
+\[
+c?x\to P;Q=c?x\to\left(P;Q\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describa el modelo de fallas y divergencias de CSP, explicando y definiendo
+ los conceptos de traza, rechazo, falla y divergencia.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explique y ejemplifique el concepto de pasos intrascendentes.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explique la diferencia entre los operadores 
+\size small
+\color purple
+
+\begin_inset Formula $\square$
+\end_inset
+
+
+\size default
+\color inherit
+ y 
+\size small
+\color purple
+
+\begin_inset Formula $\nabla$
+\end_inset
+
+
+\size default
+\color inherit
+.
+ Luego muestre como representar 
+\size small
+\color purple
+
+\begin_inset Formula $\nabla$
+\end_inset
+
+
+\size default
+\color inherit
+ en Statecharts.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Muestre un ejemplo sencillo donde se pueda apreciar la diferencia de los
+ modelos de concurrencia de Statecharts y CSP.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Traduzca el Statechart de la figura anterior en un proceso CSP equivalente.
+ Si no puede hacerlo, justifique su respuesta.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Ejercicios prácticos
+\end_layout
+
+\begin_layout Subsection
+Electroencefalogramas
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un sistema debe controlar un aparato para efectuar electroencefalogramas
+ simples.
+ El análisis consiste en estudiar el voltaje que emiten 10 electrodos que
+ permiten conocer la actividad bioeléctrica cerebral (cada uno comunica
+ un valor al sistema).
+ Es necesario tomar 5 muestras por segundo, espaciadas uniformemente.
+ En cada una de las 5 muestras se lee el valor de los 10 electrodos.
+ Notar que si el cerebro del paciente no presenta actividad en las cercanas
+ de un electrodo, este no emitirá señal alguna.
+ Por lo tanto, el sistema no puede esperar indefinidamente por la señal
+ del electrodo.
+ Finalmente, el sistema debe enviar secuencialmente a una impresora el valor
+ obtenido en cada electrodo (que haya retornado uno o nada en caso de que
+ no se haya registrado ninguno).
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
+\end_layout
+
+\begin_layout Subsection
+Computación distribuida
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un sistema distribuido consta de 
+\begin_inset Formula $N$
+\end_inset
+
+ computadoras cada una de las cuales ejecuta el mismo programa; estas computador
+as pueden estar encendidas o apagadas.
+ Este programa recibe dos eventos desde el exterior (en cada computadora),
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ .
+ Cuando el programa en una computadora recibe 
+\begin_inset Formula $a$
+\end_inset
+
+, debe comunicarles a todas las otras computadoras, por medio de un evento
+ interno, que lo ha recibido.
+ Luego de comunicar esta situacion esa computadora debe esperar a que todas
+ le respondan.
+ Cada computadora encendida responde con un evento diferente pero solo si
+ esta en su estado inicial.
+ Como puede haber computadoras apagadas o que estén haciendo otra cosa,
+ el programa esperara un tiempo 
+\begin_inset Formula $B$
+\end_inset
+
+ cada respuesta.
+ Cuando recibe todas las respuestas o han transcurrido 
+\begin_inset Formula $B$
+\end_inset
+
+ unidades de tiempo, debe emitir el evento 
+\begin_inset Formula $c$
+\end_inset
+
+ y volver al estado inicial.
+ Si el programa recibe el evento 
+\begin_inset Formula $b$
+\end_inset
+
+ debe esperar un tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+ hasta poder recibir el evento a a menos que se de otro evento 
+\begin_inset Formula $b$
+\end_inset
+
+ luego de 
+\begin_inset Formula $T$
+\end_inset
+
+ unidades de tiempo, en cuyo caso debe reiniciar el tiempo de espera.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
+\end_layout
+
+\begin_layout Subsection
+Sistema de alarma
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un sistema de alarma hogareño simple consta de un teclado (contiene los
+ 10 dígitos y las dos primeras letras del abecedario), dos sensores de movimient
+o y dos magnéticos (para aberturas) y una bocina.
+ Todo el sistema sera controlado por un programa.
+ El sistema puede estar armado o no.
+ Armado significa que si se detecta una intrusión debe sonar la bocina que
+ se teclee el código de seguridad.
+ Si no esta armado no se responderá a las intrusiones.
+ Una intrusión se detecta cuando alguno de los sensores envía una señal.
+ Si esta armado, al teclear el código de seguridad, el sistema se desarma;
+ si esta desarmado, al teclear el código de seguridad, se arma.
+ El código de seguridad viene de fabrica y consta de 2 dígitos.
+ El sistema agrupa un sensor de movimiento y uno magnético en el sector
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ y a los sensores restantes en el sector 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ Cada sector se puede armar independientemente del otro.
+ Para hacerlo se teclea su letra y el código de seguridad.
+ Si un sector no esta armado no se responderá a las intrusiones en ese sector.
+ Si solo se teclea el código de seguridad se arman todos los sectores; si
+ algún sector esta armado y se teclea el código de seguridad, se desarman
+ todos los sectores.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
+\end_layout
+
+\begin_layout Subsection
+Detección de errores
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Se cuenta con un proceso 
+\begin_inset Formula $S$
+\end_inset
+
+ que envía mensajes, un medio 
+\begin_inset Formula $E$
+\end_inset
+
+ que los transmite y un proceso 
+\begin_inset Formula $R$
+\end_inset
+
+ que los recibe.
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ puede almacenar solo un mensaje a la vez, puede corromper a lo sumo uno
+ de cada tres mensajes consecutivos y, por simplicidad, se supone que cada
+ mensaje es un 0 o un 1; 
+\begin_inset Formula $E$
+\end_inset
+
+ esta fuera del control del sistema, es decir es parte del entorno.
+ Se espera que 
+\begin_inset Formula $S$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+ colaboren para evitar la corrupción producida por 
+\begin_inset Formula $E$
+\end_inset
+
+ .
+ Para ello utilizaran un mecanismo simple: 
+\begin_inset Formula $S$
+\end_inset
+
+ enviara cada mensaje por triplicado y 
+\begin_inset Formula $R$
+\end_inset
+
+ decidirá cual es el valido de acuerdo a una elección por mayoría simple.
+ Especifique los procesos 
+\begin_inset Formula $S$
+\end_inset
+
+ , 
+\begin_inset Formula $E$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+ descriptos arriba.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\end_body
+\end_document
