@@ -496,16 +496,35 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Muestre un Statechart equivalente al que se muestra en la figura que no
+ haga uso de los estados AND.
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Teoria.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Graphics
+	filename Solucion.png
+	scale 30
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -519,8 +538,48 @@ Traduzca el Statechart de la figura anterior en un proceso CSP equivalente.
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $PE=a\to QE|x\to PF$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $PF=b\to PE|a\to QF$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $QE=b\to PE|x\to QF$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $QF=b\to PE$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \end_deeper
@@ -796,55 +855,701 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Robot industrial
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Se requiere el software de control para un robot industrial con las siguientes
+ características.
+ El robot puede moverse hacia la izquierda o derecha una cierta distancia
+ y consta de un rociador y termómetro.
+ El robot esta ubicado al borde de una cinta transportadora que acarrea
+ piezas metálicas.
+ El requerimiento básico es que si el sensor detecta que la temperatura
+ de la pieza que esta en su cercana es superior a 
+\begin_inset Formula $maxtemp$
+\end_inset
+
+ , el robot debe abrir el rociador y debe moverse en el sentido de la cinta
+ hasta que la temperatura de la pieza sea inferior a 
+\begin_inset Formula $maxtemp$
+\end_inset
+
+ .
+ Si el robot llega hasta su límite de desplazamiento debe cerrar el rociador.
+ En cualquier caso debe retornar a la posición inicial.
+ Tener en cuenta lo siguiente:
+\end_layout
+
+\begin_layout Itemize
+El termómetro envía una señal con la temperatura medida.
+ 
+\end_layout
+
+\begin_layout Itemize
+El motor del robot envía una señal indicando que se ha alcanzado el extremo
+ derecho o izquierdo.
+ 
+\end_layout
+
+\begin_layout Itemize
+El software de control puede encender el motor en uno u otro sentido y detenerlo.
+ 
+\end_layout
+
+\begin_layout Itemize
+No se puede poner en funcionamiento el motor en el mismo paso en que se
+ recibe una medición de temperatura.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Productores y consumidores 1
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un productor produce de a un mensaje a la vez a razón de 3 segundos cada
+ uno.
+ Existen otros dos productores que se comportan de la misma forma pero trabajan
+ con tiempos de 1 y 4 segundos, respectivamente.
+ Todos los productores tienen un error en sus relojes de 
+\end_layout
+
+\begin_layout Standard
+segundos con 
+\begin_inset Formula $0<\delta<1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los mensajes enviados por los tres productores son recibidos por un componente
+ que puede recibir de a un mensaje a la vez.
+ El componente cuenta con un 
+\begin_inset Quotes fld
+\end_inset
+
+buffer
+\begin_inset Quotes frd
+\end_inset
+
+ con capacidad para MB mensajes.
+ Poner o sacar un mensaje del 
+\begin_inset Quotes fld
+\end_inset
+
+buffer
+\begin_inset Quotes frd
+\end_inset
+
+ le toma 0,1 segundos.
+ Por otro lado, hay dos consumidores de mensajes que pueden consumir de
+ a un mensaje a la vez cada uno, a razón de 2 segundos por mensaje.
+ El componente comunica los mensajes según una política FIFO.
+\end_layout
+
+\begin_layout Standard
+Tener en cuenta que los productores y consumidores son las entidades activas.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Balanza de camiones
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Una empresa posee una balanza para pesar camiones cargados con materia prima.
+ El camión debe ubicarse mas o menos sobre el centro de la balanza para
+ que la pesada sea correcta.
+ Con este fin la empresa instalo cuatro sensores en los vértices de un rectángul
+o imaginario de forma tal que cuando detectan que el camión esta dentro
+ de ese rectángulo, se debe bajar una barrera detrás del camión.
+ Si el camión rebasa alguno de los laterales del rectángulo se enciende
+ una (de dos) luz ubicada delante del camión que indica que lado esta rebasado.
+\end_layout
+
+\begin_layout Standard
+Una vez que el camión esta correctamente ubicado y se bajaron las barreras,
+ el chofer debe deslizar una tarjeta magnética que lo identifica.
+ Si la tarjeta es valida, se activa la balanza.
+ Cuando el pesaje finaliza, se debe imprimir un tique con los datos del
+ conductor y el peso.
+ Luego se levantan las barreras.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Sistema de ventilación
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Una habitación posee varias puertas de ingreso/egreso.
+ En cada puerta se han instalado dos sensores ópticos uno al lado del otro
+ (cada uno es semejante a los que se instalan en las puertas de los ascensores
+ para evitar que se cierren si hay alguien entrando o saliendo).
+ Estos sensores envían una señal cada vez que algo interrumpe el haz de
+ luz que se establece entre cada extremo.
+ Como hay dos por puerta es posible determinar si una persona ingresa a
+ la habitación o sale de ella.
+ Notar que esta inteligencia 
+\emph on
+no
+\emph default
+ es parte de la funcionalidad de los sensores.
+\end_layout
+
+\begin_layout Standard
+La habitación cuenta con un sistema de ventilación electrónico.
+ Es posible aumentar o disminuir discretamente la cantidad de aire que el
+ sistema hace circular.
+ Se requiere un programa que aumente/disminuya paulatinamente la circulación
+ de aire desde cero hasta el máximo posible, cada vez que ingresan/egresan
+ tres personas a la sala.
+ Es decir la potencia de circulación debe ser la misma, por ejemplo, si
+ hay 3, 4 o 5 personas en la sala.
+ Ademas, si la habitación permanece vaca por mas de 12 horas se debe encender
+ el sistema de ventilación por 1 hora.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Sistema de ascensores
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un edificio contara con varios ascensores controlados desde un programa.
+ No puede haber mas de dos ascensores moviéndose al mismo tiempo.
+ Las puertas de los ascensores solo deben abrirse cuando estos están detenidos
+ en un piso.
+ Cada ascensor puede ser llamado desde cada piso mediante un botón.
+ Dentro de cada ascensor hay una botonera para dirigirlo hacia el piso al
+ que se desee ir.
+ En cada piso y en cada túnel hay un sensor que avisa el paso del ascensor
+ por ese piso.
+ Las puertas son manuales.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Dispenser de bebidas
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Una maquina expendedora de bebidas funciona de la siguiente manera.
+ La maquina esta inactiva hasta que se libera una traba de seguridad.
+ Los clientes pueden seleccionar una bebida pulsando el botón correspondiente.
+ Hay cinco bebidas diferentes.
+ Cuando la maquina no esta inactiva se pueden insertar monedas mientras
+ se muestra en una pequeña pantalla el total hasta el momento.
+ (Se aceptan monedas de 25 y 50 centavos y de 1 peso.
+ La maquina detecta el valor de la moneda).
+ Si se selecciona una bebida y el total de dinero es igual al precio del
+ producto, entonces la maquina entrega la bebida correspondiente.
+ Cada bebida puede tener un precio diferente.
+ Si el total es mayor que el precio del producto, se entrega la bebida y
+ la pantalla se actualiza poniendo como nuevo total la diferencia.
+ La maquina no puede ponerse en modo inactivo si el total mostrado no es
+ cero.
+ El usuario puede pulsar un botón para que la maquina le retorne el total
+ mostrado en pantalla, en cuyo caso el total mostrado se pone a cero.
+\end_layout
+
+\begin_layout Standard
+Aunque no es necesario mostrar el total de dinero ingresado por el usuario,
+ el modelo debe contemplar una abstracción adecuada.
+ También abstraiga adecuadamente el tema de los precios de las bebidas.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Temperatura de automóviles
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+La temperatura solo puede ser regulada ajustando el funcionamiento del acondicio
+nador de aire (AA); el AA solo se apaga o se prende, no es posible hacer
+ que el aire salga a mayor o menor temperatura.
+ Entonces, cuanto mas funciona el AA mas se enfría el habitáculo.
+ El conductor puede seleccionar la temperatura que desee mantener por medio
+ de una perilla giratoria.
+ La temperatura deseada puede estar entre 18 y 30 C; si la temperatura deseada
+ es de 18 C, el AA no se detiene nunca.
+ El sistema estará en funcionamiento solo si el conductor ha pulsado un
+ botón de activación; el sistema sale de funcionamiento cuando el botón
+ se vuelve a pulsar o el motor se detiene.
+ Existen dos termómetros dentro del habitáculo (uno en la parte delantera
+ y el otro en la parte trasera) que, una vez encendido el sistema, envían
+ señales de incremento o decremento de la temperatura sensada.
+ Los termómetros inicialmente se encuentran a 18 C; los termómetros no envían
+ señales si la temperatura excede su rango de funcionamiento.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Minicomponente musical
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un software controlara el funcionamiento de un minicomponente musical.
+ El equipo consta de reproductor de CD y radio AM/FM.
+ El panel de control cuenta con la interfaz de usuario habitual: encendido/apaga
+do, 
+\begin_inset Quotes fld
+\end_inset
+
+play
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+prev
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+next
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+stop, 
+\begin_inset Quotes fld
+\end_inset
+
+pause
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+eject
+\begin_inset Quotes frd
+\end_inset
+
+ y selector CD- radio.
+ Los botones como 
+\begin_inset Quotes fld
+\end_inset
+
+play
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+prev
+\begin_inset Quotes frd
+\end_inset
+
+, etc.
+ sirven para todos los componentes dependiendo del selector (por ejemplo,
+ 
+\begin_inset Quotes fld
+\end_inset
+
+prev
+\begin_inset Quotes frd
+\end_inset
+
+ sirve para mover el sintonizador de la radio hacia las estaciones mas bajas).
+ Si el CD esta seleccionado y se pulsa de forma continua por 2 segundos
+ o mas cualquiera de los botones 
+\begin_inset Quotes fld
+\end_inset
+
+prev
+\begin_inset Quotes frd
+\end_inset
+
+ o 
+\begin_inset Quotes fld
+\end_inset
+
+next
+\begin_inset Quotes frd
+\end_inset
+
+, entonces se debe avanzar dentro de la misma canción y no saltar de canción.
+ En la misma situacion si se pulsan dos veces con diferencia de menos de
+ 1 décima de segundo, entonces se pasa a la ultima o primera pista.
+ Ademas, hay un sensor que detecta la presencia de un CD.
+ Si se pulsa el botón de apagado mientras el CD esta en funcionamiento primero
+ se debe apagar el CD y luego el equipo.
+ El minicomponente cuenta con una memoria que permite que al re-encenderse
+ se active el ultimo componente usado, en particular si es la radio se encenderá
+ AM o FM.
+ Las ordenes recibidas desde los botones, si el CD esta activado, se deben
+ traducir en ordenes al motor (giro normal o giro rápido hacia atrás o adelante,
+ parar, arrancar, expulsar) o el lector laser (encender, apagar, leer).
+ Las ordenes recibidas desde los botones, si la radio esta activada, se
+ deben traducir en ordenes a un sintonizador (aumentar/disminuir frecuencia
+ y cambiar rango de frecuencia).
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Productores y consumidores 2
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un proceso 
+\begin_inset Formula $B$
+\end_inset
+
+, debe almacenar elementos en dos 
+\emph on
+buffers
+\emph default
+ de la misma capacidad finita y conocida 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Por otro lado, existen procesos (llamados productores) que envían datos
+ a 
+\begin_inset Formula $B$
+\end_inset
+
+ para que este los almacene en los 
+\emph on
+buffers
+\emph default
+, y existen procesos (llamados consumidores) que le piden a 
+\begin_inset Formula $B$
+\end_inset
+
+ los datos que tiene almacenados (lo que hace que los 
+\emph on
+buffers
+\emph default
+ se vayan vaciando).
+ Cuando un consumidor quiere un dato que 
+\begin_inset Formula $B$
+\end_inset
+
+ tiene, el proceso le debe indicar el 
+\emph on
+buffer
+\emph default
+ del cual lo quiere; en cambio los productores no pueden seleccionar el
+ 
+\emph on
+buffer
+\emph default
+ .
+ Obviamente 
+\begin_inset Formula $B$
+\end_inset
+
+ no puede poner elementos en un 
+\emph on
+buffer
+\emph default
+ lleno y no puede sacar elementos de un 
+\emph on
+buffer
+\emph default
+ vacío.
+ Lo que sí debe hacer 
+\begin_inset Formula $B$
+\end_inset
+
+ es balancear el uso de los 
+\emph on
+buffers
+\emph default
+: cuando almacena datos lo debe hacer en el 
+\emph on
+buffer
+\emph default
+ mas vacío y si un 
+\emph on
+buffer
+\emph default
+ se esta vaciando mas rápido que el otro, debe pasar elementos del ultimo
+ al primero.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Cinta Transportadora (COMPLETAR)
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Protocolo CSMA/CD (COMPLETAR)
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Teléfono celular (COMPLETAR)
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \begin_layout Subsection
-COMPLETAR
+Sistema de estadísticas (COMPLETAR)
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
 \end_layout
 
 \end_body
