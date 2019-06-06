@@ -11,6 +11,9 @@
 \definecolor{purple}{RGB}{141,24,143}
 \end_preamble
 \use_default_options true
+\begin_modules
+multicol
+\end_modules
 \maintain_unincluded_children false
 \language spanish-mexico
 \language_package default
@@ -603,7 +606,7 @@ Un sistema debe controlar un aparato para efectuar electroencefalogramas
  un valor al sistema).
  Es necesario tomar 5 muestras por segundo, espaciadas uniformemente.
  En cada una de las 5 muestras se lee el valor de los 10 electrodos.
- Notar que si el cerebro del paciente no presenta actividad en las cercanas
+ Notar que si el cerebro del paciente no presenta actividad en las cercanías
  de un electrodo, este no emitirá señal alguna.
  Por lo tanto, el sistema no puede esperar indefinidamente por la señal
  del electrodo.
@@ -616,12 +619,293 @@ Un sistema debe controlar un aparato para efectuar electroencefalogramas
 Designaciones
 \end_layout
 
+\begin_layout Itemize
+El electrodo 
+\begin_inset Formula $i$
+\end_inset
+
+ emite una señal 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $señal.i$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se toma una muestra de los 10 electrodos 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $leer$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se terminó de imprimir los 10 electrodos 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $fin$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se imprime el electrodo actual 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $imprimir$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Se terminó de imprimir el electrodo actual 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $listo$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
 \begin_layout Subsubsection
 Tabla de control
 \end_layout
 
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Evento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Control
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compartido
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $señal.i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $EC$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\checked$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $leer$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $MC$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Statecharts
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/electro1.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $cero=print0\land listo$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $uno=print1\land listo$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $fincero=print0\land fin$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $finuno=print1\land fin$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/electro2.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $SISTEMA=DK\_ELECTRODOS\parallel DK\_IMPRESORA\parallel LECTORES\parallel IMPRESOR\parallel IMPRIMIENDO$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -726,16 +1010,24 @@ Un sistema de alarma hogareño simple consta de un teclado (contiene los
  10 dígitos y las dos primeras letras del abecedario), dos sensores de movimient
 o y dos magnéticos (para aberturas) y una bocina.
  Todo el sistema sera controlado por un programa.
- El sistema puede estar armado o no.
+\end_layout
+
+\begin_layout Standard
+El sistema puede estar armado o no.
  Armado significa que si se detecta una intrusión debe sonar la bocina que
  se teclee el código de seguridad.
  Si no esta armado no se responderá a las intrusiones.
  Una intrusión se detecta cuando alguno de los sensores envía una señal.
  Si esta armado, al teclear el código de seguridad, el sistema se desarma;
  si esta desarmado, al teclear el código de seguridad, se arma.
- El código de seguridad viene de fabrica y consta de 2 dígitos.
- El sistema agrupa un sensor de movimiento y uno magnético en el sector
- 
+\end_layout
+
+\begin_layout Standard
+El código de seguridad viene de fabrica y consta de 2 dígitos.
+\end_layout
+
+\begin_layout Standard
+El sistema agrupa un sensor de movimiento y uno magnético en el sector 
 \begin_inset Formula $A$
 \end_inset
 
@@ -750,6 +1042,10 @@ o y dos magnéticos (para aberturas) y una bocina.
  Si solo se teclea el código de seguridad se arman todos los sectores; si
  algún sector esta armado y se teclea el código de seguridad, se desarman
  todos los sectores.
+\end_layout
+
+\begin_layout Standard
+Abstraiga convenientemente el teclado y el código de seguridad.
 \end_layout
 
 \begin_layout Subsubsection
@@ -906,6 +1202,11 @@ No se puede poner en funcionamiento el motor en el mismo paso en que se
  recibe una medición de temperatura.
 \end_layout
 
+\begin_layout Standard
+Abstraiga convenientemente las diferentes temperaturas que puede comunicar
+ el termómetro.
+\end_layout
+
 \begin_layout Subsubsection
 Designaciones
 \end_layout
@@ -976,6 +1277,21 @@ buffer
 Tener en cuenta que los productores y consumidores son las entidades activas.
 \end_layout
 
+\begin_layout Standard
+Explique claramente (mostrando un ejemplo si es necesario) si el modelo
+ semántico 
+\begin_inset Quotes fld
+\end_inset
+
+broadcast
+\begin_inset Quotes frd
+\end_inset
+
+ de Statecharts hace que el sistema completo se comporte de forma diferente
+ a como lo hace la especificación CSP, que responde a un modelo semántico
+ sincrónico.
+\end_layout
+
 \begin_layout Subsubsection
 Designaciones
 \end_layout
@@ -1018,6 +1334,11 @@ Una vez que el camión esta correctamente ubicado y se bajaron las barreras,
  Cuando el pesaje finaliza, se debe imprimir un tique con los datos del
  conductor y el peso.
  Luego se levantan las barreras.
+\end_layout
+
+\begin_layout Standard
+Abstraiga adecuadamente la validación de la tarjeta y la impresión del tique
+ con sus datos.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1064,7 +1385,10 @@ no
 La habitación cuenta con un sistema de ventilación electrónico.
  Es posible aumentar o disminuir discretamente la cantidad de aire que el
  sistema hace circular.
- Se requiere un programa que aumente/disminuya paulatinamente la circulación
+\end_layout
+
+\begin_layout Standard
+Se requiere un programa que aumente/disminuya paulatinamente la circulación
  de aire desde cero hasta el máximo posible, cada vez que ingresan/egresan
  tres personas a la sala.
  Es decir la potencia de circulación debe ser la misma, por ejemplo, si
@@ -1108,6 +1432,10 @@ Un edificio contara con varios ascensores controlados desde un programa.
  En cada piso y en cada túnel hay un sensor que avisa el paso del ascensor
  por ese piso.
  Las puertas son manuales.
+\end_layout
+
+\begin_layout Standard
+No tener en cuenta los botones de los pisos.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1329,12 +1657,18 @@ next
  El minicomponente cuenta con una memoria que permite que al re-encenderse
  se active el ultimo componente usado, en particular si es la radio se encenderá
  AM o FM.
- Las ordenes recibidas desde los botones, si el CD esta activado, se deben
+\end_layout
+
+\begin_layout Standard
+Las ordenes recibidas desde los botones, si el CD esta activado, se deben
  traducir en ordenes al motor (giro normal o giro rápido hacia atrás o adelante,
  parar, arrancar, expulsar) o el lector laser (encender, apagar, leer).
- Las ordenes recibidas desde los botones, si la radio esta activada, se
- deben traducir en ordenes a un sintonizador (aumentar/disminuir frecuencia
- y cambiar rango de frecuencia).
+\end_layout
+
+\begin_layout Standard
+Las ordenes recibidas desde los botones, si la radio esta activada, se deben
+ traducir en ordenes a un sintonizador (aumentar/disminuir frecuencia y
+ cambiar rango de frecuencia).
 \end_layout
 
 \begin_layout Subsubsection
@@ -1393,7 +1727,10 @@ buffers
 buffers
 \emph default
  se vayan vaciando).
- Cuando un consumidor quiere un dato que 
+\end_layout
+
+\begin_layout Standard
+Cuando un consumidor quiere un dato que 
 \begin_inset Formula $B$
 \end_inset
 
@@ -1407,7 +1744,10 @@ buffer
 buffer
 \emph default
  .
- Obviamente 
+\end_layout
+
+\begin_layout Standard
+Obviamente 
 \begin_inset Formula $B$
 \end_inset
 
@@ -1457,11 +1797,95 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Cinta Transportadora (COMPLETAR)
+Cinta Transportadora
 \end_layout
 
 \begin_layout Subsubsection
 Requerimientos
+\end_layout
+
+\begin_layout Standard
+Una cinta transportadora acarrea ítems de dos tipos (
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+) que luego son capturados por las maquinas 
+\begin_inset Formula $M_{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{B}$
+\end_inset
+
+, respectivamente.
+ Un software controla la cinta y ambas maquinas.
+ El software debe encender cada una de las maquinas 
+\begin_inset Formula $M_{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{B}$
+\end_inset
+
+, mediante los eventos 
+\begin_inset Formula $turnona$
+\end_inset
+
+ y 
+\begin_inset Formula $turnonb$
+\end_inset
+
+, respectivamente.
+ Cada maquina necesita 
+\begin_inset Formula $r$
+\end_inset
+
+ unidades de tiempo para estar operativa.
+\end_layout
+
+\begin_layout Standard
+Cada vez que en la cinta se detecta un ítem de un tipo, el software debe
+ emitir el evento 
+\begin_inset Formula $takea$
+\end_inset
+
+ o 
+\begin_inset Formula $takeb$
+\end_inset
+
+ para que la maquina correspondiente capture el ítem en cuestión, a menos
+ que a continuación se indique otra cosa.
+\end_layout
+
+\begin_layout Standard
+Si entre la aparición de dos o mas ítems transcurren menos de 
+\begin_inset Formula $n$
+\end_inset
+
+ unidades de tiempo, no se debe emitir la orden de captura correspondiente
+ a los ítems posteriores al primero; se deberá emitir las ordenes de captura
+ cuando aparezca un ítem 
+\begin_inset Formula $n$
+\end_inset
+
+ unidades de tiempo después del anterior.
+\end_layout
+
+\begin_layout Standard
+Si transcurren mas de 
+\begin_inset Formula $t$
+\end_inset
+
+ unidades de tiempo entre dos ítems, se debe apagar todo el sistema mediante
+ el evento 
+\begin_inset Formula $abort$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1481,11 +1905,79 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Protocolo CSMA/CD (COMPLETAR)
+Protocolo CSMA/CD
 \end_layout
 
 \begin_layout Subsubsection
 Requerimientos
+\end_layout
+
+\begin_layout Standard
+Para transmitir datos entre terminales de trabajo conectadas en red se debe
+ hacer uso de algún protocolo.
+ En algunas redes 
+\begin_inset Formula $broadcast$
+\end_inset
+
+ con un único bus la clave esta en como asignar el uso de este cuando varias
+ terminales compiten por el.
+\end_layout
+
+\begin_layout Standard
+Uno de los protocolos que resuelven esta cuestión es el 
+\emph on
+Carrier Sense, Multiple Access with Collision Detection
+\emph default
+, o simplemente CSMA/CD.
+ Una breve descripción del funcionamiento de este protocolo es la siguiente.
+\end_layout
+
+\begin_layout Standard
+Una terminal transmite al sistema (es decir a la implementación del protocolo)
+ un mensaje que debe ser enviado por la red.
+ El sistema, si el bus esta disponible (esto es, no hay otra terminal transmitie
+ndo), comienza a enviar su mensaje.
+ Sin embargo, si detecta que el bus esta ocupado, espera un tiempo aleatorio
+ y vuelve a intentar transmitir el mensaje.
+ Esto lo hará tantas veces como sea necesario hasta que pueda empezar a
+ transmitir.
+\end_layout
+
+\begin_layout Standard
+Aun tomando estas precauciones puede ocurrir que dos terminales usen el
+ bus al mismo tiempo, lo que da lugar a una 
+\emph on
+colisión
+\emph default
+.
+ Cuando una colisión ocurre el bus comunica esta situacion a todas las terminale
+s.
+ Esto implica que todas las terminales abortan inmediatamente las transmisiones
+ y, nuevamente, esperan un tiempo aleatorio para empezar a transmitir de
+ nuevo.
+\end_layout
+
+\begin_layout Standard
+Los mensajes que colisionan se pierden.
+ Una vez que el mensaje ha sido transmitido, la terminal que inicio la transmisi
+ón es notificada.
+\end_layout
+
+\begin_layout Standard
+Se supone que todos los mensajes (sin importar tamaño) demoran exactamente
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ unidades de tiempo en ser transmitidos.
+\end_layout
+
+\begin_layout Standard
+En resumen, en cada terminal corre una implementación del protocolo y todas
+ las terminales comparten el bus.
+ La interfaz que provee el bus consta de: determinar si el bus esta libre
+ o no, enviar un mensaje, comunicar que un mensaje se transmitió, comunicar
+ a todas las terminales que hay colisión.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1505,11 +1997,132 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Teléfono celular (COMPLETAR)
+Teléfono celular
 \end_layout
 
 \begin_layout Subsubsection
 Requerimientos
+\end_layout
+
+\begin_layout Standard
+Se trata del software que controla un teléfono celular muy simple.
+ El teléfono cuenta con un teclado numérico, una tecla 
+\begin_inset Quotes fld
+\end_inset
+
+enviar
+\begin_inset Quotes frd
+\end_inset
+
+ y otra 
+\begin_inset Quotes fld
+\end_inset
+
+cortar
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Ademas posee una bocina que puede ser encendida o apagada y una pantalla
+ que puede mostrar una cadena de dígitos; existe una operación que borra
+ el contenido de la pantalla.
+ El teléfono se enciende si se pulsa la tecla 
+\begin_inset Quotes fld
+\end_inset
+
+cortar
+\begin_inset Quotes frd
+\end_inset
+
+ durante mas de 2 segundos.
+ Una vez encendido el teléfono espera que el usuario teclee un numero o
+ que llegue una llamada.
+\end_layout
+
+\begin_layout Standard
+Los números a los cuales se puede llamar poseen una cantidad de dígitos
+ variable.
+ Cada vez el usuario pulsa un digito el numero correspondiente debe mostrarse
+ en la pantalla.
+ Una vez que el usuario pulsa 
+\begin_inset Quotes fld
+\end_inset
+
+enviar
+\begin_inset Quotes frd
+\end_inset
+
+ el sistema debe esperar a que se pulse 
+\begin_inset Quotes fld
+\end_inset
+
+cortar
+\begin_inset Quotes frd
+\end_inset
+
+ (no se modela la comunicación en si).
+ Mientras tanto no se pueden recibir llamadas, es decir se pierden.
+ Cuando se pulsa 
+\begin_inset Quotes fld
+\end_inset
+
+cortar
+\begin_inset Quotes frd
+\end_inset
+
+ se debe borrar la pantalla.
+\end_layout
+
+\begin_layout Standard
+Si el teléfono puede recibir una llamada y esto ocurre, entonces el sistema
+ debe hacer sonar la bocina de manera intermitente hasta que el usuario
+ pulse 
+\begin_inset Quotes fld
+\end_inset
+
+enviar
+\begin_inset Quotes frd
+\end_inset
+
+ o 
+\begin_inset Quotes fld
+\end_inset
+
+cortar
+\begin_inset Quotes frd
+\end_inset
+
+.
+ La intermitencia es: 1 segundo de ruido seguido de un segundo de silencio.
+ Si el usuario pulsa 
+\begin_inset Quotes fld
+\end_inset
+
+cortar
+\begin_inset Quotes frd
+\end_inset
+
+ el teléfono podrá recibir o hacer nuevas llamadas.
+ Si el usuario pulsa 
+\begin_inset Quotes fld
+\end_inset
+
+enviar
+\begin_inset Quotes frd
+\end_inset
+
+ no se podrán hacer ni recibir nuevas llamadas hasta que pulse 
+\begin_inset Quotes fld
+\end_inset
+
+cortar
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Si el numero que se recibe coincide con uno que se mantiene en la agenda
+ del teléfono, entonces se debe mostrar en la pantalla el nombre que le
+ corresponda.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1529,11 +2142,87 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Sistema de estadísticas (COMPLETAR)
+Sistema de estadísticas
 \end_layout
 
 \begin_layout Subsubsection
 Requerimientos
+\end_layout
+
+\begin_layout Standard
+El dispositivo 
+\begin_inset Formula $D$
+\end_inset
+
+ debe recibir datos de 
+\begin_inset Formula $N$
+\end_inset
+
+ sensores conectados en serie, y con esos datos realizar diversas estadísticas.
+ El mecanismo debe ser el siguiente: 
+\begin_inset Formula $D$
+\end_inset
+
+ debe pedir al primer sensor que le envíe el dato que tenga disponible.
+ Este sensor, a su vez, luego de enviar el dato le 
+\begin_inset Quotes fld
+\end_inset
+
+avisa
+\begin_inset Quotes frd
+\end_inset
+
+ al siguiente sensor que es su turno, y as sucesivamente hasta el sensor
+ 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ 
+\begin_inset Formula $D$
+\end_inset
+
+ espera un cierto tiempo a que arribe el siguiente dato, tras el cual considera
+ que no existen mas sensores (el hecho de que estén en serie y que se 
+\begin_inset Quotes fld
+\end_inset
+
+avisen
+\begin_inset Quotes frd
+\end_inset
+
+ entre ellos hace que 
+\begin_inset Formula $N$
+\end_inset
+
+ sea transparente para 
+\begin_inset Formula $D$
+\end_inset
+
+).
+ Cuando 
+\begin_inset Formula $D$
+\end_inset
+
+ termina de recibir los valores debe enviarle el promedio de los valores
+ recibidos a otro dispositivo, y comenzar el ciclo nuevamente en cuto caso
+ se reinicia el arreglo de sensores de manera tal que el primero es el que
+ posiblemente enviara el primer valor en el nuevo ciclo.
+ En caso de no haber recibido ningún valor luego de efectuar el primer pedido
+ (porque 
+\begin_inset Formula $N$
+\end_inset
+
+ es cero o porque el primer sensor se demoro mas de lo esperado), debe enviarle
+ al otro dispositivo un mensaje de error.
+\end_layout
+
+\begin_layout Standard
+Considerar que la maquina a construir es el software que controla a 
+\begin_inset Formula $D$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
