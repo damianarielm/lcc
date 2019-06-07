@@ -153,96 +153,13 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-
-\color purple
-\begin_inset Formula $\boxed{\begin{aligned} & X=b\to STOP\parallel a\to STOP\\
-\equiv & \left\langle Interleaving\right\rangle \\
- & b\to\left(STOP\parallel a\to STOP\right)\square a\to\left(b\to STOP\parallel STOP\right)\\
-\equiv & \left\langle 2*P\parallel STOP_{\emptyset}=P\right\rangle \\
- & b\to a\to STOP\square a\to b\to STOP
-\end{aligned}
-}$
-\end_inset
-
-
+COMPLETAR.
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-
-\color purple
-\begin_inset Formula $\boxed{\begin{aligned} & Y=b\to STOP\parallel c\to STOP\\
-\equiv & \left\langle Interleaving\right\rangle \\
- & b\to\left(STOP\parallel c\to STOP\right)\square c\to\left(b\to STOP\parallel STOP\right)\\
-\equiv & \left\langle 2*P\parallel STOP_{\emptyset}=P\right\rangle \\
- & b\to c\to STOP\square c\to b\to STOP
-\end{aligned}
-}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\color purple
-\begin_inset Formula $\boxed{\begin{aligned} & P=a\to b\to STOP\parallel\left(a\to a\to STOP\sqcap a\to c\to STOP\right)\\
-\equiv & \left\langle e\to P\sqcap e\to Q=e\to\left(P\sqcap Q\right)\right\rangle \\
- & a\to b\to STOP\parallel a\to\left(a\to STOP\sqcap c\to STOP\right)\\
-\equiv & \left\langle Sincronization\right\rangle \\
- & a\to\left(b\to STOP\parallel\left(a\to STOP\sqcap c\to STOP\right)\right)\\
-\equiv & \left\langle P\parallel\left(Q\sqcap R\right)=\left(P\parallel Q\right)\sqcap\left(P\parallel R\right)\right\rangle \\
- & a\to\left(X\sqcap Y\right)
-\end{aligned}
-}$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
-
-\color purple
-\begin_inset Formula $\boxed{\begin{aligned} & Q=\left(b\to b\to STOP\square a\to b\to STOP\right)\parallel a\to c\to STOP\\
-\equiv & \left\langle P\parallel\left(Q\square R\right)=\left(P\parallel Q\right)\square\left(P\parallel R\right)\right\rangle \\
- & \left(a\to c\to STOP\parallel b\to b\to STOP\right)\square\left(a\to c\to STOP\parallel a\to b\to STOP\right)\\
-\equiv & \left\langle Sincronization\right\rangle \\
- & \left(a\to c\to STOP\parallel b\to b\to STOP\right)\square\left(a\to Y\right)\\
-\equiv & \left\langle Interleaving\right\rangle \\
-\left(*\right) & \left(a\to\left(c\to STOP\parallel b\to b\to STOP\right)\square b\to\left(a\to c\to STOP\parallel b\to STOP\right)\right)\\
- & \square\\
- & \left(a\to Y\right)
-\end{aligned}
-}$
-\end_inset
-
-
+COMPLETAR.
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-
-\color purple
-\begin_inset Formula $\boxed{\begin{aligned}\left(*\right) & a\to\left(c\to STOP\parallel b\to b\to STOP\right)\\
- & \square\\
- & b\to\left(a\to c\to STOP\parallel b\to STOP\right)\\
-\equiv & \left\langle 2*Interleaving\right\rangle \\
- & a\to\left(c\to\left(STOP\parallel b\to b\to STOP\right)\square b\to Y\right)\\
- & \square\\
- & b\to\left(a\to Y\square b\to\left(a\to c\to STOP\parallel STOP\right)\right)\\
-\equiv & \left\langle 2*P\parallel STOP_{\emptyset}=P\right\rangle \\
- & a\to\left(c\to b\to b\to STOP\square b\to Y\right)\\
- & \square\\
- & b\to\left(a\to Y\square b\to a\to c\to STOP\right)
-\end{aligned}
-}$
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -250,7 +167,15 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 Modele un proceso CSP que debe recibir cien señales en cualquier orden y,
- una vez que las ha recibido a todas, debe comportarse como el proceso W.
+ una vez que las ha recibido a todas, debe comportarse como el proceso 
+\color purple
+
+\begin_inset Formula $W$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \begin_deeper
@@ -259,7 +184,28 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sea 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ el conjunto de todas las señales que puede recibir dicho proceso.
+ Si definimos 
+\color purple
+
+\begin_inset Formula $P\left(S\right)=x:\alpha\to P\left(S^{\smallfrown}\left\langle x\right\rangle \right)\left\lceil \#S\neq100\right\rceil W$
+\end_inset
+
+
+\color inherit
+, entonces el proceso que estamos buscando es: 
+\color purple
+
+\begin_inset Formula $P\left(\left\langle \right\rangle \right)$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \end_deeper
@@ -274,7 +220,86 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Recordemos que 
+\color purple
+
+\begin_inset Formula $\boldsymbol{t}\left(P\square Q\right)=\boldsymbol{t}\left(P\sqcap Q\right)$
+\end_inset
+
+
+\color inherit
+.
+ Este concepto formaliza la idea de cuales son los comportamientos que puede
+ tener un proceso, y evidentemente ambos procesos pueden comportarse como
+ 
+\color purple
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\color inherit
+ o 
+\color purple
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+Por el contrario el no determinismo esta relacionado con la idea de los
+ comportamientos que un proceso podría hacer pero finalmente no hace.
+ Por ejemplo en el caso 
+\color purple
+
+\begin_inset Formula $a\to P\sqcap b\to Q$
+\end_inset
+
+
+\color inherit
+ si el entorno ofrece el evento 
+\color purple
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\color inherit
+ el proceso podría rechazarlo pues prefiere comportarse como 
+\color purple
+
+\begin_inset Formula $b\to Q$
+\end_inset
+
+
+\color inherit
+ y viceversa; en cambio si ofrece ambos eventos el proceso solo puede rechazar
+ uno de ellos.
+\end_layout
+
+\begin_layout Standard
+Los rechazos de un proceso son el concepto que nos permite formalizar el
+ no determinismo y diferenciar entre 
+\color purple
+
+\begin_inset Formula $\square$
+\end_inset
+
+
+\color inherit
+ y 
+\color purple
+
+\begin_inset Formula $\sqcap$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \end_deeper
@@ -378,10 +403,76 @@ IEOF
 Solución
 \end_layout
 
+\begin_layout Itemize
+Interleaving:
+\color purple
+
+\begin_inset Formula 
+\[
+a\notin\alpha Q\land b\notin\alpha Q\Rightarrow a\to P\parallel b\to Q=a\to\left(P\parallel b\to Q\right)\square b\to\left(a\to P\parallel Q\right)
+\]
+
+\end_inset
+
+
+\color inherit
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Deadlock: 
+\color purple
+
+\begin_inset Formula $a\in\alpha Q\land b\in\alpha P\Rightarrow a\to P\parallel b\to Q=STOP$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+Sincronization: 
+\color purple
+
+\begin_inset Formula $a\to P\parallel a\to Q=a\to\left(P\parallel Q\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+IEOF: 
+\color purple
+
+\begin_inset Formula $a\notin\alpha Q\land b\in\alpha P\Rightarrow a\to P\parallel b\to Q=a\to\left(P\parallel b\to Q\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Determine si la siguiente proposición es correcta o no (es decir si la igualdad
@@ -405,7 +496,66 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+La igualdad no es correcta, y para verlo daremos un contraejemplo.
+ Sean 
+\color purple
+
+\begin_inset Formula $P=SKIP$
+\end_inset
+
+
+\color inherit
+ y 
+\color purple
+
+\begin_inset Formula $Q=c!x\to STOP$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+El proceso al lado derecho de la igualdad recibe un mensaje 
+\color purple
+
+\begin_inset Formula $x$
+\end_inset
+
+
+\color inherit
+ y luego pasa a comportarse como un proceso que primero termina exitosamente
+ y a continuación reenviá ese mismo mensaje antes de finalizar.
+\end_layout
+
+\begin_layout Standard
+Por el contrario, en el proceso a la izquierda de la igualdad, el mensaje
+ recibido solo esta dentro del alcance de 
+\color purple
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\color inherit
+ por lo que 
+\color purple
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\color inherit
+ no enviará dicho mensaje ya que 
+\color purple
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\color inherit
+ ha terminado.
 \end_layout
 
 \end_deeper
@@ -495,6 +645,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -534,6 +688,10 @@ Solución
 \begin_layout Enumerate
 Traduzca el Statechart de la figura anterior en un proceso CSP equivalente.
  Si no puede hacerlo, justifique su respuesta.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1175,16 +1333,13 @@ o y dos magnéticos (para aberturas) y una bocina.
 
 \begin_layout Standard
 El sistema puede estar armado o no.
- Armado significa que si se detecta una intrusión debe sonar la bocina que
- se teclee el código de seguridad.
+ Armado significa que si se detecta una intrusión debe sonar la bocina hasta
+ que se teclee el código de seguridad.
  Si no esta armado no se responderá a las intrusiones.
  Una intrusión se detecta cuando alguno de los sensores envía una señal.
- Si esta armado, al teclear el código de seguridad, el sistema se desarma;
+ Si esta armado, al teclear el código de seguridad el sistema se desarma;
  si esta desarmado, al teclear el código de seguridad, se arma.
-\end_layout
-
-\begin_layout Standard
-El código de seguridad viene de fabrica y consta de 2 dígitos.
+ El código de seguridad viene de fabrica y consta de 2 dígitos.
 \end_layout
 
 \begin_layout Standard
