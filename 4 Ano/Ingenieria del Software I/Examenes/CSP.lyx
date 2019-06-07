@@ -507,7 +507,7 @@ Muestre un Statechart equivalente al que se muestra en la figura que no
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Teoria.png
+	filename Imagenes/teoria/ejercicio.png
 	scale 30
 
 \end_inset
@@ -522,7 +522,7 @@ Solución
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Solucion.png
+	filename Imagenes/teoria/solucion.png
 	scale 30
 
 \end_inset
@@ -703,13 +703,45 @@ Se terminó de imprimir el electrodo actual
 .
 \end_layout
 
+\begin_layout Itemize
+La impresora imprime un cero 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $print0$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+La impresora imprime un uno 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $print1$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
 \begin_layout Subsubsection
-Tabla de control
+Tabla de control (COMPLETAR)
 \end_layout
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="3" columns="3">
+<lyxtabular version="3" rows="5" columns="3">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -774,7 +806,87 @@ Compartido
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\checked$
+\begin_inset Formula $\CheckedBox$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $leer$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $MC$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $print0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $MC$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\CheckedBox$
 \end_inset
 
 
@@ -790,7 +902,7 @@ Compartido
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $leer$
+\begin_inset Formula $print1$
 \end_inset
 
 
@@ -814,7 +926,7 @@ Compartido
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $?$
+\begin_inset Formula $\CheckedBox$
 \end_inset
 
 
@@ -836,7 +948,38 @@ Statecharts
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Imagenes/electro1.png
+	filename Imagenes/electro/dkelectrodos.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/electro/lectores.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/electro/impresor.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/electro/dkimpresora.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/electro/imprimiendo.png
 	scale 20
 
 \end_inset
@@ -890,16 +1033,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename Imagenes/electro2.png
-	scale 20
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \color purple
 \begin_inset Formula $SISTEMA=DK\_ELECTRODOS\parallel DK\_IMPRESORA\parallel LECTORES\parallel IMPRESOR\parallel IMPRIMIENDO$
@@ -909,11 +1042,11 @@ status open
 \end_layout
 
 \begin_layout Subsubsection
-CSP
+CSP (COMPLETAR)
 \end_layout
 
 \begin_layout Subsection
-Computación distribuida
+Computación distribuida (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -927,7 +1060,7 @@ Un sistema distribuido consta de
 
  computadoras cada una de las cuales ejecuta el mismo programa; estas computador
 as pueden estar encendidas o apagadas.
- Este programa recibe dos eventos desde el exterior (en cada computadora),
+ Este programa recibe dos eventos (en cada computadora) desde el exterior:
  
 \begin_inset Formula $a$
 \end_inset
@@ -936,14 +1069,21 @@ as pueden estar encendidas o apagadas.
 \begin_inset Formula $b$
 \end_inset
 
- .
- Cuando el programa en una computadora recibe 
+.
+\end_layout
+
+\begin_layout Itemize
+Cuando el programa en una computadora recibe 
 \begin_inset Formula $a$
 \end_inset
 
-, debe comunicarles a todas las otras computadoras, por medio de un evento
+, debe comunicarles a todas las otras computadoras por medio de un evento
  interno, que lo ha recibido.
- Luego de comunicar esta situacion esa computadora debe esperar a que todas
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Luego de comunicar esta situacion esa computadora debe esperar a que todas
  le respondan.
  Cada computadora encendida responde con un evento diferente pero solo si
  esta en su estado inicial.
@@ -953,7 +1093,10 @@ as pueden estar encendidas o apagadas.
 \end_inset
 
  cada respuesta.
- Cuando recibe todas las respuestas o han transcurrido 
+\end_layout
+
+\begin_layout Standard
+Cuando recibe todas las respuestas o han transcurrido 
 \begin_inset Formula $B$
 \end_inset
 
@@ -962,7 +1105,11 @@ as pueden estar encendidas o apagadas.
 \end_inset
 
  y volver al estado inicial.
- Si el programa recibe el evento 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Si el programa recibe el evento 
 \begin_inset Formula $b$
 \end_inset
 
@@ -970,7 +1117,11 @@ as pueden estar encendidas o apagadas.
 \begin_inset Formula $t$
 \end_inset
 
- hasta poder recibir el evento a a menos que se de otro evento 
+ hasta poder recibir el evento 
+\begin_inset Formula $a$
+\end_inset
+
+, a menos que se de otro evento 
 \begin_inset Formula $b$
 \end_inset
 
@@ -978,27 +1129,37 @@ as pueden estar encendidas o apagadas.
 \begin_inset Formula $T$
 \end_inset
 
- unidades de tiempo, en cuyo caso debe reiniciar el tiempo de espera.
+ unidades de tiempo en cuyo caso debe reiniciar el tiempo de espera.
 \end_layout
 
 \begin_layout Subsubsection
-Designaciones
+Designaciones (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
-Tabla de control
+Tabla de control (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
 Statecharts
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/distribuida/programas.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
-CSP
+CSP (COMPLETAR)
 \end_layout
 
 \begin_layout Subsection
-Sistema de alarma
+Sistema de alarma (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1065,7 +1226,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Detección de errores
+Detección de errores (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1151,7 +1312,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Robot industrial
+Robot industrial (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1224,7 +1385,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Productores y consumidores 1
+Productores y consumidores 1 (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1309,7 +1470,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Balanza de camiones
+Balanza de camiones (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1358,7 +1519,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Sistema de ventilación
+Sistema de ventilación (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1414,7 +1575,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Sistema de ascensores
+Sistema de ascensores (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1455,7 +1616,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Dispenser de bebidas
+Dispenser de bebidas (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1505,7 +1666,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Temperatura de automóviles
+Temperatura de automóviles (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1548,7 +1709,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Minicomponente musical
+Minicomponente musical (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1688,7 +1849,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Productores y consumidores 2
+Productores y consumidores 2 (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1797,7 +1958,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Cinta Transportadora
+Cinta Transportadora (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1905,7 +2066,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Protocolo CSMA/CD
+Protocolo CSMA/CD (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -1997,7 +2158,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Teléfono celular
+Teléfono celular (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
@@ -2142,7 +2303,7 @@ CSP
 \end_layout
 
 \begin_layout Subsection
-Sistema de estadísticas
+Sistema de estadísticas (COMPLETAR)
 \end_layout
 
 \begin_layout Subsubsection
