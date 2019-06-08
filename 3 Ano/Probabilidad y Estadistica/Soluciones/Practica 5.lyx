@@ -168,7 +168,7 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\intop_{-1}^{0}kx^{2}dx=\left.k\frac{x^{3}}{3}\right|_{-1}^{0}=\frac{k0}{3}-\frac{-k}{3}=\frac{k}{3}=1\iff k=3$
+\begin_inset Formula ${\displaystyle \intop_{-1}^{0}}kx^{2}dx=\left.k\frac{x^{3}}{3}\right|_{-1}^{0}=k\frac{0^{3}}{3}-k\frac{-1^{3}}{3}=\frac{k}{3}=1\iff k=3$
 \end_inset
 
 .
@@ -183,14 +183,14 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $E\left(X\right)=\intop_{-1}^{0}3x^{2}\cdot xdx=\left.3\frac{x^{4}}{4}\right|_{-1}^{0}=0-\frac{3}{4}=-\frac{3}{4}$
+\begin_inset Formula $E\left(X\right)={\displaystyle \intop_{-1}^{0}x\cdot}3x^{2}\,dx=\left.3\frac{x^{4}}{4}\right|_{-1}^{0}=0-\frac{3}{4}=-\frac{3}{4}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E\left(X^{2}\right)=\intop_{-1}^{0}3x^{2}\cdot x^{2}dx=\left.3\frac{x^{5}}{5}\right|_{-1}^{0}=0+\frac{3}{5}=\frac{3}{5}$
+\begin_inset Formula $E\left(X^{2}\right)={\displaystyle \intop_{-1}^{0}}x^{2}\cdot3x^{2}\,dx=\left.3\frac{x^{5}}{5}\right|_{-1}^{0}=0+\frac{3}{5}=\frac{3}{5}$
 \end_inset
 
 .
@@ -207,7 +207,7 @@ Soluciones
 \begin_layout Enumerate
 \begin_inset Formula $F\left(x\right)=\begin{cases}
 0 & x<-1\\
-\left.y^{3}\right|_{-1}^{x}=x^{3}+1 & -1\leq x\leq0\\
+\left.y^{3}\right|_{-1}^{x}=\boxed{x^{3}+1} & -1\leq x\leq0\\
 1 & x>0
 \end{cases}$
 \end_inset
@@ -261,6 +261,81 @@ Calcule la probabilidad de que una componente funcione por lo menos 200
 Soluciones
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=0:3, legend pos=south
+ east]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-e^(-x^2)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$F(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {2*x*e^(-x^2)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$f(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
@@ -272,7 +347,7 @@ Soluciones
 \begin_layout Itemize
 \begin_inset Formula $F\left(y\right)=\begin{cases}
 0 & y<0\\
-1-e^{-y^{2}}=\intop_{0}^{y}f\left(x\right)dx & y\geq0
+1-e^{-y^{2}}={\displaystyle \intop_{0}^{y}}f\left(x\right)\,dx & y\geq0
 \end{cases}$
 \end_inset
 
@@ -280,9 +355,9 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $f\left(x\right)=\begin{cases}
-0 & x<0\\
-\frac{d}{dx}\left(1-e^{-x^{2}}\right)=2xe^{-x^{2}} & x\geq0
+\begin_inset Formula $f\left(y\right)=\begin{cases}
+0 & y<0\\
+\frac{d}{dy}\left(1-e^{-y^{2}}\right)=\boxed{2ye^{-y^{2}}} & y\geq0
 \end{cases}$
 \end_inset
 
@@ -339,6 +414,81 @@ Si se instalan tres de tales tubos, calcule la probabilidad de que uno de
 Soluciones
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, thick, samples=100, domain=100:200, legend
+ pos=south east]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {(x-100)/x};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$F(t)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[, no marks] {100/(x^2))};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$f(t)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 \begin_inset Formula $T$
 \end_inset
@@ -356,7 +506,7 @@ Duración en horas de un cierto tipo de tubo
 
 \begin_layout Itemize
 \begin_inset Formula $F\left(t\right)=\begin{cases}
-0+\int_{100}^{t}f\left(x\right)dx=\frac{t-100}{t} & t\geq100\\
+0+{\displaystyle \intop_{100}^{t}}f\left(x\right)dx=\left.-\frac{100}{x}\right|_{100}^{t}=\boxed{\frac{t-100}{t}} & t\geq100\\
 0 & t<100
 \end{cases}$
 \end_inset
@@ -536,10 +686,99 @@ Se propone clasificar el tipo de un organismo, en función de la proporción
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
 Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, thick, samples=100, domain=0:1, legend pos=south
+ east, axis on top]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, fill=blue!20, draw=none, domain=1/3:1] {4(1-x)^3}
+ 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {4(1-x)^3};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$f(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {6*x*(1-x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$g(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -558,7 +797,7 @@ Proporción de la sustancia química presente en el organísmo
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\text{\ensuremath{P\left(X>\frac{1}{3}/\text{el organismo es de tipo }A\right)=\intop_{\frac{1}{3}}^{1}4\left(1-x\right)^{3}dx=\left.-\left(x-1\right)^{4}\right|_{\frac{1}{3}}^{1}=\frac{16}{81}}}$
+\begin_inset Formula $\text{\ensuremath{P\left(X>\frac{1}{3}/\text{el organismo es de tipo }A\right)={\displaystyle \intop_{\frac{1}{3}}^{1}}4\left(1-x\right)^{3}\,dx=\left.-\left(x-1\right)^{4}\right|_{\frac{1}{3}}^{1}=\frac{16}{81}}}$
 \end_inset
 
 .
@@ -608,6 +847,10 @@ Halle
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -623,7 +866,7 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $\intop_{1}^{4}kdx=\left.kx\right|_{1}^{4}=4k-k=3k=1\iff k=\frac{1}{3}$
+\begin_inset Formula ${\displaystyle \intop_{1}^{4}}k\,dx=\left.kx\right|_{1}^{4}=4k-k=3k=1\iff k=\frac{1}{3}$
 \end_inset
 
 .
@@ -632,7 +875,7 @@ Soluciones
 \begin_layout Itemize
 \begin_inset Formula $f\left(x\right)=\begin{cases}
 \frac{1}{3} & 1\leq x\leq4\\
-0 & \text{otro caso}
+0 & \text{en otro caso}
 \end{cases}$
 \end_inset
 
@@ -642,7 +885,7 @@ Soluciones
 \begin_layout Itemize
 \begin_inset Formula $F\left(x\right)=\begin{cases}
 0 & x<1\\
-\left.\frac{1}{3}y\right|_{1}^{x}=\frac{1}{3}x-\frac{1}{3}=\frac{x-1}{3} & 1\leq x\leq4\\
+{\displaystyle \intop_{1}^{x}}f\left(y\right)dy=\left.\frac{1}{3}y\right|_{1}^{x}=\frac{1}{3}x-\frac{1}{3}=\boxed{\frac{x-1}{3}} & 1\leq x\leq4\\
 1 & x>4
 \end{cases}$
 \end_inset
@@ -740,18 +983,6 @@ Tiempo en minutos para ir desde la casa a la estación
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $E\left(T\right)=\frac{20+25}{2}=\frac{45}{2}$
-\end_inset
-
-.
- 
-\begin_inset Formula $V\left(T\right)=\frac{\left(25-20\right)^{2}}{12}=\frac{25}{12}$
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Enumerate
 \begin_inset Formula $P\left(T\leq23\right)=F\left(23\right)=\frac{23-20}{5}=\frac{3}{5}$
 \end_inset
@@ -760,7 +991,7 @@ Tiempo en minutos para ir desde la casa a la estación
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $E\left(T\right)=\frac{45}{2}$
+\begin_inset Formula $E\left(T\right)=\frac{20+25}{2}=\frac{45}{2}$
 \end_inset
 
 .
@@ -812,6 +1043,98 @@ emente.
 Soluciones
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, thick, samples=100, domain=0:105, legend
+ pos=south east, axis on top, grid, ytick={0.1,0.2,0.3,0.4,0.5,0.6}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, fill=blue!20, draw=none, domain=0:100] {(1/100)*e^(-(1/100
+)*x)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {(1/100)*e^(-(1/100)*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$f(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-e^(-(1/100)*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[samples at=100, only marks] {1-e^(-(1/100)*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$F(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset Formula $P\left(X\leq E\left(X\right)\right)=P\left(X\leq100\right)=F\left(100\right)=1-e^{-1}\approx0,6321$
 \end_inset
@@ -820,12 +1143,37 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $M\left(X\right)=\frac{\ln\left(2\right)}{1/100}\approx69,3147<100=E\left(X\right)$
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{F\left(x^{*}\right)=1-e^{-\frac{1}{100}x^{*}}=\frac{1}{2}\iff e^{-\frac{1}{100}x^{*}}=\frac{1}{2}\iff-\frac{1}{100}x^{*}=\ln\left(\frac{1}{2}\right)=}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{=\ln\left(1\right)-\ln\left(2\right)=-\ln\left(2\right)\iff\frac{1}{100}x^{*}=\ln\left(2\right)\iff x^{*}=\ln\left(2\right)\cdot100}}$
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $x^{*}\approx69,3147<100=E\left(X\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
@@ -907,7 +1255,7 @@ Cantidad de accidentes en una fábrica en
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\lambda=\frac{2}{7}\text{\ensuremath{\frac{accidentes}{dias}}}=$
+\begin_inset Formula $\lambda=\frac{2}{7}\text{\ensuremath{\frac{accidentes}{dias}}}$
 \end_inset
 
 .
@@ -964,11 +1312,121 @@ Tiempo en días entre dos accidentes
 .
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, thick, samples=100, domain=0:15, legend style={at
+={(0.95,0.5)}, anchor=east}, axis on top, grid, xtick={3,6,9,12,15,18}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, fill=blue!20, draw=none, domain=3:15] {(2/7)*e^(-(2/7)*x)}
+ 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {(2/7)*e^(-(2/7)*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$f(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-e^(-(2/7)*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, samples at=3, only marks] {1-(1-e^(-(2/7)*x))};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$F(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-(1-e^(-(2/7)*x))};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$1-F(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 \begin_inset Formula $P\left(Y>3\right)=1-F\left(3\right)=1-\left(1-e^{-\frac{2}{7}3}\right)=e^{-\frac{6}{7}}\approx0,42437$
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -988,7 +1446,7 @@ Tiempo en días entre dos accidentes
 \begin_inset Quotes fld
 \end_inset
 
-Tiempo en minutos hasta el tercer accidente
+Tiempo en días hasta el tercer accidente
 \begin_inset Quotes frd
 \end_inset
 
@@ -1007,10 +1465,7 @@ Tiempo en minutos hasta el tercer accidente
 \end{cases}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
+ 
 \begin_inset Formula $F\left(z\right)=\begin{cases}
 1-{\displaystyle \sum_{n=0}^{3-1}}e^{-\frac{2}{7}z}\left(\frac{2}{7}z\right)^{n}\frac{1}{n!} & z>0\\
 0 & z\leq0
@@ -1025,10 +1480,6 @@ Tiempo en minutos hasta el tercer accidente
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1149,6 +1600,102 @@ Tiempo en minutos entre dos ventas sucesivas
 .
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, thick, samples=100, domain=0:6, legend style={at=
+{(0.95,0.5)}, anchor=east}, axis on top, grid]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {(5/6)*e^(-(5/6)*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$f(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-e^(-(5/6)*x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, samples at={2,5}, only marks] {1-(1-e^(-(5/6)*x))};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$F(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-(1-e^(-(5/6)*x))};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$1-F(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset Formula $P\left(Y\geq2\right)=1-F\left(2\right)\approx1-0,8111=0,1889$
 \end_inset
@@ -1175,10 +1722,6 @@ Tiempo en minutos entre dos ventas sucesivas
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -1311,10 +1854,6 @@ El tiempo de duración de cierta pila es una variable aleatoria
 
 \begin_layout Enumerate-Resume
 ¿Qué porcentaje de pilas duran menos de 450 hs?
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -1540,8 +2079,74 @@ Los alambres que se utilizan en cierta computadora deben tener una resistencia
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Resistencia en ohms de los alambres producidos por la empresa
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $X\sim N\left(0,13,0,005\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(0,12\leq X\leq0,14\right)=F\left(0,14\right)-F\left(0,12\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,12\leq X\leq0,14\iff-2=\frac{0,01}{0,005}\leq Z=\frac{X-0,13}{0,005}\leq\frac{0,01}{0,005}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(-2\leq Z\leq2\right)=F\left(2\right)-F\left(-2\right)\approx0,97725-0,02275=0,9545}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de alambres que cumplen la especificación de un total de 4
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y\approx B\left(4,0,9545\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(Y=4\right)\approx1\cdot0,9545^{4}\cdot1\approx0.83$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -3329,8 +3934,68 @@ Determine la función densidad de la variable aleatoria
 Solución
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $f_{X}\left(x\right)=\begin{cases}
+\frac{1}{2} & -1<x<1\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+ 
+\begin_inset Formula $F_{X}\left(x\right)=\begin{cases}
+0 & x<-1\\
+\frac{x-1}{2} & -1\leq x\leq1\\
+1 & x>1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{X}=\left[-1,1\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{Y}=\left[3,4\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{Y}\left(y\right)=P\left(Y\leq y\right)=P\left(4-X^{2}\leq y\right)=P\left(X^{2}\geq4-y\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula $=P\left(\left|X\right|\geq\sqrt{4-y}\right)=P\left(X\geq\sqrt{4-y}\right)+P\left(X\leq-\sqrt{4-y}\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=F_{X}\left(-\sqrt{4-y}\right)+1-F_{X}\left(\sqrt{4-y}\right)=COMPLETAR$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $F_{Y}\left(y\right)=\begin{cases}
+0 & y<3\\
+1-\sqrt{4-y} & 3\leq y\leq4\\
+1 & y>4
+\end{cases}$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
