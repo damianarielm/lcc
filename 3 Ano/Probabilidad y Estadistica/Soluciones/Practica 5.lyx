@@ -11,6 +11,14 @@
 \pgfmathdeclarefunction{gauss}{2}{%
   \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
 }
+
+\pgfmathdeclarefunction{exponential}{1}{%
+  \pgfmathparse{#1*e^(-#1*x)}%
+}
+
+\pgfmathdeclarefunction{Exponential}{1}{%
+  \pgfmathparse{1-e^(-#1*x)}%
+}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -207,7 +215,7 @@ Soluciones
 \begin_layout Enumerate
 \begin_inset Formula $F\left(x\right)=\begin{cases}
 0 & x<-1\\
-\left.y^{3}\right|_{-1}^{x}=\boxed{x^{3}+1} & -1\leq x\leq0\\
+{\displaystyle \intop_{-1}^{x}}3y^{2}dy=\left.y^{3}\right|_{-1}^{x}=\boxed{x^{3}+1} & -1\leq x\leq0\\
 1 & x>0
 \end{cases}$
 \end_inset
@@ -280,8 +288,8 @@ begin{tikzpicture}
 
   
 \backslash
-begin{axis}[axis lines=middle, samples=100, thick, domain=0:3, legend pos=south
- east]
+begin{axis}[axis lines=middle, samples=100, thick, domain=0:3, legend style={at=
+{(0.98,0.5)}, anchor=east}]
 \end_layout
 
 \begin_layout Plain Layout
@@ -310,6 +318,20 @@ addplot+[no marks] {2*x*e^(-x^2)};
     
 \backslash
 addlegendentry{$f(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-(1-e^(-x^2))};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$1-F(y)$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -433,8 +455,16 @@ begin{tikzpicture}
 
   
 \backslash
-begin{axis}[axis lines=middle, thick, samples=100, domain=100:200, legend
- pos=south east]
+begin{axis}[axis lines=middle, thick, samples=100, domain=100:205, legend
+ pos=north east, grid=both, ytick={0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1}, xtick={100,125
+,150,175,200}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[forget plot, samples at={150,200}, only marks] {(x-100)/x};
 \end_layout
 
 \begin_layout Plain Layout
@@ -455,7 +485,7 @@ addlegendentry{$F(t)$}
 
     
 \backslash
-addplot+[, no marks] {100/(x^2))};
+addplot+[no marks] {100/(x^2))};
 \end_layout
 
 \begin_layout Plain Layout
@@ -463,6 +493,27 @@ addplot+[, no marks] {100/(x^2))};
     
 \backslash
 addlegendentry{$f(t)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[forget plot, samples at=150, only marks] {1-((x-100)/x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-((x-100)/x)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$1-F(t)$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -506,7 +557,7 @@ Duración en horas de un cierto tipo de tubo
 
 \begin_layout Itemize
 \begin_inset Formula $F\left(t\right)=\begin{cases}
-0+{\displaystyle \intop_{100}^{t}}f\left(x\right)dx=\left.-\frac{100}{x}\right|_{100}^{t}=\boxed{\frac{t-100}{t}} & t\geq100\\
+0+{\displaystyle \intop_{100}^{t}}f\left(x\right)\,dx=\left.-\frac{100}{x}\right|_{100}^{t}=\boxed{\frac{t-100}{t}} & t\geq100\\
 0 & t<100
 \end{cases}$
 \end_inset
@@ -715,7 +766,7 @@ begin{tikzpicture}
 
   
 \backslash
-begin{axis}[axis lines=middle, thick, samples=100, domain=0:1, legend pos=south
+begin{axis}[axis lines=middle, thick, samples=100, domain=0:1, legend pos=north
  east, axis on top]
 \end_layout
 
@@ -885,7 +936,7 @@ Soluciones
 \begin_layout Itemize
 \begin_inset Formula $F\left(x\right)=\begin{cases}
 0 & x<1\\
-{\displaystyle \intop_{1}^{x}}f\left(y\right)dy=\left.\frac{1}{3}y\right|_{1}^{x}=\frac{1}{3}x-\frac{1}{3}=\boxed{\frac{x-1}{3}} & 1\leq x\leq4\\
+{\displaystyle \intop_{1}^{x}}f\left(y\right)\,dy=\left.\frac{1}{3}y\right|_{1}^{x}=\frac{1}{3}x-\frac{1}{3}=\boxed{\frac{x-1}{3}} & 1\leq x\leq4\\
 1 & x>4
 \end{cases}$
 \end_inset
@@ -1049,7 +1100,7 @@ Soluciones
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1063,15 +1114,16 @@ begin{tikzpicture}
   
 \backslash
 begin{axis}[axis lines=middle, thick, samples=100, domain=0:105, legend
- pos=south east, axis on top, grid, ytick={0.1,0.2,0.3,0.4,0.5,0.6}]
+ style={at={(0.98,0.5)}, anchor=east}, axis on top, grid, ytick={0.1,0.2,0.3,0.4,0.5,0.6
+}, xtick={10,20,30,40,50,60,70,80,90,100}]
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-addplot [forget plot, fill=blue!20, draw=none, domain=0:100] {(1/100)*e^(-(1/100
-)*x)} 
+addplot [forget plot, fill=blue!20, draw=none, domain=0:100] {exponential(1/100)
+} 
 \backslash
 closedcycle;
 \end_layout
@@ -1080,7 +1132,7 @@ closedcycle;
 
     
 \backslash
-addplot+[no marks] {(1/100)*e^(-(1/100)*x)};
+addplot+[no marks] {exponential(1/100)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1094,14 +1146,14 @@ addlegendentry{$f(x)$}
 
     
 \backslash
-addplot+[no marks] {1-e^(-(1/100)*x)};
+addplot+[no marks] {Exponential(1/100)};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-addplot+[samples at=100, only marks] {1-e^(-(1/100)*x)};
+addplot+[samples at={69.3147,100}, only marks] {Exponential(1/100)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1332,14 +1384,15 @@ begin{tikzpicture}
   
 \backslash
 begin{axis}[axis lines=middle, thick, samples=100, domain=0:15, legend style={at
-={(0.95,0.5)}, anchor=east}, axis on top, grid, xtick={3,6,9,12,15,18}]
+={(0.98,0.5)}, anchor=east}, axis on top, grid, xtick={3,6,9,12,15,18}, ytick={0.1,
+0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1}]
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-addplot [forget plot, fill=blue!20, draw=none, domain=3:15] {(2/7)*e^(-(2/7)*x)}
+addplot [forget plot, fill=blue!20, draw=none, domain=3:15] {exponential(2/7)}
  
 \backslash
 closedcycle;
@@ -1349,7 +1402,7 @@ closedcycle;
 
     
 \backslash
-addplot+[no marks] {(2/7)*e^(-(2/7)*x)};
+addplot+[no marks] {exponential(2/7)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1363,14 +1416,7 @@ addlegendentry{$f(x)$}
 
     
 \backslash
-addplot+[no marks] {1-e^(-(2/7)*x)};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-addplot [forget plot, samples at=3, only marks] {1-(1-e^(-(2/7)*x))};
+addplot+[no marks] {Exponential(2/7)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1384,7 +1430,14 @@ addlegendentry{$F(x)$}
 
     
 \backslash
-addplot+[no marks] {1-(1-e^(-(2/7)*x))};
+addplot+[forget plot, samples at=3, only marks] {1-Exponential(2/7)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-Exponential(2/7)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1620,14 +1673,25 @@ begin{tikzpicture}
   
 \backslash
 begin{axis}[axis lines=middle, thick, samples=100, domain=0:6, legend style={at=
-{(0.95,0.5)}, anchor=east}, axis on top, grid]
+{(0.95,0.5)}, anchor=east}, axis on top, grid, ytick={0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1
+}]
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-addplot+[no marks] {(5/6)*e^(-(5/6)*x)};
+addplot [forget plot, fill=blue!20, draw=none, domain=2:6] {exponential(5/6)}
+ 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {exponential(5/6)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1641,14 +1705,7 @@ addlegendentry{$f(y)$}
 
     
 \backslash
-addplot+[no marks] {1-e^(-(5/6)*x)};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-addplot [forget plot, samples at={2,5}, only marks] {1-(1-e^(-(5/6)*x))};
+addplot+[no marks] {Exponential(5/6)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1662,7 +1719,14 @@ addlegendentry{$F(y)$}
 
     
 \backslash
-addplot+[no marks] {1-(1-e^(-(5/6)*x))};
+addplot+[forget plot, samples at={2,5}, only marks] {1-Exponential(5/6)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-Exponential(5/6)};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1877,10 +1941,6 @@ begin{tikzpicture}
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 begin{axis}[
@@ -1888,22 +1948,12 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  no markers, domain=350:650, samples=150,
+  domain=350:650, samples=150,
 \end_layout
 
 \begin_layout Plain Layout
 
-  axis lines*=left,
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis y label/.style={at=(current axis.above origin),anchor=south},
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  axis lines=middle,
 \end_layout
 
 \begin_layout Plain Layout
@@ -1913,19 +1963,14 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  ytick=
+  axis on top, ytick=
 \backslash
 empty,
 \end_layout
 
 \begin_layout Plain Layout
 
-  enlargelimits=false, clip=false, axis on top,
-\end_layout
-
-\begin_layout Plain Layout
-
-  grid = major
+  grid = both, thick, legend pos=north east
 \end_layout
 
 \begin_layout Plain Layout
@@ -1937,7 +1982,8 @@ empty,
 
   
 \backslash
-addplot [fill=cyan!20, draw=none, domain=580:650] {gauss(500,50)} 
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=580:650]
+ {gauss(500,50)} 
 \backslash
 closedcycle;
 \end_layout
@@ -1946,7 +1992,8 @@ closedcycle;
 
   
 \backslash
-addplot [fill=cyan!20, draw=none, domain=350:450] {gauss(500,50)} 
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=350:450]
+ {gauss(500,50)} 
 \backslash
 closedcycle;
 \end_layout
@@ -1955,8 +2002,14 @@ closedcycle;
 
   
 \backslash
-addplot [very thick,cyan!50!black] {gauss(500,50)} node[pos=0.55,above left]
- {$X$};
+addplot+[no marks] {gauss(500,50)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(x)$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1964,10 +2017,6 @@ addplot [very thick,cyan!50!black] {gauss(500,50)} node[pos=0.55,above left]
 
 \backslash
 end{axis}
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2052,6 +2101,10 @@ end{tikzpicture}
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2251,10 +2304,6 @@ begin{tikzpicture}
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 begin{axis}[
@@ -2262,22 +2311,12 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  no markers, domain=-60:145, samples=150,
+  domain=0:140, samples=150,
 \end_layout
 
 \begin_layout Plain Layout
 
-  axis lines*=left,
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis y label/.style={at=(current axis.above origin),anchor=south},
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  axis lines=middle,
 \end_layout
 
 \begin_layout Plain Layout
@@ -2287,19 +2326,19 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  ytick=
+  thick, ytick=
 \backslash
 empty,
 \end_layout
 
 \begin_layout Plain Layout
 
-  enlargelimits=false, clip=false, axis on top,
+  axis on top,
 \end_layout
 
 \begin_layout Plain Layout
 
-  grid = major
+  grid = both
 \end_layout
 
 \begin_layout Plain Layout
@@ -2311,7 +2350,8 @@ empty,
 
   
 \backslash
-addplot [fill=cyan!20, draw=none, domain=45:145] {gauss(40,36)} 
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=45:145]
+ {gauss(40,36)} 
 \backslash
 closedcycle;
 \end_layout
@@ -2320,7 +2360,8 @@ closedcycle;
 
   
 \backslash
-addplot [fill=cyan!20, draw=none, domain=45:145] {gauss(45,9)} 
+addplot+[no marks, forget plot, fill=red!20, draw=none, domain=45:145] {gauss(45
+,9)} 
 \backslash
 closedcycle;
 \end_layout
@@ -2329,16 +2370,28 @@ closedcycle;
 
   
 \backslash
-addplot [very thick,cyan!50!black] {gauss(40,36)} node[pos=0.55,above left]
- {$D_1$};
+addplot+[no marks] {gauss(40,36)};
 \end_layout
 
 \begin_layout Plain Layout
 
   
 \backslash
-addplot [very thick,cyan!50!black] {gauss(45,9)} node[pos=0.55,above right]
- {$D_2$};
+addlegendentry{$f(d_1)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(45,9)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(d_2)$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2346,10 +2399,6 @@ addplot [very thick,cyan!50!black] {gauss(45,9)} node[pos=0.55,above right]
 
 \backslash
 end{axis}
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2458,10 +2507,6 @@ begin{tikzpicture}
 
 \begin_layout Plain Layout
 
-\end_layout
-
-\begin_layout Plain Layout
-
 
 \backslash
 begin{axis}[
@@ -2469,22 +2514,12 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  no markers, domain=-60:145, samples=150,
+  domain=0:140, samples=150,
 \end_layout
 
 \begin_layout Plain Layout
 
-  axis lines*=left,
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis y label/.style={at=(current axis.above origin),anchor=south},
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  axis lines=middle,
 \end_layout
 
 \begin_layout Plain Layout
@@ -2494,19 +2529,19 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  ytick=
+  thick, ytick=
 \backslash
 empty,
 \end_layout
 
 \begin_layout Plain Layout
 
-  enlargelimits=false, clip=false, axis on top,
+  axis on top,
 \end_layout
 
 \begin_layout Plain Layout
 
-  grid = major
+  grid = both
 \end_layout
 
 \begin_layout Plain Layout
@@ -2518,7 +2553,8 @@ empty,
 
   
 \backslash
-addplot [fill=cyan!20, draw=none, domain=48:145] {gauss(40,36)} 
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=48:145]
+ {gauss(40,36)} 
 \backslash
 closedcycle;
 \end_layout
@@ -2527,7 +2563,8 @@ closedcycle;
 
   
 \backslash
-addplot [fill=cyan!20, draw=none, domain=48:145] {gauss(45,9)} 
+addplot+[no marks, forget plot, fill=red!20, draw=none, domain=48:145] {gauss(45
+,9)} 
 \backslash
 closedcycle;
 \end_layout
@@ -2536,16 +2573,28 @@ closedcycle;
 
   
 \backslash
-addplot [very thick,cyan!50!black] {gauss(40,36)} node[pos=0.55,above left]
- {$D_1$};
+addplot+[no marks] {gauss(40,36)};
 \end_layout
 
 \begin_layout Plain Layout
 
   
 \backslash
-addplot [very thick,cyan!50!black] {gauss(45,9)} node[pos=0.55,above right]
- {$D_2$};
+addlegendentry{$f(d_1)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(45,9)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(d_2)$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2553,10 +2602,6 @@ addplot [very thick,cyan!50!black] {gauss(45,9)} node[pos=0.55,above right]
 
 \backslash
 end{axis}
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -2687,22 +2732,12 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  no markers, domain=160:400, samples=150,
+  domain=180:380, samples=150,
 \end_layout
 
 \begin_layout Plain Layout
 
-  axis lines*=left,
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis y label/.style={at=(current axis.above origin),anchor=south},
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  axis lines=middle,
 \end_layout
 
 \begin_layout Plain Layout
@@ -2714,12 +2749,12 @@ begin{axis}[
 
   ytick=
 \backslash
-empty,
+empty, thick,
 \end_layout
 
 \begin_layout Plain Layout
 
-  enlargelimits=false, clip=false, axis on top,
+  axis on top,
 \end_layout
 
 \begin_layout Plain Layout
@@ -2736,7 +2771,8 @@ empty,
 
   
 \backslash
-addplot [fill=blue!20, draw=none, domain=160:320] {gauss(280,31)} 
+addplot+[no marks, forget plot, fill=red!20, draw=none, domain=180:320]
+ {gauss(280,31)} 
 \backslash
 closedcycle;
 \end_layout
@@ -2745,28 +2781,48 @@ closedcycle;
 
   
 \backslash
-addplot [very thick,green!50!black] {gauss(280,20)} node[pos=0.5, above]
- {$
-\backslash
-sigma = 20$};
+addplot+[no marks] {gauss(280,20)};
 \end_layout
 
 \begin_layout Plain Layout
 
   
 \backslash
-addplot [very thick,blue!50!black] {gauss(280,31)} node[pos=0.5, above] {$
+addlegendentry{$
 \backslash
-sigma = 31$};
+sigma = 20$}
 \end_layout
 
 \begin_layout Plain Layout
 
   
 \backslash
-addplot [very thick,red!50!black] {gauss(280,45)} node[pos=0.5, below] {$
+addplot+[no marks] {gauss(280,31)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \backslash
-sigma = 45$};
+addlegendentry{$
+\backslash
+sigma = 31$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(280,45)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$
+\backslash
+sigma = 45$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2848,7 +2904,137 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=70:130, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=70:123.3]
+ {gauss(100,10)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(100,10)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X<x\right)=\frac{99}{100}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z=\frac{X-100}{10}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X<x\iff Z=\frac{X-100}{10}<\frac{x-100}{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(X<x\right)=P\left(Z<\frac{x-100}{10}\right)=\frac{99}{100}\iff\frac{x-100}{10}\approx2,33\iff x\approx123,3}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Debe tener una capacidad superior a 123,3 toneladas.
 \end_layout
 
 \end_deeper
@@ -2941,6 +3127,10 @@ Las especificaciones del contenido son 300
 
  20 ml.
  ¿Qué proporción de latas cumple con el requisito?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -2995,22 +3185,12 @@ begin{axis}[
 
 \begin_layout Plain Layout
 
-  no markers, domain=300:320, samples=150,
+  domain=300:318, samples=150,
 \end_layout
 
 \begin_layout Plain Layout
 
-  axis lines*=left,
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis y label/.style={at=(current axis.above origin),anchor=south},
-\end_layout
-
-\begin_layout Plain Layout
-
-  every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  axis lines =middle,
 \end_layout
 
 \begin_layout Plain Layout
@@ -3022,17 +3202,17 @@ begin{axis}[
 
   ytick=
 \backslash
-empty,
+empty, thick,
 \end_layout
 
 \begin_layout Plain Layout
 
-  enlargelimits=false, clip=false, axis on top,
+  axis on top,
 \end_layout
 
 \begin_layout Plain Layout
 
-  grid = major
+  grid = both
 \end_layout
 
 \begin_layout Plain Layout
@@ -3044,17 +3224,24 @@ empty,
 
   
 \backslash
-addplot [very thick,cyan!50!black] {gauss(300,6)} node[pos=0.55,above left]
- {$D_1$};
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=315:318]
+ {gauss(300,6)} 
+\backslash
+closedcycle;
 \end_layout
 
 \begin_layout Plain Layout
 
   
 \backslash
-addplot [fill=cyan!20, draw=none, domain=315:320] {gauss(300,6)} 
+addplot+[no marks] {gauss(300,6)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \backslash
-closedcycle;
+addlegendentry{$f(x)$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3582,15 +3769,24 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-COMPLETAR.
+\begin_inset Formula $E\left(Y\right)=COMPLETAR$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-COMPLETAR.
+\begin_inset Formula $E\left(Y^{2}\right)=COMPLETAR$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-COMPLETAR.
+\begin_inset Formula $V\left(Y\right)=E\left(Y^{2}\right)-\left[E\left(Y\right)\right]^{2}=COMPLETAR$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -3831,6 +4027,10 @@ Soluciones
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3891,7 +4091,7 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(G\leq g\right)=P\left(10+2X\leq g\right)=P\left(X\leq\frac{g-10}{2}\right)={\displaystyle \intop_{0}^{\frac{g-10}{2}}}\frac{x}{18}dx=$
+\begin_inset Formula $P\left(G\leq g\right)=P\left(10+2X\leq g\right)=P\left(X\leq\frac{g-10}{2}\right)={\displaystyle \intop_{0}^{\frac{g-10}{2}}}\frac{x}{18}\,dx=$
 \end_inset
 
 
@@ -3960,6 +4160,10 @@ f_{G}\left(g\right)=f_{X}\left(\frac{g-10}{2}\right)\left|\frac{d}{dg}\left(\fra
 
 \begin_layout Itemize
 \begin_inset Formula $\text{\ensuremath{E\left(G\right)=E\left(10+2X\right)=10+2E\left(X\right)=10+8=18}}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -4132,7 +4336,8 @@ Considere una v.a.
 \end_inset
 
 .
- Halle la función de densidad de la v.a.
+ Halle la función de densidad de la v.
+ a.
  
 \begin_inset Formula $Y$
 \end_inset
@@ -4202,10 +4407,39 @@ Sea
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $P\left(X=x\right)=\binom{n}{x}p^{x}q^{n-x}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{X}=\left\{ 0,\ldots,n\right\} $
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $P\left(Y=y\right)=P\left(n-X=y\right)=P\left(X=n-y\right)=\binom{n}{n-y}p^{n-y}q^{n-\left(n-y\right)}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\binom{n}{n-y}p^{n-y}q^{y}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{Y}=\left\{ n,\ldots,0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 En una empresa embotelladora de jugos, la cantidad de líquido por botella
