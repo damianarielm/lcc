@@ -2684,7 +2684,7 @@ E\left(X\right)=\frac{1}{p}=\frac{100}{30}\approx3,33
 \end_layout
 
 \begin_layout Chapter
-Distribución Hipergeométrica
+Distribución Hipergeométrica (COMPLETAR)
 \end_layout
 
 \begin_layout Section
@@ -3161,15 +3161,37 @@ Moda
 \end_layout
 
 \begin_layout Section
-Medidas de tendencia central
+Medidas de dispersión
 \end_layout
 
 \begin_layout Subsection
 Varianza (COMPLETAR)
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V\left(X\right)=npq\frac{\#S-n}{\#S-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Desvío estándar (COMPLETAR)
+Desvío estándar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{X}=\sqrt{V\left(X\right)}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3177,7 +3199,7 @@ Ejemplos (COMPLETAR)
 \end_layout
 
 \begin_layout Subsection
-Mundial de futbol
+Mundial de futbol (COMPLETAR)
 \end_layout
 
 \begin_layout Standard
@@ -3209,6 +3231,10 @@ Mundial de futbol
 \end_inset
 
 : Jugadores lesionados.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3394,9 +3420,15 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
+¿Cuantos defensores se espera que estén lesionados?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Subsection
 COMPLETAR
 \end_layout
@@ -3512,16 +3544,69 @@ La distribución de Pascal se utiliza cuando prefijamos el numero
 Función de Probabilidad (COMPLETAR)
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(X=x\right)=\binom{x-1}{r-1}p^{r}q^{x-r}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Condición de Cierre (COMPLETAR)
 \end_layout
 
 \begin_layout Section
+Medidas de tendencia central
+\end_layout
+
+\begin_layout Subsection
 Esperanza (COMPLETAR)
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E\left(X\right)=\frac{r}{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Moda (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Mediana (COMPLETAR)
+\end_layout
+
 \begin_layout Section
-Varianza y desvió estándar (COMPLETAR)
+Medidas de dispersión
+\end_layout
+
+\begin_layout Subsection
+Varianza (COMPLETAR)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V\left(X\right)=\frac{rq}{p^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Desvío estándar (COMPLETAR)
 \end_layout
 
 \begin_layout Section
@@ -3564,6 +3649,17 @@ La distribución de Poisson es una distribución de probabilidad discreta
 Función de Probabilidad (COMPLETAR)
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(X=x\right)=\frac{e^{-\lambda}\lambda^{x}}{x!}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Condición de Cierre
 \end_layout
@@ -3580,7 +3676,11 @@ Condición de Cierre
 \end_layout
 
 \begin_layout Section
-Esperanza
+Medidas de tendencia central
+\end_layout
+
+\begin_layout Subsection
+Esperanza (COMPLETAR)
 \end_layout
 
 \begin_layout Standard
@@ -3596,8 +3696,27 @@ Esperanza
 
 \end_layout
 
+\begin_layout Subsection
+Moda
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left\lceil \lambda\right\rceil -1
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Varianza y desvió estándar
+Medidas de dispersión
+\end_layout
+
+\begin_layout Subsection
+Varianza
 \end_layout
 
 \begin_layout Standard
@@ -3626,6 +3745,10 @@ V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=\lambda\tex
 
 \end_layout
 
+\begin_layout Subsection
+Desvío estándar
+\end_layout
+
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -3646,19 +3769,227 @@ Variables aleatorias continuas
 \end_layout
 
 \begin_layout Chapter
-Distribución Uniforme
+Distribución Uniforme (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Descripción (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Función de probabilidad acumulada (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Condición de cierre (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de tendencia central (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Esperanza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Moda (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Mediana (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de dispersión (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Varianza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Desvío estándar (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Ejemplos (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
 \end_layout
 
 \begin_layout Chapter
-Distribución Normal
+Distribución Normal (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Descripción (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Función de probabilidad acumulada (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Condición de cierre (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de tendencia central (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Esperanza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Moda (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Mediana (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de dispersión (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Varianza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Desvío estándar (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Ejemplos (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
 \end_layout
 
 \begin_layout Chapter
-Distribución Exponencial
+Distribución Exponencial (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Descripción (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Función de probabilidad acumulada (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Condición de cierre (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de tendencia central (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Esperanza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Moda (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Mediana (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de dispersión (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Varianza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Desvío estándar (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Ejemplos (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
 \end_layout
 
 \begin_layout Chapter
-Distribución de Erlang
+Distribución de Erlang (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Descripción (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Función de probabilidad acumulada (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Condición de cierre (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de tendencia central (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Esperanza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Moda (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Mediana (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Medidas de dispersión (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Varianza (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+Desvío estándar (COMPLETAR)
+\end_layout
+
+\begin_layout Section
+Ejemplos (COMPLETAR)
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
+\end_layout
+
+\begin_layout Subsection
+COMPLETAR
 \end_layout
 
 \begin_layout Chapter
@@ -4192,7 +4523,446 @@ Resumen de distribuciones continuas
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Distribución
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{X}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E\left(X\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $V\left(X\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x^{*}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $U\left[a,b\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left[a,b\right]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{b-a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{x-a}{b-a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{a+b}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\left(b-a\right)^{2}}{12}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{a+b}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $N\left(\mu,\sigma\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{\left(x-\mu\right)^{2}}{2\sigma^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \intop_{-\infty}^{x}}f\left(u\right)\,du$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Ex\left(\alpha\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{R}_{0}^{+}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha e^{-\alpha x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1-e^{-\alpha x}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\alpha}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{\alpha^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\ln\left(2\right)}{\alpha}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Er\left(\alpha,k\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{R}_{0}^{+}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\alpha^{k}x^{k-1}e^{-\alpha x}}{\left(k-1\right)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1-{\displaystyle \sum_{n=0}^{k-1}}\frac{1}{n!}e^{-\alpha x}\left(\alpha x\right)^{n}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{k}{\alpha}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{k}{\alpha^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter

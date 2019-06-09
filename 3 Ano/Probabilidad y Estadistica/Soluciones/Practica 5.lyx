@@ -789,7 +789,7 @@ end{tikzpicture}
 \begin_inset Quotes fld
 \end_inset
 
-Proporción de la sustancia química presente en el organísmo
+Proporción de la sustancia química presente en el organismo
 \begin_inset Quotes frd
 \end_inset
 
@@ -3665,8 +3665,10 @@ Soluciones
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="3">
+<lyxtabular version="3" rows="2" columns="5">
 <features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3695,11 +3697,35 @@ Soluciones
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
 \end_inset
 
 
@@ -3733,11 +3759,35 @@ Soluciones
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $\frac{1}{6}+\frac{3}{6}=\frac{4}{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
 \end_inset
 
 
@@ -4234,10 +4284,84 @@ El intervalo de tiempo empleado en determinado trabajo en la construcción
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Intervalo de tiempo empleado en el trabajo en la construcción de una casa
+\begin_inset Quotes frd
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $X\sim Ex\left(10\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f\left(x\right)=10e^{-10x}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $E\left(X\right)=\frac{1}{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(X^{2}\right)={\displaystyle \intop_{0}^{\infty}}x^{2}f\left(x\right)\,dx={\displaystyle \intop_{0}^{\infty}}x^{2}10e^{-10x}\,dx={\displaystyle \lim_{u\to\infty}}{\displaystyle \intop_{0}^{u}}x^{2}10e^{-10x}\,dx=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{={\displaystyle \lim_{u\to\infty}}\left.-\frac{\left(50x^{2}+10x+1\right)e^{-10x}}{50}\right|_{0}^{u}={\displaystyle \lim_{u\to\infty}}-\frac{\left(50u^{2}+10u+1\right)e^{-10u}}{50}+\frac{1}{50}=\frac{1}{50}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{E\left(C\right)=E\left(100\right)+40E\left(X\right)+3E\left(X^{2}\right)=100+40\cdot\frac{1}{10}+\frac{3}{50}=\frac{5203}{50}=104,06}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(C\geq2000\right)=P\left(3\left(X+\frac{20}{3}\right)^{2}-\frac{100}{3}\geq2000\right)=P\left(\left|X+\frac{20}{3}\right|\geq\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{=P\left(X+\frac{20}{3}\leq-\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)+P\left(X+\frac{20}{3}\geq\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)\approx0+P\left(X\geq2,1525\right)=}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=0+1-\left(1-e^{-10\cdot2,1525}\right)=e^{-10\cdot2,1525}\approx0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document
