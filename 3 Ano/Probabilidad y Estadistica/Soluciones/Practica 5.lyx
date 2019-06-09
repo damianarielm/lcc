@@ -2093,7 +2093,7 @@ Resistencia en ohms de los alambres producidos por la empresa
 
 .
  
-\begin_inset Formula $X\sim N\left(0,13,0,005\right)$
+\begin_inset Formula $X\sim N\left(0,13;0,005\right)$
 \end_inset
 
 .
@@ -2136,7 +2136,7 @@ Cantidad de alambres que cumplen la especificación de un total de 4
 
 .
  
-\begin_inset Formula $Y\approx B\left(4,0,9545\right)$
+\begin_inset Formula $Y\approx B\left(4;0,9545\right)$
 \end_inset
 
 .
@@ -2220,6 +2220,10 @@ Duración en horas del instrumento
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -3833,7 +3837,7 @@ Soluciones
 \begin_inset Formula $0\leq x\leq6\iff0\leq2x\leq12\iff10\leq g\leq22$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Itemize
@@ -3848,7 +3852,7 @@ Soluciones
 \begin_inset Formula $=\left.\frac{x^{2}}{36}\right|_{0}^{\frac{g-10}{2}}=\frac{1}{144}\left(g^{2}-20g+100\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \end_deeper
@@ -3865,7 +3869,7 @@ Soluciones
 
 \begin_layout Itemize
 \begin_inset Formula $f_{G}\left(g\right)=\begin{cases}
-\frac{d}{dg}\frac{1}{144}\left(g^{2}-20g+100\right)=\frac{1}{72}\left(g-10\right) & 10\leq g\leq22\\
+\frac{d}{dg}\frac{1}{144}\left(g^{2}-20g+100\right)=\boxed{\frac{1}{72}\left(g-10\right)} & 10\leq g\leq22\\
 0 & \text{en otro caso}
 \end{cases}$
 \end_inset
@@ -3898,7 +3902,7 @@ f_{G}\left(g\right)=f_{X}\left(\frac{g-10}{2}\right)\left|\frac{d}{dg}\left(\fra
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $E\left(X\right)=\intop_{0}^{6}x\cdot\frac{x}{18}dx=\left.\frac{x^{3}}{54}\right|_{0}^{6}=4$
+\begin_inset Formula $E\left(X\right)={\displaystyle \intop_{0}^{6}}x\cdot\frac{x}{18}\,dx=\left.\frac{x^{3}}{54}\right|_{0}^{6}=4$
 \end_inset
 
 .
@@ -3936,7 +3940,7 @@ Solución
 
 \begin_layout Itemize
 \begin_inset Formula $f_{X}\left(x\right)=\begin{cases}
-\frac{1}{2} & -1<x<1\\
+\frac{1}{2} & -1\leq x\leq1\\
 0 & \text{en otro caso}
 \end{cases}$
 \end_inset
@@ -3953,12 +3957,21 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $R_{X}=\left[-1,1\right]$
+\begin_inset Formula $\text{\ensuremath{0\leq X\leq1\iff0\leq X^{2}\leq1\iff0\geq-X^{2}\geq-1\iff4\geq Y\geq3}}$
 \end_inset
 
 .
- 
-\begin_inset Formula $R_{Y}=\left[3,4\right]$
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{-1\leq X\leq0\iff1\geq X^{2}\geq0\iff-1\leq-X^{2}\leq0\iff3\leq Y\leq4}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore R_{X}=\left[-1,1\right]\iff R_{Y}=\left[3,4\right]$
 \end_inset
 
 .
@@ -3980,7 +3993,14 @@ Solución
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $=F_{X}\left(-\sqrt{4-y}\right)+1-F_{X}\left(\sqrt{4-y}\right)=COMPLETAR$
+\begin_inset Formula $=F_{X}\left(-\sqrt{4-y}\right)+1-F_{X}\left(\sqrt{4-y}\right)=\frac{-\sqrt{4-y}-1}{2}+\frac{2}{2}-\frac{\sqrt{4-y}-1}{2}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{2}\cdot\left(-\sqrt{4-y}-1+2-\sqrt{4-y}+1\right)=1-\sqrt{4-y}$
 \end_inset
 
 .

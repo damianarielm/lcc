@@ -151,7 +151,7 @@ Obtenga las distribuciones marginales de
 \begin_inset Formula $Y$
 \end_inset
 
- respectivamente..
+ respectivamente.
 \end_layout
 
 \begin_layout Enumerate
@@ -187,21 +187,522 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\text{\ensuremath{P\left(X\leq2,Y=1\right)=p\left(0,1\right)+p\left(1,1\right)+p\left(2,1\right)=\frac{1}{30}+\frac{2}{30}+\frac{3}{30}=\frac{6}{30}}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\text{\ensuremath{P\left(X>2,Y\leq1\right)=p\left(3,0\right)+p\left(3,1\right)=\frac{3}{30}+\frac{4}{30}=\frac{7}{30}}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\text{\ensuremath{P\left(X-Y>0\right)=p\left(1,0\right)+p\left(2,0\right)+p\left(2,1\right)+p\left(3,0\right)+p\left(3,1\right)+p\left(3,2\right)=}}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{30}+\frac{2}{30}+\frac{3}{30}+\frac{3}{30}+\frac{4}{30}+\frac{5}{30}=\frac{18}{30}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X+Y=4\right)=p\left(2,2\right)+p\left(3,1\right)=\frac{4}{30}+\frac{4}{30}=\frac{8}{30}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X\backslash Y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{X}\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{6}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{2}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{4}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{9}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{3}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{4}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{5}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{12}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{Y}\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{6}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{10}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{14}{30}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Falso pues 
+\begin_inset Formula $p\left(0,0\right)=0\neq\frac{18}{30}=\frac{3}{30}\frac{6}{30}=p_{X}\left(0\right)p_{Y}\left(0\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E\left(X\right)=0\cdot\frac{3}{30}+1\cdot\frac{6}{30}+2\cdot\frac{9}{30}+3\cdot\frac{12}{30}=\frac{6}{30}+\frac{18}{30}+\frac{36}{30}=\frac{60}{30}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{E\left(X^{2}\right)=0^{2}\cdot\frac{3}{30}+1^{2}\cdot\frac{6}{30}+2^{2}\cdot\frac{9}{30}+3^{2}\cdot\frac{12}{30}=\frac{6}{30}+\frac{36}{30}+\frac{108}{30}=\frac{150}{30}=5}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(Y\right)=0\cdot\frac{6}{30}+1\cdot\frac{10}{30}+2\cdot\frac{14}{30}=\frac{10}{30}+\frac{28}{30}=\frac{38}{30}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(Y^{2}\right)=0^{2}\cdot\frac{6}{30}+1^{2}\cdot\frac{10}{30}+2^{2}\cdot\frac{14}{30}=\frac{10}{30}+\frac{56}{30}=\frac{66}{30}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(X\right)=E\left(X^{2}\right)-\left[E\left(X\right)\right]^{2}=5-4=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(Y\right)=E\left(Y^{2}\right)-\left[E\left(Y\right)\right]^{2}=\frac{66}{30}-\frac{1444}{900}=\frac{536}{900}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(XY\right)=COMPLETAR.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -1416,21 +1917,21 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $\intop_{0}^{1}kdx=k$
+\begin_inset Formula ${\displaystyle \intop_{0}^{1}}k\,dx=k$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\intop_{x}^{x+1}kdy=k$
+\begin_inset Formula ${\displaystyle \intop_{x}^{x+1}}k\,dy=k$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\intop_{x}^{x+1}\intop_{0}^{1}kdxdy=k=1$
+\begin_inset Formula ${\displaystyle \intop_{x}^{x+1}\intop_{0}^{1}}k\,dx\,dy=k=1$
 \end_inset
 
 .
@@ -1450,7 +1951,7 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $f_{X}\left(x\right)=\intop_{-\infty}^{\infty}f\left(x,y\right)dy=\intop_{x}^{x+1}kdy=1\Rightarrow f_{X}\left(x\right)=\begin{cases}
+\begin_inset Formula $f_{X}\left(x\right)={\displaystyle \intop_{-\infty}^{\infty}}f\left(x,y\right)\,dy={\displaystyle \intop_{x}^{x+1}}k\,dy=1\Rightarrow f_{X}\left(x\right)=\begin{cases}
 1 & 0<x<1\\
 0 & \text{en otro caso}
 \end{cases}$
@@ -1460,9 +1961,9 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $f_{Y}\left(y\right)=\intop_{-\infty}^{\infty}f\left(x,y\right)dx=\begin{cases}
-\intop_{0}^{y}dx=y & 0<y<1\\
-\intop_{y}^{2}dx<x<x=2-y & 1<y<2\\
+\begin_inset Formula $f_{Y}\left(y\right)={\displaystyle \intop_{-\infty}^{\infty}}f\left(x,y\right)\,dx=\begin{cases}
+{\displaystyle \intop_{0}^{y}}\,dx=\boxed{y} & 0<y<1\\
+{\displaystyle \intop_{y}^{2}}\,dx<x<x=\boxed{2-y} & 1<y<2\\
 0 & \text{en otro caso}
 \end{cases}$
 \end_inset
@@ -1480,21 +1981,21 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $E\left(X\right)=\intop_{-\infty}^{\infty}x\cdot f_{X}\left(x\right)dx=\intop_{0}^{1}xdx=\left.\frac{x^{2}}{2}\right|_{0}^{1}=\frac{1}{2}$
+\begin_inset Formula $E\left(X\right)={\displaystyle \intop_{-\infty}^{\infty}}x\cdot f_{X}\left(x\right)\,dx={\displaystyle \intop_{0}^{1}}x\,dx=\left.\frac{x^{2}}{2}\right|_{0}^{1}=\frac{1}{2}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E\left(Y\right)=\intop_{-\infty}^{\infty}y\cdot f_{Y}\left(y\right)dy=\int_{0}^{1}y\cdot ydy+\int_{1}^{2}y\left(2-y\right)dy=\left.\frac{y^{3}}{3}\right|_{0}^{1}+\left.\left(y^{2}-\frac{y^{3}}{3}\right)\right|_{1}^{2}=1$
+\begin_inset Formula $\text{\ensuremath{E\left(Y\right)={\displaystyle \intop_{-\infty}^{\infty}}y\cdot f_{Y}\left(y\right)\,dy={\displaystyle \int_{0}^{1}}y\cdot y\,dy+{\displaystyle \int_{1}^{2}}y\left(2-y\right)\,dy=\left.\frac{y^{3}}{3}\right|_{0}^{1}+\left.\left(y^{2}-\frac{y^{3}}{3}\right)\right|_{1}^{2}=1}}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\text{\ensuremath{E\left(XY\right)=\intop_{0}^{1}\intop_{x}^{x+1}x\cdot y\cdot1dydx=\intop_{0}^{1}x\intop_{x}^{x+1}ydydx=\intop_{0}^{1}x\frac{2x+1}{2}dx=\frac{7}{12}}}$
+\begin_inset Formula $\text{\ensuremath{E\left(XY\right)={\displaystyle \intop_{0}^{1}\intop_{x}^{x+1}}x\cdot y\cdot1\,dy\,dx={\displaystyle \intop_{0}^{1}}x{\displaystyle \intop_{x}^{x+1}}y\,dy\,dx={\displaystyle \intop_{0}^{1}}x\frac{2x+1}{2}\,dx=\frac{7}{12}}}$
 \end_inset
 
 .
@@ -1508,14 +2009,14 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E\left(X^{2}\right)=\intop_{0}^{1}x^{2}1dx=\left.\frac{x^{3}}{3}\right|_{0}^{1}=\frac{1}{3}$
+\begin_inset Formula $E\left(X^{2}\right)={\displaystyle \intop_{0}^{1}}x^{2}1\,dx=\left.\frac{x^{3}}{3}\right|_{0}^{1}=\frac{1}{3}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E\left(Y^{2}\right)=\intop_{0}^{1}y^{3}dy+\intop_{1}^{2}y^{2}\left(2-y\right)dy=\frac{7}{6}$
+\begin_inset Formula $E\left(Y^{2}\right)={\displaystyle \intop_{0}^{1}}y^{3}\,dy+{\displaystyle \intop_{1}^{2}}y^{2}\left(2-y\right)\,dy=\frac{7}{6}$
 \end_inset
 
 .
@@ -1540,6 +2041,10 @@ Soluciones
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1577,7 +2082,7 @@ f\left(t_{1},t_{2}\right)=\begin{cases}
 \begin_deeper
 \begin_layout Enumerate
 Determine 
-\begin_inset Formula $P\left(T_{1}\geq1,T_{2}\geq1\right)$
+\begin_inset Formula $P\left(T_{1}\geq1,T_{2}\geq2\right)$
 \end_inset
 
 .
@@ -1593,13 +2098,62 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(T_{1}\geq1,T_{2}\geq2\right)={\displaystyle \intop_{1}^{\infty}}{\displaystyle \intop_{2}^{\infty}}\frac{t_{1}}{8}e^{-\left(\frac{t_{1}+t_{2}}{2}\right)}\,dt_{2}\,dt_{1}={\displaystyle \intop_{1}^{\infty}}{\displaystyle \intop_{2}^{\infty}}\frac{t_{1}}{8}e^{-\frac{t_{1}}{2}}e^{-\frac{t_{2}}{2}}\,dt_{2}\,dt_{1}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}\,dt_{1}{\displaystyle \intop_{2}^{\infty}}e^{-\frac{t_{2}}{2}}\,dt_{2}=COMPLETAR={\displaystyle \intop_{1}^{\infty}}\frac{t_{1}e^{-\frac{t_{1}}{2}-1}}{4}\,dt_{1}=\frac{3e^{-\frac{3}{2}}}{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(T_{2}\geq2\right)={\displaystyle \intop_{2}^{\infty}}f_{T_{2}}\left(t_{2}\right)\,dt_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{T_{2}}\left(t_{2}\right)={\displaystyle \intop_{-\infty}^{\infty}}f\left(t_{1},t_{2}\right)\,dt_{1}={\displaystyle \intop_{0}^{\infty}}\frac{1}{8}t_{1}e^{-\frac{t_{1}+t_{2}}{2}}\,dt_{1}=COMPLETAR=$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(T_{2}>2\right)={\displaystyle \intop_{2}^{\infty}}\frac{e^{-\frac{t_{2}}{2}}}{2}\,dt_{2}=COMPLETAR=e^{-1}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Los tiempos en horas 
@@ -1696,17 +2250,101 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f_{X_{y}}\left(x,y\right)=\begin{cases}
+k & 0<x<2n-x;0<y<2n-x\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \iintop_{R_{XY}}}f\left(x,y\right)\,dx\,dy=1={\displaystyle \intop_{0}^{2n}\intop_{0}^{2n-x}}k\,dy\,dx=k{\displaystyle \intop_{0}^{2n}\intop_{0}^{2n-x}}\,dy\,dx=k{\displaystyle \intop_{0}^{2n}}\left(2n-x\right)\,dx=COMPLETAR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore k=\frac{1}{2n^{2}}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f_{X}\left(x\right)={\displaystyle \intop_{0}^{2n-x}}f\left(x,y\right)\,dy={\displaystyle \intop_{0}^{2n-x}}\frac{1}{2n^{2}}\,dy=\frac{2n-x}{2n^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore f_{X}\left(x\right)=\begin{cases}
+\frac{2n-x}{2n^{2}} & 0<x<2n\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{Y}\left(y\right)={\displaystyle \intop_{0}^{2n-y}}\frac{1}{2n^{2}}\,dx=\frac{2n-y}{2n^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{Y}\left(y\right)=\begin{cases}
+\frac{2n-y}{2n^{2}} & 0<y<2n\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f_{X/Y=y}=\frac{f_{XY}\left(x,y\right)}{f_{Y}\left(y\right)}=\frac{\frac{1}{2n^{2}}}{\frac{2n-y}{2n^{2}}}=\frac{1}{2n-y}$
+\end_inset
+
+ COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sean 
@@ -1759,6 +2397,10 @@ Un aparato de televisión puede tener dos tipos de roturas: debido a falla
  período, sigue una ley de Poisson con promedio 2.
  Calcule la probabilidad de que en el primer año de utilización del aparato,
  éste tenga exactamente 2 roturas.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1766,8 +2408,117 @@ Un aparato de televisión puede tener dos tipos de roturas: debido a falla
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $T_{t}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de roturas por falla de transistores durante los 
+\begin_inset Formula $t$
+\end_inset
+
+ primeros años
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C_{t}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de roturas por falla de condensadores durante los 
+\begin_inset Formula $t$
+\end_inset
+
+ primeros años
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(T_{2}\right)=1=\lambda_{T}\cdot2\Rightarrow\lambda_{T}=\frac{1}{2}\Rightarrow T_{t}\sim Po\left(\frac{1}{2}t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(C_{2}\right)=2=\lambda_{C}\cdot2\Rightarrow\lambda_{C}=1\Rightarrow C_{t}\sim Po\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{t}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de roturas durante los 
+\begin_inset Formula $t$
+\end_inset
+
+ primeros años
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{t}=T_{t}+C_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $T_{t}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{t}$
+\end_inset
+
+ son independientes, por propiedad reproductiva de la distribución de Poisson,
+ resulta:
+\begin_inset Formula 
+\[
+X_{t}\sim Po\left(\frac{1}{2}t+t\right)\Rightarrow X_{t}\sim Po\left(\frac{3}{2}t\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{1}\sim Po\left(\frac{3}{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X_{1}=2\right)=\frac{e^{-\frac{3}{2}}\left(\frac{3}{2}\right)^{2}}{2!}\approx0,056$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1867,8 +2618,85 @@ Sean
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X_{i}\sim U\left[0,1\right]$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f_{X_{i}}\left(x_{i}\right)=\begin{cases}
+\frac{1}{2} & 0<x_{i}<1\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(X_{i}\right)=\frac{1}{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V\left(X_{i}\right)=\frac{1}{12}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Z={\displaystyle \sum_{i=1}^{60}}X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ son independientes y 
+\begin_inset Formula $n$
+\end_inset
+
+ es grande, por el teorema central del limite resulta 
+\begin_inset Formula $Z\sim N\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu={\displaystyle \sum_{i=1}^{60}}E\left(X_{i}\right)=\frac{60}{2}=30$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma^{2}={\displaystyle \sum_{i=1}^{60}}V\left(X_{i}\right)=\frac{60}{12}=5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore Z\sim N\left(30,5\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f_{Z}\left(z\right)\approx\frac{1}{\sqrt{2\pi}\sqrt{5}}e^{-\left(\frac{z-30}{\sqrt{5}}\right)^{2}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{Z}=\left\{ z\in\mathbb{R}/0\leq z\leq60\right\} $
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1886,7 +2714,7 @@ El espesor de una lámina metálica (en mm) es una v.
 \begin_inset Formula $Y_{i}\sim N\left(0,5;0,02^{2}\right)$
 \end_inset
 
-).
+.
  Obtenga la distribución del núcleo de un transformador que consta de 50
  capas de láminas metálicas y 49 láminas de papel aislante.
 \end_layout
@@ -1968,8 +2796,97 @@ El consumo de combustible en litros de un ómnibus que realiza el trayecto
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X_{i}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Consumo de combustible en el i-esimo trayecto
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{i}\sim N\left(20l,4l^{2}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $i=1,\ldots,30$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mu_{X_{i}}=20$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\sigma²_{X_{i}}=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Considerando que el consumo en cada trayecto es independiente del consumo
+ en los demas trayectos, por propiedad reproductiva de distribuciones normales
+ tenemos lo siguiente:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Y$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Consumo total en 30 trayectos
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu={\displaystyle \sum_{i=1}^{30}}\mu_{X_{i}}=30\cdot20=600l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma^{2}={\displaystyle \sum_{i=1}^{30}}\sigma²_{X_{i}}=30\cdot4=120l^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y={\displaystyle \sum_{i=1}^{30}}X_{i}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y\sim N\left(600l,120l^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(Y>640\right)=1-P\left(Y<640\right)=1-P\left(Z<3,65\right)$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -2226,6 +3143,10 @@ La demanda diaria de agua potable por habitante en una población de 10000
 .
  ¿Cuál es la probabilidad de que en un día cualquiera no sea satisfecha
  la demanda?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2233,8 +3154,264 @@ La demanda diaria de agua potable por habitante en una población de 10000
 Solución
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $D$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Demanda diaria del articulo
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p\left(d\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0,25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $D_{i}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Demanda en el dia 
+\begin_inset Formula $i$
+\end_inset
+
+ del articulo
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{T}={\displaystyle \sum_{i=1}^{90}}D_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Suponemos que las demandas en un dia son independientes de las demandas
+ en el resto de los dias.
+\end_layout
+
+\begin_layout Itemize
+Por el teorema central del limite, 
+\begin_inset Formula $D_{T}\sim N\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(D_{i}\right)=0\cdot0,25+1\cdot0,5+2\cdot0,25=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(D_{i}^{2}\right)=0\cdot0,25+1\cdot0,5+4\cdot0,25=1,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(D_{i}\right)=1,5-1=0,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu={\displaystyle \sum_{i=1}^{90}}E\left(D_{i}\right)=90$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma^{2}={\displaystyle \sum_{i=1}^{90}}V\left(D_{i}\right)=45$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Por lo tanto aproximamos la distribucion 
+\begin_inset Formula $D_{T}$
+\end_inset
+
+ por una distribucion 
+\begin_inset Formula $N\left(90,45\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k$
+\end_inset
+
+: stock al hacer el pedido.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{T}>k\right)=0,05\Rightarrow P\left(D_{T}<k\right)=1-0,05=0,95$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Z=\frac{D_{T}-90}{\sqrt{45}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(D_{T}<k\right)=P\left(Z<z_{1}\right)=0,95\Rightarrow z_{1}\approx1,645$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z_{1}=\frac{k-90}{\sqrt{45}}=1,645\Rightarrow k\approx101$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore$
+\end_inset
+
+ El stock ? al hacer el pedido es de 101 artículos.
 \end_layout
 
 \end_deeper
