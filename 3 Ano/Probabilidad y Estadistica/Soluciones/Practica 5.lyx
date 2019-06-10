@@ -4534,24 +4534,24 @@ Intervalo de tiempo empleado en el trabajo en la construcción de una casa
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $X\sim Ex\left(10\right)$
+\begin_inset Formula $X\sim Ex\left(\frac{1}{10}\right)$
 \end_inset
 
 .
  
-\begin_inset Formula $f\left(x\right)=10e^{-10x}$
+\begin_inset Formula $f\left(x\right)=\frac{1}{10}e^{-\frac{1}{10}x}$
 \end_inset
 
 .
  
-\begin_inset Formula $E\left(X\right)=\frac{1}{10}$
+\begin_inset Formula $E\left(X\right)=10$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E\left(X^{2}\right)={\displaystyle \intop_{0}^{\infty}}x^{2}f\left(x\right)\,dx={\displaystyle \intop_{0}^{\infty}}x^{2}10e^{-10x}\,dx={\displaystyle \lim_{u\to\infty}}{\displaystyle \intop_{0}^{u}}x^{2}10e^{-10x}\,dx=$
+\begin_inset Formula $E\left(X^{2}\right)={\displaystyle \intop_{0}^{\infty}}x^{2}f\left(x\right)\,dx={\displaystyle \intop_{0}^{\infty}}x^{2}\frac{1}{10}e^{-\frac{1}{10}x}\,dx={\displaystyle \lim_{u\to\infty}}{\displaystyle \intop_{0}^{u}}x^{2}\frac{1}{10}e^{-\frac{1}{10}x}\,dx=$
 \end_inset
 
 
@@ -4559,7 +4559,7 @@ Intervalo de tiempo empleado en el trabajo en la construcción de una casa
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\text{\ensuremath{={\displaystyle \lim_{u\to\infty}}\left.-\frac{\left(50x^{2}+10x+1\right)e^{-10x}}{50}\right|_{0}^{u}={\displaystyle \lim_{u\to\infty}}-\frac{\left(50u^{2}+10u+1\right)e^{-10u}}{50}+\frac{1}{50}=\frac{1}{50}}}$
+\begin_inset Formula $\text{\ensuremath{={\displaystyle \lim_{u\to\infty}}\left.-\left(x^{2}+20x+200\right)e^{-\frac{x}{10}}\right|_{0}^{u}={\displaystyle \lim_{u\to\infty}}\frac{2000-\left(10u^{2}+200u+2000\right)e^{-\frac{u}{10}}}{10}=200}}$
 \end_inset
 
 .
@@ -4567,7 +4567,7 @@ Intervalo de tiempo empleado en el trabajo en la construcción de una casa
 
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $\text{\ensuremath{E\left(C\right)=E\left(100\right)+40E\left(X\right)+3E\left(X^{2}\right)=100+40\cdot\frac{1}{10}+\frac{3}{50}=\frac{5203}{50}=104,06}}$
+\begin_inset Formula $\text{\ensuremath{E\left(C\right)=E\left(100\right)+40E\left(X\right)+3E\left(X^{2}\right)=100+40\cdot10+3\cdot200=1100}}$
 \end_inset
 
 .
@@ -4582,14 +4582,14 @@ Intervalo de tiempo empleado en el trabajo en la construcción de una casa
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\text{\ensuremath{=P\left(X+\frac{20}{3}\leq-\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)+P\left(X+\frac{20}{3}\geq\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)\approx0+P\left(X\geq2,1525\right)=}}$
+\begin_inset Formula $\text{\ensuremath{=P\left(X+\frac{20}{3}\leq-\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)+P\left(X+\frac{20}{3}\geq\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)\approx0+P\left(X\geq19,3675\right)=}}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $=0+1-\left(1-e^{-10\cdot2,1525}\right)=e^{-10\cdot2,1525}\approx0$
+\begin_inset Formula $=0+1-\left(1-e^{-\frac{1}{10}\cdot19,3675}\right)=e^{-\frac{1}{10}\cdot19,3675}\approx0,144$
 \end_inset
 
 .
