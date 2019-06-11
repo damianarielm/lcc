@@ -3063,8 +3063,376 @@ La producción anual en una fábrica es una variable aleatoria
 Solución
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $P\left(X\leq1300\right)=\frac{90}{100}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(X\geq1100\right)=\frac{40}{100}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Z=\frac{X-\mu}{\sigma}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\leq1300\iff Z\leq\frac{1300-\mu}{\sigma}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{P\left(Z\leq\frac{1300-\mu}{\sigma}\right)=\frac{90}{100}\iff\frac{1300-\mu}{\sigma}\approx1,29}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\geq1100\iff Z\geq\frac{1100-\mu}{\sigma}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $P\left(Z\geq\frac{1100-\mu}{\sigma}\right)=1-P\left(Z\leq\frac{1100-\mu}{\sigma}\right)=\frac{40}{100}\iff\frac{60}{100}=P\left(Z\leq\frac{1100-\mu}{\sigma}\right)\iff\frac{1100-\mu}{\sigma}\approx0,26$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{cases}
+1,29\sigma+\mu & =1300\\
+0,26\sigma+\mu & =1100
+\end{cases}\iff\mu\approx1049,514\land\sigma\approx194,175$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=500:1600, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle, xtick={1049.514,1300}, xticklabels={$
+\backslash
+mu$,$1300$},
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=500:1300]
+ {gauss(1049.514,194.175)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(1049.514,194.175)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=500:1600, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle, xtick={1049.514,1100}, xticklabels={$
+\backslash
+mu$,$1100$},
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=1100:1600]
+ {gauss(1049.514,194.175)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(1049.514,194.175)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(X\geq1000\right)=1-P\left(Z\leq\frac{1000-1049,514}{194,175}\approx-0,255\right)\approx1-0,44038=0,55962}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=500:1600, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle, xtick={1049.514,1000}, xticklabels={$
+\backslash
+mu$,$1000$},
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=1000:1600]
+ {gauss(1049.514,194.175)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(1049.514,194.175)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(x)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -4296,6 +4664,10 @@ Un cierto tipo de instrumento electrónico tiene una duración
 
 .
  Determine la esperanza matemática de la utilidad por instrumento.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4304,9 +4676,217 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
 \end_layout
 
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, thick, samples=100, domain=0:6, legend style={at=
+{(0.95,0.5)}, anchor=east}, axis on top, grid, ytick={0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1
+}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, fill=blue!20, draw=none, domain=0:0.9] {exponential(1)}
+ 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {exponential(1)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$f(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, samples at={0.9}, only marks] {Exponential(1)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {Exponential(1)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$F(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, samples at={0.9}, only marks] {1-Exponential(1)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {1-Exponential(1)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$1-F(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Duración de un instrumento electrónico en unidades de 1000 horas
+\begin_inset Quotes frd
+\end_inset
+
+.
+ 
+\begin_inset Formula $X\sim Ex\left(1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Reembolso en pesos si la duración es menor a 900 horas
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $R=\begin{cases}
+5 & x\leq0,9\\
+0 & x>0,9
+\end{cases}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $U$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Utilidad por instrumento en pesos
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $U=5-2-R=\begin{cases}
+-2 & r=5\\
+3 & r=0
+\end{cases}=\begin{cases}
+-2 & x\leq0,9\\
+3 & x>0,9
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(U=-2\right)=P\left(X\leq0,9\right)=P\left(X\leq0,9\right)=1-e^{-0.9}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(U=3\right)=P\left(X>0,9\right)=1-P\left(X\leq0,9\right)=e^{-0.9}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(U\right)=-2\cdot\left(1-e^{-0.9}\right)+3\cdot\left(e^{-0.9}\right)\approx0,0328$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Un lote de 10 motores eléctricos es vendido o rechazado según el resultado
@@ -4330,7 +4910,8 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate-Resume
-Considere una v.a.
+Considere una v.
+ a.
  
 \begin_inset Formula $X\sim U\left[0,1\right]$
 \end_inset
@@ -4582,14 +5163,14 @@ Intervalo de tiempo empleado en el trabajo en la construcción de una casa
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\text{\ensuremath{=P\left(X+\frac{20}{3}\leq-\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)+P\left(X+\frac{20}{3}\geq\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)\approx0+P\left(X\geq19,3675\right)=}}$
+\begin_inset Formula $\text{\ensuremath{=P\left(X+\frac{20}{3}\leq-\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)+P\left(X+\frac{20}{3}\geq\sqrt{\frac{2000+\frac{100}{3}}{3}}\right)\approx}}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $=0+1-\left(1-e^{-\frac{1}{10}\cdot19,3675}\right)=e^{-\frac{1}{10}\cdot19,3675}\approx0,144$
+\begin_inset Formula $\text{\ensuremath{\approx0+P\left(X\geq19,3675\right)=0+1-\left(1-e^{-\frac{1}{10}\cdot19,3675}\right)=e^{-\frac{1}{10}\cdot19,3675}\approx0,144}}$
 \end_inset
 
 .
