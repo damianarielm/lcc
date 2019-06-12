@@ -3326,6 +3326,102 @@ Halle
 Solución
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=-1:1, legend pos=
+ north east, axis on top, axis equal]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=A] {x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=B] {-x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=-x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, draw=none, name path=C] {0};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [gray!20] fill between [of=C and A, soft clip={domain=-1:0}];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [gray!20] fill between [of=C and B, soft clip={domain=0:1}];
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -3351,10 +3447,6 @@ Un aparato de televisión puede tener dos tipos de roturas: debido a falla
  período, sigue una ley de Poisson con promedio 2.
  Calcule la probabilidad de que en el primer año de utilización del aparato,
  éste tenga exactamente 2 roturas.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -3832,6 +3924,10 @@ Consumo de combustible en el i-esimo trayecto
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -4144,10 +4240,6 @@ La demanda diaria de agua potable por habitante en una población de 10000
 .
  ¿Cuál es la probabilidad de que en un día cualquiera no sea satisfecha
  la demanda?
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
