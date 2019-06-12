@@ -2239,7 +2239,7 @@ addplot+[no marks, name path=B] {-x};
 
     
 \backslash
-addlegendentry{$y=-x$}
+addlegendentry{$-y=x$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2828,10 +2828,6 @@ end{tikzpicture}
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2884,6 +2880,64 @@ Calcule la probabilidad de que una componente de tipo 2 tenga una duración
 Soluciones
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[xlabel=$x$, ylabel=$y$]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot3[surf, shader=flat, samples=15, domain =0:3,domain y=0:3] {(x/8)*e^((x+y
+)/2)};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
@@ -2899,13 +2953,15 @@ Soluciones
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-\begin_inset Formula $=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}\,dt_{1}{\displaystyle \intop_{2}^{\infty}}e^{-\frac{t_{2}}{2}}\,dt_{2}=COMPLETAR={\displaystyle \intop_{1}^{\infty}}\frac{t_{1}e^{-\frac{t_{1}}{2}-1}}{4}\,dt_{1}=\frac{3e^{-\frac{3}{2}}}{2}$
+\begin_inset Formula $\text{\ensuremath{=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}\,dt_{1}{\displaystyle \intop_{2}^{\infty}}e^{-\frac{t_{2}}{2}}\,dt_{2}=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}2e^{-1}\,dt_{1}={\displaystyle \intop_{1}^{\infty}}\frac{t_{1}e^{-\frac{t_{1}}{2}-1}}{4}\,dt_{1}=\frac{3\sqrt{e}}{2}}}$
 \end_inset
 
-
+.
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
@@ -2916,28 +2972,26 @@ Soluciones
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $P\left(T_{2}\geq2\right)={\displaystyle \intop_{2}^{\infty}}f_{T_{2}}\left(t_{2}\right)\,dt_{2}$
+\begin_inset Formula $f_{T_{2}}\left(t_{2}\right)={\displaystyle \intop_{-\infty}^{\infty}}f\left(t_{1},t_{2}\right)\,dt_{1}={\displaystyle \intop_{0}^{\infty}}\frac{1}{8}t_{1}e^{-\frac{t_{1}+t_{2}}{2}}\,dt_{1}=\frac{1}{8}{\displaystyle \intop_{0}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}e^{-\frac{t_{2}}{2}}\,dt_{1}=$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $f_{T_{2}}\left(t_{2}\right)={\displaystyle \intop_{-\infty}^{\infty}}f\left(t_{1},t_{2}\right)\,dt_{1}={\displaystyle \intop_{0}^{\infty}}\frac{1}{8}t_{1}e^{-\frac{t_{1}+t_{2}}{2}}\,dt_{1}=COMPLETAR=$
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{1}{8}e^{-\frac{t_{2}}{2}}{\displaystyle \intop_{0}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}\,dt_{1}=\frac{1}{2}e^{-\frac{t_{2}}{2}}$
 \end_inset
 
 .
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-\begin_inset Formula $P\left(T_{2}>2\right)={\displaystyle \intop_{2}^{\infty}}\frac{e^{-\frac{t_{2}}{2}}}{2}\,dt_{2}=COMPLETAR=e^{-1}$
+\begin_inset Formula $P\left(T_{2}\geq2\right)={\displaystyle \intop_{2}^{\infty}}f_{T_{2}}\left(t_{2}\right)\,dt_{2}={\displaystyle \intop_{2}^{\infty}}\frac{e^{-\frac{t_{2}}{2}}}{2}\,dt_{2}=e^{-1}$
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2977,8 +3031,23 @@ Los tiempos en horas
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $T_{A}\sim Ex\left(2\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T_{B}\sim Ex\left(2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P\left(T_{A}\leq1,T_{B}\leq\frac{45}{60}\right)=F_{T_{A}}\left(1\right)F_{T_{B}}\left(\frac{45}{60}\right)=\left(1-e^{-2}\right)\left(1-e^{-2\cdot\frac{45}{60}}\right)\approx0,67}}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -3036,6 +3105,78 @@ Determine la distribución condicional de
 Soluciones
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=0:2, legend pos=
+ north east, axis on top, axis equal, xtick={0,2}, ytick={0,2}, xticklabels={$0$
+,$2n$}, yticklabels={$0$,$2n$}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[forget plot, mark=none, draw=none, domain=0:2, fill=gray!20]{2-x}
+ 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks] {2-x};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=2n-x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
@@ -3055,23 +3196,21 @@ k & 0<x<2n-x;0<y<2n-x\\
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula ${\displaystyle \iintop_{R_{XY}}}f\left(x,y\right)\,dx\,dy=1={\displaystyle \intop_{0}^{2n}\intop_{0}^{2n-x}}k\,dy\,dx=k{\displaystyle \intop_{0}^{2n}\intop_{0}^{2n-x}}\,dy\,dx=k{\displaystyle \intop_{0}^{2n}}\left(2n-x\right)\,dx=COMPLETAR$
+\begin_inset Formula ${\displaystyle \iintop_{R_{XY}}}f\left(x,y\right)\,dx\,dy={\displaystyle \intop_{0}^{2n}\intop_{0}^{2n-x}}k\,dy\,dx=k{\displaystyle \intop_{0}^{2n}\intop_{0}^{2n-x}}\,dy\,dx=$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\therefore k=\frac{1}{2n^{2}}$
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=k{\displaystyle \intop_{0}^{2n}}\left(2n-x\right)\,dx=k2n^{2}=1\iff k=\frac{1}{2n^{2}}$
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
@@ -3089,10 +3228,14 @@ k & 0<x<2n-x;0<y<2n-x\\
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\therefore f_{X}\left(x\right)=\begin{cases}
+\begin_inset Formula $f_{X}\left(x\right)=\begin{cases}
 \frac{2n-x}{2n^{2}} & 0<x<2n\\
 0 & \text{en otro caso}
 \end{cases}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -3159,11 +3302,35 @@ Sean
 \end_layout
 
 \begin_deeper
+\begin_layout Enumerate
+Encuentre la densidad marginal de 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ y la densidad marginal de 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Halle 
+\begin_inset Formula $COV\left(X_{1},X_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Paragraph
 Solución
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
