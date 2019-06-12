@@ -3547,7 +3547,7 @@ Solución
 
 .
  
-\begin_inset Formula $X_{2}-X_{1}\sim N\left(1+\mu_{2},\sqrt{\frac{2}{10}}\right)$
+\begin_inset Formula $X_{2}-X_{1}\sim N\left(\mu_{2}-1,\sqrt{\frac{2}{10}}\right)$
 \end_inset
 
 .
@@ -3562,19 +3562,19 @@ Solución
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $Z=\frac{X_{2}-X_{1}-1-\mu_{2}}{\sqrt{\frac{2}{10}}}$
+\begin_inset Formula $Z=\frac{X_{2}-X_{1}+1-\mu_{2}}{\sqrt{\frac{2}{10}}}$
 \end_inset
 
 .
  
-\begin_inset Formula $X_{2}-X_{1}\leq0\iff Z\leq\frac{-1-\mu_{2}}{\sqrt{\frac{2}{10}}}$
+\begin_inset Formula $X_{2}-X_{1}\leq0\iff Z\leq\frac{1-\mu_{2}}{\sqrt{\frac{2}{10}}}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P\left(Z\leq\frac{-1-\mu_{2}}{\sqrt{\frac{2}{10}}}\right)\leq0,001\iff\frac{-1-\mu_{2}}{\sqrt{\frac{2}{10}}}\lesssim-3,11\iff$
+\begin_inset Formula $P\left(Z\leq\frac{1-\mu_{2}}{\sqrt{\frac{2}{10}}}\right)\leq0,001\iff\frac{1-\mu_{2}}{\sqrt{\frac{2}{10}}}\leq-3,11\iff$
 \end_inset
 
 
@@ -3582,7 +3582,7 @@ Solución
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\iff-\mu_{2}\lesssim-3,11\sqrt{\frac{2}{10}}+1\iff\mu_{2}\gtrsim3,11\sqrt{\frac{2}{10}}-1$
+\begin_inset Formula $\iff-\mu_{2}\leq-3,11\sqrt{\frac{2}{10}}-1\iff\mu_{2}\geq3,11\sqrt{\frac{2}{10}}+1$
 \end_inset
 
 .
