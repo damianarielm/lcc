@@ -1048,6 +1048,7 @@ Luego
 \end_inset
 
  no es una distribución de probabilidad.
+ Absurdo.
 \end_layout
 
 \end_deeper
@@ -2012,7 +2013,7 @@ begin{tikzpicture}
 
     
 \backslash
-begin{axis}[xlabel=$x$, ylabel=$y$, small]
+begin{axis}[xlabel=$x$, ylabel=$y$]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2102,7 +2103,7 @@ begin{tikzpicture}
   
 \backslash
 begin{axis}[axis lines=middle, samples=100, thick, domain=0:2, legend pos=
- north east, axis on top, axis equal]
+ north east, axis equal]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2210,34 +2211,14 @@ begin{tikzpicture}
   
 \backslash
 begin{axis}[axis lines=middle, samples=100, thick, domain=0:2, legend pos=
- north east, axis on top, axis equal]
+ north west, axis equal]
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-addplot+[forget plot, mark=none, draw=none, domain=0:2, pattern=horizontal
- lines]{x} 
-\backslash
-closedcycle;
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-addplot+[forget plot, mark=none, draw=none, domain=0:2, pattern=horizontal
- lines]{-x} 
-\backslash
-closedcycle;
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-addplot+[no marks] {x};
+addplot+[no marks, name path=A] {x};
 \end_layout
 
 \begin_layout Plain Layout
@@ -2251,7 +2232,7 @@ addlegendentry{$y=x$}
 
     
 \backslash
-addplot+[no marks] {-x};
+addplot+[no marks, name path=B] {-x};
 \end_layout
 
 \begin_layout Plain Layout
@@ -2259,6 +2240,29 @@ addplot+[no marks] {-x};
     
 \backslash
 addlegendentry{$y=-x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, no marks, draw=none, name path=C] {0};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[pattern color=red, pattern=horizontal lines] fill between [of=C
+ and B];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[pattern color=blue, pattern=horizontal lines] fill between [of=C
+ and A];
 \end_layout
 
 \begin_layout Plain Layout
@@ -2380,6 +2384,141 @@ Calcule el coeficiente de correlación entre
 Soluciones
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=0:1, legend pos=
+ south east, axis equal, axis on top]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=A] {x};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=B] {x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=x+1$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[gray!20] fill between [of=A and B];
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[xlabel=$x$, ylabel=$y$]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot3[surf, shader=flat, samples=15, domain =0:1,domain y=0:2] {1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
@@ -2407,10 +2546,6 @@ Soluciones
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2422,6 +2557,88 @@ Soluciones
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=0:1, legend pos=
+ south east, axis equal, axis on top]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=A] {x};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=B] {x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=x+1$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[gray!20, pattern=vertical lines] fill between [of=A and B];
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 \begin_inset Formula $f_{X}\left(x\right)={\displaystyle \intop_{-\infty}^{\infty}}f\left(x,y\right)\,dy={\displaystyle \intop_{x}^{x+1}}k\,dy=1\Rightarrow f_{X}\left(x\right)=\begin{cases}
 1 & 0<x<1\\
@@ -2432,10 +2649,108 @@ Soluciones
 
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=0:1, legend pos=
+ south east, axis equal, axis on top]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=A] {x};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y=x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=B] {x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$y-1=x$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [forget plot, no marks, draw=none, name path=C] {1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[pattern color=red, pattern=horizontal lines] fill between [of=C
+ and B];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [pattern color=blue, pattern=horizontal lines] fill between [of=C
+ and A];
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 \begin_inset Formula $f_{Y}\left(y\right)={\displaystyle \intop_{-\infty}^{\infty}}f\left(x,y\right)\,dx=\begin{cases}
 {\displaystyle \intop_{0}^{y}}\,dx=\boxed{y} & 0<y<1\\
-{\displaystyle \intop_{y}^{2}}\,dx<x<x=\boxed{2-y} & 1<y<2\\
+{\displaystyle \intop_{y-1}^{1}}\,dx=\boxed{2-y} & 1<y<2\\
 0 & \text{en otro caso}
 \end{cases}$
 \end_inset
