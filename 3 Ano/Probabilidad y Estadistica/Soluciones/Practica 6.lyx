@@ -3381,6 +3381,15 @@ Numero de roturas por falla de transistores durante los
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $E\left(T_{t}\right)=1=\lambda_{T}\cdot2\Rightarrow\lambda_{T}=\frac{1}{2}\Rightarrow T_{t}\sim Po\left(\frac{1}{2}t\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $C_{t}$
 \end_inset
@@ -3400,20 +3409,15 @@ Numero de roturas por falla de condensadores durante los
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $E\left(T_{2}\right)=1=\lambda_{T}\cdot2\Rightarrow\lambda_{T}=\frac{1}{2}\Rightarrow T_{t}\sim Po\left(\frac{1}{2}t\right)$
+\begin_inset Formula $E\left(C_{t}\right)=2=\lambda_{C}\cdot2\Rightarrow\lambda_{C}=1\Rightarrow C_{t}\sim Po\left(t\right)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $E\left(C_{2}\right)=2=\lambda_{C}\cdot2\Rightarrow\lambda_{C}=1\Rightarrow C_{t}\sim Po\left(t\right)$
-\end_inset
-
-.
-\end_layout
-
+\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $X_{t}$
 \end_inset
@@ -3433,6 +3437,7 @@ Numero de roturas durante los
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 \begin_inset Formula $X_{t}=T_{t}+C_{t}$
 \end_inset
@@ -3440,6 +3445,7 @@ Numero de roturas durante los
 .
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
 Como 
 \begin_inset Formula $T_{t}$
@@ -3450,24 +3456,14 @@ Como
 \end_inset
 
  son independientes, por propiedad reproductiva de la distribución de Poisson,
- resulta:
-\begin_inset Formula 
-\[
-X_{t}\sim Po\left(\frac{1}{2}t+t\right)\Rightarrow X_{t}\sim Po\left(\frac{3}{2}t\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $X_{1}\sim Po\left(\frac{3}{2}\right)$
+ resulta 
+\begin_inset Formula $X_{t}\sim Po\left(\frac{1}{2}t+t\right)=Po\left(\frac{3}{2}t\right)$
 \end_inset
 
 .
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 \begin_inset Formula $P\left(X_{1}=2\right)=\frac{e^{-\frac{3}{2}}\left(\frac{3}{2}\right)^{2}}{2!}\approx0,056$
 \end_inset
@@ -3475,6 +3471,7 @@ X_{t}\sim Po\left(\frac{1}{2}t+t\right)\Rightarrow X_{t}\sim Po\left(\frac{3}{2}
 .
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Ciertos elementos de un circuito eléctrico se protegen contra el exceso
@@ -3515,7 +3512,7 @@ Ciertos elementos de un circuito eléctrico se protegen contra el exceso
 \end_inset
 
 , y varianzas 
-\begin_inset Formula $\sigma_{12}=\sigma_{22}=\frac{1}{10}s^{2}$
+\begin_inset Formula $\sigma_{1}^{2}=\sigma_{2}^{2}=\frac{1}{10}s^{2}$
 \end_inset
 
 .
@@ -3539,10 +3536,60 @@ Ciertos elementos de un circuito eléctrico se protegen contra el exceso
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $X_{1}\sim N\left(1,\frac{1}{10}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X_{2}\sim N\left(\mu_{2},\frac{1}{10}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X_{2}-X_{1}\sim N\left(1+\mu_{2},\sqrt{\frac{2}{10}}\right)$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $P\left(X_{2}\leq X_{1}\right)=P\left(X_{2}-X_{1}\leq0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $Z=\frac{X_{2}-X_{1}-1-\mu_{2}}{\sqrt{\frac{2}{10}}}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $X_{2}-X_{1}\leq0\iff Z\leq\frac{-1-\mu_{2}}{\sqrt{\frac{2}{10}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(Z\leq\frac{-1-\mu_{2}}{\sqrt{\frac{2}{10}}}\right)\leq0,001\iff\frac{-1-\mu_{2}}{\sqrt{\frac{2}{10}}}\lesssim-3,11\iff$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\iff-\mu_{2}\lesssim-3,11\sqrt{\frac{2}{10}}+1\iff\mu_{2}\gtrsim3,11\sqrt{\frac{2}{10}}-1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Sean 
