@@ -1,6 +1,6 @@
 ###### Año 2017
 
-* Dante Zanarini
+* Dante Luis Zanarini
 * Pablo Verdes
 * Gabina Luz Bianchi
 * Marcos Pividori

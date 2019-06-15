@@ -575,7 +575,7 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-Explique y ejemplifique el concepto de pasos intrascendentes.
+Enuncie las tres razones por las cuales, según Jackson, R no puede ser S.
 \end_layout
 
 \begin_deeper
@@ -2539,6 +2539,105 @@ Considerar que la maquina a construir es el software que controla a
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Tabla de control
+\end_layout
+
+\begin_layout Subsubsection
+Statecharts
+\end_layout
+
+\begin_layout Subsubsection
+CSP
+\end_layout
+
+\begin_layout Subsection
+GUI (COMPLETAR)
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Una interfaz gráfica de usuario (GUI) consta de tres pantallas: 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ El usuario puede seleccionar cualquiera de ellas en cualquier orden, pero
+ si durante más de 
+\begin_inset Formula $N$
+\end_inset
+
+ segundos permanece en cualquier pantalla sin interactuar con el sistema,
+ este mostrará la pantalla 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Cada vez que el sistema muestra una pantalla, debe dibujar la última selección
+ del usuario.
+ En cada pantalla el usuario puede hacer lo siguiente:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+: Seleccionar uno de cuatro rectángulos cada uno de un color (rojo, verde,
+ azul y blanco).
+ Inicialmente no hay ninguno seleccionado.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B$
+\end_inset
+
+: Si el rectángulo seleccionado en 
+\begin_inset Formula $A$
+\end_inset
+
+ es verde o rojo y el tamaño seleccionado en 
+\begin_inset Formula $C$
+\end_inset
+
+ es chico, entonces puede seleccionar un numero entre 1 y 3.
+ En cualquier otro caso no puede hacer nada.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C$
+\end_inset
+
+: Si el rectángulo seleccionado en 
+\begin_inset Formula $A$
+\end_inset
+
+ es el verde, entonces el usuario no puede seleccionar nada en esta pantalla.
+ En cualquier otro caso puede aumentar o disminuir el tamaño del rectángulo
+ seleccionado en 
+\begin_inset Formula $A$
+\end_inset
+
+, eligiendo un elemento de la siguiente escala: chico, mediano o grande.
 \end_layout
 
 \begin_layout Subsubsection
