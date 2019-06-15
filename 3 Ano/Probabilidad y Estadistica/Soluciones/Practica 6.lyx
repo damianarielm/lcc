@@ -9,6 +9,10 @@
 \usepackage{pgfplots}
 \usetikzlibrary{patterns}
 \usepgfplotslibrary{colormaps,fillbetween}
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -3345,8 +3349,8 @@ begin{tikzpicture}
 
   
 \backslash
-begin{axis}[axis lines=middle, samples=100, thick, domain=-1:1, legend pos=
- north east, axis on top, axis equal]
+begin{axis}[axis lines=middle, samples=100, thick, domain=-1:1, legend style={at
+={(0.7,0.8)}, anchor=west}, axis on top, axis equal, ymax = 1, ymin=0]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3360,7 +3364,7 @@ addplot+[no marks, name path=A] {x+1};
 
     
 \backslash
-addlegendentry{$y=x$}
+addlegendentry{$x_2=1+x_1$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3374,7 +3378,7 @@ addplot+[no marks, name path=B] {-x+1};
 
     
 \backslash
-addlegendentry{$y=-x$}
+addlegendentry{$x_2=1-x_1$}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3396,6 +3400,237 @@ addplot [gray!20] fill between [of=C and A, soft clip={domain=-1:0}];
     
 \backslash
 addplot [gray!20] fill between [of=C and B, soft clip={domain=0:1}];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [mark=*, nodes near coords, point meta=explicit symbolic, visualization
+ depends on=
+\backslash
+thisrow{alignment} 
+\backslash
+as 
+\backslash
+alignment, every node near coord/.style={anchor=
+\backslash
+alignment}] table [meta index=2] {
+\end_layout
+
+\begin_layout Plain Layout
+
+        x    y    label    alignment
+\end_layout
+
+\begin_layout Plain Layout
+
+        -1   0    (-1,0)   -40
+\end_layout
+
+\begin_layout Plain Layout
+
+        0    1    (0,1)    -100
+\end_layout
+
+\begin_layout Plain Layout
+
+        1    0    (1,0)    -150
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f\left(x_{1},x_{2}\right)=\begin{cases}
+k & -1<x_{1}<0\land0<x_{2}<1+x_{1}\\
+k & 0<x_{1}<1\land0<x_{2}<1-x_{1}\\
+0 & \text{en otro caso}
+\end{cases}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\begin{cases}
+k & 0<x_{2}<1\land x_{2}-1<x_{1}<1-x_{2}\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula ${\displaystyle \intop_{0}^{1}}{\displaystyle \intop_{x_{2}-1}^{1-x_{2}}}k\,dx_{1}\,dx_{2}=k{\displaystyle \intop_{0}^{1}}\left.x_{1}\right|_{x_{2}-1}^{1-x_{2}}\,dx_{2}=k{\displaystyle \intop_{0}^{1}}\left(1-x_{2}+1-x_{2}\right)\,dx_{2}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $2k{\displaystyle \intop_{0}^{1}}\left(1-x_{2}\right)\,dx_{2}=2k\left(1-\frac{1}{2}\right)=2k-k=k=1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=-1:1, legend style={at
+={(0.7,0.8)}, anchor=west}, axis on top, axis equal, ymax = 1, ymin=0]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=A] {x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$x_2=1+x_1$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=B] {-x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$x_2=1-x_1$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, draw=none, name path=C] {0};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [pattern color=blue, pattern=vertical lines] fill between [of=C
+ and A, soft clip={domain=-1:0}];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [pattern color=red, pattern=vertical lines] fill between [of=C and
+ B, soft clip={domain=0:1}];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [mark=*, nodes near coords, point meta=explicit symbolic, visualization
+ depends on=
+\backslash
+thisrow{alignment} 
+\backslash
+as 
+\backslash
+alignment, every node near coord/.style={anchor=
+\backslash
+alignment}] table [meta index=2] {
+\end_layout
+
+\begin_layout Plain Layout
+
+        x    y    label    alignment
+\end_layout
+
+\begin_layout Plain Layout
+
+        -1   0    (-1,0)   -40
+\end_layout
+
+\begin_layout Plain Layout
+
+        0    1    (0,1)    -100
+\end_layout
+
+\begin_layout Plain Layout
+
+        1    0    (1,0)    -150
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
 \end_layout
 
 \begin_layout Plain Layout
@@ -3422,10 +3657,171 @@ end{tikzpicture}
 
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $f_{X_{1}}\left(x_{1}\right)=\begin{cases}
+{\displaystyle \intop_{0}^{1+x_{1}}}1\,dx_{2}=\boxed{1+x_{1}} & -1<x_{1}<0\\
+{\displaystyle \intop_{0}^{1-x_{1}}}1\,dx_{2}=\boxed{1-x_{1}} & 0<x_{1}<1\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+begin{axis}[axis lines=middle, samples=100, thick, domain=-1:1, legend style={at
+={(0.7,0.8)}, anchor=west}, axis on top, axis equal, ymax = 1, ymin=0]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=A] {x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$x_2-1=x_1$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, name path=B] {-x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addlegendentry{$1-x_2=x_1$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot+[no marks, draw=none, name path=C] {0};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [pattern=horizontal lines] fill between [of=C and A, soft clip={domain=-
+1:0}];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [pattern=horizontal lines] fill between [of=C and B, soft clip={domain=0
+:1}];
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [mark=*, nodes near coords, point meta=explicit symbolic, visualization
+ depends on=
+\backslash
+thisrow{alignment} 
+\backslash
+as 
+\backslash
+alignment, every node near coord/.style={anchor=
+\backslash
+alignment}] table [meta index=2] {
+\end_layout
+
+\begin_layout Plain Layout
+
+        x    y    label    alignment
+\end_layout
+
+\begin_layout Plain Layout
+
+        -1   0    (-1,0)   -40
+\end_layout
+
+\begin_layout Plain Layout
+
+        0    1    (0,1)    -100
+\end_layout
+
+\begin_layout Plain Layout
+
+        1    0    (1,0)    -150
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{X_{2}}\left(x_{2}\right)=\begin{cases}
+{\displaystyle \intop_{x_{2}-1}^{1-x_{2}}}1\,dx_{1}=1-x_{2}-\left(x_{2}-1\right)=2-2x_{2}=2\left(1-x_{2}\right) & 0<x_{2}<1\\
+0 & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -3447,6 +3843,10 @@ Un aparato de televisión puede tener dos tipos de roturas: debido a falla
  período, sigue una ley de Poisson con promedio 2.
  Calcule la probabilidad de que en el primer año de utilización del aparato,
  éste tenga exactamente 2 roturas.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3743,10 +4143,7 @@ Solución
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-Como 
+ Como 
 \begin_inset Formula $X_{i}$
 \end_inset
 
@@ -3755,7 +4152,7 @@ Como
 \end_inset
 
  es grande, por el teorema central del limite resulta 
-\begin_inset Formula $Z\sim N\left(\mu,\sigma^{2}\right)$
+\begin_inset Formula $Z\sim N\left(\mu,\sigma\right)$
 \end_inset
 
 .
@@ -3766,9 +4163,7 @@ Como
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
+ 
 \begin_inset Formula $\sigma^{2}={\displaystyle \sum_{i=1}^{60}}V\left(X_{i}\right)=\frac{60}{12}=5$
 \end_inset
 
@@ -3776,12 +4171,12 @@ Como
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\therefore Z\sim N\left(30,5\right)$
+\begin_inset Formula $\therefore Z\sim N\left(30,\sqrt{5}\right)$
 \end_inset
 
 .
  
-\begin_inset Formula $f_{Z}\left(z\right)\approx\frac{1}{\sqrt{2\pi}\sqrt{5}}e^{-\left(\frac{z-30}{\sqrt{5}}\right)^{2}}$
+\begin_inset Formula $f_{Z}\left(z\right)\approx\frac{1}{\sqrt{2\pi}\sqrt{5}}e^{-\frac{\left(z-30\right)^{2}}{10}}$
 \end_inset
 
 .
@@ -3790,6 +4185,98 @@ Como
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=23:37, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(30,sqrt(5))};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(z)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3804,7 +4291,7 @@ El espesor de una lámina metálica (en mm) es una v.
  El espesor de una lámina de papel aislante es también una v.
  a.
  
-\begin_inset Formula $Y_{i}\sim N\left(0,5;0,02^{2}\right)$
+\begin_inset Formula $\text{\ensuremath{Y_{i}\sim N\left(0,5;0,02^{2}\right)}}$
 \end_inset
 
 .
@@ -3902,15 +4389,15 @@ Consumo de combustible en el i-esimo trayecto
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $X_{i}\sim N\left(20l,4l^{2}\right)$
+ 
+\begin_inset Formula $i\in\left\{ 1,\ldots,30\right\} $
 \end_inset
 
 .
- 
-\begin_inset Formula $i=1,\ldots,30$
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{i}\sim N\left(20l,2l\right)$
 \end_inset
 
 .
@@ -3924,7 +4411,95 @@ Consumo de combustible en el i-esimo trayecto
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=14:26, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(20,2)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(x_i)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -3932,7 +4507,7 @@ Consumo de combustible en el i-esimo trayecto
 
 \begin_layout Itemize
 Considerando que el consumo en cada trayecto es independiente del consumo
- en los demas trayectos, por propiedad reproductiva de distribuciones normales
+ en los demás trayectos, por propiedad reproductiva de distribuciones normales
  tenemos lo siguiente:
 \end_layout
 
@@ -3972,15 +4547,107 @@ Consumo total en 30 trayectos
 
 .
  
-\begin_inset Formula $Y\sim N\left(600l,120l^{2}\right)$
+\begin_inset Formula $Y\sim N\left(600l,\sqrt{120}l\right)$
 \end_inset
 
 .
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=565:635, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(600,sqrt(120))};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(y)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
-\begin_inset Formula $P\left(Y>640\right)=1-P\left(Y<640\right)=1-P\left(Z<3,65\right)$
+\begin_inset Formula $\text{\ensuremath{P\left(Y>640\right)=1-P\left(Y<640\right)\approx1-P\left(Z<3,65\right)\approx1-0,99987=0,00013}}$
 \end_inset
 
 .
@@ -4079,6 +4746,7 @@ Una empresa dedicada a la venta de repuestos sabe que la demanda diaria
 
 \begin_deeper
 \begin_layout Standard
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="4">
 <features tabularvalignment="middle">
@@ -4205,8 +4873,229 @@ Desde el momento en que se hace el pedido hasta que el mismo ingresa al
 Solución
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $D$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Demanda diaria del articulo
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{i}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Demanda en el día 
+\begin_inset Formula $i$
+\end_inset
+
+ del articulo
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{T}={\displaystyle \sum_{i=1}^{90}}D_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si suponemos que las demandas en un día son independientes de las demandas
+ en el resto de los días, luego por el teorema central del limite, 
+\begin_inset Formula $D_{T}\sim N\left(\mu,\sigma\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(D_{i}\right)=0\cdot0,25+1\cdot0,5+2\cdot0,25=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E\left(D_{i}^{2}\right)=0\cdot0,25+1\cdot0,5+4\cdot0,25=1,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V\left(D_{i}\right)=1,5-1=0,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu={\displaystyle \sum_{i=1}^{90}}E\left(D_{i}\right)=90$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\sigma^{2}={\displaystyle \sum_{i=1}^{90}}V\left(D_{i}\right)=45$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Por lo tanto aproximamos la distribución 
+\begin_inset Formula $D_{T}$
+\end_inset
+
+ por una distribución 
+\begin_inset Formula $N\left(90,\sqrt{45}\right)$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=70:110, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top, ytick=
+\backslash
+empty,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = both, thick, legend pos=north east
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=101:110]
+ {gauss(90,sqrt(45))} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(90,sqrt(45))};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$f(t)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k$
+\end_inset
+
+: stock al hacer el pedido.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{T}>k\right)=0,05\iff P\left(D_{T}<k\right)=1-0,05=0,95$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(D_{T}<k\right)=P\left(Z<z\right)=0,95\iff z\approx1,65\iff k\approx101$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\therefore$
+\end_inset
+
+ El stock necesario al hacer el pedido es de 102 artículos.
 \end_layout
 
 \end_deeper
@@ -4247,264 +5136,8 @@ La demanda diaria de agua potable por habitante en una población de 10000
 Solución
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $D$
-\end_inset
-
-: 
-\begin_inset Quotes fld
-\end_inset
-
-Demanda diaria del articulo
-\begin_inset Quotes frd
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
 \begin_layout Standard
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $D$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $p\left(d\right)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $0$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $0,25$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $1$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $0,5$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $2$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $0,25$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-\begin_inset Formula $D_{i}$
-\end_inset
-
-: 
-\begin_inset Quotes fld
-\end_inset
-
-Demanda en el día 
-\begin_inset Formula $i$
-\end_inset
-
- del articulo
-\begin_inset Quotes frd
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $D_{T}={\displaystyle \sum_{i=1}^{90}}D_{i}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Suponemos que las demandas en un día son independientes de las demandas
- en el resto de los días.
-\end_layout
-
-\begin_layout Itemize
-Por el teorema central del limite, 
-\begin_inset Formula $D_{T}\sim N\left(\mu,\sigma^{2}\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $E\left(D_{i}\right)=0\cdot0,25+1\cdot0,5+2\cdot0,25=1$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $E\left(D_{i}^{2}\right)=0\cdot0,25+1\cdot0,5+4\cdot0,25=1,5$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $V\left(D_{i}\right)=1,5-1=0,5$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\mu={\displaystyle \sum_{i=1}^{90}}E\left(D_{i}\right)=90$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\sigma^{2}={\displaystyle \sum_{i=1}^{90}}V\left(D_{i}\right)=45$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Por lo tanto aproximamos la distribución 
-\begin_inset Formula $D_{T}$
-\end_inset
-
- por una distribución 
-\begin_inset Formula $N\left(90,45\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $k$
-\end_inset
-
-: stock al hacer el pedido.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $P\left(D_{T}>k\right)=0,05\Rightarrow P\left(D_{T}<k\right)=1-0,05=0,95$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $Z=\frac{D_{T}-90}{\sqrt{45}}$
-\end_inset
-
-.
- 
-\begin_inset Formula $P\left(D_{T}<k\right)=P\left(Z<z_{1}\right)=0,95\Rightarrow z_{1}\approx1,645$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $z_{1}=\frac{k-90}{\sqrt{45}}=1,645\Rightarrow k\approx101$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\therefore$
-\end_inset
-
- El stock ? al hacer el pedido es de 101 artículos.
+COMPLETAR.
 \end_layout
 
 \end_deeper
