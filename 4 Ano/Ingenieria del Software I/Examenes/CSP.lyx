@@ -629,7 +629,75 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+El proceso 
+\color purple
+
+\begin_inset Formula $P\square Q$
+\end_inset
+
+
+\color inherit
+ es un proceso que espera a que el entorno provea o bien el primer evento
+ de 
+\color purple
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\color inherit
+ o bien el primero de 
+\color purple
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\color inherit
+; y pasa a comportarse como el proceso correspondiente.
+\end_layout
+
+\begin_layout Standard
+El proceso 
+\color purple
+
+\begin_inset Formula $P\nabla Q$
+\end_inset
+
+
+\color inherit
+ se comporta como 
+\color purple
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\color inherit
+ hasta tanto ocurra el primer evento de 
+\color purple
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\color inherit
+, en cuyo momento pasa a comportarse como este.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Imagenes/teoria/solucion10.png
+	scale 30
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -644,11 +712,52 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
-\begin_inset Newpage pagebreak
+\align center
+\begin_inset Graphics
+	filename Imagenes/teoria/solucion11.png
+	scale 30
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En este Statechart, partiendo del estado inicial 
+\color purple
+
+\begin_inset Formula $\left(W,Y\right)$
+\end_inset
+
+
+\color inherit
+, si ocurre el evento 
+\begin_inset Formula $a$
+\end_inset
+
+ se transiciona al estado 
+\color purple
+
+\begin_inset Formula $\left(X,Y\right)$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+En cambio en el proceso CSP 
+\color purple
+
+\begin_inset Formula $a\to c\to P\parallel b\to a\to Q$
+\end_inset
+
+
+\color inherit
+, de ocurrir el mismo evento la transición no se produce pues dicho evento
+ forma parte del alfabeto de los dos procesos y para que la transición ocurra,
+ ambos procesos deben estar dispuestos a recibir el evento al mismo tiempo.
 \end_layout
 
 \end_deeper
@@ -661,7 +770,7 @@ Muestre un Statechart equivalente al que se muestra en la figura que no
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Imagenes/teoria/ejercicio.png
+	filename Imagenes/teoria/ejercicio12.png
 	scale 30
 
 \end_inset
@@ -676,7 +785,7 @@ Solución
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename Imagenes/teoria/solucion.png
+	filename Imagenes/teoria/solucion12.png
 	scale 30
 
 \end_inset
@@ -688,10 +797,6 @@ Solución
 \begin_layout Enumerate
 Traduzca el Statechart de la figura anterior en un proceso CSP equivalente.
  Si no puede hacerlo, justifique su respuesta.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -741,6 +846,10 @@ Solución
 
 \color inherit
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1220,14 +1329,26 @@ Un sistema distribuido consta de
 as pueden estar encendidas o apagadas.
  Este programa recibe dos eventos (en cada computadora) desde el exterior:
  
+\color purple
+
 \begin_inset Formula $a$
 \end_inset
 
+
+\color inherit
  y 
+\color purple
+
 \begin_inset Formula $b$
 \end_inset
 
+
+\color inherit
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1247,42 +1368,70 @@ Luego de comunicar esta situacion esa computadora debe esperar a que todas
  esta en su estado inicial.
  Como puede haber computadoras apagadas o que estén haciendo otra cosa,
  el programa esperara un tiempo 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  cada respuesta.
 \end_layout
 
 \begin_layout Standard
 Cuando recibe todas las respuestas o han transcurrido 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  unidades de tiempo, debe emitir el evento 
+\color purple
+
 \begin_inset Formula $c$
 \end_inset
 
+
+\color inherit
  y volver al estado inicial.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
 Si el programa recibe el evento 
+\color purple
+
 \begin_inset Formula $b$
 \end_inset
 
+
+\color inherit
  debe esperar un tiempo 
+\color purple
+
 \begin_inset Formula $t$
 \end_inset
 
+
+\color inherit
  hasta poder recibir el evento 
+\color purple
+
 \begin_inset Formula $a$
 \end_inset
 
+
+\color inherit
 , a menos que se de otro evento 
+\color purple
+
 \begin_inset Formula $b$
 \end_inset
 
+
+\color inherit
  luego de 
 \begin_inset Formula $T$
 \end_inset
@@ -2013,31 +2162,47 @@ Requerimientos
 
 \begin_layout Standard
 Un proceso 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
 , debe almacenar elementos en dos 
 \emph on
 buffers
 \emph default
  de la misma capacidad finita y conocida 
+\color purple
+
 \begin_inset Formula $N$
 \end_inset
 
+
+\color inherit
 .
  Por otro lado, existen procesos (llamados productores) que envían datos
  a 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  para que este los almacene en los 
 \emph on
 buffers
 \emph default
 , y existen procesos (llamados consumidores) que le piden a 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  los datos que tiene almacenados (lo que hace que los 
 \emph on
 buffers
@@ -2047,9 +2212,13 @@ buffers
 
 \begin_layout Standard
 Cuando un consumidor quiere un dato que 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  tiene, el proceso le debe indicar el 
 \emph on
 buffer
@@ -2064,9 +2233,13 @@ buffer
 
 \begin_layout Standard
 Obviamente 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  no puede poner elementos en un 
 \emph on
 buffer
@@ -2077,9 +2250,13 @@ buffer
 \emph default
  vacío.
  Lo que sí debe hacer 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  es balancear el uso de los 
 \emph on
 buffers
@@ -2148,13 +2325,21 @@ Una cinta transportadora acarrea ítems de dos tipos (
 \end_inset
 
 , mediante los eventos 
+\color purple
+
 \begin_inset Formula $turnona$
 \end_inset
 
+
+\color inherit
  y 
+\color purple
+
 \begin_inset Formula $turnonb$
 \end_inset
 
+
+\color inherit
 , respectivamente.
  Cada maquina necesita 
 \begin_inset Formula $r$
@@ -2166,41 +2351,65 @@ Una cinta transportadora acarrea ítems de dos tipos (
 \begin_layout Standard
 Cada vez que en la cinta se detecta un ítem de un tipo, el software debe
  emitir el evento 
+\color purple
+
 \begin_inset Formula $takea$
 \end_inset
 
+
+\color inherit
  o 
+\color purple
+
 \begin_inset Formula $takeb$
 \end_inset
 
+
+\color inherit
  para que la maquina correspondiente capture el ítem en cuestión, a menos
  que a continuación se indique otra cosa.
 \end_layout
 
 \begin_layout Standard
 Si entre la aparición de dos o mas ítems transcurren menos de 
+\color purple
+
 \begin_inset Formula $n$
 \end_inset
 
+
+\color inherit
  unidades de tiempo, no se debe emitir la orden de captura correspondiente
  a los ítems posteriores al primero; se deberá emitir las ordenes de captura
  cuando aparezca un ítem 
+\color purple
+
 \begin_inset Formula $n$
 \end_inset
 
+
+\color inherit
  unidades de tiempo después del anterior.
 \end_layout
 
 \begin_layout Standard
 Si transcurren mas de 
+\color purple
+
 \begin_inset Formula $t$
 \end_inset
 
+
+\color inherit
  unidades de tiempo entre dos ítems, se debe apagar todo el sistema mediante
  el evento 
+\color purple
+
 \begin_inset Formula $abort$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
