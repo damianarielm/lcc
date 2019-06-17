@@ -3781,7 +3781,18 @@ Función de probabilidad acumulada (COMPLETAR)
 \end_layout
 
 \begin_layout Section
-Condición de cierre (COMPLETAR)
+Condición de cierre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\intop_{-\infty}^{\infty}f\left(x\right)\,dx=\intop_{a}^{b}\frac{1}{b-a}\,dx=\frac{1}{b-a}\intop_{a}^{b}1\,dx=\frac{1}{b-a}\cdot\left.x\right|_{a}^{b}=\frac{1}{b-a}\cdot\left(b-a\right)=1
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3789,7 +3800,26 @@ Medidas de tendencia central (COMPLETAR)
 \end_layout
 
 \begin_layout Subsection
-Esperanza (COMPLETAR)
+Esperanza
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E\left(X\right)=\intop_{-\infty}^{\infty}x\cdot f\left(x\right)\,dx=\intop_{a}^{b}x\cdot\frac{1}{b-a}\,dx=\frac{1}{b-a}\intop_{a}^{b}x\,dx=\frac{1}{b-a}\cdot\left.\frac{x^{2}}{2}\right|_{a}^{b}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{b-a}\left(\frac{b^{2}-a^{2}}{2}\right)=\frac{\left(b+a\right)\left(b-a\right)}{2\left(b-a\right)}=\frac{b+a}{2}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3797,7 +3827,26 @@ Moda (COMPLETAR)
 \end_layout
 
 \begin_layout Subsection
-Mediana (COMPLETAR)
+Mediana
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F\left(x^{*}\right)=\frac{1}{2}\iff\intop_{a}^{x^{*}}\frac{1}{b-a}\,dx=\frac{1}{2}\iff\frac{1}{b-a}\intop_{a}^{x^{*}}1\,dx=\frac{1}{2}\iff\frac{1}{b-a}\cdot\left.x\right|_{a}^{x^{*}}=\frac{1}{2}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff\frac{1}{b-a}\cdot\left(x^{*}-a\right)=\frac{1}{2}\iff x^{*}-a=\frac{b-a}{2}\iff x^{*}=\frac{b-a}{2}+a\iff x^{*}=\frac{b+a}{2}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

@@ -3462,7 +3462,185 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  domain=135:205, samples=150,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis lines=middle,
+\end_layout
+
+\begin_layout Plain Layout
+
+  height=5cm, width=12cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+  ytick=
+\backslash
+empty, thick,
+\end_layout
+
+\begin_layout Plain Layout
+
+  axis on top,
+\end_layout
+
+\begin_layout Plain Layout
+
+  grid = major
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks, forget plot, fill=blue!20, draw=none, domain=180:205]
+ {gauss(169,5)} 
+\backslash
+closedcycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(169,5)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$
+\backslash
+mu = 169$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(150,5)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$
+\backslash
+mu = 150$}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addplot+[no marks] {gauss(190,5)};
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+addlegendentry{$
+\backslash
+mu = 190$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Envasado de café en gramos
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\sim N\left(\mu,5\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X\geq180\right)=1-P\left(X\leq180\right)=1-P\left(Z\leq\frac{180-\mu}{5}\right)\leq\frac{2}{100}\iff\frac{98}{100}\leq P\left(Z\leq\frac{180-\mu}{5}\right)\iff2,06\apprle\frac{180-\mu}{5}\iff\mu\apprle169,7$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3495,10 +3673,6 @@ Las especificaciones del contenido son 300
 
  20 ml.
  ¿Qué proporción de latas cumple con el requisito?
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -3705,6 +3879,10 @@ end{tikzpicture}
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -4395,10 +4573,6 @@ Soluciones
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -4528,10 +4702,6 @@ f_{G}\left(g\right)=f_{X}\left(\frac{g-10}{2}\right)\left|\frac{d}{dg}\left(\fra
 
 \begin_layout Itemize
 \begin_inset Formula $\text{\ensuremath{E\left(G\right)=E\left(10+2X\right)=10+2E\left(X\right)=10+8=18}}$
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 

@@ -153,15 +153,207 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to b\to STOP_{\left\{ a,b\right\} }\parallel\left(a\to a\to STOP_{\left\{ a\right\} }\sqcap a\to c\to STOP_{\left\{ a,c\right\} }\right)$
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle e\to P\sqcap e\to Q=e\to\left(P\sqcap Q\right)\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to b\to STOP_{\left\{ a,b\right\} }\parallel a\to\left(a\to STOP_{\left\{ a\right\} }\sqcap c\to STOP_{\left\{ a,c\right\} }\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle Sincronization\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(b\to STOP_{\left\{ a,b\right\} }\parallel\left(a\to STOP_{\left\{ a\right\} }\sqcap c\to STOP_{\left\{ a,c\right\} }\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle P\parallel\left(Q\sqcap R\right)=\left(P\parallel Q\right)\sqcap\left(P\parallel R\right)\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(\left(BSTOP\parallel ASTOP\right)\sqcap\left(BSTOP\parallel CSTOP\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle Interleaving\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(\left(b\to\left(STOP_{\left\{ a,b\right\} }\parallel ASTOP\right)\square a\to\left(BSTOP\parallel STOP_{\left\{ a\right\} }\right)\right)\sqcap\left(BSTOP\parallel CSTOP\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle \left\{ a,b\right\} \cap\alpha ASTOP\neq\emptyset\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(\left(b\to STOP\square a\to\left(BSTOP\parallel STOP_{\left\{ a\right\} }\right)\right)\sqcap\left(BSTOP\parallel CSTOP\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle \alpha BSTOP\cap\left\{ a\right\} \neq\emptyset\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(\left(b\to STOP\square a\to STOP\right)\sqcap\left(BSTOP\parallel CSTOP\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle Interleaving\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(\left(b\to STOP\square a\to STOP\right)\sqcap\left(b\to\left(STOP_{\left\{ a,b\right\} }\parallel CSTOP\right)\square c\to\left(BSTOP\parallel STOP_{\left\{ a,c\right\} }\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle \left\{ a,b\right\} \cap\alpha CSTOP\neq\emptyset\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(\left(b\to STOP\square a\to STOP\right)\sqcap\left(b\to STOP\square c\to\left(BSTOP\parallel STOP_{\left\{ a,c\right\} }\right)\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $\equiv\left\langle \alpha BSTOP\cap\left\{ a,c\right\} \neq\emptyset\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color purple
+\begin_inset Formula $a\to\left(\left(b\to STOP\square a\to STOP\right)\sqcap\left(b\to STOP\square c\to STOP\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -694,10 +886,6 @@ El proceso
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -715,7 +903,7 @@ Solución
 \align center
 \begin_inset Graphics
 	filename Imagenes/teoria/solucion11.png
-	scale 30
+	scale 25
 
 \end_inset
 
@@ -788,6 +976,10 @@ Solución
 	filename Imagenes/teoria/solucion12.png
 	scale 30
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
