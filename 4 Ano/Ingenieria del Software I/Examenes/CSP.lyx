@@ -1514,9 +1514,13 @@ Requerimientos
 
 \begin_layout Standard
 Un sistema distribuido consta de 
+\color purple
+
 \begin_inset Formula $N$
 \end_inset
 
+
+\color inherit
  computadoras cada una de las cuales ejecuta el mismo programa; estas computador
 as pueden estar encendidas o apagadas.
  Este programa recibe dos eventos (en cada computadora) desde el exterior:
@@ -1545,9 +1549,13 @@ as pueden estar encendidas o apagadas.
 
 \begin_layout Itemize
 Cuando el programa en una computadora recibe 
+\color purple
+
 \begin_inset Formula $a$
 \end_inset
 
+
+\color inherit
 , debe comunicarles a todas las otras computadoras por medio de un evento
  interno, que lo ha recibido.
 \end_layout
@@ -1625,9 +1633,13 @@ Si el programa recibe el evento
 
 \color inherit
  luego de 
+\color purple
+
 \begin_inset Formula $T$
 \end_inset
 
+
+\color inherit
  unidades de tiempo en cuyo caso debe reiniciar el tiempo de espera.
 \end_layout
 
@@ -1669,7 +1681,7 @@ Requerimientos
 Un sistema de alarma hogareño simple consta de un teclado (contiene los
  10 dígitos y las dos primeras letras del abecedario), dos sensores de movimient
 o y dos magnéticos (para aberturas) y una bocina.
- Todo el sistema sera controlado por un programa.
+ Todo el sistema será controlado por un programa.
 \end_layout
 
 \begin_layout Standard
@@ -1685,13 +1697,21 @@ El sistema puede estar armado o no.
 
 \begin_layout Standard
 El sistema agrupa un sensor de movimiento y uno magnético en el sector 
+\color purple
+
 \begin_inset Formula $A$
 \end_inset
 
+
+\color inherit
  y a los sensores restantes en el sector 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
 .
  Cada sector se puede armar independientemente del otro.
  Para hacerlo se teclea su letra y el código de seguridad.
@@ -3051,6 +3071,118 @@ Tabla de control
 
 \begin_layout Subsubsection
 Statecharts
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/gui/a.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/gui/b.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/gui/chico.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/gui/rojo.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/gui/verde.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/gui/gui.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/gui/c.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $Y\equiv a/dibujara$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $X\equiv b\left[in\,CSI\land\left(VSI\lor RSI\right)\right]/dibujarb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $W\equiv c\left[in\,VNO\right]/dibujarc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $Z1\equiv b\left[in\,CNO\lor\left(VNO\land RNO\right)\right]/dibujarb$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $Z2\equiv c\left[in\,VSI\right]/dibujarc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\color purple
+\begin_inset Formula $S\equiv GUI\parallel CHICO\parallel ROJO\parallel VERDE$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
