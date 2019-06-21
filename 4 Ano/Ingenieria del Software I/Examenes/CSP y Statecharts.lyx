@@ -377,14 +377,18 @@ Solución
 
 \begin_layout Standard
 Sea 
+\color purple
+
 \begin_inset Formula $\alpha$
 \end_inset
 
+
+\color inherit
  el conjunto de todas las señales que puede recibir dicho proceso.
  Si definimos 
 \color purple
 
-\begin_inset Formula $P\left(S\right)=x:\alpha\to P\left(S^{\smallfrown}\left\langle x\right\rangle \right)\left\lceil \#S\neq100\right\rceil W$
+\begin_inset Formula $P\left(n\right)=\alpha\to P\left(n+1\right)\left\lceil n\neq100\right\rceil W$
 \end_inset
 
 
@@ -392,7 +396,7 @@ Sea
 , entonces el proceso que estamos buscando es: 
 \color purple
 
-\begin_inset Formula $P\left(\left\langle \right\rangle \right)$
+\begin_inset Formula $P\left(0\right)$
 \end_inset
 
 
@@ -1782,68 +1786,264 @@ Requerimientos
 
 \begin_layout Standard
 Se cuenta con un proceso 
+\color purple
+
 \begin_inset Formula $S$
 \end_inset
 
+
+\color inherit
  que envía mensajes, un medio 
+\color purple
+
 \begin_inset Formula $E$
 \end_inset
 
+
+\color inherit
  que los transmite y un proceso 
+\color purple
+
 \begin_inset Formula $R$
 \end_inset
 
+
+\color inherit
  que los recibe.
  
+\color purple
+
 \begin_inset Formula $E$
 \end_inset
 
+
+\color inherit
  puede almacenar solo un mensaje a la vez, puede corromper a lo sumo uno
  de cada tres mensajes consecutivos y, por simplicidad, se supone que cada
  mensaje es un 0 o un 1; 
+\color purple
+
 \begin_inset Formula $E$
 \end_inset
 
+
+\color inherit
  esta fuera del control del sistema, es decir es parte del entorno.
  Se espera que 
+\color purple
+
 \begin_inset Formula $S$
 \end_inset
 
+
+\color inherit
  y 
+\color purple
+
 \begin_inset Formula $R$
 \end_inset
 
+
+\color inherit
  colaboren para evitar la corrupción producida por 
+\color purple
+
 \begin_inset Formula $E$
 \end_inset
 
- .
+
+\color inherit
+.
  Para ello utilizaran un mecanismo simple: 
+\color purple
+
 \begin_inset Formula $S$
 \end_inset
 
+
+\color inherit
  enviara cada mensaje por triplicado y 
+\color purple
+
 \begin_inset Formula $R$
 \end_inset
 
+
+\color inherit
  decidirá cual es el valido de acuerdo a una elección por mayoría simple.
  Especifique los procesos 
+\color purple
+
 \begin_inset Formula $S$
 \end_inset
 
- , 
+
+\color inherit
+, 
+\color purple
+
 \begin_inset Formula $E$
 \end_inset
 
+
+\color inherit
  y 
+\color purple
+
 \begin_inset Formula $R$
 \end_inset
 
+
+\color inherit
  descriptos arriba.
 \end_layout
 
 \begin_layout Subsubsection
 Designaciones
+\end_layout
+
+\begin_layout Itemize
+El proceso 
+\color purple
+
+\begin_inset Formula $S$
+\end_inset
+
+
+\color inherit
+ envió un 0 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $0$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El proceso 
+\color purple
+
+\begin_inset Formula $S$
+\end_inset
+
+
+\color inherit
+ envió un 1 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $1$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El medio 
+\color purple
+
+\begin_inset Formula $E$
+\end_inset
+
+
+\color inherit
+ envió un 0 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $cero$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El medio 
+\color purple
+
+\begin_inset Formula $E$
+\end_inset
+
+
+\color inherit
+ envió un 1 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $uno$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El proceso 
+\color purple
+
+\begin_inset Formula $R$
+\end_inset
+
+
+\color inherit
+ determino que el mensaje enviado es 0 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $zero$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El proceso 
+\color purple
+
+\begin_inset Formula $R$
+\end_inset
+
+
+\color inherit
+ determino que el mensaje enviado es 1 
+\begin_inset Formula $\approx$
+\end_inset
+
+ 
+\color purple
+
+\begin_inset Formula $one$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1852,6 +2052,23 @@ Tabla de control
 
 \begin_layout Subsubsection
 Statecharts
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Imagenes/errores/s.png
+	scale 20
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Imagenes/errores/r.png
+	scale 20
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -1944,11 +2161,7 @@ Un productor produce de a un mensaje a la vez a razón de 3 segundos cada
  uno.
  Existen otros dos productores que se comportan de la misma forma pero trabajan
  con tiempos de 1 y 4 segundos, respectivamente.
- Todos los productores tienen un error en sus relojes de 
-\end_layout
-
-\begin_layout Standard
-segundos con 
+ Todos los productores tienen un error en sus relojes de segundos con 
 \begin_inset Formula $0<\delta<1$
 \end_inset
 
