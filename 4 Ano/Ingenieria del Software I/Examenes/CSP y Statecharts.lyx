@@ -2091,7 +2091,7 @@ Se requiere el software de control para un robot industrial con las siguientes
  El robot esta ubicado al borde de una cinta transportadora que acarrea
  piezas metálicas.
  El requerimiento básico es que si el sensor detecta que la temperatura
- de la pieza que esta en su cercana es superior a 
+ de la pieza que esta en su cercanía es superior a 
 \begin_inset Formula $maxtemp$
 \end_inset
 
@@ -2343,7 +2343,7 @@ Requerimientos
 \end_layout
 
 \begin_layout Standard
-Un edificio contara con varios ascensores controlados desde un programa.
+Un edificio contará con varios ascensores controlados desde un programa.
  No puede haber mas de dos ascensores moviéndose al mismo tiempo.
  Las puertas de los ascensores solo deben abrirse cuando estos están detenidos
  en un piso.
@@ -2478,7 +2478,7 @@ Requerimientos
 
 \begin_layout Standard
 Un software controlara el funcionamiento de un minicomponente musical.
- El equipo consta de reproductor de CD y radio AM/FM.
+ El equipo consta de un reproductor de CD y radio AM/FM.
  El panel de control cuenta con la interfaz de usuario habitual: encendido/apaga
 do, 
 \begin_inset Quotes fld
@@ -2524,7 +2524,7 @@ eject
 \begin_inset Quotes frd
 \end_inset
 
- y selector CD- radio.
+ y selector CD-radio.
  Los botones como 
 \begin_inset Quotes fld
 \end_inset
@@ -2900,8 +2900,8 @@ Para transmitir datos entre terminales de trabajo conectadas en red se debe
 \begin_inset Formula $broadcast$
 \end_inset
 
- con un único bus la clave esta en como asignar el uso de este cuando varias
- terminales compiten por el.
+ con un único bus la clave está en como asignar el uso de este cuando varias
+ terminales compiten por él.
 \end_layout
 
 \begin_layout Standard
@@ -2940,7 +2940,7 @@ s.
 
 \begin_layout Standard
 Los mensajes que colisionan se pierden.
- Una vez que el mensaje ha sido transmitido, la terminal que inicio la transmisi
+ Una vez que el mensaje ha sido transmitido, la terminal que inició la transmisi
 ón es notificada.
 \end_layout
 
@@ -3181,12 +3181,15 @@ avisen
 \end_inset
 
 ).
- Cuando 
+\end_layout
+
+\begin_layout Standard
+Cuando 
 \begin_inset Formula $D$
 \end_inset
 
  termina de recibir los valores debe enviarle el promedio de los valores
- recibidos a otro dispositivo, y comenzar el ciclo nuevamente en cuto caso
+ recibidos a otro dispositivo, y comenzar el ciclo nuevamente en cuyo caso
  se reinicia el arreglo de sensores de manera tal que el primero es el que
  posiblemente enviara el primer valor en el nuevo ciclo.
  En caso de no haber recibido ningún valor luego de efectuar el primer pedido
@@ -3232,28 +3235,48 @@ Requerimientos
 
 \begin_layout Standard
 Una interfaz gráfica de usuario (GUI) consta de tres pantallas: 
+\color purple
+
 \begin_inset Formula $A$
 \end_inset
 
+
+\color inherit
 , 
+\color purple
+
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
  y 
+\color purple
+
 \begin_inset Formula $C$
 \end_inset
 
+
+\color inherit
 .
  El usuario puede seleccionar cualquiera de ellas en cualquier orden, pero
  si durante más de 
+\color purple
+
 \begin_inset Formula $N$
 \end_inset
 
+
+\color inherit
  segundos permanece en cualquier pantalla sin interactuar con el sistema,
  este mostrará la pantalla 
+\color purple
+
 \begin_inset Formula $A$
 \end_inset
 
+
+\color inherit
 .
 \end_layout
 
@@ -3264,44 +3287,72 @@ Cada vez que el sistema muestra una pantalla, debe dibujar la última selección
 \end_layout
 
 \begin_layout Itemize
+
+\color purple
 \begin_inset Formula $A$
 \end_inset
 
+
+\color inherit
 : Seleccionar uno de cuatro rectángulos cada uno de un color (rojo, verde,
  azul y blanco).
  Inicialmente no hay ninguno seleccionado.
 \end_layout
 
 \begin_layout Itemize
+
+\color purple
 \begin_inset Formula $B$
 \end_inset
 
+
+\color inherit
 : Si el rectángulo seleccionado en 
+\color purple
+
 \begin_inset Formula $A$
 \end_inset
 
+
+\color inherit
  es verde o rojo y el tamaño seleccionado en 
+\color purple
+
 \begin_inset Formula $C$
 \end_inset
 
+
+\color inherit
  es chico, entonces puede seleccionar un numero entre 1 y 3.
  En cualquier otro caso no puede hacer nada.
 \end_layout
 
 \begin_layout Itemize
+
+\color purple
 \begin_inset Formula $C$
 \end_inset
 
+
+\color inherit
 : Si el rectángulo seleccionado en 
+\color purple
+
 \begin_inset Formula $A$
 \end_inset
 
+
+\color inherit
  es el verde, entonces el usuario no puede seleccionar nada en esta pantalla.
  En cualquier otro caso puede aumentar o disminuir el tamaño del rectángulo
  seleccionado en 
+\color purple
+
 \begin_inset Formula $A$
 \end_inset
 
+
+\color inherit
 , eligiendo un elemento de la siguiente escala: chico, mediano o grande.
 \end_layout
 

@@ -2959,7 +2959,7 @@ end{tikzpicture}
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\text{\ensuremath{=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}\,dt_{1}{\displaystyle \intop_{2}^{\infty}}e^{-\frac{t_{2}}{2}}\,dt_{2}=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}2e^{-1}\,dt_{1}={\displaystyle \intop_{1}^{\infty}}\frac{t_{1}e^{-\frac{t_{1}}{2}-1}}{4}\,dt_{1}=\frac{3\sqrt{e}}{2}}}$
+\begin_inset Formula $\text{\ensuremath{=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}\,dt_{1}{\displaystyle \intop_{2}^{\infty}}e^{-\frac{t_{2}}{2}}\,dt_{2}=\frac{1}{8}{\displaystyle \intop_{1}^{\infty}}t_{1}e^{-\frac{t_{1}}{2}}2e^{-1}\,dt_{1}={\displaystyle \intop_{1}^{\infty}}\frac{t_{1}e^{-\frac{t_{1}}{2}-1}}{4}\,dt_{1}=\frac{3e^{-\frac{3}{2}}}{2}}}$
 \end_inset
 
 .
@@ -4029,12 +4029,12 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $X_{1}\sim N\left(1,\frac{1}{10}\right)$
+\begin_inset Formula $X_{1}\sim N\left(1,\frac{1}{\sqrt{10}}\right)$
 \end_inset
 
 .
  
-\begin_inset Formula $X_{2}\sim N\left(\mu_{2},\frac{1}{10}\right)$
+\begin_inset Formula $X_{2}\sim N\left(\mu_{2},\frac{1}{\sqrt{10}}\right)$
 \end_inset
 
 .
@@ -4118,7 +4118,7 @@ Solución
 .
  
 \begin_inset Formula $f_{X_{i}}\left(x_{i}\right)=\begin{cases}
-\frac{1}{2} & 0<x_{i}<1\\
+1 & 0<x_{i}<1\\
 0 & \text{en otro caso}
 \end{cases}$
 \end_inset
