@@ -1,0 +1,5993 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{arrows, automata}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+En cada ronda de un juego, un jugador gana 
+\begin_inset Formula $\$1$
+\end_inset
+
+ con probabilidad 
+\begin_inset Formula $p$
+\end_inset
+
+, o pierde 
+\begin_inset Formula $\$1$
+\end_inset
+
+ con probabilidad 
+\begin_inset Formula $1-p$
+\end_inset
+
+.
+ El jugador comienza con 
+\begin_inset Formula $\$k$
+\end_inset
+
+.
+ El juego se detiene cuando el jugador pierde todo su dinero o gana un total
+ de 
+\begin_inset Formula $\$n$
+\end_inset
+
+, donde 
+\begin_inset Formula $n>k$
+\end_inset
+
+.
+ Las fortunas sucesivas del jugador forman una cadena de Markov en 
+\begin_inset Formula $\left\{ 0,\ldots,n\right\} $
+\end_inset
+
+ con 
+\begin_inset Formula $X_{0}=k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Simular la ruina del jugador para una inversión inicial de 
+\begin_inset Formula $\$2$
+\end_inset
+
+, jugando un juego justo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+k = 2; n = 5; p = 0.5; q = 1 - p
+\end_layout
+
+\begin_layout Plain Layout
+
+gamblersruin <- function() {
+\end_layout
+
+\begin_layout Plain Layout
+
+  sim = k
+\end_layout
+
+\begin_layout Plain Layout
+
+  while (sum(sim) > 0 && sum(sim) < n + k) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (rbinom(1, 1, p)) sim = append(sim, 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else sim = append(sim, -1)
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  return (sim)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+gamblersruin()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[xlabel = Tiempo, ylabel = Dinero]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot coordinates {
+\end_layout
+
+\begin_layout Plain Layout
+
+        (0,2) (1,1) (2,2) (3,3) (4,4) (5,3)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (6,2) (7,1) (8,2) (9,1) (10,2) (11,1) (12,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+	};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Estimar la probabilidad de que el jugador llegue a la ruina antes de ganar
+ $5.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+sum(gamblersruin())
+\end_layout
+
+\end_inset
+
+ es 0 si llegó a la ruina, o 7 en caso contrario.
+ Luego 
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+sum(gamblersruin())/(n+k)
+\end_layout
+
+\end_inset
+
+ será 1 en caso de ganar.
+ Podemos estimar la probabilidad simulando el proceso una gran cantidad
+ de veces de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+1 - mean(replicate(1000000, sum(gamblersruin())/(n+k)))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{0,714185}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Construir la matriz de transición para la cadena de Markov asociada.
+ Estimar la probabilidad en a) calculando potencias altas de la matriz.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}P=\begin{array}{c}
+0\\
+1\\
+2\\
+3\\
+4\\
+5\\
+6\\
+7
+\end{array} & \begin{pmatrix}1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+q & 0 & p & 0 & 0 & 0 & 0 & 0\\
+0 & q & 0 & p & 0 & 0 & 0 & 0\\
+0 & 0 & q & 0 & p & 0 & 0 & 0\\
+0 & 0 & 0 & q & 0 & p & 0 & 0\\
+0 & 0 & 0 & 0 & q & 0 & p & 0\\
+0 & 0 & 0 & 0 & 0 & q & 0 & p\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}\\
+ & \begin{array}{cccccccc}
+\enskip0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\end{array}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+P <- matrix(c(1,0,0,0,0,0,0,0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              q,0,p,0,0,0,0,0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,q,0,p,0,0,0,0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,0,q,0,p,0,0,0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,0,0,q,0,p,0,0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,0,0,0,q,0,p,0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,0,0,0,0,q,0,p,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,0,0,0,0,0,0,1),
+\end_layout
+
+\begin_layout Plain Layout
+
+            nrow = 8, byrow = TRUE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(expm)
+\end_layout
+
+\begin_layout Plain Layout
+
+c(0, 0, 1, 0, 0, 0, 0, 0) %*% (P %^% 10)
+\end_layout
+
+\begin_layout Plain Layout
+
+c(0, 0, 1, 0, 0, 0, 0, 0) %*% (P %^% 100)
+\end_layout
+
+\begin_layout Plain Layout
+
+c(0, 0, 1, 0, 0, 0, 0, 0) %*% (P %^% 1000)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}\boldsymbol{0,5488281} & 0 & 0,1279297 & 0 & 0,1513672 & 0 & 0,06445312 & 0,1074219\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}\boldsymbol{0,714272} & 0 & \approx0 & 0 & \approx0 & 0 & \approx0 & 0,2856991\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}\boldsymbol{0,7142857} & 0 & \approx0 & 0 & \approx0 & 0 & \approx0 & 0,2857143\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Comparar los resultados con la probabilidad exacta.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{n}{n+k}=\frac{5}{5+2}=\frac{5}{7}=0,7142857
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos observar que para potencias altas de la matriz y para un gran numero
+ de simulaciones, los resultados se aproximan a la probabilidad exacta.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+En aplicaciones de seguridad informática, un 
+\emph on
+honeypot
+\emph default
+ (o sistema trampa) es una herramienta dispuesta en una red o sistema informátic
+o para ser el objetivo de un posible ataque informático, y así poder detectarlo
+ y obtener información del mismo y del atacante.
+ Los datos del 
+\emph on
+honeypot
+\emph default
+ son estudiados utilizando cadenas de Markov.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se obtienen datos desde una base de datos central y se observan ataques
+ contra cuatro puertos de computadoras -80, 135, 139 y 445- durante un año.
+ Los estados de la cadena de Markov son los cuatro puertos y se incluye
+ un nodo indicando que ningún puerto está siendo atacado (
+\begin_inset Formula $NA$
+\end_inset
+
+).
+ Los datos se monitorean semanalmente y el puerto más atacado durante la
+ semana es guardado.
+ La matriz de transición para la cadena estimada para los ataques semanales
+ es la siguiente:
+\begin_inset Formula 
+\[
+\begin{aligned}\begin{array}{c}
+80\\
+135\\
+139\\
+145\\
+NA
+\end{array} & \begin{pmatrix}0 & 0 & 0 & 0 & 1\\
+0 & 8/13 & 3/13 & 1/13 & 1/13\\
+1/16 & 3/16 & 3/8 & 1/4 & 1/8\\
+0 & 1/11 & 4/11 & 5/11 & 1/11\\
+0 & 1/8 & 1/2 & 1/8 & 1/4
+\end{pmatrix}\\
+ & \begin{array}{ccccc}
+\quad80 & \quad135 & \enskip139 & \enskip145 & \enskip NA\end{array}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La distribución inicial es 
+\begin_inset Formula $a=\begin{pmatrix}0 & 0 & 0 & 0 & 1\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Después de dos semanas, ¿cúales son los puertos con más y menos probabilidad
+ de ser atacados?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{pmatrix}0 & 0 & 0 & 0 & 1\end{pmatrix}\begin{pmatrix}0 & 0 & 0 & 0 & 1\\
+0 & 8/13 & 3/13 & 1/13 & 1/13\\
+1/16 & 3/16 & 3/8 & 1/4 & 1/8\\
+0 & 1/11 & 4/11 & 5/11 & 1/11\\
+0 & 1/8 & 1/2 & 1/8 & 1/4
+\end{pmatrix}^{2}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\begin{pmatrix}0 & 0 & 0 & 0 & 1\end{pmatrix}\begin{pmatrix}0 & \frac{1}{8} & \frac{1}{2} & \frac{1}{8} & \frac{1}{4}\\
+\frac{3}{208} & \frac{13045}{29744} & \frac{4387}{14872} & \frac{2225}{14872} & \frac{1523}{14872}\\
+\frac{3}{128} & \frac{4101}{18304} & \frac{3087}{9152} & \frac{2173}{9152} & \frac{1627}{9152}\\
+\frac{1}{44} & \frac{2225}{12584} & \frac{579}{1573} & \frac{3975}{12584} & \frac{733}{6292}\\
+\frac{1}{32} & \frac{61}{286} & \frac{885}{2288} & \frac{1019}{4576} & \frac{167}{1144}
+\end{pmatrix}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\boxed{\begin{pmatrix}\boldsymbol{\frac{1}{32}} & \frac{61}{286} & \boldsymbol{\frac{885}{2288}} & \frac{1019}{4576} & \frac{167}{1144}\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El puerto con mas probabilidad de ser atacado es el 139 (con probabilidad
+ aproximada 
+\begin_inset Formula $0,3868$
+\end_inset
+
+) y el de menor probabilidad es el 80 (con probabilidad 
+\begin_inset Formula $0,03125$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar la distribución límite (si es que existe) de los puertos atacados.
+ Justificar.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+states = c(
+\begin_inset Quotes fld
+\end_inset
+
+80
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+135
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+139
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+145
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+NA
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- matrix(c(0,    0,    0,    0,    1,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,    8/13, 3/13, 1/13, 1/13,
+\end_layout
+
+\begin_layout Plain Layout
+
+              1/16, 3/16, 3/8,  1/4,  1/8,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,    1/11, 4/11, 5/11, 1/11,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,    1/8,  1/2,  1/8,  1/4),
+\end_layout
+
+\begin_layout Plain Layout
+
+            nrow = 5, byrow = TRUE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(markovchain)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- new(
+\begin_inset Quotes fld
+\end_inset
+
+markovchain
+\begin_inset Quotes frd
+\end_inset
+
+, states, TRUE, P)
+\end_layout
+
+\begin_layout Plain Layout
+
+is.irreducible(P) && period(P) == 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como la cadena de Markov es irreducible y aperiodica entonces 
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+steadyStates(P)
+\end_layout
+
+\end_inset
+
+ nos indica la distribución límite:
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}0,021 & 0,266 & 0,343 & 0,227 & 0,140\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Dans et al.
+ (2012) estudian el comportamiento de delfines en presencia deembarcaciones
+ turísticas en la Patagonia Argentina.
+ Para ello postulan un modelo de cadena de Markov, con espacio de estados
+ conformado por las 5 actividades primarias de los delfines: socializar
+ 
+\begin_inset Formula $\left(s\right)$
+\end_inset
+
+, viajar 
+\begin_inset Formula $\left(t\right)$
+\end_inset
+
+, merodear 
+\begin_inset Formula $\left(m\right)$
+\end_inset
+
+, alimentarse 
+\begin_inset Formula $\left(f\right)$
+\end_inset
+
+, descansar 
+\begin_inset Formula $\left(r\right)$
+\end_inset
+
+, obteniendo la siguiente matriz de transición:
+\begin_inset Formula 
+\[
+\begin{aligned}\begin{array}{c}
+s\\
+t\\
+m\\
+f\\
+r
+\end{array} & \begin{pmatrix}0,84 & 0,11 & 0,01 & 0,04 & 0,00\\
+0,03 & 0,80 & 0,04 & 0,10 & 0,03\\
+0,01 & 0,15 & 0,70 & 0,07 & 0,07\\
+0,03 & 0,19 & 0,02 & 0,75 & 0,01\\
+0,03 & 0,09 & 0,05 & 0,00 & 0,83
+\end{pmatrix}\\
+ & \begin{array}{ccccc}
+\quad s & \qquad t & \quad m & \quad f & \qquad r\end{array}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Clasificar los estados.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+states = c(
+\begin_inset Quotes fld
+\end_inset
+
+s
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+t
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+m
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+r
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- matrix(c(0.84, 0.11, 0.01, 0.04, 0.00,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0.03, 0.80, 0.04, 0.10, 0.03,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0.01, 0.15, 0.70, 0.07, 0.07,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0.03, 0.19, 0.02, 0.75, 0.01,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0.03, 0.09, 0.05, 0.00, 0.83),
+\end_layout
+
+\begin_layout Plain Layout
+
+            nrow = 5, byrow = TRUE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(markovchain)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- new(
+\begin_inset Quotes fld
+\end_inset
+
+markovchain
+\begin_inset Quotes frd
+\end_inset
+
+, states, TRUE, P)
+\end_layout
+
+\begin_layout Plain Layout
+
+summary(P)
+\end_layout
+
+\begin_layout Plain Layout
+
+period(P)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Estados recurrentes: 
+\begin_inset Formula $\left\{ s,t,m,f,r\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Estados transitorios: 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Estados absorventes: 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Cadena irreducible aperiódica.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Estimar la distribución a largo plazo de la actividad de los delfines.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+steadyStates(P)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}0,147 & 0,414 & 0,095 & 0,216 & 0,125\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Simular y graficar una trayectoria de dicho proceso.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rmarkovchain(19, P, 
+\begin_inset Quotes fld
+\end_inset
+
+t
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[symbolic y coords={s,t,m,f,r},
+\end_layout
+
+\begin_layout Plain Layout
+
+                 ymin=s, ymax=r]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot coordinates {
+\end_layout
+
+\begin_layout Plain Layout
+
+            (1,t)  (2,t)  (3,m)  (4,m)  (5,m)
+\end_layout
+
+\begin_layout Plain Layout
+
+            (6,t)  (7,t)  (8,t)  (9,t)  (10,m)
+\end_layout
+
+\begin_layout Plain Layout
+
+            (11,m) (12,r) (13,r) (14,r) (15,r)
+\end_layout
+
+\begin_layout Plain Layout
+
+            (16,r) (17,r) (18,s) (19,s) (20,s)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Simular 50 pasos de caminata aleatoria en el grafo correspondiente a la
+ siguiente figura:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [above right of=b] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below right of=b] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [below right of=c] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (f) [right of=e] {$f$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (a) edge node {} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (b) edge node {} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (b) edge node {} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (b) edge node {} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (c) edge node {} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (c) edge node {} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (d) edge node {} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (c) edge [bend left] node {} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (d) edge [bend right] node {} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Repetir la simulación 10 veces.
+ ¿Cuántas terminaron en el vértice 
+\begin_inset Formula $c$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+states = c(
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+b
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+d
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+e
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+f
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- matrix(c(0,   1,   0,   0,   0,   0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              1/4, 0,   1/4, 1/4, 1/4, 0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,   1/4, 0,   1/4, 1/4, 1/4,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,   1/4, 1/4, 0,   1/4, 1/4,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,   1/3, 1/3, 1/3, 0,   0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,   0,   1/2, 1/2, 0,   0)
+\end_layout
+
+\begin_layout Plain Layout
+
+           , nrow = 6, byrow = TRUE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(markovchain)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- new(
+\begin_inset Quotes fld
+\end_inset
+
+markovchain
+\begin_inset Quotes frd
+\end_inset
+
+, states, TRUE, P)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+steps = 50; sims = 10; count = 0
+\end_layout
+
+\begin_layout Plain Layout
+
+walks <- replicate(sims, rmarkovchain(steps, P, 
+\begin_inset Quotes fld
+\end_inset
+
+a
+\begin_inset Quotes frd
+\end_inset
+
+))
+\end_layout
+
+\begin_layout Plain Layout
+
+for (i in 1:sims) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (walks[steps, i] == 
+\begin_inset Quotes fld
+\end_inset
+
+c
+\begin_inset Quotes frd
+\end_inset
+
+) count = count + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+count
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Terminaron en 
+\begin_inset Quotes fld
+\end_inset
+
+
+\begin_inset Formula $c$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+, tres de diez simulaciones.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Comparar con el resultado exacto de la probabilidad a largo plazo de visitar
+ a 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+steadyStates(P)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}0,555 & 0,222 & \boldsymbol{0,222} & 0,222 & 0,166 & 0,111\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A medida que aumentemos el numero de simulaciones, mas se aproximará el
+ resultado a 
+\begin_inset Formula $0,222$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Hay 
+\begin_inset Formula $k$
+\end_inset
+
+ canciones en el reproductor de música de María.
+ El reproductor está seteado en un modo 
+\emph on
+shuffle
+\emph default
+, en el cual las canciones se eligen aleatoriamente de forma uniforme con
+ reemplazo; por lo tanto las repeticiones de canciones es posible.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ el número de canciones no repetidas que han sido escuchadas después de
+ la n-ésima reproducción.
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $\left\{ X_{n}:n\in\mathbb{N}\right\} $
+\end_inset
+
+ es una cadena de Markov y determinar la matriz de transición.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T=\mathbb{N}$
+\end_inset
+
+ es infinito numerable.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E=\left\{ 0,\ldots,k\right\} $
+\end_inset
+
+ es discreto.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $B_{0}=0$
+\end_inset
+
+ y 
+\begin_inset Formula $B_{n}=\begin{cases}
+1 & \text{Si la n-esima cancion no es repetida}\\
+0 & \text{Si la n-esima cancion es repetida}
+\end{cases}$
+\end_inset
+
+, luego 
+\begin_inset Formula $X_{n}={\displaystyle \sum_{i=0}^{n}}B_{i}$
+\end_inset
+
+.
+ Ahora:
+\begin_inset Formula 
+\[
+\boxed{P\left(X_{n+1}=j|X_{0}=i_{0},\ldots,X_{n}=i\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=P\left(X_{n}+B_{n+1}=j|X_{0}=i_{0},\ldots,X_{n}=i\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=P\left(i+B_{n+1}=j|X_{0}=i_{0},\ldots,X_{n}=i\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=P\left(B_{n+1}=j-i|X_{0}=i_{0},\ldots,X_{n}=i\right)=P\left(B_{n+1}=j-i\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{P\left(B_{n+1}=j-i\right)P\left(X_{n}=i\right)}{P\left(X_{n}=i\right)}=\frac{P\left(B_{n+1}=j-i,X_{n}=i\right)}{P\left(X_{n}=i\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{P\left(X_{n+1}=j,X_{n}=i\right)}{P\left(X_{n}=i\right)}=\boxed{P\left(X_{n+1}=j|X_{n}=i\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\left(\begin{array}{c|cccccccc}
+0 & 0 & 1 & 0 & 0 & \cdots & \cdots & 0 & 0\\
+1 & 0 & \frac{1}{k} & \frac{k-1}{k} & 0 & 0 & \cdots & \cdots & 0\\
+2 & 0 & 0 & \frac{2}{k} & \frac{k-2}{k} & 0 & 0 & \cdots & \vdots\\
+\vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & \vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & 0\\
+k-2 & \vdots & \vdots & \vdots & 0 & \ddots & \frac{k-2}{k} & \frac{2}{k} & 0\\
+k-1 & 0 & 0 & \vdots & \vdots & \ddots & \ddots & \frac{k-1}{k} & \frac{1}{k}\\
+k & 0 & 0 & \cdots & \cdots & \cdots & 0 & 0 & 1
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si María tiene cuatro canciones en su reproductor de música, encontrar la
+ probabilidad de que todas las canciones sean escuchadas después de 6 reproducci
+ones.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+k = 4; states = c(
+\begin_inset Quotes fld
+\end_inset
+
+0
+\begin_inset Quotes frd
+\end_inset
+
+, 1:4)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- matrix(c(0, 1,   0,       0,       0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0, 1/k, (k-1)/k, 0,       0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0, 0,   2/k,     (k-2)/k, 0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0, 0,   0,       3/k,     (k-3)/4,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0, 0,   0,       0,       1),
+\end_layout
+
+\begin_layout Plain Layout
+
+            nrow = k+1, byrow = TRUE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(expm)
+\end_layout
+
+\begin_layout Plain Layout
+
+c(1, 0, 0, 0, 0) %*% (P %^% 6)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}0,0009 & 0,0908 & 0,5273 & \boldsymbol{0,3808}\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Se tiran 5 dados y se ponen a un lado aquellos que mostraron un 6.
+ Los restantes se lanzan nuevamente y se repite el procedimiento, poniendo
+ a un lado aquellos dados que muestran un 6, y así sucesivamente.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ el número de dados en los que salió 6 después de 
+\begin_inset Formula $n$
+\end_inset
+
+ tiradas.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Describir la matriz de transición 
+\begin_inset Formula $P$
+\end_inset
+
+ para la cadena de Markov.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Definimos 
+\begin_inset Formula $Y_{e}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Numero de dados que muestran un 6, de un total de 
+\begin_inset Formula $e$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+, luego 
+\begin_inset Formula $Y_{e}\sim Bi\left(e,\frac{1}{6}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $p_{e}\left(y\right)=P\left(Y_{e}=y\right)$
+\end_inset
+
+, entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\begin{array}{c}
+0\\
+1\\
+2\\
+3\\
+4\\
+5
+\end{array} & \begin{pmatrix}p_{5}\left(0\right) & p_{5}\left(1\right) & p_{5}\left(2\right) & p_{5}\left(3\right) & p_{5}\left(4\right) & p_{5}\left(5\right)\\
+0 & p_{4}\left(0\right) & p_{4}\left(1\right) & p_{4}\left(2\right) & p_{4}\left(3\right) & p_{4}\left(4\right)\\
+0 & 0 & p_{3}\left(0\right) & p_{3}\left(1\right) & p_{3}\left(2\right) & p_{3}\left(3\right)\\
+0 & 0 & 0 & p_{2}\left(0\right) & p_{2}\left(1\right) & p_{2}\left(2\right)\\
+0 & 0 & 0 & 0 & p_{1}\left(0\right) & p_{1}\left(1\right)\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}\approx\\
+ & \begin{array}{cccccc}
+\hspace{1.5em}0 & \qquad1 & \hspace{1.5em}2 & \qquad3 & \qquad4 & \qquad5\end{array}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\approx\begin{pmatrix}0,4018 & 0,4018 & 0,1607 & 0,0321 & 0,0032 & 0,0001\\
+0 & 0,4822 & 0,3858 & 0,1157 & 0,0154 & 0,0007\\
+0 & 0 & 0,5787 & 0,3472 & 0,0694 & 0,0046\\
+0 & 0 & 0 & 0,6944 & 0,2777 & 0,0277\\
+0 & 0 & 0 & 0 & 0,8333 & 0,1666\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar la probabilidad de obtener todos 6 en tres jugadas.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt,fontsize={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+p = 1/6
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- matrix(c(
+\end_layout
+
+\begin_layout Plain Layout
+
+     dbinom(0,5,p), dbinom(1,5,p), dbinom(2,5,p), dbinom(3,5,p), dbinom(4,5,p),
+ dbinom(5,5,p),
+\end_layout
+
+\begin_layout Plain Layout
+
+     0,             dbinom(0,4,p), dbinom(1,4,p), dbinom(2,4,p), dbinom(3,4,p),
+ dbinom(4,4,p),
+\end_layout
+
+\begin_layout Plain Layout
+
+     0,             0,             dbinom(0,3,p), dbinom(1,3,p), dbinom(2,3,p),
+ dbinom(3,3,p),
+\end_layout
+
+\begin_layout Plain Layout
+
+     0,             0,             0,             dbinom(0,2,p), dbinom(1,2,p),
+ dbinom(2,2,p),
+\end_layout
+
+\begin_layout Plain Layout
+
+     0,             0,             0,             0,             dbinom(0,1,p),
+ dbinom(1,1,p),
+\end_layout
+
+\begin_layout Plain Layout
+
+     0,             0,             0,             0,             0,    
+         1),
+\end_layout
+
+\begin_layout Plain Layout
+
+     nrow = 6, byrow = TRUE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(expm)
+\end_layout
+
+\begin_layout Plain Layout
+
+c(1, 0, 0, 0, 0, 0) %*% (P %^% 3)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}0,06490547 & 0,2362559 & 0,3439886 & 0,2504237 & 0,09115423 & 0,\boldsymbol{01327206}\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cómo se espera que sea 
+\begin_inset Formula $P^{100}$
+\end_inset
+
+? Confirmar la respuesta utilizando R.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Naturalmente, despues de muchas tiradas esperamos haber retirado todos los
+ dados, es decir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P^{100}\approx\begin{pmatrix}0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+P %^% 100
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}\approx0 & \approx0 & \approx0 & \approx0 & \approx0 & 0,9999999\\
+0 & \approx0 & \approx0 & \approx0 & \approx0 & 1\\
+0 & 0 & \approx0 & \approx0 & \approx0 & 1\\
+0 & 0 & 0 & \approx0 & \approx0 & 1\\
+0 & 0 & 0 & 0 & \approx0 & 1\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Considerar la caminata aleatoria en 
+\begin_inset Formula $\left\{ 0,\ldots,k\right\} $
+\end_inset
+
+, la cual se mueve a la izquierda o a la derecha con probabilidades 
+\begin_inset Formula $p$
+\end_inset
+
+ y 
+\begin_inset Formula $q$
+\end_inset
+
+, respectivamente.
+ Si el proceso está en 0, transiciona a 1 en el siguiente paso.
+ Si el proceso está en 
+\begin_inset Formula $k$
+\end_inset
+
+, transiciona a 
+\begin_inset Formula $k-1$
+\end_inset
+
+ en el siguiente paso.
+ Esto se llama 
+\emph on
+caminata aleatoria con límites reflectantes
+\emph default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Asumir que 
+\begin_inset Formula $k=3$
+\end_inset
+
+, 
+\begin_inset Formula $q=\frac{1}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $p=\frac{3}{4}$
+\end_inset
+
+ y la distribucion inicial es uniforme.
+\end_layout
+
+\begin_layout Enumerate
+Calcular la matriz de transición.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\begin{array}{c}
+0\\
+1\\
+2\\
+3
+\end{array} & \begin{pmatrix}0 & 1 & 0 & 0\\
+p & 0 & q & 0\\
+0 & p & 0 & q\\
+0 & 0 & 1 & 0
+\end{pmatrix}\\
+ & \begin{array}{cccc}
+\enskip0 & 1 & 2 & 3\end{array}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar 
+\begin_inset Formula $P\left(X_{7}=1|X_{0}=3,X_{2}=2,X_{4}=2\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que si 
+\begin_inset Formula $X_{0}=3$
+\end_inset
+
+ entonces 
+\begin_inset Formula $X_{1}=2$
+\end_inset
+
+ (pues 
+\begin_inset Formula $P\left(X_{1}=2|X_{0}=3\right)=1$
+\end_inset
+
+), luego 
+\begin_inset Formula $\text{\ensuremath{P\left(X_{2}=2|X_{1}=2\right)=0}}$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula $P\left(X_{0}=3,X_{2}=2,X_{4}=2\right)=0$
+\end_inset
+
+.
+ Puesto que el suceso condicionante tiene probabilida 
+\begin_inset Formula $0$
+\end_inset
+
+, resulta:
+\begin_inset Formula 
+\[
+P\left(X_{7}=1|X_{0}=3,X_{2}=2,X_{4}=2\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar 
+\begin_inset Formula $P\left(X_{3}=1,X_{5}=3\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{0}P^{3}=\begin{pmatrix}\frac{1}{4} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4}\end{pmatrix}\begin{pmatrix}0 & \frac{15}{16} & 0 & \frac{1}{16}\\
+\frac{45}{64} & 0 & \frac{19}{64} & 0\\
+0 & \frac{57}{64} & 0 & \frac{7}{64}\\
+\frac{9}{16} & 0 & \frac{7}{16} & 0
+\end{pmatrix}=\begin{pmatrix}\frac{81}{256} & \frac{117}{256} & \frac{47}{256} & \frac{11}{256}\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\left(X_{3}=1,X_{5}=3\right)=\left(\pi_{0}P^{3}\right)\left(1\right)P^{2}\left(1,3\right)=\frac{117}{256}{\displaystyle \sum_{k\in E}}P\left(1,k\right)P\left(k,3\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{117}{256}\left[P\left(1,0\right)P\left(0,3\right)+P\left(1,1\right)P\left(1,3\right)+P\left(1,2\right)P\left(2,3\right)+P\left(1,3\right)P\left(3,3\right)\right]=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{=\frac{117}{256}\left[p\cdot0+0\cdot0+q\cdot q+0\cdot0\right]=\frac{117}{256}q^{2}=\frac{117}{256}\frac{1}{16}=\boxed{\frac{117}{4096}}\approx0,0285}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Los administradores de datos de una universidad desarrollaron un modelo
+ markoviano para simular los índices de graduación en la institución.
+ Los estudiantes pueden ab andonar, repetir un año o pasar al año siguiente.
+ Todos tienen un 3% de chance de repetir el año.
+ Aquellos que se encuentran en primer o segundo año, tienen una chance del
+ 6% de abandonar.
+ Para estudiantes de tercer y cuarto año, el índice de abandono es de 4%.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Clasificar los estados.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+Estados recurrentes: 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Estados transitorios: 
+\begin_inset Formula $\left\{ 1,2,3,4\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Estados absorventes: 
+\begin_inset Formula $\left\{ \CheckedBox,\XBox\right\} $
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Establecer la matriz de transición de un paso.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\begin{array}{c}
+1\\
+2\\
+3\\
+4\\
+\CheckedBox\\
+\XBox
+\end{array} & \begin{pmatrix}\frac{3}{100} & \frac{91}{100} & 0 & 0 & 0 & \frac{6}{100}\\
+0 & \frac{3}{100} & \frac{91}{100} & 0 & 0 & \frac{6}{100}\\
+0 & 0 & \frac{3}{100} & \frac{93}{100} & 0 & \frac{4}{100}\\
+0 & 0 & 0 & \frac{3}{100} & \frac{93}{100} & \frac{4}{100}\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}\\
+ & \begin{array}{cccccc}
+\quad1 & \quad2 & \enskip3 & \quad4 & \enskip\CheckedBox & \enskip\XBox\end{array}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar el número promedio de años que un estudiante que ingresa en primer
+ año permanece en la institución antes de abandonar o recibirse.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+states = c(
+\begin_inset Quotes fld
+\end_inset
+
+1
+\begin_inset Quotes frd
+\end_inset
+
+, 2:4, 
+\begin_inset Quotes fld
+\end_inset
+
+Recibido
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+Abandono
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- matrix(c(3/100, 91/100, 0,      0,      0,      6/100,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,     3/100,  91/100, 0,      0,      6/100,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,     0,      3/100,  93/100, 0,      4/100,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,     0,      0,      3/100,  93/100, 4/100,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,     0,      0,      0,      1,      0,
+\end_layout
+
+\begin_layout Plain Layout
+
+              0,     0,      0,      0,      0,      1),
+\end_layout
+
+\begin_layout Plain Layout
+
+            nrow = 6, byrow = TRUE)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(markovchain)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- new(
+\begin_inset Quotes fld
+\end_inset
+
+markovchain
+\begin_inset Quotes frd
+\end_inset
+
+, states, TRUE, P)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+El modelo Wright-Fisher describe la evolución de una población fija de 
+\begin_inset Formula $k$
+\end_inset
+
+ genes.
+ Los genes pueden ser de uno de dos tipos, llamados alelos: 
+\begin_inset Formula $A$
+\end_inset
+
+ o 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ el número de alelos 
+\begin_inset Formula $A$
+\end_inset
+
+ en la población en el momento 
+\begin_inset Formula $n$
+\end_inset
+
+, donde el tiempo se mide por generaciones.
+ Bajo este modelo, el número de alelos 
+\begin_inset Formula $A$
+\end_inset
+
+ en el momento 
+\begin_inset Formula $n+1$
+\end_inset
+
+ se obtiene muestreando con reemplazo desde la población de genes en el
+ momento 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Por lo tanto, habiendo 
+\begin_inset Formula $i$
+\end_inset
+
+ alelos de tipo 
+\begin_inset Formula $A$
+\end_inset
+
+ en el momento 
+\begin_inset Formula $n$
+\end_inset
+
+, el número de alelos 
+\begin_inset Formula $A$
+\end_inset
+
+ en el momento 
+\begin_inset Formula $n+1$
+\end_inset
+
+ tiene una distribución binomial con parámetros 
+\begin_inset Formula $k$
+\end_inset
+
+ y 
+\begin_inset Formula $p=\frac{i}{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Esto resulta en una cadena de Markov con matriz de transición definida por:
+\begin_inset Formula 
+\[
+P_{ij}=\binom{k}{j}\left(\frac{i}{k}\right)^{j}\left(1-\frac{1}{k}\right)^{k-j}
+\]
+
+\end_inset
+
+para 
+\begin_inset Formula $0\leq i,j\leq k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Simular este proceso para algún valor de 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt,fontsize={\normalsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+k = 5; states = c(
+\begin_inset Quotes fld
+\end_inset
+
+0
+\begin_inset Quotes frd
+\end_inset
+
+, 1:k); 
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- matrix(ncol = k+1, nrow = k+1)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for (i in 0:k) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  for (j in 0:k) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    P[i+1,j+1] = dbinom(j,k,i/k)
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(markovchain)
+\end_layout
+
+\begin_layout Plain Layout
+
+P <- new(
+\begin_inset Quotes fld
+\end_inset
+
+markovchain
+\begin_inset Quotes frd
+\end_inset
+
+, states, TRUE, P)
+\end_layout
+
+\begin_layout Plain Layout
+
+rmarkovchain(19, P, 
+\begin_inset Quotes fld
+\end_inset
+
+0
+\begin_inset Quotes frd
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot coordinates {
+\end_layout
+
+\begin_layout Plain Layout
+
+        (0,0) (1,4) (2,4) (3,4) (4,4) (5,3)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (6,3) (7,4) (8,5) (9,5) (10,5)(11,5)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (12,5)(13,5)(14,5)(15,5)(16,5)(17,5)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (18,5)(19,5)
+\end_layout
+
+\begin_layout Plain Layout
+
+	};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observar que valor toma 
+\begin_inset Formula $P_{00}$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{kk}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{00}=1$
+\end_inset
+
+, 
+\begin_inset Formula $P_{kk}=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Cuando la cadena progresa, la población, en algún momento, termina con todos
+ alelos 
+\begin_inset Formula $a$
+\end_inset
+
+ (estado 0) o todos alelos 
+\begin_inset Formula $A$
+\end_inset
+
+ (estado 
+\begin_inset Formula $k$
+\end_inset
+
+).
+ Determinar cuál es la probabilidad de que la población evolucione al estado
+ 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que la cadena no es irreducible pues los estados 0 y 
+\begin_inset Formula $k$
+\end_inset
+
+ son absorventes por el punto anterior, por lo tanto no existe distribución
+ límite.
+\end_layout
+
+\begin_layout Standard
+Aproximaremos entonces la probabilidad para cada estado inicial, a partir
+ de potencias altas de la matriz de transición:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+(P^10000)[,k+1]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}0 & 0,2 & 0,4 & 0,6 & 0,8 & 1\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+El día de la elección, las personas participaron en un centro de votaciones
+ de acuerdo con un proceso de Poisson.
+ El promedio, 100 votantes llegan cada hora.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 150 personas arribaron durante la primer hora, ¿qué probabilidad hay
+ de que al menos 350 votantes arriban antes de las 3 horas?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $N_{t}$
+\end_inset
+
+: 
+\begin_inset Quotes fld
+\end_inset
+
+Cantidad de personas que arribaron en el intervalo 
+\begin_inset Formula $\left[0,t\right)$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+, luego 
+\begin_inset Formula $N_{t}\sim Po\left(100\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P\left(N_{3}\geq350|N_{1}=150\right)=P\left(N_{3}-N_{1}\geq350-150\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P\left(N_{2}\geq200\right)\approx\footnotemark\footnotetext{https://keisan.casio.com/exec/system/1180573179}\boxed{0.5094}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Simular dicho proceso y graficar una trayectoria.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt,fontsize={\normalsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+lambda = 100; t = 3
+\end_layout
+
+\begin_layout Plain Layout
+
+votantes = rpois(1, t * lambda)
+\end_layout
+
+\begin_layout Plain Layout
+
+tiempos = c(0, runif(votantes, 0, t))
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(sort(tiempos))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[xlabel = Votantes, ylabel = Tiempo]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [thin] coordinates {
+\end_layout
+
+\begin_layout Plain Layout
+
+        (1,0)
+\end_layout
+
+\begin_layout Plain Layout
+
+(2,0.0129521938506514)
+\end_layout
+
+\begin_layout Plain Layout
+
+(3,0.0222426017280668)
+\end_layout
+
+\begin_layout Plain Layout
+
+(4,0.0246261041611433)
+\end_layout
+
+\begin_layout Plain Layout
+
+(5,0.0330190043896437)
+\end_layout
+
+\begin_layout Plain Layout
+
+(6,0.0488693530205637)
+\end_layout
+
+\begin_layout Plain Layout
+
+(7,0.0508320671506226)
+\end_layout
+
+\begin_layout Plain Layout
+
+(8,0.0622068650554866)
+\end_layout
+
+\begin_layout Plain Layout
+
+(9,0.0646587742958218)
+\end_layout
+
+\begin_layout Plain Layout
+
+(10,0.100896885618567)
+\end_layout
+
+\begin_layout Plain Layout
+
+(11,0.106372229056433)
+\end_layout
+
+\begin_layout Plain Layout
+
+(12,0.114479001844302)
+\end_layout
+
+\begin_layout Plain Layout
+
+(13,0.124812552938238)
+\end_layout
+
+\begin_layout Plain Layout
+
+(14,0.130315846530721)
+\end_layout
+
+\begin_layout Plain Layout
+
+(15,0.136817447841167)
+\end_layout
+
+\begin_layout Plain Layout
+
+(16,0.143592461245134)
+\end_layout
+
+\begin_layout Plain Layout
+
+(17,0.15072821918875)
+\end_layout
+
+\begin_layout Plain Layout
+
+(18,0.164504967397079)
+\end_layout
+
+\begin_layout Plain Layout
+
+(19,0.190621826564893)
+\end_layout
+
+\begin_layout Plain Layout
+
+(20,0.201168633531779)
+\end_layout
+
+\begin_layout Plain Layout
+
+(21,0.212735485285521)
+\end_layout
+
+\begin_layout Plain Layout
+
+(22,0.231323593994603)
+\end_layout
+
+\begin_layout Plain Layout
+
+(23,0.248374931048602)
+\end_layout
+
+\begin_layout Plain Layout
+
+(24,0.248838559258729)
+\end_layout
+
+\begin_layout Plain Layout
+
+(25,0.280374906258658)
+\end_layout
+
+\begin_layout Plain Layout
+
+(26,0.298963405424729)
+\end_layout
+
+\begin_layout Plain Layout
+
+(27,0.319284811383113)
+\end_layout
+
+\begin_layout Plain Layout
+
+(28,0.328950349939987)
+\end_layout
+
+\begin_layout Plain Layout
+
+(29,0.334924506023526)
+\end_layout
+
+\begin_layout Plain Layout
+
+(30,0.342346191639081)
+\end_layout
+
+\begin_layout Plain Layout
+
+(31,0.347695427946746)
+\end_layout
+
+\begin_layout Plain Layout
+
+(32,0.360010598553345)
+\end_layout
+
+\begin_layout Plain Layout
+
+(33,0.385652331635356)
+\end_layout
+
+\begin_layout Plain Layout
+
+(34,0.408075381768867)
+\end_layout
+
+\begin_layout Plain Layout
+
+(35,0.412940564565361)
+\end_layout
+
+\begin_layout Plain Layout
+
+(36,0.439373823814094)
+\end_layout
+
+\begin_layout Plain Layout
+
+(37,0.44096744293347)
+\end_layout
+
+\begin_layout Plain Layout
+
+(38,0.44097792939283)
+\end_layout
+
+\begin_layout Plain Layout
+
+(39,0.458936598384753)
+\end_layout
+
+\begin_layout Plain Layout
+
+(40,0.461447487585247)
+\end_layout
+
+\begin_layout Plain Layout
+
+(41,0.482291036518291)
+\end_layout
+
+\begin_layout Plain Layout
+
+(42,0.488785875728354)
+\end_layout
+
+\begin_layout Plain Layout
+
+(43,0.495240886230022)
+\end_layout
+
+\begin_layout Plain Layout
+
+(44,0.501690799137577)
+\end_layout
+
+\begin_layout Plain Layout
+
+(45,0.506763292243704)
+\end_layout
+
+\begin_layout Plain Layout
+
+(46,0.519763753283769)
+\end_layout
+
+\begin_layout Plain Layout
+
+(47,0.522710687248036)
+\end_layout
+
+\begin_layout Plain Layout
+
+(48,0.524498281767592)
+\end_layout
+
+\begin_layout Plain Layout
+
+(49,0.541404503630474)
+\end_layout
+
+\begin_layout Plain Layout
+
+(50,0.558546253480017)
+\end_layout
+
+\begin_layout Plain Layout
+
+(51,0.566876260796562)
+\end_layout
+
+\begin_layout Plain Layout
+
+(52,0.568894329015166)
+\end_layout
+
+\begin_layout Plain Layout
+
+(53,0.573010568507016)
+\end_layout
+
+\begin_layout Plain Layout
+
+(54,0.573718755505979)
+\end_layout
+
+\begin_layout Plain Layout
+
+(55,0.597304184222594)
+\end_layout
+
+\begin_layout Plain Layout
+
+(56,0.622724877437577)
+\end_layout
+
+\begin_layout Plain Layout
+
+(57,0.625622570514679)
+\end_layout
+
+\begin_layout Plain Layout
+
+(58,0.631165711674839)
+\end_layout
+
+\begin_layout Plain Layout
+
+(59,0.632591891800985)
+\end_layout
+
+\begin_layout Plain Layout
+
+(60,0.640518494183198)
+\end_layout
+
+\begin_layout Plain Layout
+
+(61,0.652796648209915)
+\end_layout
+
+\begin_layout Plain Layout
+
+(62,0.687302217353135)
+\end_layout
+
+\begin_layout Plain Layout
+
+(63,0.69770751404576)
+\end_layout
+
+\begin_layout Plain Layout
+
+(64,0.711845171637833)
+\end_layout
+
+\begin_layout Plain Layout
+
+(65,0.727625736733899)
+\end_layout
+
+\begin_layout Plain Layout
+
+(66,0.727661044104025)
+\end_layout
+
+\begin_layout Plain Layout
+
+(67,0.734927342506126)
+\end_layout
+
+\begin_layout Plain Layout
+
+(68,0.75171134644188)
+\end_layout
+
+\begin_layout Plain Layout
+
+(69,0.75716465106234)
+\end_layout
+
+\begin_layout Plain Layout
+
+(70,0.780693898675963)
+\end_layout
+
+\begin_layout Plain Layout
+
+(71,0.781019320478663)
+\end_layout
+
+\begin_layout Plain Layout
+
+(72,0.791228348622099)
+\end_layout
+
+\begin_layout Plain Layout
+
+(73,0.802275194087997)
+\end_layout
+
+\begin_layout Plain Layout
+
+(74,0.806626870762557)
+\end_layout
+
+\begin_layout Plain Layout
+
+(75,0.826258783461526)
+\end_layout
+
+\begin_layout Plain Layout
+
+(76,0.827476037666202)
+\end_layout
+
+\begin_layout Plain Layout
+
+(77,0.836237784242257)
+\end_layout
+
+\begin_layout Plain Layout
+
+(78,0.84049414191395)
+\end_layout
+
+\begin_layout Plain Layout
+
+(79,0.842308708000928)
+\end_layout
+
+\begin_layout Plain Layout
+
+(80,0.855591447791085)
+\end_layout
+
+\begin_layout Plain Layout
+
+(81,0.855788553832099)
+\end_layout
+
+\begin_layout Plain Layout
+
+(82,0.857644605450332)
+\end_layout
+
+\begin_layout Plain Layout
+
+(83,0.868943132925779)
+\end_layout
+
+\begin_layout Plain Layout
+
+(84,0.869187179021537)
+\end_layout
+
+\begin_layout Plain Layout
+
+(85,0.870203393977135)
+\end_layout
+
+\begin_layout Plain Layout
+
+(86,0.877880326006562)
+\end_layout
+
+\begin_layout Plain Layout
+
+(87,0.879121585283428)
+\end_layout
+
+\begin_layout Plain Layout
+
+(88,0.88522866438143)
+\end_layout
+
+\begin_layout Plain Layout
+
+(89,0.885917568113655)
+\end_layout
+
+\begin_layout Plain Layout
+
+(90,0.886586075881496)
+\end_layout
+
+\begin_layout Plain Layout
+
+(91,0.888389924308285)
+\end_layout
+
+\begin_layout Plain Layout
+
+(92,0.924506426788867)
+\end_layout
+
+\begin_layout Plain Layout
+
+(93,0.959316450404003)
+\end_layout
+
+\begin_layout Plain Layout
+
+(94,0.969702341593802)
+\end_layout
+
+\begin_layout Plain Layout
+
+(95,0.989317691652104)
+\end_layout
+
+\begin_layout Plain Layout
+
+(96,1.00131839350797)
+\end_layout
+
+\begin_layout Plain Layout
+
+(97,1.00822952971794)
+\end_layout
+
+\begin_layout Plain Layout
+
+(98,1.015761540737)
+\end_layout
+
+\begin_layout Plain Layout
+
+(99,1.02859761449508)
+\end_layout
+
+\begin_layout Plain Layout
+
+(100,1.03778190189041)
+\end_layout
+
+\begin_layout Plain Layout
+
+(101,1.04326781490818)
+\end_layout
+
+\begin_layout Plain Layout
+
+(102,1.08744705305435)
+\end_layout
+
+\begin_layout Plain Layout
+
+(103,1.08748882007785)
+\end_layout
+
+\begin_layout Plain Layout
+
+(104,1.09387128520757)
+\end_layout
+
+\begin_layout Plain Layout
+
+(105,1.09941402473487)
+\end_layout
+
+\begin_layout Plain Layout
+
+(106,1.1008649894502)
+\end_layout
+
+\begin_layout Plain Layout
+
+(107,1.1084778229706)
+\end_layout
+
+\begin_layout Plain Layout
+
+(108,1.11040574242361)
+\end_layout
+
+\begin_layout Plain Layout
+
+(109,1.11499790637754)
+\end_layout
+
+\begin_layout Plain Layout
+
+(110,1.12422144622542)
+\end_layout
+
+\begin_layout Plain Layout
+
+(111,1.15579169383273)
+\end_layout
+
+\begin_layout Plain Layout
+
+(112,1.15752099221572)
+\end_layout
+
+\begin_layout Plain Layout
+
+(113,1.169436652679)
+\end_layout
+
+\begin_layout Plain Layout
+
+(114,1.18406126322225)
+\end_layout
+
+\begin_layout Plain Layout
+
+(115,1.20002106553875)
+\end_layout
+
+\begin_layout Plain Layout
+
+(116,1.20804736297578)
+\end_layout
+
+\begin_layout Plain Layout
+
+(117,1.21433712285943)
+\end_layout
+
+\begin_layout Plain Layout
+
+(118,1.21969480882399)
+\end_layout
+
+\begin_layout Plain Layout
+
+(119,1.22128037991934)
+\end_layout
+
+\begin_layout Plain Layout
+
+(120,1.22420046525076)
+\end_layout
+
+\begin_layout Plain Layout
+
+(121,1.23647089116275)
+\end_layout
+
+\begin_layout Plain Layout
+
+(122,1.25439779832959)
+\end_layout
+
+\begin_layout Plain Layout
+
+(123,1.25672747776844)
+\end_layout
+
+\begin_layout Plain Layout
+
+(124,1.26629446470179)
+\end_layout
+
+\begin_layout Plain Layout
+
+(125,1.27264119917527)
+\end_layout
+
+\begin_layout Plain Layout
+
+(126,1.2734213762451)
+\end_layout
+
+\begin_layout Plain Layout
+
+(127,1.27382979635149)
+\end_layout
+
+\begin_layout Plain Layout
+
+(128,1.27641754341312)
+\end_layout
+
+\begin_layout Plain Layout
+
+(129,1.28521745908074)
+\end_layout
+
+\begin_layout Plain Layout
+
+(130,1.28612224850804)
+\end_layout
+
+\begin_layout Plain Layout
+
+(131,1.29694943292998)
+\end_layout
+
+\begin_layout Plain Layout
+
+(132,1.2991265708115)
+\end_layout
+
+\begin_layout Plain Layout
+
+(133,1.30655145412311)
+\end_layout
+
+\begin_layout Plain Layout
+
+(134,1.30805027112365)
+\end_layout
+
+\begin_layout Plain Layout
+
+(135,1.31016625324264)
+\end_layout
+
+\begin_layout Plain Layout
+
+(136,1.31656319252215)
+\end_layout
+
+\begin_layout Plain Layout
+
+(137,1.33217381802388)
+\end_layout
+
+\begin_layout Plain Layout
+
+(138,1.35817188117653)
+\end_layout
+
+\begin_layout Plain Layout
+
+(139,1.36633286322467)
+\end_layout
+
+\begin_layout Plain Layout
+
+(140,1.36823628586717)
+\end_layout
+
+\begin_layout Plain Layout
+
+(141,1.39210989349522)
+\end_layout
+
+\begin_layout Plain Layout
+
+(142,1.40725895832293)
+\end_layout
+
+\begin_layout Plain Layout
+
+(143,1.4181960420683)
+\end_layout
+
+\begin_layout Plain Layout
+
+(144,1.44674877310172)
+\end_layout
+
+\begin_layout Plain Layout
+
+(145,1.46385879255831)
+\end_layout
+
+\begin_layout Plain Layout
+
+(146,1.48690968495794)
+\end_layout
+
+\begin_layout Plain Layout
+
+(147,1.50438366411254)
+\end_layout
+
+\begin_layout Plain Layout
+
+(148,1.5325553691946)
+\end_layout
+
+\begin_layout Plain Layout
+
+(149,1.53873226325959)
+\end_layout
+
+\begin_layout Plain Layout
+
+(150,1.54338144371286)
+\end_layout
+
+\begin_layout Plain Layout
+
+(151,1.54429176729172)
+\end_layout
+
+\begin_layout Plain Layout
+
+(152,1.55346647277474)
+\end_layout
+
+\begin_layout Plain Layout
+
+(153,1.55876743141562)
+\end_layout
+
+\begin_layout Plain Layout
+
+(154,1.58051032014191)
+\end_layout
+
+\begin_layout Plain Layout
+
+(155,1.58260547742248)
+\end_layout
+
+\begin_layout Plain Layout
+
+(156,1.59191825171001)
+\end_layout
+
+\begin_layout Plain Layout
+
+(157,1.59847345948219)
+\end_layout
+
+\begin_layout Plain Layout
+
+(158,1.60118820355274)
+\end_layout
+
+\begin_layout Plain Layout
+
+(159,1.60766907921061)
+\end_layout
+
+\begin_layout Plain Layout
+
+(160,1.61680868268013)
+\end_layout
+
+\begin_layout Plain Layout
+
+(161,1.62636825651862)
+\end_layout
+
+\begin_layout Plain Layout
+
+(162,1.63075694418512)
+\end_layout
+
+\begin_layout Plain Layout
+
+(163,1.6310519061517)
+\end_layout
+
+\begin_layout Plain Layout
+
+(164,1.63453974737786)
+\end_layout
+
+\begin_layout Plain Layout
+
+(165,1.66553679155186)
+\end_layout
+
+\begin_layout Plain Layout
+
+(166,1.67416207864881)
+\end_layout
+
+\begin_layout Plain Layout
+
+(167,1.68464518524706)
+\end_layout
+
+\begin_layout Plain Layout
+
+(168,1.68562690238468)
+\end_layout
+
+\begin_layout Plain Layout
+
+(169,1.68573268479668)
+\end_layout
+
+\begin_layout Plain Layout
+
+(170,1.72564872354269)
+\end_layout
+
+\begin_layout Plain Layout
+
+(171,1.73075794964097)
+\end_layout
+
+\begin_layout Plain Layout
+
+(172,1.73426965204999)
+\end_layout
+
+\begin_layout Plain Layout
+
+(173,1.74705430283211)
+\end_layout
+
+\begin_layout Plain Layout
+
+(174,1.74770640721545)
+\end_layout
+
+\begin_layout Plain Layout
+
+(175,1.75678941118531)
+\end_layout
+
+\begin_layout Plain Layout
+
+(176,1.76126783201471)
+\end_layout
+
+\begin_layout Plain Layout
+
+(177,1.7683592448011)
+\end_layout
+
+\begin_layout Plain Layout
+
+(178,1.777214538306)
+\end_layout
+
+\begin_layout Plain Layout
+
+(179,1.78241473669186)
+\end_layout
+
+\begin_layout Plain Layout
+
+(180,1.79542172094807)
+\end_layout
+
+\begin_layout Plain Layout
+
+(181,1.79881668509915)
+\end_layout
+
+\begin_layout Plain Layout
+
+(182,1.80144884716719)
+\end_layout
+
+\begin_layout Plain Layout
+
+(183,1.80235036765225)
+\end_layout
+
+\begin_layout Plain Layout
+
+(184,1.80242445459589)
+\end_layout
+
+\begin_layout Plain Layout
+
+(185,1.80524419317953)
+\end_layout
+
+\begin_layout Plain Layout
+
+(186,1.80834188614972)
+\end_layout
+
+\begin_layout Plain Layout
+
+(187,1.8132227032911)
+\end_layout
+
+\begin_layout Plain Layout
+
+(188,1.82285993755795)
+\end_layout
+
+\begin_layout Plain Layout
+
+(189,1.82572387042455)
+\end_layout
+
+\begin_layout Plain Layout
+
+(190,1.83058267948218)
+\end_layout
+
+\begin_layout Plain Layout
+
+(191,1.85149486572482)
+\end_layout
+
+\begin_layout Plain Layout
+
+(192,1.86960975453258)
+\end_layout
+
+\begin_layout Plain Layout
+
+(193,1.89577409997582)
+\end_layout
+
+\begin_layout Plain Layout
+
+(194,1.90639164950699)
+\end_layout
+
+\begin_layout Plain Layout
+
+(195,1.90657411306165)
+\end_layout
+
+\begin_layout Plain Layout
+
+(196,1.92563504981808)
+\end_layout
+
+\begin_layout Plain Layout
+
+(197,1.93915240676142)
+\end_layout
+
+\begin_layout Plain Layout
+
+(198,1.94248923333362)
+\end_layout
+
+\begin_layout Plain Layout
+
+(199,1.95046107284725)
+\end_layout
+
+\begin_layout Plain Layout
+
+(200,1.98641101573594)
+\end_layout
+
+\begin_layout Plain Layout
+
+(201,1.99788572872058)
+\end_layout
+
+\begin_layout Plain Layout
+
+(202,2.00321470666677)
+\end_layout
+
+\begin_layout Plain Layout
+
+(203,2.02701214444824)
+\end_layout
+
+\begin_layout Plain Layout
+
+(204,2.03224918968044)
+\end_layout
+
+\begin_layout Plain Layout
+
+(205,2.03564644278958)
+\end_layout
+
+\begin_layout Plain Layout
+
+(206,2.04866221686825)
+\end_layout
+
+\begin_layout Plain Layout
+
+(207,2.04939033673145)
+\end_layout
+
+\begin_layout Plain Layout
+
+(208,2.05791645194404)
+\end_layout
+
+\begin_layout Plain Layout
+
+(209,2.05876073241234)
+\end_layout
+
+\begin_layout Plain Layout
+
+(210,2.06485833716579)
+\end_layout
+
+\begin_layout Plain Layout
+
+(211,2.07203221390955)
+\end_layout
+
+\begin_layout Plain Layout
+
+(212,2.07303933380172)
+\end_layout
+
+\begin_layout Plain Layout
+
+(213,2.09914658521302)
+\end_layout
+
+\begin_layout Plain Layout
+
+(214,2.12416373449378)
+\end_layout
+
+\begin_layout Plain Layout
+
+(215,2.14593685115688)
+\end_layout
+
+\begin_layout Plain Layout
+
+(216,2.16630470473319)
+\end_layout
+
+\begin_layout Plain Layout
+
+(217,2.1697594912257)
+\end_layout
+
+\begin_layout Plain Layout
+
+(218,2.18334584031254)
+\end_layout
+
+\begin_layout Plain Layout
+
+(219,2.21377648157068)
+\end_layout
+
+\begin_layout Plain Layout
+
+(220,2.21817023819312)
+\end_layout
+
+\begin_layout Plain Layout
+
+(221,2.22545650228858)
+\end_layout
+
+\begin_layout Plain Layout
+
+(222,2.23045595060103)
+\end_layout
+
+\begin_layout Plain Layout
+
+(223,2.23437756020576)
+\end_layout
+
+\begin_layout Plain Layout
+
+(224,2.23664357000962)
+\end_layout
+
+\begin_layout Plain Layout
+
+(225,2.27138992748223)
+\end_layout
+
+\begin_layout Plain Layout
+
+(226,2.28925543301739)
+\end_layout
+
+\begin_layout Plain Layout
+
+(227,2.29676519008353)
+\end_layout
+
+\begin_layout Plain Layout
+
+(228,2.3185127559118)
+\end_layout
+
+\begin_layout Plain Layout
+
+(229,2.32730497140437)
+\end_layout
+
+\begin_layout Plain Layout
+
+(230,2.33403420983814)
+\end_layout
+
+\begin_layout Plain Layout
+
+(231,2.33552097436041)
+\end_layout
+
+\begin_layout Plain Layout
+
+(232,2.35315388138406)
+\end_layout
+
+\begin_layout Plain Layout
+
+(233,2.37372524756938)
+\end_layout
+
+\begin_layout Plain Layout
+
+(234,2.39229638571851)
+\end_layout
+
+\begin_layout Plain Layout
+
+(235,2.41313998564146)
+\end_layout
+
+\begin_layout Plain Layout
+
+(236,2.41790415882133)
+\end_layout
+
+\begin_layout Plain Layout
+
+(237,2.44142925040796)
+\end_layout
+
+\begin_layout Plain Layout
+
+(238,2.45547498995438)
+\end_layout
+
+\begin_layout Plain Layout
+
+(239,2.49049561936408)
+\end_layout
+
+\begin_layout Plain Layout
+
+(240,2.49458325980231)
+\end_layout
+
+\begin_layout Plain Layout
+
+(241,2.501260003075)
+\end_layout
+
+\begin_layout Plain Layout
+
+(242,2.50502292648889)
+\end_layout
+
+\begin_layout Plain Layout
+
+(243,2.50780899496749)
+\end_layout
+
+\begin_layout Plain Layout
+
+(244,2.51983120827936)
+\end_layout
+
+\begin_layout Plain Layout
+
+(245,2.52203623275273)
+\end_layout
+
+\begin_layout Plain Layout
+
+(246,2.52434242051095)
+\end_layout
+
+\begin_layout Plain Layout
+
+(247,2.55216612643562)
+\end_layout
+
+\begin_layout Plain Layout
+
+(248,2.563448861707)
+\end_layout
+
+\begin_layout Plain Layout
+
+(249,2.56718776188791)
+\end_layout
+
+\begin_layout Plain Layout
+
+(250,2.57007533730939)
+\end_layout
+
+\begin_layout Plain Layout
+
+(251,2.57124816253781)
+\end_layout
+
+\begin_layout Plain Layout
+
+(252,2.59507587086409)
+\end_layout
+
+\begin_layout Plain Layout
+
+(253,2.59956977306865)
+\end_layout
+
+\begin_layout Plain Layout
+
+(254,2.60491817188449)
+\end_layout
+
+\begin_layout Plain Layout
+
+(255,2.62114748940803)
+\end_layout
+
+\begin_layout Plain Layout
+
+(256,2.62546825991012)
+\end_layout
+
+\begin_layout Plain Layout
+
+(257,2.63882836955599)
+\end_layout
+
+\begin_layout Plain Layout
+
+(258,2.64599767397158)
+\end_layout
+
+\begin_layout Plain Layout
+
+(259,2.65175507962704)
+\end_layout
+
+\begin_layout Plain Layout
+
+(260,2.65726251108572)
+\end_layout
+
+\begin_layout Plain Layout
+
+(261,2.66240691533312)
+\end_layout
+
+\begin_layout Plain Layout
+
+(262,2.6979275168851)
+\end_layout
+
+\begin_layout Plain Layout
+
+(263,2.71046403818764)
+\end_layout
+
+\begin_layout Plain Layout
+
+(264,2.71744014252909)
+\end_layout
+
+\begin_layout Plain Layout
+
+(265,2.72422777139582)
+\end_layout
+
+\begin_layout Plain Layout
+
+(266,2.72636532713659)
+\end_layout
+
+\begin_layout Plain Layout
+
+(267,2.74302221601829)
+\end_layout
+
+\begin_layout Plain Layout
+
+(268,2.7431540004909)
+\end_layout
+
+\begin_layout Plain Layout
+
+(269,2.74772070092149)
+\end_layout
+
+\begin_layout Plain Layout
+
+(270,2.75051477202214)
+\end_layout
+
+\begin_layout Plain Layout
+
+(271,2.75322696031071)
+\end_layout
+
+\begin_layout Plain Layout
+
+(272,2.77852795436047)
+\end_layout
+
+\begin_layout Plain Layout
+
+(273,2.80370663758367)
+\end_layout
+
+\begin_layout Plain Layout
+
+(274,2.81865592603572)
+\end_layout
+
+\begin_layout Plain Layout
+
+(275,2.82626223214902)
+\end_layout
+
+\begin_layout Plain Layout
+
+(276,2.83042827621102)
+\end_layout
+
+\begin_layout Plain Layout
+
+(277,2.83966050390154)
+\end_layout
+
+\begin_layout Plain Layout
+
+(278,2.8459868808277)
+\end_layout
+
+\begin_layout Plain Layout
+
+(279,2.84970230958425)
+\end_layout
+
+\begin_layout Plain Layout
+
+(280,2.88098947238177)
+\end_layout
+
+\begin_layout Plain Layout
+
+(281,2.8916832448449)
+\end_layout
+
+\begin_layout Plain Layout
+
+(282,2.89417926385067)
+\end_layout
+
+\begin_layout Plain Layout
+
+(283,2.90592564130202)
+\end_layout
+
+\begin_layout Plain Layout
+
+(284,2.92463896237314)
+\end_layout
+
+\begin_layout Plain Layout
+
+(285,2.93875755881891)
+\end_layout
+
+\begin_layout Plain Layout
+
+(286,2.939006769564)
+\end_layout
+
+\begin_layout Plain Layout
+
+(287,2.94997718953528)
+\end_layout
+
+\begin_layout Plain Layout
+
+(288,2.96922687906772)
+\end_layout
+
+\begin_layout Plain Layout
+
+(289,2.96929944888689)
+\end_layout
+
+\begin_layout Plain Layout
+
+(290,2.97888739476912)
+\end_layout
+
+\begin_layout Plain Layout
+
+(291,2.9808496828191)
+\end_layout
+
+\begin_layout Plain Layout
+
+(292,3)
+\end_layout
+
+\begin_layout Plain Layout
+
+	};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considerar la variable aleatoria: tiempo entre arribos.
+ Obtener los valores a través de simulación y graficar.
+ Determinar qué distribución tiene el tiempo entre arribos de votantes.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset listings
+lstparams "language=R,fontfamily=tt,fontsize={\normalsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for (i in 1:length(tiempos)-1) {
+\end_layout
+
+\begin_layout Plain Layout
+
+  tiempos [i] = abs(tiempos[i + 1] - tiempos[i])
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+plot(sort(tiempos))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[xticklabels={,,}, yticklabels={,,}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot [thin] coordinates {
+\end_layout
+
+\begin_layout Plain Layout
+
+        (1,0.0030801824759692)
+\end_layout
+
+\begin_layout Plain Layout
+
+(2,0.0052795868832618)
+\end_layout
+
+\begin_layout Plain Layout
+
+(3,0.00824174168519676)
+\end_layout
+
+\begin_layout Plain Layout
+
+(4,0.0117661887779832)
+\end_layout
+
+\begin_layout Plain Layout
+
+(5,0.0226951015647501)
+\end_layout
+
+\begin_layout Plain Layout
+
+(6,0.0291344225406647)
+\end_layout
+
+\begin_layout Plain Layout
+
+(7,0.0467602133285254)
+\end_layout
+
+\begin_layout Plain Layout
+
+(8,0.0474895688239485)
+\end_layout
+
+\begin_layout Plain Layout
+
+(9,0.04948969068937)
+\end_layout
+
+\begin_layout Plain Layout
+
+(10,0.0501881700474769)
+\end_layout
+
+\begin_layout Plain Layout
+
+(11,0.0557571107055992)
+\end_layout
+
+\begin_layout Plain Layout
+
+(12,0.0582756267394871)
+\end_layout
+
+\begin_layout Plain Layout
+
+(13,0.0762048019096255)
+\end_layout
+
+\begin_layout Plain Layout
+
+(14,0.0775372821372002)
+\end_layout
+
+\begin_layout Plain Layout
+
+(15,0.0829638030845672)
+\end_layout
+
+\begin_layout Plain Layout
+
+(16,0.0850328451488167)
+\end_layout
+
+\begin_layout Plain Layout
+
+(17,0.0909272062126547)
+\end_layout
+
+\begin_layout Plain Layout
+
+(18,0.0933263227343559)
+\end_layout
+
+\begin_layout Plain Layout
+
+(19,0.0936216590926051)
+\end_layout
+
+\begin_layout Plain Layout
+
+(20,0.10278076515533)
+\end_layout
+
+\begin_layout Plain Layout
+
+(21,0.128018473042175)
+\end_layout
+
+\begin_layout Plain Layout
+
+(22,0.138448662590235)
+\end_layout
+
+\begin_layout Plain Layout
+
+(23,0.141681177075952)
+\end_layout
+
+\begin_layout Plain Layout
+
+(24,0.143705070018768)
+\end_layout
+
+\begin_layout Plain Layout
+
+(25,0.14412440196611)
+\end_layout
+
+\begin_layout Plain Layout
+
+(26,0.162353330058977)
+\end_layout
+
+\begin_layout Plain Layout
+
+(27,0.165211439598352)
+\end_layout
+
+\begin_layout Plain Layout
+
+(28,0.175489799352363)
+\end_layout
+
+\begin_layout Plain Layout
+
+(29,0.178309667855501)
+\end_layout
+
+\begin_layout Plain Layout
+
+(30,0.186006395146251)
+\end_layout
+
+\begin_layout Plain Layout
+
+(31,0.194972785189748)
+\end_layout
+
+\begin_layout Plain Layout
+
+(32,0.203981844009832)
+\end_layout
+
+\begin_layout Plain Layout
+
+(33,0.207083274610341)
+\end_layout
+
+\begin_layout Plain Layout
+
+(34,0.207804234931245)
+\end_layout
+
+\begin_layout Plain Layout
+
+(35,0.213938001310453)
+\end_layout
+
+\begin_layout Plain Layout
+
+(36,0.217212648130953)
+\end_layout
+
+\begin_layout Plain Layout
+
+(37,0.221521608531475)
+\end_layout
+
+\begin_layout Plain Layout
+
+(38,0.224280500784516)
+\end_layout
+
+\begin_layout Plain Layout
+
+(39,0.224388060159981)
+\end_layout
+
+\begin_layout Plain Layout
+
+(40,0.229506373638287)
+\end_layout
+
+\begin_layout Plain Layout
+
+(41,0.231171598657966)
+\end_layout
+
+\begin_layout Plain Layout
+
+(42,0.232137197395787)
+\end_layout
+
+\begin_layout Plain Layout
+
+(43,0.241045873844996)
+\end_layout
+
+\begin_layout Plain Layout
+
+(44,0.247523653088138)
+\end_layout
+
+\begin_layout Plain Layout
+
+(45,0.249884587945417)
+\end_layout
+
+\begin_layout Plain Layout
+
+(46,0.26281668827869)
+\end_layout
+
+\begin_layout Plain Layout
+
+(47,0.269357705488801)
+\end_layout
+
+\begin_layout Plain Layout
+
+(48,0.279189591296017)
+\end_layout
+
+\begin_layout Plain Layout
+
+(49,0.282597842859104)
+\end_layout
+
+\begin_layout Plain Layout
+
+(50,0.286895474418998)
+\end_layout
+
+\begin_layout Plain Layout
+
+(51,0.28834463073872)
+\end_layout
+
+\begin_layout Plain Layout
+
+(52,0.290856263134629)
+\end_layout
+
+\begin_layout Plain Layout
+
+(53,0.291435684543103)
+\end_layout
+
+\begin_layout Plain Layout
+
+(54,0.294176474679261)
+\end_layout
+
+\begin_layout Plain Layout
+
+(55,0.298896378837526)
+\end_layout
+
+\begin_layout Plain Layout
+
+(56,0.318991309963167)
+\end_layout
+
+\begin_layout Plain Layout
+
+(57,0.323681630194187)
+\end_layout
+
+\begin_layout Plain Layout
+
+(58,0.324644139502198)
+\end_layout
+
+\begin_layout Plain Layout
+
+(59,0.325932124396786)
+\end_layout
+
+\begin_layout Plain Layout
+
+(60,0.32638919306919)
+\end_layout
+
+\begin_layout Plain Layout
+
+(61,0.327154726954177)
+\end_layout
+
+\begin_layout Plain Layout
+
+(62,0.331943037221208)
+\end_layout
+
+\begin_layout Plain Layout
+
+(63,0.34779602335766)
+\end_layout
+
+\begin_layout Plain Layout
+
+(64,0.354151660110801)
+\end_layout
+
+\begin_layout Plain Layout
+
+(65,0.358723060693592)
+\end_layout
+
+\begin_layout Plain Layout
+
+(66,0.387571420054883)
+\end_layout
+
+\begin_layout Plain Layout
+
+(67,0.390706684207544)
+\end_layout
+
+\begin_layout Plain Layout
+
+(68,0.391101459274068)
+\end_layout
+
+\begin_layout Plain Layout
+
+(69,0.396290809381753)
+\end_layout
+
+\begin_layout Plain Layout
+
+(70,0.398451795335859)
+\end_layout
+
+\begin_layout Plain Layout
+
+(71,0.400970971444622)
+\end_layout
+
+\begin_layout Plain Layout
+
+(72,0.409295193850994)
+\end_layout
+
+\begin_layout Plain Layout
+
+(73,0.450662684859708)
+\end_layout
+
+\begin_layout Plain Layout
+
+(74,0.468728640815243)
+\end_layout
+
+\begin_layout Plain Layout
+
+(75,0.475006844149902)
+\end_layout
+
+\begin_layout Plain Layout
+
+(76,0.478196782758459)
+\end_layout
+
+\begin_layout Plain Layout
+
+(77,0.479049788787961)
+\end_layout
+
+\begin_layout Plain Layout
+
+(78,0.503769455244765)
+\end_layout
+
+\begin_layout Plain Layout
+
+(79,0.50397005234845)
+\end_layout
+
+\begin_layout Plain Layout
+
+(80,0.504340172046795)
+\end_layout
+
+\begin_layout Plain Layout
+
+(81,0.511679094051942)
+\end_layout
+
+\begin_layout Plain Layout
+
+(82,0.523605050286278)
+\end_layout
+
+\begin_layout Plain Layout
+
+(83,0.530377629445866)
+\end_layout
+
+\begin_layout Plain Layout
+
+(84,0.534678923198953)
+\end_layout
+
+\begin_layout Plain Layout
+
+(85,0.538909992668778)
+\end_layout
+
+\begin_layout Plain Layout
+
+(86,0.543700525537133)
+\end_layout
+
+\begin_layout Plain Layout
+
+(87,0.551537680439651)
+\end_layout
+
+\begin_layout Plain Layout
+
+(88,0.563456477830186)
+\end_layout
+
+\begin_layout Plain Layout
+
+(89,0.577877114061266)
+\end_layout
+
+\begin_layout Plain Layout
+
+(90,0.579296724870801)
+\end_layout
+
+\begin_layout Plain Layout
+
+(91,0.589933880371973)
+\end_layout
+
+\begin_layout Plain Layout
+
+(92,0.590919219190255)
+\end_layout
+
+\begin_layout Plain Layout
+
+(93,0.591164375189692)
+\end_layout
+
+\begin_layout Plain Layout
+
+(94,0.592380296671763)
+\end_layout
+
+\begin_layout Plain Layout
+
+(95,0.598868178203702)
+\end_layout
+
+\begin_layout Plain Layout
+
+(96,0.602231227559969)
+\end_layout
+
+\begin_layout Plain Layout
+
+(97,0.602361417375505)
+\end_layout
+
+\begin_layout Plain Layout
+
+(98,0.612078613601625)
+\end_layout
+
+\begin_layout Plain Layout
+
+(99,0.618095934391022)
+\end_layout
+
+\begin_layout Plain Layout
+
+(100,0.624984565889463)
+\end_layout
+
+\begin_layout Plain Layout
+
+(101,0.638377494178712)
+\end_layout
+
+\begin_layout Plain Layout
+
+(102,0.649761049775407)
+\end_layout
+
+\begin_layout Plain Layout
+
+(103,0.650416801683605)
+\end_layout
+
+\begin_layout Plain Layout
+
+(104,0.660413424717262)
+\end_layout
+
+\begin_layout Plain Layout
+
+(105,0.663664060877636)
+\end_layout
+
+\begin_layout Plain Layout
+
+(106,0.672279164660722)
+\end_layout
+
+\begin_layout Plain Layout
+
+(107,0.673125471454114)
+\end_layout
+
+\begin_layout Plain Layout
+
+(108,0.68148336187005)
+\end_layout
+
+\begin_layout Plain Layout
+
+(109,0.683595853624865)
+\end_layout
+
+\begin_layout Plain Layout
+
+(110,0.688384708017111)
+\end_layout
+
+\begin_layout Plain Layout
+
+(111,0.689290356589481)
+\end_layout
+
+\begin_layout Plain Layout
+
+(112,0.693539261352271)
+\end_layout
+
+\begin_layout Plain Layout
+
+(113,0.696820707991719)
+\end_layout
+
+\begin_layout Plain Layout
+
+(114,0.699051802279428)
+\end_layout
+
+\begin_layout Plain Layout
+
+(115,0.699113564332947)
+\end_layout
+
+\begin_layout Plain Layout
+
+(116,0.71168251032941)
+\end_layout
+
+\begin_layout Plain Layout
+
+(117,0.712013559183106)
+\end_layout
+
+\begin_layout Plain Layout
+
+(118,0.71279085567221)
+\end_layout
+
+\begin_layout Plain Layout
+
+(119,0.734498629113659)
+\end_layout
+
+\begin_layout Plain Layout
+
+(120,0.745865687029436)
+\end_layout
+
+\begin_layout Plain Layout
+
+(121,0.755135830957443)
+\end_layout
+
+\begin_layout Plain Layout
+
+(122,0.763413985725492)
+\end_layout
+
+\begin_layout Plain Layout
+
+(123,0.768400442786515)
+\end_layout
+
+\begin_layout Plain Layout
+
+(124,0.772681003902107)
+\end_layout
+
+\begin_layout Plain Layout
+
+(125,0.780214098282158)
+\end_layout
+
+\begin_layout Plain Layout
+
+(126,0.791885492624715)
+\end_layout
+
+\begin_layout Plain Layout
+
+(127,0.798086503520608)
+\end_layout
+
+\begin_layout Plain Layout
+
+(128,0.801901086699218)
+\end_layout
+
+\begin_layout Plain Layout
+
+(129,0.807471418054774)
+\end_layout
+
+\begin_layout Plain Layout
+
+(130,0.817012045299634)
+\end_layout
+
+\begin_layout Plain Layout
+
+(131,0.819969842210412)
+\end_layout
+
+\begin_layout Plain Layout
+
+(132,0.841412221547216)
+\end_layout
+
+\begin_layout Plain Layout
+
+(133,0.845245404168963)
+\end_layout
+
+\begin_layout Plain Layout
+
+(134,0.84932060376741)
+\end_layout
+
+\begin_layout Plain Layout
+
+(135,0.857189641334116)
+\end_layout
+
+\begin_layout Plain Layout
+
+(136,0.862447937484831)
+\end_layout
+
+\begin_layout Plain Layout
+
+(137,0.869819809449837)
+\end_layout
+
+\begin_layout Plain Layout
+
+(138,0.881215816363692)
+\end_layout
+
+\begin_layout Plain Layout
+
+(139,0.899936670670286)
+\end_layout
+
+\begin_layout Plain Layout
+
+(140,0.904395553283393)
+\end_layout
+
+\begin_layout Plain Layout
+
+(141,0.906971034826711)
+\end_layout
+
+\begin_layout Plain Layout
+
+(142,0.911614991957322)
+\end_layout
+
+\begin_layout Plain Layout
+
+(143,0.91967800911516)
+\end_layout
+
+\begin_layout Plain Layout
+
+(144,0.953085052315146)
+\end_layout
+
+\begin_layout Plain Layout
+
+(145,0.958597874734551)
+\end_layout
+
+\begin_layout Plain Layout
+
+(146,0.966266573639587)
+\end_layout
+
+\begin_layout Plain Layout
+
+(147,0.971552424598485)
+\end_layout
+
+\begin_layout Plain Layout
+
+(148,0.980881399707869)
+\end_layout
+
+\begin_layout Plain Layout
+
+(149,0.984281893819571)
+\end_layout
+
+\begin_layout Plain Layout
+
+(150,0.986173253506422)
+\end_layout
+
+\begin_layout Plain Layout
+
+(151,1.02447446621954)
+\end_layout
+
+\begin_layout Plain Layout
+
+(152,1.0260632657446)
+\end_layout
+
+\begin_layout Plain Layout
+
+(153,1.034886703128)
+\end_layout
+
+\begin_layout Plain Layout
+
+(154,1.0736414284911)
+\end_layout
+
+\begin_layout Plain Layout
+
+(155,1.08597091189586)
+\end_layout
+
+\begin_layout Plain Layout
+
+(156,1.09464894351549)
+\end_layout
+
+\begin_layout Plain Layout
+
+(157,1.10219763522036)
+\end_layout
+
+\begin_layout Plain Layout
+
+(158,1.10264791594818)
+\end_layout
+
+\begin_layout Plain Layout
+
+(159,1.10550712561235)
+\end_layout
+
+\begin_layout Plain Layout
+
+(160,1.10723745916039)
+\end_layout
+
+\begin_layout Plain Layout
+
+(161,1.10759865003638)
+\end_layout
+
+\begin_layout Plain Layout
+
+(162,1.11048024496995)
+\end_layout
+
+\begin_layout Plain Layout
+
+(163,1.11188009963371)
+\end_layout
+
+\begin_layout Plain Layout
+
+(164,1.13915417552926)
+\end_layout
+
+\begin_layout Plain Layout
+
+(165,1.16812737146392)
+\end_layout
+
+\begin_layout Plain Layout
+
+(166,1.18830137955956)
+\end_layout
+
+\begin_layout Plain Layout
+
+(167,1.18970241816714)
+\end_layout
+
+\begin_layout Plain Layout
+
+(168,1.19241551170126)
+\end_layout
+
+\begin_layout Plain Layout
+
+(169,1.1932615803089)
+\end_layout
+
+\begin_layout Plain Layout
+
+(170,1.21273958589882)
+\end_layout
+
+\begin_layout Plain Layout
+
+(171,1.21746351895854)
+\end_layout
+
+\begin_layout Plain Layout
+
+(172,1.22096874844283)
+\end_layout
+
+\begin_layout Plain Layout
+
+(173,1.22223903564736)
+\end_layout
+
+\begin_layout Plain Layout
+
+(174,1.23226269520819)
+\end_layout
+
+\begin_layout Plain Layout
+
+(175,1.23739354033023)
+\end_layout
+
+\begin_layout Plain Layout
+
+(176,1.24629504885525)
+\end_layout
+
+\begin_layout Plain Layout
+
+(177,1.25605413783342)
+\end_layout
+
+\begin_layout Plain Layout
+
+(178,1.25688853324391)
+\end_layout
+
+\begin_layout Plain Layout
+
+(179,1.25910210167058)
+\end_layout
+
+\begin_layout Plain Layout
+
+(180,1.2610563787166)
+\end_layout
+
+\begin_layout Plain Layout
+
+(181,1.27046653605066)
+\end_layout
+
+\begin_layout Plain Layout
+
+(182,1.2843554795254)
+\end_layout
+
+\begin_layout Plain Layout
+
+(183,1.301305181114)
+\end_layout
+
+\begin_layout Plain Layout
+
+(184,1.31171097722836)
+\end_layout
+
+\begin_layout Plain Layout
+
+(185,1.31461478210986)
+\end_layout
+
+\begin_layout Plain Layout
+
+(186,1.31745156948455)
+\end_layout
+
+\begin_layout Plain Layout
+
+(187,1.3280939462129)
+\end_layout
+
+\begin_layout Plain Layout
+
+(188,1.34019703580998)
+\end_layout
+
+\begin_layout Plain Layout
+
+(189,1.34191797324456)
+\end_layout
+
+\begin_layout Plain Layout
+
+(190,1.37135721626692)
+\end_layout
+
+\begin_layout Plain Layout
+
+(191,1.37613111664541)
+\end_layout
+
+\begin_layout Plain Layout
+
+(192,1.42605655035004)
+\end_layout
+
+\begin_layout Plain Layout
+
+(193,1.42822267091833)
+\end_layout
+
+\begin_layout Plain Layout
+
+(194,1.43342716014013)
+\end_layout
+
+\begin_layout Plain Layout
+
+(195,1.43927115714177)
+\end_layout
+
+\begin_layout Plain Layout
+
+(196,1.49576244084165)
+\end_layout
+
+\begin_layout Plain Layout
+
+(197,1.49606728018261)
+\end_layout
+
+\begin_layout Plain Layout
+
+(198,1.49704792094417)
+\end_layout
+
+\begin_layout Plain Layout
+
+(199,1.52618014882319)
+\end_layout
+
+\begin_layout Plain Layout
+
+(200,1.52683742484078)
+\end_layout
+
+\begin_layout Plain Layout
+
+(201,1.52812954341061)
+\end_layout
+
+\begin_layout Plain Layout
+
+(202,1.54034402500838)
+\end_layout
+
+\begin_layout Plain Layout
+
+(203,1.54431879264303)
+\end_layout
+
+\begin_layout Plain Layout
+
+(204,1.5660246417392)
+\end_layout
+
+\begin_layout Plain Layout
+
+(205,1.57042690878734)
+\end_layout
+
+\begin_layout Plain Layout
+
+(206,1.57101763947867)
+\end_layout
+
+\begin_layout Plain Layout
+
+(207,1.57329062162898)
+\end_layout
+
+\begin_layout Plain Layout
+
+(208,1.58506080368534)
+\end_layout
+
+\begin_layout Plain Layout
+
+(209,1.5880398270674)
+\end_layout
+
+\begin_layout Plain Layout
+
+(210,1.60129413683899)
+\end_layout
+
+\begin_layout Plain Layout
+
+(211,1.65669830935076)
+\end_layout
+
+\begin_layout Plain Layout
+
+(212,1.65846275864169)
+\end_layout
+
+\begin_layout Plain Layout
+
+(213,1.67479719920084)
+\end_layout
+
+\begin_layout Plain Layout
+
+(214,1.69000090006739)
+\end_layout
+
+\begin_layout Plain Layout
+
+(215,1.69492517388426)
+\end_layout
+
+\begin_layout Plain Layout
+
+(216,1.69535615248606)
+\end_layout
+
+\begin_layout Plain Layout
+
+(217,1.71512293699197)
+\end_layout
+
+\begin_layout Plain Layout
+
+(218,1.73881329246797)
+\end_layout
+
+\begin_layout Plain Layout
+
+(219,1.74098348943517)
+\end_layout
+
+\begin_layout Plain Layout
+
+(220,1.7439543872606)
+\end_layout
+
+\begin_layout Plain Layout
+
+(221,1.76686711097136)
+\end_layout
+
+\begin_layout Plain Layout
+
+(222,1.77145668212324)
+\end_layout
+
+\begin_layout Plain Layout
+
+(223,1.77915362315252)
+\end_layout
+
+\begin_layout Plain Layout
+
+(224,1.78944915113971)
+\end_layout
+
+\begin_layout Plain Layout
+
+(225,1.8285797231365)
+\end_layout
+
+\begin_layout Plain Layout
+
+(226,1.84532526531257)
+\end_layout
+
+\begin_layout Plain Layout
+
+(227,1.8587942244485)
+\end_layout
+
+\begin_layout Plain Layout
+
+(228,1.85972797474824)
+\end_layout
+
+\begin_layout Plain Layout
+
+(229,1.88829533499666)
+\end_layout
+
+\begin_layout Plain Layout
+
+(230,1.89498209324665)
+\end_layout
+
+\begin_layout Plain Layout
+
+(231,1.90414424333721)
+\end_layout
+
+\begin_layout Plain Layout
+
+(232,1.91512195835821)
+\end_layout
+
+\begin_layout Plain Layout
+
+(233,1.92065557348542)
+\end_layout
+
+\begin_layout Plain Layout
+
+(234,1.9234856700059)
+\end_layout
+
+\begin_layout Plain Layout
+
+(235,1.92688728659414)
+\end_layout
+
+\begin_layout Plain Layout
+
+(236,1.92706906422973)
+\end_layout
+
+\begin_layout Plain Layout
+
+(237,1.93244844325818)
+\end_layout
+
+\begin_layout Plain Layout
+
+(238,1.93735381867737)
+\end_layout
+
+\begin_layout Plain Layout
+
+(239,1.94445084175095)
+\end_layout
+
+\begin_layout Plain Layout
+
+(240,1.95561227411963)
+\end_layout
+
+\begin_layout Plain Layout
+
+(241,1.9599576909095)
+\end_layout
+
+\begin_layout Plain Layout
+
+(242,1.96105655282736)
+\end_layout
+
+\begin_layout Plain Layout
+
+(243,1.98765787831508)
+\end_layout
+
+\begin_layout Plain Layout
+
+(244,2.00611884891987)
+\end_layout
+
+\begin_layout Plain Layout
+
+(245,2.00804846780375)
+\end_layout
+
+\begin_layout Plain Layout
+
+(246,2.02703456673771)
+\end_layout
+
+\begin_layout Plain Layout
+
+(247,2.02733733644709)
+\end_layout
+
+\begin_layout Plain Layout
+
+(248,2.02763063809834)
+\end_layout
+
+\begin_layout Plain Layout
+
+(249,2.03096928354353)
+\end_layout
+
+\begin_layout Plain Layout
+
+(250,2.03626027680002)
+\end_layout
+
+\begin_layout Plain Layout
+
+(251,2.03766676224768)
+\end_layout
+
+\begin_layout Plain Layout
+
+(252,2.04002394620329)
+\end_layout
+
+\begin_layout Plain Layout
+
+(253,2.04003136558458)
+\end_layout
+
+\begin_layout Plain Layout
+
+(254,2.04292949312367)
+\end_layout
+
+\begin_layout Plain Layout
+
+(255,2.0685984310694)
+\end_layout
+
+\begin_layout Plain Layout
+
+(256,2.08739456883632)
+\end_layout
+
+\begin_layout Plain Layout
+
+(257,2.09245449397713)
+\end_layout
+
+\begin_layout Plain Layout
+
+(258,2.10994999995455)
+\end_layout
+
+\begin_layout Plain Layout
+
+(259,2.11923091323115)
+\end_layout
+
+\begin_layout Plain Layout
+
+(260,2.14483193471096)
+\end_layout
+
+\begin_layout Plain Layout
+
+(261,2.15154296625406)
+\end_layout
+
+\begin_layout Plain Layout
+
+(262,2.17101188446395)
+\end_layout
+
+\begin_layout Plain Layout
+
+(263,2.1730230145622)
+\end_layout
+
+\begin_layout Plain Layout
+
+(264,2.1730804333929)
+\end_layout
+
+\begin_layout Plain Layout
+
+(265,2.17826131358743)
+\end_layout
+
+\begin_layout Plain Layout
+
+(266,2.19504704768769)
+\end_layout
+
+\begin_layout Plain Layout
+
+(267,2.19718177313916)
+\end_layout
+
+\begin_layout Plain Layout
+
+(268,2.21935594291426)
+\end_layout
+
+\begin_layout Plain Layout
+
+(269,2.27875272813253)
+\end_layout
+
+\begin_layout Plain Layout
+
+(270,2.35108539252542)
+\end_layout
+
+\begin_layout Plain Layout
+
+(271,2.35526967002079)
+\end_layout
+
+\begin_layout Plain Layout
+
+(272,2.40916265523992)
+\end_layout
+
+\begin_layout Plain Layout
+
+(273,2.46193212247454)
+\end_layout
+
+\begin_layout Plain Layout
+
+(274,2.47008136706427)
+\end_layout
+
+\begin_layout Plain Layout
+
+(275,2.48496274324134)
+\end_layout
+
+\begin_layout Plain Layout
+
+(276,2.52763869962655)
+\end_layout
+
+\begin_layout Plain Layout
+
+(277,2.54399146093056)
+\end_layout
+
+\begin_layout Plain Layout
+
+(278,2.57702269242145)
+\end_layout
+
+\begin_layout Plain Layout
+
+(279,2.63084052340128)
+\end_layout
+
+\begin_layout Plain Layout
+
+(280,2.63422982487828)
+\end_layout
+
+\begin_layout Plain Layout
+
+(281,2.65793577069417)
+\end_layout
+
+\begin_layout Plain Layout
+
+(282,2.77769250213169)
+\end_layout
+
+\begin_layout Plain Layout
+
+(283,2.97011831123382)
+\end_layout
+
+\begin_layout Plain Layout
+
+	};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De lo observado en la gráfica inferimos que la variable tiene distribución
+ exponencial.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document
