@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass book
 \begin_preamble
 \usepackage{pgfplots, tikz}
 \usetikzlibrary{arrows, automata}
@@ -80,6 +80,18 @@
 \end_header
 
 \begin_body
+
+\begin_layout Title
+Trabajo Práctico 2: Cadenas de Markov
+\end_layout
+
+\begin_layout Author
+Damián Ariel Marotte
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
 
 \begin_layout Enumerate
 En cada ronda de un juego, un jugador gana 
@@ -196,6 +208,13 @@ gamblersruin <- function() {
 gamblersruin()
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
 \end_inset
 
 
@@ -498,6 +517,10 @@ Comparar los resultados con la probabilidad exacta.
 \end_layout
 
 \begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -545,6 +568,9 @@ Se obtienen datos desde una base de datos central y se observan ataques
  semana es guardado.
  La matriz de transición para la cadena estimada para los ataques semanales
  es la siguiente:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 \begin{aligned}\begin{array}{c}
@@ -754,7 +780,7 @@ markovchain
 
 \begin_layout Plain Layout
 
-is.irreducible(P) && period(P) == 1
+if (is.irreducible(P) && period(P) == 1) steadyStates(P)
 \end_layout
 
 \end_inset
@@ -967,6 +993,10 @@ period(P)
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -995,10 +1025,6 @@ Estados absorventes:
 
 \begin_layout Itemize
 Cadena irreducible aperiódica.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1020,7 +1046,7 @@ status open
 
 \begin_layout Plain Layout
 
-steadyStates(P)
+if (is.irreducible(P) && period(P) == 1) steadyStates(P)
 \end_layout
 
 \end_inset
@@ -1511,6 +1537,10 @@ Terminaron en
 \end_inset
 
 , tres de diez simulaciones.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1537,7 +1567,7 @@ status open
 
 \begin_layout Plain Layout
 
-steadyStates(P)
+if (is.irreducible(P) && period(P) == 1) steadyStates(P)
 \end_layout
 
 \end_inset
@@ -1602,6 +1632,26 @@ Mostrar que
 \begin_deeper
 \begin_layout Paragraph
 Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P=\left(\begin{array}{c|cccccccc}
+0 & 0 & 1 & 0 & 0 & \cdots & \cdots & 0 & 0\\
+1 & 0 & \frac{1}{k} & \frac{k-1}{k} & 0 & 0 & \cdots & \cdots & 0\\
+2 & 0 & 0 & \frac{2}{k} & \frac{k-2}{k} & 0 & 0 & \cdots & \vdots\\
+\vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & \ddots & \vdots\\
+\vdots & \vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & 0\\
+k-2 & \vdots & \vdots & \vdots & 0 & \ddots & \frac{k-2}{k} & \frac{2}{k} & 0\\
+k-1 & 0 & 0 & \vdots & \vdots & \ddots & \ddots & \frac{k-1}{k} & \frac{1}{k}\\
+k & 0 & 0 & \cdots & \cdots & \cdots & 0 & 0 & 1
+\end{array}\right)$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1686,26 +1736,6 @@ Sean
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula 
-\[
-P=\left(\begin{array}{c|cccccccc}
-0 & 0 & 1 & 0 & 0 & \cdots & \cdots & 0 & 0\\
-1 & 0 & \frac{1}{k} & \frac{k-1}{k} & 0 & 0 & \cdots & \cdots & 0\\
-2 & 0 & 0 & \frac{2}{k} & \frac{k-2}{k} & 0 & 0 & \cdots & \vdots\\
-\vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & \ddots & \vdots\\
-\vdots & \vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & 0\\
-k-2 & \vdots & \vdots & \vdots & 0 & \ddots & \frac{k-2}{k} & \frac{2}{k} & 0\\
-k-1 & 0 & 0 & \vdots & \vdots & \ddots & \ddots & \frac{k-1}{k} & \frac{1}{k}\\
-k & 0 & 0 & \cdots & \cdots & \cdots & 0 & 0 & 1
-\end{array}\right)
-\]
-
-\end_inset
-
-
-\end_layout
-
 \end_deeper
 \begin_layout Enumerate
 Si María tiene cuatro canciones en su reproductor de música, encontrar la
@@ -1765,7 +1795,7 @@ P <- matrix(c(0, 1,   0,       0,       0,
 
 \begin_layout Plain Layout
 
-            nrow = k+1, byrow = TRUE)
+            nrow = k + 1, byrow = TRUE)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1817,10 +1847,6 @@ Sea
 \end_inset
 
  tiradas.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -1996,13 +2022,9 @@ c(1, 0, 0, 0, 0, 0) %*% (P %^% 3)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\boxed{\begin{pmatrix}0,06490547 & 0,2362559 & 0,3439886 & 0,2504237 & 0,09115423 & 0,\boldsymbol{01327206}\end{pmatrix}}
+\boxed{\begin{pmatrix}0,06490547 & 0,2362559 & 0,3439886 & 0,2504237 & 0,09115423 & \boldsymbol{0,01327206}\end{pmatrix}}
 \]
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -2123,6 +2145,10 @@ Asumir que
 \end_inset
 
  y la distribucion inicial es uniforme.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2155,10 +2181,6 @@ p & 0 & q & 0\\
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2185,7 +2207,7 @@ Observemos que si
 \end_inset
 
  (pues 
-\begin_inset Formula $P\left(X_{1}=2|X_{0}=3\right)=1$
+\begin_inset Formula $P\left(3,2\right)=1$
 \end_inset
 
 ), luego 
@@ -2284,7 +2306,7 @@ Solución
 
 \begin_layout Itemize
 Estados recurrentes: 
-\begin_inset Formula $\emptyset$
+\begin_inset Formula $\left\{ \CheckedBox,\XBox\right\} $
 \end_inset
 
 .
@@ -2304,10 +2326,6 @@ Estados absorventes:
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2359,6 +2377,25 @@ Solución
 \end_layout
 
 \begin_layout Standard
+Queremos averiguar 
+\begin_inset Formula $R\left(1,1\right)+R\left(1,2\right)+R\left(1,3\right)+R\left(1,4\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $R=\left(I-P\right)^{-1}$
+\end_inset
+
+, sin embargo dicha matriz no es invertible.
+ Para solucionar este inconveniente, trabajaremos con la matriz reducida
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ resultante de eliminar las filas y columnas correspondientes a los estados
+ absorbentes:
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset listings
 lstparams "language=R,fontfamily=tt"
@@ -2367,66 +2404,27 @@ status open
 
 \begin_layout Plain Layout
 
-states = c(
-\begin_inset Quotes fld
-\end_inset
-
-1
-\begin_inset Quotes frd
-\end_inset
-
-, 2:4, 
-\begin_inset Quotes fld
-\end_inset
-
-Recibido
-\begin_inset Quotes frd
-\end_inset
-
-, 
-\begin_inset Quotes fld
-\end_inset
-
-Abandono
-\begin_inset Quotes frd
-\end_inset
-
-)
+Q <- matrix(c(3/100, 91/100, 0,      0,
 \end_layout
 
 \begin_layout Plain Layout
 
-P <- matrix(c(3/100, 91/100, 0,      0,      0,      6/100,
+              0,     3/100,  91/100, 0,
 \end_layout
 
 \begin_layout Plain Layout
 
-              0,     3/100,  91/100, 0,      0,      6/100,
+              0,     0,      3/100,  93/100,
 \end_layout
 
 \begin_layout Plain Layout
 
-              0,     0,      3/100,  93/100, 0,      4/100,
+              0,     0,      0,      3/100),
 \end_layout
 
 \begin_layout Plain Layout
 
-              0,     0,      0,      3/100,  93/100, 4/100,
-\end_layout
-
-\begin_layout Plain Layout
-
-              0,     0,      0,      0,      1,      0,
-\end_layout
-
-\begin_layout Plain Layout
-
-              0,     0,      0,      0,      0,      1),
-\end_layout
-
-\begin_layout Plain Layout
-
-            nrow = 6, byrow = TRUE)
+            nrow = 4, byrow = TRUE)
 \end_layout
 
 \begin_layout Plain Layout
@@ -2435,28 +2433,55 @@ P <- matrix(c(3/100, 91/100, 0,      0,      0,      6/100,
 
 \begin_layout Plain Layout
 
-library(markovchain)
-\end_layout
-
-\begin_layout Plain Layout
-
-P <- new(
-\begin_inset Quotes fld
-\end_inset
-
-markovchain
-\begin_inset Quotes frd
-\end_inset
-
-, states, TRUE, P)
+solve(diag(1, 4, 4) - Q)
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\begin{pmatrix}1,030928 & 0,9671591 & 0,9073348 & 0,8699190\\
+0 & 1,0309278 & 0,9671591 & 0,9272763\\
+0 & 0 & 1,0309278 & 0,9884153\\
+0 & 0 & 0 & 1,0309278
+\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta matriz nos indica el numero de años promedio que un estudiante que
+ se encuentra cursando el año 
+\begin_inset Formula $i$
+\end_inset
+
+, cursara el año 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ Es decir que la respuesta que buscamos es la suma de la primera fila:
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1,030928+0,9671591+0,9073348+0,8699190=\boldsymbol{3,775341}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 El modelo Wright-Fisher describe la evolución de una población fija de 
@@ -2557,6 +2582,10 @@ Simular este proceso para algún valor de
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2653,6 +2682,13 @@ rmarkovchain(19, P,
 )
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
 \end_inset
 
 
@@ -2756,14 +2792,17 @@ Solución
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $P_{00}=1$
-\end_inset
-
-, 
-\begin_inset Formula $P_{kk}=1$
+Naturalmente si la poblacion no tiene genes de algun tipo, entonces no sera
+ capaz de transmitirlo a la siguiente generacion, situacion que se ve reflejada
+ en los valores 
+\begin_inset Formula $P_{00}=P_{kk}=1$
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2897,6 +2936,10 @@ P\left(N_{2}\geq200\right)\approx\footnotemark\footnotetext{https://keisan.casio
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2936,6 +2979,13 @@ tiempos = c(0, runif(votantes, 0, t))
 plot(sort(tiempos))
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
 \end_inset
 
 
@@ -4503,6 +4553,10 @@ for (i in 1:length(tiempos)-1) {
 plot(sort(tiempos))
 \end_layout
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
