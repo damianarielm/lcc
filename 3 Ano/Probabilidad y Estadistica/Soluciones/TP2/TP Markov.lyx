@@ -1635,20 +1635,15 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P=\left(\begin{array}{c|cccccccc}
-0 & 0 & 1 & 0 & 0 & \cdots & \cdots & 0 & 0\\
-1 & 0 & \frac{1}{k} & \frac{k-1}{k} & 0 & 0 & \cdots & \cdots & 0\\
-2 & 0 & 0 & \frac{2}{k} & \frac{k-2}{k} & 0 & 0 & \cdots & \vdots\\
-\vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & \ddots & \vdots\\
-\vdots & \vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & 0\\
-k-2 & \vdots & \vdots & \vdots & 0 & \ddots & \frac{k-2}{k} & \frac{2}{k} & 0\\
-k-1 & 0 & 0 & \vdots & \vdots & \ddots & \ddots & \frac{k-1}{k} & \frac{1}{k}\\
-k & 0 & 0 & \cdots & \cdots & \cdots & 0 & 0 & 1
+\begin_inset Formula $P=\left(\begin{array}{c|ccccccc}
+1 & \frac{1}{k} & \frac{k-1}{k} & 0 & 0 & \cdots & 0 & 0\\
+2 & 0 & \frac{2}{k} & \frac{k-2}{k} & 0 & 0 & \vdots & 0\\
+\vdots & 0 & 0 & \ddots & \ddots & 0 & \ddots & \vdots\\
+\vdots & \vdots & 0 & 0 & \ddots & \ddots & \ddots & 0\\
+k-2 & \vdots & \vdots & 0 & 0 & \frac{k-2}{k} & \frac{2}{k} & 0\\
+k-1 & 0 & \vdots & \vdots & \ddots & \ddots & \frac{k-1}{k} & \frac{1}{k}\\
+k & 0 & 0 & \cdots & \cdots & 0 & 0 & 1
 \end{array}\right)$
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -1662,7 +1657,7 @@ k & 0 & 0 & \cdots & \cdots & \cdots & 0 & 0 & 1
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $E=\left\{ 0,\ldots,k\right\} $
+\begin_inset Formula $E=\left\{ 1,\ldots,k\right\} $
 \end_inset
 
  es discreto.
@@ -1670,7 +1665,7 @@ k & 0 & 0 & \cdots & \cdots & \cdots & 0 & 0 & 1
 
 \begin_layout Itemize
 Sean 
-\begin_inset Formula $B_{0}=0$
+\begin_inset Formula $B_{1}=1$
 \end_inset
 
  y 
@@ -1681,14 +1676,14 @@ Sean
 \end_inset
 
 , luego 
-\begin_inset Formula $X_{n}={\displaystyle \sum_{i=0}^{n}}B_{i}$
+\begin_inset Formula $X_{n}={\displaystyle \sum_{i=1}^{n}}B_{i}$
 \end_inset
 
 .
  Ahora:
 \begin_inset Formula 
 \[
-\boxed{P\left(X_{n+1}=j|X_{0}=i_{0},\ldots,X_{n}=i\right)}=
+\boxed{P\left(X_{n+1}=j|X_{1}=i_{1},\ldots,X_{n}=i\right)}=
 \]
 
 \end_inset
@@ -1696,7 +1691,7 @@ Sean
 
 \begin_inset Formula 
 \[
-=P\left(X_{n}+B_{n+1}=j|X_{0}=i_{0},\ldots,X_{n}=i\right)=
+=P\left(X_{n}+B_{n+1}=j|X_{1}=i_{1},\ldots,X_{n}=i\right)=
 \]
 
 \end_inset
@@ -1704,7 +1699,7 @@ Sean
 
 \begin_inset Formula 
 \[
-=P\left(i+B_{n+1}=j|X_{0}=i_{0},\ldots,X_{n}=i\right)=
+=P\left(i+B_{n+1}=j|X_{1}=i_{1},\ldots,X_{n}=i\right)=
 \]
 
 \end_inset
@@ -1712,7 +1707,7 @@ Sean
 
 \begin_inset Formula 
 \[
-=P\left(B_{n+1}=j-i|X_{0}=i_{0},\ldots,X_{n}=i\right)=P\left(B_{n+1}=j-i\right)=
+=P\left(B_{n+1}=j-i|X_{1}=i_{1},\ldots,X_{n}=i\right)=P\left(B_{n+1}=j-i\right)=
 \]
 
 \end_inset
@@ -1757,45 +1752,32 @@ status open
 
 \begin_layout Plain Layout
 
-k = 4; states = c(
-\begin_inset Quotes fld
-\end_inset
-
-0
-\begin_inset Quotes frd
-\end_inset
-
-, 1:4)
+k = 4
 \end_layout
 
 \begin_layout Plain Layout
 
-P <- matrix(c(0, 1,   0,       0,       0,
+P <- matrix(c(1/k, (k-1)/k, 0,       0,
 \end_layout
 
 \begin_layout Plain Layout
 
-              0, 1/k, (k-1)/k, 0,       0,
+              0,   2/k,     (k-2)/k, 0,
 \end_layout
 
 \begin_layout Plain Layout
 
-              0, 0,   2/k,     (k-2)/k, 0,
+              0,   0,       3/k,     (k-3)/4,
 \end_layout
 
 \begin_layout Plain Layout
 
-              0, 0,   0,       3/k,     (k-3)/4,
+              0,   0,       0,       1),
 \end_layout
 
 \begin_layout Plain Layout
 
-              0, 0,   0,       0,       1),
-\end_layout
-
-\begin_layout Plain Layout
-
-            nrow = k + 1, byrow = TRUE)
+            nrow = k, byrow = TRUE)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1809,7 +1791,7 @@ library(expm)
 
 \begin_layout Plain Layout
 
-c(1, 0, 0, 0, 0) %*% (P %^% 6)
+c(1, 0, 0, 0) %*% (P %^% 6)
 \end_layout
 
 \end_inset
@@ -1820,7 +1802,7 @@ c(1, 0, 0, 0, 0) %*% (P %^% 6)
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\boxed{\begin{pmatrix}0,0009 & 0,0908 & 0,5273 & \boldsymbol{0,3808}\end{pmatrix}}
+\boxed{\begin{pmatrix}0,0002 & 0,0461 & 0,4409 & \boldsymbol{0,5126<}\end{pmatrix}}
 \]
 
 \end_inset
@@ -2145,10 +2127,6 @@ Asumir que
 \end_inset
 
  y la distribucion inicial es uniforme.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -2178,6 +2156,10 @@ p & 0 & q & 0\\
 \end{aligned}
 \]
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -2326,6 +2308,10 @@ Estados absorventes:
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2457,6 +2443,9 @@ solve(diag(1, 4, 4) - Q)
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
 Esta matriz nos indica el numero de años promedio que un estudiante que
  se encuentra cursando el año 
 \begin_inset Formula $i$
@@ -2582,10 +2571,6 @@ Simular este proceso para algún valor de
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -2682,13 +2667,6 @@ rmarkovchain(19, P,
 )
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset space ~
 \end_inset
 
 
@@ -2799,10 +2777,6 @@ Naturalmente si la poblacion no tiene genes de algun tipo, entonces no sera
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -2874,6 +2848,10 @@ status open
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2933,10 +2911,6 @@ P\left(N_{3}\geq350|N_{1}=150\right)=P\left(N_{3}-N_{1}\geq350-150\right)=
 P\left(N_{2}\geq200\right)\approx\footnotemark\footnotetext{https://keisan.casio.com/exec/system/1180573179}\boxed{0.5094}
 \]
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -4550,13 +4524,9 @@ for (i in 1:length(tiempos)-1) {
 
 \begin_layout Plain Layout
 
-plot(sort(tiempos))
+hist(tiempos)
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -4582,1439 +4552,2713 @@ begin{tikzpicture}
 
     
 \backslash
-begin{axis}[xticklabels={,,}, yticklabels={,,}]
+begin{axis}[ybar interval, xtick=data,
+\end_layout
+
+\begin_layout Plain Layout
+
+    	xticklabel interval boundaries,
+\end_layout
+
+\begin_layout Plain Layout
+
+    	x tick label style={rotate=90},
+\end_layout
+
+\begin_layout Plain Layout
+
+        xlabel = Tiempo entre arribos,
+\end_layout
+
+\begin_layout Plain Layout
+
+        ylabel = Frecuencia Absoluta,
+\end_layout
+
+\begin_layout Plain Layout
+
+        x label style={at={(axis description cs:0.5,-0.2)}}]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[hist={bins=6, data max=3, data min=0}]
+\end_layout
+
+\begin_layout Plain Layout
+
+            table[row sep=
+\backslash
+
+\backslash
+,y index=0] {
+\end_layout
+
+\begin_layout Plain Layout
+
+                data
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.27198613155633
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.566904454026371
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.22807962121442
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.212209251942113
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.78327508107759
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.635671210940927
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.619970756582916
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.65983548737131
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.57711890013888
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.07086450327188
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.46853575063869
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.231507214251906
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.82769765844569
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.0389549692627
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.76709973113611
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.863099322421476
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0830829804763198
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.425506979227066
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.25556821515784
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.67646162165329
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.05546899582259
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.23414754844271
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.08796623558737
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.37870132224634
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.641980618005618
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.613467703806236
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.34387993789278
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.776711863232777
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0119791331235319
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.29161227145232
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0854768897406757
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.259298415854573
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.17288578487933
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.709297914756462
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.360186258098111
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.572355132317171
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.43494834494777
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.970916268182918
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.50191414472647
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.21389071876183
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.621082314290106
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.670440238667652
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.38815356860869
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.09612713358365
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.06178090954199
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.460215829778463
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.17269326117821
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0715552519541234
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.226132624782622
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.143548565218225
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.88993183337152
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.677705649985
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.71037413273007
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.80226668599062
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.984121038811281
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.62633519340307
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.15262118168175
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.269915861310437
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0879085378255695
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0249133973848075
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.196056342450902
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.796385415829718
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.13164527062327
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.399588896892965
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.57887131581083
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.35940675064921
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.1261258656159
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.04802162526175
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0409104733262211
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.883913272060454
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.785266064107418
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.969526218948886
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.231723301811144
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.189318867400289
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.84703483479097
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.13191582798027
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.473410079721361
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.13201669487171
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.50288772629574
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.864249859470874
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.10467851976864
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.24425232876092
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.919018335174769
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.33176127891056
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.890215235995129
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.02587401052006
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.13092704792507
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.564523114822805
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.14519167155959
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.73915564152412
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.07027952442877
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.15350940334611
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.47906274627894
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.319308388279751
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.851280111819506
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.02930027153343
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.926937048789114
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.57339800149202
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.00545408553443849
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.43927490594797
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.478504883358255
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.51506177871488
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.45176219893619
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.131511141546071
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.106999979820102
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.05088604846969
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.709225583821535
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.59780265577137
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.787541606230661
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.449923072708771
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.718040395528078
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.769177561858669
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.952484306646511
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.969215925782919
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.08550599403679
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.50105680688284
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0291493074037135
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0181094196159393
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.5585990275722
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.46489960257895
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.774475241778418
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.20761778065935
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.22516691545025
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0519925213884562
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.15896705491468
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.89931937190704
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.333457221044227
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.856636475306
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.03166794334538
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.37643324700184
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.09843173949048
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.137488001491874
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.86065766750835
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.99885963322595
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.44086591247469
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.13639739947394
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.25300213089213
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.231261151609942
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.19514227728359
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.574147677049041
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.167883121641353
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.04714365210384
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.890138881048188
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.388954718364403
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.379498293623328
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.79253222746775
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.515948165673763
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0560504144523293
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.135132621740922
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.97378471936099
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.70852371910587
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.773688134970143
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.757850966183469
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.63346454757266
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.07803638232872
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.520165261812508
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.73829777468927
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.699622942367569
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.530378389405087
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.361839925171807
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.15165939601138
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.481729914201424
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.356496729422361
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.2949632012751
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.90177756268531
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.75362311443314
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.6995264175348
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.16749203205109
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0804840282071382
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.126169672468677
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.205976232653484
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.86254035402089
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.00983426836319268
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.43975817365572
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.119220351800323
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0790163101628423
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.072410989087075
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.851266839774325
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.88891539932229
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0278671374544501
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.510406281799078
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.610186508623883
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.974516024580225
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.95993116218597
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.287904287455603
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.71373184141703
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.538974812021479
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.11702334717847
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.755777596961707
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0313577908091247
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.193757551722229
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.46886970312335
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.417725992854685
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0119388462044299
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0709967825096101
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.48932731081732
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.28470251616091
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.25113318301737
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.339939305093139
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.84131589718163
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.38584602018818
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.06630891305394
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.00943078217097
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.6327083085198
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.3156980802305
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.05105553474277
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.108881803695112
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.470165378646925
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.779930800432339
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.418309425003827
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.94553446467035
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.29863674542867
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.8305657976307
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.201289689168334
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0374229422304779
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.312616133596748
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.41066797962412
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.543381166644394
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.560825150460005
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.08642720989883
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.79020727192983
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.24926253734156
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.38003324274905
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.646303247893229
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.455207166960463
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.80800664564595
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.42813421669416
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.59569706791081
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.990892783273011
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.163484718650579
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.90150347235613
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.902258921647444
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.127380186924711
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.51740834210068
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.26213281834498
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.88152045640163
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.286213971907273
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.228168559726328
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.329810907365754
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.32826448441483
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.894858226412907
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.60900849965401
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.179899239214137
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.16881282115355
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.86038080765866
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.71273544896394
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.978375974111259
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.696160911815241
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.538358505349606
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.463496941840276
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.398934480501339
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.947963738813996
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.4932332825847
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.992581329541281
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.0484183297958225
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.47329180315137
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.476930984761566
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.584501596167684
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.693653040099889
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.741977870464325
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.03843998187222
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.60464680287987
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.01954328711145
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.42237045429647
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.49828827916645
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.75664364406839
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.588913977378979
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.7387960893102
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.30029402161017
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.494634722359478
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.15676715993322
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.57886450947262
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.49336051475257
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.747865569312125
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.46960062906146
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.934296607738361
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.1199649060145
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.00727347331121564
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.70768431620672
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.820901548024267
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.305008992087096
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.456225329311565
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.25080852140673
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.294282124377787
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.601196290226653
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2.51528588170186
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.96651951270178
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.933142241556197
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.2126319964882
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.32358081662096
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.37928350502625
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.33359936671332
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+0.291583581827581
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+1.23801746824756
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            };
 \end_layout
 
 \begin_layout Plain Layout
 
     
-\backslash
-addplot [thin] coordinates {
-\end_layout
-
-\begin_layout Plain Layout
-
-        (1,0.0030801824759692)
-\end_layout
-
-\begin_layout Plain Layout
-
-(2,0.0052795868832618)
-\end_layout
-
-\begin_layout Plain Layout
-
-(3,0.00824174168519676)
-\end_layout
-
-\begin_layout Plain Layout
-
-(4,0.0117661887779832)
-\end_layout
-
-\begin_layout Plain Layout
-
-(5,0.0226951015647501)
-\end_layout
-
-\begin_layout Plain Layout
-
-(6,0.0291344225406647)
-\end_layout
-
-\begin_layout Plain Layout
-
-(7,0.0467602133285254)
-\end_layout
-
-\begin_layout Plain Layout
-
-(8,0.0474895688239485)
-\end_layout
-
-\begin_layout Plain Layout
-
-(9,0.04948969068937)
-\end_layout
-
-\begin_layout Plain Layout
-
-(10,0.0501881700474769)
-\end_layout
-
-\begin_layout Plain Layout
-
-(11,0.0557571107055992)
-\end_layout
-
-\begin_layout Plain Layout
-
-(12,0.0582756267394871)
-\end_layout
-
-\begin_layout Plain Layout
-
-(13,0.0762048019096255)
-\end_layout
-
-\begin_layout Plain Layout
-
-(14,0.0775372821372002)
-\end_layout
-
-\begin_layout Plain Layout
-
-(15,0.0829638030845672)
-\end_layout
-
-\begin_layout Plain Layout
-
-(16,0.0850328451488167)
-\end_layout
-
-\begin_layout Plain Layout
-
-(17,0.0909272062126547)
-\end_layout
-
-\begin_layout Plain Layout
-
-(18,0.0933263227343559)
-\end_layout
-
-\begin_layout Plain Layout
-
-(19,0.0936216590926051)
-\end_layout
-
-\begin_layout Plain Layout
-
-(20,0.10278076515533)
-\end_layout
-
-\begin_layout Plain Layout
-
-(21,0.128018473042175)
-\end_layout
-
-\begin_layout Plain Layout
-
-(22,0.138448662590235)
-\end_layout
-
-\begin_layout Plain Layout
-
-(23,0.141681177075952)
-\end_layout
-
-\begin_layout Plain Layout
-
-(24,0.143705070018768)
-\end_layout
-
-\begin_layout Plain Layout
-
-(25,0.14412440196611)
-\end_layout
-
-\begin_layout Plain Layout
-
-(26,0.162353330058977)
-\end_layout
-
-\begin_layout Plain Layout
-
-(27,0.165211439598352)
-\end_layout
-
-\begin_layout Plain Layout
-
-(28,0.175489799352363)
-\end_layout
-
-\begin_layout Plain Layout
-
-(29,0.178309667855501)
-\end_layout
-
-\begin_layout Plain Layout
-
-(30,0.186006395146251)
-\end_layout
-
-\begin_layout Plain Layout
-
-(31,0.194972785189748)
-\end_layout
-
-\begin_layout Plain Layout
-
-(32,0.203981844009832)
-\end_layout
-
-\begin_layout Plain Layout
-
-(33,0.207083274610341)
-\end_layout
-
-\begin_layout Plain Layout
-
-(34,0.207804234931245)
-\end_layout
-
-\begin_layout Plain Layout
-
-(35,0.213938001310453)
-\end_layout
-
-\begin_layout Plain Layout
-
-(36,0.217212648130953)
-\end_layout
-
-\begin_layout Plain Layout
-
-(37,0.221521608531475)
-\end_layout
-
-\begin_layout Plain Layout
-
-(38,0.224280500784516)
-\end_layout
-
-\begin_layout Plain Layout
-
-(39,0.224388060159981)
-\end_layout
-
-\begin_layout Plain Layout
-
-(40,0.229506373638287)
-\end_layout
-
-\begin_layout Plain Layout
-
-(41,0.231171598657966)
-\end_layout
-
-\begin_layout Plain Layout
-
-(42,0.232137197395787)
-\end_layout
-
-\begin_layout Plain Layout
-
-(43,0.241045873844996)
-\end_layout
-
-\begin_layout Plain Layout
-
-(44,0.247523653088138)
-\end_layout
-
-\begin_layout Plain Layout
-
-(45,0.249884587945417)
-\end_layout
-
-\begin_layout Plain Layout
-
-(46,0.26281668827869)
-\end_layout
-
-\begin_layout Plain Layout
-
-(47,0.269357705488801)
-\end_layout
-
-\begin_layout Plain Layout
-
-(48,0.279189591296017)
-\end_layout
-
-\begin_layout Plain Layout
-
-(49,0.282597842859104)
-\end_layout
-
-\begin_layout Plain Layout
-
-(50,0.286895474418998)
-\end_layout
-
-\begin_layout Plain Layout
-
-(51,0.28834463073872)
-\end_layout
-
-\begin_layout Plain Layout
-
-(52,0.290856263134629)
-\end_layout
-
-\begin_layout Plain Layout
-
-(53,0.291435684543103)
-\end_layout
-
-\begin_layout Plain Layout
-
-(54,0.294176474679261)
-\end_layout
-
-\begin_layout Plain Layout
-
-(55,0.298896378837526)
-\end_layout
-
-\begin_layout Plain Layout
-
-(56,0.318991309963167)
-\end_layout
-
-\begin_layout Plain Layout
-
-(57,0.323681630194187)
-\end_layout
-
-\begin_layout Plain Layout
-
-(58,0.324644139502198)
-\end_layout
-
-\begin_layout Plain Layout
-
-(59,0.325932124396786)
-\end_layout
-
-\begin_layout Plain Layout
-
-(60,0.32638919306919)
-\end_layout
-
-\begin_layout Plain Layout
-
-(61,0.327154726954177)
-\end_layout
-
-\begin_layout Plain Layout
-
-(62,0.331943037221208)
-\end_layout
-
-\begin_layout Plain Layout
-
-(63,0.34779602335766)
-\end_layout
-
-\begin_layout Plain Layout
-
-(64,0.354151660110801)
-\end_layout
-
-\begin_layout Plain Layout
-
-(65,0.358723060693592)
-\end_layout
-
-\begin_layout Plain Layout
-
-(66,0.387571420054883)
-\end_layout
-
-\begin_layout Plain Layout
-
-(67,0.390706684207544)
-\end_layout
-
-\begin_layout Plain Layout
-
-(68,0.391101459274068)
-\end_layout
-
-\begin_layout Plain Layout
-
-(69,0.396290809381753)
-\end_layout
-
-\begin_layout Plain Layout
-
-(70,0.398451795335859)
-\end_layout
-
-\begin_layout Plain Layout
-
-(71,0.400970971444622)
-\end_layout
-
-\begin_layout Plain Layout
-
-(72,0.409295193850994)
-\end_layout
-
-\begin_layout Plain Layout
-
-(73,0.450662684859708)
-\end_layout
-
-\begin_layout Plain Layout
-
-(74,0.468728640815243)
-\end_layout
-
-\begin_layout Plain Layout
-
-(75,0.475006844149902)
-\end_layout
-
-\begin_layout Plain Layout
-
-(76,0.478196782758459)
-\end_layout
-
-\begin_layout Plain Layout
-
-(77,0.479049788787961)
-\end_layout
-
-\begin_layout Plain Layout
-
-(78,0.503769455244765)
-\end_layout
-
-\begin_layout Plain Layout
-
-(79,0.50397005234845)
-\end_layout
-
-\begin_layout Plain Layout
-
-(80,0.504340172046795)
-\end_layout
-
-\begin_layout Plain Layout
-
-(81,0.511679094051942)
-\end_layout
-
-\begin_layout Plain Layout
-
-(82,0.523605050286278)
-\end_layout
-
-\begin_layout Plain Layout
-
-(83,0.530377629445866)
-\end_layout
-
-\begin_layout Plain Layout
-
-(84,0.534678923198953)
-\end_layout
-
-\begin_layout Plain Layout
-
-(85,0.538909992668778)
-\end_layout
-
-\begin_layout Plain Layout
-
-(86,0.543700525537133)
-\end_layout
-
-\begin_layout Plain Layout
-
-(87,0.551537680439651)
-\end_layout
-
-\begin_layout Plain Layout
-
-(88,0.563456477830186)
-\end_layout
-
-\begin_layout Plain Layout
-
-(89,0.577877114061266)
-\end_layout
-
-\begin_layout Plain Layout
-
-(90,0.579296724870801)
-\end_layout
-
-\begin_layout Plain Layout
-
-(91,0.589933880371973)
-\end_layout
-
-\begin_layout Plain Layout
-
-(92,0.590919219190255)
-\end_layout
-
-\begin_layout Plain Layout
-
-(93,0.591164375189692)
-\end_layout
-
-\begin_layout Plain Layout
-
-(94,0.592380296671763)
-\end_layout
-
-\begin_layout Plain Layout
-
-(95,0.598868178203702)
-\end_layout
-
-\begin_layout Plain Layout
-
-(96,0.602231227559969)
-\end_layout
-
-\begin_layout Plain Layout
-
-(97,0.602361417375505)
-\end_layout
-
-\begin_layout Plain Layout
-
-(98,0.612078613601625)
-\end_layout
-
-\begin_layout Plain Layout
-
-(99,0.618095934391022)
-\end_layout
-
-\begin_layout Plain Layout
-
-(100,0.624984565889463)
-\end_layout
-
-\begin_layout Plain Layout
-
-(101,0.638377494178712)
-\end_layout
-
-\begin_layout Plain Layout
-
-(102,0.649761049775407)
-\end_layout
-
-\begin_layout Plain Layout
-
-(103,0.650416801683605)
-\end_layout
-
-\begin_layout Plain Layout
-
-(104,0.660413424717262)
-\end_layout
-
-\begin_layout Plain Layout
-
-(105,0.663664060877636)
-\end_layout
-
-\begin_layout Plain Layout
-
-(106,0.672279164660722)
-\end_layout
-
-\begin_layout Plain Layout
-
-(107,0.673125471454114)
-\end_layout
-
-\begin_layout Plain Layout
-
-(108,0.68148336187005)
-\end_layout
-
-\begin_layout Plain Layout
-
-(109,0.683595853624865)
-\end_layout
-
-\begin_layout Plain Layout
-
-(110,0.688384708017111)
-\end_layout
-
-\begin_layout Plain Layout
-
-(111,0.689290356589481)
-\end_layout
-
-\begin_layout Plain Layout
-
-(112,0.693539261352271)
-\end_layout
-
-\begin_layout Plain Layout
-
-(113,0.696820707991719)
-\end_layout
-
-\begin_layout Plain Layout
-
-(114,0.699051802279428)
-\end_layout
-
-\begin_layout Plain Layout
-
-(115,0.699113564332947)
-\end_layout
-
-\begin_layout Plain Layout
-
-(116,0.71168251032941)
-\end_layout
-
-\begin_layout Plain Layout
-
-(117,0.712013559183106)
-\end_layout
-
-\begin_layout Plain Layout
-
-(118,0.71279085567221)
-\end_layout
-
-\begin_layout Plain Layout
-
-(119,0.734498629113659)
-\end_layout
-
-\begin_layout Plain Layout
-
-(120,0.745865687029436)
-\end_layout
-
-\begin_layout Plain Layout
-
-(121,0.755135830957443)
-\end_layout
-
-\begin_layout Plain Layout
-
-(122,0.763413985725492)
-\end_layout
-
-\begin_layout Plain Layout
-
-(123,0.768400442786515)
-\end_layout
-
-\begin_layout Plain Layout
-
-(124,0.772681003902107)
-\end_layout
-
-\begin_layout Plain Layout
-
-(125,0.780214098282158)
-\end_layout
-
-\begin_layout Plain Layout
-
-(126,0.791885492624715)
-\end_layout
-
-\begin_layout Plain Layout
-
-(127,0.798086503520608)
-\end_layout
-
-\begin_layout Plain Layout
-
-(128,0.801901086699218)
-\end_layout
-
-\begin_layout Plain Layout
-
-(129,0.807471418054774)
-\end_layout
-
-\begin_layout Plain Layout
-
-(130,0.817012045299634)
-\end_layout
-
-\begin_layout Plain Layout
-
-(131,0.819969842210412)
-\end_layout
-
-\begin_layout Plain Layout
-
-(132,0.841412221547216)
-\end_layout
-
-\begin_layout Plain Layout
-
-(133,0.845245404168963)
-\end_layout
-
-\begin_layout Plain Layout
-
-(134,0.84932060376741)
-\end_layout
-
-\begin_layout Plain Layout
-
-(135,0.857189641334116)
-\end_layout
-
-\begin_layout Plain Layout
-
-(136,0.862447937484831)
-\end_layout
-
-\begin_layout Plain Layout
-
-(137,0.869819809449837)
-\end_layout
-
-\begin_layout Plain Layout
-
-(138,0.881215816363692)
-\end_layout
-
-\begin_layout Plain Layout
-
-(139,0.899936670670286)
-\end_layout
-
-\begin_layout Plain Layout
-
-(140,0.904395553283393)
-\end_layout
-
-\begin_layout Plain Layout
-
-(141,0.906971034826711)
-\end_layout
-
-\begin_layout Plain Layout
-
-(142,0.911614991957322)
-\end_layout
-
-\begin_layout Plain Layout
-
-(143,0.91967800911516)
-\end_layout
-
-\begin_layout Plain Layout
-
-(144,0.953085052315146)
-\end_layout
-
-\begin_layout Plain Layout
-
-(145,0.958597874734551)
-\end_layout
-
-\begin_layout Plain Layout
-
-(146,0.966266573639587)
-\end_layout
-
-\begin_layout Plain Layout
-
-(147,0.971552424598485)
-\end_layout
-
-\begin_layout Plain Layout
-
-(148,0.980881399707869)
-\end_layout
-
-\begin_layout Plain Layout
-
-(149,0.984281893819571)
-\end_layout
-
-\begin_layout Plain Layout
-
-(150,0.986173253506422)
-\end_layout
-
-\begin_layout Plain Layout
-
-(151,1.02447446621954)
-\end_layout
-
-\begin_layout Plain Layout
-
-(152,1.0260632657446)
-\end_layout
-
-\begin_layout Plain Layout
-
-(153,1.034886703128)
-\end_layout
-
-\begin_layout Plain Layout
-
-(154,1.0736414284911)
-\end_layout
-
-\begin_layout Plain Layout
-
-(155,1.08597091189586)
-\end_layout
-
-\begin_layout Plain Layout
-
-(156,1.09464894351549)
-\end_layout
-
-\begin_layout Plain Layout
-
-(157,1.10219763522036)
-\end_layout
-
-\begin_layout Plain Layout
-
-(158,1.10264791594818)
-\end_layout
-
-\begin_layout Plain Layout
-
-(159,1.10550712561235)
-\end_layout
-
-\begin_layout Plain Layout
-
-(160,1.10723745916039)
-\end_layout
-
-\begin_layout Plain Layout
-
-(161,1.10759865003638)
-\end_layout
-
-\begin_layout Plain Layout
-
-(162,1.11048024496995)
-\end_layout
-
-\begin_layout Plain Layout
-
-(163,1.11188009963371)
-\end_layout
-
-\begin_layout Plain Layout
-
-(164,1.13915417552926)
-\end_layout
-
-\begin_layout Plain Layout
-
-(165,1.16812737146392)
-\end_layout
-
-\begin_layout Plain Layout
-
-(166,1.18830137955956)
-\end_layout
-
-\begin_layout Plain Layout
-
-(167,1.18970241816714)
-\end_layout
-
-\begin_layout Plain Layout
-
-(168,1.19241551170126)
-\end_layout
-
-\begin_layout Plain Layout
-
-(169,1.1932615803089)
-\end_layout
-
-\begin_layout Plain Layout
-
-(170,1.21273958589882)
-\end_layout
-
-\begin_layout Plain Layout
-
-(171,1.21746351895854)
-\end_layout
-
-\begin_layout Plain Layout
-
-(172,1.22096874844283)
-\end_layout
-
-\begin_layout Plain Layout
-
-(173,1.22223903564736)
-\end_layout
-
-\begin_layout Plain Layout
-
-(174,1.23226269520819)
-\end_layout
-
-\begin_layout Plain Layout
-
-(175,1.23739354033023)
-\end_layout
-
-\begin_layout Plain Layout
-
-(176,1.24629504885525)
-\end_layout
-
-\begin_layout Plain Layout
-
-(177,1.25605413783342)
-\end_layout
-
-\begin_layout Plain Layout
-
-(178,1.25688853324391)
-\end_layout
-
-\begin_layout Plain Layout
-
-(179,1.25910210167058)
-\end_layout
-
-\begin_layout Plain Layout
-
-(180,1.2610563787166)
-\end_layout
-
-\begin_layout Plain Layout
-
-(181,1.27046653605066)
-\end_layout
-
-\begin_layout Plain Layout
-
-(182,1.2843554795254)
-\end_layout
-
-\begin_layout Plain Layout
-
-(183,1.301305181114)
-\end_layout
-
-\begin_layout Plain Layout
-
-(184,1.31171097722836)
-\end_layout
-
-\begin_layout Plain Layout
-
-(185,1.31461478210986)
-\end_layout
-
-\begin_layout Plain Layout
-
-(186,1.31745156948455)
-\end_layout
-
-\begin_layout Plain Layout
-
-(187,1.3280939462129)
-\end_layout
-
-\begin_layout Plain Layout
-
-(188,1.34019703580998)
-\end_layout
-
-\begin_layout Plain Layout
-
-(189,1.34191797324456)
-\end_layout
-
-\begin_layout Plain Layout
-
-(190,1.37135721626692)
-\end_layout
-
-\begin_layout Plain Layout
-
-(191,1.37613111664541)
-\end_layout
-
-\begin_layout Plain Layout
-
-(192,1.42605655035004)
-\end_layout
-
-\begin_layout Plain Layout
-
-(193,1.42822267091833)
-\end_layout
-
-\begin_layout Plain Layout
-
-(194,1.43342716014013)
-\end_layout
-
-\begin_layout Plain Layout
-
-(195,1.43927115714177)
-\end_layout
-
-\begin_layout Plain Layout
-
-(196,1.49576244084165)
-\end_layout
-
-\begin_layout Plain Layout
-
-(197,1.49606728018261)
-\end_layout
-
-\begin_layout Plain Layout
-
-(198,1.49704792094417)
-\end_layout
-
-\begin_layout Plain Layout
-
-(199,1.52618014882319)
-\end_layout
-
-\begin_layout Plain Layout
-
-(200,1.52683742484078)
-\end_layout
-
-\begin_layout Plain Layout
-
-(201,1.52812954341061)
-\end_layout
-
-\begin_layout Plain Layout
-
-(202,1.54034402500838)
-\end_layout
-
-\begin_layout Plain Layout
-
-(203,1.54431879264303)
-\end_layout
-
-\begin_layout Plain Layout
-
-(204,1.5660246417392)
-\end_layout
-
-\begin_layout Plain Layout
-
-(205,1.57042690878734)
-\end_layout
-
-\begin_layout Plain Layout
-
-(206,1.57101763947867)
-\end_layout
-
-\begin_layout Plain Layout
-
-(207,1.57329062162898)
-\end_layout
-
-\begin_layout Plain Layout
-
-(208,1.58506080368534)
-\end_layout
-
-\begin_layout Plain Layout
-
-(209,1.5880398270674)
-\end_layout
-
-\begin_layout Plain Layout
-
-(210,1.60129413683899)
-\end_layout
-
-\begin_layout Plain Layout
-
-(211,1.65669830935076)
-\end_layout
-
-\begin_layout Plain Layout
-
-(212,1.65846275864169)
-\end_layout
-
-\begin_layout Plain Layout
-
-(213,1.67479719920084)
-\end_layout
-
-\begin_layout Plain Layout
-
-(214,1.69000090006739)
-\end_layout
-
-\begin_layout Plain Layout
-
-(215,1.69492517388426)
-\end_layout
-
-\begin_layout Plain Layout
-
-(216,1.69535615248606)
-\end_layout
-
-\begin_layout Plain Layout
-
-(217,1.71512293699197)
-\end_layout
-
-\begin_layout Plain Layout
-
-(218,1.73881329246797)
-\end_layout
-
-\begin_layout Plain Layout
-
-(219,1.74098348943517)
-\end_layout
-
-\begin_layout Plain Layout
-
-(220,1.7439543872606)
-\end_layout
-
-\begin_layout Plain Layout
-
-(221,1.76686711097136)
-\end_layout
-
-\begin_layout Plain Layout
-
-(222,1.77145668212324)
-\end_layout
-
-\begin_layout Plain Layout
-
-(223,1.77915362315252)
-\end_layout
-
-\begin_layout Plain Layout
-
-(224,1.78944915113971)
-\end_layout
-
-\begin_layout Plain Layout
-
-(225,1.8285797231365)
-\end_layout
-
-\begin_layout Plain Layout
-
-(226,1.84532526531257)
-\end_layout
-
-\begin_layout Plain Layout
-
-(227,1.8587942244485)
-\end_layout
-
-\begin_layout Plain Layout
-
-(228,1.85972797474824)
-\end_layout
-
-\begin_layout Plain Layout
-
-(229,1.88829533499666)
-\end_layout
-
-\begin_layout Plain Layout
-
-(230,1.89498209324665)
-\end_layout
-
-\begin_layout Plain Layout
-
-(231,1.90414424333721)
-\end_layout
-
-\begin_layout Plain Layout
-
-(232,1.91512195835821)
-\end_layout
-
-\begin_layout Plain Layout
-
-(233,1.92065557348542)
-\end_layout
-
-\begin_layout Plain Layout
-
-(234,1.9234856700059)
-\end_layout
-
-\begin_layout Plain Layout
-
-(235,1.92688728659414)
-\end_layout
-
-\begin_layout Plain Layout
-
-(236,1.92706906422973)
-\end_layout
-
-\begin_layout Plain Layout
-
-(237,1.93244844325818)
-\end_layout
-
-\begin_layout Plain Layout
-
-(238,1.93735381867737)
-\end_layout
-
-\begin_layout Plain Layout
-
-(239,1.94445084175095)
-\end_layout
-
-\begin_layout Plain Layout
-
-(240,1.95561227411963)
-\end_layout
-
-\begin_layout Plain Layout
-
-(241,1.9599576909095)
-\end_layout
-
-\begin_layout Plain Layout
-
-(242,1.96105655282736)
-\end_layout
-
-\begin_layout Plain Layout
-
-(243,1.98765787831508)
-\end_layout
-
-\begin_layout Plain Layout
-
-(244,2.00611884891987)
-\end_layout
-
-\begin_layout Plain Layout
-
-(245,2.00804846780375)
-\end_layout
-
-\begin_layout Plain Layout
-
-(246,2.02703456673771)
-\end_layout
-
-\begin_layout Plain Layout
-
-(247,2.02733733644709)
-\end_layout
-
-\begin_layout Plain Layout
-
-(248,2.02763063809834)
-\end_layout
-
-\begin_layout Plain Layout
-
-(249,2.03096928354353)
-\end_layout
-
-\begin_layout Plain Layout
-
-(250,2.03626027680002)
-\end_layout
-
-\begin_layout Plain Layout
-
-(251,2.03766676224768)
-\end_layout
-
-\begin_layout Plain Layout
-
-(252,2.04002394620329)
-\end_layout
-
-\begin_layout Plain Layout
-
-(253,2.04003136558458)
-\end_layout
-
-\begin_layout Plain Layout
-
-(254,2.04292949312367)
-\end_layout
-
-\begin_layout Plain Layout
-
-(255,2.0685984310694)
-\end_layout
-
-\begin_layout Plain Layout
-
-(256,2.08739456883632)
-\end_layout
-
-\begin_layout Plain Layout
-
-(257,2.09245449397713)
-\end_layout
-
-\begin_layout Plain Layout
-
-(258,2.10994999995455)
-\end_layout
-
-\begin_layout Plain Layout
-
-(259,2.11923091323115)
-\end_layout
-
-\begin_layout Plain Layout
-
-(260,2.14483193471096)
-\end_layout
-
-\begin_layout Plain Layout
-
-(261,2.15154296625406)
-\end_layout
-
-\begin_layout Plain Layout
-
-(262,2.17101188446395)
-\end_layout
-
-\begin_layout Plain Layout
-
-(263,2.1730230145622)
-\end_layout
-
-\begin_layout Plain Layout
-
-(264,2.1730804333929)
-\end_layout
-
-\begin_layout Plain Layout
-
-(265,2.17826131358743)
-\end_layout
-
-\begin_layout Plain Layout
-
-(266,2.19504704768769)
-\end_layout
-
-\begin_layout Plain Layout
-
-(267,2.19718177313916)
-\end_layout
-
-\begin_layout Plain Layout
-
-(268,2.21935594291426)
-\end_layout
-
-\begin_layout Plain Layout
-
-(269,2.27875272813253)
-\end_layout
-
-\begin_layout Plain Layout
-
-(270,2.35108539252542)
-\end_layout
-
-\begin_layout Plain Layout
-
-(271,2.35526967002079)
-\end_layout
-
-\begin_layout Plain Layout
-
-(272,2.40916265523992)
-\end_layout
-
-\begin_layout Plain Layout
-
-(273,2.46193212247454)
-\end_layout
-
-\begin_layout Plain Layout
-
-(274,2.47008136706427)
-\end_layout
-
-\begin_layout Plain Layout
-
-(275,2.48496274324134)
-\end_layout
-
-\begin_layout Plain Layout
-
-(276,2.52763869962655)
-\end_layout
-
-\begin_layout Plain Layout
-
-(277,2.54399146093056)
-\end_layout
-
-\begin_layout Plain Layout
-
-(278,2.57702269242145)
-\end_layout
-
-\begin_layout Plain Layout
-
-(279,2.63084052340128)
-\end_layout
-
-\begin_layout Plain Layout
-
-(280,2.63422982487828)
-\end_layout
-
-\begin_layout Plain Layout
-
-(281,2.65793577069417)
-\end_layout
-
-\begin_layout Plain Layout
-
-(282,2.77769250213169)
-\end_layout
-
-\begin_layout Plain Layout
-
-(283,2.97011831123382)
-\end_layout
-
-\begin_layout Plain Layout
-
-	};
-\end_layout
-
-\begin_layout Plain Layout
-
-	
 \backslash
 end{axis}
 \end_layout
