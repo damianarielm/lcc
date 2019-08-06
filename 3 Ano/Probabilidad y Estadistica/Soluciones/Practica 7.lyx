@@ -1,0 +1,1532 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{arrows, automata}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Procesos estocásticos
+\end_layout
+
+\begin_layout Enumerate
+Al final de una línea de fabricación, el producto final está sujeto a un
+ proceso de inspección que determina si el producto es defectuoso o no.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supongamos que la aparición de un artículo defectuoso es independiente de
+ la aparición de otros y que la probabilidad de ocurrencia del mismo es
+ 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Sea el proceso estocástico 
+\begin_inset Formula $\left\{ N_{n}:n\in\mathbb{N}_{0}\right\} $
+\end_inset
+
+, donde 
+\begin_inset Formula $N_{n}$
+\end_inset
+
+ es el número de artículos defectuosos hallados hasta el n-ésimo producto
+ fabricado.
+ Calcule la esperanza y la varianza de dicho proceso.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Describa el proceso estocástico 
+\begin_inset Formula $\left\{ N_{n}:n\in\mathbb{N}_{0}\right\} $
+\end_inset
+
+ en términos del proceso de Bernoulli.
+\end_layout
+
+\begin_layout Enumerate
+Pruebe que el proceso 
+\begin_inset Formula $\left\{ N_{n}:n\in\mathbb{N}_{0}\right\} $
+\end_inset
+
+ es una cadena de Markov.
+\end_layout
+
+\begin_layout Enumerate
+Halle la matriz de transición para esta cadena.
+\end_layout
+
+\begin_layout Enumerate
+Clasifique los estados.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En una bifurcación de una ruta, aproximadamente el 38% de los automóviles
+ toma el camino de la derecha, y es posible suponer que cada conductor elige
+ cuál camino tomar independientemente de lo quehace el resto.
+ Definimos el proceso estocástico 
+\begin_inset Formula $\left\{ N_{n}:n\in\mathbb{N}_{0}\right\} $
+\end_inset
+
+, donde 
+\begin_inset Formula $N_{n}$
+\end_inset
+
+ es el número de automóviles que toman el camino de la izquierda hasta el
+ n-ésimo instante de observación.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Cuál es la probabilidad que el quinto automóvil sea el primero en girar
+ a la izquierda?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad que el quinto automóvil sea el segundo en girar
+ a la izquierda?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que 12 automóviles hayan tomado hacia la izquierda
+ hasta el vigésimo instante de observación sabiendo que hasta el duodécimo
+ instante lo hicieron 9?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es el número promedio de automóviles que girarán a la derecha en las
+ primeras 100 observaciones?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El ingreso a un centro comercial puede realizarse por dos puertas idénticas,
+ y por razones desconocidas los clientes prefieren la puerta de la izquierda.
+ Haciendo un análisis estadístico se ha llegado a la conclusión de que la
+ probabilidad que el cliente que ingresa lo haga por la puerta de la izquierda
+ es 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+.
+ Además, se ha concluido que la influencia de posibles congestiones frente
+ a una de las puertas es despreciable pues, debido a las dimensiones de
+ las puertas y al promedio de clientes que ingresan por unidad de tiempo,
+ dichas congestiones son poco frecuentes.
+ Por lo tanto, puede suponerse que los clientes eligen la puerta de acceso
+ según su propia preferencia.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se pide hallar la matriz de transición asociada al proceso 
+\begin_inset Formula $\left\{ N_{n}:n\in\mathbb{N}_{0}\right\} $
+\end_inset
+
+, donde 
+\begin_inset Formula $N_{n}$
+\end_inset
+
+ es el número de clientes que ingresan al centro comercial por la puerta
+ de la izquierda hasta el instante de arribo del n-ésimo cliente.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Cadenas de Markov
+\end_layout
+
+\begin_layout Enumerate-Resume
+En una dada localidad, al 90% de los días soleados le siguen días soleados,
+ y al 80% de los días nublados le siguen días nublados.
+ Con esta información, modelar el clima de la localidad como una cadena
+ de Markov, dibujar el grafo asociado y calcular la matriz de probabilidades
+ de transición de dicha cadena.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 3cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (s) {$S$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (n) [right of=s] {$N$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (s) edge [bend left] node [above] {$10/100$} (n);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (n) edge [bend left] node [below]  {$20/100$} (s);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (s) edge [loop above] node {$90/100$} (s);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path (n) edge [loop above] node {$80/100$} (n);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P=\begin{pmatrix}\frac{90}{100} & \frac{10}{100}\\
+\frac{80}{100} & \frac{20}{100}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una cadena de Markov con espacio de estados 
+\begin_inset Formula $E=\left\{ a,b,c\right\} $
+\end_inset
+
+, matriz de transición 
+\begin_inset Formula $P=\begin{pmatrix}0 & \frac{1}{3} & \frac{2}{3}\\
+\frac{1}{4} & \frac{3}{4} & 0\\
+\frac{2}{5} & 0 & \frac{3}{5}
+\end{pmatrix}$
+\end_inset
+
+ y distribución inicial 
+\begin_inset Formula $\pi=\begin{pmatrix}\frac{2}{5} & \frac{1}{5} & \frac{2}{5}\end{pmatrix}$
+\end_inset
+
+.
+ Calcular:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate-Resume
+\begin_inset Formula $P\left(X_{1}=b,X_{2}=b,X_{3}=b,X_{4}=a,X_{5}=c|X_{0}=a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $P\left(X_{1}=b,X_{3}=a,X_{4}=c,X_{6}=b|X_{0}=a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $P\left(X_{2}=b,X_{5}=b,X_{6}=a\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X_{1}=b,X_{2}=b,X_{3}=b,X_{4}=a,X_{5}=c|X_{0}=a\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{P\left(X_{0}=a,X_{1}=b,X_{2}=b,X_{3}=b,X_{4}=a,X_{5}=c\right)}{P\left(X_{0}=a\right)}=\frac{\pi\left(a\right)P\left(a,b\right)P\left(b,b\right)P\left(b,b\right)P\left(b,a\right)P\left(a,c\right)}{\pi\left(a\right)}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=P\left(a,b\right)P\left(b,b\right)P\left(b,b\right)P\left(b,a\right)P\left(a,c\right)=\frac{1}{3}\frac{3}{4}\frac{3}{4}\frac{1}{4}\frac{2}{3}=\frac{18}{576}=0,03125$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P\left(X_{1}=b,X_{3}=a,X_{4}=c,X_{6}=b|X_{0}=a\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{P\left(X_{0}=a,X_{1}=b,X_{3}=a,X_{4}=c,X_{6}=b\right)}{P\left(X_{0}=a\right)}=\frac{\pi\left(a\right)P\left(a,b\right)P^{2}\left(b,a\right)P\left(a,c\right)P^{2}\left(c,b\right)}{\pi\left(a\right)}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=P\left(a,b\right)P^{2}\left(b,a\right)P\left(a,c\right)P^{2}\left(c,b\right)=\frac{1}{3}\frac{3}{16}\frac{2}{3}\frac{2}{15}=\frac{12}{2160}=\frac{1}{180}\approx0,005$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+\begin_inset Formula $P\left(X_{2}=b,X_{5}=b,X_{6}=a\right)=\left(\pi P^{2}\right)\left(b\right)P^{3}\left(b,b\right)P\left(b,a\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{113}{400}\frac{35}{64}\frac{1}{4}\approx0,038623$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate-Resume
+Un edificio de dos pisos y planta baja posee un ascensor que llega a todas
+ las plantas.
+ La secuencia de pisos alcanzados hasta el piso en el que finaliza el n-ésimo
+ viaje puede modelarse como una cadena de Markov.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se sabe que la mitad de los viajes que parten de la planta baja se dirigen
+ a cada uno de los otros dos pisos, mientras que si un viaje comienza en
+ el primer piso solo el 25% de las veces finaliza en el segundo.
+ Por último, si un trayecto comienza en el segundo piso, siempre finaliza
+ en planta baja.
+ Se pide:
+\end_layout
+
+\begin_layout Enumerate
+Calcular la matriz de probabilidades de transición de la cadena.
+\end_layout
+
+\begin_layout Enumerate
+Dibujar el grafo asociado.
+\end_layout
+
+\begin_layout Enumerate
+¿Cuál es la probabilidad de que, a largo plazo, el ascensor se encuentre
+ en cada una de las tres plantas?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P=\begin{pmatrix}0 & \frac{1}{2} & \frac{1}{2}\\
+\frac{3}{4} & 0 & \frac{1}{4}\\
+1 & 0 & 0
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 3cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (p) {$PB$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (1) [right of=p] {$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (2) [below of=1] {$2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (p) edge [bend left] node [above] {$1/2$} (1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (p) edge node [right] {$1/2$} (2);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (1) edge node [right] {$1/4$} (2);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (1) edge [bend left] node [above] {$3/4$} (p);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (2) edge [bend left] node [below] {$1$} (p);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \begin{array}{ccccc}
+\pi_{pb} & = & {\displaystyle \sum_{i\in E}}\pi_{i}P\left(i,pb\right) & = & \pi_{pb}P\left(pb,pb\right)+\pi_{1}P\left(1,pb\right)+\pi_{2}P\left(2,pb\right)\\
+\pi_{1} & = & {\displaystyle \sum_{i\in E}}\pi_{i}P\left(i,1\right) & = & \pi_{pb}P\left(pb,1\right)+\pi_{1}P\left(1,1\right)+\pi_{2}P\left(2,1\right)\\
+\pi_{2} & = & {\displaystyle \sum_{i\in E}}\pi_{i}P\left(i,2\right) & = & \pi_{pb}P\left(pb,2\right)+\pi_{1}P\left(1,2\right)+\pi_{2}P\left(2,2\right)\\
+{\displaystyle \sum_{i\in E}}\pi_{i} & = & 1 & = & \pi_{pb}+\pi_{1}+\pi_{2}
+\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\pi=\begin{pmatrix}\frac{8}{17} & \frac{4}{17} & \frac{5}{17}\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate-Resume
+Un viajante realiza su trabajo en tres ciudades 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Para evitar desplazamientos innecesarios, permanece todo el día en una
+ ciudad viajando a otra ciudad al día siguiente si no tiene suficiente trabajo.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Después de estar trabajando un día en 
+\begin_inset Formula $C$
+\end_inset
+
+, la probabilidad de tener que seguir trabajando en ella al día siguiente
+ es 
+\begin_inset Formula $\frac{4}{10}$
+\end_inset
+
+, la de tener que viajar a 
+\begin_inset Formula $B$
+\end_inset
+
+ es 
+\begin_inset Formula $\frac{4}{10}$
+\end_inset
+
+, y la de tener que viajar a 
+\begin_inset Formula $A$
+\end_inset
+
+ es 
+\begin_inset Formula $\frac{2}{10}$
+\end_inset
+
+.
+ Si el viajante se queda un día en 
+\begin_inset Formula $B$
+\end_inset
+
+, con probabilidad 
+\begin_inset Formula $\frac{2}{10}$
+\end_inset
+
+ tendrá que seguir trabajando en la misma ciudad al día siguiente, en el
+ 60% de los casos viajará a 
+\begin_inset Formula $C$
+\end_inset
+
+, mientras que irá a 
+\begin_inset Formula $A$
+\end_inset
+
+ con probabilidad 
+\begin_inset Formula $\frac{2}{10}$
+\end_inset
+
+.
+ Por último, si el viajante trabaja todo el día en 
+\begin_inset Formula $A$
+\end_inset
+
+, permanecerá en esa ciudad al día siguiente con probabilidad 
+\begin_inset Formula $\frac{1}{10}$
+\end_inset
+
+, irá a 
+\begin_inset Formula $B$
+\end_inset
+
+ con una probabilidad de 
+\begin_inset Formula $\frac{3}{10}$
+\end_inset
+
+ y a 
+\begin_inset Formula $C$
+\end_inset
+
+ con una probabilidad de 
+\begin_inset Formula $\frac{6}{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dibujar el grafo asociado.
+\end_layout
+
+\begin_layout Enumerate
+Si el viajante está en 
+\begin_inset Formula $C$
+\end_inset
+
+, ¿cuál es la probabilidad de que también tenga que trabajar en 
+\begin_inset Formula $C$
+\end_inset
+
+ al cabo de cuatro días?
+\end_layout
+
+\begin_layout Enumerate
+¿Cuáles son los porcentajes de días en los que el viajante está en cada
+ una de las tres ciudades?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 3cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right of=p] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below of=1] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [loop right] node [right] {$4/10$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [bend left] node [right] {$4/10$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [bend left] node [left] {$2/10$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [loop right] node [above] {$2/10$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend left] node [right] {$6/10$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend left] node [above] {$2/10$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [loop left] node [above] {$1/10$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [bend left] node [above] {$3/10$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [] node [] {$6/10$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P^{4}\left(c,c\right)=\frac{313}{625}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \begin{array}{ccccc}
+\pi_{A} & = & {\displaystyle \sum_{i\in E}}\pi_{i}P\left(i,A\right) & = & \pi_{A}P\left(A,A\right)+\pi_{B}P\left(B,A\right)+\pi_{C}P\left(C,A\right)\\
+\pi_{B} & = & {\displaystyle \sum_{i\in E}}\pi_{i}P\left(i,B\right) & = & \pi_{A}P\left(A,B\right)+\pi_{B}P\left(B,B\right)+\pi_{C}P\left(C,B\right)\\
+\pi_{C} & = & {\displaystyle \sum_{i\in E}}\pi_{i}P\left(i,C\right) & = & \pi_{A}P\left(A,C\right)+\pi_{B}P\left(B,C\right)+\pi_{C}P\left(C,C\right)\\
+{\displaystyle \sum_{i\in E}}\pi_{i} & = & 1 & = & \pi_{A}+\pi_{B}+\pi_{C}
+\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{\pi=\begin{pmatrix}\frac{2}{11} & \frac{7}{22} & \frac{1}{2}\end{pmatrix}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Clasifique los estados de las cadenas cuyas matrices de transición se dan
+ a continuación:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A=\begin{pmatrix}\frac{1}{2} & \frac{1}{4} & \frac{1}{4}\\
+\frac{2}{3} & 0 & \frac{1}{3}\\
+\frac{3}{5} & \frac{2}{5} & 0
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B=\begin{pmatrix}\frac{1}{2} & 0 & 0 & \frac{1}{2} & 0\\
+0 & \frac{6}{10} & 0 & 0 & \frac{4}{10}\\
+\frac{3}{10} & 0 & \frac{7}{10} & 0 & 0\\
+0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $C=\begin{pmatrix}0 & 0 & 1 & 0 & 0 & 0 & 0\\
+0 & \frac{2}{10} & 0 & \frac{4}{10} & \frac{4}{10} & 0 & 0\\
+\frac{8}{10} & 0 & 0 & \frac{2}{10} & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & \frac{7}{10} & 0 & \frac{3}{10} & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una cadena de Markov con espacio de estados 
+\begin_inset Formula $E=\left\{ r,w,b,y\right\} $
+\end_inset
+
+ y matriz de transición
+\begin_inset Formula 
+\[
+P=\begin{pmatrix}0 & 0 & 1 & 0\\
+0 & \frac{4}{10} & \frac{6}{10} & 0\\
+\frac{8}{10} & 0 & \frac{2}{10} & 0\\
+\frac{2}{10} & \frac{3}{10} & 0 & \frac{1}{2}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcular la distribución 
+\begin_inset Formula $\left\{ F_{k}\left(w,b\right):k\in\mathbb{N}\right\} $
+\end_inset
+
+ del tiempo de primer pasada del estado 
+\begin_inset Formula $w$
+\end_inset
+
+ al estado 
+\begin_inset Formula $b$
+\end_inset
+
+ por simple inspección.
+ Idem para 
+\begin_inset Formula $\left\{ F_{k}\left(b,b\right):k\in\mathbb{N}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Clasificar los estados de la cadena 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ una cadena de Markov aperiódica e irreducible con 
+\begin_inset Formula $m$
+\end_inset
+
+ estados 
+\begin_inset Formula $\left(m<\infty\right)$
+\end_inset
+
+.
+ Suponiendo que su matriz de transición es doblemente markoviana, mostrar
+ que 
+\begin_inset Formula $\pi\left(i\right)=\frac{1}{m},i\in E$
+\end_inset
+
+ es su distribución límite.
+ Recordar que una matriz se denomina doblemente markoviana si las componentes
+ de cada fila y de cada columna suman 1 respectivamente.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Calcule la distribución límite para la cadena de Markov cuya matriz de transició
+n es:
+\begin_inset Formula 
+\[
+A=\begin{pmatrix}\frac{1}{2} & \frac{1}{4} & \frac{1}{4}\\
+\frac{2}{3} & 0 & \frac{1}{3}\\
+\frac{3}{5} & \frac{2}{5} & 0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+El siguiente grafo representa un proceso, cuyo comportamiento puede modelarse
+ a través de una cadena de Markov:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [right of=b] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below right of=c] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [below left of=a] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (f) [above left of=a] {$f$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [bend left] node [above] {$1$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend left] node [below] {$1$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [bend left] node [above right] {$1$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (d) edge [loop right] node [right] {$1/2$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (d) edge [bend left] node [below left] {$1/2$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (e) edge [] node [below right] {$1$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (f) edge [] node [right] {$1/2$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (f) edge [bend left] node [above] {$1/6$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (f) edge [] node [left] {$1/3$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Estudie la cadena y sus estados.
+\end_layout
+
+\begin_layout Enumerate
+Calcule, para cada 
+\begin_inset Formula $i,j$
+\end_inset
+
+ pertenecientes al espacio de estados 
+\begin_inset Formula $E$
+\end_inset
+
+, la probabilidad de alcanzar el estado 
+\begin_inset Formula $i$
+\end_inset
+
+ a partir de 
+\begin_inset Formula $j$
+\end_inset
+
+ en algún número finito de pasos.
+\end_layout
+
+\begin_layout Enumerate
+Calcule el número promedio de visitas al estado 
+\begin_inset Formula $j$
+\end_inset
+
+ partiendo del estado 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Analice si existe para esta cadena alguna distribución invariante.
+ En caso afirmativo, obtenga una.
+\end_layout
+
+\begin_layout Enumerate
+Analice si existe distribución límite para esta cadena.
+ En caso de existir, hállela.
+ Importante: todos los ítems deben estar justificados teóricamente, utilizando
+ nomenclatura específica.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Considere dos apostadores cuyos capitales suman $7 de manera que, cuando
+ uno de ellos tiene los $7, el otro llega a la ruina y el juego termina.
+ Suponga que los jugadores apuestan $1 en cada jugada, que las jugadas son
+ independientes y que se tiene la misma probabilidad de ganar o perder.
+ Sea 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ el capital del primer apostador al final de la n-ésima jugada.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $X$
+\end_inset
+
+ es una cadena de Markov con espacio de estados 
+\begin_inset Formula $E=\left\{ 0,\ldots,7\right\} $
+\end_inset
+
+ y calcular sus probabilidades de transición.
+\end_layout
+
+\begin_layout Enumerate
+Calcular la probabilidad 
+\begin_inset Formula $F\left(i,0\right)$
+\end_inset
+
+ de llegar a la ruina a partir del capital inicial 
+\begin_inset Formula $i$
+\end_inset
+
+ para el primer jugador.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Considere las cadenas de Markov asociadas a las siguientes matrices de transició
+n:
+\begin_inset Formula 
+\[
+A=\begin{pmatrix}0,3 & 0,5 & 0,2 & 0\\
+0,6 & 0 & 0,4 & 0\\
+0 & 0,2 & 0,4 & 0,4\\
+0 & 0 & 0,2 & 0,8
+\end{pmatrix}B=\begin{pmatrix}0 & 0 & 0,5 & 0 & 0,5\\
+0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0,6 & 0 & 0,4\\
+0,8 & 0,2 & 0 & 0 & 0
+\end{pmatrix}C=\begin{pmatrix}0 & 0,2 & 0,8 & 0\\
+0,2 & 0 & 0 & 0,8\\
+0,2 & 0 & 0 & 0,8\\
+0 & 0 & 1 & 0
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Para cada una de ellas:
+\end_layout
+
+\begin_layout Enumerate
+Estudiar la cadena y sus estados.
+\end_layout
+
+\begin_layout Enumerate
+Para cada 
+\begin_inset Formula $i,j\in E$
+\end_inset
+
+ calcular la probabilidad de alcanzar alguna vez el estado 
+\begin_inset Formula $j$
+\end_inset
+
+ desde el estado 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Analizar si existe alguna distribución invariante para esta cadena.
+ En caso afirmativo, presentar una.
+\end_layout
+
+\begin_layout Enumerate
+Analizar si existe distribución límite para esta cadena.
+ En caso afirmativo, encuéntrela.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+El Departamento de Relaciones con el Personal de una firma realiza un estudio
+ de niveles de categoría para proveer promociones adecuadas en el momento
+ oportuno, controlar el pago de haberes, analizar necesidades de contratación
+ de personal, etc.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Esta empresa tiene 20 empleados de categoría 3 (la más alta), 80 de categoría
+ 2 y 200 de categoría 1 (la más baja de todas).
+ Basándose en datos históricos, se espera que el 35% de los empleados de
+ la categoría 1, el 20% de la 2 y el 5% de la 3 dejen la empresa anualmente
+ por renuncias, despidos, jubilaciones, fallecimientos, etc.
+ Considerando las siguientes políticas de personal: 
+\end_layout
+
+\begin_layout Itemize
+mantener la misma cantidad de empleados (total y por niveles),
+\end_layout
+
+\begin_layout Itemize
+realizar contrataciones solamente en el primer nivel,
+\end_layout
+
+\begin_layout Itemize
+dar promociones a los empleados una sola vez por año,
+\end_layout
+
+\begin_layout Standard
+el gerente del Departamento encargó al grupo de Investigación Operativa
+ de la empresa: 
+\end_layout
+
+\begin_layout Enumerate
+Averiguar qué cantidad de gente debería contratarse y qué cantidad deberá
+ promoverse a la categoríainmediata superior para mantener los niveles de
+ empleados estables anualmente.
+\end_layout
+
+\begin_layout Enumerate
+Determinar el tiempo de permanencia promedio de un empleado en la compañía
+ (índice de rotación del personal).
+\end_layout
+
+\begin_layout Enumerate
+Calcular la probabilidad de que un empleado que recién ingresa a la firma
+ llegue a la máxima categoría.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
