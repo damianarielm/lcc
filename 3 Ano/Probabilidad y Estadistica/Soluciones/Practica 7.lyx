@@ -15,7 +15,7 @@ enumitem
 multicol
 \end_modules
 \maintain_unincluded_children false
-\language spanish
+\language spanish-mexico
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -146,19 +146,151 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $N_{n}\sim Bi\left(n,p\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $E\left(N_{n}\right)=np$
+\end_inset
+
+.
+ 
+\begin_inset Formula $V\left(N_{n}\right)=npq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B_{n}=\begin{cases}
+1 & \text{si el n-esimo producto es defectuoso}\\
+0 & \text{en caso contrario}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\{ B_{n}:n\in\mathbb{N}\right\} $
+\end_inset
+
+ es un proceso de Bernoulli.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{0}=0$
+\end_inset
+
+; 
+\begin_inset Formula $N_{n}={\displaystyle \sum_{i=1}^{n}}B_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $T=\mathbb{N}_{0}$
+\end_inset
+
+ es infinito numerable.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E=\mathbb{N}_{0}$
+\end_inset
+
+ es discreto.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\boxed{P\left(N_{n+1}=j|N_{0}=i_{0},\ldots,N_{n}=i\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=P\left(N_{n}+B_{n+1}=j|N_{0}=i_{0},\ldots,N_{n}=i\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=P\left(i+B_{n+1}=j|N_{0}=i_{0},\ldots,N_{n}=i\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=P\left(B_{n+1}=j-i|N_{0}=i_{0},\ldots,N_{n}=i\right)=P\left(B_{n+1}=j-i\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{P\left(B_{n+1}=j-i\right)P\left(N_{n}=i\right)}{P\left(N_{n}=i\right)}=\frac{P\left(B_{n+1}=j-i,N_{n}=i\right)}{P\left(N_{n}=i\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{P\left(N_{n+1}=j,N_{n}=i\right)}{P\left(N_{n}=i\right)}=\boxed{P\left(N_{n+1}=j|N_{n}=i\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $P=\begin{pmatrix}q & p & 0 & 0 & 0 & \cdots\\
+0 & q & p & 0 & 0 & \ddots\\
+0 & 0 & q & p & 0 & \ddots\\
+0 & 0 & 0 & \ddots & \ddots & \ddots\\
+\vdots & \ddots & \ddots & \ddots & \ddots & \ddots
+\end{pmatrix}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
+Todos los estados son transitorios.
 \end_layout
 
 \end_deeper
@@ -456,7 +588,7 @@ Soluciones
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $=P\left(a,b\right)P^{2}\left(b,a\right)P\left(a,c\right)P^{2}\left(c,b\right)=\frac{1}{3}\frac{3}{16}\frac{2}{3}\frac{2}{15}=\frac{12}{2160}=\frac{1}{180}\approx0,005$
+\begin_inset Formula $\text{\ensuremath{=P\left(a,b\right)P^{2}\left(b,a\right)P\left(a,c\right)P^{2}\left(c,b\right)=\frac{1}{3}\frac{3}{16}\frac{2}{3}\frac{2}{15}=\frac{12}{2160}=\frac{1}{180}\approx0,005}}$
 \end_inset
 
 .
@@ -464,21 +596,16 @@ Soluciones
 
 \end_deeper
 \begin_layout Enumerate-Resume
-\begin_inset Formula $P\left(X_{2}=b,X_{5}=b,X_{6}=a\right)=\left(\pi P^{2}\right)\left(b\right)P^{3}\left(b,b\right)P\left(b,a\right)=$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula $=\frac{113}{400}\frac{35}{64}\frac{1}{4}\approx0,038623$
+\begin_inset Formula $\text{\ensuremath{P\left(X_{2}=b,X_{5}=b,X_{6}=a\right)=\left(\pi P^{2}\right)\left(b\right)P^{3}\left(b,b\right)P\left(b,a\right)=\frac{113}{400}\frac{35}{64}\frac{1}{4}\approx0,03862}}$
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
-\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Un edificio de dos pisos y planta baja posee un ascensor que llega a todas
@@ -786,14 +913,14 @@ node[state] (a) {$A$};
 
     
 \backslash
-node[state] (b) [right of=p] {$B$};
+node[state] (b) [right of=a] {$B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (c) [below of=1] {$C$};
+node[state] (c) [below of=b] {$C$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -959,6 +1086,10 @@ Clasifique los estados de las cadenas cuyas matrices de transición se dan
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -966,17 +1097,511 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 3cm]
 \end_layout
 
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below of=b] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [bend left] node [right] {$2/5$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [bend left] node [below left] {$3/5$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend left] node [right] {$1/3$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend left] node [above] {$2/3$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [loop left] node [above] {$1/2$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [bend left] node [above] {$1/4$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [] node [right] {$1/4$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Clases recurrentes: 
+\begin_inset Formula $E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Cadena irreducible, aperiodica.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 3cm]
 \end_layout
 
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [right of=a] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below of=a] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [below of=c] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right of=e] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (e) edge [bend right] node [below] {$1$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (d) edge [] node [below right] {$1$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [loop right] node [right] {$7/10$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [] node [below] {$3/10$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [loop above] node [] {$6/10$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend right] node [above] {$4/10$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [loop left] node [] {$1/2$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [] node [left] {$1/2$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Clases recurrentes: 
+\begin_inset Formula $\left\{ a,c,d\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ e,b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 3cm]
 \end_layout
 
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [right of=a] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below of=a] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [below of=c] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right of=e] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (f) [right of=c] {$f$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (g) [right of=f] {$g$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (g) edge [loop left] node [] {$1$} (g);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (f) edge [] node [above] {$7/10$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (f) edge [] node [above left] {$3/10$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (e) edge [] node [below] {$1$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (d) edge [] node [above] {$1$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [] node [left] {$2/10$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (c) edge [bend right] node [above] {$8/10$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [loop right] node [] {$2/10$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend left] node [below] {$4/10$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend right] node [above right] {$4/10$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (a) edge [bend right] node [above] {$1$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Clases recurrentes: 
+\begin_inset Formula $\left\{ d,e,b\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ g\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Clases transitorias: 
+\begin_inset Formula $\left\{ a,c\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\left\{ f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Estados absorbentes: 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate-Resume
 Sea 
@@ -1037,9 +1662,152 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 3cm]
 \end_layout
 
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (r) {$r$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [below of=r] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (w) [right of=b] {$w$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (y) [right of=r] {$y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (y) edge [loop right] node [right] {$1/2$} (y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (y) edge [] node [above] {$2/10$} (r);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (y) edge [] node [right] {$3/10$} (w);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [loop left] node [] {$2/10$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (b) edge [bend left] node [left] {$8/10$} (r);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (w) edge [loop right] node [right] {$4/10$} (w);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (w) edge [] node [below] {$6/10$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+path[->] (r) edge [] node [right] {$1$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $F_{k}\left(w,b\right)=\frac{6}{10}\frac{4}{10}^{k-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{k}\left(b,b\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -1102,10 +1870,6 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1313,7 +2077,162 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Para las transiciones dentro de clases recurrentes resultará 
+\begin_inset Formula $F\left(i,j\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para las transiciones entre estados transitorios:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $F\left(i,i\right)=1-\frac{1}{R\left(i,i\right)}=1-\frac{1}{1}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(e,f\right)=\frac{R\left(e,f\right)}{R\left(e,e\right)}=\frac{0}{1}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(f,e\right)=\frac{R\left(f,e\right)}{R\left(f,f\right)}=\frac{1/3}{1}=\frac{1}{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Para las transiciones de transitorio a recurrente:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $Q=\begin{pmatrix}0 & 0\\
+\frac{1}{3} & 0
+\end{pmatrix}$
+\end_inset
+
+ la submatriz de probabilidades entre estados transitorios, luego 
+\begin_inset Formula $S=\left(I-Q\right)^{-1}=\begin{pmatrix}1 & 0\\
+\frac{1}{3} & 1
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B\left(e,a\right)=P\left(e,a\right)+P\left(e,b\right)=1+0=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B\left(e,c\right)=P\left(e,c\right)+P\left(e,d\right)=0+0=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B\left(f,a\right)=P\left(f,a\right)+P\left(f,b\right)=\frac{1}{2}+\frac{1}{6}=\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B\left(f,c\right)=P\left(f,c\right)+P\left(f,d\right)=0+0=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(e,a\right)=F\left(e,b\right)$
+\end_inset
+
+, 
+\begin_inset Formula $F\left(f,a\right)=F\left(f,b\right)$
+\end_inset
+
+, 
+\begin_inset Formula $F\left(e,c\right)=F\left(e,d\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $F\left(f,c\right)=F\left(f,d\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G=S\cdot B=\begin{pmatrix}1 & 0\\
+\frac{1}{3} & 1
+\end{pmatrix}\cdot\begin{pmatrix}1 & 0\\
+\frac{2}{3} & 0
+\end{pmatrix}=\begin{pmatrix}1 & 0\\
+1 & 0
+\end{pmatrix}=\begin{pmatrix}F\left(e,a\right) & F\left(e,c\right)\\
+F\left(f,a\right) & F\left(f,a\right)
+\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F=\left(\begin{array}{cc|cc|cc}
+1 & 1 & 0 & 0 & 0 & 0\\
+1 & 1 & 0 & 0 & 0 & 0\\
+\hline 0 & 0 & 1 & 1 & 0 & 0\\
+0 & 0 & 1 & 1 & 0 & 0\\
+\hline 1 & 1 & 0 & 0 & 0 & 0\\
+1 & 1 & 0 & 0 & \frac{1}{3} & 0
+\end{array}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $R=\begin{pmatrix}\infty & \infty & 0 & 0 & 0 & 0\\
+\infty & \infty & 0 & 0 & 0 & 0\\
+0 & 0 & \infty & \infty & 0 & 0\\
+0 & 0 & \infty & \infty & 0 & 0\\
+\infty & \infty & 0 & 0 & 1 & 0\\
+\infty & \infty & 0 & 0 & \frac{1}{3} & 1
+\end{pmatrix}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1321,11 +2240,23 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
+Como el estado 
+\begin_inset Formula $a$
+\end_inset
 
-\begin_layout Enumerate
-COMPLETAR.
+ es periódico de período 2 tenemos que 
+\begin_inset Formula $P^{2n}\left(a,a\right)>0$
+\end_inset
+
+ y 
+\begin_inset Formula $P^{2n+1}\left(a,a\right)=0$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $P^{n}$
+\end_inset
+
+ no converge y no existe distribución límite.
 \end_layout
 
 \end_deeper
@@ -1509,6 +2440,10 @@ Determinar el tiempo de permanencia promedio de un empleado en la compañía
 \begin_layout Enumerate
 Calcular la probabilidad de que un empleado que recién ingresa a la firma
  llegue a la máxima categoría.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
