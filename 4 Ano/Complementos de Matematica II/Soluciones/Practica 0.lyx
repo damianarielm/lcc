@@ -1,0 +1,1540 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\end_preamble
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+En el conjunto 
+\begin_inset Formula $A=\left\{ 0,1,2,3,4,5,6,7,8,9\right\} ,$
+\end_inset
+
+ considerar la relación
+\begin_inset Formula 
+\[
+R=\left\{ \left(0,1\right),\left(0,3\right),\left(1,1\right),\left(1,5\right),\left(3,2\right),\left(3,8\right),\left(4,4\right),\left(4,9\right),\right.
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left.\left(5,1\right),\left(5,2\right),\left(5,3\right),\left(5,9\right),\left(6,2\right),\left(6,8\right),\left(7,1\right),\left(7,7\right),\left(7,9\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Graficar 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $R\left(0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R\left(\left\{ 1,2,3\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R^{-1}\left(0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R^{-1}\left(\left\{ 1,2,3\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R^{-1}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[grid=major, ytick={0,1,2,3,4,5,6,7,8,9}, xtick={0,1,2,3,4,5,6,7}]
+ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+addplot[only marks] coordinates {
+\end_layout
+
+\begin_layout Plain Layout
+
+        (0,1)(0,3)(1,1)(1,5)(3,2)(3,8)(4,4)(4,9)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (5,1)(5,2)(5,3)(5,9)(6,2)(6,8)(7,1)(7,7)(7,9)
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $R\left(0\right)=\left\{ 1,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R\left(\left\{ 1,2,3\right\} \right)=\left\{ 1,5,2,8\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R\left(A\right)=\left\{ 1,2,3,4,5,7,8,9\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R^{-1}\left(0\right)=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R^{-1}\left(\left\{ 1,2,3\right\} \right)=\left\{ 0,1,5,7,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R^{-1}\left(A\right)=\left\{ 0,1,3,4,5,6,7\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ relaciones sobre un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Probar:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $dom\left(R\cap S\right)\subseteq dom\left(R\right)\cap dom\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $dom\left(R\cup S\right)=dom\left(R\right)\cup dom\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $dom\left(R-S\right)\supseteq dom\left(R\right)-dom\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $im\left(R\cap S\right)\subseteq im\left(R\right)\cap im\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $im\left(R\cup S\right)\subseteq im\left(R\right)\cup im\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $im\left(R-S\right)\supseteq im\left(R\right)-im\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & x\in dom\left(R\cap S\right)\\
+\Rightarrow & \left\langle def.dom\right\rangle \\
+ & \exists y/\left(x,y\right)\in R\cap S\\
+\equiv & \left\langle def.\cap\right\rangle \\
+ & \exists y/xRy\land xSy\\
+\Rightarrow & \left\langle def.dom\right\rangle \\
+ & x\in dom\left(R\right)\land x\in dom\left(S\right)\\
+\equiv & \left\langle def.\cap\right\rangle \\
+ & x\in dom\left(R\right)\cap dom\left(S\right)
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & x\in dom\left(R\cup S\right)\\
+\Rightarrow & \left\langle def.dom\right\rangle \\
+ & \exists y/\left(x,y\right)\in R\cup S\\
+\equiv & \left\langle def.\cup\right\rangle \\
+ & \exists y/xRy\lor xSy\\
+\Rightarrow & \left\langle def.dom\right\rangle \\
+ & x\in dom\left(R\right)\lor x\in dom\left(S\right)\\
+\equiv & \left\langle def.\cup\right\rangle \\
+ & x\in dom\left(R\right)\cup dom\left(S\right)
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & x\in dom\left(R\right)\cup dom\left(S\right)\\
+\equiv & \left\langle def.\cup\right\rangle \\
+ & x\in dom\left(R\right)\lor x\in dom\left(S\right)\\
+\Rightarrow & \boxed{\begin{array}{c|c}
+\left\langle x\in dom\left(R\right)\right\rangle  & \left\langle x\in dom\left(S\right)\right\rangle \\
+\exists y/xRy & \exists y/xSy\\
+\left\langle i_{\lor}\right\rangle  & \left\langle i_{\lor}\right\rangle \\
+\exists y/xRy\lor xSy & \exists y/xRy\lor xSy\\
+\left\langle def.\cup\right\rangle  & \left\langle def.\cup\right\rangle \\
+\exists y/\left(x,y\right)\in R\cup S & \exists y/\left(x,y\right)\in R\cup S\\
+\left\langle def.dom\right\rangle  & \left\langle def.dom\right\rangle \\
+x\in dom\left(R\cup S\right) & x\in dom\left(R\cup S\right)
+\end{array}}\\
+ & x\in dom\left(R\cup S\right)
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & x\in dom\left(R\right)-dom\left(S\right)\\
+\equiv & \left\langle def.-\right\rangle \\
+ & x\in dom\left(R\right)\land x\notin dom\left(S\right)\\
+\Rightarrow & \left\langle def.dom\right\rangle \\
+ & \exists y/\left(x,y\right)\in R\land\forall z:\left(x,z\right)\notin S\\
+\Rightarrow & \left\langle z=y\right\rangle \\
+ & \exists y/\left(x,y\right)\in R\land\left(x,y\right)\notin S\\
+\equiv & \left\langle def.-\right\rangle \\
+ & \exists y/\left(x,y\right)\in R-S\\
+\equiv & \left\langle def.dom\right\rangle \\
+ & x\in dom\left(R-S\right)
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & y\in im\left(R\cap S\right)\\
+\equiv & \left\langle def.im\right\rangle \\
+ & \exists x/\left(x,y\right)\in R\cap S\\
+\equiv & \left\langle def.\cap\right\rangle \\
+ & \exists x/\left(x,y\right)\in R\land\left(x,y\right)\in S\\
+\Rightarrow & \left\langle def.im\right\rangle \\
+ & y\in im\left(R\right)\land y\in im\left(S\right)\\
+\equiv & \left\langle def.\cap\right\rangle \\
+ & y\in im\left(R\right)\cap im\left(S\right)
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $R\in\mathcal{P}\left(A\times B\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $S\in\mathcal{P}\left(B\times C\right)$
+\end_inset
+
+ relaciones, construir una relacion 
+\begin_inset Formula $R\circ S\in\mathcal{P}\left(A\times C\right)$
+\end_inset
+
+.
+ Mostrar que esta construcción es asociativa.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Definimos 
+\begin_inset Formula $R\circ S$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(a,c\right)\in R\circ S\iff\exists b\in B/aRb\land bSc$
+\end_inset
+
+.
+ Mostraremos que 
+\begin_inset Formula $\left(R\circ S\right)\circ T=R\circ\left(S\circ T\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $T\in\mathcal{P}\left(C\times D\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+ & \left(a,d\right)\in\left(R\circ S\right)\circ T\\
+\iff & \left\langle def.\circ\right\rangle \\
+ & \exists c\in C/a\left(R\circ S\right)c\land cTd\\
+\iff & \left\langle def.\circ\right\rangle \\
+ & \exists c\in C,b\in B/\left(aRb\land bSc\right)\land cTd\\
+\iff & \left\langle asoc.\land\right\rangle \\
+ & \exists c\in C,b\in B/aRb\land\left(bSc\land cTd\right)\\
+\iff & \left\langle def.\circ\right\rangle \\
+ & \exists b\in B/aRb\land b\left(S\circ T\right)d\\
+\iff & \left\langle def.\circ\right\rangle \\
+ & \left(a,d\right)\in R\circ\left(S\circ T\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $\mathcal{P}\left(A\times B\right)$
+\end_inset
+
+ es 
+\begin_inset Quotes fld
+\end_inset
+
+equivalente
+\begin_inset Quotes frd
+\end_inset
+
+ a 
+\begin_inset Formula $A\to\mathcal{P}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:\mathcal{P}\left(A\times B\right)\mapsto A\to\mathcal{P}\left(B\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(R\right)$
+\end_inset
+
+ es una función que asigna a cada elemento 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ el conjunto 
+\begin_inset Formula $R\left(a\right)$
+\end_inset
+
+.
+ Veamos que esta función es biyectiva:
+\end_layout
+
+\begin_layout Itemize
+Inyectividad: Sean 
+\begin_inset Formula $R,S\in\mathcal{P}\left(A\times B\right)/R\neq S$
+\end_inset
+
+ luego existe un par 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ tal que pertenece a una relación y no a la otra.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supongamos sin perdida de generalidad que 
+\begin_inset Formula $\left(a,b\right)\in R\land\left(a,b\right)\notin S$
+\end_inset
+
+, entonces 
+\begin_inset Formula $b\in f\left(R\right)\left(a\right)$
+\end_inset
+
+ pero 
+\begin_inset Formula $b\notin f\left(S\right)\left(a\right)$
+\end_inset
+
+; por lo que 
+\begin_inset Formula $f\left(R\right)\neq f\left(S\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sobreyectividad: Sea 
+\begin_inset Formula $g\in A\to\mathcal{P}\left(B\right)$
+\end_inset
+
+, definimos 
+\begin_inset Formula $R\in\mathcal{P}\left(A\times B\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $aRb\iff b\in g\left(a\right)$
+\end_inset
+
+.
+ De esta manera, por definicion de 
+\begin_inset Formula $f$
+\end_inset
+
+ resultará 
+\begin_inset Formula $f\left(R\right)=g$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $R,S,S_{1},S_{2},T,T_{1},T_{2}$
+\end_inset
+
+ relaciones apropiadas.
+ Probar:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $R\subseteq R\circ R^{-1}\circ R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S_{1}\subseteq S_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{1}\subseteq T_{2}$
+\end_inset
+
+ implica que 
+\begin_inset Formula $\left(S_{1}\circ T_{1}\right)\subseteq\left(S_{2}\circ T_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(R\circ S\right)\cap T\subseteq R\circ\left(S\cap\left(R^{-1}\circ T\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & \left(a,b\right)\in R\\
+\Rightarrow & \left\langle def.^{-1}\right\rangle \\
+ & \left(b,a\right)\in R^{-1}\\
+\Rightarrow & \left\langle def.\circ\right\rangle \\
+ & \left(a,a\right)\in R\circ R^{-1}\\
+\Rightarrow\\
+ & a\left(R\circ R^{-1}\right)a\land aRb\\
+\Rightarrow & \left\langle def.\circ\right\rangle \\
+ & \left(a,b\right)\in\left(R\circ R^{-1}\right)\circ R
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $R\in\mathcal{P}\left(A^{2}\right)$
+\end_inset
+
+.
+ Probar:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $R$
+\end_inset
+
+ es reflexiva si y solo si 
+\begin_inset Formula $\Delta_{A}\subseteq R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R$
+\end_inset
+
+ es simétrica si y solo si 
+\begin_inset Formula $R\subseteq R^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R$
+\end_inset
+
+ es antisimética si y silo si 
+\begin_inset Formula $R\cap R^{-1}\subseteq\Delta_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R$
+\end_inset
+
+ es transitiva si y solo si 
+\begin_inset Formula $R\circ R\subseteq R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $\Delta_{A}=\left\{ \left(a,a\right):a\in A\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & x\in\Delta_{A}\\
+\iff & \left\langle def.\Delta_{A}\right\rangle \\
+ & x=\left(a,a\right)\text{ p. a. }a\in A\\
+\iff & \left\langle R.\text{reflexiva}\right\rangle \\
+ & x\in R
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & a\in A\\
+\iff & \left\langle def.\Delta_{A}\right\rangle \\
+ & \left(a,a\right)\in\Delta_{A}\\
+\Rightarrow & \left\langle \Delta_{A}\subseteq R\right\rangle \\
+ & \left(a,a\right)\in R\\
+\Rightarrow & \left\langle sup\right\rangle \\
+ & \left(a,a\right)\in R\land\left(a,a\right)\notin R\\
+\Rightarrow & \left\langle \text{absurdo}\right\rangle \\
+ & R\text{ es reflexiva}
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & aRb\\
+\Rightarrow & \left\langle R\text{ simétrica}\right\rangle \\
+ & bRa\\
+\Rightarrow & \left\langle def.R^{-1}\right\rangle \\
+ & aR^{-1}b
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & aRb\\
+\Rightarrow & \left\langle R\subseteq R^{-1}\right\rangle \\
+ & aR^{-1}b\\
+\Rightarrow & \left\langle def.R^{-1}\right\rangle \\
+ & bRa
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ relaciones sobre un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Determinar la validez de los siguientes enunciados:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son reflexivas, entonces 
+\begin_inset Formula $R\cap S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son reflexivas, entonces 
+\begin_inset Formula $R\cup S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son simétricas, entonces 
+\begin_inset Formula $R\cap S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son simétricas, entonces 
+\begin_inset Formula $R\cup S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son antisimétricas, entonces 
+\begin_inset Formula $R\cap S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son antisimétricas, entonces 
+\begin_inset Formula $R\cup S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son transitivas, entonces 
+\begin_inset Formula $R\cap S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ son transitivas, entonces 
+\begin_inset Formula $R\cup S$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ es ? (simétrica, antisimétrica, transitiva), entonces 
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+ tambien lo es.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & a\in A\\
+\Rightarrow & \left\langle Hip\right\rangle \\
+ & aRa\land aSa\\
+\Rightarrow & \left\langle def.\cap\right\rangle \\
+ & \left(a,a\right)\in R\cap S
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & a\in A\\
+\Rightarrow & \left\langle Hip\right\rangle \\
+ & aRa\\
+\Rightarrow & \left\langle i_{\lor}\right\rangle \\
+ & aRa\lor aSa\\
+\Rightarrow & \left\langle def.\cup\right\rangle \\
+ & \left(a,a\right)\in R\cup S
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & \left(a,b\right)\in R\cap S\\
+\equiv & \left\langle def.\cap\right\rangle \\
+ & aRb\land aSb\\
+\Rightarrow & \left\langle Hip\right\rangle \\
+ & bRa\land bSa\\
+\equiv & \left\langle def.\cap\right\rangle \\
+ & \left(b,a\right)\in R\cap S
+\end{array}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Verdadero: COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Falso: 
+\begin_inset Formula $R=\left\{ \left(a,b\right)\right\} ,S=\left\{ \left(b,a\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Falso: 
+\begin_inset Formula $R=\left\{ \left(a,b\right)\right\} ,S=\left\{ \left(b,c\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto con 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos.
+ ¿Cuantas relaciones hay en 
+\begin_inset Formula $A$
+\end_inset
+
+? ¿Cuantas relaciones tales que 
+\begin_inset Formula $R\left(A\right)=A$
+\end_inset
+
+ hay en 
+\begin_inset Formula $A$
+\end_inset
+
+? ¿Cuantas relaciones reflexivas hay en 
+\begin_inset Formula $A$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Analizar si las siguientes relaciones son o no relaciones de equivalencia:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+En 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+, la relación 
+\begin_inset Formula $aRb\iff a-b$
+\end_inset
+
+ es par.
+\end_layout
+
+\begin_layout Enumerate
+En 
+\begin_inset Formula $\left\{ f:A\to B\right\} $
+\end_inset
+
+ las relaciones siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $fRg\iff f\left(A\right)\subseteq g\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $fRg\iff f\left(A\right)=g\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $fRg\iff f^{-1}\left(A\right)=g^{-1}\left(A\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Isomorfismo de grafos.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $x\in\mathbb{Z}$
+\end_inset
+
+, luego 
+\begin_inset Formula $x-x=0=2\cdot0$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $xRx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Simetría: Sean 
+\begin_inset Formula $x,y/xRy$
+\end_inset
+
+, luego 
+\begin_inset Formula $x-y=2\cdot k\iff y-x=2\cdot-k$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $yRx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $x,y,z/xRy\land yRz$
+\end_inset
+
+, luego 
+\begin_inset Formula $x-y=2\cdot k$
+\end_inset
+
+ y 
+\begin_inset Formula $y-z=2\cdot k'$
+\end_inset
+
+.
+ Ahora:
+\begin_inset Formula 
+\[
+x-z=2k+y-\left(y-2k'\right)=2k-2k'=2\left(k-k'\right)
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $xRz$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Falso: Para 
+\begin_inset Formula $f=\left\{ \left(a,b\right),\left(b,b\right)\right\} ,g=\left\{ \left(a,b\right),\left(b,a\right)\right\} $
+\end_inset
+
+ resulta 
+\begin_inset Formula $\left(f,g\right)\in R$
+\end_inset
+
+ pero 
+\begin_inset Formula $\left(g,f\right)\notin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Verdadero: COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Verdadero: COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En 
+\begin_inset Formula $\mathbb{R}\times\mathbb{R}$
+\end_inset
+
+ se define la siguiente relación:
+\begin_inset Formula 
+\[
+\left(a,b\right)R\left(c,d\right)\iff a+d=c+b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relación de equivalencia.
+\end_layout
+
+\begin_layout Enumerate
+Mostrar en un esquema la clase de equivalencia de 
+\begin_inset Formula $\left(1,1\right)$
+\end_inset
+
+ definida por 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dada 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+, probar que 
+\begin_inset Formula $ker\left(f\right)$
+\end_inset
+
+ es una relación de equivalencia sobre 
+\begin_inset Formula $A$
+\end_inset
+
+, donde:
+\begin_inset Formula 
+\[
+ker\left(f\right)=\left\{ \left(a,a'\right)/a,a'\in A,f\left(a\right)=f\left(a'\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, luego 
+\begin_inset Formula $f\left(a\right)=f\left(a\right)$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\left(a,a\right)\in ker\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Simetría: Sean 
+\begin_inset Formula $a,a'\in A$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left(a,a'\right)\in ker\left(f\right)$
+\end_inset
+
+ luego 
+\begin_inset Formula $f\left(a\right)=f\left(a'\right)=f\left(a\right)\Rightarrow\left(a',a\right)\in ker\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $x,y,z/xKy\land yKz$
+\end_inset
+
+, luego 
+\begin_inset Formula $f\left(x\right)=f\left(y\right)=f\left(z\right)\Rightarrow\left(x,z\right)\in ker\left(f\right)$
+\end_inset
+
+ .
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $par:\mathbb{N}\to\mathbb{B}$
+\end_inset
+
+ la función que toma valor 
+\begin_inset Quotes fld
+\end_inset
+
+True
+\begin_inset Quotes frd
+\end_inset
+
+ en los pares y 
+\begin_inset Quotes fld
+\end_inset
+
+False
+\begin_inset Quotes frd
+\end_inset
+
+ en los impares.
+ Calcular 
+\begin_inset Formula $\mathbb{N}/ker\left(par\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dar una definicion de 
+\begin_inset Formula $ker\left(f\right)$
+\end_inset
+
+ en términos de 
+\begin_inset Formula $f$
+\end_inset
+
+, la composición y la inversa de relaciones; y sin usar pertenencia ni comprensi
+ón de conjuntos.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dada una funcion 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y una relación de equivalencia 
+\begin_inset Formula $R\subseteq ker\left(f\right)$
+\end_inset
+
+, probar que existen 
+\begin_inset Formula $h:A\to A/R$
+\end_inset
+
+ y 
+\begin_inset Formula $g:A/R\to B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f=g\circ h$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

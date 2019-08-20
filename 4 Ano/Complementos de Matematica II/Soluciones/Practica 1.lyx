@@ -1,0 +1,790 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{arrows, automata}
+\end_preamble
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Probar que en el conjunto 
+\begin_inset Formula $\left\{ a,b\right\} $
+\end_inset
+
+ hay tres órdenes posibles.
+ ¿Y en 
+\begin_inset Formula $\left\{ a,b,c\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ a,b,c,d\right\} $
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+En 
+\begin_inset Formula $\left(\mathbb{N},|\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $|$
+\end_inset
+
+ denota la relación 
+\begin_inset Quotes fld
+\end_inset
+
+divide a
+\begin_inset Quotes frd
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verificar que 
+\begin_inset Formula $\left(\mathbb{N},|\right)$
+\end_inset
+
+ es un conjunto ordenado.
+\end_layout
+
+\begin_layout Enumerate
+¿Es también un conjunto totalmente ordenado?
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $S$
+\end_inset
+
+ es el conjunto de los divisores de 
+\begin_inset Formula $60$
+\end_inset
+
+, graficar el conjunto ordenado inducido por 
+\begin_inset Formula $|$
+\end_inset
+
+ en 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Yoneda Lemma: Probar que en un preorden 
+\begin_inset Formula $\left(P,\preceq\right)$
+\end_inset
+
+ vale: 
+\begin_inset Formula $x\preceq y\iff\forall z:z\preceq x\Rightarrow z\preceq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto arbitrario.
+ Verificar que 
+\begin_inset Formula $\left(\mathcal{P}\left(A\right),\subseteq\right)$
+\end_inset
+
+ es un conjunto ordenado.
+ ¿Es también un conjunto totalmente ordenado?
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $V=\left\{ a,b,c,d,e\right\} $
+\end_inset
+
+.
+ El grafo dirigido de la siguiente figura define un orden en 
+\begin_inset Formula $V$
+\end_inset
+
+ de la siguiente manera: 
+\begin_inset Formula $x\preceq y\iff x=y$
+\end_inset
+
+ o existe un 
+\begin_inset Formula $xy$
+\end_inset
+
+-camino dirigido.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [below left  of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below right of=a] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below left of=b] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [below right of=b] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node {} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node {} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge node {} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge node {} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Insertar el símbolo correcto (
+\begin_inset Formula $\preceq,\succeq,\parallel$
+\end_inset
+
+) entre cada par de elementos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+a &  & e\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+b &  & c\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+d &  & a\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+c &  & d\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Es un conjunto totalmente ordenado? ¿Tiene elemento máximo y/o mínimo?
+ ¿Tiene elementos maximales y/o minimales?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Seam 
+\begin_inset Formula $\left(P,\preceq\right)$
+\end_inset
+
+ un conjunto ordenado, 
+\begin_inset Formula $X$
+\end_inset
+
+ un conjunto, y 
+\begin_inset Formula $p:X\to P$
+\end_inset
+
+ una función.
+ Se define la relación H sobre elementos de 
+\begin_inset Formula $X$
+\end_inset
+
+ como 
+\begin_inset Formula $xHx'\iff p\left(x\right)\preceq p\left(x'\right)$
+\end_inset
+
+.
+ ¿Que tipo de relación es 
+\begin_inset Formula $H$
+\end_inset
+
+? Dar condiciones para que 
+\begin_inset Formula $H$
+\end_inset
+
+ sea un conjunto ordenado.
+\end_layout
+
+\begin_layout Enumerate
+En 
+\begin_inset Formula $\left(Prop,D\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $Prop$
+\end_inset
+
+ son las fórmulas del cálculo proposicional y 
+\begin_inset Formula $\phi D\psi\iff\left\{ \phi\right\} \vdash\psi$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verificar si 
+\begin_inset Formula $\left(Prop,D\right)$
+\end_inset
+
+ es un conjunto ordenado.
+ En caso de no serlo, clasificarlo.
+\end_layout
+
+\begin_layout Enumerate
+¿La realación es total? ¿Tiene elemento máximo y/o mínimo? ¿Tiene elementos
+ maximales y/o minimales?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En 
+\begin_inset Formula $\left(Prop,I\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $\phi I\psi\iff\emptyset\vdash\phi\Rightarrow\psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verificar si 
+\begin_inset Formula $\left(Prop,I\right)$
+\end_inset
+
+ es un conjunto ordenado.
+ En caso de no serlo, clasificarlo.
+\end_layout
+
+\begin_layout Enumerate
+¿La realación es total? ¿Tiene elemento máximo y/o mínimo? ¿Tiene elementos
+ maximales y/o minimales?
+\end_layout
+
+\begin_layout Enumerate
+Explique el nexo entre esta relación y la del ejercicio anterior.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(P,\preceq\right)$
+\end_inset
+
+ un preorden.
+ Construir un conjunto ordenado 
+\begin_inset Formula $\left(P/\sim,\sqsubseteq\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $x\preceq y$
+\end_inset
+
+ y 
+\begin_inset Formula $y\preceq x$
+\end_inset
+
+, tal que 
+\begin_inset Formula $\pi:P\to P/\sim$
+\end_inset
+
+ sea monótona.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Aplicar esta construcción a la relación 
+\begin_inset Formula $\left(Prop,D\right)$
+\end_inset
+
+ del ejercicio anterior.
+ Para este caso partricular, la construcción se llama 
+\begin_inset Quotes fld
+\end_inset
+
+álgrebra de Lindenbaum-Tarski
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ define un orden en el conjunto 
+\begin_inset Formula $V$
+\end_inset
+
+, entonces 
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+ tambien define un orden en 
+\begin_inset Formula $V$
+\end_inset
+
+, llamado 
+\begin_inset Quotes fld
+\end_inset
+
+orden inverso
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ define un orden total en el conjunto 
+\begin_inset Formula $V$
+\end_inset
+
+, entonces 
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+ tambien define un orden total en 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left(A,\preceq\right)$
+\end_inset
+
+ es un orden no total, puede existir un 
+\begin_inset Formula $S\subseteq A$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(S,\preceq\right)$
+\end_inset
+
+ es un orden total.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(P,\preceq\right)$
+\end_inset
+
+ un preorden.
+ Probar que si existe un elemento máximo, entonces todos los maximales son
+ máximos.
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\left(A,\preceq_{1}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(A,\preceq_{2}\right)$
+\end_inset
+
+ dos conjuntos ordenados (con el mismo conjunto subyacente).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Define 
+\begin_inset Formula $\preceq_{1}\cap\preceq_{2}$
+\end_inset
+
+ un orden en 
+\begin_inset Formula $A$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+¿Define 
+\begin_inset Formula $\preceq_{1}\cup\preceq_{2}$
+\end_inset
+
+ un orden en 
+\begin_inset Formula $A$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que el conjunto de todos los elementos maximales (minimales) de un
+ conjunto ordenado, es una anticadena.
+\end_layout
+
+\begin_layout Enumerate
+Considerar el conjunto de los enteros positivos 
+\begin_inset Formula $\mathbb{Z}^{+}$
+\end_inset
+
+ y el de los enteros negativos 
+\begin_inset Formula $\mathbb{Z}^{-}$
+\end_inset
+
+ con sus órdenes usuales.
+ Probar que 
+\begin_inset Formula $\mathbb{Z}^{+}\not\simeq\mathbb{Z}^{-}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(A,\preceq\right)$
+\end_inset
+
+ un conjunto ordenado.
+ Para todo elemento 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ definamos
+\begin_inset Formula 
+\[
+S\left(a\right)=\left\{ x\in A:x\preceq a\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Si 
+\begin_inset Formula $\mathcal{A}=\left\{ S\left(a\right):a\in A\right\} $
+\end_inset
+
+, ordenado por la inclusión, demostrar que 
+\begin_inset Formula $A\simeq\mathcal{A}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\left(X,\preceq_{X}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Y,\preceq_{Y}\right)$
+\end_inset
+
+ dos conjuntos ordenados
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Probar que son equivalentes:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ son isomorfos.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\left(X,\preceq_{X}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Y,\preceq_{Y}\right)$
+\end_inset
+
+ dos conjuntos ordenados.
+ Una 
+\begin_inset Quotes fld
+\end_inset
+
+conexión Galois
+\begin_inset Quotes frd
+\end_inset
+
+ es un par de funciones
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que la relación de isomorfismo entre conjuntos ordenados es una relación
+ de equivalencia.
+\end_layout
+
+\end_body
+\end_document
