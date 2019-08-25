@@ -101,6 +101,16 @@ Probar que en el conjunto
 ?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 En 
 \begin_inset Formula $\left(\mathbb{N},|\right)$
@@ -154,6 +164,345 @@ Si
 .
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+, luego 
+\begin_inset Formula $n=n*1\iff n|n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Antisimetría: Sean 
+\begin_inset Formula $n,m\in\mathbb{N}/n|m\land m|n$
+\end_inset
+
+ luego 
+\begin_inset Formula $n=m*c$
+\end_inset
+
+ y 
+\begin_inset Formula $m=n*k$
+\end_inset
+
+.
+ Finalmente:
+\begin_inset Formula 
+\[
+n=n*k*c\iff1=k*c\iff k=c=1
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $n=m*1=m$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No lo es pues para cualquier par de primos 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ resulta: 
+\begin_inset Formula $p_{1}\parallel p_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.8cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (1) {$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (3) [above of=1] {$3$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (2) [left of=3]  {$2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (5) [right of=3] {$5$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (4) [above left of=2] {$4$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (6) [right of=4] {$6$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (10) [right of=6] {$10$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (15) [above right of=5] {$15$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (12) [above of=6] {$12$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (30) [above of=10] {$30$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (60) [above right of=12] {$60$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (1) edge node {} (2);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (1) edge node {} (3);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (1) edge node {} (5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (2) edge node {} (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (2) edge node {} (6);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (2) edge node {} (10);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (3) edge node {} (6);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (3) edge node {} (15);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (5) edge node {} (10);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (5) edge node {} (15);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (12) edge node {} (4);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (12) edge node {} (6);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (30) edge node {} (6);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (30) edge node {} (10);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (30) edge node {} (15);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (60) edge node {} (12);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (60) edge node {} (30);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Yoneda Lemma: Probar que en un preorden 
@@ -167,6 +516,42 @@ Yoneda Lemma: Probar que en un preorden
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $z\preceq x$
+\end_inset
+
+, luego por transitividad: 
+\begin_inset Formula $z\preceq x\preceq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Por reflexididad tenemos 
+\begin_inset Formula $x\preceq x$
+\end_inset
+
+ y por hipotesis: 
+\begin_inset Formula $\text{\ensuremath{x\preceq x\Rightarrow x\preceq y}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Sea 
 \begin_inset Formula $A$
@@ -181,6 +566,73 @@ Sea
  ¿Es también un conjunto totalmente ordenado?
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $X\in\mathcal{P}\left(A\right)$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\in X\Rightarrow x\in X$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $X\subseteq X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Antisimetría: Sean 
+\begin_inset Formula $X,Y\in\mathcal{P}\left(A\right)$
+\end_inset
+
+ luego si 
+\begin_inset Formula $X\subseteq Y\land Y\subseteq X$
+\end_inset
+
+ resulta 
+\begin_inset Formula $X=Y$
+\end_inset
+
+ por definición.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $X,Y,Z\in\mathcal{P}\left(A\right)/X\subseteq Y\land Y\subseteq Z$
+\end_inset
+
+ luego 
+\begin_inset Formula $x\in X\Rightarrow x\in Y\Rightarrow x\in Z$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $X\subseteq Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+No necesariamente es totalment ordenado.
+ Por ejemplo para 
+\begin_inset Formula $A=\left\{ 1,2,3\right\} $
+\end_inset
+
+ resulta 
+\begin_inset Formula $\left\{ 1,2\right\} \parallel\left\{ 2,3\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Sea 
 \begin_inset Formula $V=\left\{ a,b,c,d,e\right\} $
@@ -307,6 +759,10 @@ end{tikzpicture}
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -365,9 +821,100 @@ c &  & d\end{array}$
  ¿Tiene elementos maximales y/o minimales?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+a & \succeq & e\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+b & \parallel & c\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+d & \preceq & a\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{ccc}
+c & \parallel & d\end{array}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
-Seam 
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+No es totalmente ordenado pues existen elementos que no son comparables.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ es elemento máximo.
+ No existe elemento mínimo.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d$
+\end_inset
+
+ y 
+\begin_inset Formula $e$
+\end_inset
+
+ son minimales.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ es maximal.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Sean 
 \begin_inset Formula $\left(P,\preceq\right)$
 \end_inset
 
@@ -376,16 +923,20 @@ Seam
 \end_inset
 
  un conjunto, y 
-\begin_inset Formula $p:X\to P$
+\begin_inset Formula $f:X\to P$
 \end_inset
 
  una función.
- Se define la relación H sobre elementos de 
+ Se define la relación 
+\begin_inset Formula $H$
+\end_inset
+
+ sobre elementos de 
 \begin_inset Formula $X$
 \end_inset
 
  como 
-\begin_inset Formula $xHx'\iff p\left(x\right)\preceq p\left(x'\right)$
+\begin_inset Formula $xHx'\iff f\left(x\right)\preceq f\left(x'\right)$
 \end_inset
 
 .
@@ -400,6 +951,60 @@ Seam
  sea un conjunto ordenado.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+Reflexividad: 
+\begin_inset Formula $x\in X\Rightarrow f\left(x\right)\in P\Rightarrow f\left(x\right)\preceq f\left(x\right)\iff xHx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $x,y,z\in X/xHy\land yHz$
+\end_inset
+
+ luego: 
+\begin_inset Formula 
+\[
+f\left(x\right)\preceq f\left(y\right)\land f\left(y\right)\preceq f\left(z\right)\Rightarrow f\left(x\right)\preceq f\left(z\right)\iff xHz
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Antisimetría: Si agregamos la hipotesis de que 
+\begin_inset Formula $f$
+\end_inset
+
+ sea inyectiva, entonces si 
+\begin_inset Formula $xHy\land yHx$
+\end_inset
+
+ resultara:
+\begin_inset Formula 
+\[
+f\left(x\right)\preceq f\left(y\right)\land f\left(y\right)\preceq\left(x\right)\Rightarrow f\left(x\right)=f\left(y\right)\Rightarrow x=y
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 En 
 \begin_inset Formula $\left(Prop,D\right)$
@@ -429,6 +1034,18 @@ Verificar si
 \begin_layout Enumerate
 ¿La realación es total? ¿Tiene elemento máximo y/o mínimo? ¿Tiene elementos
  maximales y/o minimales?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -461,6 +1078,22 @@ Verificar si
 
 \begin_layout Enumerate
 Explique el nexo entre esta relación y la del ejercicio anterior.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -509,6 +1142,14 @@ Aplicar esta construcción a la relación
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -581,6 +1222,22 @@ Si
  es un orden total.
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Sea 
@@ -592,6 +1249,16 @@ Sea
  máximos.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Sean 
 \begin_inset Formula $\left(A,\preceq_{1}\right)$
@@ -629,12 +1296,34 @@ Sean
 ?
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Probar que el conjunto de todos los elementos maximales (minimales) de un
  conjunto ordenado, es una anticadena.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Considerar el conjunto de los enteros positivos 
 \begin_inset Formula $\mathbb{Z}^{+}$
@@ -652,6 +1341,16 @@ Considerar el conjunto de los enteros positivos
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Sea 
 \begin_inset Formula $\left(A,\preceq\right)$
@@ -686,6 +1385,14 @@ Si
 .
 \end_layout
 
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Sean 
@@ -701,7 +1408,20 @@ Sean
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Dar un ejemplo de conjuntos 
+\begin_inset Formula $\left(X,\preceq_{X}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Y,\preceq_{Y}\right)$
+\end_inset
+
+ y una función 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ que sea sobreyectiva y preserve el orden pero que no sea un isomorfismo
+ de conjuntos ordenados.
 \end_layout
 
 \begin_layout Enumerate
@@ -718,6 +1438,111 @@ Probar que son equivalentes:
 \end_inset
 
  son isomorfos.
+\end_layout
+
+\begin_layout Enumerate
+Existe 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ sobreyectiva tal que 
+\begin_inset Formula $f\left(a\right)\preceq_{Y}f\left(b\right)$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $a\preceq_{X}b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Existen 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to X$
+\end_inset
+
+ homomorfismos de conjuntos ordenados tales que 
+\begin_inset Formula $f\circ g=id_{Y}$
+\end_inset
+
+ y 
+\begin_inset Formula $g\circ f=id_{X}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $\left(X\to Y,\preceq_{X\to Y}\right)$
+\end_inset
+
+ es un conjunto ordenado, donde 
+\begin_inset Formula $X\to Y$
+\end_inset
+
+ representa las funciones entre 
+\begin_inset Formula $\left(X,\preceq_{X}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Y,\preceq_{Y}\right)$
+\end_inset
+
+, y el orden está definido por 
+\begin_inset Formula $f\preceq_{X\to Y}g$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\forall x:f\left(x\right)\preceq_{Y}g\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $\left(X\times Y,\preceq_{X\times Y}\right)$
+\end_inset
+
+ es un conjunto ordenado, donde 
+\begin_inset Formula $\left(x,y\right)\preceq_{X\times Y}\left(x',y'\right)$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $x\preceq_{X}x'$
+\end_inset
+
+ y 
+\begin_inset Formula $y\preceq_{Y}y'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
@@ -756,12 +1581,161 @@ conexión Galois
 \begin_inset Quotes frd
 \end_inset
 
- es un par de funciones
+ es un par de funciones 
+\begin_inset Formula $\left(f_{*},f^{*}\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $f_{*}:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{*}:Y\to X$
+\end_inset
+
+ tales que para todos 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ e 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ vale:
+\begin_inset Formula 
+\[
+f_{*}\left(x\right)\preceq_{Y}y\iff x\preceq_{X}f^{*}\left(y\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Probar que si 
+\begin_inset Formula $f_{*}:X\to Y$
+\end_inset
+
+ es un isomorfismo, entonces 
+\begin_inset Formula $\left(f_{*},f_{*}^{-1}\right)$
+\end_inset
+
+ es una conexión de Galois.
+\end_layout
+
+\begin_layout Enumerate
+Dada una función 
+\begin_inset Formula $A\to B$
+\end_inset
+
+, probar que se puede construir una conexión de Galois entre el conjunto
+ potencia de 
+\begin_inset Formula $A$
+\end_inset
+
+ y el de 
+\begin_inset Formula $B$
+\end_inset
+
+ utilizando los operadores que calculan la imagen de 
+\begin_inset Formula $f$
+\end_inset
+
+ sobre un subconjunto de 
+\begin_inset Formula $A$
+\end_inset
+
+ y la imagen inversa de 
+\begin_inset Formula $f$
+\end_inset
+
+ sobre un subconjunto de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Considerando los órdenes usuales sobre 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbb{Q}_{0}^{+}$
+\end_inset
+
+, encontrar 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(f_{*},f^{*}\right)$
+\end_inset
+
+ sea una conexión Galois donde 
+\begin_inset Formula $f_{*}:\mathbb{N}\to\mathbb{Q}_{0}^{+}$
+\end_inset
+
+ es la inclusión.
+\end_layout
+
+\begin_layout Enumerate
+Dada una conexión Galois 
+\begin_inset Formula $\left(f_{*},f^{*}\right)$
+\end_inset
+
+ entre 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+, probar que para todo 
+\begin_inset Formula $x\in X,y\in Y$
+\end_inset
+
+ vale 
+\begin_inset Formula $x\preceq_{X}f^{*}\left(f_{*}\left(x\right)\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{*}\left(f^{*}\left(y\right)\right)\preceq_{Y}y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dada una conexion de Galois 
+\begin_inset Formula $\left(f_{*},f^{*}\right)$
+\end_inset
+
+ entre 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+, probar que 
+\begin_inset Formula $f_{*}$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{*}$
+\end_inset
+
+ son monótonas.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
 \end_layout
 
 \begin_layout Enumerate
@@ -786,5 +1760,15 @@ Probar que la relación de isomorfismo entre conjuntos ordenados es una relació
  de equivalencia.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

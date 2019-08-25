@@ -178,6 +178,9 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -230,6 +233,11 @@ end{axis}
 
 \backslash
 end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -369,13 +377,13 @@ Soluciones
 \begin_layout Enumerate
 \begin_inset Formula $\boxed{\begin{array}{cc}
  & x\in dom\left(R\cap S\right)\\
-\Rightarrow & \left\langle def.dom\right\rangle \\
+\iff & \left\langle def.dom\right\rangle \\
  & \exists y/\left(x,y\right)\in R\cap S\\
-\equiv & \left\langle def.\cap\right\rangle \\
+\iff & \left\langle def.\cap\right\rangle \\
  & \exists y/xRy\land xSy\\
 \Rightarrow & \left\langle def.dom\right\rangle \\
  & x\in dom\left(R\right)\land x\in dom\left(S\right)\\
-\equiv & \left\langle def.\cap\right\rangle \\
+\iff & \left\langle def.\cap\right\rangle \\
  & x\in dom\left(R\right)\cap dom\left(S\right)
 \end{array}}$
 \end_inset
@@ -394,13 +402,13 @@ Soluciones
 \begin_layout Itemize
 \begin_inset Formula $\boxed{\begin{array}{cc}
  & x\in dom\left(R\cup S\right)\\
-\Rightarrow & \left\langle def.dom\right\rangle \\
+\iff & \left\langle def.dom\right\rangle \\
  & \exists y/\left(x,y\right)\in R\cup S\\
-\equiv & \left\langle def.\cup\right\rangle \\
+\iff & \left\langle def.\cup\right\rangle \\
  & \exists y/xRy\lor xSy\\
 \Rightarrow & \left\langle def.dom\right\rangle \\
  & x\in dom\left(R\right)\lor x\in dom\left(S\right)\\
-\equiv & \left\langle def.\cup\right\rangle \\
+\iff & \left\langle def.\cup\right\rangle \\
  & x\in dom\left(R\right)\cup dom\left(S\right)
 \end{array}}$
 \end_inset
@@ -411,18 +419,20 @@ Soluciones
 \begin_layout Itemize
 \begin_inset Formula $\boxed{\begin{array}{cc}
  & x\in dom\left(R\right)\cup dom\left(S\right)\\
-\equiv & \left\langle def.\cup\right\rangle \\
+\iff & \left\langle def.\cup\right\rangle \\
  & x\in dom\left(R\right)\lor x\in dom\left(S\right)\\
 \Rightarrow & \boxed{\begin{array}{c|c}
-\left\langle x\in dom\left(R\right)\right\rangle  & \left\langle x\in dom\left(S\right)\right\rangle \\
+\left\langle Sup\right\rangle  & \left\langle Sup\right\rangle \\
+x\in dom\left(R\right) & x\in dom\left(S\right)\\
+\left\langle def.dom\right\rangle  & \left\langle def.dom\right\rangle \\
 \exists y/xRy & \exists y/xSy\\
 \left\langle i_{\lor}\right\rangle  & \left\langle i_{\lor}\right\rangle \\
-\exists y/xRy\lor xSy & \exists y/xRy\lor xSy\\
-\left\langle def.\cup\right\rangle  & \left\langle def.\cup\right\rangle \\
-\exists y/\left(x,y\right)\in R\cup S & \exists y/\left(x,y\right)\in R\cup S\\
-\left\langle def.dom\right\rangle  & \left\langle def.dom\right\rangle \\
-x\in dom\left(R\cup S\right) & x\in dom\left(R\cup S\right)
+\exists y/xRy\lor xSy & \exists y/xRy\lor xSy
 \end{array}}\\
+ & \exists y/xRy\lor xSy\\
+\iff & \left\langle def.\cup\right\rangle \\
+ & \exists y/\left(x,y\right)\in R\cup S\\
+\iff & \left\langle def.dom\right\rangle \\
  & x\in dom\left(R\cup S\right)
 \end{array}}$
 \end_inset
@@ -434,15 +444,15 @@ x\in dom\left(R\cup S\right) & x\in dom\left(R\cup S\right)
 \begin_layout Enumerate
 \begin_inset Formula $\boxed{\begin{array}{cc}
  & x\in dom\left(R\right)-dom\left(S\right)\\
-\equiv & \left\langle def.-\right\rangle \\
+\iff & \left\langle def.-\right\rangle \\
  & x\in dom\left(R\right)\land x\notin dom\left(S\right)\\
 \Rightarrow & \left\langle def.dom\right\rangle \\
- & \exists y/\left(x,y\right)\in R\land\forall z:\left(x,z\right)\notin S\\
+ & \left(\exists y/\left(x,y\right)\in R\right)\land\left(\forall z:\left(x,z\right)\notin S\right)\\
 \Rightarrow & \left\langle z=y\right\rangle \\
  & \exists y/\left(x,y\right)\in R\land\left(x,y\right)\notin S\\
-\equiv & \left\langle def.-\right\rangle \\
+\iff & \left\langle def.-\right\rangle \\
  & \exists y/\left(x,y\right)\in R-S\\
-\equiv & \left\langle def.dom\right\rangle \\
+\iff & \left\langle def.dom\right\rangle \\
  & x\in dom\left(R-S\right)
 \end{array}}$
 \end_inset
@@ -453,13 +463,13 @@ x\in dom\left(R\cup S\right) & x\in dom\left(R\cup S\right)
 \begin_layout Enumerate
 \begin_inset Formula $\boxed{\begin{array}{cc}
  & y\in im\left(R\cap S\right)\\
-\equiv & \left\langle def.im\right\rangle \\
+\iff & \left\langle def.im\right\rangle \\
  & \exists x/\left(x,y\right)\in R\cap S\\
-\equiv & \left\langle def.\cap\right\rangle \\
+\iff & \left\langle def.\cap\right\rangle \\
  & \exists x/\left(x,y\right)\in R\land\left(x,y\right)\in S\\
 \Rightarrow & \left\langle def.im\right\rangle \\
  & y\in im\left(R\right)\land y\in im\left(S\right)\\
-\equiv & \left\langle def.\cap\right\rangle \\
+\iff & \left\langle def.\cap\right\rangle \\
  & y\in im\left(R\right)\cap im\left(S\right)
 \end{array}}$
 \end_inset
@@ -468,11 +478,50 @@ x\in dom\left(R\cup S\right) & x\in dom\left(R\cup S\right)
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & y\in im\left(R\cup S\right)\\
+\iff & \left\langle def.im\right\rangle \\
+ & \exists x/\left(x,y\right)\in R\cup S\\
+\iff & \left\langle def.\cup\right\rangle \\
+ & \exists x/\left(x,y\right)\in R\lor\left(x,y\right)\in S\\
+\Rightarrow & \boxed{\begin{array}{c|c}
+\left\langle Sup\right\rangle  & \left\langle Sup\right\rangle \\
+\exists x/\left(x,y\right)\in R & \exists x/\left(x,y\right)\in S\\
+\left\langle def.im\right\rangle  & \left\langle def.im\right\rangle \\
+y\in im\left(R\right) & y\in im\left(S\right)\\
+\left\langle i_{\lor}\right\rangle  & \left\langle i_{\lor}\right\rangle \\
+y\in im\left(R\right)\lor y\in im\left(S\right) & y\in im\left(R\right)\lor y\in im\left(S\right)
+\end{array}}\\
+ & y\in im\left(R\right)\lor y\in im\left(S\right)\\
+\iff & \left\langle def.\cup\right\rangle \\
+ & y\in im\left(R\right)\cup im\left(S\right)
+\end{array}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & y\in im\left(R\right)-im\left(S\right)\\
+\iff & \left\langle def.-\right\rangle \\
+ & y\in im\left(R\right)\land y\notin im\left(S\right)\\
+\Rightarrow & \left\langle def.im\right\rangle \\
+ & \left(\exists x/\left(x,y\right)\in R\right)\land\left(\forall z:\left(z,y\right)\notin S\right)\\
+\Rightarrow & \left\langle z=y\right\rangle \\
+ & \exists x/\left(x,y\right)\in R\land\left(x,y\right)\notin S\\
+\iff & \left\langle def.-\right\rangle \\
+ & \exists x/\left(x,y\right)\in R-S\\
+\iff & \left\langle def.im\right\rangle \\
+ & y\in im\left(R-S\right)
+\end{array}}$
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -699,8 +748,8 @@ Soluciones
  & \left(b,a\right)\in R^{-1}\\
 \Rightarrow & \left\langle def.\circ\right\rangle \\
  & \left(a,a\right)\in R\circ R^{-1}\\
-\Rightarrow\\
- & a\left(R\circ R^{-1}\right)a\land aRb\\
+\Rightarrow & \left\langle i_{\land}\right\rangle \\
+ & a\left(R\circ R^{-1}\right)a\land\left(a,b\right)\in R\\
 \Rightarrow & \left\langle def.\circ\right\rangle \\
  & \left(a,b\right)\in\left(R\circ R^{-1}\right)\circ R
 \end{array}}$
@@ -710,7 +759,18 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & \left(x,z\right)\in S_{1}\circ T_{1}\\
+\Rightarrow & \left\langle def.\circ\right\rangle \\
+ & \exists y/xS_{1}y\land yT_{1}z\\
+\Rightarrow & \left\langle Hip\right\rangle \\
+ & \exists y/xS_{2}y\land yT_{2}z\\
+\Rightarrow & \left\langle def.\circ\right\rangle \\
+ & \left(x,z\right)\in S_{2}\circ T_{2}
+\end{array}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -754,7 +814,7 @@ Sea
 \begin_inset Formula $R$
 \end_inset
 
- es antisimética si y silo si 
+ es antisimética si y solo si 
 \begin_inset Formula $R\cap R^{-1}\subseteq\Delta_{A}$
 \end_inset
 
@@ -1034,7 +1094,7 @@ Soluciones
  & a\in A\\
 \Rightarrow & \left\langle Hip\right\rangle \\
  & aRa\land aSa\\
-\Rightarrow & \left\langle def.\cap\right\rangle \\
+\iff & \left\langle def.\cap\right\rangle \\
  & \left(a,a\right)\in R\cap S
 \end{array}}$
 \end_inset
@@ -1049,7 +1109,7 @@ Soluciones
  & aRa\\
 \Rightarrow & \left\langle i_{\lor}\right\rangle \\
  & aRa\lor aSa\\
-\Rightarrow & \left\langle def.\cup\right\rangle \\
+\iff & \left\langle def.\cup\right\rangle \\
  & \left(a,a\right)\in R\cup S
 \end{array}}$
 \end_inset
@@ -1060,11 +1120,11 @@ Soluciones
 \begin_layout Enumerate
 \begin_inset Formula $\boxed{\begin{array}{cc}
  & \left(a,b\right)\in R\cap S\\
-\equiv & \left\langle def.\cap\right\rangle \\
+\iff & \left\langle def.\cap\right\rangle \\
  & aRb\land aSb\\
 \Rightarrow & \left\langle Hip\right\rangle \\
  & bRa\land bSa\\
-\equiv & \left\langle def.\cap\right\rangle \\
+\iff & \left\langle def.\cap\right\rangle \\
  & \left(b,a\right)\in R\cap S
 \end{array}}$
 \end_inset
@@ -1073,7 +1133,25 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-Verdadero: COMPLETAR.
+\begin_inset Formula $\boxed{\begin{array}{cc}
+ & \left(a,b\right)\in R\cup S\\
+\iff & \left\langle def.\cup\right\rangle \\
+ & \left(a,b\right)\in R\lor\left(a,b\right)\in S\\
+\Rightarrow & \boxed{\begin{array}{c|c}
+\left\langle Sup\right\rangle  & \left\langle Sup\right\rangle \\
+\left(a,b\right)\in R & \left(a,b\right)\in S\\
+\left\langle Hip\right\rangle  & \left\langle Hip\right\rangle \\
+\left(b,a\right)\in R & \left(b,a\right)\in S\\
+\left\langle i_{\lor}\right\rangle  & \left\langle i_{\lor}\right\rangle \\
+\left(b,a\right)\in R\lor\left(b,a\right)\in S & \left(b,a\right)\in R\lor\left(b,a\right)\in S
+\end{array}}\\
+ & \left(b,a\right)\in R\lor\left(b,a\right)\in S\\
+\iff & \left\langle def.\cup\right\rangle \\
+ & \left(b,a\right)\in R\cup S
+\end{array}}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1102,10 +1180,6 @@ Falso:
 
 \begin_layout Enumerate
 COMPLETAR.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1354,11 +1428,89 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $\left(x,y\right)\in\mathbb{R}^{2}$
+\end_inset
+
+ luego 
+\begin_inset Formula $\left(x,y\right)R\left(x,y\right)\iff x+y=y+x$
+\end_inset
+
+, lo cual vale.
+\end_layout
+
+\begin_layout Itemize
+Simetría: Sea 
+\begin_inset Formula $\left(a,b\right),\left(c,d\right)\in\mathbb{R}^{2}$
+\end_inset
+
+ luego 
+\begin_inset Formula $\left(a,b\right)R\left(c,d\right)\iff a+d=c+b=a+d\iff\left(c,d\right)R\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Si 
+\begin_inset Formula $\left(a,b\right)R\left(c,d\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(c,d\right)R\left(e,f\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a+d=c+b$
+\end_inset
+
+ y 
+\begin_inset Formula $c+f=e+d$
+\end_inset
+
+.
+ Luego:
+\begin_inset Formula 
+\[
+a+d=c+b\iff a+f+d=c+f+b\iff a+f+d=e+d+b\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff a+f=e+b\iff\left(a,b\right)R\left(e,f\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\left(1,1\right)R\left(c,d\right)\iff1+d=c+1\iff d=c$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\overline{\left(1,1\right)}=\left\{ \left(x,x\right)/x\in\mathbb{R}\right\} 
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1470,8 +1622,18 @@ False
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $ker\left(par\right)=\left\{ \left(a,a'\right)\in\mathbb{N}^{2}/par\left(a\right)=par\left(a'\right)\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N/ker\left(par\right)=\left\{ \left\{ \left(a,a'\right)\in\mathbb{P}^{2}\right\} ,\left\{ \left(a,a'\right)\in\mathbb{I}^{2}\right\} \right\} $
+\end_inset
+
+.
 \begin_inset Newpage pagebreak
 \end_inset
 
