@@ -1,0 +1,7 @@
+n := 25;
+i := 0;
+repeat
+        i := i + 1;
+        t := i * i
+until t = n
+end

@@ -1227,15 +1227,115 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $x\in V$
+\end_inset
+
+, luego 
+\begin_inset Formula $xRx\Rightarrow xR^{-1}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Antisimetría: Sean 
+\begin_inset Formula $x,y\in V$
+\end_inset
+
+ tales que 
+\begin_inset Formula $xR^{-1}y$
+\end_inset
+
+ y 
+\begin_inset Formula $yR^{-1}x$
+\end_inset
+
+, luego 
+\begin_inset Formula $xRy$
+\end_inset
+
+ y 
+\begin_inset Formula $yRx$
+\end_inset
+
+.
+ Por antisimetría de 
+\begin_inset Formula $R$
+\end_inset
+
+ resulta 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $x,y,z\in V/xR^{-1}y\land yR^{-1}z$
+\end_inset
+
+ luego 
+\begin_inset Formula $yRx\land zRy$
+\end_inset
+
+ y por transitividad 
+\begin_inset Formula $zRx$
+\end_inset
+
+.
+ Por definición de 
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $xR^{-1}z$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supongamos existen 
+\begin_inset Formula $x,y\in V$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x\parallel_{R^{-1}}y$
+\end_inset
+
+ , luego 
+\begin_inset Formula $x\parallel_{R}y$
+\end_inset
+
+.
+ Contradicción.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
+Lo propuesto ocurre por ejemplo con 
+\begin_inset Formula $A=\left\{ 2,3,4\right\} $
+\end_inset
 
-\begin_layout Enumerate
-COMPLETAR.
+ y 
+\begin_inset Formula $S=\left\{ 2,4\right\} $
+\end_inset
+
+ con la relacion 
+\begin_inset Formula $|$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
