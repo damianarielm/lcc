@@ -96,7 +96,7 @@ andOp = do reservedOp lis "&"
 -----------------------------------
 
 comm :: Parser Comm
-comm = chainl1 (assignment <|> ifthenelse <|> repeatuntil <|> skip) semicolon
+comm = chainl1 (assignment <|> ifthenelse <|> repeatuntil <|> while <|> skip) semicolon
 
 skip = do reserved lis "skip"
           return Skip
@@ -124,6 +124,13 @@ repeatuntil = do reserved lis "repeat"
                  b <- boolexp
                  reserved lis "end"
                  return $ Repeat c b
+
+while = do reserved lis "while"
+           b <- boolexp
+           reserved lis "do"
+           c <- comm
+           reserved lis "end"
+           return $ While b c
 
 ------------------------------------
 -- Función de parseo

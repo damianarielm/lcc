@@ -34,6 +34,7 @@ evalComm (Cond b c0 c1) s = if evalBoolExp b s
                             then evalComm c0 s
                             else evalComm c1 s
 evalComm (Repeat c0 b) s  = evalComm (Cond b Skip (Repeat c0 b)) $ evalComm c0 s
+evalComm (While b c) s    = evalComm (Cond b (Seq c (While b c)) Skip) s
 
 -- Evalua una expresion entera, sin efectos laterales
 -- Completar definicion

@@ -32,4 +32,5 @@ data Comm = Skip
           | Seq Comm Comm
           | Cond BoolExp Comm Comm
           | Repeat Comm BoolExp
+          | While BoolExp Comm
  deriving Show

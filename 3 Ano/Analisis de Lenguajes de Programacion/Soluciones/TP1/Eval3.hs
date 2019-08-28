@@ -1,16 +1,20 @@
-module Eval2 (eval) where
+module Eval3 (eval) where
 
 import AST
 import Control.Monad
 
 -- Estados
 type State = [(Variable,Integer)]
+type Trace = [State]
 
 data Error = DivByZero | UndefVar deriving (Eq, Show)
 
 -- Estado nulo
 initState :: State
 initState = []
+
+initTrace :: Trace
+initTrace = [[]]
 
 -- Busca el valor de una variabl en un estado
 -- Completar la definicion
@@ -21,23 +25,25 @@ lookfor v ((a,b):xs) | v == a    = Right b
 
 -- Cambia el valor de una variable en un estado
 -- Completar la definicion
-update :: Variable -> Integer -> State -> State
-update v i s = (v,i) : filter ((v /=) . fst) s
+update :: Variable -> Integer -> (State, Trace) -> (State, Trace)
+update v i (s,t) = let s' = (v,i) : filter ((v /=) . fst) s
+                       t' = t ++ [s']
+                   in  (s', t')
 
 -- Evalua un programa en el estado nulo
-eval :: Comm -> Either Error State
-eval p = evalComm p initState
+eval :: Comm -> Either Error (State, Trace)
+eval p = evalComm p (initState, initTrace)
 
 -- Evalua un comando en un estado dado
 -- Completar definicion
-evalComm :: Comm -> State -> Either Error State
-evalComm Skip s           = return s
-evalComm (Let v e) s      = liftM (flip (update v) s) (evalIntExp e s)
-evalComm (Seq c0 c1) s    = evalComm c0 s >>= evalComm c1
-evalComm (Cond b c0 c1) s = evalBoolExp b s >>= \b -> if b then evalComm c0 s
-                                                           else evalComm c1 s
-evalComm (Repeat c0 b) s  = evalComm c0 s >>= evalComm (Cond b Skip (Repeat c0 b))
-evalComm (While b c) s    = evalComm (Cond b (Seq c (While b c)) Skip) s
+evalComm :: Comm -> (State, Trace) -> Either Error (State, Trace)
+evalComm Skip (s,t)           = return (s,t)
+evalComm (Let v e) (s,t)      = liftM (flip (update v) (s,t)) (evalIntExp e s)
+evalComm (Seq c0 c1) (s,t)    = evalComm c0 (s,t) >>= evalComm c1
+evalComm (Cond b c0 c1) (s,t) = evalBoolExp b s >>= \b -> if b then evalComm c0 (s,t)
+                                                               else evalComm c1 (s,t)
+evalComm (Repeat c0 b) (s,t)  = evalComm c0 (s,t) >>= evalComm (Cond b Skip (Repeat c0 b))
+evalComm (While b c) (s,t)    = evalComm (Cond b (Seq c (While b c)) Skip) (s,t)
 
 -- Evalua una expresion entera, sin efectos laterales
 -- Completar definicion
