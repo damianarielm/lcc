@@ -30,7 +30,7 @@ lis = makeTokenParser (emptyDef   { commentStart  = "/*"
 -----------------------------------
 
 intexp :: Parser IntExp
-intexp  = chainl1 term plusminus
+intexp  = chainl1 term plusminus <|> (parens lis $ chainl1 term plusminus)
 
 nat = do n <- integer lis
          return $ Const n
@@ -52,7 +52,7 @@ timesdiv = do reservedOp lis "*"
            <|> do reservedOp lis "/"
                   return Div
 
-term = chainl1 (intnegation <|> nat <|> var <|> parens lis intexp) timesdiv
+term = chainl1 (nat <|> var <|> intnegation) timesdiv
 
 
 -----------------------------------
