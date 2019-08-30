@@ -1,0 +1,42 @@
+
+-- identidad
+def id = \x . x 
+
+-- Booleanos
+def true = \ t f . t
+def false = \t f . f
+
+def and = \a b. a b false
+def or  = \a b. a true b
+
+-- Pares
+def pair = \x y p . p x y
+
+def fst = \p . p true
+def snd = \p . p false
+
+-- Numerales de Church
+def zero = \s z . z
+def suc = \n s z . s (n s z)
+
+def is0 = \n . n (\ x . false) true
+
+def add = \n m s z . n s (m s z)
+def mult = \n m s z . n (m s) z
+
+def pred = \ n . fst (n (\p . pair (snd p) (suc (snd p))) (pair zero zero))
+
+--Listas
+def nil = \c n . n
+def cons = \x xs c n . c x (xs c n)
+
+def isnil = \xs . xs (\x ys . false) true
+
+-- Combinador de Punto Fijo
+def Y = \f . (\x . f (x x)) (\x . f (x x))
+
+-- factorial
+def fact = Y (\f n. (is0 n) (suc zero) (mult n (f (pred n))))
+
+-- bottom
+def bottom = (\x . x x) (\x . x x)
