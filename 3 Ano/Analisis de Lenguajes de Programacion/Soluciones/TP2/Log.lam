@@ -1,0 +1,5 @@
+def if = \b x y. b x y
+def dif = \x y. y pred x
+def eq = \x y. is0 (add (dif x y) (dif y x))
+def half = Y (\f n. if (or (eq n 0) (eq n 1)) 0 (add 1 (f (dif n 2))))
+def log = Y (\f x. if (eq x 1) 0 (add 1 (f (half x))))
