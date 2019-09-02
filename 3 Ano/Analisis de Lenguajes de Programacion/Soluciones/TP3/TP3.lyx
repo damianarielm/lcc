@@ -1,0 +1,643 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+\usepackage{bussproofs}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 5cm
+\rightmargin 2.5cm
+\bottommargin 5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ALP: Trabajo Práctico 3
+\end_layout
+
+\begin_layout Section*
+Ejercicio 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prooftree}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$x:B
+\backslash
+to B
+\backslash
+to B
+\backslash
+in
+\backslash
+Gamma,x,y,z$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-VAR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x:y,z
+\backslash
+vdash x:B
+\backslash
+to B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$z:B
+\backslash
+in
+\backslash
+Gamma,x,y,z$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-VAR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$z:B 
+\backslash
+in
+\backslash
+Gamma,x,y,z$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-APP$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+BinaryInfC{$
+\backslash
+Gamma,x:B
+\backslash
+to B
+\backslash
+to B,y:B
+\backslash
+to B,z:B
+\backslash
+vdash
+\backslash
+left(x
+\backslash
+,z
+\backslash
+right):B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$y:B 
+\backslash
+to B 
+\backslash
+in
+\backslash
+Gamma,x,y,z$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-VAR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x:y,z
+\backslash
+vdash y:B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$z:B 
+\backslash
+in
+\backslash
+Gamma,x,y,z$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-VAR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x,y,z
+\backslash
+vdash z:B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-APP$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+BinaryInfC{$
+\backslash
+Gamma,x:B
+\backslash
+to B
+\backslash
+to B,y:B
+\backslash
+to B,z:B
+\backslash
+vdash
+\backslash
+left(y
+\backslash
+,z
+\backslash
+right):B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-APP$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+BinaryInfC{$
+\backslash
+Gamma,x:B
+\backslash
+to B
+\backslash
+to B,y:B
+\backslash
+to B,z:B
+\backslash
+vdash
+\backslash
+left(x
+\backslash
+,z
+\backslash
+right)
+\backslash
+,
+\backslash
+left(y
+\backslash
+,z
+\backslash
+right):B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-ABS$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x:B
+\backslash
+to B
+\backslash
+to B,y:B
+\backslash
+to B
+\backslash
+vdash
+\backslash
+lambda z:B.
+\backslash
+left(x
+\backslash
+,z
+\backslash
+right)
+\backslash
+,
+\backslash
+left(y
+\backslash
+,z
+\backslash
+right):B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-ABS$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x:B
+\backslash
+to B
+\backslash
+to B
+\backslash
+vdash
+\backslash
+lambda y:B
+\backslash
+to B.
+\backslash
+left(
+\backslash
+lambda z:B.
+\backslash
+left(x
+\backslash
+,z
+\backslash
+right)
+\backslash
+,
+\backslash
+left(y
+\backslash
+,z
+\backslash
+right)
+\backslash
+right):
+\backslash
+left(B
+\backslash
+to B
+\backslash
+right)
+\backslash
+to
+\backslash
+left(B
+\backslash
+to B
+\backslash
+right)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-ABS$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash
+\backslash
+lambda x:B
+\backslash
+to B
+\backslash
+to B.
+\backslash
+left(
+\backslash
+lambda y:B
+\backslash
+to B.
+\backslash
+left(
+\backslash
+lambda z:B.
+\backslash
+left(x
+\backslash
+,z
+\backslash
+right)
+\backslash
+,
+\backslash
+left(y
+\backslash
+,z
+\backslash
+right)
+\backslash
+right)
+\backslash
+right):B
+\backslash
+to B
+\backslash
+to B
+\backslash
+to
+\backslash
+left(
+\backslash
+left(B
+\backslash
+to B
+\backslash
+right)
+\backslash
+to
+\backslash
+left(B
+\backslash
+to B
+\backslash
+right)
+\backslash
+right)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prooftree}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 2
+\end_layout
+
+\begin_layout Standard
+La función 
+\begin_inset Formula $infer$
+\end_inset
+
+ retorna un valor del tipo 
+\begin_inset Formula $Either$
+\end_inset
+
+ 
+\begin_inset Formula $String$
+\end_inset
+
+ 
+\begin_inset Formula $Type$
+\end_inset
+
+ pues podría ocurrir que el termino no este bien tipado.
+ El operador 
+\begin_inset Formula $>>=$
+\end_inset
+
+ se encarga de propagar un error en la inferencia de tipos.
+\end_layout
+
+\begin_layout Section*
+Ejercicio 5
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section*
+Ejercicio 7
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section*
+Ejercicio 9
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_body
+\end_document
