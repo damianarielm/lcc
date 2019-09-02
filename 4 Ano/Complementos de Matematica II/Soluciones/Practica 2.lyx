@@ -1,0 +1,560 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\end_preamble
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Dar diagramas para:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Los retículos con 5 elementos.
+\end_layout
+
+\begin_layout Enumerate
+Los retículos con 6 elementos.
+\end_layout
+
+\begin_layout Enumerate
+El retículo de los subespacios vectoriales de 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Interpretar 
+\begin_inset Formula $\land$
+\end_inset
+
+ y 
+\begin_inset Formula $\lor$
+\end_inset
+
+ en los siguientes conjuntos ordenados:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(\mathcal{P}\left(A\right),\subseteq\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $A$
+\end_inset
+
+ es un conjunto arbitrario.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\mathbb{N},|\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $|$
+\end_inset
+
+ denota la relacion 
+\begin_inset Quotes fld
+\end_inset
+
+
+\emph on
+divide a
+\emph default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Álgebra de Lindenbaum-Tarski (ver ejercicio práctica anterior).
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(X,\land,\lor\right)$
+\end_inset
+
+ un retículo.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que para todos 
+\begin_inset Formula $x,y,z\in X$
+\end_inset
+
+ se satisface:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x\lor\left(y\land z\right)\leq\left(x\lor y\right)\land\left(x\lor z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\land\left(y\lor z\right)\geq\left(x\land y\right)\lor\left(x\land z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(x\land y\right)\lor\left(y\land z\right)\lor\left(z\land x\right)\leq\left(x\lor y\right)\land\left(y\lor z\right)\land\left(z\lor x\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que si una de las desigualdades anteriores es una igualdad, las restantes
+ también lo son.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(X,\land,\lor\right)$
+\end_inset
+
+ un retículo.
+ Probar que los siguientes subconjuntos de 
+\begin_inset Formula $X$
+\end_inset
+
+ son subretículos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ x\in X:x\leq a\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ x\in X:b\leq x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ x\in X:a\leq x\leq b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(L,\preceq\right)$
+\end_inset
+
+ un retículo.
+ Un polinomio 
+\begin_inset Formula $p$
+\end_inset
+
+ en 
+\begin_inset Formula $n$
+\end_inset
+
+ variables es una función 
+\begin_inset Formula $p:L^{n}\to L$
+\end_inset
+
+ que pertenece al conjunto inductivo 
+\begin_inset Formula $P_{L}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Para 
+\begin_inset Formula $i\in\left\{ 1,\ldots,n\right\} ,\pi_{i}\in P_{L}$
+\end_inset
+
+ donde 
+\begin_inset Formula $\pi_{i}\left(x_{1},\ldots,x_{n}\right)=x_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f,g\in P_{L}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f\lor g\in P_{L}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\left(f\lor g\right)\left(\overline{x}\right)=f\left(\overline{x}\right)\lor g\left(\overline{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f,g\in P_{L}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f\land g\in P_{L}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\left(f\land g\right)\left(\overline{x}\right)=f\left(\overline{x}\right)\land g\left(\overline{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ un polinomio en 
+\begin_inset Formula $n$
+\end_inset
+
+ variables, y 
+\begin_inset Formula $x_{i}\preceq y_{i}$
+\end_inset
+
+ para cada 
+\begin_inset Formula $i$
+\end_inset
+
+ de 1 hasta 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $f\left(x_{1},\ldots,x_{n}\right)\preceq f\left(y_{1},\ldots,y_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un retículo 
+\begin_inset Formula $L$
+\end_inset
+
+ se llama 
+\emph on
+modular
+\emph default
+ si para todos 
+\begin_inset Formula $a,b,c\in L$
+\end_inset
+
+ resulta
+\begin_inset Formula 
+\[
+a\leq c\Rightarrow a\lor\left(b\land c\right)=\left(a\lor b\right)\land c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Probar que son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L$
+\end_inset
+
+ es modular.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a\geq c\Rightarrow a\land\left(b\lor c\right)=\left(a\land b\right)\lor c$
+\end_inset
+
+ para todos 
+\begin_inset Formula $a,b,c\in L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLEAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLEAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que todo retículo distributivo es modular.
+ ¿Es cierta la recíproca?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_body
+\end_document
