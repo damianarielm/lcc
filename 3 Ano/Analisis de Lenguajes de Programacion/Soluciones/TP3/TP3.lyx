@@ -620,7 +620,296 @@ Ejercicio 5
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prooftree}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$x:B
+\backslash
+in
+\backslash
+Gamma,x:B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-VAR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x:B
+\backslash
+vdash x:B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-ABS$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash
+\backslash
+left(
+\backslash
+lambda x:B.x
+\backslash
+right):B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-ASCRIBE$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash
+\backslash
+left(
+\backslash
+left(
+\backslash
+lambda x:B.x
+\backslash
+right) 
+\backslash
+, as 
+\backslash
+, B
+\backslash
+to B
+\backslash
+right):B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$z:B
+\backslash
+to B
+\backslash
+in
+\backslash
+Gamma,z:B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-VAR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,z:B
+\backslash
+to B
+\backslash
+vdash z:B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-LET$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+BinaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash
+\backslash
+left(let 
+\backslash
+, z=
+\backslash
+left(
+\backslash
+left(
+\backslash
+lambda x:B.x
+\backslash
+right)
+\backslash
+, as 
+\backslash
+, B
+\backslash
+to B
+\backslash
+right)
+\backslash
+, in 
+\backslash
+, z
+\backslash
+right):B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-ASCRIBE$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash
+\backslash
+left(let 
+\backslash
+, z=
+\backslash
+left(
+\backslash
+left(
+\backslash
+lambda x:B.x
+\backslash
+right)
+\backslash
+, as 
+\backslash
+, B
+\backslash
+to B
+\backslash
+right)
+\backslash
+, in 
+\backslash
+, z
+\backslash
+right)
+\backslash
+, as 
+\backslash
+, B
+\backslash
+to B:B
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prooftree}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
