@@ -1078,7 +1078,7 @@ Si
 \begin_inset Formula $R$
 \end_inset
 
- es ? (simétrica, antisimétrica, transitiva), entonces 
+ es reflexiva (simétrica, antisimétrica, transitiva), entonces 
 \begin_inset Formula $R^{-1}$
 \end_inset
 
@@ -1660,7 +1660,14 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula 
+\[
+aRa'\iff f\circ f^{-1}\left(a\right)=f^{-1}\left(a'\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1670,7 +1677,7 @@ Dada una funcion
 \end_inset
 
  y una relación de equivalencia 
-\begin_inset Formula $R\subseteq ker\left(f\right)$
+\begin_inset Formula $\text{\ensuremath{R\subseteq ker\left(f\right)}}$
 \end_inset
 
 , probar que existen 
@@ -1694,7 +1701,28 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $h\left(a\right)=\left[a\right]$
+\end_inset
+
+, 
+\begin_inset Formula $g\left(\left[a\right]\right)=f\left(a\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $x,y/f\left(x\right)=y$
+\end_inset
+
+.
+ Luego:
+\begin_inset Formula 
+\[
+g\circ h\left(x\right)=g\left(h\left(x\right)\right)=g\left(\left[x\right]\right)=f\left(x\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper

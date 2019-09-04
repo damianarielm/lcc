@@ -505,7 +505,11 @@ end{tikzpicture}
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-Yoneda Lemma: Probar que en un preorden 
+
+\emph on
+Yoneda Lemma
+\emph default
+: Probar que en un preorden 
 \begin_inset Formula $\left(P,\preceq\right)$
 \end_inset
 
@@ -1355,7 +1359,53 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sea 
+\begin_inset Formula $M$
+\end_inset
+
+ un elemento máximo de 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $m$
+\end_inset
+
+ un elemento maximal.
+ Como 
+\begin_inset Formula $m$
+\end_inset
+
+ es minimal resulta 
+\begin_inset Formula $\forall x:m\leq x\Rightarrow x\leq m$
+\end_inset
+
+, en particular para 
+\begin_inset Formula $x=M$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $m\leq M\Rightarrow M\leq m$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $m$
+\end_inset
+
+ es máximo: sea 
+\begin_inset Formula $x\in P$
+\end_inset
+
+ luego, 
+\begin_inset Formula $x\leq M\leq m$
+\end_inset
+
+, es decir 
+\begin_inset Formula $\forall x:x\leq m$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1405,7 +1455,24 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No.
+ Sean 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+ luego para 
+\begin_inset Formula $\preceq_{1}=\Delta_{A}\cup\left\{ \left(x,y\right)\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\preceq_{2}=\Delta_{A}\cup\left\{ \left(y,x\right)\right\} $
+\end_inset
+
+ en 
+\begin_inset Formula $\preceq_{1}\cup\preceq_{2}$
+\end_inset
+
+ se rompe la antisimetría.
 \end_layout
 
 \end_deeper
@@ -1419,8 +1486,35 @@ Probar que el conjunto de todos los elementos maximales (minimales) de un
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+ en el conjunto de todos los elementos maximales.
+ Supongamos 
+\begin_inset Formula $a\leq b$
+\end_inset
+
+ luego 
+\begin_inset Formula $b\leq a$
+\end_inset
+
+ y por antisimetría 
+\begin_inset Formula $a=b$
+\end_inset
+
+.
+ Contradicción.
+ Análogo si 
+\begin_inset Formula $b\leq a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Análogo para minimales.
 \end_layout
 
 \end_deeper
