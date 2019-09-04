@@ -917,7 +917,223 @@ Ejercicio 7
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prooftree}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$t_{1}
+\backslash
+to t_{1}'$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$E-PAIR1$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+left(t_{1},t_{2}
+\backslash
+right)_{1}
+\backslash
+to
+\backslash
+left(t_{1}',t_{2}
+\backslash
+right)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prooftree}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prooftree}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$t_{2}
+\backslash
+to t_{2}'$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$E-PAIR2$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+left(v,t_{2}
+\backslash
+right)_{1}
+\backslash
+to
+\backslash
+left(v,t_{2}'
+\backslash
+right)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prooftree}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prooftree}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$E-FST$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$fst 
+\backslash
+left(t_{1},t_{2}
+\backslash
+right) 
+\backslash
+to t_{1}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prooftree}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prooftree}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$E-SND$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$snd 
+\backslash
+left(t_{1},t_{2}
+\backslash
+right) 
+\backslash
+to t_{2}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prooftree}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*

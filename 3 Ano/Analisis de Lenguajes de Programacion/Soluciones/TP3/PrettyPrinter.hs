@@ -36,7 +36,12 @@ pp ii vs (Let (Global s) t u) = text ("let " ++ s) <>
                                 pp ii vs t <>
                                 text " in " <>
                                 pp ii vs u
+
 pp ii vs (As s t) = pp ii vs s <> text " as " <> printType t
+
+pp ii vs (Unit) = text "unit"
+
+pp ii vs (Pair s t) = parens $ (pp ii vs s) <> text ", " <> (pp ii vs t)
 
 isLam :: Term -> Bool
 isLam (Lam _ _) = True

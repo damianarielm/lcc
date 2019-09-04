@@ -22,12 +22,17 @@ import Data.Char
     '('     { TOpen }
     ')'     { TClose }
     '->'    { TArrow }
+    ','     { TComma }
     VAR     { TVar $$ }
     TYPE    { TType }
     DEF     { TDef }
     LET     { TLet }
     IN      { TIn }
     AS      { TAs }
+    UNIT    { TUnit }
+    FST     { TFst }
+    SND     { TSnd }
+
 
 
 %right VAR
@@ -44,12 +49,15 @@ import Data.Char
 
 Def     :  Defexp                      { $1 }
         |  Exp                         { Eval $1 }
-Defexp  : DEF VAR '=' Exp              { Def $2 $4 } 
+Defexp  : DEF VAR '=' Exp              { Def $2 $4 }
 
 Exp     :: { LamTerm }
         : '\\' VAR ':' Type '.' Exp    { Abs $2 $4 $6 }
         | LET VAR '=' Exp IN Exp       { LetL $2 $4 $6 }
         | Exp AS Type                  { AsL $1 $3 }
+        | FST Exp                      { FstL $2 }
+        | SND Exp                      { SndL $2 }
+        | '(' Exp ',' Exp ')'          { PairL $2 $4 }
         | NAbs                         { $1 }
 
 NAbs    :: { LamTerm }
@@ -58,11 +66,14 @@ NAbs    :: { LamTerm }
 
 Atom    :: { LamTerm }
         : VAR                          { LVar $1 }
+        | UNIT                         { UnitL }
         | '(' Exp ')'                  { $2 }
 
 Type    : TYPE                         { Base }
         | Type '->' Type               { Fun $1 $3 }
         | '(' Type ')'                 { $2 }
+        | UNIT                         { UnitT }
+        | '(' Type ',' Type ')'        { PairT $2 $4 }
 
 Defs    : Defexp Defs                  { $1 : $2 }
         |                              { [] }
@@ -105,11 +116,15 @@ data Token = TVar String
                | TClose
                | TColon
                | TArrow
+               | TComma
                | TEquals
                | TEOF
                | TLet
                | TIn
                | TAs
+               | TUnit
+               | TFst
+               | TSnd
                deriving Show
 
 ----------------------------------
@@ -130,14 +145,18 @@ lexer cont s = case s of
                     (')':cs) -> cont TClose cs
                     (':':cs) -> cont TColon cs
                     ('=':cs) -> cont TEquals cs
+                    (',':cs) -> cont TComma cs
                     unknown -> \line -> Failed $ "Línea "++(show line)++": No se puede reconocer "++(show $ take 10 unknown)++ "..."
                     where lexVar cs = case span isAlpha cs of
-                                           ("B",rest)   -> cont TType rest
-                                           ("def",rest) -> cont TDef rest
-                                           ("let",rest) -> cont TLet rest
-                                           ("in",rest)  -> cont TIn rest
-                                           ("as",rest)  -> cont TAs rest
-                                           (var,rest)   -> cont (TVar var) rest
+                                           ("B",rest)    -> cont TType rest
+                                           ("def",rest)  -> cont TDef rest
+                                           ("let",rest)  -> cont TLet rest
+                                           ("in",rest)   -> cont TIn rest
+                                           ("as",rest)   -> cont TAs rest
+                                           ("unit",rest) -> cont TUnit rest
+                                           ("fst",rest)  -> cont TFst rest
+                                           ("snd",rest)  -> cont TSnd rest
+                                           (var,rest)    -> cont (TVar var) rest
                           consumirBK anidado cl cont s = case s of
                                                                       ('-':('-':cs)) -> consumirBK anidado cl cont $ dropWhile ((/=) '\n') cs
                                                                       ('{':('-':cs)) -> consumirBK (anidado+1) cl cont cs

@@ -23,6 +23,10 @@ conversion' b (App t u)    = conversion' b t :@: conversion' b u
 conversion' b (Abs n t u)  = Lam t (conversion' (n:b) u)
 conversion' b (LetL s t u) = Let (Global s) (conversion' b t) (conversion' b u)
 conversion' b (AsL s t)    = As (conversion' b s) t
+conversion' b (UnitL)      = Unit
+conversion' b (PairL t u)  = Pair (conversion' b t) (conversion' b u)
+conversion' b (FstL s)     = Fst $ conversion' b s
+conversion' b (SndL s)     = Snd $ conversion' b s
 
 -----------------------
 --- eval
@@ -36,6 +40,10 @@ sub i t (u :@: v)             = sub i t u :@: sub i t v
 sub i t (Lam t' u)            = Lam t' (sub (i + 1) t u)
 sub i t (Let s u v)           = Let s (sub i t u) (sub i t v)
 sub i t (As u v)              = As (sub i t u) v
+sub i t (Unit)                = Unit
+sub i t (Pair u v)            = Pair (sub i t u) (sub i t v)
+sub i t (Fst s)               = Fst $ sub i t s
+sub i t (Snd s)               = Snd $ sub i t s
 
 -- evaluador de términos
 eval :: NameEnv Value Type -> Term -> Value
@@ -53,13 +61,19 @@ eval e (Let s u v)           = let u' = eval e u
                                    Right t = infer [] (quote u')
                                in eval ((s, (u', t)):e) v
 eval e (As s t)              = eval e s
+eval e (Unit)                = VUnit
+eval e (Pair u v)            = VPair (eval e u) (eval e v)
+eval e (Fst (Pair u v))      = eval e u
+eval e (Snd (Pair u v))      = eval e v
 
 -----------------------
 --- quoting
 -----------------------
 
 quote :: Value -> Term
-quote (VLam t f) = Lam t f
+quote (VLam t f)  = Lam t f
+quote (VUnit)     = Unit
+quote (VPair u v) = Pair (quote u) (quote v)
 
 ----------------------
 --- type checker
@@ -109,4 +123,8 @@ infer' c e (Lam t u) = infer' (t:c) e u >>= \tu ->
                        ret $ Fun t tu
 infer' c e (Let s u v) = infer' c e u >>= \u' ->
                          infer' c ((s, ((eval e u), u')):e) v
+infer' c e (Unit) = ret UnitT
+infer' c e (Pair u v) = infer' c e u >>= \tu ->
+                        infer' c e v >>= \tv ->
+                        ret $ PairT tu tv
 ----------------------------------
