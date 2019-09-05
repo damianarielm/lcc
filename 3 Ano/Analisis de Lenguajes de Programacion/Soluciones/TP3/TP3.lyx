@@ -1141,7 +1141,270 @@ Ejercicio 9
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{prooftree}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-UNIT$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash unit:Unit$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-AS$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash unit
+\backslash
+,as
+\backslash
+,Unit:Unit$}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+AxiomC{$x:
+\backslash
+left(B,B
+\backslash
+right)
+\backslash
+in
+\backslash
+Gamma,x:
+\backslash
+left(B,B
+\backslash
+right)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-VAR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x:
+\backslash
+left(B,B
+\backslash
+right)
+\backslash
+vdash x:
+\backslash
+left(B,B
+\backslash
+right)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-SND$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma,x:
+\backslash
+left(B,B
+\backslash
+right)
+\backslash
+vdash snd
+\backslash
+,x:B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-ABS$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash
+\backslash
+lambda x:
+\backslash
+left(B,B
+\backslash
+right).snd
+\backslash
+,x:
+\backslash
+left(B,B
+\backslash
+right)
+\backslash
+to B$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-PAIR$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+BinaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash
+\backslash
+left(unit
+\backslash
+,as
+\backslash
+,Unit,
+\backslash
+lambda x:
+\backslash
+left(B,B
+\backslash
+right).snd
+\backslash
+,x
+\backslash
+right):
+\backslash
+left(Unit,
+\backslash
+left(B,B
+\backslash
+right)
+\backslash
+to B
+\backslash
+right)$}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+RightLabel{
+\backslash
+scriptsize$T-FST$}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+UnaryInfC{$
+\backslash
+Gamma
+\backslash
+vdash fst
+\backslash
+left(unit
+\backslash
+,as
+\backslash
+,Unit,
+\backslash
+lambda x:
+\backslash
+left(B,B
+\backslash
+right).snd
+\backslash
+,x
+\backslash
+right):Unit$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{prooftree}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

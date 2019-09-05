@@ -9,10 +9,11 @@ def cuatro = suc tres
 def cinco = suc cuatro
 def seis = suc cinco
 
-def pre = \x:Nat. R (0) (\y:Nat.\z:Nat.z) (x)
-def add = \x:Nat. \y:Nat. R (y) (\a:Nat.\b:Nat. suc a) (x)
-def mul = \x:Nat. \y:Nat. R (0) (\a:Nat.\b:Nat. add y a) (x)
-def fac = \x:Nat. R (uno) (\a:Nat.\b:Nat. mul (suc b) a) (x)
+def succ = \x:Nat. suc x
+def pre  = \x:Nat. R (0) (\y:Nat.\z:Nat.z) (x)
+def add  = \x:Nat. \y:Nat. R (y) (\a:Nat.\b:Nat. suc a) (x)
+def mul  = \x:Nat. \y:Nat. R (0) (\a:Nat.\b:Nat. add y a) (x)
+def fac  = \x:Nat. R (uno) (\a:Nat.\b:Nat. mul (suc b) a) (x)
 
 -- https://nms.kcl.ac.uk/maribel.fernandez/papers/TCS10.pdf
 -- def iterA = \t:Nat.\u:Nat.\v:Nat->Nat. R (u) (\x:Nat.\y:Nat. v x) (t)

@@ -22,6 +22,7 @@ module Common where
             | Fun Type Type
             | UnitT
             | PairT Type Type
+            | NatT
 
             deriving (Show, Eq)
 
@@ -35,6 +36,9 @@ module Common where
                 |  PairL LamTerm LamTerm
                 |  FstL LamTerm
                 |  SndL LamTerm
+                |  ZeroL
+                |  SucL LamTerm
+                |  RecL LamTerm LamTerm LamTerm
                 deriving (Show, Eq)
 
 
@@ -49,12 +53,19 @@ module Common where
              | Pair Term Term
              | Fst Term
              | Snd Term
+             | Zero
+             | Suc Term
+             | Rec Term Term Term
           deriving (Show, Eq)
 
   -- Valores
   data Value = VLam Type Term
              | VUnit
              | VPair Value Value
+             | VNat VNv
+
+  data VNv = VZero
+           | VSuc VNv
 
   -- Contextos del tipado
   type Context = [Type]

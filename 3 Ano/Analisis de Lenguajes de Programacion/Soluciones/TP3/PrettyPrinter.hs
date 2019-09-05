@@ -43,6 +43,12 @@ pp ii vs (Unit) = text "unit"
 
 pp ii vs (Pair s t) = parens $ (pp ii vs s) <> text ", " <> (pp ii vs t)
 
+pp ii vs (Zero) = text "0"
+
+pp ii vs (Suc t) = text "suc " <> pp ii vs t
+
+pp ii vs (Rec s t u) = sep [text "R", parens (pp ii vs s), parens (pp ii vs t), parens (pp ii vs u)]
+
 isLam :: Term -> Bool
 isLam (Lam _ _) = True
 isLam  _      = False
@@ -57,6 +63,10 @@ printType Base         = text "B"
 printType (Fun t1 t2)  = sep [ parensIf (isFun t1) (printType t1),
                                text "->",
                                printType t2]
+printType UnitT        = text "Unit"
+printType (PairT s t)  = text "(" <> printType s <> text ", " <> printType t <> text ")"
+printType (NatT)       = text "Nat"
+
 isFun :: Type -> Bool
 isFun (Fun _ _)        = True
 isFun _                = False
@@ -66,6 +76,15 @@ fv (Bound _)         = []
 fv (Free (Global n)) = [n]
 fv (t :@: u)         = fv t ++ fv u
 fv (Lam _ u)         = fv u
+fv (Unit)            = []
+fv (Zero)            = []
+fv (Let n t u)       = fv t ++ fv u
+fv (As s t)          = fv s
+fv (Pair t u)        = fv t ++ fv u
+fv (Fst s)           = fv s
+fv (Snd s)           = fv s
+fv (Suc s)           = fv s
+fv (Rec s t u)       = fv s ++ fv t ++ fv u
 
 ---
 printTerm :: Term -> Doc 
