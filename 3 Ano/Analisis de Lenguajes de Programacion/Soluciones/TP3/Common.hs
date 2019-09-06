@@ -23,7 +23,6 @@ module Common where
             | UnitT
             | PairT Type Type
             | NatT
-
             deriving (Show, Eq)
 
   -- Términos con nombres

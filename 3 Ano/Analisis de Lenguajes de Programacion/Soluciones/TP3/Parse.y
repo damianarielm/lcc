@@ -3,7 +3,6 @@ module Parse where
 import Common
 import Data.Maybe
 import Data.Char
-
 }
 
 %monad { P } { thenP } { returnP }
@@ -37,7 +36,6 @@ import Data.Char
     REC     { TRec }
     NAT     { TNat }
 
-
 %right VAR
 %left '='
 %right '->'
@@ -46,7 +44,6 @@ import Data.Char
 %right REC
 %right SUC
 %right SND FST
-
 
 %%
 
@@ -86,7 +83,6 @@ Defs    : Defexp Defs                  { $1 : $2 }
         |                              { [] }
 
 {
-
 data ParseResult a = Ok a | Failed String
                      deriving Show
 type LineNumber = Int
@@ -141,13 +137,15 @@ data Token = TVar String
 ----------------------------------
 lexer cont s = case s of
                     [] -> cont TEOF []
-                    ('\n':s)  ->  \line -> lexer cont s (line + 1)
+                    ('\n':s)  -> \line -> lexer cont s (line + 1)
                     (c:cs)
                           | isSpace c -> lexer cont cs
                           | isAlpha c -> lexVar (c:cs)
                     ('-':('-':cs)) -> lexer cont $ dropWhile ((/=) '\n') cs
                     ('{':('-':cs)) -> consumirBK 0 0 cont cs
-                    ('-':('}':cs)) -> \ line -> Failed $ "Línea "++(show line)++": Comentario no abierto"
+                    ('-':('}':cs)) -> \line -> Failed $ "Línea " ++
+                                                        (show line) ++
+                                                        ": Comentario no abierto"
                     ('-':('>':cs)) -> cont TArrow cs
                     ('\\':cs)-> cont TAbs cs
                     ('.':cs) -> cont TDot cs
@@ -158,7 +156,11 @@ lexer cont s = case s of
                     ('=':cs) -> cont TEquals cs
                     (',':cs) -> cont TComma cs
                     ('0':cs) -> cont TZero cs
-                    unknown -> \line -> Failed $ "Línea "++(show line)++": No se puede reconocer "++(show $ take 10 unknown)++ "..."
+                    unknown -> \line -> Failed $ "Línea " ++
+                                                  (show line) ++
+                                                  ": No se puede reconocer " ++
+                                                  (show $ take 10 unknown) ++
+                                                  "..."
                     where lexVar cs = case span isAlpha cs of
                                            ("B",rest)    -> cont TType rest
                                            ("def",rest)  -> cont TDef rest
@@ -173,13 +175,13 @@ lexer cont s = case s of
                                            ("R",rest)    -> cont TRec rest
                                            (var,rest)    -> cont (TVar var) rest
                           consumirBK anidado cl cont s = case s of
-                                                                      ('-':('-':cs)) -> consumirBK anidado cl cont $ dropWhile ((/=) '\n') cs
-                                                                      ('{':('-':cs)) -> consumirBK (anidado+1) cl cont cs
-                                                                      ('-':('}':cs)) -> case anidado of
-                                                                                             0 -> \line -> lexer cont cs (line+cl)
-                                                                                             _ -> consumirBK (anidado-1) cl cont cs
-                                                                      ('\n':cs) -> consumirBK anidado (cl+1) cont cs
-                                                                      (_:cs) -> consumirBK anidado cl cont cs
+                                                         ('-':('-':cs)) -> consumirBK anidado cl cont $ dropWhile ((/=) '\n') cs
+                                                         ('{':('-':cs)) -> consumirBK (anidado+1) cl cont cs
+                                                         ('-':('}':cs)) -> case anidado of
+                                                                                0 -> \line -> lexer cont cs (line+cl)
+                                                                                _ -> consumirBK (anidado-1) cl cont cs
+                                                         ('\n':cs) -> consumirBK anidado (cl+1) cont cs
+                                                         (_:cs) -> consumirBK anidado cl cont cs
 
 stmts_parse s = parseStmts s 1
 stmt_parse s = parseStmt s 1

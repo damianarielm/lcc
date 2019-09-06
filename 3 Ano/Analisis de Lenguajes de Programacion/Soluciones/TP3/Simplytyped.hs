@@ -76,11 +76,12 @@ eval e (Snd (Pair u v))      = eval e v
 eval e (Zero)                = VNat VZero
 eval e (Suc t)               = case (eval e t) of
                                VNat x -> VNat $ VSuc x
-                               _ -> error "Error inesperado: aplicando suc a algo que no es natural"
+                               _ -> error "Error de tipo en run-time, verificar type checker"
 eval e (Rec s u v)           = case eval e v of
                                VNat VZero    -> eval e s
                                VNat (VSuc x) -> eval e $ u :@: (Rec s u v') :@: v'
                                                 where v' = quote $ VNat x
+                               _ -> error "Error de tipo en run-time, verificar type checker"
 
 -----------------------
 --- quoting
@@ -127,18 +128,14 @@ notfoundError n = err $ show n ++ " no está definida."
 
 infer' :: Context -> NameEnv Value Type -> Term -> Either String Type
 infer' c _ (Bound i) = ret (c !! i)
-infer' _ e (Free n) = case lookup n e of
-                        Nothing -> notfoundError n
-                        Just (_,t) -> ret t
+infer' _ e (Free n) = maybe (notfoundError n) (ret . snd) (lookup n e)
 infer' c e (t :@: u) = infer' c e t >>= \tt ->
                        infer' c e u >>= \tu ->
-                       case tt of
-                         Fun t1 t2 -> if (tu == t1)
-                                        then ret t2
-                                        else matchError t1 tu
-                         _         -> notfunError tt
-infer' c e (Lam t u) = infer' (t:c) e u >>= \tu ->
-                       ret $ Fun t tu
+                       case tt of Fun t1 t2 -> if tu == t1
+                                               then ret t2
+                                               else matchError t1 tu
+                                  _         -> notfunError tt
+infer' c e (Lam t u) = infer' (t:c) e u >>= (ret . Fun t)
 infer' c e (Let s u v) = infer' c e u >>= \u' ->
                          infer' c ((s, ((eval e u), u')):e) v
 infer' c e (As u t) = infer' c e u >>= \t' ->
@@ -152,10 +149,9 @@ infer' c e (Fst s) = infer' c e s >>= \t ->
                                _         -> err "No se puede aplicar fst a algo que no es una tupla"
 infer' c e (Snd s) = infer' c e s >>= \t ->
                      case t of PairT x y -> ret y
-                               _         -> err "No se puede aplicar fst a algo que no es una tupla"
+                               _         -> err "No se puede aplicar snd a algo que no es una tupla"
 infer' c e (Zero) = ret NatT
-infer' c e (Suc s) = case infer' c e s of Right NatT -> ret NatT
-                                          _          -> err "No se puede aplicar sucesor a algo que no es un natural"
+infer' c e (Suc s) = infer' c e s >>= \s' -> if s' == NatT then ret NatT else matchError NatT s'
 infer' c e (Rec t1 t2 t3) = infer' c e t1 >>= \t1' ->
                             infer' c e t2 >>= \t2' ->
                             infer' c e t3 >>= \t3' ->

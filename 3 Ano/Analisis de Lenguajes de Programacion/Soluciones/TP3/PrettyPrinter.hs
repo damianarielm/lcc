@@ -24,12 +24,13 @@ pp _  _  (Free (Global s)) = text s
 
 pp ii vs (i :@: c) = sep [parensIf (isLam i) (pp ii vs i),
                           nest 1 (parensIf (isLam c || isApp c) (pp ii vs c))]
+
 pp ii vs (Lam t c) = text "\\" <>
                      text (vs !! ii) <>
                      text ":" <>
                      printType t <>
                      text ". " <>
-                     pp (ii+1) vs c
+                     pp (ii + 1) vs c
 
 pp ii vs (Let (Global s) t u) = text ("let " ++ s) <>
                                 text " = " <>
@@ -60,9 +61,7 @@ isApp _         = False
 -- pretty-printer de tipos
 printType :: Type -> Doc
 printType Base         = text "B"
-printType (Fun t1 t2)  = sep [ parensIf (isFun t1) (printType t1),
-                               text "->",
-                               printType t2]
+printType (Fun t1 t2)  = sep [parensIf (isFun t1) (printType t1), text "->", printType t2]
 printType UnitT        = text "Unit"
 printType (PairT s t)  = text "(" <> printType s <> text ", " <> printType t <> text ")"
 printType (NatT)       = text "Nat"
@@ -87,5 +86,5 @@ fv (Suc s)           = fv s
 fv (Rec s t u)       = fv s ++ fv t ++ fv u
 
 ---
-printTerm :: Term -> Doc 
+printTerm :: Term -> Doc
 printTerm t = pp 0 (filter (\v -> not $ elem v (fv t)) vars) t
