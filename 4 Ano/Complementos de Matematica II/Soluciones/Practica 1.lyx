@@ -8,6 +8,7 @@
 \begin_preamble
 \usepackage{pgfplots, tikz}
 \usetikzlibrary{arrows, automata}
+\usepackage{bussproofs}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -1045,13 +1046,136 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $\phi\in Prop$
+\end_inset
+
+ luego por la regla trivial 
+\begin_inset Formula $\left\{ \phi\right\} \vdash\phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $\phi,\psi,\gamma$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left\{ \phi\right\} \vdash\psi$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ \psi\right\} \vdash\gamma$
+\end_inset
+
+ luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \phi\right\} \cup\left\{ \psi\right\} \vdash\psi\land\gamma$
+\end_inset
+
+ (introducción de la conjunción en ambas hipótesis).
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\left\{ \phi\right\} \cup\left\{ \psi\right\} \vdash\gamma$
+\end_inset
+
+ (eliminación de la conjunción en 1).
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \phi\right\} \vdash\psi\to\gamma$
+\end_inset
+
+ (introducción de la implicación en 2).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \phi\right\} \cup\left\{ \phi\right\} =\left\{ \phi\right\} \vdash\gamma$
+\end_inset
+
+ (eliminación de la implicación en hipótesis y 3).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Es un conjunto preordenado pues la antisimetría no se cumple como demuestra
+ el siguiente ejemplo: 
+\begin_inset Formula $\left\{ \bot\right\} \vdash p\land\neg p$
+\end_inset
+
+ y 
+\begin_inset Formula $\left\{ p\land\neg p\right\} \vdash\bot$
+\end_inset
+
+ pero 
+\begin_inset Formula $\bot\neq p\land\neg p$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La relación no es total pues, por ejemplo, 
+\begin_inset Formula $p\parallel q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Cualquier proposicion semanticamente equivalente a 
+\begin_inset Formula $\bot$
+\end_inset
+
+ es mínimo ya que 
+\begin_inset Formula $\forall\phi\in PROP:\left\{ \bot\right\} \vdash\phi$
+\end_inset
+
+.
+ No existe elemento máximo.
+\end_layout
+
+\begin_layout Itemize
+No existen maximales pues para cualquier 
+\begin_inset Formula $\phi\in PROP$
+\end_inset
+
+ siempre ocurre 
+\begin_inset Formula $\left\{ \phi\right\} \vdash\phi\lor\psi$
+\end_inset
+
+ pero 
+\begin_inset Formula $\left\{ \phi\lor\psi\right\} \nvdash\phi$
+\end_inset
+
+.
+ Todos los mínimos son minimales.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 En 
