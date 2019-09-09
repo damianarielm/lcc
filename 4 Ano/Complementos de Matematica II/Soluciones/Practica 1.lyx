@@ -2040,7 +2040,32 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Supongamos que 
+\begin_inset Formula $f:\mathbb{Z}^{+}\to\mathbb{Z}^{-}$
+\end_inset
+
+ es un isomorfismo de orden luego, como 
+\begin_inset Formula $1$
+\end_inset
+
+ es mínimo en 
+\begin_inset Formula $\mathbb{Z}^{+}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $\text{\ensuremath{\forall x:1\leq x\iff\forall x:f\left(1\right)\leq\left(x\right)}}$
+\end_inset
+
+; pero entonces 
+\begin_inset Formula $f\left(1\right)$
+\end_inset
+
+ es mínimo en 
+\begin_inset Formula $\mathbb{Z}^{-}$
+\end_inset
+
+.
+ Absurdo.
 \end_layout
 
 \end_deeper
@@ -2072,7 +2097,7 @@ Si
 \end_inset
 
 , ordenado por la inclusión, demostrar que 
-\begin_inset Formula $A\simeq\mathcal{A}$
+\begin_inset Formula $\text{\ensuremath{A\simeq\mathcal{A}}}$
 \end_inset
 
 .
@@ -2082,10 +2107,166 @@ Si
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $x,y\in A/x\preceq y$
+\end_inset
+
+, veamos que 
+\begin_inset Formula $S\left(x\right)\subseteq S\left(y\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+ & \alpha\in S\left(x\right)\\
+\Rightarrow & \left\langle def.S\right\rangle \\
+ & \alpha\preceq x\\
+\Rightarrow & \left\langle transitividad\right\rangle \\
+ & \alpha\preceq y\\
+\Rightarrow & \left\langle def.S\right\rangle \\
+ & \alpha\in S\left(y\right)
+\end{array}
+\]
+
+\end_inset
+
+
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $X,Y\in\mathcal{A}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $X=S\left(x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $Y=S\left(y\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $X\subseteq Y$
+\end_inset
+
+; veamos que 
+\begin_inset Formula $x\preceq y$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+ & x\in X\\
+\Rightarrow & \left\langle X\subseteq Y\right\rangle \\
+ & x\in Y\\
+\Rightarrow & \left\langle def.Y\right\rangle \\
+ & x\in S\left(y\right)\\
+\Rightarrow & \left\langle def.S\right\rangle \\
+ & x\preceq y
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Para que todo esto tenga sentido, debemos asegurarnos de que 
+\begin_inset Formula $S$
+\end_inset
+
+ es biyectiva:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sobreyectividad: Sea 
+\begin_inset Formula $X\in\mathcal{A}$
+\end_inset
+
+ luego por definición de 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ existe 
+\begin_inset Formula $a\in A/S\left(a\right)=X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Inyectividad: Sean 
+\begin_inset Formula $a,b\in A/a\neq b$
+\end_inset
+
+, luego 
+\begin_inset Formula $S\left(a\right)=\left\{ x\in A:x\preceq a\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $S\left(b\right)=\left\{ x\in A:x\preceq b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $a\prec b$
+\end_inset
+
+: Sabemos que 
+\begin_inset Formula $b\in S\left(b\right)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $A=B$
+\end_inset
+
+ entonces 
+\begin_inset Formula $b\in S\left(a\right)$
+\end_inset
+
+, luego 
+\begin_inset Formula $b\prec a$
+\end_inset
+
+.
+ Contradicción.
+\end_layout
+
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $b\prec a$
+\end_inset
+
+: Analogo.
+\end_layout
+
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $a\parallel b$
+\end_inset
+
+: Analogo.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sean 

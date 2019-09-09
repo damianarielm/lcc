@@ -469,11 +469,25 @@ Probar que son equivalentes:
 \end_layout
 
 \begin_layout Enumerate
-COMPLEAR.
+\begin_inset Formula $a\lor\left(b\land\left(a\lor c\right)\right)=\left(a\lor b\right)\land\left(a\lor c\right)$
+\end_inset
+
+ para todos 
+\begin_inset Formula $a,b,c\in L$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLEAR.
+\begin_inset Formula $a\land\left(b\lor\left(a\land c\right)\right)=\left(a\land b\right)\lor\left(a\land c\right)$
+\end_inset
+
+ para todos 
+\begin_inset Formula $a,b,c\in L$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -513,7 +527,194 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(X,\land,\lor\right)$
+\end_inset
+
+ un retículo.
+ Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lor$
+\end_inset
+
+ tiene elemento neutro 
+\begin_inset Formula $0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $a\land0=0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $a\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\land$
+\end_inset
+
+ tiene elemento neutro 
+\begin_inset Formula $1$
+\end_inset
+
+, entonces 
+\begin_inset Formula $a\lor1=1$
+\end_inset
+
+ para todo 
+\begin_inset Formula $a\in X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
 COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\left(X,\land,\lor\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Y,\land',\lor'\right)$
+\end_inset
+
+ retículos con 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $1$
+\end_inset
+
+; y 
+\begin_inset Formula $h:X\to Y$
+\end_inset
+
+ un homomorfísmo de retículo.
+ Mostrar con un ejemplo que no siempre 
+\begin_inset Formula $h\left(1_{X}\right)=1_{Y}$
+\end_inset
+
+ o 
+\begin_inset Formula $h\left(0_{X}\right)=0_{Y}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(X,\land,\lor\right)$
+\end_inset
+
+ un retículo acotado (con 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $1$
+\end_inset
+
+).
+ Dado 
+\begin_inset Formula $a\in X$
+\end_inset
+
+, si existe 
+\begin_inset Formula $b\in X$
+\end_inset
+
+ tal que 
+\begin_inset Formula $a\land b=0$
+\end_inset
+
+ y 
+\begin_inset Formula $a\lor b=1$
+\end_inset
+
+, 
+\begin_inset Formula $b$
+\end_inset
+
+ se llama 
+\emph on
+complemento
+\emph default
+ de 
+\begin_inset Formula $a$
+\end_inset
+
+, y en caso de ser único se nota 
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+.
+ Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\overline{\overline{a}}=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\overline{0}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $X$
+\end_inset
+
+ es distributivo, 
+\begin_inset Formula $\overline{\left(a\land b\right)}=\overline{a}\lor\overline{b}$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{\left(a\lor b\right)}=\overline{a}\land\overline{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
 \end_layout
 
 \begin_layout Enumerate
@@ -528,8 +729,50 @@ COMPLETAR.
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $\left(X,\land,\lor\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Y,\land',\lor'\right)$
+\end_inset
+
+ retículos y 
+\begin_inset Formula $h:X\to Y$
+\end_inset
+
+ un homomorfísmo de retículo.
+ Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $h\left(X\right)$
+\end_inset
+
+ es un subretículo de 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $X$
+\end_inset
+
+ es distributivo, 
+\begin_inset Formula $h\left(X\right)$
+\end_inset
+
+ es distributivo.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
 \end_layout
 
 \begin_layout Enumerate
@@ -540,6 +783,36 @@ COMPLETAR.
 COMPLETAR.
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Verificar que todo isomorfismo de retículo se corresponde con un isomorfismo
+ de conjuntos ordenados.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que el retículo potencia de cualquier conjunto es completo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -549,9 +822,60 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(P,\leq\right)$
+\end_inset
+
+ un orden total.
+ Probar que 
+\begin_inset Formula $P$
+\end_inset
+
+ es un retículo distributivo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+
+\emph on
+Retículo completo
+\emph default
+.
+ Sea 
+\begin_inset Formula $\left(P,\leq\right)$
+\end_inset
+
+ un orden.
+ Probar que si todo subconjunto de 
+\begin_inset Formula $P$
+\end_inset
+
+ tiene supremo, entonces todo subconjunto de 
+\begin_inset Formula $P$
+\end_inset
+
+ tiene ínfimo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
