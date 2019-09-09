@@ -1183,7 +1183,7 @@ En
 \end_inset
 
 , donde 
-\begin_inset Formula $\phi I\psi\iff\emptyset\vdash\phi\Rightarrow\psi$
+\begin_inset Formula $\phi I\psi\iff\emptyset\vdash\phi\to\psi$
 \end_inset
 
 .
@@ -1213,15 +1213,104 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $\phi\in Prop$
+\end_inset
+
+ luego por la regla trivial 
+\begin_inset Formula $\left\{ \phi\right\} \vdash\phi$
+\end_inset
+
+ y por introducción de la implicación 
+\begin_inset Formula $\emptyset\vdash\phi\to\phi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $\phi,\psi,\gamma$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\emptyset\vdash\phi\to\psi$
+\end_inset
+
+ y 
+\begin_inset Formula $\emptyset\vdash\psi\to\gamma$
+\end_inset
+
+ luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \phi\right\} \vdash\phi$
+\end_inset
+
+ (trivial).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \phi\right\} \vdash\psi$
+\end_inset
+
+ (eliminación de la implicación en 1 e hipótesis).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ \phi\right\} \vdash\gamma$
+\end_inset
+
+ (eliminación de la implicación en 2 e hipótesis).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\emptyset\vdash\phi\to\gamma$
+\end_inset
+
+ (introducción de la implicación en 3).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+También es un preorden pues la antisimetría falla por la misma razón que
+ el ejercicio anterior.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Claramente si 
+\begin_inset Formula $\phi D\psi$
+\end_inset
+
+ también 
+\begin_inset Formula $\phi I\psi$
+\end_inset
+
+ pues si 
+\begin_inset Formula $\left\{ \phi\right\} \vdash\psi$
+\end_inset
+
+ es un secuente valido tambien lo es 
+\begin_inset Formula $\emptyset\vdash\phi\to\psi$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1277,9 +1366,196 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Definimos 
+\begin_inset Formula $X\sqsubseteq Y\iff\exists x\in X,y\in Y/x\preceq y$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $\pi$
+\end_inset
+
+ es monotona: sean 
+\begin_inset Formula $x,y/x\preceq y$
+\end_inset
+
+ luego 
+\begin_inset Formula $x\in\pi\left(x\right)\land y\in\pi\left(y\right)$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\pi\left(x\right)\sqsubseteq\pi\left(y\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
+\begin_layout Standard
+Veamos ahora que 
+\begin_inset Formula $\left(P/\sim,\sqsubseteq\right)$
+\end_inset
+
+ es un conjunto ordenado:
+\end_layout
+
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $X\in P/\sim$
+\end_inset
+
+.
+ Para cualquier 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ resultará 
+\begin_inset Formula $x\preceq x$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $X\sqsubseteq X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $X,Y,Z\in P/\sim$
+\end_inset
+
+ tales que 
+\begin_inset Formula $X\sqsubseteq Y$
+\end_inset
+
+ y 
+\begin_inset Formula $Y\sqsubseteq Z$
+\end_inset
+
+, luego sabemos que existen 
+\begin_inset Formula $x\in X,y\in Y,z\in Z$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x\preceq y\preceq z$
+\end_inset
+
+ y por transitividad resulta 
+\begin_inset Formula $x\preceq z$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $X\sqsubseteq Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Antisimetría: Sean 
+\begin_inset Formula $X,Y\in P/\sim$
+\end_inset
+
+ tales que 
+\begin_inset Formula $X\sqsubseteq Y$
+\end_inset
+
+ y 
+\begin_inset Formula $Y\sqsubseteq X$
+\end_inset
+
+, luego existen 
+\begin_inset Formula $x,x'\in X$
+\end_inset
+
+ e 
+\begin_inset Formula $y,y'\in Y$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x\preceq y$
+\end_inset
+
+ y 
+\begin_inset Formula $y'\preceq x'$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Supongamos que 
+\begin_inset Formula $X\neq Y$
+\end_inset
+
+, como ambos son clases de equivalencia entonces deben ser conjuntos disjuntos.
+ Luego:
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $x\sim x'$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $x'\preceq x$
+\end_inset
+
+ y por transitividad 
+\begin_inset Formula $x'\preceq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $y\sim y'$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $y\preceq y'$
+\end_inset
+
+ y por transitividad 
+\begin_inset Formula $y\preceq x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $x\preceq y\land y\preceq x$
+\end_inset
+
+ entonces 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+, es decir 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Tenemos entonces 
+\begin_inset Formula $y\in X\land y\in Y$
+\end_inset
+
+.
+ Contradicción.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Probar que:
@@ -1443,7 +1719,7 @@ Supongamos existen
 \end_inset
 
  , luego 
-\begin_inset Formula $x\parallel_{R}y$
+\begin_inset Formula $y\parallel_{R}x$
 \end_inset
 
 .
@@ -1575,9 +1851,104 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+En efecto.
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ luego 
+\begin_inset Formula $x\preceq_{1}x$
+\end_inset
+
+ y 
+\begin_inset Formula $x\preceq_{2}x$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\left(x,x\right)\in\preceq_{1}\cap\preceq_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $x,y,z\in A$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left(x,y\right)\in\preceq_{1}\cap\preceq_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(y,z\right)\in\preceq_{1}\cap\preceq_{2}$
+\end_inset
+
+, luego ocurren 
+\begin_inset Formula $x\preceq_{1}y$
+\end_inset
+
+, 
+\begin_inset Formula $x\preceq_{2}y$
+\end_inset
+
+, 
+\begin_inset Formula $y\preceq_{1}z$
+\end_inset
+
+ y 
+\begin_inset Formula $y\preceq_{2}z$
+\end_inset
+
+.
+ Ademas por sus respectivas transitividades tambien tenemos 
+\begin_inset Formula $x\preceq_{1}z$
+\end_inset
+
+ y 
+\begin_inset Formula $x\preceq_{2}z$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\left(x,z\right)\in\preceq_{1}\cap\preceq_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Antisimetría: Sean 
+\begin_inset Formula $x,y\in A$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left(x,y\right)\in\preceq_{1}\cap\preceq_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(y,x\right)\in\preceq_{1}\cap\preceq_{2}$
+\end_inset
+
+ luego 
+\begin_inset Formula $x\preceq_{1}y$
+\end_inset
+
+ e 
+\begin_inset Formula $y\preceq_{1}x$
+\end_inset
+
+ y por reflexividad 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 No.
  Sean 
@@ -1597,6 +1968,10 @@ No.
 \end_inset
 
  se rompe la antisimetría.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
