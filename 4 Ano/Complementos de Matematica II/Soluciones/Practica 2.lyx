@@ -58,7 +58,7 @@ multicol
 \suppress_date false
 \justification true
 \use_refstyle 1
-\use_minted 0
+\use_minted 1
 \index Index
 \shortcut idx
 \color #008000
@@ -814,13 +814,83 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
+
+\emph on
+Knaster-Tarski
+\emph default
+.
+ Sea 
+\begin_inset Formula $\left(L,\sqsubseteq\right)$
+\end_inset
+
+ un retículo completo y 
+\begin_inset Formula $f:L\to L$
+\end_inset
+
+ una función monótona.
+ Probar que el mínimo punto fijo de 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $\bigwedge\left\{ x\in L|f\left(x\right)\sqsubseteq x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
+Aplicar el resultado del ejercicio anterior para definir el conjunto inductivo
+ de los números pares 
+\begin_inset Formula $P$
+\end_inset
+
+ como el mínimo punto fijo de una función monótona, donde 
+\begin_inset Formula $P$
+\end_inset
+
+ se define como el menor conjunto para el cual:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0\in P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $n\in P$
+\end_inset
+
+, entonces 
+\begin_inset Formula $n+2\in P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Sea 
 \begin_inset Formula $\left(P,\leq\right)$
@@ -877,8 +947,112 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
+Un 
+\emph on
+álgebra de Boole
+\emph default
+ es un retículo acotado distributivo con complementos.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Dar un ejemplo de álgebra de Bool de los retículos vistos en clase.
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $O_{n}=\left(\left\{ x\in\mathbb{N}:x|n\right\} ,|\right)$
+\end_inset
+
+ es un álgebra de Boole si 
+\begin_inset Formula $n$
+\end_inset
+
+ es producto de factores primos distintos.
+\end_layout
+
+\begin_layout Enumerate
+Enunciar y probar la ley de De Morgan para las álgebras de Boole.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left(L,\leq\right)$
+\end_inset
+
+ es un álgebra de Boole, entonces para 
+\begin_inset Formula $x,y\in L$
+\end_inset
+
+ si 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\overline{y}\leq\overline{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left(L,\leq\right),\left(L',\leq'\right)$
+\end_inset
+
+ son álgebras de Boole, entoneces todo isomorfismo de conjuntos ordenados
+ de 
+\begin_inset Formula $L$
+\end_inset
+
+ en 
+\begin_inset Formula $L'$
+\end_inset
+
+ preserva complementos.
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\left(L,\leq\right),\left(L',\leq'\right)$
+\end_inset
+
+ álgebras de Boole.
+ Construir un orden para 
+\begin_inset Formula $L\times L'$
+\end_inset
+
+ y probar que es un álgebra de Boole.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

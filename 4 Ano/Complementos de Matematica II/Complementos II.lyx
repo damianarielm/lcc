@@ -1,0 +1,892 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Complementos de Matematica II
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Teoría del orden y Grupos
+\end_layout
+
+\begin_layout Chapter
+Relaciones
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Relación
+\end_layout
+
+\begin_layout Standard
+Una relación 
+\begin_inset Formula $R$
+\end_inset
+
+ entre un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ y un conjunto 
+\begin_inset Formula $B$
+\end_inset
+
+ es un subconjunto del producto cartesiano 
+\begin_inset Formula $A\times B$
+\end_inset
+
+.
+ Para notar que un elemento 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ se relaciona con otro elemento 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ escribimos 
+\begin_inset Formula $aRb$
+\end_inset
+
+ o 
+\begin_inset Formula $\left(a,b\right)\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Relación funcional
+\end_layout
+
+\begin_layout Standard
+Diremos que una relacion 
+\begin_inset Formula $R\subseteq A\times B$
+\end_inset
+
+ es una relación funcional si:
+\begin_inset Formula 
+\[
+aRb\land aRc\Rightarrow b=c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamaremos dominio de la relación al conjunto 
+\begin_inset Formula $dom\left(R\right)=\left\{ a\in A|\exists b\in B:aRb\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diremos que el conjunto 
+\begin_inset Formula $im\left(R\right)=\left\{ b\in B|\exists a\in A:aRb\right\} $
+\end_inset
+
+ es la imagen de 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Cuando 
+\begin_inset Formula $dom\left(R\right)=A$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $R$
+\end_inset
+
+ es una función.
+\end_layout
+
+\begin_layout Subsection
+Relación inversa
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relación entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ se define la relación inversa 
+\begin_inset Formula $R^{-1}$
+\end_inset
+
+ entre 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $A$
+\end_inset
+
+ como:
+\begin_inset Formula 
+\[
+R^{-1}=\left\{ \left(b,a\right)\in B\times A:aRb\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Union, intersección y diferencia
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ relaciones entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ llamamos union de 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+ a la relación 
+\begin_inset Formula $R\cup S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Analogamente podemos considerar las relaciones 
+\begin_inset Formula $R\cap S$
+\end_inset
+
+ y 
+\begin_inset Formula $R-S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Composición
+\end_layout
+
+\begin_layout Standard
+Dada una relación 
+\begin_inset Formula $R$
+\end_inset
+
+ entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, y otra relacion 
+\begin_inset Formula $S$
+\end_inset
+
+ entre 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+; definimos la relación:
+\begin_inset Formula 
+\[
+S\circ R=\left\{ \left(a,b\right)\in A\times C|\exists b\in b:aRb\land bSc\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Restricción
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $R$
+\end_inset
+
+ una relación de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $A'\subseteq A$
+\end_inset
+
+ y 
+\begin_inset Formula $B'\subseteq B$
+\end_inset
+
+, llamaremos restricción de 
+\begin_inset Formula $R$
+\end_inset
+
+ a 
+\begin_inset Formula $A'\times B'$
+\end_inset
+
+ a la relación:
+\begin_inset Formula 
+\[
+R|_{A'\times B'}=\left\{ \left(a,b\right)\in A'\times B':aRb\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ es una función entonces 
+\begin_inset Formula $f|_{A'}=f|_{A'\times B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Clasificación de relaciones
+\end_layout
+
+\begin_layout Subsection
+Propiedades
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $R$
+\end_inset
+
+ una relación de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $A$
+\end_inset
+
+, diremos que 
+\begin_inset Formula $R$
+\end_inset
+
+ es:
+\end_layout
+
+\begin_layout Description
+Reflexiva si 
+\begin_inset Formula $\forall a\in A:aRa$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Simétrica si 
+\begin_inset Formula $\forall a,b\in A:aRb\Rightarrow bRa$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Antisimétrica si 
+\begin_inset Formula $\forall a,b\in A:aRb\land bRa\Rightarrow a=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Transitiva si 
+\begin_inset Formula $\forall a,b,c\in A:aRb\land bRc\Rightarrow aRc$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Relación de equivalencia
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relación en 
+\begin_inset Formula $A$
+\end_inset
+
+ reflexiva, simétrica y transitiva diremos que 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relación de equivalencia.
+\end_layout
+
+\begin_layout Itemize
+Llamaremos clase de equivalencia de 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ y lo notaremos 
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+ al conjunto:
+\begin_inset Formula 
+\[
+\overline{a}=\left\{ b\in A:aRb\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A la siguiente partición de 
+\begin_inset Formula $A$
+\end_inset
+
+ la llamaremos conjunto cociente:
+\begin_inset Formula 
+\[
+A/R=\left\{ \overline{a}:a\in A\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+La función 
+\begin_inset Formula $\pi:A\to A/R$
+\end_inset
+
+ definida por 
+\begin_inset Formula $\pi\left(a\right)=\overline{a}$
+\end_inset
+
+ es llamada proyección al cociente.
+\end_layout
+
+\begin_layout Itemize
+Para cualquier función 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ llamaremos nucelo de 
+\begin_inset Formula $f$
+\end_inset
+
+ a la siguiente relación de equivalencia:
+\begin_inset Formula 
+\[
+ker\left(f\right)=\left\{ \left(a,a'\right):f\left(a\right)=f\left(a'\right)\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Invertibilidad de relaciones funcionales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ una relación funcional de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $B$
+\end_inset
+
+, entonces 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ es relación funcional si y solo si 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $a,a',b$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(a'\right)=b$
+\end_inset
+
+ luego 
+\begin_inset Formula $f^{-1}\left(b\right)=a$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{-1}\left(b\right)=a'$
+\end_inset
+
+ y como 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ es funcional resulta 
+\begin_inset Formula $a=a'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $a,a',b$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f^{-1}\left(b\right)=a$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{-1}\left(b\right)=a'$
+\end_inset
+
+ luego 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(a'\right)=b$
+\end_inset
+
+ y como 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva resulta 
+\begin_inset Formula $a=a'$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Composición de funciones
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ son funciones, entonces 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es una función.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+Dado 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ sabemos que existe un único 
+\begin_inset Formula $b\in B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ pues 
+\begin_inset Formula $f$
+\end_inset
+
+ es una función.
+\end_layout
+
+\begin_layout Standard
+Por la misma razón, para dicho elemento 
+\begin_inset Formula $b$
+\end_inset
+
+ existe un único elemento 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ tal que 
+\begin_inset Formula $g\left(b\right)=g\left(f\left(a\right)\right)=g\circ f\left(a\right)=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hemos visto que dado 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ existe un único elemento 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ tal que 
+\begin_inset Formula $g\circ f\left(a\right)=c$
+\end_inset
+
+, es decir 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es una función.
+\end_layout
+
+\begin_layout Subsection
+Herencia de propiedades
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $R$
+\end_inset
+
+ una relación de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $A'\subseteq A$
+\end_inset
+
+ y 
+\begin_inset Formula $B'\subseteq B$
+\end_inset
+
+, entonces si 
+\begin_inset Formula $R$
+\end_inset
+
+ es reflexiva tambien lo será 
+\begin_inset Formula $R|_{A'\times B'}$
+\end_inset
+
+.
+ También ocurre lo mismo si 
+\begin_inset Formula $R$
+\end_inset
+
+ es simétrica, antisimétrica o transitiva.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Biyectividad entre relaciones de equivalencia y particiones
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $R$
+\end_inset
+
+ es una relación de equivalencia en 
+\begin_inset Formula $A$
+\end_inset
+
+ entonces 
+\begin_inset Formula $A/R$
+\end_inset
+
+ es una partición de 
+\begin_inset Formula $A$
+\end_inset
+
+ y además, dada una particion 
+\begin_inset Formula $P\subseteq\mathcal{P}\left(A\right)$
+\end_inset
+
+ la relación definida por 
+\begin_inset Formula $a\sim b\iff\exists X\in P:a,b\in X$
+\end_inset
+
+ es una relación de equivalencia.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Teorema de factorización
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\sim$
+\end_inset
+
+ es una relación de equivalencia en 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ es una función tal que 
+\begin_inset Formula $a\sim b\Rightarrow f\left(a\right)=f\left(b\right)$
+\end_inset
+
+, entonces existe una única función 
+\begin_inset Formula $\widetilde{f}:A/\sim\to B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f=\widetilde{f}\circ\pi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+ Definir 
+\begin_inset Formula $f\left(\overline{a}\right)=f\left(a\right)$
+\end_inset
+
+ y probar que esta definición no depende del representante elegido.
+\end_layout
+
+\begin_layout Chapter
+Conjuntos ordenados
+\end_layout
+
+\begin_layout Chapter
+Retículos
+\end_layout
+
+\begin_layout Chapter
+Grupos
+\end_layout
+
+\begin_layout Part
+Teoría de categorias
+\end_layout
+
+\end_body
+\end_document
