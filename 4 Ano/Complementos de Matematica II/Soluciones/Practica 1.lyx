@@ -2053,7 +2053,7 @@ Supongamos que
 \end_inset
 
  tenemos 
-\begin_inset Formula $\text{\ensuremath{\forall x:1\leq x\iff\forall x:f\left(1\right)\leq\left(x\right)}}$
+\begin_inset Formula $\text{\ensuremath{\forall x:1\leq x\Rightarrow\forall x:f\left(1\right)\leq f\left(x\right)}}$
 \end_inset
 
 ; pero entonces 
@@ -2404,6 +2404,99 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
+Sean 
+\begin_inset Formula $X=\mathbb{N},$
+\end_inset
+
+ 
+\begin_inset Formula $Y=\left\{ 1\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(n\right)=1$
+\end_inset
+
+.
+ La función es claramente sobreyectiva y preserva el orden, pero no es inyectiva.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{1\Rightarrow2}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Trivial pues 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ son isomorfos.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{2\Rightarrow3}$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{3\Rightarrow1}$
+\end_inset
+
+: Como consecuencia de las hipótesis 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ resultan ser biyectivas y ademas 
+\begin_inset Formula $f^{-1}=g$
+\end_inset
+
+.
+ Ademas por ser homorfismos también preservan la estructura, por lo tanto
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ e 
+\begin_inset Formula $Y$
+\end_inset
+
+ son isomorfos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
@@ -2415,27 +2508,178 @@ COMPLETAR.
 \end_layout
 
 \begin_deeper
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $\left(x,y\right)\in X\times Y$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ y 
+\begin_inset Formula $y\in Y$
+\end_inset
+
+ y por sus respectivas reflexividades 
+\begin_inset Formula $x\preceq_{X}x$
+\end_inset
+
+ y 
+\begin_inset Formula $y\preceq_{Y}y$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\left(x,y\right)\preceq_{X\times Y}\left(x,y\right)$
+\end_inset
+
+.
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $\left(a,b\right),\left(c,d\right),\left(e,f\right)\in X\times Y$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left(a,b\right)\preceq\left(c,d\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(c,d\right)\preceq\left(e,f\right)$
+\end_inset
+
+, luego por definición tenemos:
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $a\preceq_{X}c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c\preceq_{X}e$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $b\preceq_{Y}d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d\preceq_{Y}f$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y por transitividades tambien ocurren 
+\begin_inset Formula $a\preceq_{X}e$
+\end_inset
+
+ y 
+\begin_inset Formula $b\preceq_{Y}f$
+\end_inset
+
+.
+ Finalmente por definición 
+\begin_inset Formula $\left(a,b\right)\preceq\left(e,f\right)$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+Antisimetría: Sean 
+\begin_inset Formula $\left(x,y\right),\left(x',y'\right)\in X\times Y$
+\end_inset
+
+ tales que 
+\begin_inset Formula $\left(x,y\right)\preceq\left(x',y'\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(x',y'\right)\preceq\left(x,y\right)$
+\end_inset
+
+ luego por definicion tenemos:
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $x\preceq_{X}x'$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $y\preceq_{Y}y'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x'\preceq_{X}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $y'\preceq_{Y}y$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y por antisimetrías ocurren 
+\begin_inset Formula $x=x'$
+\end_inset
+
+ y 
+\begin_inset Formula $y=y'$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\text{\ensuremath{\left(x,y\right)=\left(x',y'\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sean 
@@ -2553,7 +2797,7 @@ Considerando los órdenes usuales sobre
 \begin_inset Formula $f_{*}:\mathbb{N}\to\mathbb{Q}_{0}^{+}$
 \end_inset
 
- es la inclusión.
+ es la identidad.
 \end_layout
 
 \begin_layout Enumerate
@@ -2613,9 +2857,134 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Como 
+\begin_inset Formula $f_{*}$
+\end_inset
+
+ es isomorfismo de orden, entonces 
+\begin_inset Formula $f_{*}^{-1}$
+\end_inset
+
+ también lo es.
+ Veamos que 
+\begin_inset Formula $\left(f_{*},f_{*}^{-1}\right)$
+\end_inset
+
+ es conexión de Galois:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sabemos que 
+\begin_inset Formula $f_{*}\left(x\right)\preceq_{Y}y$
+\end_inset
+
+, luego como 
+\begin_inset Formula $f_{*}^{-1}$
+\end_inset
+
+ es isomorfismo de orden, aplicando a ambos lados obtenemos 
+\begin_inset Formula $x\preceq_{X}f_{*}^{-1}\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Analogamente en caso contrario.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $f_{*}\left(A\right)=im\left(A\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{*}\left(B\right)=im^{-1}\left(B\right)$
+\end_inset
+
+, veamos que 
+\begin_inset Formula $\left(f_{*},f^{*}\right)$
+\end_inset
+
+ es una conexión de Galois:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sabemos que 
+\begin_inset Formula $im\left(A\right)\subseteq B$
+\end_inset
+
+, queremos ver que 
+\begin_inset Formula $A\subseteq im^{-1}\left(B\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+ & a\in A\\
+\Rightarrow & \left\langle def.im\right\rangle \\
+ & f\left(a\right)\in im\left(A\right)\\
+\Rightarrow & \left\langle hipotesis\right\rangle \\
+ & f\left(a\right)\in B\\
+\Rightarrow & \left\langle def\right\rangle \\
+ & a\in\left\{ x\in A:f\left(x\right)\in B\right\} \\
+\Rightarrow & \left\langle def.im^{-1}\right\rangle \\
+ & a\in im^{-1}\left(B\right)
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sabemos que 
+\begin_inset Formula $A\subseteq im^{-1}\left(B\right)$
+\end_inset
+
+, queremos ver que 
+\begin_inset Formula $\text{\ensuremath{im\left(A\right)\subseteq B}}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+ & b\in im\left(A\right)\\
+\Rightarrow & \left\langle def.im\right\rangle \\
+ & b\in\left\{ f\left(x\right)\in B:x\in A\right\} \\
+\Rightarrow & \left\langle def\right\rangle \\
+ & b\in B
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -2639,8 +3008,123 @@ Probar que la relación de isomorfismo entre conjuntos ordenados es una relació
 Solución
 \end_layout
 
+\begin_layout Itemize
+Reflexividad: Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ un poset, luego la funcion identidad es un isomorfismo de 
+\begin_inset Formula $X$
+\end_inset
+
+ a 
+\begin_inset Formula $X$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $X\simeq X$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ posets tales que 
+\begin_inset Formula $X\simeq Y\simeq Z$
+\end_inset
+
+, luego existen isomorfismos 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+.
+ Queremos ver si 
+\begin_inset Formula $X\simeq Z$
+\end_inset
+
+, es decir, si existe un isomorfismo entre 
+\begin_inset Formula $X$
+\end_inset
+
+ y 
+\begin_inset Formula $Z$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-COMPLETAR.
+Sabemos que 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es una biyección entre 
+\begin_inset Formula $X$
+\end_inset
+
+ y 
+\begin_inset Formula $Z$
+\end_inset
+
+, resta ver que preserva la estructura: sean 
+\begin_inset Formula $a,b\in X$
+\end_inset
+
+ luego 
+\begin_inset Formula $f\left(a\right)\preceq f\left(b\right)$
+\end_inset
+
+ pues 
+\begin_inset Formula $f$
+\end_inset
+
+ es isomorfismo y por la misma razon 
+\begin_inset Formula $g\left(f\left(a\right)\right)\preceq g\left(f\left(b\right)\right)$
+\end_inset
+
+, es decir 
+\begin_inset Formula $g\circ f\left(a\right)\preceq g\circ f\left(b\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Simetría: Sean 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ posets tales que 
+\begin_inset Formula $X\simeq Y$
+\end_inset
+
+ luego existe 
+\begin_inset Formula $\text{\ensuremath{f:X\to Y}}$
+\end_inset
+
+ biyectiva creciente y en consecuencia 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ tambien lo es por lo que 
+\begin_inset Formula $Y\simeq X$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
