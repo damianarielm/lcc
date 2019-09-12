@@ -2432,22 +2432,7 @@ Sean
 \begin_inset Formula $\boxed{1\Rightarrow2}$
 \end_inset
 
-: 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\boxed{\Rightarrow}$
-\end_inset
-
-: COMPLETAR.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $\boxed{\Leftarrow}$
-\end_inset
-
-: Trivial pues 
+: Trivial pues el isomorfismo entre 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2455,15 +2440,36 @@ Sean
 \begin_inset Formula $Y$
 \end_inset
 
- son isomorfos.
+ es en particular sobreyectivo.
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
-\begin_inset Formula $\boxed{2\Rightarrow3}$
+\begin_inset Formula $\boxed{2\Rightarrow1}$
 \end_inset
 
-: COMPLETAR.
+: Supongamos que la función de nuestra hipótesis no es inyectiva luego existen
+ 
+\begin_inset Formula $x_{1}\neq x_{2}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f\left(x_{1}\right)=f\left(x_{2}\right)$
+\end_inset
+
+, es decir 
+\begin_inset Formula $f\left(x_{1}\right)\preceq f\left(x_{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(x_{2}\right)\preceq f\left(x_{1}\right)$
+\end_inset
+
+; pero entonces 
+\begin_inset Formula $\text{\ensuremath{x_{1}\preceq x_{2}\land x_{2}\preceq x_{1}\Rightarrow x_{1}=x_{2}}}$
+\end_inset
+
+.
+ Contradicción.
 \end_layout
 
 \begin_layout Itemize
@@ -2493,6 +2499,13 @@ Sean
 \end_inset
 
  son isomorfos.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{1\Rightarrow3}$
+\end_inset
+
+: Trivial pues el isomorfismo y su inversa verifican dichas condiciones.
 \end_layout
 
 \end_deeper
@@ -2605,6 +2618,10 @@ y por transitividades tambien ocurren
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2829,7 +2846,7 @@ Dada una conexión Galois
 \end_layout
 
 \begin_layout Enumerate
-Dada una conexion de Galois 
+Dada una conexión de Galois 
 \begin_inset Formula $\left(f_{*},f^{*}\right)$
 \end_inset
 
@@ -2990,13 +3007,84 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ luego 
+\begin_inset Formula $y=f_{*}\left(x\right)\in Y$
+\end_inset
+
+ y por reflexividad tenemos 
+\begin_inset Formula $f_{*}\left(x\right)\preceq_{Y}f_{*}\left(x\right)$
+\end_inset
+
+, luego: 
+\begin_inset Formula 
+\[
+f_{*}\left(x\right)\preceq_{Y}f_{*}\left(x\right)=y\iff x\preceq_{X}f^{*}\left(y\right)=f^{*}\left(f_{*}\left(x\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Analogo.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $x,x'$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x\preceq_{X}x'$
+\end_inset
+
+.
+ Por el apartado anterior 
+\begin_inset Formula $\text{\ensuremath{x'\preceq_{X}f^{*}\left(f_{*}\left(x'\right)\right)}}$
+\end_inset
+
+ y por transitividad 
+\begin_inset Formula $x\preceq_{X}f^{*}\left(f_{*}\left(x'\right)\right)$
+\end_inset
+
+, luego por ser conexión de Galois 
+\begin_inset Formula $f_{*}\left(x\right)\preceq_{Y}f_{*}\left(x'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Analogo.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Probar que la relación de isomorfismo entre conjuntos ordenados es una relación
@@ -3026,10 +3114,6 @@ Reflexividad: Sea
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
