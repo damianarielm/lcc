@@ -6,7 +6,8 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{pgfplots}
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{arrows, automata}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -177,17 +178,78 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\land=\cap$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lor=\cup$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\land=mcd$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lor=mcm$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\land=\land$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lor=\lor$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sea 
@@ -239,16 +301,40 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que 
+\begin_inset Formula $y\land z\leq y$
+\end_inset
+
+ y 
+\begin_inset Formula $y\land z\leq z$
+\end_inset
+
+ luego por compatibilidad tenemos 
+\begin_inset Formula $x\lor\left(y\land z\right)\leq x\lor y$
+\end_inset
+
+ y 
+\begin_inset Formula $x\lor\left(y\land z\right)\leq x\lor z$
+\end_inset
+
+ y nuevamente por compatibilidad 
+\begin_inset Formula $\left(x\lor\left(y\land z\right)\right)\land\left(x\lor\left(y\land z\right)\right)\leq\left(x\lor y\right)\land\left(x\lor z\right)$
+\end_inset
+
+.
+ Finalmente concluimos lo propuesto por idempotencia.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Análogo.
 \end_layout
 
 \begin_layout Enumerate
@@ -276,21 +362,21 @@ Sea
 
 \begin_deeper
 \begin_layout Enumerate
-\begin_inset Formula $\left\{ x\in X:x\leq a\right\} $
+\begin_inset Formula $A=\left\{ x\in X:x\leq a\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\{ x\in X:b\leq x\right\} $
+\begin_inset Formula $B=\left\{ x\in X:b\leq x\right\} $
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\{ x\in X:a\leq x\leq b\right\} $
+\begin_inset Formula $C=\left\{ x\in X:a\leq x\leq b\right\} $
 \end_inset
 
 .
@@ -301,15 +387,49 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ luego 
+\begin_inset Formula $A\neq\emptyset$
+\end_inset
+
+.
+ Ademas sean 
+\begin_inset Formula $x,y\in A$
+\end_inset
+
+ luego 
+\begin_inset Formula $x\leq a$
+\end_inset
+
+ y 
+\begin_inset Formula $y\leq a$
+\end_inset
+
+, pero por compatibilidad 
+\begin_inset Formula $x\lor y\leq a\lor a=a$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x\lor y\in A$
+\end_inset
+
+.
+ Analogamente 
+\begin_inset Formula $x\land y\in A$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Análogo.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Análogo.
 \end_layout
 
 \end_deeper
@@ -494,20 +614,96 @@ Probar que son equivalentes:
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $\boxed{a\Rightarrow b}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $a\geq c$
+\end_inset
+
+ luego por ser 
+\begin_inset Formula $L$
+\end_inset
+
+ modular
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+ & c\lor\left(b\land a\right) & = & \left(c\lor b\right)\land a\\
+\iff\\
+ & \left(b\land a\right)\lor c & = & a\land\left(c\lor b\right)\\
+\iff\\
+ & \left(a\land b\right)\lor c & = & a\land\left(b\lor c\right)
+\end{array}
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $\boxed{b\Rightarrow c}$
+\end_inset
+
+: Sabemos que 
+\begin_inset Formula $a\lor c\geq a$
+\end_inset
+
+ y por hipótesis 
+\begin_inset Formula $\text{\ensuremath{\left(a\lor c\right)\land\left(b\lor a\right)=\left(\left(a\lor c\right)\land b\right)\lor a}}$
+\end_inset
+
+, luego aplicando varias veces conmutatividad obtenemos 
+\begin_inset Formula 
+\[
+a\lor\left(b\land\left(a\lor c\right)\right)=\left(a\lor b\right)\land\left(a\lor c\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $\boxed{c\Rightarrow d}$
+\end_inset
+
+: Trivial por dualidad.
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $\boxed{d\Rightarrow a}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $a\leq c$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a\lor c=c$
+\end_inset
+
+ y por hipótesis para cualquier 
+\begin_inset Formula $b$
+\end_inset
+
+, resulta 
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+ & a\land\left(b\lor\left(a\land c\right)\right) & = & \left(a\land b\right)\lor\left(a\land c\right)\\
+\iff\\
+ & a\lor\left(b\land\left(a\lor c\right)\right) & = & \left(a\lor b\right)\land\left(a\lor c\right)\\
+\iff\\
+ & a\lor\left(b\land c\right) & = & \left(a\lor b\right)\land c
+\end{array}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -522,7 +718,151 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sea 
+\begin_inset Formula $a\leq c$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a\land c=a$
+\end_inset
+
+, luego por distributividad:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(a\lor b\right)\land c=\left(a\land c\right)\lor\left(b\land c\right)=a\lor\left(b\land c\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La recíproca no vale, pues basta considerar el siguiente contraejemplo:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (1) {$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (y) [below  of=1] {$y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (x) [left  of=y] {$x$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (z) [right  of=y] {$z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (0) [below of=y] {$0$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (0) edge node {} (x);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (0) edge node {} (y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (0) edge node {} (z);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (x) edge node {} (1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (y) edge node {} (1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (z) edge node {} (1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde puede observarse que es modular pero 
+\begin_inset Formula $y\lor\left(x\land z\right)=y\neq1=\left(y\lor x\right)\land\left(y\lor z\right)$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
