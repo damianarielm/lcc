@@ -528,6 +528,66 @@ ker\left(f\right)=\left\{ \left(a,a'\right):f\left(a\right)=f\left(a'\right)\rig
 
 \end_layout
 
+\begin_layout Paragraph
+Observación
+\end_layout
+
+\begin_layout Standard
+Cuando definimos una función sobre el conjunto cociente de una relación
+ de equivalencia, debemos prestar atención a la forma en la que lo hacemos.
+ Consideremos a modo de ejemplo la siguiente función sobre el cociente de
+ la relación de equivalencia modulo 5:
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+f & : & \mathbb{Z}/5\mathbb{Z} & \to & \mathbb{Z}\\
+ &  & \overline{x} & \to & f\left(\overline{x}\right)=x
+\end{array}
+\]
+
+\end_inset
+
+Esta función no esta bien definida, o mas precisamente, 
+\begin_inset Formula $f$
+\end_inset
+
+ no es una función.
+ En efecto 
+\begin_inset Formula $f\left(\overline{0}\right)=0$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(\overline{5}\right)=5$
+\end_inset
+
+ pero 
+\begin_inset Formula $\overline{0}=\overline{5}$
+\end_inset
+
+ por lo cual existe un elemento del dominio con dos imagenes diferentes.
+\end_layout
+
+\begin_layout Standard
+Debemos entonces, cada vez que definimos una función sobre clases de equivalenci
+a asegurarnos de que si 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ entonces 
+\begin_inset Formula $f\left(\overline{x}\right)=f\left(\overline{y}\right)$
+\end_inset
+
+, de ser asi diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ tiene una buena definición.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Teoremas
 \end_layout
@@ -636,10 +696,6 @@ Demostración
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -874,6 +930,239 @@ EJERCICIO.
 
 \begin_layout Chapter
 Conjuntos ordenados
+\end_layout
+
+\begin_layout Section
+Preordenes
+\end_layout
+
+\begin_layout Subsection
+Definiciones
+\end_layout
+
+\begin_layout Standard
+Una relación 
+\begin_inset Formula $\preceq$
+\end_inset
+
+ en 
+\begin_inset Formula $A$
+\end_inset
+
+ es un preorden si es reflexiva y transitiva.
+\end_layout
+
+\begin_layout Standard
+Diremos que un elemento 
+\begin_inset Formula $a$
+\end_inset
+
+ es
+\end_layout
+
+\begin_layout Description
+maximal si 
+\begin_inset Formula $\forall x:a\preceq x\Rightarrow x\preceq a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+minimal si 
+\begin_inset Formula $\forall x:x\preceq a\Rightarrow a\preceq x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+máximo si 
+\begin_inset Formula $\forall x:x\preceq a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+mínimo si 
+\begin_inset Formula $\forall x:a\preceq x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+cota
+\begin_inset space ~
+\end_inset
+
+superior de 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ si 
+\begin_inset Formula $\forall b\in B:b\preceq a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+cota
+\begin_inset space ~
+\end_inset
+
+inferior de 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ si 
+\begin_inset Formula $\forall b\in B:a\preceq b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+supremo de 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ si 
+\begin_inset Formula $a\in\min\left\{ c\in A:c\text{ es cota superior de }B\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+ínfimo de 
+\begin_inset Formula $B\subseteq A$
+\end_inset
+
+ si 
+\begin_inset Formula $a\in\max\left\{ c\in A:c\text{ es cota superior de }B\right\} $
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Orden inverso
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\left(A,\preceq\right)$
+\end_inset
+
+ es un conjunto preordenado, el orden inverso 
+\begin_inset Formula $\succeq$
+\end_inset
+
+ se define como 
+\begin_inset Formula $a\succeq b\iff b\preceq a$
+\end_inset
+
+, resultando este un preorden donde todas las definiciones se dualizan:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ es elemento maximal en 
+\begin_inset Formula $\left(A,\preceq\right)\iff a$
+\end_inset
+
+ es elemento minimal en 
+\begin_inset Formula $\left(A,\succeq\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ es cota superior en 
+\begin_inset Formula $\left(A,\preceq\right)\iff a$
+\end_inset
+
+ es cota inferior en 
+\begin_inset Formula $\left(A,\succeq\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a$
+\end_inset
+
+ es supremo en 
+\begin_inset Formula $\left(A,\preceq\right)\iff a$
+\end_inset
+
+ es ínfimo en 
+\begin_inset Formula $\left(A,\succeq\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema de extremos en preordenes
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\preceq$
+\end_inset
+
+ un preorden sobre un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+, luego las siguientes proposiciones son validas:
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $M\in A$
+\end_inset
+
+ es un elemento máximo, entonces también es maximal.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $m\in A$
+\end_inset
+
+ es un elemento mínimo, entonces también es minimal.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Section
+Relación de orden
 \end_layout
 
 \begin_layout Chapter
