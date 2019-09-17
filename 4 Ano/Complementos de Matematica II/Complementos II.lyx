@@ -440,6 +440,14 @@ Transitiva si
 .
 \end_layout
 
+\begin_layout Description
+Total si 
+\begin_inset Formula $\forall a,b\in A:aRb\lor bRa$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Subsection
 Relación de equivalencia
 \end_layout
@@ -1162,7 +1170,450 @@ EJERCICIO.
 \end_layout
 
 \begin_layout Section
-Relación de orden
+Relaciones de orden
+\end_layout
+
+\begin_layout Subsection
+Definición
+\end_layout
+
+\begin_layout Standard
+Una relación 
+\begin_inset Formula $\leq$
+\end_inset
+
+ en un conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ es un orden parcial (o simplemente orden) si es reflexiva, transitiva y
+ antisimétrica.
+ Se dice que 
+\begin_inset Formula $\left(A,\leq\right)$
+\end_inset
+
+ es un conjunto parcialmente ordenado (poset).
+\end_layout
+
+\begin_layout Paragraph
+Observación
+\end_layout
+
+\begin_layout Standard
+La noción de orden parcial es mucho más intuitiva que la noción de preorden,
+ de hecho es un caso particular que no admite ciclos.
+\end_layout
+
+\begin_layout Standard
+Vale la pena notar tambien que en un poset si existen máximos o mínimos
+ son únicos.
+\end_layout
+
+\begin_layout Subsection
+Ordenes naturales
+\end_layout
+
+\begin_layout Standard
+Dados dos posets 
+\begin_inset Formula $\left(A,\leq_{A}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(B,\leq_{B}\right)$
+\end_inset
+
+ hay dos formas de definir un orden parcial en el producto cartesiano 
+\begin_inset Formula $A\times B$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Description
+Orden
+\begin_inset space ~
+\end_inset
+
+producto 
+\begin_inset Formula $\left(a,b\right)\leq\left(a',b'\right)\iff a\leq_{A}a'\land b\leq_{B}b'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Orden
+\begin_inset space ~
+\end_inset
+
+lexicográfico 
+\begin_inset Formula $\left(a,b\right)\leq\left(a',b'\right)\iff a\leq_{A}a'\lor\left(a=a'\land b\leq b'\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cadenas y anticadenas
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left(A,\leq\right)$
+\end_inset
+
+ un poset y 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+ un subconjunto, diremos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X,\leq\right)$
+\end_inset
+
+ es una cadena si el orden es total.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(X,\leq\right)$
+\end_inset
+
+ es una anticadena si: 
+\begin_inset Formula $\forall x,y\in X:x\leq y\Rightarrow x=y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Morfismos entre posets
+\end_layout
+
+\begin_layout Standard
+Los morfismos de posets son las funciones que 
+\begin_inset Quotes fld
+\end_inset
+
+respetan
+\begin_inset Quotes frd
+\end_inset
+
+ la estructura, es decir, el orden.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:\left(A,\leq\right)\to\left(B,\leq\right)$
+\end_inset
+
+ diremos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es un:
+\end_layout
+
+\begin_layout Description
+morfismo entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ si 
+\begin_inset Formula $f$
+\end_inset
+
+ es creciente, es decir: 
+\begin_inset Formula $x\leq y\Rightarrow f\left(x\right)\leq f\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+isomorfismo entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ si 
+\begin_inset Formula $x\leq y\iff f\left(x\right)\leq f\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+antiisomorfismo entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ si 
+\begin_inset Formula $x\leq y\iff f\left(y\right)\leq f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observación
+\end_layout
+
+\begin_layout Standard
+La existencia de una función biyectiva y monótona no implica que los ordenes
+ sean isomorfos, como demuestra el siguiente ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+id:\left(\mathbb{N},|\right)\to\left(\mathbb{N},\leq\right)
+\]
+
+\end_inset
+
+Dicha funcion es biyectiva y es morfismo de orden, sin embardo 
+\begin_inset Formula $id^{-1}$
+\end_inset
+
+ no lo es pues 
+\begin_inset Formula $2\leq3$
+\end_inset
+
+ pero 
+\begin_inset Formula $2\parallel3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Conjuntos bien ordenados
+\end_layout
+
+\begin_layout Standard
+Un orden total 
+\begin_inset Formula $\left(A,\leq\right)$
+\end_inset
+
+ se dice conjunto bien ordenado si:
+\begin_inset Formula 
+\[
+\forall B\subseteq A/B\neq\emptyset:B\text{ tiene elemento mínimo}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Existencia de elementos particulares en posets finitos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+En un poset finito siempre existen elementos maximales/minimales.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Teorema de isomorfismos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ es un isomorfismos (respectivamente antiisomorfismo) de orden si y solo
+ si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ son crecientes (respectivamente decrecientes).
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de ordenes totales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left(A,\leq\right)$
+\end_inset
+
+ un conjunto totalmente ordenado y 
+\begin_inset Formula $a\in A$
+\end_inset
+
+, entonces las siguientes proposiciones son equivalentes:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+ es maximal (minimal).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+ es cota superior (inferior).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+ es supremo (ínfimo).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a$
+\end_inset
+
+ es máximo (mínimo).
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Isomorfismo de ordenes totales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\left(A,\leq_{A}\right)$
+\end_inset
+
+ es un conjunto totalmente ordenado, 
+\begin_inset Formula $\left(B,\leq_{B}\right)$
+\end_inset
+
+ es un poset y 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ es biyectiva y crenciente (respectivamente decreciente), entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es un isomorfismo (respectivamente antiisomorfismo) de orden.
+ En particular 
+\begin_inset Formula $\left(B,\leq_{B}\right)$
+\end_inset
+
+ es totalmente ordenado.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Principio de buena ordenación
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Todo conjunto admite un buen orden.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
+\end_layout
+
+\begin_layout Subsection
+Principio del buen orden
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Todo subconjunto de 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ es bien ordenado.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+EJERCICIO.
 \end_layout
 
 \begin_layout Chapter

@@ -334,7 +334,7 @@ Sabemos que
 \end_layout
 
 \begin_layout Enumerate
-Análogo.
+Trivial por dualidad.
 \end_layout
 
 \begin_layout Enumerate
@@ -921,11 +921,27 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Por propiedad, como 
+\begin_inset Formula $0\lor a=a$
+\end_inset
+
+, entonces 
+\begin_inset Formula $0\land a=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Por propiedad, como 
+\begin_inset Formula $a\land1=a$
+\end_inset
+
+, entonces 
+\begin_inset Formula $a\lor1=1$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -968,7 +984,15 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Basta considerar 
+\begin_inset Formula $id:\mathbb{N}\to\mathbb{N}_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $id:-\mathbb{N}\to-\mathbb{N}_{0}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1058,11 +1082,56 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que 
+\begin_inset Formula $a\land\overline{a}=0$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{\overline{a}}\land\overline{a}=0$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{\overline{a}}$
+\end_inset
+
+ son complementos de 
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+, luego como el complemento es único debe ser 
+\begin_inset Formula $\overline{\overline{a}}=a$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos 
+\begin_inset Formula $0\lor\overline{0}=1$
+\end_inset
+
+ y como 
+\begin_inset Formula $0\lor x=x$
+\end_inset
+
+ (pues 
+\begin_inset Formula $0$
+\end_inset
+
+ es mínimo) entonces 
+\begin_inset Formula $0\lor\overline{0}=\overline{0}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\overline{0}=1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
