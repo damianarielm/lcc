@@ -1135,9 +1135,46 @@ Sabemos
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Para mostrar que el complemento de 
+\begin_inset Formula $a\land b$
+\end_inset
+
+ es 
+\begin_inset Formula $\overline{a}\lor\overline{b}$
+\end_inset
+
+ debemos ver que 
+\begin_inset Formula $\left(\overline{a}\lor\overline{b}\right)\lor\left(a\land b\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(\overline{a}\lor\overline{b}\right)\lor\left(a\land b\right)=0$
+\end_inset
+
+.
+ 
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{\left(\overline{a}\lor\overline{b}\right)\lor\left(a\land b\right)=\left(\left(\overline{a}\lor\overline{b}\right)\lor a\right)\land\left(\left(\overline{a}\lor\overline{b}\right)\lor b\right)=\left(1\lor\overline{b}\right)\land\left(1\land\overline{a}\right)=1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{\left(\overline{a}\lor\overline{b}\right)\land\left(a\land b\right)=\left(\overline{a}\land\left(a\land b\right)\right)\lor\left(\overline{b}\land\left(a\land b\right)\right)=\left(0\land b\right)\lor\left(0\land a\right)=0}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La otra igualdad se deduce por dualidad.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sean 
@@ -1185,13 +1222,117 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Sabemos que 
+\begin_inset Formula $X\neq\emptyset$
+\end_inset
+
+ por ser retículo, luego 
+\begin_inset Formula $h\left(X\right)\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $a',b'\in h\left(X\right)\subseteq Y$
+\end_inset
+
+ tales que 
+\begin_inset Formula $h\left(a\right)=a'$
+\end_inset
+
+ y 
+\begin_inset Formula $h\left(b\right)=b'$
+\end_inset
+
+.
+ Sabemos que 
+\begin_inset Formula $h\left(a\land b\right)\in Y$
+\end_inset
+
+ y como 
+\begin_inset Formula $h$
+\end_inset
+
+ es un homomorfísmo resulta 
+\begin_inset Formula $h\left(a\lor b\right)=h\left(a\right)\lor'h\left(b\right)=a'\lor'b'\in Y$
+\end_inset
+
+.
+ Analogamente para 
+\begin_inset Formula $a'\land'b'$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $a',b',c'\in h\left(X\right)\subseteq Y$
+\end_inset
+
+ tales que 
+\begin_inset Formula $h\left(a\right)=a'$
+\end_inset
+
+, 
+\begin_inset Formula $h\left(b\right)=b'$
+\end_inset
+
+ y 
+\begin_inset Formula $h\left(c\right)=c'$
+\end_inset
+
+, luego 
+\begin_inset Formula $a\land\left(b\lor c\right)=\left(a\land b\right)\lor\left(a\land c\right)$
+\end_inset
+
+ y como 
+\begin_inset Formula $h$
+\end_inset
+
+ es un homomorfísmo resultan:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h\left(a\land\left(b\lor c\right)\right)=h\left(a\right)\land'h\left(b\lor c\right)=a'\land'\left(b'\lor c'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h\left(\left(a\land b\right)\lor\left(a\land c\right)\right)=h\left(a\land b\right)\lor'h\left(a\land c\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left(h\left(a\right)\land'h\left(b\right)\right)\lor'\left(h\left(a\right)\land'h\left(c\right)\right)=\left(a'\land'b'\right)\lor'\left(a'\land'c'\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+La otra ley también vale por dualidad.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Verificar que todo isomorfismo de retículo se corresponde con un isomorfismo
@@ -1204,7 +1345,118 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $\left(X,\land,\lor\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Y,\land',\lor'\right)$
+\end_inset
+
+ retículos y 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ un isomorfismo de retículo.
+\end_layout
+
+\begin_layout Itemize
+Veamos primero que si 
+\begin_inset Formula $f$
+\end_inset
+
+ es isomorfimo de retículo tambien lo es 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $a',b'\in Y$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f\left(a\right)=a'$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(b\right)=b'$
+\end_inset
+
+ luego sabemos que 
+\begin_inset Formula $f\left(a\lor b\right)=f\left(a\right)\lor'f\left(b\right)=a'\lor'b'$
+\end_inset
+
+ por lo que 
+\begin_inset Formula 
+\[
+f^{-1}\left(a'\lor'b'\right)=a\lor b=f^{-1}\left(a'\right)\lor f^{-1}\left(b'\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Analogamente para 
+\begin_inset Formula $a\land b$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ahora 
+\begin_inset Formula $a,b\in X/a\preceq b$
+\end_inset
+
+ resultará 
+\begin_inset Formula $a\lor b=b$
+\end_inset
+
+ y como 
+\begin_inset Formula $f$
+\end_inset
+
+ es isomorfismo: 
+\begin_inset Formula 
+\[
+a\preceq b\iff a\lor b=b\iff f\left(a\lor b\right)=f\left(b\right)\Rightarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Rightarrow f\left(a\right)\lor'f\left(b\right)=f\left(b\right)\iff f\left(a\right)\preceq'f\left(b\right)
+\]
+
+\end_inset
+
+Por otro lado:
+\begin_inset Formula 
+\[
+f\left(a\right)\preceq'f\left(b\right)\iff f\left(a\right)\lor'f\left(b\right)=f\left(b\right)\iff f^{-1}\left(f\left(a\right)\lor'f\left(b\right)\right)=f^{-1}\left(f\left(b\right)\right)\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff f^{-1}\left(f\left(a\right)\right)\lor f^{-1}\left(f\left(b\right)\right)=b\iff a\lor b=b\iff a\preceq b
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1218,9 +1470,107 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $\left(\mathcal{P}\left(A\right),\cap,\cup\right)$
+\end_inset
+
+ un retículo y 
+\begin_inset Formula $X,Y\in\mathcal{P}\left(A\right)$
+\end_inset
+
+, debemos ver que 
+\begin_inset Formula $X\cap Y$
+\end_inset
+
+ y 
+\begin_inset Formula $X\cup Y$
+\end_inset
+
+ estan en 
+\begin_inset Formula $\mathcal{P}\left(A\right)$
+\end_inset
+
+; o lo que es lo mismo, que estan contenidos en 
+\begin_inset Formula $A$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+Como 
+\begin_inset Formula $X,Y\in\mathcal{P}\left(A\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+ y 
+\begin_inset Formula $Y\subseteq A$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\alpha\in X\cap Y\iff\alpha\in X\land\alpha\in Y\Rightarrow x\in A
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $X,Y\in\mathcal{P}\left(A\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+ y 
+\begin_inset Formula $Y\subseteq A$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\alpha\in X\cup Y\iff\alpha\in X\lor\alpha\in Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\alpha\in X\Rightarrow\alpha\in A$
+\end_inset
+
+ (pues 
+\begin_inset Formula $X\subseteq A$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\alpha\in T\Rightarrow\alpha\in A$
+\end_inset
+
+ (pues 
+\begin_inset Formula $Y\subseteq A$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 
@@ -1242,7 +1592,11 @@ Knaster-Tarski
 \end_inset
 
  es 
-\begin_inset Formula $\bigwedge\left\{ x\in L|f\left(x\right)\sqsubseteq x\right\} $
+\begin_inset Formula $y=\bigwedge D$
+\end_inset
+
+ donde 
+\begin_inset Formula $D=\left\{ x\in L|f\left(x\right)\sqsubseteq x\right\} $
 \end_inset
 
 .
@@ -1253,8 +1607,155 @@ Knaster-Tarski
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Veamos que 
+\begin_inset Formula $y$
+\end_inset
+
+ es punto fijo, es decir que 
+\begin_inset Formula $f\left(y\right)=y$
+\end_inset
+
+ o lo que es lo mismo: 
+\begin_inset Formula $f\left(y\right)\sqsubseteq y$
+\end_inset
+
+ y 
+\begin_inset Formula $y\sqsubseteq f\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{f\left(y\right)\sqsubseteq y}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x\in D$
+\end_inset
+
+ luego por definición 
+\begin_inset Formula $f\left(x\right)\sqsubseteq x$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $y$
+\end_inset
+
+ es cota inferior de 
+\begin_inset Formula $D$
+\end_inset
+
+ resulta 
+\begin_inset Formula $y\sqsubseteq x$
+\end_inset
+
+ y como 
+\begin_inset Formula $f$
+\end_inset
+
+ es monotona 
+\begin_inset Formula $f\left(y\right)\sqsubseteq f\left(x\right)$
+\end_inset
+
+.
+ Ahora por transitividad 
+\begin_inset Formula $f\left(y\right)\sqsubseteq x$
+\end_inset
+
+, es decir que 
+\begin_inset Formula $f\left(y\right)$
+\end_inset
+
+ también es cota inferior de 
+\begin_inset Formula $D$
+\end_inset
+
+ y como 
+\begin_inset Formula $y$
+\end_inset
+
+ es la mayor de las cotas inferores de 
+\begin_inset Formula $D$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f\left(y\right)\sqsubseteq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{y\sqsubseteq f\left(y\right)}$
+\end_inset
+
+: Sabemos que 
+\begin_inset Formula $y$
+\end_inset
+
+ es cota inferior de 
+\begin_inset Formula $D$
+\end_inset
+
+, es decir 
+\begin_inset Formula $\text{\ensuremath{\forall x\in D:y\sqsubseteq x}}$
+\end_inset
+
+ y como 
+\begin_inset Formula $f$
+\end_inset
+
+ es monotona resulta 
+\begin_inset Formula $f\left(y\right)\sqsubseteq f\left(x\right)$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $f\left(y\right)$
+\end_inset
+
+ también es cota inferior de 
+\begin_inset Formula $D$
+\end_inset
+
+; pero 
+\begin_inset Formula $y$
+\end_inset
+
+ es la menor de ellas luego 
+\begin_inset Formula $y\sqsubseteq f\left(y\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Resta ver que 
+\begin_inset Formula $y$
+\end_inset
+
+ es el menor de los puntos fijos.
+ Como todos los puntos fijos estan en 
+\begin_inset Formula $D$
+\end_inset
+
+, debemos ver que: 
+\begin_inset Formula $\forall x\in D:y\sqsubseteq x$
+\end_inset
+
+, lo cual se deduce sabiendo que 
+\begin_inset Formula $y$
+\end_inset
+
+ es cota inferior de 
+\begin_inset Formula $D$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
