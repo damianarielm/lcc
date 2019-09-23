@@ -1,0 +1,285 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Describa los módulos 
+\begin_inset Formula $2MIL$
+\end_inset
+
+, la guia de módulos, la estructura física (proyección de la estructura
+ lógica sobre el hardware del sistema) y la distribución de datos y aplicaciones
+ de un diseño basado en Cliente/Servidor de tres capas para los siguientes
+ requerimientos.
+ Ponga especial cuidado en diseñar un sistema que sea modificable y extensible
+ a un gran número de usuarios concurrentes y distribuidos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Suponga un sistema muy simple para trabajar con figuras geométricas.
+ Se piensa en dos 
+\begin_inset Formula $GUI$
+\end_inset
+
+ diferentes: modo comando y gráfica.
+ En la gráfica hay botones para dibujar un rectángulo, un óvalo, rotar el
+ rectángulo, rotar el óvalo y almacenar y recuperar los dibujos.
+ En la 
+\begin_inset Formula $GUI$
+\end_inset
+
+ en modo comando, hay programas para hacer las mismas cosas que en la gráfica.
+ Los dibujos se almacenan en archivos 
+\begin_inset Formula $JPG$
+\end_inset
+
+ de un sistema tipo 
+\begin_inset Formula $UNIX$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describa los módulos 
+\begin_inset Formula $2MIL$
+\end_inset
+
+, la guía de módulos y el diagrama canónico de un diseño basado en 
+\emph on
+Blackboard Systems
+\emph default
+ para los siguientes requerimientos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+El programa a diseñar debe armar diversos modelos de automóviles y mostrarlos
+ en pantalla.
+ Para armar los automóviles el programa cuenta con objetos gráficos que
+ representan las diversas partes de gran cantidad de modelos de automóviles;
+ se acompañan los objetos con 
+\emph on
+metadatos
+\emph default
+ que describen distintas caracteristicas técnicas de los objetos (tamaño,
+ dimensiones, color, potencia, etc; depende del objeto las caractgeristicas
+ que aparecen).
+ Tan importante como obtener un automóvil terminado es obtener los subsistemas
+ más importantes tales como chasis, carrocería, motor, sistema eléctrico,
+ etc.
+ o incluso componentes de esos subsistemas tales como tablero, carburador,
+ alternador, diferencial, etc.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describa los ítems con probabilidad de cambio, los modulos 
+\begin_inset Formula $2MIL$
+\end_inset
+
+, la guía de módulos y la estructura de objetos de un diseño par alos siguientes
+ requerimientos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Una empresa de colectivos de larga distancia desea un sistema para manejar
+ la reserva y venta de pasajes.
+ Un pasajero le indica al empleado de la ventanilla fecha de viaje, origen
+ y destino; el empleado verifica que haya lugares disponibles y luego el
+ pasajero le indica el asiento que desea (o uno que este libre).
+ Claramente no se puede vender dos veces el mimo asiento en el mismo colectivo.
+ Tener en cuenta que lo viajes muchas veces tienen paradas intermedias y
+ que hay pasajeros que compran tramos intermedios.
+ Por lo tanto, se debe tratar de maximizar el uso del colectivo sin mover
+ a la gente de asiento durante todo el viaje que haya comprado.
+ Cada colectivo asignado a un viaje tiene una configuración de asientos
+ diferentes, aunque existen modelos de colectivos tales que todos tienen
+ la misma configuración.
+ No siempre el viaje entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ de los lo lunes a las 8:00 tiene asignado el mismo colectivo.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Documente apropiadamente un diseño para los los siguientes requerimientos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se trata de los requerimientos para un sistema de control de stock que será
+ vendido a empresas de distintos rubros (y posiblemen te de dinstintos paises).
+\end_layout
+
+\begin_layout Standard
+El stock se compone de categorias, subcategorias, sub-subcategorias de productos
+ y de otras agrupaciones de productos que pueden anidarse indefinidamente.
+ Cualquiera de estas divisiones tiene un nuombre y una descripcion.
+ Los productos tienen nombre, descripcion, proveedor, cantidad, etc.
+\end_layout
+
+\begin_layout Standard
+El sistema debe impedir que el stock de cada producto no cumpla ciertas
+ condiciones respecto de la cantidad de ese producto u otros.
+ Desconocemos de ante mano las diversas estrategrias de control de stock
+ que tendran nuestros potenciales clientes.
+ Por el momento debemos implementar una estrategia muy simple que comunique
+ al usuario cada vez que la cantidad de un producto cae por debajo de cierto
+ nuero critico (obviamente este numero no es el mismo para todos los productos).
+ Tambien desconocemos la forma en que el usuario querra que estos eventos
+ le sean comunicados (en la pantalla de su PC, mediante un mail, o un SMS,
+ etc.).
+\end_layout
+
+\begin_layout Standard
+Las dos operaciones basicas sobre el stock son ingreso de nueva mercaderia
+ y salida de mercaderia existente pero tambgien son importantes las operaciones
+ para dar de alta o baja una categoria, un producto o reacomodar un producto
+ en otra categoria.
+ Creemos que el ingreso o egreso de mercaderia podra detectarse, tal vez,
+ por lectores de codigo de barras, carga manual o algun otro mecanismo similar.
+ Ademas el usuario debe poder consultar el stock de diversas formas y desde
+ estaciones de trabajo muy diferentes (por ejemplo una PC, una lapto, una
+ PDA, etc.); mas aun se espera poder hacer analisis estadisticos sobre la
+ evolucion del stock (como el sistema recien esta siendo concebido no sabemos
+ con presicion cuales son estos analisis, esperamos tener feedback de nuestros
+ clientes para ir implementando tales funcionalidades).
+ Obviamente los datos del stock se guardaran en una base de datos que suponemos
+ el cliente nos impondra (o mejor, queremos poder adaptarnos al DBMS o repositor
+io que el cliente tenga).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describa los modulos 
+\begin_inset Formula $2MIL$
+\end_inset
+
+ y la guia de modulos de un diseño para los siguientes requerimientos, segun
+ los item de cambio que se enuncian mas abajo.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Se desarrollara un sistema operativo que impondra diversas politicas de
+ control de acceso sobre los archivos y directorios.
+ El control de acceso podra realizarse sobre la base de datos tales como
+ el indentificador de usuario, el identificador de proceso, los grupos a
+ los cuales pertenezca el usuario, los archivos que ya tenga abierto el
+ usuario o el proceso, el programa que esté solicitando acceso, los atributos
+ de acceso del archivo y/o la operacion de acceso que se solicite (lectura,
+ escritura, modificacion de atributos de seguridad).
+ Ademas cada vez que un proceso solicite acceso a un archivo, el sistema
+ operativo deberá avisar tal suceso a un componente que gestiona ese tipo
+ de informacion.
+ Este componente guardara los datos de los sucesos que se le informen segun
+ una politica que se establecera en base a los datos mencionados mas arriba.
+\end_layout
+
+\begin_layout Paragraph
+Items de cambio
+\end_layout
+
+\begin_layout Itemize
+Se desconoce cuales son todas las politicas de control de acceso.
+\end_layout
+
+\begin_layout Itemize
+Deberá ser posible combinar politicas de control de acceso de manera tal
+ que el acceso se permita o se niegue segun el resultado que arroje cada
+ una de ellas.
+\end_layout
+
+\begin_layout Itemize
+Podria ser necesario que alguna politica utilice datos que inicialmente
+ no fueron considerados.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
