@@ -1620,6 +1620,467 @@ EJERCICIO.
 Retículos
 \end_layout
 
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Definición en teoría del orden
+\end_layout
+
+\begin_layout Standard
+Un poset 
+\begin_inset Formula $\left(L,\leq\right)$
+\end_inset
+
+ se dice un retículo si:
+\begin_inset Formula 
+\[
+\forall a,b\in L\exists x,y\in L/x=\sup\left\{ a,b\right\} \land y=\inf\left\{ a,b\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+No necesariamente existen 
+\begin_inset Formula $\max\left\{ a,b\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $\min\left\{ a,b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Tomar supremo/ínfimo define dos operaciones en 
+\begin_inset Formula $L$
+\end_inset
+
+: 
+\begin_inset Formula $a\lor b:=\sup\left\{ a,b\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $a\land b:=\inf\left\{ a,b\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Definición algebraica
+\end_layout
+
+\begin_layout Standard
+Un retículo 
+\begin_inset Formula $\left(L,\lor,\land\right)$
+\end_inset
+
+ consiste de un conjunto no vacío 
+\begin_inset Formula $L$
+\end_inset
+
+ junto con dos operaciones 
+\begin_inset Formula $\land,\lor$
+\end_inset
+
+ que satisfacen:
+\end_layout
+
+\begin_layout Description
+Asociatividad 
+\begin_inset Formula $\forall x,y,z\in L\begin{cases}
+x\lor\left(y\lor z\right)=\left(x\lor y\right)\lor z\\
+x\land\left(y\land z\right)=\left(x\land y\right)\land z
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Conmutatividad 
+\begin_inset Formula $\forall x,y\in L\begin{cases}
+x\lor y=y\lor x\\
+x\land y=y\land x
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Absorción 
+\begin_inset Formula $\forall x,y\in L\begin{cases}
+x\lor\left(x\land y\right)=x\\
+x\land\left(x\lor y\right)=x
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teoremas
+\end_layout
+
+\begin_layout Subsubsection
+Equivalencia de las definiciones
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\left(L,\lor,\land\right)$
+\end_inset
+
+ es un retículo como en la definición algebraica, entonces
+\begin_inset Formula 
+\[
+x\leq y\iff x\lor y=y
+\]
+
+\end_inset
+
+definie un orden parcial 
+\begin_inset Formula $\left(L,\leq\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x\lor y=\sup\left\{ x,y\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $x\land y=\inf\left\{ x,y\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Veamos que 
+\begin_inset Formula $\leq$
+\end_inset
+
+ así definido es un orden parcial.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Por absorción 
+\begin_inset Formula $x\land\left(x\lor x\right)=x$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x\lor x=x\lor\left(x\land\left(x\lor x\right)\right)$
+\end_inset
+
+ y nuevamente por absorción:
+\begin_inset Formula 
+\[
+\boxed{x\lor x}=x\lor\left(x\land\left(x\lor x\right)\right)=\boxed{x}\iff x\leq x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Antisimetría: Supongamos 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+ e 
+\begin_inset Formula $y\leq x$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{x\leq y\iff x\lor y=y}}$
+\end_inset
+
+ e 
+\begin_inset Formula $y\leq x\iff y\lor x=x$
+\end_inset
+
+ y por conmutatividad 
+\begin_inset Formula $x=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Supongamos que 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+ e 
+\begin_inset Formula $y\leq z$
+\end_inset
+
+, luego 
+\begin_inset Formula $\text{\ensuremath{x\leq y\iff x\lor y=y}}$
+\end_inset
+
+ e 
+\begin_inset Formula $y\leq z\iff y\lor z=z$
+\end_inset
+
+.
+ Calculemos 
+\begin_inset Formula $x\lor z$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+x\lor z=x\lor\left(y\lor z\right)=\left(x\lor y\right)\lor z=y\lor z=z
+\]
+
+\end_inset
+
+Como 
+\begin_inset Formula $x\lor z=z$
+\end_inset
+
+ entonces 
+\begin_inset Formula $x\leq z$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Finalmente veamos que 
+\begin_inset Formula $x\lor y=\sup\left\{ x,y\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $x\land y=\inf\left\{ x,y\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Por definición 
+\begin_inset Formula $x\leq x\lor y\iff x\lor\left(x\lor y\right)=\left(x\lor x\right)\lor y=x\lor y$
+\end_inset
+
+ lo cual vale por idempotencia, luego sabemos que 
+\begin_inset Formula $x\lor y$
+\end_inset
+
+ es cota superior de 
+\begin_inset Formula $\left\{ x,y\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $z$
+\end_inset
+
+ otra cota superior del mismo conjunto, entonces 
+\begin_inset Formula $\text{\ensuremath{x\leq z\iff x\lor z=z}}$
+\end_inset
+
+ e 
+\begin_inset Formula $y\leq z\iff y\lor z=z$
+\end_inset
+
+, luego
+\begin_inset Formula 
+\[
+\boxed{\left(x\lor y\right)\lor z}=x\lor\left(y\lor z\right)=x\lor z=\boxed{z}\Rightarrow x\lor y\leq z
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $x\lor y$
+\end_inset
+
+ es la mínima cota supeior, es decir 
+\begin_inset Formula $\text{\ensuremath{x\lor y=\sup\left\{ x,y\right\} }}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Analogamente para 
+\begin_inset Formula $x\land y=\inf\left\{ x,y\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Veamos que si definimos 
+\begin_inset Formula $x\lor y=\sup\left\{ x,y\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $x\land y=\inf\left\{ x,y\right\} $
+\end_inset
+
+, entonces se verifica le definición algebraica de 
+\begin_inset Formula $\left(L,\land,\lor\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Asociatividad: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Conmutatividad: 
+\begin_inset Formula $x\lor y=\sup\left\{ x,y\right\} =\sup\left\{ y,x\right\} =y\lor x$
+\end_inset
+
+.
+ Analogamente para 
+\begin_inset Formula $x\land y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Absorción: COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Propiedades derivadas
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\left(L,\land,\lor\right)$
+\end_inset
+
+ un retículo y 
+\begin_inset Formula $x,y,z,w\in L$
+\end_inset
+
+, entonces:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\leq x\lor y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\land y\leq x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\leq y\iff x\lor y=y\iff x\land y=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\noun on
+Idempotencia
+\noun default
+: 
+\begin_inset Formula $x\lor x=x=x\land x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\noun on
+Compatibilidad
+\noun default
+: 
+\begin_inset Formula $x\leq z\land y\leq z\Rightarrow\begin{cases}
+x\lor y\leq z\lor w\\
+x\land y\leq z\land w
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Vease reflexividad en equivalencia de las definiciones.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \begin_layout Chapter
 Grupos
 \end_layout
