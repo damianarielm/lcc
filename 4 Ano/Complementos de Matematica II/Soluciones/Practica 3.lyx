@@ -93,47 +93,128 @@ Analizar en cada caso si
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\mathbb{Z}$
+\end_inset
+
+, 
+\begin_inset Formula $a\oplus b=a-b$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\mathbb{N}_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $a\oplus b=a\cdot b$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G$
+\end_inset
+
+ es el conjunto de polinomios de grado menor o igual que 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ , con la suma usual.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G$
+\end_inset
+
+ es el conjunto de polinomios de grado menor o igual que 
+\begin_inset Formula $n$
+\end_inset
+
+ y el polinomio nulo, 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ , con la suma usual.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G$
+\end_inset
+
+ es el conjunto de polinomios de grado igual a 
+\begin_inset Formula $n$
+\end_inset
+
+, 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ , con la suma usual.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\mathbb{R}^{n\times n}$
+\end_inset
+
+ con la suma usual.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\mathbb{R}^{n\times n}$
+\end_inset
+
+ con el producto usual.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\mathbb{R}^{n\times n}$
+\end_inset
+
+ con el producto definido por 
+\begin_inset Formula $\left(A\circ B\right)_{ij}=a_{ij}\cdot b_{ij}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\mathbb{Z}^{+}$
+\end_inset
+
+ con el producto definido por 
+\begin_inset Formula $n\oplus k=\gcd\left(n,k\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\mathbb{Z}^{+}$
+\end_inset
+
+ con el producto definido por 
+\begin_inset Formula $n\oplus k=\text{lcm}\left(n,k\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=\left\{ f\in\left[0,1\right]\to\mathbb{R}|f\text{ es funcion continua}\right\} $
+\end_inset
+
+ con el producto definido por 
+\begin_inset Formula $f\oplus g=f+g$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
@@ -348,7 +429,19 @@ Probar que si
 \begin_inset Formula $G$
 \end_inset
 
- es un grupo 
+ es un grupo y 
+\begin_inset Formula $g\in G$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left(g^{a}\right)^{b}=g^{ab}$
+\end_inset
+
+ para todos los enteros 
+\begin_inset Formula $a,b$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -362,7 +455,71 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
+
+\noun on
+Diffie-Hellman
+\noun default
+.
+ Alice y Bob desean ponerse de acuerdo en un número secreto.
+ Sin em bargo, saben que sus comunicaciones son monitoreadas por Eve, lo
+ cual parece imposibilitar esta tarea.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Utilizando el resultado del ejercicio anterior, y sabiendo que existe un
+ grupo cíclico finito 
+\begin_inset Formula $G$
+\end_inset
+
+ y su generador 
+\begin_inset Formula $ $
+\end_inset
+
+g para los cuales resulta computacionalmente costoso resolver el problema
+ de Diffie-Hellman (dados 
+\begin_inset Formula $g^{a}$
+\end_inset
+
+ y 
+\begin_inset Formula $g^{b}$
+\end_inset
+
+, encontrar 
+\begin_inset Formula $g^{ab}$
+\end_inset
+
+); proponer un protocolo que les permita a Alice y Bob establecer una clave
+ en común y secreta.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ es un grupo tal que 
+\begin_inset Formula $\left(a\cdot b\right)^{2}=a^{2}\cdot b^{2}$
+\end_inset
+
+ para todo par 
+\begin_inset Formula $a,b\in G$
+\end_inset
+
+, probar que 
+\begin_inset Formula $G$
+\end_inset
+
+ es abeliano.
 \end_layout
 
 \begin_deeper
@@ -376,21 +533,20 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
+Sea 
+\begin_inset Formula $\left(M,\oplus,e\right)$
+\end_inset
 
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
+ un monoide finito.
+ Probar que si vale la ley de cancelación a derecha (
+\begin_inset Formula $a\oplus c=b\oplus c\Rightarrow a=b$
+\end_inset
 
-\begin_layout Standard
-COMPLETAR.
-\end_layout
+), entonces 
+\begin_inset Formula $\left(M,\oplus,e\right)$
+\end_inset
 
-\end_deeper
-\begin_layout Enumerate
-COMPLETAR.
+ es en realidad un grupo.
 \end_layout
 
 \begin_deeper
@@ -446,7 +602,48 @@ Probar que
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Consideremos ahora el conjunto de las clases de equivalencia definidas por
+ 
+\begin_inset Formula $\sim$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+, que notaremos 
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+, es decir
+\begin_inset Formula 
+\[
+\mathbb{Z}_{n}=\left\{ \overline{x}/x\in\mathbb{Z}\right\} 
+\]
+
+\end_inset
+
+donde
+\begin_inset Formula 
+\[
+\overline{x}=\left\{ y\in\mathbb{Z}/x\sim y\right\} 
+\]
+
+\end_inset
+
+y definamos en 
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+ la operación
+\begin_inset Formula 
+\[
+\overline{x}+\overline{y}=\overline{x+y}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -500,16 +697,209 @@ COMPLETAR.
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
+Sean 
+\begin_inset Formula $\left(G,\oplus\right)$
+\end_inset
+
+ un grupo y 
+\begin_inset Formula $H\subseteq G$
+\end_inset
+
+ con 
+\begin_inset Formula $H\neq\emptyset$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $H$
+\end_inset
+
+ es un subgrupo de 
+\begin_inset Formula $G$
+\end_inset
+
+ si y solo si:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a\oplus b\in H$
+\end_inset
+
+, para todo par 
+\begin_inset Formula $a,b\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{-1}\in H$
+\end_inset
+
+, para todo 
+\begin_inset Formula $a\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que si 
+\begin_inset Formula $H$
+\end_inset
+
+ y 
+\begin_inset Formula $K$
+\end_inset
+
+ son subgrupos de un grupo 
+\begin_inset Formula $G$
+\end_inset
+
+ entonces 
+\begin_inset Formula $H\cap K$
+\end_inset
+
+ es subgrupo de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+, definimos
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+\tau_{a,b} & : & \mathbb{R} & \to & \mathbb{R}\\
+ &  & x & \mapsto & \tau_{a,b}\left(x\right)=ax+b
+\end{array}
+\]
+
+\end_inset
+
+Sea 
+\begin_inset Formula $G=\left\{ \tau_{a,b}/a\in\mathbb{R}-\left\{ 0\right\} ,b\in\mathbb{R}\right\} $
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
+Probar que 
+\begin_inset Formula $G$
+\end_inset
+
+ es un grupo bajo la composición.
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $H=\left\{ \tau_{a,b}\in G/a\in\mathbb{Q}\right\} $
+\end_inset
+
+ es un subgrupo de 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $N=\left\{ \tau_{1,b}\in G\right\} $
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $N$
+\end_inset
+
+ es un subgrupo de 
+\begin_inset Formula $G$
+\end_inset
+
+ y que 
+\begin_inset Formula $g\in G,n\in N\Rightarrow gng^{-1}\in N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
 COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\left(G,\oplus\right)$
+\end_inset
+
+ un grupo y 
+\begin_inset Formula $\varphi:G\to G/\varphi\left(a\right)=a^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ es biyectiva.
+\end_layout
+
+\begin_layout Enumerate
+¿Que relación hay entre 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ y 
+\begin_inset Formula $\varphi^{-1}$
+\end_inset
+
+?
 \end_layout
 
 \begin_layout Paragraph
@@ -526,7 +916,15 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Probar que para todo monoide 
+\begin_inset Formula $\left(M,\otimes,e\right)$
+\end_inset
+
+ existe un homomorfismo inyectivo emb
+\begin_inset Formula $:\left(M,\otimes,e\right)\to\left(M\to M,\circ,id_{X}\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -540,67 +938,16 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
+\noun on
+Cayley
+\noun default
+.
+ Probar que todo grupo 
+\begin_inset Formula $\left(G,\otimes,e\right)$
+\end_inset
 
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Paragraph
-Soluciones
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Paragraph
-Soluciones
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-COMPLETAR.
+ es isomorfo a un subgrupo de un grupo de biyecciones.
 \end_layout
 
 \begin_deeper
@@ -614,7 +961,28 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ un grupo cíclico.
+ Probar que 
+\begin_inset Formula $G$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ o a 
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+ para algun 
+\begin_inset Formula $n$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -628,38 +996,56 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
+Verificar en cada uno de los siguientes casos si 
+\begin_inset Formula $\phi:G\to H$
+\end_inset
 
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-COMPLETAR.
+ es un homomorfismo de grupo:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=H=\mathbb{R}-\left\{ 0\right\} $
+\end_inset
+
+ bajo la multiplicación usual, 
+\begin_inset Formula $\phi\left(x\right)=x^{2}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=H=\mathbb{R}-\left\{ 0\right\} $
+\end_inset
+
+ bajo la multiplicación usual, 
+\begin_inset Formula $\phi\left(x\right)=2^{x}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=H=\left(\mathbb{R},+\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\phi\left(x\right)=x+1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $G=H=\left(\mathbb{R},+\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\phi\left(x\right)=13x$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph
