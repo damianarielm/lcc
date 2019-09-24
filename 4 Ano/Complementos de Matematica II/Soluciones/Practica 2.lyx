@@ -505,7 +505,7 @@ Si
 
 \begin_layout Standard
 Sea 
-\begin_inset Formula $f$
+\begin_inset Formula $p$
 \end_inset
 
  un polinomio en 
@@ -526,7 +526,7 @@ Sea
 
 .
  Probar que 
-\begin_inset Formula $f\left(x_{1},\ldots,x_{n}\right)\preceq f\left(y_{1},\ldots,y_{n}\right)$
+\begin_inset Formula $p\left(x_{1},\ldots,x_{n}\right)\preceq p\left(y_{1},\ldots,y_{n}\right)$
 \end_inset
 
 .
@@ -536,10 +536,60 @@ Sea
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Caso base: Si 
+\begin_inset Formula $p=\pi_{i}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\pi_{i}\left(x_{1},\ldots,x_{n}\right)=x_{i}\preceq y_{i}=\pi_{i}\left(y_{1},\ldots,y_{n}\right)$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+Caso inductivo: Supongamos que 
+\begin_inset Formula $f\left(x_{1},\ldots,x_{n}\right)\preceq f\left(y_{1},\ldots,y_{n}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $g\left(x_{1},\ldots,x_{n}\right)\preceq g\left(y_{1},\ldots,y_{n}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $p=f\lor g$
+\end_inset
+
+ entonces 
+\begin_inset Formula $p\left(x_{1},\ldots,x_{n}\right)=f\left(x_{1},\ldots,x_{n}\right)\lor g\left(x_{1},\ldots,x_{n}\right)$
+\end_inset
+
+ y por compatibilidad en la hipótesis inductiva:
+\begin_inset Formula 
+\[
+f\left(x_{1},\ldots,x_{n}\right)\lor g\left(x_{1},\ldots,x_{n}\right)\preceq f\left(y_{1},\ldots,y_{n}\right)\lor g\left(y_{1},\ldots,y_{n}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Analogamente para 
+\begin_inset Formula $p=f\land g$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Un retículo 
@@ -859,10 +909,14 @@ end{tikzpicture}
 
 \begin_layout Standard
 donde puede observarse que es modular pero 
-\begin_inset Formula $y\lor\left(x\land z\right)=y\neq1=\left(y\lor x\right)\land\left(y\lor z\right)$
+\begin_inset Formula 
+\[
+y\lor\left(x\land z\right)=y\neq1=\left(y\lor x\right)\land\left(y\lor z\right)
+\]
+
 \end_inset
 
-.
+
 \end_layout
 
 \end_deeper
@@ -1144,7 +1198,7 @@ Para mostrar que el complemento de
 \end_inset
 
  debemos ver que 
-\begin_inset Formula $\left(\overline{a}\lor\overline{b}\right)\lor\left(a\land b\right)$
+\begin_inset Formula $\left(\overline{a}\lor\overline{b}\right)\lor\left(a\land b\right)=1$
 \end_inset
 
  y 
@@ -1450,10 +1504,6 @@ f\left(a\right)\preceq'f\left(b\right)\iff f\left(a\right)\lor'f\left(b\right)=f
 \iff f^{-1}\left(f\left(a\right)\right)\lor f^{-1}\left(f\left(b\right)\right)=b\iff a\lor b=b\iff a\preceq b
 \]
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -1819,8 +1869,64 @@ Sea
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Veamos que 
+\begin_inset Formula $\left(P,\leq\right)$
+\end_inset
+
+ es un retículo: Sean 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+, claramente 
+\begin_inset Formula $x$
+\end_inset
+
+ es cota inferior de 
+\begin_inset Formula $\left\{ x,y\right\} $
+\end_inset
+
+.
+ Ademas debe ser la mayor, pues si existe otra cota inferior 
+\begin_inset Formula $h$
+\end_inset
+
+ mayor a 
+\begin_inset Formula $x$
+\end_inset
+
+ tendríamos 
+\begin_inset Formula $h\leq x$
+\end_inset
+
+ (por ser cota inferior) y 
+\begin_inset Formula $x\leq h$
+\end_inset
+
+ (por ser mayor) por lo que 
+\begin_inset Formula $h=x$
+\end_inset
+
+.
+ Analogamente para el supremo.
+\end_layout
+
+\begin_layout Itemize
+Veamos que es distributivo: Hemos visto que en un orden total, el infimo
+ es el mínimo.
+ Sean 
+\begin_inset Formula $x\leq y\leq z$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+x\lor\left(y\land z\right)=x\lor y=y=y\land z=\left(x\lor y\right)\land\left(x\lor z\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1940,7 +2046,15 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ un conjunto, entonces 
+\begin_inset Formula $\left(\mathcal{P}\left(P\right),\cup,\cap,\emptyset,P\right)$
+\end_inset
+
+ es un algebra de boole.
 \end_layout
 
 \begin_layout Enumerate
@@ -1948,11 +2062,27 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Vease ejercicio 10c.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $x\leq y$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\lor y=y$
+\end_inset
+
+ y por leyes de De Morgan: 
+\begin_inset Formula 
+\[
+\overline{x}\land\overline{y}=\overline{y}\iff\overline{y}\land\overline{x}=\overline{y}\iff\overline{y}\leq\overline{x}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
