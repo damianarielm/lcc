@@ -1,5 +1,5 @@
 ###### Año 2019
 
-* Guido Macchi
+* Guido Arnaldo Macchi
 * Martin Arnaldo Ceresa
 * Guillermo Luis Grinblat

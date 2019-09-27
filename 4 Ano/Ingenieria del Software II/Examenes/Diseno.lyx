@@ -77,89 +77,79 @@
 
 \begin_body
 
-\begin_layout Enumerate
-Describa los módulos 
-\begin_inset Formula $2MIL$
-\end_inset
-
-, la guia de módulos, la estructura física (proyección de la estructura
- lógica sobre el hardware del sistema) y la distribución de datos y aplicaciones
- de un diseño basado en Cliente/Servidor de tres capas para los siguientes
- requerimientos.
- Ponga especial cuidado en diseñar un sistema que sea modificable y extensible
- a un gran número de usuarios concurrentes y distribuidos.
+\begin_layout Title
+Exámenes teóricos y prácticos de diseño de software
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
-Suponga un sistema muy simple para trabajar con figuras geométricas.
- Se piensa en dos 
-\begin_inset Formula $GUI$
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
 \end_inset
 
- diferentes: modo comando y gráfica.
- En la gráfica hay botones para dibujar un rectángulo, un óvalo, rotar el
- rectángulo, rotar el óvalo y almacenar y recuperar los dibujos.
- En la 
-\begin_inset Formula $GUI$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
- en modo comando, hay programas para hacer las mismas cosas que en la gráfica.
- Los dibujos se almacenan en archivos 
-\begin_inset Formula $JPG$
+
+\end_layout
+
+\begin_layout Section
+Ejercicios teóricos
+\end_layout
+
+\begin_layout Enumerate
+Enuncie el criterio sugerido por Parnas para que 
+\begin_inset Formula $A$
 \end_inset
 
- de un sistema tipo 
-\begin_inset Formula $UNIX$
+ 
+\begin_inset Formula $REC$
+\end_inset
+
+ 
+\begin_inset Formula $B$
 \end_inset
 
 .
 \end_layout
 
-\end_deeper
 \begin_layout Enumerate
-Describa los módulos 
-\begin_inset Formula $2MIL$
+Suponga que en un cierto diseño existe un módulo 
+\begin_inset Formula $M$
 \end_inset
 
-, la guía de módulos y el diagrama canónico de un diseño basado en 
-\emph on
-Blackboard Systems
-\emph default
- para los siguientes requerimientos.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-El programa a diseñar debe armar diversos modelos de automóviles y mostrarlos
- en pantalla.
- Para armar los automóviles el programa cuenta con objetos gráficos que
- representan las diversas partes de gran cantidad de modelos de automóviles;
- se acompañan los objetos con 
-\emph on
-metadatos
-\emph default
- que describen distintas caracteristicas técnicas de los objetos (tamaño,
- dimensiones, color, potencia, etc; depende del objeto las caractgeristicas
- que aparecen).
- Tan importante como obtener un automóvil terminado es obtener los subsistemas
- más importantes tales como chasis, carrocería, motor, sistema eléctrico,
- etc.
- o incluso componentes de esos subsistemas tales como tablero, carburador,
- alternador, diferencial, etc.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Describa los ítems con probabilidad de cambio, los modulos 
-\begin_inset Formula $2MIL$
+, con algunos procedimientos en su interfaz.
+ Digamos que es necesario extender la funcionalidad de algunos de esos procedimi
+entos sin perder el módulo original y sin tener que duplicar código.
+ Además, la aplicación debe interactuar con las instancias de 
+\begin_inset Formula $M$
 \end_inset
 
-, la guía de módulos y la estructura de objetos de un diseño par alos siguientes
- requerimientos.
+ y con las del que tiene funcionalidad extendida de la misma forma.
+ Muestre como sería su diseño para este caso.
 \end_layout
 
-\begin_deeper
+\begin_layout Enumerate
+Enuncia la definición de herencia que se comentó en clase y enumere sus
+ ventajas y desventajas.
+\end_layout
+
+\begin_layout Section
+Ejercicios prácticos
+\end_layout
+
+\begin_layout Subsection
+Empresa de colectivos
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
 \begin_layout Standard
 Una empresa de colectivos de larga distancia desea un sistema para manejar
  la reserva y venta de pasajes.
@@ -185,101 +175,408 @@ Una empresa de colectivos de larga distancia desea un sistema para manejar
  de los lo lunes a las 8:00 tiene asignado el mismo colectivo.
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-Documente apropiadamente un diseño para los los siguientes requerimientos.
+\begin_layout Subsubsection
+Módulos 2MIL
 \end_layout
 
-\begin_deeper
+\begin_layout Subsubsection
+Guía de módulos
+\end_layout
+
+\begin_layout Subsubsection
+Estructura de objetos
+\end_layout
+
+\begin_layout Subsection
+Empresa de colectivos
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
 \begin_layout Standard
 Se trata de los requerimientos para un sistema de control de stock que será
- vendido a empresas de distintos rubros (y posiblemen te de dinstintos paises).
+ vendido a empresas de distintos rubros (y posiblemente de distintos países).
 \end_layout
 
 \begin_layout Standard
-El stock se compone de categorias, subcategorias, sub-subcategorias de productos
+El stock se compone de categorías, subcategorias, sub-subcategorias de productos
  y de otras agrupaciones de productos que pueden anidarse indefinidamente.
- Cualquiera de estas divisiones tiene un nuombre y una descripcion.
- Los productos tienen nombre, descripcion, proveedor, cantidad, etc.
+ Cualquiera de estas divisiones tiene un nombre y una descripción.
+ Los productos tienen nombre, descripción, proveedor, cantidad, etc.
 \end_layout
 
 \begin_layout Standard
 El sistema debe impedir que el stock de cada producto no cumpla ciertas
  condiciones respecto de la cantidad de ese producto u otros.
- Desconocemos de ante mano las diversas estrategrias de control de stock
- que tendran nuestros potenciales clientes.
+ Desconocemos de ante mano las diversas estrategias de control de stock
+ que tendrán nuestros potenciales clientes.
  Por el momento debemos implementar una estrategia muy simple que comunique
  al usuario cada vez que la cantidad de un producto cae por debajo de cierto
- nuero critico (obviamente este numero no es el mismo para todos los productos).
- Tambien desconocemos la forma en que el usuario querra que estos eventos
+ numero critico (obviamente este numero no es el mismo para todos los productos).
+ También desconocemos la forma en que el usuario querrá que estos eventos
  le sean comunicados (en la pantalla de su PC, mediante un mail, o un SMS,
  etc.).
 \end_layout
 
 \begin_layout Standard
-Las dos operaciones basicas sobre el stock son ingreso de nueva mercaderia
- y salida de mercaderia existente pero tambgien son importantes las operaciones
- para dar de alta o baja una categoria, un producto o reacomodar un producto
- en otra categoria.
- Creemos que el ingreso o egreso de mercaderia podra detectarse, tal vez,
- por lectores de codigo de barras, carga manual o algun otro mecanismo similar.
+Las dos operaciones básicas sobre el stock son ingreso de nueva mercadería
+ y salida de mercadería existente pero también son importantes las operaciones
+ para dar de alta o baja una categoría, un producto o reacomodar un producto
+ en otra categoría.
+ Creemos que el ingreso o egreso de mercadería podrá detectarse, tal vez,
+ por lectores de código de barras, carga manual o algún otro mecanismo similar.
  Ademas el usuario debe poder consultar el stock de diversas formas y desde
- estaciones de trabajo muy diferentes (por ejemplo una PC, una lapto, una
- PDA, etc.); mas aun se espera poder hacer analisis estadisticos sobre la
- evolucion del stock (como el sistema recien esta siendo concebido no sabemos
- con presicion cuales son estos analisis, esperamos tener feedback de nuestros
+ estaciones de trabajo muy diferentes (por ejemplo una PC, una laptop, una
+ PDA, etc.); mas aun se espera poder hacer análisis estadísticos sobre la
+ evolución del stock (como el sistema recién esta siendo concebido no sabemos
+ con precisión cuales son estos análisis, esperamos tener feedback de nuestros
  clientes para ir implementando tales funcionalidades).
  Obviamente los datos del stock se guardaran en una base de datos que suponemos
- el cliente nos impondra (o mejor, queremos poder adaptarnos al DBMS o repositor
+ el cliente nos impondrá (o mejor, queremos poder adaptarnos al DBMS o repositor
 io que el cliente tenga).
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-Describa los modulos 
-\begin_inset Formula $2MIL$
-\end_inset
-
- y la guia de modulos de un diseño para los siguientes requerimientos, segun
- los item de cambio que se enuncian mas abajo.
+\begin_layout Subsection
+Control de archivos y directorios
 \end_layout
 
-\begin_deeper
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
 \begin_layout Standard
-Se desarrollara un sistema operativo que impondra diversas politicas de
+Se desarrollara un sistema operativo que impondrá diversas políticas de
  control de acceso sobre los archivos y directorios.
- El control de acceso podra realizarse sobre la base de datos tales como
- el indentificador de usuario, el identificador de proceso, los grupos a
+ El control de acceso podrá realizarse sobre la base de datos tales como
+ el identificador de usuario, el identificador de proceso, los grupos a
  los cuales pertenezca el usuario, los archivos que ya tenga abierto el
  usuario o el proceso, el programa que esté solicitando acceso, los atributos
- de acceso del archivo y/o la operacion de acceso que se solicite (lectura,
- escritura, modificacion de atributos de seguridad).
+ de acceso del archivo y/o la operación de acceso que se solicite (lectura,
+ escritura, modificación de atributos de seguridad).
  Ademas cada vez que un proceso solicite acceso a un archivo, el sistema
  operativo deberá avisar tal suceso a un componente que gestiona ese tipo
- de informacion.
- Este componente guardara los datos de los sucesos que se le informen segun
- una politica que se establecera en base a los datos mencionados mas arriba.
+ de información.
+ Este componente guardara los datos de los sucesos que se le informen según
+ una política que se establecerá en base a los datos mencionados mas arriba.
 \end_layout
 
 \begin_layout Paragraph
-Items de cambio
+Ítems de cambio
 \end_layout
 
 \begin_layout Itemize
-Se desconoce cuales son todas las politicas de control de acceso.
+Se desconoce cuales son todas las políticas de control de acceso.
 \end_layout
 
 \begin_layout Itemize
-Deberá ser posible combinar politicas de control de acceso de manera tal
- que el acceso se permita o se niegue segun el resultado que arroje cada
+Deberá ser posible combinar políticas de control de acceso de manera tal
+ que el acceso se permita o se niegue según el resultado que arroje cada
  una de ellas.
 \end_layout
 
 \begin_layout Itemize
-Podria ser necesario que alguna politica utilice datos que inicialmente
+Podría ser necesario que alguna política utilice datos que inicialmente
  no fueron considerados.
 \end_layout
 
-\end_deeper
+\begin_layout Subsubsection
+Módulos 2MIL
+\end_layout
+
+\begin_layout Subsubsection
+Guía de módulos
+\end_layout
+
+\begin_layout Subsection
+Estación de peaje
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Considere el problema de la estación de peaje visto en clase.
+ Se había tenido en cuenta como cambio probable la incorporación de nuevos
+ medios de pago.
+ Medios de pago como tarjetas de crédito o cheques contienen información
+ que debe estar impresa en el ticket que se le entregara al conductor.
+ Estos datos varían considerablemente de medio de pago en medio de pago.
+ Además, en el diseño presentado en clase, el módulo Control debía acceder
+ a la función debePagar() del módulo TablaValoresVehiculos lo cual no es
+ muy prolijo debido a que un módulo de alto nivel usa un módulo de bajo
+ nivel.
+\end_layout
+
+\begin_layout Standard
+Otro problema con el diseño original es que cada vez que se agrega un nuevo
+ medio de pago hay que modificar el módulo RecepcionPago para que este consulte
+ al nuevo medio de pago.
+ Un detalle menor es que el módulo Control quedaba bloqueado hasta que la
+ función pago() del módulo RecepcionPago retorna.
+\end_layout
+
+\begin_layout Subsubsection
+Módulos 2MIL
+\end_layout
+
+\begin_layout Subsubsection
+Guía de módulos
+\end_layout
+
+\begin_layout Subsubsection
+Estructura de uso
+\end_layout
+
+\begin_layout Subsection
+Administrador de errores
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Los componentes de un sistema deben comunicarse entre sí.
+ Un componente anuncia un error y otro componente analiza el error y eventualmen
+te lo comunica al usuario.
+ No todos los componentes anuncian errores, ni todos los componentes analizan
+ errores, ni todos los componentes comunican los errores al usuario.
+ En otras palabras, puede ocurrir que uno de los componentes que comunican
+ errores al usuario, sea invocado recién después de que se hayan dado varios
+ errores los cuales deben preservarse hasta ese momento.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, hay errores que tienen parámetros y los hay que no los tienen.
+ Por ejemplo: 
+\begin_inset Quotes fld
+\end_inset
+
+El archivo 
+\emph on
+carta.doc
+\emph default
+ no existe en el directorios 
+\emph on
+Cartas
+\emph default
+
+\begin_inset Quotes frd
+\end_inset
+
+ es un error que tiene dos parámetros; mientras que 
+\begin_inset Quotes fld
+\end_inset
+
+Comando inexistente
+\begin_inset Quotes frd
+\end_inset
+
+ es un error que no tiene parámetros.
+\end_layout
+
+\begin_layout Enumerate
+Usted debe diseñar y documentar adecuadamente todos los módulos que sean
+ necesarios para proveer un sistema de errores versátil y suficientemente
+ general; en particular los mensajes que se comunican al usuario se deben
+ poder modificar en tiempo de ejecución.
+\end_layout
+
+\begin_layout Enumerate
+Además debe explicar (sugerimos hacerlo mediante un ejemplo) como los módulos
+ del sistema comunican los errores, los analizan y los comunican al usuario.
+\end_layout
+
+\begin_layout Subsection
+Administrador de eventos
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Se espera que los componentes de un sistema puedan comunicarse entre sí
+ pero sin que se conozcan entre sí.
+ En otras palabras, un componente del sistema no sabe de la existencia de
+ otros componentes del sistema, por lo tanto se recurre al concepto de evento.
+ Los componentes anuncian o publican eventos (sin saber quien los esta esperando
+) y a su vez se anotan o 
+\emph on
+suscriben
+\emph default
+ a eventos (que tal vez nunca aparezcan).
+\end_layout
+
+\begin_layout Standard
+Un componente especial, llamado 
+\emph on
+administrador de eventos
+\emph default
+ es el encargado de intermediar esta forma de comunicación.
+ Cada suscriptor manifiesta interés en un evento suscribiendo una subrutina
+ en su interfaz a ese evento.
+ La suscripción se hace ante el administrador de eventos.
+ Los componentes publican eventos llamando al administrador de eventos.
+ La tarea del administrador de eventos es, entonces, invocar a cada una
+ de las subrutinas suscritas a un evento cada vez que ese es publicado (por
+ cualquier componente del sistema).
+\end_layout
+
+\begin_layout Standard
+Cada evento tiene un nombre y una serie de parámetros fija por tipo de evento.
+ El administrador de eventos pasa los parámetros del evento al suscriptor.
+\end_layout
+
+\begin_layout Paragraph
+Ítem de cambio
+\end_layout
+
+\begin_layout Itemize
+La política de invocación del administrador de eventos.
+\end_layout
+
+\begin_layout Itemize
+Debería ser posible agregar nuevos tipos de eventos sin tener que modificar
+ el administrador de eventos.
+\end_layout
+
+\begin_layout Itemize
+Debería ser posible alterar la lista de parámetros de un evento sin tener
+ que modificar el administrador de eventos.
+\end_layout
+
+\begin_layout Subsubsection
+Módulos 2MIL
+\end_layout
+
+\begin_layout Subsubsection
+Guía de módulos
+\end_layout
+
+\begin_layout Subsubsection
+Estructura de uso
+\end_layout
+
+\begin_layout Subsubsection
+Estructura de herencia
+\end_layout
+
+\begin_layout Subsection
+Inmobiliaria
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Una inmobiliaria desea publicitar las propiedades que vende, compra o alquila
+ a través de la Web.
+ Los clientes que desean comprar o alquilar deberán poder buscar de diversas
+ formas entre las propiedades disponibles.
+ Una vez encontrada la propiedad podrán ver sus detalles e incluso fotos
+ o videos.
+ Si una o mas propiedades les interesan podrán concretar una cita, siempre
+ a través de la aplicación Web, para poder visitarla.
+\end_layout
+
+\begin_layout Standard
+Los clientes que deseen que la inmobiliaria les venda o encuentre inquilinos
+ para sus propiedades podrán completar un formulario on-line con todos los
+ datos de aquellas.
+ El sistema deberá avisar por correo electrónico a los empleados de la firma
+ que hay disponible una nueva propiedad y estos determinarán si la aceptan
+ o no.
+ Cualquiera sea la decisión el sistema se la comunicara al propietario.
+ Si el empleado acepta la propiedad esta pasa al conjunto de propiedades
+ disponibles.
+\end_layout
+
+\begin_layout Standard
+Cuando una propiedad ha sido vendida o alquilada se la retira del conjunto
+ de propiedades disponibles.
+\end_layout
+
+\begin_layout Paragraph
+Ítem de cambio
+\end_layout
+
+\begin_layout Itemize
+Las opciones de búsqueda podrían ampliarse en el futuro.
+\end_layout
+
+\begin_layout Itemize
+En lugar de que la aplicación la utilicen personas podría ser utilizada
+ por sistemas similares de otras inmobiliarias.
+\end_layout
+
+\begin_layout Itemize
+Los empleados de la firma que reciben los avisos de las nuevas propiedades
+ podrían ser otros.
+\end_layout
+
+\begin_layout Itemize
+Respecto del ítem anterior, el medio (correo electrónico) por el cual reciben
+ la noticia podría cambiar.
+\end_layout
+
+\begin_layout Itemize
+Podría requerirse que el grupo de empleados que recibe los avisos de nuevas
+ propiedades disponibles sea diferente del grupo que puede aceptar o rechazar
+ una propiedad.
+\end_layout
+
+\begin_layout Subsubsection
+Módulos 2MIL
+\end_layout
+
+\begin_layout Subsubsection
+Guía de módulos
+\end_layout
+
+\begin_layout Subsection
+Control de acceso a edificio
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un edificio cuenta con un mecanismo automático de control de acceso.
+ Quien quiera entrar caminando por la puerta o con su auto por el portón
+ debe deslizar una tarjeta magnética por el lector correspondiente.
+ El sistema debe verificar que es una tarjeta válida y, utilizando una cámara
+ fotográfica digital móvil, obtener una imagen del auto o de la persona
+ según sea.
+ La cámara puede moverse hacia la izquierda, derecha, arriba y abajo.
+ La imagen debe enviarse a una base de datos junto con la fecha, hora y
+ número de la tarjeta.
+ Una vez obtenida la imagen el sistema debe abrir la puerta o el portón
+ y cerrarlos después de cierto tiempo.
+ En algunas circunstancias puede requerirsele a la persona que teclee un
+ PIN en un teclado ubicado junto a la lectora de tarjetas.
+\end_layout
+
+\begin_layout Subsubsection
+Análisis de cambio
+\end_layout
+
+\begin_layout Subsubsection
+Módulos 2MIL
+\end_layout
+
+\begin_layout Subsubsection
+Guía de módulos
+\end_layout
+
+\begin_layout Subsubsection
+Estructura de uso
+\end_layout
+
 \end_body
 \end_document

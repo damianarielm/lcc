@@ -1,6 +1,6 @@
 ###### Año 2019
 
 * Silvio Nicolas Reggiani
-* Cecilia Manzino
+* Cecilia Ines Manzino
 * Mauro Lucci
 * Eugenia Simich
