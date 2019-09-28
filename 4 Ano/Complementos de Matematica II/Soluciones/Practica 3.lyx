@@ -461,7 +461,7 @@ Diffie-Hellman
 \noun default
 .
  Alice y Bob desean ponerse de acuerdo en un número secreto.
- Sin em bargo, saben que sus comunicaciones son monitoreadas por Eve, lo
+ Sin embargo, saben que sus comunicaciones son monitoreadas por Eve, lo
  cual parece imposibilitar esta tarea.
 \end_layout
 
@@ -473,10 +473,10 @@ Utilizando el resultado del ejercicio anterior, y sabiendo que existe un
 \end_inset
 
  y su generador 
-\begin_inset Formula $ $
+\begin_inset Formula $g$
 \end_inset
 
-g para los cuales resulta computacionalmente costoso resolver el problema
+ para los cuales resulta computacionalmente costoso resolver el problema
  de Diffie-Hellman (dados 
 \begin_inset Formula $g^{a}$
 \end_inset
@@ -569,7 +569,7 @@ Sea
 \begin_inset Formula $a\sim b$
 \end_inset
 
- si y solo si el resto de dividr 
+ si y solo si el resto de dividir 
 \begin_inset Formula $a$
 \end_inset
 
@@ -978,7 +978,7 @@ Sea
 \begin_inset Formula $\mathbb{Z}_{n}$
 \end_inset
 
- para algun 
+ para algún 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1070,20 +1070,72 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $\left(G,\oplus\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(H,\ominus\right)$
+\end_inset
+
+ grupos y 
+\begin_inset Formula $h:\left(G,\oplus\right)\to\left(H,\ominus\right)$
+\end_inset
+
+ un homomorfismo.
+ Probar que:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $h\left(e_{G}\right)=e_{H}$
+\end_inset
+
+, donde 
+\begin_inset Formula $e_{G}$
+\end_inset
+
+ es el neutro de 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $e_{H}$
+\end_inset
+
+ el neutro de 
+\begin_inset Formula $H$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Si 
+\begin_inset Formula $a\in G$
+\end_inset
+
+ es 
+\begin_inset Formula $h\left(a^{-1}\right)=h\left(a\right)^{-1}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Si 
+\begin_inset Formula $h$
+\end_inset
+
+ es sobreyectiva y 
+\begin_inset Formula $G$
+\end_inset
+
+ es abeliano, entonces 
+\begin_inset Formula $H$
+\end_inset
+
+ es abeliano.
 \end_layout
 
 \begin_layout Paragraph
@@ -1104,7 +1156,32 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $f:G\to G'$
+\end_inset
+
+ un homomorfismo de grupos, 
+\begin_inset Formula $G'$
+\end_inset
+
+ abeliano.
+ Probar que si 
+\begin_inset Formula $H$
+\end_inset
+
+ es un subgrupo de 
+\begin_inset Formula $G$
+\end_inset
+
+ que contiene a 
+\begin_inset Formula $ker\left(f\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $H\triangleleft G$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1118,7 +1195,23 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $\left(G,\cdot\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(H,\cdot'\right)$
+\end_inset
+
+ grupos, entonces definiendo 
+\begin_inset Formula $\left(g_{1},h_{1}\right)\oplus\left(g_{2},h_{2}\right)=\left(g_{1}\cdot g_{2},h_{1}\cdot'h_{2}\right)$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\left(G\times H,\oplus\right)$
+\end_inset
+
+ un grupo.
 \end_layout
 
 \begin_deeper
@@ -1132,7 +1225,28 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ un grupo y 
+\begin_inset Formula $M,N$
+\end_inset
+
+ subgrupos normales de 
+\begin_inset Formula $G$
+\end_inset
+
+ tales que 
+\begin_inset Formula $G=M\cdot N$
+\end_inset
+
+.
+ Probar 
+\begin_inset Formula $G/\left(M\cap N\right)\cong G/M\times G/N$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1146,7 +1260,24 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ un grupo.
+ Si definimos 
+\begin_inset Formula $L$
+\end_inset
+
+ como el conjunto de los subgrupos normales de 
+\begin_inset Formula $G$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left(L,\cdot,\cap\right)$
+\end_inset
+
+ es un retículo modular.
 \end_layout
 
 \begin_deeper
@@ -1160,7 +1291,17 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Hacer un diagrama de Hasse de los subgrupos normales del grupo de Klein
+ 
+\begin_inset Formula $\left(V=\mathbb{Z}_{2}\times\mathbb{Z}_{2}\right)$
+\end_inset
+
+.
+ ¿El retículo 
+\begin_inset Formula $L$
+\end_inset
+
+ del apartado anterior es distributivo?
 \end_layout
 
 \begin_deeper
@@ -1174,7 +1315,24 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $G,H$
+\end_inset
+
+ grupos.
+ Si 
+\begin_inset Formula $A\triangleleft G$
+\end_inset
+
+ y 
+\begin_inset Formula $B\triangleleft H$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\left(G\times H\right)/\left(A\times B\right)\cong\left(G/A\right)\times\left(H/B\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1188,7 +1346,10 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Probar que existen sólo dos grupos distintos de orden 4 (salvo isomorfismo).
+ Ayuda: utilizar el teorema de Lagrange para probar que un grupo de orden
+ 4 que no es cíclico debe consistir de la identidad y tres elementos de
+ orden 2
 \end_layout
 
 \begin_deeper
@@ -1202,7 +1363,24 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Probar que todo subgrupo de 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ es de la forma 
+\begin_inset Formula $n\mathbb{Z}=\left\{ nk|k\in\mathbb{Z}\right\} $
+\end_inset
+
+ para algún 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Mostrar que 
+\begin_inset Formula $\mathbb{Z}_{n}\cong\mathbb{Z}/n\mathbb{Z}$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -1216,7 +1394,19 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Probar que si 
+\begin_inset Formula $N$
+\end_inset
+
+ es un subgrupo de índice 2 en un grupo 
+\begin_inset Formula $G$
+\end_inset
+
+, entonces 
+\begin_inset Formula $N$
+\end_inset
+
+ es normal en G.
 \end_layout
 
 \begin_deeper
@@ -1230,10 +1420,27 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+En la práctica de relaciones se definió al kernel de una función 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ como la relación:
+\begin_inset Formula 
+\[
+ker\left(f\right)=\left\{ \left(a,a'\right)|a,a'\in A,f\left(a\right)=f\left(a'\right)\right\} 
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+Explicar la relación entre el kernel de un homomorfismo definido para grupos,
+ y el kernel de la función que plantea el homomorfismo.
+\end_layout
+
 \begin_layout Paragraph
 Solución
 \end_layout
