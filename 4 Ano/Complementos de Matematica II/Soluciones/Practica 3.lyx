@@ -222,47 +222,119 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No es ninguno de ellos pues 
+\begin_inset Formula $\oplus$
+\end_inset
+
+ no es asociativa.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No es un grupo pues no existen inversos.
+ Es un monoide (y semigrupo) donde el elemento neutro es 
+\begin_inset Formula $1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No es grupo ni monoide pues no existe elemento neutro (el polinomio nulo
+ no tiene grado).
+ Es un semigrupo pues la suma de polinomios es asociativa.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Es un grupo (y también monoide y semigrupo) donde el elemento neutro es
+ el polinomio nulo y el elemento inverso de 
+\begin_inset Formula $P\left(x\right)$
+\end_inset
+
+ es 
+\begin_inset Formula $-P\left(x\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No es grupo ni monoide pues no existe elemento neutro (el polinomio nulo
+ no tiene grado).
+ Es un semigrupo pues la suma de polinomios es asociativa.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Es un grupo (y también monoide y semigrupo) donde el elemento neutro es
+ la matriz nula y el inverso de 
+\begin_inset Formula $M$
+\end_inset
+
+ es 
+\begin_inset Formula $-M$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No es un grupo pues en general no todas las matrices son invertibles.
+ Es un monoide (y semigrupo) donde el elemento neutro es la matriz identidad.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Es un grupo (y también monoide y semigrupo) donde el elemento neutro es
+ la identidad y el inverso de una matriz con entradas 
+\begin_inset Formula $a_{ij}$
+\end_inset
+
+ es una matriz con entradas 
+\begin_inset Formula $\frac{1}{a_{ij}}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No es grupo ni monoide pues no existe elemento neutro.
+ Supongamos que exista, luego 
+\begin_inset Formula $\forall x:\gcd\left(e,x\right)=x$
+\end_inset
+
+; es decir que 
+\begin_inset Formula $e$
+\end_inset
+
+ es múltiplo de cualquier número.
+ Absurdo.
+ Es un semigrupo pues es una operación asociativa.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+No es grupo ni monoide pues no existe elemento neutro.
+ Supongamos que exista, luego 
+\begin_inset Formula $\forall x:\text{lcm}\left(e,x\right)=x$
+\end_inset
+
+; es decir que todos los números son multiplos de 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ Absurdo.
+ Es un semigrupo pues es una operación asociativa.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Es un grupo (y también monoide y semigrupo) donde el elemento neutro es
+ la función nula y el inverso de 
+\begin_inset Formula $f$
+\end_inset
+
+ es 
+\begin_inset Formula $-f$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -296,8 +368,65 @@ Sea
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Clausura: Sean 
+\begin_inset Formula $f,g\in G$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\in dom\left(f\circ g\right)\Rightarrow x\in X$
+\end_inset
+
+.
+ Ademas 
+\begin_inset Formula $f\left(g\left(x\right)\right)\in X$
+\end_inset
+
+ luego 
+\begin_inset Formula $cod\left(f\circ g\right)=X$
+\end_inset
+
+, es decir 
+\begin_inset Formula $f\circ g\in X\to X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Asociatividad: 
+\begin_inset Formula 
+\[
+\left(f\circ\left(g\circ h\right)\right)\left(x\right)=f\left(g\circ h\left(x\right)\right)=f\left(g\left(h\left(x\right)\right)\right)=\left(f\circ g\right)\left(h\left(x\right)\right)=\left(\left(f\circ g\right)\circ h\right)\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Elemento neutro:
+\begin_inset Formula 
+\[
+f\circ id\left(x\right)=f\left(id\left(x\right)\right)=f\left(x\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+id\circ f\left(x\right)=id\left(f\left(x\right)\right)=f\left(x\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -308,7 +437,7 @@ Sea
 
  un conjunto cualquiera.
  Probar que 
-\begin_inset Formula $\left(X\to X,\Rightarrow,id_{X}\right)$
+\begin_inset Formula $\left(X\Rightarrow X,\circ,id_{X}\right)$
 \end_inset
 
  es un grupo, donde 
@@ -333,8 +462,36 @@ Sea
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Clausura: Trivial pues la composición de biyecciones también es biyectiva.
+\end_layout
+
+\begin_layout Itemize
+Asociatividad: Análogo al grupo 
+\begin_inset Formula $X\to X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Elemento neutro: Análogo al grupo 
+\begin_inset Formula $X\to X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Elemento inverso: Para 
+\begin_inset Formula $f\in X\Rightarrow X$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f\circ f^{-1}=id$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -360,7 +517,27 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Como 
+\begin_inset Formula $\left(b^{-1}a^{-1}\right)\left(ab\right)=b\left(aa^{-1}\right)b^{-1}=bb^{-1}=1$
+\end_inset
+
+ entonces 
+\begin_inset Formula $ab$
+\end_inset
+
+ es inverso a derecha de 
+\begin_inset Formula $\left(b^{-1}a^{-1}\right)$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+\left(b^{-1}a^{-1}\right)=\left(b^{-1}a^{-1}\right)e=\left(b^{-1}a^{-1}\right)\underbrace{\left(ab\right)\left(ab\right)^{-1}}_{e}=e\left(ab\right)^{-1}=\left(ab\right)^{-1}
+\]
+
+\end_inset
+
+Análogamente para la izquierda.
 \end_layout
 
 \end_deeper
@@ -378,7 +555,7 @@ Probar que si
 \end_inset
 
  entonces 
-\begin_inset Formula $g^{a}g^{b}=g^{\left(a+b\right)}$
+\begin_inset Formula $g^{\left(a+b\right)}=g^{a}g^{b}$
 \end_inset
 
 .
@@ -390,7 +567,68 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Lo demostraremos por inducción en 
+\begin_inset Formula $a\in\mathbb{N}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $a=0$
+\end_inset
+
+: 
+\begin_inset Formula $g^{a+b}=g^{0+b}=g^{b}=eg^{b}=g^{0}g^{b}=g^{a}g^{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo: Supongamos que 
+\begin_inset Formula $g^{a+b}=g^{a}g^{b}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g^{\left(a+1\right)+b}=g^{\left(a+b\right)+1}=g^{a+b}g=g^{a}g^{b}g=g^{a}g^{b+1}=g^{a}\left(gg^{b}\right)=\left(g^{a}g\right)g^{b}=g^{a+1}g^{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resta ver que sucede si 
+\begin_inset Formula $a<0$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $a=-k$
+\end_inset
+
+ con 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+, luego 
+\begin_inset Formula 
+\[
+g^{a}g^{b}=g^{a+b}\iff\left(g^{a}g^{b}\right)^{-1}=\left(g^{-k+b}\right)^{-1}\iff\left(g^{a}g^{b}\right)^{-1}=\left(g^{-k}g^{b}\right)^{-1}=\left(g^{a}g^{b}\right)^{-1}
+\]
+
+\end_inset
+
+lo cual vale.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
