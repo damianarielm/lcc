@@ -657,10 +657,42 @@ Probar que si
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Caso base 
+\begin_inset Formula $n=0$
+\end_inset
+
+: 
+\begin_inset Formula $\left(a\cdot b\right)^{n}=e=e\cdot e=a^{n}\cdot b^{n}$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+Caso inductivo: Supongamos que 
+\begin_inset Formula $\left(a\cdot b\right)^{n}=a^{n}\cdot b^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(a\cdot b\right)^{n+1}=\left(a\cdot b\right)^{n}\cdot\left(a\cdot b\right)=a^{n}\cdot b^{n}\cdot a\cdot b=a^{n}\cdot a\cdot b^{n}\cdot b=a^{n+1}b^{n+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{\left(a\cdot b\right)^{n-1}=\left(a\cdot b\right)^{n}\cdot\left(a\cdot b\right)^{-1}=a^{n}\cdot b^{n}\cdot b^{-1}\cdot a^{-1}=a^{n}\cdot a^{-1}\cdot b^{n}\cdot b^{-1}=a^{n-1}b^{n-1}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Probar que si 
@@ -766,7 +798,26 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula 
+\[
+\left(ab\right)^{2}=a^{2}b^{2}\iff\left(ab\right)^{2}\left(ab\right)^{-1}=a^{2}b^{2}\left(ab\right)^{-1}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff ab=a^{2}b^{2}b^{-1}a^{-1}=a^{2}ba^{-1}\iff b=aba^{-1}\iff ba=ab
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -793,7 +844,96 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Para 
+\begin_inset Formula $m\in M$
+\end_inset
+
+ definimos 
+\begin_inset Formula $f_{m}:G\to G$
+\end_inset
+
+ como 
+\begin_inset Formula $f_{m}\left(x\right)=x\oplus m$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $f$
+\end_inset
+
+ es biyectiva:
+\end_layout
+
+\begin_layout Itemize
+Inyectividad: Sean 
+\begin_inset Formula $f\left(x_{1}\right)=f\left(x_{2}\right)$
+\end_inset
+
+, luego por definición de 
+\begin_inset Formula $f$
+\end_inset
+
+ resulta 
+\begin_inset Formula $x_{1}\oplus m=x_{2}\oplus m$
+\end_inset
+
+ y por ley cancelativa 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sobreyectividad: Resulta ser consecuencia de que 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva y 
+\begin_inset Formula $G$
+\end_inset
+
+ es finito.
+\end_layout
+
+\begin_layout Standard
+Ahora consideremos 
+\begin_inset Formula $m'\in G$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f_{m}\left(m'\right)=e$
+\end_inset
+
+, entones 
+\begin_inset Formula $m'\oplus m=e$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $m'$
+\end_inset
+
+ es inverso a izquierda de 
+\begin_inset Formula $m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ademas 
+\begin_inset Formula $m\oplus\underbrace{m'\oplus m}_{e}=e\oplus m\iff m\oplus m'=e$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $m'$
+\end_inset
+
+ también es inverso a derecha de 
+\begin_inset Formula $m$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -820,7 +960,7 @@ Sea
 \end_inset
 
  por 
-\begin_inset Formula $b$
+\begin_inset Formula $n$
 \end_inset
 
 .
@@ -913,9 +1053,78 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Reflexividad: Trivial.
+\end_layout
+
+\begin_layout Itemize
+Transitividad: Sean 
+\begin_inset Formula $x,y,z\in\mathbb{Z}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+ y 
+\begin_inset Formula $y\sim z$
+\end_inset
+
+, luego tenemos 
+\begin_inset Formula $x=an+r$
+\end_inset
+
+, 
+\begin_inset Formula $y=bn+r$
+\end_inset
+
+ y 
+\begin_inset Formula $z=cn+r$
+\end_inset
+
+ (con 
+\begin_inset Formula $r<n$
+\end_inset
+
+) por lo que 
+\begin_inset Formula $x\sim z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Simetría: Sean 
+\begin_inset Formula $x,y\in\mathbb{Z}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $x\sim y$
+\end_inset
+
+, luego tenemos 
+\begin_inset Formula $\text{\ensuremath{x=an+r}}$
+\end_inset
+
+ e 
+\begin_inset Formula $y=bn+r$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $y\sim x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 \begin_inset space ~
 \end_inset
@@ -929,9 +1138,50 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Asociatividad: 
+\begin_inset Formula 
+\[
+\overline{x}+\left(\overline{y}+\overline{z}\right)=\overline{x}+\overline{y+z}=\overline{x+\left(y+z\right)}=\overline{\left(x+y\right)+z}=\left(\overline{x}+\overline{y}\right)+\overline{z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Elemento neutro: 
+\begin_inset Formula $\overline{0}+\overline{x}=\overline{0+x}=\overline{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{x}+\overline{0}=\overline{x+0}=\overline{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Elemento inverso: 
+\begin_inset Formula $\overline{x}+\overline{\left(-x\right)}=\overline{x+\left(-x\right)}=\overline{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{\overline{\left(-x\right)}+\overline{x}=\overline{\left(-x\right)+x}=\overline{0}}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
@@ -986,8 +1236,102 @@ Sean
 Soluciones
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+:
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $a,b\in H$
+\end_inset
+
+, luego por ser subgrupo 
+\begin_inset Formula $a\oplus b^{-1}\in H$
+\end_inset
+
+ y nuevamente por la misma razón 
+\begin_inset Formula $a\oplus b\oplus a^{-1}\in H$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $a\oplus b=\left(a\oplus b\oplus a^{-1}\right)\oplus a^{-1}$
+\end_inset
+
+ y 
+\begin_inset Formula $H$
+\end_inset
+
+ es grupo, entonces 
+\begin_inset Formula $a\oplus b\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Observemos que 
+\begin_inset Formula $e\in H$
+\end_inset
+
+ pues para 
+\begin_inset Formula $x=y$
+\end_inset
+
+ resulta 
+\begin_inset Formula $x\oplus y^{-1}\in H$
+\end_inset
+
+ por ser grupo.
+ Sea 
+\begin_inset Formula $a\in H$
+\end_inset
+
+, luego 
+\begin_inset Formula $a^{-1}=e\oplus a^{-1}$
+\end_inset
+
+ y como 
+\begin_inset Formula $H$
+\end_inset
+
+ es grupo, 
+\begin_inset Formula $a^{-1}\in H$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sean 
+\begin_inset Formula $a,b\in H$
+\end_inset
+
+ luego 
+\begin_inset Formula $b^{-1}\in H$
+\end_inset
+
+, luego también 
+\begin_inset Formula $a\oplus b^{-1}\in H$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
