@@ -1365,7 +1365,63 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Debemos ver que 
+\begin_inset Formula $H\cap K$
+\end_inset
+
+ no es vació y ademas es cerrado por inversos y productos.
+\end_layout
+
+\begin_layout Itemize
+Por ser grupos 
+\begin_inset Formula $e\in H$
+\end_inset
+
+ y 
+\begin_inset Formula $e\in K$
+\end_inset
+
+, luego 
+\begin_inset Formula $e\in H\cap K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $a\in H\cap K$
+\end_inset
+
+, luego 
+\begin_inset Formula $a\in H$
+\end_inset
+
+ y 
+\begin_inset Formula $a\in K$
+\end_inset
+
+ y por ser grupos 
+\begin_inset Formula $a^{-1}\in H$
+\end_inset
+
+ y 
+\begin_inset Formula $a^{-1}\in K$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $a^{-1}\in H\cap K$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Análogamente para 
+\begin_inset Formula $a\oplus b$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1439,17 +1495,212 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Clausura: Observemos que
+\begin_inset Formula 
+\[
+\tau_{a,b}\circ\tau_{c,d}\left(x\right)=\tau_{a,b}\left(\tau_{c,d}\left(x\right)\right)=\tau_{a,b}\left(cx+d\right)=a\left(cx+d\right)+b=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=acx+ad+b=\tau_{ac,ad+b}\left(x\right)
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $a\neq0$
+\end_inset
+
+ y 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $ac\neq0$
+\end_inset
+
+ y por las clausuras de operaciones entre reales 
+\begin_inset Formula $ac\in\mathbb{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $ad+b\in\mathbb{R}$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $\tau_{ac,ad+b}\in G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Asociatividad: Trivial por ser composición de funciones.
+\end_layout
+
+\begin_layout Itemize
+Elemento neutro: Para 
+\begin_inset Formula $\tau_{1,0}$
+\end_inset
+
+ resulta
+\begin_inset Formula 
+\[
+\tau_{1,0}\circ\tau_{a,b}\left(x\right)=\tau_{1,0}\left(ax+b\right)=ax+b=\tau_{a,b}\left(x\right)
+\]
+
+\end_inset
+
+Análogamente a derecha.
+\end_layout
+
+\begin_layout Itemize
+Elemento inverso: Sea 
+\begin_inset Formula $\tau_{a,b}\in G$
+\end_inset
+
+, luego para 
+\begin_inset Formula $\tau_{\frac{1}{a},-\frac{b}{a}}$
+\end_inset
+
+ resulta
+\begin_inset Formula 
+\[
+\tau_{a,b}\circ\tau_{\frac{1}{a},-\frac{b}{a}}\left(x\right)=\tau_{a,b}\left(\frac{1}{a}x-\frac{b}{a}\right)=a\left(\frac{1}{a}x-\frac{b}{a}\right)+b=x-b+b=x=\tau_{1,0}\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Análogamente a izquierda.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\tau_{1,0}\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tau_{a,b}\circ\tau_{c,d}\left(x\right)=\tau_{ac,ad+b}\left(x\right)$
+\end_inset
+
+ y por las clausuras de operaciones entre racionales 
+\begin_inset Formula $\tau_{ac,ad+b}\left(x\right)\in H$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $\tau_{a,b}\in H$
+\end_inset
+
+ luego 
+\begin_inset Formula $\tau_{\frac{1}{a},-\frac{b}{a}}\in H$
+\end_inset
+
+ por clausura de operaciones entre racionales.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Veamos que 
+\begin_inset Formula $N$
+\end_inset
+
+ es subgrupo de 
+\begin_inset Formula $G$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\tau_{1,0}\in N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tau_{1,a}\circ\tau_{1,b}\left(x\right)=x+b+a=\tau_{1,a+b}\left(x\right)\in N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $\tau_{1,b}\in H$
+\end_inset
+
+ luego 
+\begin_inset Formula $\tau_{\frac{1}{1},-\frac{b}{1}}\in N$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Veamos que es normal:
+\begin_inset Formula 
+\[
+\tau_{a,b}\circ\tau_{1,c}\circ\tau_{\frac{1}{a},-\frac{b}{a}}\left(x\right)=\tau_{a,b}\circ\tau_{1,c}\left(\frac{1}{a}x-\frac{b}{a}\right)=\tau_{a,b}\left(\frac{1}{a}x-\frac{b}{a}+c\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=x-b+ca+b=x+ca=\tau_{1,ca}\left(x\right)\in N
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sea 
@@ -1489,11 +1740,65 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Inyectividad: Supongamos existen 
+\begin_inset Formula $x,y\in G$
+\end_inset
+
+ tales 
+\begin_inset Formula $x\neq y$
+\end_inset
+
+ y 
+\begin_inset Formula $\varphi\left(x\right)=\varphi\left(y\right)$
+\end_inset
+
+, luego 
+\begin_inset Formula $x^{-1}=y^{-1}$
+\end_inset
+
+ pero entonces 
+\begin_inset Formula $\left(x^{-1}\right)^{-1}=x$
+\end_inset
+
+ y también 
+\begin_inset Formula $\left(x^{-1}\right)^{-1}=\left(y^{-1}\right)^{-1}=y$
+\end_inset
+
+.
+ Esto no es posible pues el inverso de un elemento es único.
+ Contradicción.
+\end_layout
+
+\begin_layout Itemize
+Sobreyectividad: Sea 
+\begin_inset Formula $x$
+\end_inset
+
+ en el codominio, para 
+\begin_inset Formula $x^{-1}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\text{\ensuremath{\varphi\left(x^{-1}\right)=\left(x^{-1}\right)^{-1}=x}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $\varphi=\varphi^{-1}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1503,7 +1808,7 @@ Probar que para todo monoide
 \end_inset
 
  existe un homomorfismo inyectivo emb
-\begin_inset Formula $:\left(M,\otimes,e\right)\to\left(M\to M,\circ,id_{X}\right)$
+\begin_inset Formula $:\left(M,\otimes,e\right)\to\left(M\to M,\circ,id_{M}\right)$
 \end_inset
 
 .
@@ -1515,7 +1820,49 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Para 
+\begin_inset Formula $m\in M$
+\end_inset
+
+ definimos 
+\begin_inset Formula $f_{m}:M\to M$
+\end_inset
+
+ como 
+\begin_inset Formula $f_{m}\left(x\right)=m\oplus x$
+\end_inset
+
+.
+ Ahora definimos 
+\begin_inset Formula $emb\left(m\right)=f_{m}$
+\end_inset
+
+.
+ Veamos que es homomorfismo:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $emb\left(m\otimes m'\right)=f_{m\otimes m'}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f_{m\otimes m'}\left(x\right)=\left(m\otimes m'\right)\otimes x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $emb\left(m\right)\circ emb\left(m'\right)=f_{m}\circ f_{m'}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\text{\ensuremath{f_{m}\circ f_{m'}\left(x\right)=m\otimes\left(m'\otimes x\right)=f_{m\otimes m'}\left(x\right)}}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1572,10 +1919,78 @@ Sea
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ es infinito definimos 
+\begin_inset Formula $f\left(g^{x}\right)=x$
+\end_inset
+
+, luego: 
+\begin_inset Formula 
+\[
+f\left(g^{x}g^{y}\right)=f\left(g^{x+y}\right)=x+y=f\left(g^{x}\right)f\left(g^{y}\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Inyectividad: 
+\begin_inset Formula $f\left(g^{x}\right)=f\left(g^{y}\right)\iff x=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sobreyectividad: Sea 
+\begin_inset Formula $y\in\mathbb{Z}$
+\end_inset
+
+, luego 
+\begin_inset Formula $f\left(g^{y}\right)=y$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\left|G\right|=n$
+\end_inset
+
+ definimos 
+\begin_inset Formula $f\left(g^{x}\right)=\overline{x}$
+\end_inset
+
+, luego: 
+\begin_inset Formula 
+\[
+f\left(g^{x}g^{y}\right)=f\left(g^{x+y}\right)=\overline{x+y}=\overline{x}+\overline{y}=f\left(g^{x}\right)f\left(g^{y}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Biyectividad: Análogo.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Verificar en cada uno de los siguientes casos si 
@@ -1635,19 +2050,35 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Verdadero pues: 
+\begin_inset Formula $\phi\left(xy\right)=\left(xy\right)^{2}=x^{2}y^{2}=\phi\left(x\right)\phi\left(y\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Falso pues 
+\begin_inset Formula $\phi\left(1\cdot2\right)=4\neq8=2\cdot4=\phi\left(1\right)\cdot\phi\left(2\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Falso pues 
+\begin_inset Formula $\phi\left(0+1\right)=2\neq3=1+2=\phi\left(0\right)+\phi\left(1\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Verdadero pues: 
+\begin_inset Formula $\phi\left(x+y\right)=13\left(x+y\right)=13+13y=\phi\left(x\right)+\phi\left(y\right)$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1725,15 +2156,62 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Supongamos lo contrario, luego 
+\begin_inset Formula $h\left(xe_{G}\right)=h\left(x\right)h\left(e_{G}\right)\neq h\left(x\right)$
+\end_inset
+
+ pero 
+\begin_inset Formula $h\left(xe_{G}\right)=h\left(x\right)$
+\end_inset
+
+.
+ Contradicción.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Supongamos lo contrario, luego 
+\begin_inset Formula $\text{\ensuremath{h\left(aa^{-1}\right)=h\left(a\right)h\left(a^{-1}\right)\neq h\left(a\right)h\left(a\right)^{-1}=e_{H}}}$
+\end_inset
+
+ pero 
+\begin_inset Formula $h\left(aa^{-1}\right)=h\left(e_{G}\right)=e_{H}$
+\end_inset
+
+.
+ Contradicción.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $a,b\in H$
+\end_inset
+
+ luego como 
+\begin_inset Formula $h$
+\end_inset
+
+ es sobreyectiva existen 
+\begin_inset Formula $x,y\in G$
+\end_inset
+
+ tales que 
+\begin_inset Formula $h\left(x\right)=a$
+\end_inset
+
+ y 
+\begin_inset Formula $h\left(y\right)=b$
+\end_inset
+
+.
+ Ahora:
+\begin_inset Formula 
+\[
+ab=h\left(x\right)h\left(y\right)=h\left(xy\right)=h\left(yx\right)=h\left(y\right)h\left(x\right)=ba
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1801,8 +2279,40 @@ Sean
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Asociatividad: 
+\begin_inset Formula 
+\[
+\left(g_{1},h_{1}\right)\oplus\left[\left(g_{2},h_{2}\right)\oplus\left(g_{3},h_{3}\right)\right]=\left(g_{1},h_{1}\right)\oplus\left(g_{2}\cdot g_{3},h_{2}\cdot'h_{3}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(g_{1}\cdot\left(g_{2}\cdot g_{3}\right),h_{1}\cdot'\left(h_{2}\cdot'h_{3}\right)\right)=\left(\left(g_{1}\cdot g_{2}\right)\cdot g_{3},\left(h_{1}\cdot'h_{2}\right)\cdot'h_{3}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(g_{1}\cdot g_{2},h_{1}\cdot'h_{2}\right)\oplus\left(g_{3},h_{3}\right)=\left[\left(g_{1},h_{1}\right)\oplus\left(g_{2},h_{2}\right)\right]\oplus\left(g_{3},h_{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Elemento neutro: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Elemento inverso: COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -1931,7 +2441,7 @@ COMPLETAR.
 Probar que existen sólo dos grupos distintos de orden 4 (salvo isomorfismo).
  Ayuda: utilizar el teorema de Lagrange para probar que un grupo de orden
  4 que no es cíclico debe consistir de la identidad y tres elementos de
- orden 2
+ orden 2.
 \end_layout
 
 \begin_deeper
@@ -1940,9 +2450,112 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Probaremos que los únicos grupos de orden 4 que existen son 
+\begin_inset Formula $\mathbb{Z}_{4}$
+\end_inset
+
+ (cíclico) y el grupo de Klein (abeliano).
+ Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left|G\right|=4$
+\end_inset
+
+, luego:
 \end_layout
 
+\begin_layout Itemize
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ es cíclico ya hemos visto que es isomorfo a 
+\begin_inset Formula $\mathbb{Z}_{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+De lo contrario como 
+\begin_inset Formula $G$
+\end_inset
+
+ es finito, por corolario del teorema de Lagrange cada elemento de 
+\begin_inset Formula $G$
+\end_inset
+
+ tiene orden 
+\begin_inset Formula $1$
+\end_inset
+
+, 
+\begin_inset Formula $2$
+\end_inset
+
+ o 
+\begin_inset Formula $4$
+\end_inset
+
+ (divisores de 
+\begin_inset Formula $4$
+\end_inset
+
+) pero sabemos que no pueden tener orden 
+\begin_inset Formula $4$
+\end_inset
+
+ pues en dicho caso sería cíclico.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Como 
+\begin_inset Formula $\left|G\right|=4$
+\end_inset
+
+ entonces 
+\begin_inset Formula $G=\left\{ 1,a,b,ab\right\} $
+\end_inset
+
+ con 
+\begin_inset Formula $\text{\ensuremath{\left|\left\langle a\right\rangle \right|=\left|\left\langle b\right\rangle \right|=\left|\left\langle ab\right\rangle \right|=2}}$
+\end_inset
+
+ y puesto que 
+\begin_inset Formula $a,1,a^{-1}\in\left\langle a\right\rangle $
+\end_inset
+
+ entonces 
+\begin_inset Formula $a=a^{-1}.$
+\end_inset
+
+ Análogamente 
+\begin_inset Formula $b=b^{-1}$
+\end_inset
+
+ y por descarte 
+\begin_inset Formula $ab=\left(ab\right)^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finalmente 
+\begin_inset Formula $ab=\left(ab\right)^{-1}=b^{-1}a^{-1}=ba$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $G$
+\end_inset
+
+ es el grupo de Klein.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Probar que todo subgrupo de 
@@ -2003,7 +2616,7 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 En la práctica de relaciones se definió al kernel de una función 
-\begin_inset Formula $f:A\to B$
+\begin_inset Formula $\text{\ensuremath{f:A\to B}}$
 \end_inset
 
  como la relación:
@@ -2028,7 +2641,22 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula 
+\[
+\left(a,a'\right)\in\overline{ker}\left(\phi\right)\iff\phi\left(a\right)=\phi\left(a'\right)\iff\phi\left(a\right)\phi\left(a'\right)^{-1}=e\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff\phi\left(aa'^{-1}\right)=e\iff aa'^{-1}\in ker\left(\phi\right)\iff a\equiv_{i}a'\mod ker\left(\phi\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
