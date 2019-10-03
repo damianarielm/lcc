@@ -6,7 +6,8 @@
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage{pgfplots}
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{arrows, automata}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -1987,7 +1988,7 @@ f\left(g^{x}g^{y}\right)=f\left(g^{x+y}\right)=\overline{x+y}=\overline{x}+\over
 
 \begin_deeper
 \begin_layout Itemize
-Biyectividad: Análogo.
+Biyectividad: COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -2234,7 +2235,7 @@ Sean
 \end_inset
 
  que contiene a 
-\begin_inset Formula $ker\left(f\right)$
+\begin_inset Formula $\ker\left(f\right)$
 \end_inset
 
  entonces 
@@ -2250,7 +2251,65 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $g\in G$
+\end_inset
+
+ y 
+\begin_inset Formula $h\in H$
+\end_inset
+
+, queremos ver si 
+\begin_inset Formula $ghg^{-1}\in H$
+\end_inset
+
+.
+ Observemos que 
+\begin_inset Formula $f\left(ghg^{-1}\right)=f\left(g\right)f\left(h\right)f\left(g^{-1}\right)=f\left(g\right)f\left(h\right)f\left(g\right)^{-1}=f\left(h\right)$
+\end_inset
+
+, luego
+\begin_inset Formula 
+\[
+f\left(ghg^{-1}\right)=f\left(h\right)\iff f\left(ghg^{-1}\right)f\left(h\right)^{-1}=e_{G'}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\iff f\left(ghg^{-1}h^{-1}\right)=e_{G'}\iff ghg^{-1}h^{-1}\in\ker\left(f\right)
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $H$
+\end_inset
+
+ contiene a 
+\begin_inset Formula $\ker\left(f\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $ghg^{-1}h^{-1}\in H$
+\end_inset
+
+.
+ Ahora como 
+\begin_inset Formula $H$
+\end_inset
+
+ es grupo, 
+\begin_inset Formula $ghg^{-1}h^{-1}h\in H$
+\end_inset
+
+, es decir 
+\begin_inset Formula $ghg^{-1}\in H$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -2308,11 +2367,43 @@ Asociatividad:
 \end_layout
 
 \begin_layout Itemize
-Elemento neutro: COMPLETAR.
+Elemento neutro: Para 
+\begin_inset Formula $\left(e_{G},e_{H}\right)$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+\left(e_{G},e_{H}\right)\oplus\left(g,h\right)=\left(e_{G}\cdot g,e_{H}\cdot'h\right)=\left(g,h\right)
+\]
+
+\end_inset
+
+y análogamente a derecha.
 \end_layout
 
 \begin_layout Itemize
-Elemento inverso: COMPLETAR.
+Elemento inverso: Sea 
+\begin_inset Formula $\left(g,h\right)\in G\times H$
+\end_inset
+
+ luego para 
+\begin_inset Formula $\left(g^{-1},h^{-1}\right)$
+\end_inset
+
+ resulta
+\begin_inset Formula 
+\[
+\left(g,h\right)\oplus\left(g^{-1},h^{-1}\right)=\left(g\cdot g^{-1},h\cdot'h^{-1}\right)=\left(e_{G},e_{H}\right)
+\]
+
+\end_inset
+
+y análogamente a izquierda.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2377,10 +2468,153 @@ Sea
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Veamos primero que es retículo:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Conmutatividad:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\cdot Y=\left\langle X\cup Y\right\rangle =\left\langle Y\cup X\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\cap Y=Y\cap X$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Absorción:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\cdot\left(X\cap Y\right)=\left\langle X\cup\left(X\cap Y\right)\right\rangle =\left\langle X\right\rangle =X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\cap\left(X\cdot Y\right)=X\cap\left\langle X\cup Y\right\rangle =X$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Asociatividad:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{X\cdot\left(Y\cdot Z\right)=\left\langle X\cup\left\langle Y\cup Z\right\rangle \right\rangle =\left\langle \left\langle X\cup Y\right\rangle \cup Z\right\rangle =\left(X\cdot Y\right)\cdot Z}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X\cap\left(Y\cap Z\right)=\left(X\cap Y\right)\cap Z$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Veamos que es modular: Sea 
+\begin_inset Formula $A\subseteq C$
+\end_inset
+
+ queremos ver si 
+\begin_inset Formula $A\cdot\left(B\cap C\right)=\left(A\cdot B\right)\cap C$
+\end_inset
+
+, es decir si 
+\begin_inset Formula $\left\langle A\cup\left(B\cap C\right)\right\rangle =\left\langle A\cup B\right\rangle \cap C$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\subseteq}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x\in\left\langle A\cup\left(B\cap C\right)\right\rangle $
+\end_inset
+
+ entonces 
+\begin_inset Formula $x=a\cdot y$
+\end_inset
+
+ donde 
+\begin_inset Formula $a\in A$
+\end_inset
+
+ y 
+\begin_inset Formula $y\in B\cap C$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $y\in B$
+\end_inset
+
+, luego 
+\begin_inset Formula $x\in\left\langle A\cup B\right\rangle $
+\end_inset
+
+.
+ Ademas como 
+\begin_inset Formula $A\subseteq C$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $a\in C$
+\end_inset
+
+ y como 
+\begin_inset Formula $y\in C$
+\end_inset
+
+ luego 
+\begin_inset Formula $x\in C$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x\in\left\langle A\cup B\right\rangle \cap C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\supseteq}$
+\end_inset
+
+: COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Hacer un diagrama de Hasse de los subgrupos normales del grupo de Klein
@@ -2402,7 +2636,148 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (1) {$
+\backslash
+{1
+\backslash
+}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [above of=1] {$
+\backslash
+{1,b
+\backslash
+}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) [left of=b] {$
+\backslash
+{1,a
+\backslash
+}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (ab) [right of=b] {$
+\backslash
+{1,ab
+\backslash
+}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (V) [above of=b] {$V$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (1) edge node {} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (1) edge node {} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (1) edge node {} (ab);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (a) edge node {} (V);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (b) edge node {} (V);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw (ab) edge node {} (V);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No lo es pues:
+\begin_inset Formula 
+\[
+\left\{ 1,b\right\} \cdot\left(\left\{ 1,a\right\} \cap\left\{ 1,ab\right\} \right)=\left\{ 1,b\right\} \neq V=\left(\left\{ 1,b\right\} \cdot\left\{ 1,a\right\} \right)\cap\left(\left\{ 1,b\right\} \cdot\left\{ 1,ab\right\} \right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
