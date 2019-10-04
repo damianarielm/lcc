@@ -1,0 +1,543 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz-uml}
+\usepackage{verbatimbox}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Vocabulario y conceptos
+\end_layout
+
+\begin_layout Enumerate
+¿Por qué debe aplicar un patrón de diseño siempre que sea posible?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Enuncie una posible desventaja al usar un patrón de diseño.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explique en qué fase del ciclo de producción de un sistema de software usaría
+ los patrones de diseño.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Aclare la o las razones por las cuales seleccionaría el patrón Strategy
+ en lugar de Visitor en el caso en que la función asignada a ambos deba
+ recorrer, al menos, cierta porción de una estructura de objetos.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Describa la forma en que es conveniente seleccionar un patrón de diseño.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Explique la diferencia entre herencia de clases y herencia de tipos o interfaces.
+ ¿Cuál es la que más conviene usar desde el punto de vista del diseño? ¿Por
+ qué?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Aplicación de patrones de diseño
+\end_layout
+
+\begin_layout Standard
+En todos los problemas que siguen se debe aplicar el o los patrones de diseño
+ indicados para generar un DOO.
+ Cada diseño debe documentarse como se explicó en clase y como se pide en
+ la práctica de diseño.
+\end_layout
+
+\begin_layout Enumerate
+Aplicar el patrón Command al problema 
+\begin_inset Quotes fld
+\end_inset
+
+
+\noun on
+Estación climatométrica
+\noun default
+
+\begin_inset Quotes frd
+\end_inset
+
+ descrito en la práctica de diseño.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Aplicar el patrón Command al problema 
+\begin_inset Quotes fld
+\end_inset
+
+
+\noun on
+Acceso a un canal de navegación
+\noun default
+
+\begin_inset Quotes frd
+\end_inset
+
+ descrito en la práctica de diseño.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Aplicar el patrón Composite al problema 
+\begin_inset Quotes fld
+\end_inset
+
+
+\noun on
+Mantenimiento de catálogos
+\noun default
+
+\begin_inset Quotes frd
+\end_inset
+
+ descrito en la práctica de diseño.
+ Hacerlo para definir con detalle la estructura de los catálogos.
+ Cada producto ofertado en un catálogo tiene las siguientes características:
+ nombre, código, descripción, varios niveles de secciones (por ejemplo,
+ Ferretería, Tornillos y Bulones, Tornillos, Tornillos de acero, Tornillos
+ de 1,5mm, etc.), precio, marca, color, etc.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Respecto del problema 3, aplicar el patrón Iterator para recorrer la estructura
+ de un catálogo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Defina operaciones de búsqueda por precio, código, sección y palabra en
+ la descripción aplicando el patrón Visitor sobre cada catálogo del problema
+ 3.
+ Muestre código de ejemplo de cómo se implementaría una de las búsquedas.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use el patrón Iterator para muestrear los valores sensados en el problema
+ 1.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La empresa de venta por correo desea poner sus catálogos en su sitio Web.
+ Además desea que los catálogos puedan mostrarse ordenados de diferente
+ forma.
+ Por ejemplo, orden alfabético de productos, de secciones de nivel 1, por
+ precio, etc.
+ Aplique el patrón Strategy para implementar esta funcionalidad.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considere el problema del banco de la práctica de diseño.
+ Ahora suponga que el banco ha comprado otros bancos.
+ Cada banco comprado tiene su propia forma de definir una cuenta (caja de
+ ahorro, cuenta corriente, en pesos y dólares), plazo fijo, cliente, etc.
+ Estudie las posibilidades de aplicar (y eventualmente aplique) el patrón
+ Abstract Factory para que el sistema compuesto cree los diferentes productos.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Continuando con el problema de la estación climatométrica, suponga que la
+ empresa que la desarrolla tiene varios modelos diferentes con sensores
+ de distinta precisión, robustez y precio.
+ Utilice el patrón Bridge para diseñar un sistema que se auto configure
+ en tiempo de ejecución de acuerdo a la plataforma donde está ejecutando.
+ Muestre código de ejemplo de cómo se implementarı́a este aspecto de la
+ aplicación.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En el problema 8 se trató el problema de la creación de objetos que representan
+ los diversos productos de los bancos que fue adquiriendo nuestro banco.
+ Ahora toca el turno de aplicar el patrón Wrapper para implementar resoluciones
+ del BCRA referidas a las transacciones que pueden realizar los clientes
+ de cualquier banco sobre sus cuentas corrientes.
+ Algunas de las resoluciones del BCRA son las siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+A-2156.
+ No se podrán realizar más de dos extracciones semanales de las cajas de
+ ahorro en pesos.
+\end_layout
+
+\begin_layout Description
+A-3401.
+ Si el titular es una persona jurídica cada depósito de más de $10.000 deberá
+ ser informado al BCRA en un archivo mensual descrito en la C-BCRA-B-1190.
+\end_layout
+
+\begin_layout Description
+A-3436.
+ Los plazos fijos de más de $1.000.000 deberán ser informados al BCRA en un
+ archivo mensual descrito en la C-BCRA-B-1284.
+\end_layout
+
+\begin_layout Description
+B-3441.
+ Los bancos quedan autorizado a no permitir extracciones de más de $10.000
+ por mes de cualquier cuenta, si así lo consideran apropiado.
+ Esta medida podrá ser aplicada y revocada por cada entidad si lo comunica
+ a sus cliente con una antelación superior a los 30 días.
+\end_layout
+
+\begin_layout Description
+A-3211.
+ Si un cliente posee valores por más de $10.000.000 deberá ser informado mensualme
+nte al BCRA.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considere el problema relativo al sistema de archivos de Linux visto en
+ la práctica de diseño.
+ El VFS da una representación jerárquica a los archivos y directorios como
+ usted sabe.
+ Utilice el patrón Composite para representar los directorios y archivos.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Aplique el patrón Iterator para recorrer el sistema de archivos de diferentes
+ formas.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que el VFS provee un módulo que dado un código de error emitido
+ por alguna de sus subrutinas (llamadas al sistema) retorna el mensaje correspon
+diente.
+ Aplique el patrón Bridge para para poder configurar el VFS para retornar
+ los errores en diferentes idiomas (internacionalización).
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una utilidad provista por Linux es 
+\emph on
+du
+\emph default
+ que retorna el espacio en disco utilizado por un directorio dado.
+ Estas utilidades se proveen a nivel de usuario.
+ Analice la posibilidad de aplicar (y eventualmente aplique) el patrón Visitor
+ para implementar este tipo de servicios (
+\emph on
+find
+\emph default
+, etc.).
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Otra utilidad provista por Linux es el comando 
+\emph on
+fscheck
+\emph default
+ que permite reparar el sistema de archivos ante algunos daños.
+ Analice la posibilidad de aplicar (y eventualmente aplique) el patrón Strategy
+ para implementar diferentes estrategias de reparación.
+ Haga lo mismo con el patrón Visitor.
+ Notar que se requiere recorrer el sistema de archivos completo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Suponga que se desean implementar diferentes modelos de control de acceso
+ a los archivos y directorios del sistema de archivos de Linux.
+ Analice la posibilidad de aplicar (y eventualmente aplique) el patrón Wrapper
+ para implementar esos modelos de seguridad.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
