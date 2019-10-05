@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass book
 \begin_preamble
 \usepackage{tikz-uml}
 \usepackage{verbatimbox}
@@ -92,10 +92,10 @@ LatexCommand tableofcontents
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
+\end_layout
 
-
+\begin_layout Chapter
+Patrones de creación
 \end_layout
 
 \begin_layout Section
@@ -1155,6 +1155,10 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 
 \end_layout
 
+\begin_layout Chapter
+Patrones estructurales
+\end_layout
+
 \begin_layout Section
 Birdge
 \end_layout
@@ -1558,6 +1562,8 @@ El patrón Abstract Factory puede crear y configurar el Bridge.
 \end_layout
 
 \begin_layout Itemize
+
+\strikeout on
 El patrón Adapter esta orientado a conseguir que trabajen juntas clases
  que no están relacionadas.
  Normalmente se aplica a sistemas que ya han sido diseñados.
@@ -2140,15 +2146,32 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 \end_layout
 
 \begin_layout Section
-Composite (COMPLETAR)
+Composite
 \end_layout
 
 \begin_layout Subsection
-Propósito (COMPLETAR)
+Propósito
+\end_layout
+
+\begin_layout Standard
+Compone objetos en estructuras de árbol para representar jerarquías de parte-tod
+o.
+ Permite que los clientes traten de manera uniforme a los objetos individuales
+ y a los compuestos.
 \end_layout
 
 \begin_layout Subsection
-Aplicabilidad (COMPLETAR)
+Aplicabilidad
+\end_layout
+
+\begin_layout Itemize
+Representar jerarquías de objetos parte-todo.
+\end_layout
+
+\begin_layout Itemize
+Abstraer las diferencias entre composiciones de objetos y objetos individuales.
+ Los clientes tratarán a todos los objetos de la estructura compuesta de
+ manera uniforme.
 \end_layout
 
 \begin_layout Subsection
@@ -2410,19 +2433,144 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Subsection
-Participantes (COMPLETAR)
+Participantes
+\end_layout
+
+\begin_layout Paragraph
+Componente
+\end_layout
+
+\begin_layout Itemize
+Declara la interfaz de los objetos de la composición.
+\end_layout
+
+\begin_layout Itemize
+Implementa el comportamiento predeterminado de la interfaz que es común
+ a todas las clases.
+\end_layout
+
+\begin_layout Itemize
+Declara una interfaz para acceder a sus componentes hijos y gestionarlos.
+\end_layout
+
+\begin_layout Itemize
+Opcionalmente, define una interfaz para acceder al padre de un componente
+ en la estructura recursiva y, si es necesario, la implementa.
+\end_layout
+
+\begin_layout Paragraph
+Hoja
+\end_layout
+
+\begin_layout Itemize
+Representa objetos hoja en la composición.
+ Una hoja no tiene hijos.
+\end_layout
+
+\begin_layout Itemize
+Define el comportamiento de los objetos primitivos de la composición.
+\end_layout
+
+\begin_layout Paragraph
+Compuesto
+\end_layout
+
+\begin_layout Itemize
+Define el comportamiento de los componentes que tienen hijos.
+\end_layout
+
+\begin_layout Itemize
+Almacena componentes hijos.
+\end_layout
+
+\begin_layout Itemize
+Implementa las operaciones de la interfaz Componente relacionadas con los
+ hijos.
+\end_layout
+
+\begin_layout Paragraph
+Cliente
+\end_layout
+
+\begin_layout Itemize
+Manipula objetos en la composición a través de la interfaz Componente.
 \end_layout
 
 \begin_layout Subsection
-Colaboraciones (COMPLETAR)
+Colaboraciones
+\end_layout
+
+\begin_layout Standard
+Los Clientes usan la interfaz de la clase Componente para interactuar con
+ los objetos de la estructura compuesta.
+ Si el recipiente es una Hoja, la petición se trata correctamente.
+ Si es un Compuesto, normalmente redirige las peticiones a sus componentes
+ hijos, posiblemente realizando operaciones adicionales antes o después.
 \end_layout
 
 \begin_layout Subsection
-Consecuencias (COMPLETAR)
+Consecuencias
+\end_layout
+
+\begin_layout Itemize
+Define jerarquías de clases formadas por objetos primitivos y compuestos.
+ Allí donde el código espere un objeto primitivo, también podrá recibir
+ un objeto compuesto.
+\end_layout
+
+\begin_layout Itemize
+Simplifica el cliente.
+ Los cliente pueden tratar uniformemente a las estructuras compuestas y
+ a los objetos individuales.
+\end_layout
+
+\begin_layout Itemize
+Facilita añadir nuevos tipos de componentes.
+ Si se definen nuevas subclases Compuesto u Hoja, éstas funcionarán automáticame
+nte con las estructuras y el código cliente existentes.
+ No hay que cambiar los clientes para las nuevas clases Componente.
+\end_layout
+
+\begin_layout Itemize
+Puede hacer que un diseño sea demasiado general.
+ La desventaja de facilitar añadir nuevos componentes es que hace más difícil
+ restringir los componentes de un compuesto.
 \end_layout
 
 \begin_layout Subsection
-Patrones relacionados (COMPLETAR)
+Patrones relacionados
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Muchas veces se usa el enlace al componente padre para implementar el patrón
+ Chain of Responsibility.
+\end_layout
+
+\begin_layout Itemize
+El patrón Decorator (Wrapper) suele usarse junto con el Composite.
+ Cuando se usan juntos decoradores y compuestos, normalmente ambos tendrán
+ una clase padre común.
+ Por lo tanto, los decoradores tendrán que admitir la interfaz Componente
+ con operaciones como Añadir, Eliminar y ObtenerHijo.
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+El patron Flyweight permite compartir componentes, si bien en ese caso éstos
+ ya no pueden referirse a sus padres.
+\end_layout
+
+\begin_layout Itemize
+Se puede usar el patrón Iterator para recorrer las estructuras definidas
+ por el patrón Composite.
+\end_layout
+
+\begin_layout Itemize
+El patrón Visitor localiza operaciones y comportamiento que de otro modo
+ estaría distribuido en varias clases Compuesto y Hoja.
 \end_layout
 
 \begin_layout Subsection
@@ -3788,16 +3936,64 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 
 \end_layout
 
+\begin_layout Chapter
+Patrones de comportamiento
+\end_layout
+
 \begin_layout Section
-Command (COMPLETAR)
+Command
 \end_layout
 
 \begin_layout Subsection
-Propósito (COMPLETAR)
+Propósito
+\end_layout
+
+\begin_layout Standard
+Encapsula una petición en un objeto, permitiendo así parametrizar a los
+ clientes con diferentes peticiones, hacer cola o llevar un registro de
+ las peticiones, y poder deshacer las operaciones.
 \end_layout
 
 \begin_layout Subsection
-Aplicabilidad (COMPLETAR)
+Aplicabilidad
+\end_layout
+
+\begin_layout Itemize
+Parametrizar objetos con una acción a realizar.
+ Los objetos Orden son un sustituto orientado a objetos para las funciones
+ callback.
+\end_layout
+
+\begin_layout Itemize
+Especificar, poner en cola y ejecutar peticiones en diferentes instantes
+ de tiempo.
+ Un objeto Orden puede tener un tiempo de vida independiente de la petición
+ original.
+\end_layout
+
+\begin_layout Itemize
+Permitir deshacer.
+ La operación Ejecutar de Orden puede guardar en la propia orden el estado
+ que anule sus efectos.
+ Debe añadirse a la interfaz Orden una operación Deshacer que anule los
+ efectos de una llamada anterior a Ejecutar.
+ Las órdenes ejecutadas se guardan en una lista que hace las veces de historial.
+\end_layout
+
+\begin_layout Itemize
+Permitir registrar los cambios de manera que se puedan volver a aplicar
+ en caso de una caída del sistema.
+ Aumentando la interfaz Orden con operaciones para cargar y guardar se puede
+ mantener un registro persistente de los cambios.
+ Recuperarse de una caída implica volver a cargar desde el disco las órdenes
+ guardadas y volver a ejecutarlas con la operación Ejecutar.
+\end_layout
+
+\begin_layout Itemize
+Estructurar un sistema alrededor de operaciones de alto nivel construidas
+ sobre operaciones básicas.
+ Dicha estructura es común en los sistemas de información que permiten transacci
+ones.
 \end_layout
 
 \begin_layout Subsection
@@ -4007,19 +4203,122 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Subsection
-Participantes (COMPLETAR)
+Participantes
+\end_layout
+
+\begin_layout Paragraph
+Orden
+\end_layout
+
+\begin_layout Itemize
+Declara una interfaz para ejecutar una operación.
+\end_layout
+
+\begin_layout Paragraph
+OrdenConcreta
+\end_layout
+
+\begin_layout Itemize
+Define un enlace entre un objeto Receptor y una acción.
+\end_layout
+
+\begin_layout Itemize
+Implementa Ejecutar invocando la correspondiente operación u operaciones
+ del Receptor.
+\end_layout
+
+\begin_layout Paragraph
+Cliente
+\end_layout
+
+\begin_layout Itemize
+Crea un objeto OrdenConcreta y establece su receptor.
+\end_layout
+
+\begin_layout Paragraph
+Invocador
+\end_layout
+
+\begin_layout Itemize
+Le pide a la orden que ejecute la petición.
+\end_layout
+
+\begin_layout Paragraph
+Receptor
+\end_layout
+
+\begin_layout Itemize
+Sabe cómo llevar a cabo las operaciones asociadas a una petición.
+ Cualquier clase puede hacer actuar como Receptor.
 \end_layout
 
 \begin_layout Subsection
-Colaboraciones (COMPLETAR)
+Colaboraciones
+\end_layout
+
+\begin_layout Itemize
+El cliente crea un objeto OrdenConcreta y especifica su receptor.
+\end_layout
+
+\begin_layout Itemize
+Un objeto Invocador almacena el objeto OrdenConcreta.
+\end_layout
+
+\begin_layout Itemize
+El invocador envía una petición llamando a Ejecutar sobre la orden.
+ Cuando las órdenes se pueden deshacer, OrdenConcreta guarda el estado para
+ deshacer la orden antes de llamar a Ejecutar.
+\end_layout
+
+\begin_layout Itemize
+El objeto OrdenConcreta invoca operaciones de su receptor para llevar a
+ cabo la petición.
 \end_layout
 
 \begin_layout Subsection
-Consecuencias (COMPLETAR)
+Consecuencias
+\end_layout
+
+\begin_layout Itemize
+Orden desacopla el objeto que invoca la operación de aquél que sabe cómo
+ realizarla.
+\end_layout
+
+\begin_layout Itemize
+Las órdenes son objetos de primera clase.
+ Pueden ser manipulados y extendidos como cualquier otro objeto.
+\end_layout
+
+\begin_layout Itemize
+Se pueden ensamblar órdenes en una orden compuesta.
+ En general, las órdenes compuestas son una instancia del patrón Composite.
+\end_layout
+
+\begin_layout Itemize
+Es mas fácil añadir nuevas órdenes, ya que no hay que cambiar las clases
+ existentes.
 \end_layout
 
 \begin_layout Subsection
-Patrones relacionados (COMPLETAR)
+Patrones relacionados
+\end_layout
+
+\begin_layout Itemize
+Se puede usar el patrón Composite para implementar ordenes compuestas.
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Un memento puede mantener el estado que necesitan las órdenes para anular
+ (deshacer) sus efectos.
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Una orden que debe ser copiada antes de ser guardada en el historial funciona
+ como un Prototype.
 \end_layout
 
 \begin_layout Subsection
@@ -4594,15 +4893,34 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 \end_layout
 
 \begin_layout Section
-Iterator (COMPLETAR)
+Iterator
 \end_layout
 
 \begin_layout Subsection
-Propósito (COMPLETAR)
+Propósito
+\end_layout
+
+\begin_layout Standard
+Proporciona un modo de acceder secuencialmente a los elementos de un objeto
+ agregado sin exponer su representación interna.
 \end_layout
 
 \begin_layout Subsection
-Aplicabilidad (COMPLETAR)
+Aplicabilidad
+\end_layout
+
+\begin_layout Itemize
+Acceder al contenido de un objeto agregado sin exponer su representación
+ interna.
+\end_layout
+
+\begin_layout Itemize
+Permitir varios recorridos sobre objetos agregados.
+\end_layout
+
+\begin_layout Itemize
+Proporcionar una interfaz uniforme para recorrer diferentes estructuras
+ agregadas.
 \end_layout
 
 \begin_layout Subsection
@@ -4859,19 +5177,101 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Subsection
-Participantes (COMPLETAR)
+Participantes
+\end_layout
+
+\begin_layout Paragraph
+Iterador
+\end_layout
+
+\begin_layout Itemize
+Define una interfaz para recorrer los elementos y acceder a ellos.
+\end_layout
+
+\begin_layout Paragraph
+IteradorConcreto
+\end_layout
+
+\begin_layout Itemize
+Implementa la interfaz Iterador.
+\end_layout
+
+\begin_layout Itemize
+Mantiene la posición actual en el recorrido del agregado.
+\end_layout
+
+\begin_layout Paragraph
+Agregado
+\end_layout
+
+\begin_layout Itemize
+Define una interfaz para crear un objeto Iterador.
+\end_layout
+
+\begin_layout Paragraph
+AgregadoConcreto
+\end_layout
+
+\begin_layout Itemize
+Implementa la interfaz de creación de Iterador para devolver una instancia
+ del IteradorConcreto apropiado.
 \end_layout
 
 \begin_layout Subsection
-Colaboraciones (COMPLETAR)
+Colaboraciones
+\end_layout
+
+\begin_layout Itemize
+Un IteradorConcreto sabe cuál es el objeto actual del agregado y puede calcular
+ el objeto siguiente en el recorrido.
 \end_layout
 
 \begin_layout Subsection
-Consecuencias (COMPLETAR)
+Consecuencias
+\end_layout
+
+\begin_layout Itemize
+Permite variaciones en el recorrido de un agregado.
+ Los agregados pueden recorrerse de muchas formas.
+ Los iteradores facilitan cambiar el algoritmo de recorrido: basta con sustituir
+ la instancia de iterador por otra diferente.
+ También se pueden definir subclases de Iterador para permitir nuevos recorridos.
+\end_layout
+
+\begin_layout Itemize
+Los iteradores simplifican la interfaz de los agregados.
+ La interfaz de recorrido de Iterador elimina la necesidad de una interfaz
+ parecida en Agregado, simplificando así la interfaz del agregado.
+\end_layout
+
+\begin_layout Itemize
+Se puede hacer más de un recorrido a la vez sobre un agregado.
+ Un iterador mantiene su propio estado del recorrido, por lo tanto, es posible
+ estar realizando más de un recorrido al mismo tiempo.
 \end_layout
 
 \begin_layout Subsection
-Patrones relacionados (COMPLETAR)
+Patrones relacionados
+\end_layout
+
+\begin_layout Itemize
+Composite: los iteradores suelen aplicarse a estructuras recursivas como
+ los compuestos.
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Factory Method: los iteradores polimórficos se basan en métodos de fabricación
+ para crear instancias de las subclases apropiadas de Iterator.
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+El patrón Memento suele usarse conjuntamente con el patrón Iterator.
+ Un iterador puede usar un memento para representar el estado de una interacción.
+ El iterador almacena el memento internamente.
 \end_layout
 
 \begin_layout Subsection
