@@ -99,15 +99,40 @@ Patrones de creación
 \end_layout
 
 \begin_layout Section
-Abstract Factory (COMPLETAR)
+Abstract Factory
 \end_layout
 
 \begin_layout Subsection
-Propósito (COMPLETAR)
+Propósito
+\end_layout
+
+\begin_layout Standard
+Proporciona una interfaz para crear familias de objetos relacionadas o que
+ dependen entre sí, sin especificar sus clases concretas.
 \end_layout
 
 \begin_layout Subsection
-Aplicabilidad (COMPLETAR)
+Aplicabilidad
+\end_layout
+
+\begin_layout Itemize
+Cuando el sistema debe ser independiente de cómo se crean, componen y representa
+n sus productos.
+\end_layout
+
+\begin_layout Itemize
+Cuando el sistema debe ser configurado con una familia de productos de entre
+ varias.
+\end_layout
+
+\begin_layout Itemize
+Cuando una familia de objetos producto relacionados está diseñada para ser
+ usada conjuntamente, y es necesario hacer cumplir esta restricción.
+\end_layout
+
+\begin_layout Itemize
+Cuando quiere proporcionar una biblioteca de clases de productos, y sólo
+ quiere revelar sus interfaces, no sus implementaciones.
 \end_layout
 
 \begin_layout Subsection
@@ -443,19 +468,128 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Subsection
-Participantes (COMPLETAR)
+Participantes
+\end_layout
+
+\begin_layout Paragraph
+FabricaAbstracta
+\end_layout
+
+\begin_layout Itemize
+Declara una interfaz para operaciones que crean objetos producto abstractos.
+\end_layout
+
+\begin_layout Paragraph
+FabricaConcreta
+\end_layout
+
+\begin_layout Itemize
+Implementa las operaciones para crear objetos producto concretos.
+\end_layout
+
+\begin_layout Paragraph
+ProductoAbstracto
+\end_layout
+
+\begin_layout Itemize
+Declara una interfaz para un tipo de objeto producto.
+\end_layout
+
+\begin_layout Paragraph
+ProductoConcreto
+\end_layout
+
+\begin_layout Itemize
+Define un objeto producto para que sea creado por la fábrica correspondiente.
+\end_layout
+
+\begin_layout Itemize
+Implementa la interfaz ProductoAbstracto.
+\end_layout
+
+\begin_layout Paragraph
+Cliente
+\end_layout
+
+\begin_layout Itemize
+Sólo usa interfaces declaradas por las clases FabricaAbstracta y ProductoAbstrac
+to.
 \end_layout
 
 \begin_layout Subsection
-Colaboraciones (COMPLETAR)
+Colaboraciones
+\end_layout
+
+\begin_layout Itemize
+Normalmente sólo se crea una única instancia de una clase FabricaConcreta
+ en tiempo de ejecución.
+ Esta fábrica concreta crea objetos producto que tienen una determinada
+ implementación.
+ Para crear diferentes objeto producto, los clientes deben usar una fábrica
+ concreta diferente.
+\end_layout
+
+\begin_layout Itemize
+FabricaAbstracta delega la creación de objetos producto en su subclase FabricaCo
+ncreta.
 \end_layout
 
 \begin_layout Subsection
-Consecuencias (COMPLETAR)
+Consecuencias
+\end_layout
+
+\begin_layout Itemize
+Aísla las clases concretas.
+ El patrón Abstract Factory ayuda a controlar las clases de objetos que
+ crea una aplicación.
+ Encapsula la responsabilidad y el proceso de creación de objetos producto,
+ aísla a los clientes de las clases de implementación.
+ Los clientes manipulan las instancias a través de sus interfaces abstractas.
+ Los nombres de las clases producto quedan aisladas en la implementación
+ de la fábrica concreta; no aparecen en el código cliente.
+\end_layout
+
+\begin_layout Itemize
+Facilita el intercambio de familias de productos.
+ La clase de una fábrica concreta sólo aparece una vez en una aplicación.
+ Esto facilita cambiar la fábrica concreta que usa una aplicación.
+ Como una fábrica abstracta crea una familia completa de productos, toda
+ la familia de productos cambia de una vez.
+\end_layout
+
+\begin_layout Itemize
+Promueve la consistencia entre productos.
+ Cuando se diseñan objetos producto en una familia para trabajar juntos,
+ es importante que una aplicación use objetos de una sola familia a la vez.
+ FabricaAbstracta facilita que se cumpla esta restricción.
+\end_layout
+
+\begin_layout Itemize
+Es difícil dar cabida a nuevos tipos de productos.
+ Ampliar las fábricas abstractas para producir nuevos tipos de productos
+ no es fácil.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Patrones relacionados (COMPLETAR)
+Patrones relacionados
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Las clases FabricaAbstracta suelen implementarse con métodos de fabricación
+ (patron Factory Method), pero también se pueden implementar usando prototipos
+ (patrón Prototype).
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Una fábrica concreta suele ser un Singleton.
 \end_layout
 
 \begin_layout Subsection
@@ -1497,6 +1631,10 @@ Implementador Concreto
 
 \begin_layout Itemize
 Implementa la interfaz Implementador y define su implementación concreta.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2158,6 +2296,10 @@ Compone objetos en estructuras de árbol para representar jerarquías de parte-t
 o.
  Permite que los clientes traten de manera uniforme a los objetos individuales
  y a los compuestos.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2522,6 +2664,10 @@ Define jerarquías de clases formadas por objetos primitivos y compuestos.
 Simplifica el cliente.
  Los cliente pueden tratar uniformemente a las estructuras compuestas y
  a los objetos individuales.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -3111,15 +3257,41 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 \end_layout
 
 \begin_layout Section
-Wrapper/Decorator (COMPLETAR)
+Wrapper/Decorator
 \end_layout
 
 \begin_layout Subsection
-Propósito (COMPLETAR)
+Propósito
+\end_layout
+
+\begin_layout Standard
+Asigna responsabilidades adicionales a un objeto dinámicamente, proporcionando
+ una alternativa flexible a la herencia para extender la funcionalidad.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Aplicabilidad (COMPLETAR)
+Aplicabilidad
+\end_layout
+
+\begin_layout Itemize
+Para añadir objetos individuales de forma dinámica y transparente, es decir,
+ sin afectar a otros objetos.
+\end_layout
+
+\begin_layout Itemize
+Para responsabilidades que pueden ser retiradas.
+\end_layout
+
+\begin_layout Itemize
+Cuando la extensión mediante la herencia no es viable.
+ A veces es posible tener un gran número de extensiones independientes,
+ produciéndose una explosión de subclases para permitir todas las combinaciones.
+ O puede ser que una definición de una clase esté oculta o que no esté disponibl
+e para ser heredada.
 \end_layout
 
 \begin_layout Subsection
@@ -3430,19 +3602,112 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Subsection
-Participantes (COMPLETAR)
+Participantes
+\end_layout
+
+\begin_layout Paragraph
+Componente
+\end_layout
+
+\begin_layout Itemize
+Define la interfaz para objetos a los que se puede añadir responsabilidades
+ dinámicamente.
+\end_layout
+
+\begin_layout Paragraph
+ComponenteConcreto
+\end_layout
+
+\begin_layout Itemize
+Define un objeto al que se pueden añadir reponsabilidades adicionales.
+\end_layout
+
+\begin_layout Paragraph
+Decorador
+\end_layout
+
+\begin_layout Itemize
+Mantiene una referencia a un objeto Componente y define una interfaz que
+ se ajusta a la interfaz Componente.
+\end_layout
+
+\begin_layout Paragraph
+DecoradorConcreto
+\end_layout
+
+\begin_layout Itemize
+Añade responsabilidades al componente.
 \end_layout
 
 \begin_layout Subsection
-Colaboraciones (COMPLETAR)
+Colaboraciones
+\end_layout
+
+\begin_layout Standard
+El Decorador redirige peticiones a su objeto Componente.
+ Opcionalmente puede realizar operaciones adicionales antes y después de
+ reenviar la petición.
 \end_layout
 
 \begin_layout Subsection
-Consecuencias (COMPLETAR)
+Consecuencias
+\end_layout
+
+\begin_layout Itemize
+Mas flexibilidad que la herencia estática.
+ Con los decoradores se pueden añadir y eliminar responsabilidades en tiempo
+ de ejecución simplemente poniéndolas y quitándolas.
+ Por otro lado, proporcionar diferentes clases Decorador para una determinada
+ clase Componente permite mezclar responsabilidades.
+ Los Decoradores también facilitan añadir una propiedad dos veces.
+\end_layout
+
+\begin_layout Itemize
+Evita clases cargadas de funciones en la parte de arriba de la jerarquía.
+ En vez de tratar de permitir todas las funcionalidades inimaginables en
+ una clase compleja y adaptable, podemos definir primero una clase simple
+ y añadir luego funcionalidad incrementalmente con objetos Decorador.
+ La funcionalidad puede obtenerse componiendo partes simples.
+ También resulta fácil definir nuevos tipos de Decoradores independientemente
+ de las clases de objetos de las que hereden, incluso para extensiones que
+ no hubieran sido previstas.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Patrones relacionados (COMPLETAR)
+Patrones relacionados
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Adapter: un decorador se diferencia de un adaptador en que el decorador
+ sólo cambia las responsabilidades de un objeto, no su interfaz, mientras
+ que un adaptador le da a un objeto una interfaz completamente nueva.
+\end_layout
+
+\begin_layout Itemize
+Composite: podemos ver a un decorador como un compuesto degenerado que sólo
+ tiene un componente.
+ No obstante, un decorador añade responsabilidades adicionales; no está
+ pensando para la agregación de objetos.
+\end_layout
+
+\begin_layout Itemize
+Strategy: un decorador permite cambiar el exterior de un objeto; una estrategia
+ permite cambiar sus 
+\begin_inset Quotes fld
+\end_inset
+
+tripas
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Son dos formas alternativas de modificar un objeto.
 \end_layout
 
 \begin_layout Subsection
@@ -3978,6 +4243,10 @@ Permitir deshacer.
  Debe añadirse a la interfaz Orden una operación Deshacer que anule los
  efectos de una llamada anterior a Ejecutar.
  Las órdenes ejecutadas se guardan en una lista que hace las veces de historial.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -5174,6 +5443,10 @@ end{tikzpicture}
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -5896,15 +6169,42 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 \end_layout
 
 \begin_layout Section
-Strategy (COMPLETAR)
+Strategy
 \end_layout
 
 \begin_layout Subsection
-Propósito (COMPLETAR)
+Propósito
+\end_layout
+
+\begin_layout Standard
+Defina una familia de algoritmos, encapsula cada uno de ellos y los hace
+ intercambiables.
+ Permite que un algoritmo varíe independientemente de los clientes que lo
+ usan.
 \end_layout
 
 \begin_layout Subsection
-Aplicabilidad (COMPLETAR)
+Aplicabilidad
+\end_layout
+
+\begin_layout Itemize
+Cuando muchas clases relacionadas difieren sólo en su comportamiento, las
+ estrategias permiten configurar una clase con un determinado comportamiento
+ de entre muchos posibles.
+\end_layout
+
+\begin_layout Itemize
+Cuando se necesitan distintas variantes de un algoritmo.
+\end_layout
+
+\begin_layout Itemize
+Cuando un algoritmo usa datos que los clientes no deberían conocer, puede
+ usarse el patrón Strategy para evitar exponer estructuras de datos complejas.
+\end_layout
+
+\begin_layout Itemize
+Cuando una clase define muchos comportamientos, en vez de tener muchos condicion
+ales podemos mover las ramas de éstos a su propia clase Estrategia.
 \end_layout
 
 \begin_layout Subsection
@@ -6072,22 +6372,142 @@ end{tikzpicture}
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Participantes (COMPLETAR)
+Participantes
+\end_layout
+
+\begin_layout Paragraph
+Estrategia
+\end_layout
+
+\begin_layout Itemize
+Declara una interfaz común a todos los algoritmos permitidos.
+ El Contexto usa esta interfaz para llamar al algoritmo definido por una
+ EstrategiaConcreta.
+\end_layout
+
+\begin_layout Paragraph
+EstrategiaConcreta
+\end_layout
+
+\begin_layout Itemize
+Implementa el algoritmo usando la interfaz de Estrategia.
+\end_layout
+
+\begin_layout Paragraph
+Contexto
+\end_layout
+
+\begin_layout Itemize
+Se configura con un objeto EstrategiaConcreta.
+\end_layout
+
+\begin_layout Itemize
+Mantiene una referencia a un objeto Estrategia.
+\end_layout
+
+\begin_layout Itemize
+Puede definir una interfaz que permita a la Estrategia acceder a sus datos.
 \end_layout
 
 \begin_layout Subsection
-Colaboraciones (COMPLETAR)
+Colaboraciones
+\end_layout
+
+\begin_layout Itemize
+Estrategia y Contexto interactúan para implementar el algoritmo elegido.
+ Un contexto puede pasar a la estrategia todos los datos requeridos por
+ el algoritmo cada vez que se llama a éste.
+ Otra alternativa es que el contexto se pase a sí mismo como argumento de
+ las operaciones de Estrategia.
+ Esto permite a la estrategia hacer llamadas al contexto cuando sea necesario.
+\end_layout
+
+\begin_layout Itemize
+Un contexto redirige peticiones de los clientes a su estrategia.
+ Los clientes normalmente crean un objeto EstrategiaConcreta, el cual pasan
+ al contexto; por lo tanto, los clientes interactúan exclusivamente con
+ el contexto.
+ Suele haber una familia de clases EstrategiaConcreta a elegir por el cliente.
 \end_layout
 
 \begin_layout Subsection
-Consecuencias (COMPLETAR)
+Consecuencias
+\end_layout
+
+\begin_layout Itemize
+Familias de algoritmos.
+ Las jerarquías de clases Estrategia definen una familia de algoritmos o
+ comportamientos para ser reutilizados por los contextos.
+ La herencia puede ayudar a sacar factor común de la funcionalidad de estos
+ algoritmos.
+\end_layout
+
+\begin_layout Itemize
+Una alternativa a la herencia.
+ Heredar de una clase Contexto para proporcionar diferentes comportamientos
+ liga el comportamiento al Contexto mezclando la implementación del algoritmo
+ con el Contexto y ademas impide modificar el algoritmo dinamicamente.
+ Encapsular el algoritmo en clases Estrategia separadas nos permite variar
+ el algoritmo independientemente de su contexto, haciéndolo mas fácil de
+ cambiar, comprender y extender.
+\end_layout
+
+\begin_layout Itemize
+Las estrategias eliminan las sentencias condicionales.
+ El patrón Strategy ofrece una alternativa a las sentencias condicionales
+ para seleccionar el comportamiento deseado.
+ Un código que contiene muchas sentencias condicionales suele indicar la
+ necesidad de aplicar el patrón Estrategia.
+\end_layout
+
+\begin_layout Itemize
+Elección de implementaciones.
+ Las estrategias pueden proporcionar distintas implementaciones del mismo
+ comportamiento.
+ El cliente puede elegir entre estrategias con diferentes soluciones de
+ compromiso tiempo y espacio.
+\end_layout
+
+\begin_layout Itemize
+Los clientes deben conocer las diferentes Estrategias.
+ El patrón tiene el inconveniente potencial de que un cliente debe comprender
+ como difieren la Estrategias antes de seleccionar la adecuada.
+ El patrón Strategy debería usarse sólo cuando la variación de comportamiento
+ sea relevante a los clientes.
+\end_layout
+
+\begin_layout Itemize
+Costes de comunicación entre Estrategia y Contexto.
+ La interfaz de Estrategia es compartida por todas las clases EstrategiaConcreta
+, por lo tanto, es probable que algunos objetos EstrategiaConcreta no usen
+ toda la información que reciben a través de dicha interfaz.
+ Esto significa que habrá veces en las que el contexto crea e inicializa
+ parámetros que nunca se usan.
+\end_layout
+
+\begin_layout Itemize
+Mayor número de objetos.
+ Las estrategias aumentan el número de objetos de una aplicación.
+ A veces se puede reducir este coste implementando las estrategias como
+ objetos sin estado que puedan ser compartidos por el contexto.
+ El patrón Flyweight describe este enfoque en más detalle.
 \end_layout
 
 \begin_layout Subsection
-Patrones relacionados (COMPLETAR)
+Patrones relacionados
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Flyweight: los objetos Estrategia suelen ser buenos pesos ligeros.
 \end_layout
 
 \begin_layout Subsection
@@ -6622,15 +7042,45 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 \end_layout
 
 \begin_layout Section
-Visitor (COMPLETAR)
+Visitor
 \end_layout
 
 \begin_layout Subsection
-Propósito (COMPLETAR)
+Propósito
+\end_layout
+
+\begin_layout Standard
+Representa una operación sobre los elementos de una estructura de objetos.
+ Permite definir una nueva operación sin cambiar las clases de los elementos
+ sobre los que opera.
 \end_layout
 
 \begin_layout Subsection
-Aplicabilidad (COMPLETAR)
+Aplicabilidad
+\end_layout
+
+\begin_layout Itemize
+Cuando una estructura de objetos contiene muchas clases de objetos con diferente
+s interfaces, y queremos realizar operaciones sobre esos elementos que dependen
+ de su clase concreta.
+\end_layout
+
+\begin_layout Itemize
+Cuando se necesitan realizar muchas operaciones distintas y no relacionadas
+ sobre objetos de una estructura de objetos, y queremos evitar 
+\begin_inset Quotes fld
+\end_inset
+
+contaminar
+\begin_inset Quotes frd
+\end_inset
+
+ sus clases con dichas operaciones.
+\end_layout
+
+\begin_layout Itemize
+Cuando las clases que definen la estructura de objeto rara vez cambian,
+ pero muchas veces queremos definir nuevas operaciones sobre la estructura.
 \end_layout
 
 \begin_layout Subsection
@@ -7054,19 +7504,161 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Subsection
-Participantes (COMPLETAR)
+Participantes
+\end_layout
+
+\begin_layout Paragraph
+Visitante
+\end_layout
+
+\begin_layout Itemize
+Declara una operación Visitar para cada clase de operación ElementoConcreto
+ de la estructura de objetos.
+ El nombre y signatura de la operación identifican a la clase que envía
+ la petición Visitar al visitante.
+ A continuación el visitante puede acceder al elemento directamente a través
+ de su interfaz particular.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+VisitanteConcreto
+\end_layout
+
+\begin_layout Itemize
+Implementa cada operación declarada por Visitante.
+ Cada operación implementa un fragmento del algoritmo definido para la clase
+ correspondiente de la estructura.
+ VisitanteConcreto proporciona el contexto para el algoritmo y guarda su
+ estado local.
+ Muchas veces este estado acumula resultados durante el recorrido de la
+ estructura.
+\end_layout
+
+\begin_layout Paragraph
+Elemento
+\end_layout
+
+\begin_layout Itemize
+Define una operación Aceptar que toma un visitante como argumento.
+\end_layout
+
+\begin_layout Paragraph
+ElementoConcreo
+\end_layout
+
+\begin_layout Itemize
+Implementa una operación Aceptar que toma un visitante como argumento.
+\end_layout
+
+\begin_layout Paragraph
+EstructuraDeObjetos
+\end_layout
+
+\begin_layout Itemize
+Puede enumerar sus elementos.
+\end_layout
+
+\begin_layout Itemize
+Puede proporcionar una interfaz de alto nivel para permitir al visitante
+ visitar a sus elementos.
+\end_layout
+
+\begin_layout Itemize
+Puede er un compuesto (Composite) o una colección, como una lista o un conjunto.
 \end_layout
 
 \begin_layout Subsection
-Colaboraciones (COMPLETAR)
+Colaboraciones
+\end_layout
+
+\begin_layout Itemize
+Un cliente que usa el patrón Visitor debe crear un objeto VisitanteConcreto
+ y a continuación recorrer la estructura, visitando cada objeto con el visitante.
+\end_layout
+
+\begin_layout Itemize
+Cada vez que se visita a un elemento, este llama a la operación del Visitante
+ que se corresponde con su clase.
+ El elemento se pasa a sí mismo como argumento de la operación para permitir
+ al visitante acceder a su estado, en caso de que sea necesario.
 \end_layout
 
 \begin_layout Subsection
-Consecuencias (COMPLETAR)
+Consecuencias
+\end_layout
+
+\begin_layout Itemize
+Los visitantes facilitan añadir nuevas operaciones que dependen de los component
+es de objetos complejos.
+ Podemos definir una nueva operación sobre una estructura simplemente añadiendo
+ un nuevo visitante.
+\end_layout
+
+\begin_layout Itemize
+Un visitante agrupa operaciones relacionadas y separa las que no lo están.
+ El comportamiento similar no está desperdigado por las clases que definen
+ la estructura de objetos; está localizado en un visitante.
+ Las partes de comportamiento no relacionadas se dividen en sus propias
+ subclases del visitante.
+\end_layout
+
+\begin_layout Itemize
+Es difícil añadir nuevas clases de ElementoConcreto.
+ Cada ElementoConcreto nuevo da lugar a una nueva operación abstracta del
+ Visitante y a su correspondiente implementación predeterminada que puede
+ ser heredada por la mayoría de los visitantes concretos, pero esto representa
+ una excepción mas que una regla.
+\end_layout
+
+\begin_layout Itemize
+Visitar varias jerarquías de clases.
+ Un Iterador puede visitar a los objetos de una estructura llamando a sus
+ operaciones a medida que los recorre.
+ Pero un Iterador no puede trabajar en varias estructuras de objetos con
+ distintos tipos de elementos.
+ El patrón Visitor no tiene esta restricción.
+ Puede visitar objetos que no tienen una clase padre en común.
+\end_layout
+
+\begin_layout Itemize
+Acumular el estado.
+ Los visitante pueden acumular estado a medida que van visitando cada elemento
+ de la estructura de objetos.
+ Sin un visitante, este estado se pasaría como argumentos extra a las operacione
+s que realizan el recorrido.
+\end_layout
+
+\begin_layout Itemize
+Romper la encapsulación.
+ El enfoque del patrón Visitor asume que la interfaz de ElementoConcreto
+ es lo bastante porente como para que los visitantes hagan su trabajo.
+ Como resultado, el patrón suele obligarnos a proporcionar operaciones públicas
+ que accedan al estado interno de un elemento, lo que puede comprometer
+ su encapsulación.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Patrones relacionados (COMPLETAR)
+Patrones relacionados
+\end_layout
+
+\begin_layout Itemize
+Composite: los visitantes pueden usarse para aplicar una operación sobre
+ una estructura de objetos definida por el patrón Composite.
+\end_layout
+
+\begin_layout Itemize
+
+\strikeout on
+Interpreter: se puede aplicar el patrón Visitor para llevar a cabo la interpreta
+ción.
 \end_layout
 
 \begin_layout Subsection
