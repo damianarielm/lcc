@@ -1717,7 +1717,7 @@ Documentación
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="12" columns="4">
+<lyxtabular version="3" rows="11" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="0pt">
@@ -1940,47 +1940,7 @@ Elemento del diseño
 \begin_inset Text
 
 \begin_layout Plain Layout
-operacion()
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Elemento del diseño
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-imp
+Operacion()
 \end_layout
 
 \end_inset
@@ -2104,7 +2064,7 @@ Elemento del diseño
 \begin_layout Plain Layout
 
 \emph on
-operacionImp()
+OperacionImp()
 \end_layout
 
 \end_inset
@@ -4322,7 +4282,7 @@ umlsimpleclass[x=3, y=0]{Invocador}
 
     
 \backslash
-umlclass[x=3, y=-2.8]{Receptor} {
+umlclass[x=3, y=-3]{Receptor} {
 \end_layout
 
 \begin_layout Plain Layout
@@ -4349,7 +4309,7 @@ umlclass[x=3, y=-2.8]{Receptor} {
 
     
 \backslash
-umlabstract[x=7, y=-0.5]{Orden} {
+umlabstract[x=8, y=-0.5]{Orden} {
 \end_layout
 
 \begin_layout Plain Layout
@@ -4378,7 +4338,7 @@ emph{Ejecutar()}
 
     
 \backslash
-umlclass[x=8, y=-3]{OrdenConcreta} {
+umlclass[x=8, y=-3.2]{OrdenConcreta} {
 \end_layout
 
 \begin_layout Plain Layout
@@ -4410,7 +4370,7 @@ umlclass[x=8, y=-3]{OrdenConcreta} {
 
     
 \backslash
-umlnote[width=115, x=13, y=-3, anchor1=0, geometry=-|]{Compuesto} {
+umlnote[width=115, x=13, y=-3.2, anchor1=0, geometry=-|]{Compuesto} {
 \end_layout
 
 \begin_layout Plain Layout
@@ -4423,6 +4383,13 @@ imp
 \begin_layout Plain Layout
 
     }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlinherit{OrdenConcreta}{Orden}
 \end_layout
 
 \begin_layout Plain Layout
@@ -4597,7 +4564,7 @@ Documentación
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="12" columns="4">
+<lyxtabular version="3" rows="11" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -4860,9 +4827,7 @@ is
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\emph on
-ejecutar()
+Ejecutar()
 \end_layout
 
 \end_inset
@@ -4942,7 +4907,7 @@ is
 \begin_inset Text
 
 \begin_layout Plain Layout
-Accion
+Accion()
 \end_layout
 
 \end_inset
@@ -5009,46 +4974,6 @@ is
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-estado
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -5062,7 +4987,7 @@ is
 \begin_inset Text
 
 \begin_layout Plain Layout
-receptor
+estado
 \end_layout
 
 \end_inset
@@ -5425,7 +5350,7 @@ umluniassoc[anchor1=180, anchor2=-5]{IteradorConcreto}{AgregadoConcreto}
 
     
 \backslash
-umldep[anchor1=15, anchor2=125, geometry=-|]{AgregadoConcreto}{IteradorConcreto}
+umldep[anchor1=15, anchor2=160, geometry=-|]{AgregadoConcreto}{IteradorConcreto}
 \end_layout
 
 \begin_layout Plain Layout
