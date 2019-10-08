@@ -1,0 +1,2646 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{arrows, automata}
+\end_preamble
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Considerar los siguientes diagramas.
+ En ambos casos, probar que si los dos triángulos conmutan, también conmuta
+ el cuadrado.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below  of=a] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=b] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {p} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {q} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {r} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {s} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node [below] {t} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below  of=a] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=b] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {p} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {q} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {r} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {s} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node [below] {t} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sabemos que 
+\begin_inset Formula $s\circ p=r$
+\end_inset
+
+ y 
+\begin_inset Formula $t\circ q=r$
+\end_inset
+
+ por lo tanto 
+\begin_inset Formula $s\circ p=t\circ q$
+\end_inset
+
+, es decir que el cuadrado conmuta.
+ Análogo para el otro cuadrado.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ un conjunto ordenado.
+ Mostrar que 
+\begin_inset Formula $X$
+\end_inset
+
+ puede considerarse como una categoría.
+\end_layout
+
+\begin_layout Enumerate
+Verificar que un monoide 
+\begin_inset Formula $M$
+\end_inset
+
+ define una categoría con un único objeto cuyas flechas son los elementos
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $\left(P,\leq\right)$
+\end_inset
+
+ definimos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{P}=P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $mor\,\mathcal{P}=\leq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dom\left(a,b\right)=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $cod\left(a,b\right)=b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(b,c\right)\circ\left(a,b\right)=\left(a,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego:
+\end_layout
+
+\begin_layout Itemize
+Para cada objeto 
+\begin_inset Formula $x$
+\end_inset
+
+ por reflexividad 
+\begin_inset Formula $\left(x,x\right)\in\leq$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\left(x,x\right)mor\,\in\mathcal{P}$
+\end_inset
+
+; a este morfismo lo llamaremos 
+\begin_inset Formula $id_{x}$
+\end_inset
+
+ resultando: 
+\begin_inset Formula 
+\[
+\left(a,x\right)\circ id_{x}=\left(a,x\right)\circ\left(x,x\right)=\left(a,x\right)
+\]
+
+\end_inset
+
+Análogamente 
+\begin_inset Formula $id_{x}\circ\left(a,x\right)=\left(a,x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La operación 
+\begin_inset Formula $\circ$
+\end_inset
+
+ es asociativa:
+\begin_inset Formula 
+\[
+\left(c,d\right)\circ\left(\left(b,c\right)\circ\left(a,b\right)\right)=\left(c,d\right)\circ\left(a,c\right)=\left(a,d\right)=\left(b,d\right)\circ\left(a,b\right)=\left(\left(c,d\right)\circ\left(b,c\right)\right)\circ\left(a,b\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $\left(M,0,+\right)$
+\end_inset
+
+ definimos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{M}=\left\{ *\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $mor\,\mathcal{M}=M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dom\left(x\right)=*$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $cod\left(x\right)=*$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\circ y=y+x$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego:
+\end_layout
+
+\begin_layout Itemize
+Para el único objeto 
+\begin_inset Formula $*$
+\end_inset
+
+ existe el morfismo 
+\begin_inset Formula $0=id_{*}$
+\end_inset
+
+ de manera tal que:
+\begin_inset Formula 
+\[
+x\circ id_{*}=0+x=x
+\]
+
+\end_inset
+
+Análogamente 
+\begin_inset Formula $id_{*}\circ x=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para tres morfismos 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ (elementos de 
+\begin_inset Formula $P$
+\end_inset
+
+) resulta:
+\begin_inset Formula 
+\[
+x\circ\left(y\circ z\right)=x+\left(y+z\right)=\left(x+y\right)+z=\left(x\circ y\right)\circ z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Definamos 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ como la categoría de las flechas de una categoría 
+\begin_inset Formula $C$
+\end_inset
+
+, es decir, los objetos de 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ son las flechas de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Una flecha de 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ de 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ en 
+\begin_inset Formula $g:D\to E$
+\end_inset
+
+ es un par 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ de flechas de 
+\begin_inset Formula $C$
+\end_inset
+
+ tales que 
+\begin_inset Formula $g\circ a=b\circ f$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Expresar las flechas de 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ en términos de diagramas conmutativos.
+\end_layout
+
+\begin_layout Enumerate
+Probar que si en el diagrama los cuadrados conmutan, entonces también conmuta
+ el rectángulo exterior:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [right  of=b] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=a] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [right  of=d] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (f) [right  of=e] {$f$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {p} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {q} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {r} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge node [below] {s} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {t} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {u} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node {v} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Utilizar el apartado anterior para definir la composición en 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Verificar que 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ es una categoría.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+El par 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ es una flecha de 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ si el siguiente diagrama conmuta en 
+\begin_inset Formula $C$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=a] {$D$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [below  of=b] {$E$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {g} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {a} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node [right] {b} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sabemos que 
+\begin_inset Formula $u\circ p=r\circ t$
+\end_inset
+
+ y 
+\begin_inset Formula $v\circ q=s\circ u$
+\end_inset
+
+ y queremos ver si 
+\begin_inset Formula $v\circ q\circ p=s\circ r\circ t$
+\end_inset
+
+.
+ Reemplazando en la igualdad anterior:
+\begin_inset Formula 
+\[
+v\circ q\circ p=s\circ r\circ t\iff s\circ u\circ p=s\circ u\circ p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $C$
+\end_inset
+
+ una categoría y 
+\begin_inset Formula $A$
+\end_inset
+
+ un objeto de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Definimos 
+\begin_inset Formula $C|A$
+\end_inset
+
+ como la categoría cuyos objetos son las flechas 
+\begin_inset Formula $f$
+\end_inset
+
+ de 
+\begin_inset Formula $C$
+\end_inset
+
+ tales que 
+\begin_inset Formula $cod\left(f\right)=A$
+\end_inset
+
+.
+ Una flecha 
+\begin_inset Formula $g$
+\end_inset
+
+ en 
+\begin_inset Formula $C|A$
+\end_inset
+
+ de 
+\begin_inset Formula $f:X\to A$
+\end_inset
+
+ en 
+\begin_inset Formula $h:Y\to A$
+\end_inset
+
+ es una flecha 
+\begin_inset Formula $g:X\to Y$
+\end_inset
+
+ de 
+\begin_inset Formula $C$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f=h\circ g$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Expresar las flechas de 
+\begin_inset Formula $C|A$
+\end_inset
+
+ en términos de diagramas conmutativos.
+\end_layout
+
+\begin_layout Enumerate
+Verificar que 
+\begin_inset Formula $C|A$
+\end_inset
+
+ es una categoría.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $P$
+\end_inset
+
+ es la categoría definida por un conjunto ordenado y 
+\begin_inset Formula $x\in P$
+\end_inset
+
+, determinar 
+\begin_inset Formula $P|x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que en 
+\begin_inset Formula $Set$
+\end_inset
+
+ los monomorfismos (epimorfismos) son exactamente las funciones inyectivas
+ (respectivamente sobreyectivas).
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $C$
+\end_inset
+
+ una categoría y 
+\begin_inset Formula $f,g$
+\end_inset
+
+ flechas de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Probar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son monomorfismos, entonces 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es un monomorfismo, 
+\begin_inset Formula $f$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ son epimorfismos, entonces 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es un epimorfismo, 
+\begin_inset Formula $g$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ es la inversa de 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g^{-1}$
+\end_inset
+
+ es la inversa de 
+\begin_inset Formula $g$
+\end_inset
+
+, entonces 
+\begin_inset Formula $f^{-1}\circ g^{-1}$
+\end_inset
+
+ es la inversa de 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que una flecha de una categoría puede ser monomorfismo y epimorsmo
+ y no isomorfismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considerar que en el siguiente diagrama los 4 trapecios conmutan.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.7cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below  of=a] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=b] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [above left  of=a] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (f) [above right  of=b] {$f$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (g) [below left  of=c] {$g$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (h) [below right  of=d] {$h$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node {} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge node {} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge node {p} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge node {} (g);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (g) edge node {} (h);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (g) edge node {} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node {q} (h);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (f) edge node {} (h);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (f) edge node {} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Probar que:
+\end_layout
+
+\begin_layout Enumerate
+Si el cuadrado interno conmuta, también lo hace el cuadrado externo.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $p$
+\end_inset
+
+ es epimorfismo y 
+\begin_inset Formula $q$
+\end_inset
+
+ es monomorfismo, entonces si el cuadrado externo conmuta, también lo hace
+ el cuadrado interno.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $C$
+\end_inset
+
+ y 
+\begin_inset Formula $D$
+\end_inset
+
+ dos categorías.
+ Se define 
+\begin_inset Formula $C\times D$
+\end_inset
+
+ de la siguiente manera: los objetos de 
+\begin_inset Formula $C\times D$
+\end_inset
+
+ son de la forma 
+\begin_inset Formula $\left(A,B\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $A\in C$
+\end_inset
+
+ y 
+\begin_inset Formula $B\in D$
+\end_inset
+
+ y las flechas 
+\begin_inset Formula $\left(f,g\right):\left(A,B\right)\to\left(A',B'\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $f:A\to A'\in C$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to B'\in D$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Verificar que 
+\begin_inset Formula $C\times D$
+\end_inset
+
+ es una categoría.
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $P_{1}:C\times D\to C$
+\end_inset
+
+, 
+\begin_inset Formula $P_{1}\left(A,B\right)=A$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{2}:C\times D\to D$
+\end_inset
+
+, 
+\begin_inset Formula $P_{2}\left(A,B\right)=B$
+\end_inset
+
+, definen functores.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados dos funtores 
+\begin_inset Formula $F:\mathcal{C}\to\mathcal{D}$
+\end_inset
+
+ y 
+\begin_inset Formula $G:\mathcal{D}\to\mathcal{E}$
+\end_inset
+
+, definir un funtor que componga ambos.
+ ¿Es posible definir una categoría cuyos objetos sean las categorías y sus
+ flechas sean los funtores entre estas?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ en 
+\begin_inset Formula $Set$
+\end_inset
+
+, entonces definimos 
+\begin_inset Formula $f^{-1}\left(X\right)=\left\{ a\in A:f\left(a\right)\in X\right\} $
+\end_inset
+
+ donde 
+\begin_inset Formula $X\subseteq B$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $I:Set\to Set$
+\end_inset
+
+ es un funtor contravariante, llevando: 
+\begin_inset Formula $I\left(A\right)=\mathcal{P}\left(A\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $I\left(f\right)=f^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se ha visto que puede considerarse a un monoide como una categoría con un
+ único objeto, ¿Qué es un funtor entre dos categorías de este tipo? ¿Y entre
+ categorías formadas a partir de conjuntos ordenados?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría, para cada objeto 
+\begin_inset Formula $X$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ definimos 
+\begin_inset Formula $Hom\left(X,-\right):\mathcal{C}\to Set$
+\end_inset
+
+ donde 
+\begin_inset Formula $Hom\left(X,Y\right)=\mathcal{C}\left(X,Y\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $Hom\left(X,f\right)\left(g\right)=f\circ g$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $Hom\left(X,-\right)$
+\end_inset
+
+ es efectivamente un funtor para cada 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Definir análogamente un funtor 
+\begin_inset Formula $Hom\left(-,X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dado un semigurpo 
+\begin_inset Formula $\left(S,\cdot\right)$
+\end_inset
+
+, podemos construir un monoide 
+\begin_inset Formula $\left(S',\cdot'\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $S'=S\cup\left\{ e\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,x\right)\cdot'\left(0,y\right)=\left(0,x\cdot y\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(1,e\right)\cdot'x=x=x\cdot'\left(1,e\right)$
+\end_inset
+
+.
+ Utilizando esta construcción, definir un funtor 
+\begin_inset Formula $F:Sem\to Mon$
+\end_inset
+
+ y probar que es un monomorfismo en 
+\begin_inset Formula $Cat$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Definimos la asignación 
+\begin_inset Formula $Fr:Set\to Mon$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Fr\left(X\right)=X^{*}$
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $X^{*}$
+\end_inset
+
+ es el monoide de las palabras sobre el alfabeto 
+\begin_inset Formula $X$
+\end_inset
+
+ con la concatenación como operación.
+ Puede pensar en las palabras de 
+\begin_inset Formula $X$
+\end_inset
+
+ como las listas de elementos de 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset Formula $Fr\left(f\right)\left(x_{1}x_{2}\cdots x_{n}\right)=f\left(x_{1}\right)f\left(x_{2}\right)\cdots f\left(x_{n}\right)$
+\end_inset
+
+.
+ Usando el funtor 
+\begin_inset Formula $U:Mon\to Set$
+\end_inset
+
+ que se olvida de la estructura de monoide, consideramos 
+\begin_inset Formula $i:X\to U\left(Fr\left(X\right)\right)$
+\end_inset
+
+ la función que lleva un elemento 
+\begin_inset Formula $x$
+\end_inset
+
+ de 
+\begin_inset Formula $X$
+\end_inset
+
+ a la palabra 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $Fr$
+\end_inset
+
+ es un funtor.
+\end_layout
+
+\begin_layout Enumerate
+Probar que dado 
+\begin_inset Formula $f:X\to U\left(M\right)$
+\end_inset
+
+ en 
+\begin_inset Formula $Set$
+\end_inset
+
+ donde 
+\begin_inset Formula $M$
+\end_inset
+
+ es un monoide, puedo construir una única 
+\begin_inset Formula $\overline{f}:Fr\left(X\right)\to M$
+\end_inset
+
+ en 
+\begin_inset Formula $Mon$
+\end_inset
+
+ tal que 
+\begin_inset Formula $U\left(\overline{f}\right)\circ i=f$
+\end_inset
+
+ en 
+\begin_inset Formula $Set$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Cuando un monoide como 
+\begin_inset Formula $Fr\left(X\right)$
+\end_inset
+
+ satisface esta propiedad, decimos que es el monoide libre sobre 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿A cuál monoide es isomorfo 
+\begin_inset Formula $Fr\left(X\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $X$
+\end_inset
+
+ es un conjunto de un solo elemento?
+\end_layout
+
+\begin_layout Enumerate
+¿Este funtor preserva productos?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que dos objetos terminales en una categoría son isomorfos.
+ Por dualidad, ¿qué se puede decir de los objetos iniciales?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuáles son los objetos terminales en 
+\begin_inset Formula $Set\times Set$
+\end_inset
+
+? ¿Cuáles en 
+\begin_inset Formula $Set^{\to}$
+\end_inset
+
+? ¿En un conjunto ordenado considerado como categoría? ¿Y cuáles son los
+ objetos iniciales?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dar una categoría sin objetos iniciales.
+ Dar una sin objetos finales.
+ Dar una donde los objetos finales e iniciales coincidan.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ con 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Verificar que si un morfismo 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ admite núcleo (conúcleo), éste es único salvo isomorfismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría con 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ un morfismo en 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $p:Y\to C$
+\end_inset
+
+ es un conúcleo de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $p^{op}$
+\end_inset
+
+ es un núcleo de 
+\begin_inset Formula $f^{op}$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que si dos morfismos 
+\begin_inset Formula $f,g:X\to Y$
+\end_inset
+
+ admiten egalizador (coegalizador), éste es único salvo isomorfismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ un categoría con 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ un morfismo en 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $ker\left(f\right)\left(coker\left(f\right)\right)$
+\end_inset
+
+ coincice con el egalizador (coegalizador) de 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $f,g:X\to Y$
+\end_inset
+
+ dos morfismos en 
+\begin_inset Formula $Set$
+\end_inset
+
+.
+ Probar que el coegalizador de 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ es el cociente de 
+\begin_inset Formula $Y$
+\end_inset
+
+ por la relación de equivalencia 
+\begin_inset Formula $y\equiv z$
+\end_inset
+
+ si y sólo si existe 
+\begin_inset Formula $x\in X$
+\end_inset
+
+tal que 
+\begin_inset Formula $y=f\left(x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $z=g\left(x\right)$
+\end_inset
+
+ o bien 
+\begin_inset Formula $y=g\left(x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $z=f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar las siguientes identidades:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \pi_{1},\pi_{2}\right\rangle =id$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle f\circ h,g\circ h\right\rangle =$
+\end_inset
+
+
+\begin_inset Formula $\left\langle f,g\right\rangle \circ h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(f\times h\right)\circ\left\langle g,k\right\rangle =\left\langle f\circ g,h\circ k\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(f\times h\right)\circ\left(g\times k\right)=\left(f\circ g\right)\times\left(h\circ k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \left[f,g\right],\left[h,k\right]\right\rangle =\left[\left\langle f,h\right\rangle ,\left\langle g,k\right\rangle \right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ elementos de un conjunto ordenado 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ ¿Cuál sería el producto de 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ considerando 
+\begin_inset Formula $P$
+\end_inset
+
+ como una categoría?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ conjuntos ordenados.
+ ¿Cuál es el coproducto de 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ en 
+\begin_inset Formula $Poset$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dar una categoría donde algún par de objetos carecen de producto.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar los siguientes isomorfismos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\times B\cong B\times A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\times1\cong A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\times\left(B\times C\right)\cong\left(A\times B\right)\times C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿
+\begin_inset Formula $Grp$
+\end_inset
+
+ tiene productos? ¿Tiene coproductos? ¿Tiene objeto inicial? ¿Tiene objeto
+ final? ¿Y 
+\begin_inset Formula $Mon$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un 
+\begin_inset Formula $\omega CPO$
+\end_inset
+
+ es un conjunto ordenado con mínimo (notado 
+\begin_inset Formula $\bot$
+\end_inset
+
+) tal que toda cadena ascendente numerable 
+\begin_inset Formula $a_{0}\sqsubseteq a_{1}\sqsubseteq\cdots$
+\end_inset
+
+ (que notamos 
+\begin_inset Formula $\left\{ a_{i}\right\} _{i=0}^{\infty}$
+\end_inset
+
+ tiene un supremo 
+\begin_inset Formula $\sqcup\left\{ a_{i}\right\} _{i=0}^{\infty}$
+\end_inset
+
+.
+ Una función monótona entre dos 
+\begin_inset Formula $\omega CPO$
+\end_inset
+
+ es continua si 
+\begin_inset Formula $f\left(\sqcup\left\{ a_{i}\right\} _{i=0}^{\infty}\right)=\sqcup\left\{ f\left(a_{i}\right)\right\} _{i=0}^{\infty}$
+\end_inset
+
+ para toda cadena ascendente numerable 
+\begin_inset Formula $\left\{ a_{i}\right\} _{i=0}^{\infty}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que podemos armar una categoría cuyos objetos son 
+\begin_inset Formula $\omega CPO$
+\end_inset
+
+ y cuyas flechas son funciones continuas.
+\end_layout
+
+\begin_layout Enumerate
+¿Esta categoría tiene productos? En caso afirmativo, describirlos.
+ ¿Y coproductos?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar o refutar: sea 
+\begin_inset Formula $C$
+\end_inset
+
+ una categoría con productos, y 
+\begin_inset Formula $F:C\to C$
+\end_inset
+
+ un functor, entonces siempre existe un único morfismo 
+\begin_inset Formula $F\left(A\times B\right)\to FA\times FB$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $U:Mon\to Set$
+\end_inset
+
+ el functor que olvida la estructura de monoide.
+ Definimos además 
+\begin_inset Formula $U^{2}:Mon\to Set$
+\end_inset
+
+ que en objetos lleva 
+\begin_inset Formula $\left(X,\otimes,e\right)\mapsto X\times X$
+\end_inset
+
+.
+ Probar que a 
+\begin_inset Formula $U^{2}$
+\end_inset
+
+ se lo puede denotar de estructura functorial.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El 
+\emph on
+pullback
+\emph default
+ de dos morfismos 
+\begin_inset Formula $f:X\to Z$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+ consiste en un objeto 
+\begin_inset Formula $P$
+\end_inset
+
+ junto con dos morfismos 
+\begin_inset Formula $p_{1}:P\to X$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}:P\to Y$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\circ p_{1}=g\circ p_{2}$
+\end_inset
+
+, y además si existe otro objeto 
+\begin_inset Formula $Q$
+\end_inset
+
+ con dos morfismos 
+\begin_inset Formula $q_{1}:Q\to X$
+\end_inset
+
+, 
+\begin_inset Formula $q_{2}:Q\to Y$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\circ q_{1}=g\circ q_{2}$
+\end_inset
+
+, entonces existe un único morfismo 
+\begin_inset Formula $u:Q\to P$
+\end_inset
+
+ tal que 
+\begin_inset Formula $p_{1}\circ u=q_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{2}\circ u=q_{2}$
+\end_inset
+
+.
+ A continuación, un diagrama que muestra la situación:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.7cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (P) {$P$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (Y) [right  of=P] {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (X) [below  of=P] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (Z) [right  of=X] {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (Q) [above left  of=P] {$Q$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (P) edge node {$p_2$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (P) edge node {$p_1$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node {$f$} (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Y) edge node {$g$} (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dotted] (Q) edge node {$u$} (P);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Q) edge [bend left] node {$q_2$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Q) edge [bend right] node {$q_1$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Probar que el pullback de dos morfismos, si existe, es único salvo isomorfismo.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
