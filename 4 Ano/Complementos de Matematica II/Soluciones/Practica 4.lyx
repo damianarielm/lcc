@@ -426,13 +426,13 @@ Para cada objeto
  resultando: 
 \begin_inset Formula 
 \[
-\left(a,x\right)\circ id_{x}=\left(a,x\right)\circ\left(x,x\right)=\left(a,x\right)
+id_{x}\circ\left(a,x\right)=\left(x,x\right)\circ\left(a,x\right)=\left(a,x\right)
 \]
 
 \end_inset
 
 Análogamente 
-\begin_inset Formula $id_{x}\circ\left(a,x\right)=\left(a,x\right)$
+\begin_inset Formula $\left(x,a\right)\circ id_{x}=\left(x,a\right)$
 \end_inset
 
 .
@@ -914,13 +914,251 @@ v\circ q\circ p=s\circ r\circ t\iff s\circ u\circ p=s\circ u\circ p
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Para 
+\begin_inset Formula $\left(t,u\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(u,v\right)$
+\end_inset
+
+ como en el diagrama anterior, definimos: 
+\begin_inset Formula 
+\[
+\left(u,v\right)\circ\left(t,u\right)=\left(t,v\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Para cada 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ en 
+\begin_inset Formula $ob\,C^{\to}$
+\end_inset
+
+ definimos 
+\begin_inset Formula $id_{f}=\left(id_{A},id_{B}\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ una flecha de 
+\begin_inset Formula $f$
+\end_inset
+
+ en 
+\begin_inset Formula $g$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(a,b\right)\circ id_{f}=\left(id_{A},y\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$b$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [right  of=b] {$c$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=a] {$d$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [right  of=d] {$e$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (f) [right  of=e] {$f$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (g) [right  of=c] {$g$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (h) [right  of=f] {$h$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {p} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {q} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {r} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge node [below] {s} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {t} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {u} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node {v} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node {w} (g);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (f) edge node {x} (h);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (g) edge node {y} (h);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sean 
