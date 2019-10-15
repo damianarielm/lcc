@@ -293,7 +293,7 @@ end{tikzpicture}
 Solución
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 Sabemos que 
 \begin_inset Formula $s\circ p=r$
 \end_inset
@@ -303,11 +303,30 @@ Sabemos que
 \end_inset
 
  por lo tanto 
-\begin_inset Formula $s\circ p=t\circ q$
+\begin_inset Formula $s\circ p=r=t\circ q$
 \end_inset
 
 , es decir que el cuadrado conmuta.
- Análogo para el otro cuadrado.
+\end_layout
+
+\begin_layout Itemize
+Sabemos que 
+\begin_inset Formula $r\circ p=q$
+\end_inset
+
+ y 
+\begin_inset Formula $t\circ r=s$
+\end_inset
+
+ por lo tanto:
+\begin_inset Formula 
+\[
+s\circ p=\left(t\circ r\right)\circ p=t\circ\left(r\circ p\right)=t\circ q
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -403,61 +422,93 @@ status open
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
 Luego:
 \end_layout
 
 \begin_layout Itemize
 Para cada objeto 
-\begin_inset Formula $x$
+\begin_inset Formula $a$
 \end_inset
 
  por reflexividad 
-\begin_inset Formula $\left(x,x\right)\in\leq$
+\begin_inset Formula $\left(a,a\right)\in\leq$
 \end_inset
 
  por lo que 
-\begin_inset Formula $\left(x,x\right)mor\,\in\mathcal{P}$
+\begin_inset Formula $\left(a,a\right)mor\,\in\mathcal{P}$
 \end_inset
 
 ; a este morfismo lo llamaremos 
-\begin_inset Formula $id_{x}$
+\begin_inset Formula $id_{a}$
 \end_inset
 
  resultando: 
-\begin_inset Formula 
-\[
-id_{x}\circ\left(a,x\right)=\left(x,x\right)\circ\left(a,x\right)=\left(a,x\right)
-\]
+\end_layout
 
-\end_inset
-
-Análogamente 
-\begin_inset Formula $\left(x,a\right)\circ id_{x}=\left(x,a\right)$
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(a,b\right)\circ id_{a}=\left(a,b\right)\circ\left(a,a\right)=\left(a,b\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-La operación 
-\begin_inset Formula $\circ$
+\begin_inset Formula $id_{a}\circ\left(c,a\right)=\left(a,a\right)\circ\left(c,a\right)=\left(c,a\right)$
 \end_inset
 
- es asociativa:
-\begin_inset Formula 
-\[
-\left(c,d\right)\circ\left(\left(b,c\right)\circ\left(a,b\right)\right)=\left(c,d\right)\circ\left(a,c\right)=\left(a,d\right)=\left(b,d\right)\circ\left(a,b\right)=\left(\left(c,d\right)\circ\left(b,c\right)\right)\circ\left(a,b\right)
-\]
-
-\end_inset
-
-
-\begin_inset Newpage pagebreak
-\end_inset
-
-
+.
 \end_layout
 
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(b,c\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(c,d\right)$
+\end_inset
+
+ morfismos, luego por transitividad también son morfismos 
+\begin_inset Formula $\boxed{\left(a,c\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $\boxed{\left(b,d\right)}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(a,d\right)$
+\end_inset
+
+.
+ Veamos que vale la asociatividad:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(\left(c,d\right)\circ\left(b,c\right)\right)\circ\left(a,b\right)=\boxed{\left(b,d\right)}\circ\left(a,b\right)=\left(a,d\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(c,d\right)\circ\left(\left(b,c\right)\circ\left(a,b\right)\right)=\left(c,d\right)\circ\boxed{\left(a,c\right)}=\left(a,d\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Para 
@@ -526,33 +577,49 @@ Para el único objeto
 \end_inset
 
  de manera tal que:
-\begin_inset Formula 
-\[
-x\circ id_{*}=0+x=x
-\]
+\end_layout
 
-\end_inset
-
-Análogamente 
-\begin_inset Formula $id_{*}\circ x=x$
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $x\circ id_{*}=x+0=x$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Formula $id_{*}\circ y=0+y=y$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
 Para tres morfismos 
 \begin_inset Formula $x,y,z$
 \end_inset
 
  (elementos de 
-\begin_inset Formula $P$
+\begin_inset Formula $M$
 \end_inset
 
-) resulta:
+) por clausura de monoide también son morfismos 
+\begin_inset Formula $\boxed{x+y}$
+\end_inset
+
+ y 
+\begin_inset Formula $\boxed{y+z}$
+\end_inset
+
+.
+ Veamos que vale la asociatividad:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
-x\circ\left(y\circ z\right)=x+\left(y+z\right)=\left(x+y\right)+z=\left(x\circ y\right)\circ z
+\left(x\circ y\right)\circ z=\left(\boxed{x+y}\right)+z=x+\left(\boxed{y+z}\right)=x\circ\left(y\circ z\right)
 \]
 
 \end_inset
@@ -605,6 +672,10 @@ Definamos
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -768,10 +839,6 @@ Verificar que
 \end_inset
 
  es una categoría.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -898,36 +965,44 @@ Sabemos que
 \end_inset
 
  y queremos ver si 
-\begin_inset Formula $v\circ q\circ p=s\circ r\circ t$
+\begin_inset Formula $v\circ\left(q\circ p\right)=s\circ\left(r\circ t\right)$
 \end_inset
 
 .
- Reemplazando en la igualdad anterior:
-\begin_inset Formula 
-\[
-v\circ q\circ p=s\circ r\circ t\iff s\circ u\circ p=s\circ u\circ p
-\]
-
+ Por asociatividad en 
+\begin_inset Formula $C$
 \end_inset
 
+ 
+\begin_inset Formula $v\circ\left(q\circ p\right)=\left(v\circ q\right)\circ p$
+\end_inset
 
+, es decir 
+\begin_inset Formula $v\circ\left(q\circ p\right)=\left(s\circ u\right)\circ p=s\circ\left(u\circ p\right)=s\circ\left(r\circ t\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
 Para 
-\begin_inset Formula $\left(t,u\right)$
+\begin_inset Formula $\left(r,p\right)$
 \end_inset
 
  y 
-\begin_inset Formula $\left(u,v\right)$
+\begin_inset Formula $\left(s,q\right)$
 \end_inset
 
- como en el diagrama anterior, definimos: 
-\begin_inset Formula 
-\[
-\left(u,v\right)\circ\left(t,u\right)=\left(t,v\right)
-\]
+ como en el diagrama, definimos 
+\begin_inset Formula $\left(s,q\right)\circ\left(r,p\right)$
+\end_inset
 
+ como 
+\begin_inset Formula $\left(s\circ r,q\circ p\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -951,29 +1026,132 @@ Para cada
 \end_inset
 
  definimos 
-\begin_inset Formula $id_{f}=\left(id_{A},id_{B}\right)$
+\begin_inset Formula $id_{f}=\left(id_{dom\left(f\right)},id_{cod\left(f\right)}\right)$
 \end_inset
 
 .
- Sea 
-\begin_inset Formula $\left(a,b\right)$
-\end_inset
-
- una flecha de 
-\begin_inset Formula $f$
-\end_inset
-
- en 
-\begin_inset Formula $g$
-\end_inset
-
-, luego:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Observemos que 
+\begin_inset Formula $id_{f}$
+\end_inset
+
+ es una flecha de 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ pues el siguiente diagrama conmuta:
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=a] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [below  of=b] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {f} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {$id_A$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node [right] {$id_B$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $a:A\to D$
+\end_inset
+
+ y 
+\begin_inset Formula $b:B\to E$
+\end_inset
+
+ como en el diagrama, luego: 
 \begin_inset Formula 
 \[
-\left(a,b\right)\circ id_{f}=\left(id_{A},y\right)
+\left(a,b\right)\circ id_{f}=\left(a\circ id_{dom\left(f\right)},b\circ id_{cod\left(f\right)}\right)=\left(a,b\right)
 \]
 
 \end_inset
@@ -982,10 +1160,40 @@ Para cada
 \end_layout
 
 \begin_layout Itemize
-\begin_inset space ~
+Analogamente sean 
+\begin_inset Formula $a:D\to A$
+\end_inset
+
+ y 
+\begin_inset Formula $b:E\to B$
+\end_inset
+
+, entonces:
+\begin_inset Formula 
+\[
+id_{f}\circ\left(a,b\right)=\left(id_{dom\left(f\right)}\circ a,id_{cod\left(f\right)}\circ b\right)=\left(a,b\right)
+\]
+
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $\left(r,p\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(s,q\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(x,w\right)$
+\end_inset
+
+ como en el siguiente diagrama:
 \end_layout
 
 \begin_layout Standard
@@ -1158,6 +1366,25 @@ end{tikzpicture}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\left(r,p\right)\circ\left(s,q\right)\right)\circ\left(x,w\right)=\left(r\circ s,p\circ q\right)\circ\left(x,w\right)=\left(\left(r\circ s\right)\circ x,\left(p\circ q\right)\circ w\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(r\circ\left(s\circ x\right),p\circ\left(q\circ w\right)\right)=\left(r,p\right)\circ\left(s\circ x,q\circ w\right)=\left(r,p\right)\circ\left(\left(s,q\right)\circ\left(x,w\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
@@ -1260,13 +1487,414 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Si el siguiente diagrama conmuta en 
+\begin_inset Formula $C$
+\end_inset
+
+, entonces 
+\begin_inset Formula $g$
+\end_inset
+
+ es una flecha de 
+\begin_inset Formula $C|A$
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below  of=a] {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {g} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node [right] {h} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Dados dos morfismos 
+\begin_inset Formula $g:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $p:Y\to Z$
+\end_inset
+
+ en 
+\begin_inset Formula $C|A$
+\end_inset
+
+ definimos la composición en 
+\begin_inset Formula $C|A$
+\end_inset
+
+ como la composición en 
+\begin_inset Formula $C$
+\end_inset
+
+ y para cada objeto 
+\begin_inset Formula $f:X\to A$
+\end_inset
+
+ definimos el morfismo 
+\begin_inset Formula $\text{\ensuremath{id_{f}=id_{dom\left(f\right)}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Observemos que 
+\begin_inset Formula $id_{dom}\left(f\right)$
+\end_inset
+
+ es un morfismo de la categoría pues el siguiente diagrama conmuta:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below  of=a] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {$id_f$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node [right] {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Una flecha 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ que parte de 
+\begin_inset Formula $f$
+\end_inset
+
+ debe tener tipo 
+\begin_inset Formula $X\to Y$
+\end_inset
+
+, luego 
+\begin_inset Formula $\alpha\circ id_{f}=\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Una flecha 
+\begin_inset Formula $\beta$
+\end_inset
+
+ que llega a 
+\begin_inset Formula $f$
+\end_inset
+
+ debe tener tipo 
+\begin_inset Formula $W\to X$
+\end_inset
+
+, luego 
+\begin_inset Formula $id_{f}\circ\beta=\beta$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $g,p,q$
+\end_inset
+
+ como en el siguiente diagrama conmutativo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [below  of=a] {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [below  of=c] {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [right of=d] {$W$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {g} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node [right] {h} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node [left] {p} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {r} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (e) edge [bend right] node [right] {s} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge [bend right] node [left] {q} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego 
+\begin_inset Formula $\left(r\circ p\right)\circ g=r\circ\left(p\circ g\right)$
+\end_inset
+
+ por asociatividad en 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
