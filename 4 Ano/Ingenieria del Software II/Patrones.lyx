@@ -568,10 +568,6 @@ Promueve la consistencia entre productos.
 Es difícil dar cabida a nuevos tipos de productos.
  Ampliar las fábricas abstractas para producir nuevos tipos de productos
  no es fácil.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -599,14 +595,14 @@ Documentación
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="15" columns="4">
+<lyxtabular version="3" rows="20" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <row>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -617,7 +613,7 @@ Pattern
 
 \end_inset
 </cell>
-<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -765,13 +761,53 @@ Las restricciones de diseño que se deseen imponer.
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
 where
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cliente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -793,6 +829,52 @@ FabricaAbstracta
 \begin_layout Plain Layout
 
 \series bold
+\emph on
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+FabricaAbstracta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+CrearProductoA()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\emph on
 is
 \end_layout
 
@@ -818,71 +900,30 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \emph on
-crearProductoA()
+CrearProductoB()
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
 \emph on
-crearProductoB()
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
 is
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -933,6 +974,86 @@ is
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CrearProductoA()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CrearProductoB()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -973,6 +1094,86 @@ is
 </cell>
 </row>
 <row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CrearProductoA()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CrearProductoB()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -999,6 +1200,7 @@ ProductoAbstractoA
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
@@ -1064,7 +1266,7 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1073,7 +1275,7 @@ ProductoA2
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1084,7 +1286,7 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1121,6 +1323,7 @@ ProductoAbstractoB
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
@@ -1385,7 +1588,9 @@ umlabstract[x=0, y=0]{Abstraccion} {
 
 \begin_layout Plain Layout
 
-        Operacion()
+        
+\backslash
+emph{Operacion()}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1631,10 +1836,6 @@ Implementador Concreto
 
 \begin_layout Itemize
 Implementa la interfaz Implementador y define su implementación concreta.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -1717,7 +1918,7 @@ Documentación
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="11" columns="4">
+<lyxtabular version="3" rows="15" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="0pt">
@@ -1883,13 +2084,53 @@ Las restricciones de diseño que se deseen imponer.
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
 where
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cliente
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1911,6 +2152,7 @@ Abstraccion
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
@@ -1940,6 +2182,8 @@ is
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\emph on
 Operacion()
 \end_layout
 
@@ -1951,12 +2195,53 @@ Operacion()
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+imp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1976,7 +2261,7 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1985,7 +2270,7 @@ AbstraccionRefinada
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1996,7 +2281,7 @@ is
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2033,6 +2318,7 @@ Implementador
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
@@ -2058,7 +2344,7 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2069,18 +2355,19 @@ OperacionImp()
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2131,7 +2418,7 @@ is
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2140,11 +2427,91 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OperacionImp()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 ImplementadorConcretoB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+OperacionImp()
 \end_layout
 
 \end_inset
@@ -2256,10 +2623,6 @@ Compone objetos en estructuras de árbol para representar jerarquías de parte-t
 o.
  Permite que los clientes traten de manera uniforme a los objetos individuales
  y a los compuestos.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
