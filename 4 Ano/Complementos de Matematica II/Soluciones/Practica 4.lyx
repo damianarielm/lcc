@@ -331,44 +331,24 @@ s\circ p=\left(t\circ r\right)\circ p=t\circ\left(r\circ p\right)=t\circ q
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset space ~
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
 Sea 
 \begin_inset Formula $P$
 \end_inset
 
  un conjunto ordenado.
  Mostrar que 
-\begin_inset Formula $X$
+\begin_inset Formula $P$
 \end_inset
 
  puede considerarse como una categoría.
 \end_layout
 
-\begin_layout Enumerate
-Verificar que un monoide 
-\begin_inset Formula $M$
-\end_inset
-
- define una categoría con un único objeto cuyas flechas son los elementos
- de 
-\begin_inset Formula $M$
-\end_inset
-
-.
-\end_layout
-
+\begin_deeper
 \begin_layout Paragraph
-Soluciones
+Solución
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Standard
 Para 
 \begin_inset Formula $\left(P,\leq\right)$
 \end_inset
@@ -376,7 +356,6 @@ Para
  definimos:
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Flex Multiple Columns
 status open
@@ -422,9 +401,6 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
 Luego:
 \end_layout
 
@@ -438,7 +414,7 @@ Para cada objeto
 \end_inset
 
  por lo que 
-\begin_inset Formula $\left(a,a\right)mor\,\in\mathcal{P}$
+\begin_inset Formula $\text{\ensuremath{\left(a,a\right)\in mor\,\mathcal{P}}}$
 \end_inset
 
 ; a este morfismo lo llamaremos 
@@ -461,6 +437,10 @@ Para cada objeto
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -511,6 +491,24 @@ Sean
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
+Verificar que un monoide 
+\begin_inset Formula $M$
+\end_inset
+
+ define una categoría con un único objeto cuyas flechas son los elementos
+ de 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 Para 
 \begin_inset Formula $\left(M,0,+\right)$
 \end_inset
@@ -518,7 +516,6 @@ Para
  definimos:
 \end_layout
 
-\begin_deeper
 \begin_layout Standard
 \begin_inset Flex Multiple Columns
 status open
@@ -616,6 +613,7 @@ Para tres morfismos
  Veamos que vale la asociatividad:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
@@ -628,6 +626,201 @@ Para tres morfismos
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Enumerate
+Dada una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, podemos definir 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+ con los mismo objetos que 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ pero las flechas con sentido inverso, es decir, 
+\begin_inset Formula $ob\,\mathcal{C}^{op}=ob\,\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $Hom_{\mathcal{C}^{op}}\left(X,Y\right)=Hom_{\mathcal{C}}\left(Y,X\right)$
+\end_inset
+
+.
+ Verificar que 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+ es una categoría.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f_{op}:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g_{op}:Y\to Z$
+\end_inset
+
+ en 
+\begin_inset Formula $Hom\,\mathcal{C}^{op}$
+\end_inset
+
+, definimos 
+\begin_inset Formula $g_{op}\circ_{op}f_{op}$
+\end_inset
+
+ como 
+\begin_inset Formula $\left(f\circ g\right)_{op}$
+\end_inset
+
+.
+ Observemos que la composición tiene sentido pues en 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ resultan 
+\begin_inset Formula $f:Y\to X$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Z\to Y$
+\end_inset
+
+.
+ Luego:
+\end_layout
+
+\begin_layout Itemize
+Para cada objeto 
+\begin_inset Formula $X$
+\end_inset
+
+ el morfismo lo 
+\begin_inset Formula $id_{X}$
+\end_inset
+
+ resulta ser el mismo en 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ y en 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+ por lo que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f_{op}\circ_{op}id_{X}=\left(id_{X}\circ f\right)_{op}=f_{op}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $id_{X}\circ_{op}h_{op}=\left(h\circ id_{X}\right)=h_{op}$
+\end_inset
+
+ (donde 
+\begin_inset Formula $h_{op}:Y\to X$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f_{op}:A\to B$
+\end_inset
+
+, 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ y 
+\begin_inset Formula $h:C\to D$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(h_{op}\circ_{op}g_{op}\right)\circ_{op}f_{op}=\left(g\circ h\right)_{op}\circ_{op}f_{op}=f\circ\left(g\circ h\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{op}\circ_{op}\left(g_{op}\circ_{op}f_{op}\right)=h_{op}\circ_{op}\left(f\circ g\right)_{op}=\left(f\circ g\right)\circ h$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ dos categorías, se define 
+\begin_inset Formula $\mathcal{C}\times\mathcal{D}$
+\end_inset
+
+ cuyos objetos son pares ordenados de la forma 
+\begin_inset Formula $\left(C,D\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $C\in ob\,\mathcal{C}$
+\end_inset
+
+, 
+\begin_inset Formula $D\in ob\,\mathcal{D}$
+\end_inset
+
+ y ademas:
+\begin_inset Formula 
+\[
+Hom_{\mathcal{C}\times D}\left(\left(C,D\right),\left(C',D'\right)\right)=Hom_{\mathcal{C}}\left(C,C'\right)\times Hom_{\mathcal{C}}\left(D,D'\right)
+\]
+
+\end_inset
+
+Verificar que 
+\begin_inset Formula $\mathcal{C\times D}$
+\end_inset
+
+ es una categoría.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Definamos 
@@ -672,10 +865,6 @@ Definamos
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -1002,10 +1191,6 @@ Para
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -2062,6 +2247,902 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
+Mostrar que una flecha de una categoría concreta puede ser epimorfismo y
+ no sobreyectiva.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que dos objetos terminales en una categoría son isomorfos.
+ Por dualidad: ¿qué se puede decir de los objetos iniciales?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cuales son los objetos iniciales y terminales en 
+\begin_inset Formula $Set\times Set$
+\end_inset
+
+? ¿Cuáles en 
+\begin_inset Formula $Set^{\to}$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dar una categoría sin objetos iniciales.
+ Dar una sin objetos finales.
+ Dar una donde los objetos finales e iniciales coincidan.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría.
+ Probar que si dos objetos admiten producto (coproducto), éste es único
+ salvo isomorfismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ un poset.
+ Determina objetos iniciales, objetos terminales, productos y coproductos
+ en las siguientes categorías:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $Poset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Set$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Mon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Grp$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dar una categoría donde algún par de objetos carecen de producto.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría y sean 
+\begin_inset Formula $A,B,C,D$
+\end_inset
+
+ objetos de 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Mostrar que en caso de existir 
+\begin_inset Formula $A\times B$
+\end_inset
+
+, 
+\begin_inset Formula $C\times D$
+\end_inset
+
+ y dos morfismos 
+\begin_inset Formula $f:A\to C$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to D$
+\end_inset
+
+, entonces puede definirse un morfismo 
+\begin_inset Formula $f\times g:A\times B\to C\times D$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar las siguientes identidades:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \pi_{1},\pi_{2}\right\rangle =id$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle f\circ h,g\circ h\right\rangle =$
+\end_inset
+
+
+\begin_inset Formula $\left\langle f,g\right\rangle \circ h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(f\times h\right)\circ\left\langle g,k\right\rangle =\left\langle f\circ g,h\circ k\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(f\times h\right)\circ\left(g\times k\right)=\left(f\circ g\right)\times\left(h\circ k\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle \left[f,g\right],\left[h,k\right]\right\rangle =\left[\left\langle f,h\right\rangle ,\left\langle g,k\right\rangle \right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar los siguientes isomorfismos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\times B\cong B\times A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\times1\cong A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\times\left(B\times C\right)\cong\left(A\times B\right)\times C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿Cuales son los enunciados duales?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que si dos morfismos 
+\begin_inset Formula $f,g:X\to Y$
+\end_inset
+
+ admiten egalizador (coegalizador), éste es único salvo isomorfismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar el ecualizador en 
+\begin_inset Formula $Set$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $f,g:X\to Y$
+\end_inset
+
+ dos morfismos en 
+\begin_inset Formula $Set$
+\end_inset
+
+.
+ Probar que el coegalizador de 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ es el cociente de 
+\begin_inset Formula $Y$
+\end_inset
+
+ por la relación de equivalencia 
+\begin_inset Formula $y\equiv z$
+\end_inset
+
+ si y sólo si existe 
+\begin_inset Formula $x\in X$
+\end_inset
+
+ tal que 
+\begin_inset Formula $y=f\left(x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $z=g\left(x\right)$
+\end_inset
+
+ o bien 
+\begin_inset Formula $y=g\left(x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $z=f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que en una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ todo ecualizador 
+\begin_inset Formula $e$
+\end_inset
+
+ es un monomorfismo.
+ Mostrar que si además 
+\begin_inset Formula $e$
+\end_inset
+
+ es epimorfismo, entonces se tiene un isomorfimos.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El 
+\emph on
+pullback
+\emph default
+ de dos morfismos 
+\begin_inset Formula $f:X\to Z$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+ consiste en un objeto 
+\begin_inset Formula $P$
+\end_inset
+
+ junto con dos morfismos 
+\begin_inset Formula $p_{1}:P\to X$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}:P\to Y$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\circ p_{1}=g\circ p_{2}$
+\end_inset
+
+, y además si existe otro objeto 
+\begin_inset Formula $Q$
+\end_inset
+
+ con dos morfismos 
+\begin_inset Formula $q_{1}:Q\to X$
+\end_inset
+
+, 
+\begin_inset Formula $q_{2}:Q\to Y$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\circ q_{1}=g\circ q_{2}$
+\end_inset
+
+, entonces existe un único morfismo 
+\begin_inset Formula $u:Q\to P$
+\end_inset
+
+ tal que 
+\begin_inset Formula $p_{1}\circ u=q_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{2}\circ u=q_{2}$
+\end_inset
+
+.
+ A continuación, un diagrama que muestra la situación:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.7cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (P) {$P$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (Y) [right  of=P] {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (X) [below  of=P] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (Z) [right  of=X] {$Z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (Q) [above left  of=P] {$Q$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (P) edge node {$p_2$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (P) edge node {$p_1$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node {$f$} (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Y) edge node {$g$} (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dotted] (Q) edge node {$u$} (P);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Q) edge [bend left] node {$q_2$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Q) edge [bend right] node {$q_1$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Probar que el pullback de dos morfismos, si existe, es único salvo isomorfismo.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Encontrar el pull-back en 
+\begin_inset Formula $Set$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría con exponenciales.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar 
+\begin_inset Formula $curry\left(eval_{A,B}\right)=id_{B^{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dado un morfismo 
+\begin_inset Formula $f:B\to C$
+\end_inset
+
+, construir un morfismo 
+\begin_inset Formula $B^{A}\to C^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dado un morfismo 
+\begin_inset Formula $f:A\to C^{B}$
+\end_inset
+
+, construir un morfismo 
+\begin_inset Formula $uncurry\left(f\right):A\times B\to C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Probar 
+\begin_inset Formula $uncurry\left(curry\left(f\right)\right)=f$
+\end_inset
+
+ y 
+\begin_inset Formula $curry\left(uncurry\left(f\right)\right)=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una CCC y sean 
+\begin_inset Formula $A,B$
+\end_inset
+
+ objetos de 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+.
+ Probar:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $B^{A}$
+\end_inset
+
+ es único salvo isomorfismo.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1^{A}\cong1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $B^{1}\cong B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Hallar los exponenciales en 
+\begin_inset Formula $Set$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Demostrar que un álgebra de Boole es una CCC.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En una categoría con coproductos y objeto final, podemos definir los booleanos
+ como el objeto 
+\begin_inset Formula $Bool=1+1$
+\end_inset
+
+.
+ En este caso, a 
+\begin_inset Formula $i_{1}$
+\end_inset
+
+ le llamamos 
+\begin_inset Formula $true$
+\end_inset
+
+ y a 
+\begin_inset Formula $i_{2}$
+\end_inset
+
+ le llamamos 
+\begin_inset Formula $false$
+\end_inset
+
+.
+ Escribimos un morfismo 
+\begin_inset Formula $not:Bool\to Bool$
+\end_inset
+
+ tal que:
+\begin_inset Formula 
+\[
+not\circ true=false
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+not\circ false=true
+\]
+
+\end_inset
+
+Suponiendo que la categoría tiene exponenciales: ¿puede escribir un morfismo
+ 
+\begin_inset Formula $and:Bool\times Bool\to Bool$
+\end_inset
+
+ que se comporte como la conjunción?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Ejercicios adicionales
+\end_layout
+
+\begin_layout Enumerate
 Considerar que en el siguiente diagrama los 4 trapecios conmutan.
 \end_layout
 
@@ -2705,60 +3786,6 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-Mostrar que dos objetos terminales en una categoría son isomorfos.
- Por dualidad, ¿qué se puede decir de los objetos iniciales?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-¿Cuáles son los objetos terminales en 
-\begin_inset Formula $Set\times Set$
-\end_inset
-
-? ¿Cuáles en 
-\begin_inset Formula $Set^{\to}$
-\end_inset
-
-? ¿En un conjunto ordenado considerado como categoría? ¿Y cuáles son los
- objetos iniciales?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Dar una categoría sin objetos iniciales.
- Dar una sin objetos finales.
- Dar una donde los objetos finales e iniciales coincidan.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Sea 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
@@ -2845,24 +3872,6 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-Probar que si dos morfismos 
-\begin_inset Formula $f,g:X\to Y$
-\end_inset
-
- admiten egalizador (coegalizador), éste es único salvo isomorfismo.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Sean 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
@@ -2901,134 +3910,6 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Sean 
-\begin_inset Formula $f,g:X\to Y$
-\end_inset
-
- dos morfismos en 
-\begin_inset Formula $Set$
-\end_inset
-
-.
- Probar que el coegalizador de 
-\begin_inset Formula $f$
-\end_inset
-
- y 
-\begin_inset Formula $g$
-\end_inset
-
- es el cociente de 
-\begin_inset Formula $Y$
-\end_inset
-
- por la relación de equivalencia 
-\begin_inset Formula $y\equiv z$
-\end_inset
-
- si y sólo si existe 
-\begin_inset Formula $x\in X$
-\end_inset
-
-tal que 
-\begin_inset Formula $y=f\left(x\right)$
-\end_inset
-
- y 
-\begin_inset Formula $z=g\left(x\right)$
-\end_inset
-
- o bien 
-\begin_inset Formula $y=g\left(x\right)$
-\end_inset
-
- y 
-\begin_inset Formula $z=f\left(x\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Mostrar las siguientes identidades:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $\left\langle \pi_{1},\pi_{2}\right\rangle =id$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\langle f\circ h,g\circ h\right\rangle =$
-\end_inset
-
-
-\begin_inset Formula $\left\langle f,g\right\rangle \circ h$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left(f\times h\right)\circ\left\langle g,k\right\rangle =\left\langle f\circ g,h\circ k\right\rangle $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left(f\times h\right)\circ\left(g\times k\right)=\left(f\circ g\right)\times\left(h\circ k\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $\left\langle \left[f,g\right],\left[h,k\right]\right\rangle =\left[\left\langle f,h\right\rangle ,\left\langle g,k\right\rangle \right]$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Paragraph
-Soluciones
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
@@ -3103,63 +3984,6 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Dar una categoría donde algún par de objetos carecen de producto.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Probar los siguientes isomorfismos:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Formula $A\times B\cong B\times A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $A\times1\cong A$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $A\times\left(B\times C\right)\cong\left(A\times B\right)\times C$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Paragraph
-Soluciones
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
@@ -3300,205 +4124,6 @@ Sea
 \end_layout
 
 \begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-El 
-\emph on
-pullback
-\emph default
- de dos morfismos 
-\begin_inset Formula $f:X\to Z$
-\end_inset
-
- y 
-\begin_inset Formula $g:Y\to Z$
-\end_inset
-
- consiste en un objeto 
-\begin_inset Formula $P$
-\end_inset
-
- junto con dos morfismos 
-\begin_inset Formula $p_{1}:P\to X$
-\end_inset
-
-, 
-\begin_inset Formula $p_{2}:P\to Y$
-\end_inset
-
- tal que 
-\begin_inset Formula $f\circ p_{1}=g\circ p_{2}$
-\end_inset
-
-, y además si existe otro objeto 
-\begin_inset Formula $Q$
-\end_inset
-
- con dos morfismos 
-\begin_inset Formula $q_{1}:Q\to X$
-\end_inset
-
-, 
-\begin_inset Formula $q_{2}:Q\to Y$
-\end_inset
-
- tal que 
-\begin_inset Formula $f\circ q_{1}=g\circ q_{2}$
-\end_inset
-
-, entonces existe un único morfismo 
-\begin_inset Formula $u:Q\to P$
-\end_inset
-
- tal que 
-\begin_inset Formula $p_{1}\circ u=q_{1}$
-\end_inset
-
- y 
-\begin_inset Formula $p_{2}\circ u=q_{2}$
-\end_inset
-
-.
- A continuación, un diagrama que muestra la situación:
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Preview
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture}[node distance = 1.7cm, auto]
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (P) {$P$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (Y) [right  of=P] {$Y$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (X) [below  of=P] {$X$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (Z) [right  of=X] {$Z$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (Q) [above left  of=P] {$Q$};
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (P) edge node {$p_2$} (Y);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (P) edge node {$p_1$} (X);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (X) edge node {$f$} (Z);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (Y) edge node {$g$} (Z);
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->, dotted] (Q) edge node {$u$} (P);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (Q) edge [bend left] node {$q_2$} (Y);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (Q) edge [bend right] node {$q_1$} (X);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Probar que el pullback de dos morfismos, si existe, es único salvo isomorfismo.
-\end_layout
-
 \begin_layout Paragraph
 Solución
 \end_layout
