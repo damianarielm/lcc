@@ -656,5 +656,10 @@ class CartaNegraIngles(CartaNegra): # ProductoB2
             ["It's a pity that kids these days are all getting involved with ", None], \
             ["Today on Maury: Help! My son is ", None, "!"], \
             ["Alternative medicine is now embracing the curative powers of ", None], \
-            ["And the Academy Award for ", None, " goes to ", None]
+            ["And the Academy Award for ", None, " goes to ", None], \
+            ["What's that sound? ", None], \
+            ["What ended my last relationship? ", None], \
+            ["MTV's new reality show features eight washed-up celebrities living with ", None], \
+            ["I drink to forget ", None], \
+            ["I'm sorry Professor, but I couldn't complete my homework because of ", None] \
         ])

@@ -32,7 +32,7 @@ mostraropciones(opciones)
 
 respuestas = []
 for x in range(n.Lugares()):
-    respuestas.append(int(input("\nIngrese opcion: ")))
+    respuestas = [int(input("\nIngrese opcion: "))] + respuestas
 
 system("clear")
 
