@@ -549,7 +549,7 @@ status open
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $x\circ y=y+x$
+\begin_inset Formula $x\circ y=x+y$
 \end_inset
 
 .
@@ -728,7 +728,7 @@ Para cada objeto
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $id_{X}\circ_{op}h_{op}=\left(h\circ id_{X}\right)=h_{op}$
+\begin_inset Formula $id_{X}\circ_{op}h_{op}=\left(h\circ id_{X}\right)_{op}=h_{op}$
 \end_inset
 
  (donde 
@@ -2099,10 +2099,248 @@ Probar que en
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $f:B\to C$
+\end_inset
+
+ un monomorfismo, luego para cualquier conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ y funciones 
+\begin_inset Formula $g,h:A\to B$
+\end_inset
+
+ sabemos que: 
+\begin_inset Formula 
+\[
+f\circ g=f\circ h\Rightarrow g=h
+\]
+
+\end_inset
+
+Supongamos que 
+\begin_inset Formula $f$
+\end_inset
+
+ no es inyectiva, es decir que existen 
+\begin_inset Formula $\text{\ensuremath{b_{1}\neq b_{2}\in B}}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f\left(b_{1}\right)=f\left(b_{2}\right)$
+\end_inset
+
+.
+ Definimos funciones constantes 
+\begin_inset Formula $g,h$
+\end_inset
+
+ tales que 
+\begin_inset Formula $g\left(x\right)=b_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $h\left(x\right)=b_{2}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+f\circ g\left(x\right)=f\left(g\left(x\right)\right)=f\left(b_{1}\right)=f\left(b_{2}\right)=f\left(h\left(x\right)\right)=f\circ h\left(x\right)
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $f$
+\end_inset
+
+ es monomorfismo resulta 
+\begin_inset Formula $g=h$
+\end_inset
+
+ lo cual es una contradicción pues 
+\begin_inset Formula $g\left(x\right)=b_{1}\neq b_{2}=h\left(x\right)$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $f:B\to C$
+\end_inset
+
+ una función inyectiva, luego sabemos que 
+\begin_inset Formula $f\left(b_{1}\right)=f\left(b_{2}\right)\iff b_{1}=b_{2}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $g,h:A\to B$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f\circ g=f\circ h$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+f\circ g\left(x\right)=f\circ h\left(x\right)\iff f\left(g\left(x\right)\right)=f\left(h\left(x\right)\right)\iff g\left(x\right)=h\left(x\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ un epimorfismo, luego para cualquier conjunto 
+\begin_inset Formula $C$
+\end_inset
+
+ y funciones 
+\begin_inset Formula $g,h:B\to C$
+\end_inset
+
+ sabemos que: 
+\begin_inset Formula 
+\[
+g\circ f=h\circ f\Rightarrow g=h
+\]
+
+\end_inset
+
+Supongamos que 
+\begin_inset Formula $f$
+\end_inset
+
+ no es sobreyectiva, es decir que existe 
+\begin_inset Formula $\text{\ensuremath{b\in B}}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(x\right)\neq b$
+\end_inset
+
+ (para cualquier 
+\begin_inset Formula $x$
+\end_inset
+
+).
+ Definimos 
+\begin_inset Formula $g,h$
+\end_inset
+
+ iguales salvo en 
+\begin_inset Formula $b$
+\end_inset
+
+ donde 
+\begin_inset Formula $g\left(b\right)=c_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $h\left(b\right)=c_{2}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+g\circ f\left(x\right)=g\left(f\left(x\right)\right)=h\left(f\left(x\right)\right)=h\circ f\left(x\right)
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $f$
+\end_inset
+
+ es un epimorfimo resulta 
+\begin_inset Formula $g=h$
+\end_inset
+
+ lo cual es una contradicción.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ una función sobreyectiva y sean dos funciones 
+\begin_inset Formula $g,h:B\to C$
+\end_inset
+
+ tales que 
+\begin_inset Formula $g\circ f=h\circ f$
+\end_inset
+
+ .
+ Supongamos que 
+\begin_inset Formula $g\neq h$
+\end_inset
+
+, luego existe 
+\begin_inset Formula $f\left(x\right)\in B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $g\left(f\left(x\right)\right)\neq h\left(f\left(x\right)\right)$
+\end_inset
+
+ lo cual es una contradicción pues:
+\begin_inset Formula 
+\[
+g\circ f\left(x\right)=h\circ f\left(x\right)\iff g\left(f\left(x\right)\right)=h\left(f\left(x\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sean 
