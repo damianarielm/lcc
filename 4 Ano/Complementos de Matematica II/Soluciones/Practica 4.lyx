@@ -2448,29 +2448,335 @@ Si
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Standard
+Sean 
+\begin_inset Formula $f,g,p,q,r,s$
+\end_inset
+
+ como en el siguiente diagrama:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [right  of=a] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (c) [right  of=b] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (d) [right  of=c] {$D$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (e) [right  of=d] {$E$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {$f$} (c);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node {$g$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge [bend left] node {$p$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge [bend right] node [below] {$q$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge [bend left] node [above] {$r$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge [bend right] node [below] {$s$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Supongamos 
+\begin_inset Formula $\left(g\circ f\right)\circ p=\left(g\circ f\right)\circ q$
+\end_inset
+
+ luego por asociatividad resulta 
+\begin_inset Formula $g\circ\left(f\circ p\right)=g\circ\left(f\circ q\right)$
+\end_inset
+
+ y como 
+\begin_inset Formula $g$
+\end_inset
+
+ es monomorfismo 
+\begin_inset Formula $f\circ p=f\circ q$
+\end_inset
+
+.
+ Nuevamente como 
+\begin_inset Formula $f$
+\end_inset
+
+ es monomorfismo tenemos 
+\begin_inset Formula $p=q$
+\end_inset
+
+.
+ En definitiva: 
+\begin_inset Formula $\left(g\circ f\right)\circ p=\left(g\circ f\right)\circ q\Rightarrow p=q$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es monomorfismo.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Supongamos 
+\begin_inset Formula $f\circ p=f\circ q$
+\end_inset
+
+, luego 
+\begin_inset Formula $g\circ\left(f\circ p\right)=g\circ\left(f\circ q\right)$
+\end_inset
+
+ y por asociatividad 
+\begin_inset Formula $\left(g\circ f\right)\circ p=\left(g\circ f\right)\circ q$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es monomorfismo resulta 
+\begin_inset Formula $p=q$
+\end_inset
+
+.
+ En definitiva: 
+\begin_inset Formula $f\circ p=f\circ q\Rightarrow p=q$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Supongamos 
+\begin_inset Formula $r\circ\left(g\circ f\right)=s\circ\left(g\circ f\right)$
+\end_inset
+
+ luego por asociatividad resulta 
+\begin_inset Formula $\left(r\circ g\right)\circ f=\left(s\circ g\right)\circ f$
+\end_inset
+
+ y como 
+\begin_inset Formula $f$
+\end_inset
+
+ es epimorfismo 
+\begin_inset Formula $r\circ g=s\circ g$
+\end_inset
+
+.
+ Nuevamente como 
+\begin_inset Formula $g$
+\end_inset
+
+ es epimorfismo tenemos 
+\begin_inset Formula $r=s$
+\end_inset
+
+.
+ En definitiva: 
+\begin_inset Formula $r\circ\left(g\circ f\right)=s\circ\left(g\circ f\right)\Rightarrow r=s$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $\left(g\circ f\right)$
+\end_inset
+
+ es epimorfismo.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Supongamos 
+\begin_inset Formula $r\circ g=s\circ g$
+\end_inset
+
+, luego 
+\begin_inset Formula $\left(r\circ g\right)\circ f=\left(s\circ g\right)\circ f$
+\end_inset
+
+ y por asociatividad 
+\begin_inset Formula $r\circ\left(g\circ f\right)=s\circ\left(g\circ f\right)$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es epimorfismo resulta 
+\begin_inset Formula $r=s$
+\end_inset
+
+.
+ En definitiva: 
+\begin_inset Formula $r\circ g=s\circ g\Rightarrow r=s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sabemos que:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $f\circ f^{-1}=id_{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f^{-1}\circ f=id_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g\circ g^{-1}=id_{D}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g^{-1}\circ g=id_{C}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+Ahora:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(g\circ f\right)\circ\left(f^{-1}\circ g^{-1}\right)=g\circ\left(f\circ f^{-1}\right)\circ g^{-1}=g\circ g^{-1}=id_{D}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(f^{-1}\circ g^{-1}\right)\circ\left(g\circ f\right)=f^{-1}\circ\left(g^{-1}\circ g\right)\circ f=f^{-1}\circ f=id_{B}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout Enumerate
-Mostrar que una flecha de una categoría puede ser monomorfismo y epimorsmo
+Mostrar que una flecha de una categoría puede ser monomorfismo y epimorfismo
  y no isomorfismo.
 \end_layout
 
@@ -2480,7 +2786,141 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Consideremos en 
+\begin_inset Formula $Mon$
+\end_inset
+
+ el morfismo 
+\begin_inset Formula $f:\mathbb{N}_{0}\to\mathbb{Z}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(n\right)=n$
+\end_inset
+
+.
+ Observemos que 
+\begin_inset Formula $n_{1}\neq n_{2}\Rightarrow f\left(n_{1}\right)\neq f\left(n_{2}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Monomorfismo: Sean 
+\begin_inset Formula $g,h:M\to\mathbb{N}_{0}$
+\end_inset
+
+ morfismos tales que 
+\begin_inset Formula $f\circ g=f\circ h$
+\end_inset
+
+ y supongamos existe 
+\begin_inset Formula $m\in M$
+\end_inset
+
+ tal que 
+\begin_inset Formula $g\left(m\right)\neq h\left(m\right)$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+f\circ g\left(m\right)=f\circ h\left(m\right)\iff f\left(g\left(m\right)\right)=f\left(h\left(m\right)\right)
+\]
+
+\end_inset
+
+lo cual es una contradicción.
+ Por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ es monomorfismo.
+\end_layout
+
+\begin_layout Itemize
+Epimorfismo: Sean 
+\begin_inset Formula $g,h:\mathbb{Z}\to M$
+\end_inset
+
+ morfismos tales que 
+\begin_inset Formula $g\circ f=h\circ f$
+\end_inset
+
+ y supongamos existe 
+\begin_inset Formula $z\in\mathbb{Z}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $g\left(z\right)\neq h\left(z\right)$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+g\circ f\left(z\right)=h\circ f\left(z\right)\iff g\left(f\left(z\right)\right)=h\left(f\left(z\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+lo cual es una contradicción.
+ Por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ es epimorfismo.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Isomorfismo: Supongamos que existe 
+\begin_inset Formula $f^{-1}:\mathbb{Z}\to\mathbb{N}_{0}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\text{\ensuremath{f\circ f^{-1}=id_{\mathbb{Z}}}}$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{-1}\circ f=id_{\mathbb{N}_{0}}.$
+\end_inset
+
+ En particular para 
+\begin_inset Formula $n\geq0$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $\text{\ensuremath{f^{-1}\left(n\right)=n}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+0=f^{-1}\left(0\right)=f^{-1}\left(-n+n\right)=f\left(-n\right)^{-1}+f\left(n\right)^{-1}=f\left(-n\right)^{-1}+n
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $f\left(-n\right)^{-1}=-n$
+\end_inset
+
+ lo cual es absurdo ya que 
+\begin_inset Formula $-n\notin\mathbb{N}_{0}$
+\end_inset
+
+.
+ Por lo tanto 
+\begin_inset Formula $f$
+\end_inset
+
+ no es isomorfismo.
 \end_layout
 
 \end_deeper
@@ -2533,6 +2973,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
