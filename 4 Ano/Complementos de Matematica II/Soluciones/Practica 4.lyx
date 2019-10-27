@@ -2778,6 +2778,10 @@ Ahora:
 \begin_layout Enumerate
 Mostrar que una flecha de una categoría puede ser monomorfismo y epimorfismo
  y no isomorfismo.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2935,7 +2939,7 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+La misma función del ejercicio anterior cumple dichas características.
 \end_layout
 
 \end_deeper
@@ -2950,7 +2954,62 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $1$
+\end_inset
+
+ y 
+\begin_inset Formula $1'$
+\end_inset
+
+ dos elementos terminales de una categoría.
+ Por ser 
+\begin_inset Formula $1$
+\end_inset
+
+ terminal, existe un único morfismo 
+\begin_inset Formula $f:1\to1'$
+\end_inset
+
+ y análogamente existe un único morfismo 
+\begin_inset Formula $g:1'\to1$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $1'$
+\end_inset
+
+ es terminal existe un único morfismo de 
+\begin_inset Formula $1'$
+\end_inset
+
+ en 
+\begin_inset Formula $1'$
+\end_inset
+
+ luego 
+\begin_inset Formula $f\circ g:1'\to1'$
+\end_inset
+
+ debe ser 
+\begin_inset Formula $id_{1'}$
+\end_inset
+
+.
+ Análogamente para 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dos objetos iniciales en una categoría son isomorfos.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2969,11 +3028,94 @@ COMPLETAR.
 \begin_deeper
 \begin_layout Paragraph
 Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
-\begin_inset Newpage pagebreak
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $Set\times Set$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Iniciales: 
+\begin_inset Formula $\left(\emptyset,\emptyset\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Terminales: 
+\begin_inset Formula $\left(\left\{ x\right\} ,\left\{ y\right\} \right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $Set^{\to}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Iniciales: 
+\begin_inset Formula $0:\emptyset\to\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Terminales: 
+\begin_inset Formula $\text{\ensuremath{f:\left\{ x\right\} \to\left\{ y\right\} }}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -2991,8 +3133,24 @@ Dar una categoría sin objetos iniciales.
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+La categoría del poset 
+\begin_inset Formula $\left(\mathbb{Z}^{-},\leq\right)$
+\end_inset
+
+ no tiene objetos iniciales.
+\end_layout
+
+\begin_layout Itemize
+La categoría del poset 
+\begin_inset Formula $\left(\mathbb{Z}^{+},\leq\right)$
+\end_inset
+
+ no tiene objetos finales.
+\end_layout
+
+\begin_layout Itemize
+El monoide trivial es una categoría cuyo único objeto es final e inicial.
 \end_layout
 
 \end_deeper
@@ -3012,7 +3170,337 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos objetos con productos 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ (con proyecciones 
+\begin_inset Formula $\pi_{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $\pi_{B}$
+\end_inset
+
+) y 
+\begin_inset Formula $\overline{A\times B}$
+\end_inset
+
+ (con proyecciones 
+\begin_inset Formula $\overline{\pi_{A}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{\pi_{B}}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ es producto sabemos que para cualquier objeto 
+\begin_inset Formula $C$
+\end_inset
+
+ y par de funciones 
+\begin_inset Formula $f:C\to A$
+\end_inset
+
+ y 
+\begin_inset Formula $g:C\to B$
+\end_inset
+
+ (en particular para 
+\begin_inset Formula $\overline{A\times B}$
+\end_inset
+
+ y sus proyecciones) existe un único morfismo 
+\begin_inset Formula $\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle :\overline{A\times B}\to A\times B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\pi_{A}\circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle =\overline{\pi_{A}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\pi_{B}\circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle =\overline{\pi_{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Análogamente existe un único morfismo 
+\begin_inset Formula $\left\langle \pi_{A},\pi_{B}\right\rangle :A\times B\to\overline{A\times B}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\overline{\pi_{A}}\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\pi_{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $\overline{\pi_{B}}\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\pi_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.9cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (ab') {$
+\backslash
+overline{A 
+\backslash
+times B}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (ab) [below of=ab'] {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (a)  [left of=ab] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (b)  [right of=ab] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (ab2) [above of=ab'] {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dotted] (ab') edge node {$
+\backslash
+left
+\backslash
+langle 
+\backslash
+overline{
+\backslash
+pi_{A}},
+\backslash
+overline{
+\backslash
+pi_{B}}
+\backslash
+right
+\backslash
+rangle$} (ab);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (ab) edge [below] node {$
+\backslash
+pi_A$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (ab) edge [below] node {$
+\backslash
+pi_B$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (ab') edge [above left] node {$
+\backslash
+overline{
+\backslash
+pi_A}$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (ab') edge [above right] node {$
+\backslash
+overline{
+\backslash
+pi_B}$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (ab2) edge [above left, bend right] node {$
+\backslash
+pi_A$} (a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (ab2) edge [above right, bend left] node {$
+\backslash
+pi_B$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dotted] (ab2) edge node {$
+\backslash
+left
+\backslash
+langle 
+\backslash
+pi_{A},
+\backslash
+pi_{B}
+\backslash
+right
+\backslash
+rangle $} (ab');
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sabemos que entre 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ y 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ existe un único morfismo 
+\begin_inset Formula $f$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\pi_{A}\circ f=\pi_{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $\pi_{B}\circ f=\pi_{B}$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \circ\left\langle \pi_{A},\pi_{B}\right\rangle $
+\end_inset
+
+ cumple estas propiedades:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{A}\circ\left(\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \circ\left\langle \pi_{A},\pi_{B}\right\rangle \right)=\left(\pi_{A}\circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \right)\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\overline{\pi_{A}}\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\pi_{A}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi_{B}\circ\left(\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \circ\left\langle \pi_{A},\pi_{B}\right\rangle \right)=\left(\pi_{B}\circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \right)\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\overline{\pi_{B}}\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\pi_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $id_{A\times B}$
+\end_inset
+
+ tambien cumple dichas propiedades, entonces debe ser 
+\begin_inset Formula $id_{A\times B}=\left\langle \pi_{A},\pi_{B}\right\rangle \circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle $
+\end_inset
+
+ .Analogamente 
+\begin_inset Formula $\left\langle \pi_{A},\pi_{B}\right\rangle \circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle =id_{\overline{A\times B}}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
