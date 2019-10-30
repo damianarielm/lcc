@@ -3039,6 +3039,11 @@ Solución
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \hspace{}
+\length -1.5cm
+\end_inset
+
+
 \begin_inset Box Frameless
 position "t"
 hor_pos "c"
@@ -3496,7 +3501,8 @@ Como
 \begin_inset Formula $id_{A\times B}=\left\langle \pi_{A},\pi_{B}\right\rangle \circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle $
 \end_inset
 
- .Analogamente 
+.
+ Análogamente 
 \begin_inset Formula $\left\langle \pi_{A},\pi_{B}\right\rangle \circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle =id_{\overline{A\times B}}$
 \end_inset
 
@@ -3541,6 +3547,10 @@ Sea
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -3548,21 +3558,129 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $Poset$
+\end_inset
+
+:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Iniciales: 
+\begin_inset Formula $0=\left(\emptyset,\emptyset\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Terminales: 
+\begin_inset Formula $1=\left(\left\{ x\right\} ,\Delta\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Productos: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Coproductos: COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $Set$
+\end_inset
+
+:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Iniciales: 
+\begin_inset Formula $0=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Terminales: 
+\begin_inset Formula $1=\left\{ x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Productos: 
+\begin_inset Formula $A\times B=A\times B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Coproductos: 
+\begin_inset Formula $A+B=A\uplus B$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $Mon$
+\end_inset
+
+:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Iniciales: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Terminales: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Productos: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Coproductos: COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $Grp$
+\end_inset
+
+:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Iniciales: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Terminales: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Productos: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Coproductos: COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dar una categoría donde algún par de objetos carecen de producto.
