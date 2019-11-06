@@ -95,6 +95,1102 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Chapter
+Diagramas
+\end_layout
+
+\begin_layout Section
+Módulo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="25text%">
+<column alignment="block" valignment="middle" width="60text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=0.5, y=0]{Nombre} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Un módulo es una unidad de implementación de software que provee una unidad
+ coherente de funcionalidad.
+ También se puede definir como una unidad de implementación de software
+ que provee un conjunto de servicios.
+ Parnas define módulo como una asignación de trabajo para un programador
+ o un grupo de programadores.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Interfaz
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="25text%">
+<column alignment="block" valignment="middle" width="60text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlabstract[x=0.5, y=0]{Nombre} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+emph{Metodo1()} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+emph{Metodo2(Parametros)} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+emph{...}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La interfaz de un módulo puede definirse como el conjunto de servicios que
+ el módulo exporta.
+ También puede definirse como todas las interacciones que tiene el módulo
+ con su entorno (es decir, los otros módulos).
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Implementación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="55text%">
+<column alignment="block" valignment="middle" width="35text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{myverbbox}{
+\backslash
+imp}
+\end_layout
+
+\begin_layout Plain Layout
+
+return f(Parametro);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{myverbbox}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=-2, y=0]{Modulo} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametro) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlnote[width=120, x=4, anchor1=-5, anchor2=-5]{Modulo} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+imp
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+La implementación de un módulo es la forma en que se logra que la interfaz
+ funcione según lo perciben los otros módulos.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Herencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="50text%">
+<column alignment="block" valignment="middle" width="40text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlabstract[x=0.5, y=0]{Interfaz} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+emph{Metodo1()} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+emph{Metodo2(Parametros)} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+emph{..}
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=-2, y=-4.5]{Modulo1} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=3, y=-4.5]{Modulo2} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlinherit[geometry=|-|, weight=0.4]{Modulo1}{Interfaz}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlinherit[geometry=|-|, weight=0.4]{Modulo2}{Interfaz}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dos módulos, decimos que 
+\begin_inset Formula $B$
+\end_inset
+
+ es un heredero de 
+\begin_inset Formula $A$
+\end_inset
+
+ si toda subrutina de la interfaz de 
+\begin_inset Formula $A$
+\end_inset
+
+ es una subrutina de la interfaz de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Instanciacion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="55text%">
+<column alignment="block" valignment="top" width="35text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=-2, y=0]{Instanciador} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=4, y=0]{Instanciado} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[dashed, ->] (0.2,-0.3) -- (1.8,-0.3);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Un objeto es una instancia de un módulo.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Composición
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="50text%">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=-2, y=0]{Compositor} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=4, y=0]{Compuesto} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umluniaggreg[arg=obj, pos=0.5]{Compositor}{Compuesto}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Asociación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=-2, y=0]{Cliente} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umlclass[x=4, y=0]{Servidor} {
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo1() 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        Metodo2(Parametros) 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        ...
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    {
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+umluniassoc[geometry=|-]{Cliente}{Servidor}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
 Patrones de creación
 \end_layout
 
@@ -140,6 +1236,11 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \hspace*{}
+\length -1cm
+\end_inset
+
+
 \begin_inset Preview
 
 \begin_layout Standard
@@ -1538,6 +2639,11 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \hspace*{}
+\length -1cm
+\end_inset
+
+
 \begin_inset Preview
 
 \begin_layout Standard
@@ -1918,7 +3024,7 @@ Documentación
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="15" columns="4">
+<lyxtabular version="3" rows="14" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="0pt">
@@ -2178,7 +3284,7 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2189,53 +3295,13 @@ Operacion()
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \series bold
 \emph on
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-imp
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
 is
 \end_layout
 
@@ -2623,6 +3689,10 @@ Compone objetos en estructuras de árbol para representar jerarquías de parte-t
 o.
  Permite que los clientes traten de manera uniforme a los objetos individuales
  y a los compuestos.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2644,6 +3714,7 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Preview
 
 \begin_layout Standard
@@ -3800,6 +4871,10 @@ Explicación coloquial de la relación entre los elementos del patrón y los
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3813,10 +4888,6 @@ Propósito
 \begin_layout Standard
 Asigna responsabilidades adicionales a un objeto dinámicamente, proporcionando
  una alternativa flexible a la herencia para extender la funcionalidad.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -3845,6 +4916,11 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \hspace*{}
+\length -1cm
+\end_inset
+
+
 \begin_inset Preview
 
 \begin_layout Standard
@@ -4145,6 +5221,10 @@ end{tikzpicture}
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4193,6 +5273,10 @@ Colaboraciones
 El Decorador redirige peticiones a su objeto Componente.
  Opcionalmente puede realizar operaciones adicionales antes y después de
  reenviar la petición.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -4217,10 +5301,6 @@ Evita clases cargadas de funciones en la parte de arriba de la jerarquía.
  También resulta fácil definir nuevos tipos de Decoradores independientemente
  de las clases de objetos de las que hereden, incluso para extensiones que
  no hubieran sido previstas.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -4263,7 +5343,7 @@ Documentación
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="10" columns="4">
+<lyxtabular version="3" rows="14" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -4446,7 +5526,7 @@ where
 \begin_layout Plain Layout
 
 \emph on
-Objetivo
+Componente
 \end_layout
 
 \end_inset
@@ -4457,58 +5537,19 @@ Objetivo
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 
 \emph on
-peticion()
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+Componente
 \end_layout
 
 \end_inset
@@ -4516,126 +5557,6 @@ is
 </row>
 <row>
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Adaptable
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-peticionConcreta()
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Adaptador
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4648,7 +5569,9 @@ is
 \begin_inset Text
 
 \begin_layout Plain Layout
-implementacion
+
+\emph on
+Operacion()
 \end_layout
 
 \end_inset
@@ -4659,12 +5582,339 @@ implementacion
 \begin_layout Plain Layout
 
 \series bold
+\emph on
 is
 \end_layout
 
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ComponenteConcreto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operacion()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Decorador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\emph on
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Operacion()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\emph on
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DecoradorConcretoA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operacion()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DecoradorConcretoB
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operacion()
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+is
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4816,6 +6066,7 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Preview
 
 \begin_layout Standard
@@ -5756,6 +7007,7 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Preview
 
 \begin_layout Standard
@@ -6995,6 +8247,7 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Preview
 
 \begin_layout Standard
@@ -7300,7 +8553,7 @@ Documentación
 \begin_layout Standard
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="4">
+<lyxtabular version="3" rows="12" columns="4">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -7517,51 +8770,11 @@ is
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-InterfazContexto()
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-is
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-estrategia
+InterfazContexto()
 \end_layout
 
 \end_inset
@@ -7953,6 +9166,7 @@ Estructura
 \end_layout
 
 \begin_layout Standard
+\align center
 \begin_inset Preview
 
 \begin_layout Standard
@@ -8005,7 +9219,7 @@ end{myverbbox}
 
 
 \backslash
-begin{tikzpicture}[scale=0.8, every node/.style={scale=0.8}]
+begin{tikzpicture}[scale=0.5, every node/.style={scale=0.5}]
 \end_layout
 
 \begin_layout Plain Layout
@@ -8383,10 +9597,6 @@ Declara una operación Visitar para cada clase de operación ElementoConcreto
  la petición Visitar al visitante.
  A continuación el visitante puede acceder al elemento directamente a través
  de su interfaz particular.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -8488,6 +9698,10 @@ Visitar varias jerarquías de clases.
  distintos tipos de elementos.
  El patrón Visitor no tiene esta restricción.
  Puede visitar objetos que no tienen una clase padre en común.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -8505,10 +9719,6 @@ Romper la encapsulación.
  Como resultado, el patrón suele obligarnos a proporcionar operaciones públicas
  que accedan al estado interno de un elemento, lo que puede comprometer
  su encapsulación.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -8525,6 +9735,13 @@ Composite: los visitantes pueden usarse para aplicar una operación sobre
 \strikeout on
 Interpreter: se puede aplicar el patrón Visitor para llevar a cabo la interpreta
 ción.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
