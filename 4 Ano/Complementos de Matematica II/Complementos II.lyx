@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass book
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{arrows, automata}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language spanish-mexico
@@ -2086,7 +2090,2018 @@ Grupos
 \end_layout
 
 \begin_layout Part
-Teoría de categorias
+Teoría de categorías
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Section
+Definiciones
+\end_layout
+
+\begin_layout Subsection
+Categoría
+\end_layout
+
+\begin_layout Standard
+Una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ es:
+\end_layout
+
+\begin_layout Itemize
+Una clase de objetos: 
+\begin_inset Formula $ob\,\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Una clase de morfismos entre objetos: 
+\begin_inset Formula $mor\,\mathcal{C}$
+\end_inset
+
+.
+ Llamaremos 
+\begin_inset Formula $Hom\left(A,B\right)$
+\end_inset
+
+ a todos los morfismos entre los objetos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para cada 
+\begin_inset Formula $A,B,C\in ob\,\mathcal{C}$
+\end_inset
+
+ un operador binario
+\begin_inset Formula 
+\[
+\circ:Hom\left(B,C\right)\times Hom\left(A,B\right)\to Hom\left(A,C\right)
+\]
+
+\end_inset
+
+llamado composición tal que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h\circ\left(g\circ f\right)=\left(h\circ g\right)\circ f$
+\end_inset
+
+ (siempre que tengan sentido).
+\end_layout
+
+\begin_layout Itemize
+Dado un objeto 
+\begin_inset Formula $A$
+\end_inset
+
+ existe un morfismo 
+\begin_inset Formula $id_{A}\in Hom\left(A,A\right)$
+\end_inset
+
+ para el cual si 
+\begin_inset Formula $B$
+\end_inset
+
+ es otro objeto se cumplen:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\forall f\in Hom\left(A,B\right):f\circ id_{A}=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall f\in Hom\left(B,A\right):id_{A}\circ f=f$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Localidad
+\end_layout
+
+\begin_layout Standard
+Decimos que una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ es una categoría:
+\end_layout
+
+\begin_layout Description
+Pequeña si 
+\begin_inset Formula $ob\,\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $mor\,\mathcal{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Localmente
+\begin_inset space ~
+\end_inset
+
+pequeña si 
+\begin_inset Formula $Hom\left(A,B\right)$
+\end_inset
+
+ es un conjunto para cualquier 
+\begin_inset Formula $A,B\in ob\,\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Grande si no es una categoría pequeña.
+\end_layout
+
+\begin_layout Subsection
+Clasificación de morfismos
+\end_layout
+
+\begin_layout Standard
+Decimos que 
+\begin_inset Formula $f\in Hom\left(A,B\right)$
+\end_inset
+
+ es un
+\end_layout
+
+\begin_layout Description
+monomorfismo si 
+\begin_inset Formula $\forall X\in ob\,\mathcal{C}\forall g,h\in Hom\left(X,A\right):f\circ g=f\circ h\Rightarrow g=h$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (A) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (B) [right  of=A] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (X) [left  of=A] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge node [above] {f} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge [bend left] node [above] {g} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge [bend right] node [below] {h} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+epimorfismo si 
+\begin_inset Formula $\forall X\in ob\,\mathcal{C}\forall g,h\in Hom\left(B,X\right):g\circ f=h\circ f\Rightarrow g=h$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (A) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (B) [right  of=A] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (X) [right  of=B] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge node [above] {f} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (B) edge [bend left] node [above] {g} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (B) edge [bend right] node [below] {h} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+isomorfismo si 
+\begin_inset Formula $\exists f^{-1}\in Hom\left(B,A\right):f\circ f^{-1}=id_{B}\land f^{-1}\circ f=id_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Clasificación de objetos
+\end_layout
+
+\begin_layout Standard
+Un objeto 
+\begin_inset Formula $0\in ob\,\mathcal{C}$
+\end_inset
+
+ se dice 
+\emph on
+inicial
+\emph default
+ si 
+\begin_inset Formula $\forall A\in ob\,\mathcal{C}\exists!f:0\to A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Un objeto 
+\begin_inset Formula $1\in ob\,\mathcal{C}$
+\end_inset
+
+ se dice 
+\emph on
+terminal
+\emph default
+ si 
+\begin_inset Formula $\forall A\in ob\,\mathcal{C}\exists!f:A\to1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Productos
+\end_layout
+
+\begin_layout Standard
+El 
+\emph on
+producto
+\emph default
+ de dos objetos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ es una terna 
+\begin_inset Formula $\left(A\times B,\pi_{A}:A\times B\to A,\pi_{B}:A\times B\to B\right)$
+\end_inset
+
+ que cumple la siguiente propiedad universal:
+\begin_inset Formula 
+\[
+\forall C\in ob\,\mathcal{C}\forall f:C\to A,g:C\to B\exists!\left\langle f,g\right\rangle :C\to A\times B/\pi_{A}\circ\left\langle f,g\right\rangle =f\land\pi_{B}\circ\left\langle f,g\right\rangle =g
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) [left  of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [above  of=AB] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_A$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_B$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (C) edge node [anchor=center] {$
+\backslash
+left
+\backslash
+langle f,g
+\backslash
+right
+\backslash
+rangle $} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (C) edge node [left] {$f$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (C) edge node [right] {$g$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El 
+\emph on
+coproducto
+\emph default
+ de dos objetos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ es una terna 
+\begin_inset Formula $\left(A+B,\iota_{A}:A\to A+B,\iota_{B}:B\to A+B\right)$
+\end_inset
+
+ que cumple la siguiente propiedad universal:
+\begin_inset Formula 
+\[
+\forall C\in ob\,\mathcal{C}\forall f:A\to C,g:B\to C\exists!\left[f,g\right]:A+B\to C/\left[f,g\right]\circ\iota_{A}=f\land\left[f,g\right]\circ\iota_{B}=g
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) [left  of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [below  of=AB] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge node [above] {$
+\backslash
+iota_A$} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (B) edge node [above] {$
+\backslash
+iota_B$} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (AB) edge node [anchor=center] {$
+\backslash
+left[f,g
+\backslash
+right]$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge node [left] {$f$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (B) edge node [right] {$g$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Ecualizador
+\end_layout
+
+\begin_layout Standard
+El 
+\emph on
+ecualizador
+\emph default
+ de dos morfismos 
+\begin_inset Formula $f,g:A\to B$
+\end_inset
+
+ es un morfismo 
+\begin_inset Formula $e:X\to A$
+\end_inset
+
+ que verifica 
+\begin_inset Formula $f\circ e=g\circ e$
+\end_inset
+
+ y tal que para todo morfismo 
+\begin_inset Formula $e':X'\to A$
+\end_inset
+
+ para el cual 
+\begin_inset Formula $f\circ e'=g\circ e'$
+\end_inset
+
+, existe un único 
+\begin_inset Formula $k:X'\to X$
+\end_inset
+
+ cumpliendo 
+\begin_inset Formula $e\circ k=e'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=A] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X') [below of=X] {$X'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=A] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node {$e$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X') edge node [right]  {$e'$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend left] node [above] {$f$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend right] node [below] {$g$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (X') edge node [left]  {$
+\backslash
+exists !k$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejemplos
+\end_layout
+
+\begin_layout Subsection
+Poset
+\end_layout
+
+\begin_layout Standard
+Dado un poset 
+\begin_inset Formula $\left(P,\leq\right)$
+\end_inset
+
+ definimos la categoría 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{P}=P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $mor\,\mathcal{P}=\leq$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(b,c\right)\circ\left(a,b\right)=\left(a,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Veamos que en efecto, se trata de una categoría:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Buena definición
+\emph default
+: La composición esta bien definida pues si 
+\begin_inset Formula $\left(b,c\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ son morfismos, por transitividad también lo será su composición 
+\begin_inset Formula $\left(a,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para cada objeto 
+\begin_inset Formula $a$
+\end_inset
+
+ por reflexividad 
+\begin_inset Formula $\left(a,a\right)\in\leq$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\text{\ensuremath{\left(a,a\right)\in mor\,\mathcal{P}}}$
+\end_inset
+
+; a este morfismo lo llamaremos 
+\begin_inset Formula $id_{a}$
+\end_inset
+
+ resultando
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(a,b\right)\circ id_{a}=\left(a,b\right)\circ\left(a,a\right)=\left(a,b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $id_{a}\circ\left(b,a\right)=\left(a,a\right)\circ\left(b,a\right)=\left(b,a\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Asociatividad
+\emph default
+: Sean 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(b,c\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(c,d\right)$
+\end_inset
+
+ morfismos, por transitividad también son morfismos 
+\begin_inset Formula $\boxed{\left(a,c\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $\boxed{\left(b,d\right)}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(a,d\right)$
+\end_inset
+
+ luego
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(\left(c,d\right)\circ\left(b,c\right)\right)\circ\left(a,b\right)=\boxed{\left(b,d\right)}\circ\left(a,b\right)=\left(a,d\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(c,d\right)\circ\left(\left(b,c\right)\circ\left(a,b\right)\right)=\left(c,d\right)\circ\boxed{\left(a,c\right)}=\left(a,d\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Monoide
+\end_layout
+
+\begin_layout Standard
+Dado un monoide 
+\begin_inset Formula $\left(M,+\right)$
+\end_inset
+
+ definimos la categoría 
+\begin_inset Formula $\mathcal{M}$
+\end_inset
+
+ donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{M}=\left\{ *\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $mor\,\mathcal{M}=M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\circ y=x+y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Veamos que en efecto, se trata de una categoría:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Buena definición
+\emph default
+: Por clausura de monoides, si 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ son morfismos, también lo será su composición 
+\begin_inset Formula $x+y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para el único objeto 
+\begin_inset Formula $*$
+\end_inset
+
+ existe el morfismo 
+\begin_inset Formula $0=id_{*}$
+\end_inset
+
+ de manera tal que
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $x\circ id_{*}=x+0=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $id_{*}\circ y=0+y=y$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Asociatividad
+\emph default
+: Para tres morfismos 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ (elementos de 
+\begin_inset Formula $M$
+\end_inset
+
+) por clausura de monoide también son morfismos 
+\begin_inset Formula $\boxed{x+y}$
+\end_inset
+
+ y 
+\begin_inset Formula $\boxed{y+z}$
+\end_inset
+
+, luego
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(x\circ y\right)\circ z=\left(\boxed{x+y}\right)+z=x+\left(\boxed{y+z}\right)=x\circ\left(y\circ z\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Categoría opuesta
+\end_layout
+
+\begin_layout Standard
+Dada una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ definimos la categoría opuesta 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+ donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{C}^{op}=ob\,\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $mor\,\mathcal{C}^{op}=\left\{ f_{op}:X\to Y/f:Y\to X\in mor\,\mathcal{C}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{op}\circ_{op}f_{op}=\left(f\circ g\right)_{op}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Veamos que en efecto, se trata de una categoría:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Buena definición
+\emph default
+: Dadas 
+\begin_inset Formula $f_{op}:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g_{op}:B\to C$
+\end_inset
+
+ por definición existen en 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ los morfismos 
+\begin_inset Formula $f:B\to A$
+\end_inset
+
+ y 
+\begin_inset Formula $g:C\to B$
+\end_inset
+
+ luego es valida la composición 
+\begin_inset Formula $f\circ g$
+\end_inset
+
+ y por definición 
+\begin_inset Formula $\left(f\circ g\right)_{op}$
+\end_inset
+
+ es un morfismo de 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para cada objeto 
+\begin_inset Formula $X$
+\end_inset
+
+ sabemos que existe 
+\begin_inset Formula $id_{X}$
+\end_inset
+
+, luego 
+\begin_inset Formula $id_{X_{op}}$
+\end_inset
+
+ es un morfismo de la categoría opuesta para el cual
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f_{op}\circ_{op}id_{X_{op}}=\left(id_{X}\circ f\right)_{op}=f_{op}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $id_{X_{op}}\circ_{op}h_{op}=\left(h\circ id_{X}\right)_{op}=h_{op}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Asociatividad
+\emph default
+: Sean 
+\begin_inset Formula $f_{op}:A\to B$
+\end_inset
+
+, 
+\begin_inset Formula $g_{op}:B\to C$
+\end_inset
+
+ y 
+\begin_inset Formula $h_{op}:C\to D$
+\end_inset
+
+, luego
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(h_{op}\circ_{op}g_{op}\right)\circ_{op}f_{op}=\left(g\circ h\right)_{op}\circ_{op}f_{op}=f\circ\left(g\circ h\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{op}\circ_{op}\left(g_{op}\circ_{op}f_{op}\right)=h_{op}\circ_{op}\left(f\circ g\right)_{op}=\left(f\circ g\right)\circ h$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Categoría producto
+\end_layout
+
+\begin_layout Standard
+Dadas dos categorías 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ definimos la categoría producto 
+\begin_inset Formula $\mathcal{C}\times\mathcal{D}$
+\end_inset
+
+ donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{C}\times\mathcal{D}=ob\,\mathcal{C}\times ob\,\mathcal{D}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Hom\left(\left(C,D\right),\left(C',D'\right)\right)=Hom\left(C,C'\right)\times Hom\left(D,D'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(p,q\right)\circ_{\times}\left(f,g\right)=\left(p\circ f,q\circ g\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Veamos que en efecto, se trata de una categoría:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para cada objeto 
+\begin_inset Formula $\left(C,D\right)\in ob\,\mathcal{C}\times\mathcal{D}$
+\end_inset
+
+ existen los objetos 
+\begin_inset Formula $C\in ob\,\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $D\in ob\,\mathcal{D}$
+\end_inset
+
+ y también los morfismos 
+\begin_inset Formula $id_{C}$
+\end_inset
+
+ e 
+\begin_inset Formula $id_{D},$
+\end_inset
+
+ por lo que también existe el morfismo 
+\begin_inset Formula $\left(id_{C},id_{D}\right)$
+\end_inset
+
+ para el cual
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(f,g\right)\circ_{\times}\left(id_{C},id_{D}\right)=\left(f\circ id_{C},g\circ id_{D}\right)=\left(f,g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(id_{C},id_{D}\right)\circ_{\times}\left(f,g\right)=\left(id_{C}\circ f,id_{D}\circ g\right)=\left(f,g\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Asociatividad
+\emph default
+: Sean 
+\begin_inset Formula $\left(f,g\right):\left(C_{1},C_{2}\right)\to\left(D_{1},D_{2}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(p,q\right):\left(C_{2},C_{3}\right)\to\left(D_{2},D_{3}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(r,s\right):\left(C_{3},C_{4}\right)\to\left(D_{3},D_{4}\right)$
+\end_inset
+
+, luego
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(\left(r,s\right)\circ_{\times}\left(p,q\right)\right)\circ_{\times}\left(f,g\right)=\left(r\circ p,s\circ q\right)\circ_{\times}\left(f,g\right)=\left(r\circ p\circ f,s\circ q\circ g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(r,s\right)\circ_{\times}\left(\left(p,q\right)\circ_{\times}\left(f,g\right)\right)=\left(r,s\right)\circ_{\times}\left(p\circ f,q\circ g\right)=\left(r\circ p\circ f,s\circ q\circ g\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Categoría de morfismos
+\end_layout
+
+\begin_layout Standard
+Dada una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ definimos la categoría de sus morfismos 
+\begin_inset Formula $\mathcal{C}^{\to}$
+\end_inset
+
+ donde:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{C}^{\to}=mor\,\mathcal{C}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Hom\left(f:A\to B,g:A'\to B'\right)=\left\{ \left(a,b\right)\in Hom\left(A,A'\right)\times Hom\left(B,B'\right):g\circ a=b\circ f\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a',b'\right)\circ\left(a,b\right)=\left(a'\circ a,b'\circ b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Veamos que en efecto, se trata de una categoría:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Buena definición
+\emph default
+: Sean
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(a:A\to A',b:B\to B'\right)$
+\end_inset
+
+ morfismo entre 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:A'\to B'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a':A'\to A'',b':B'\to B''\right)$
+\end_inset
+
+ morfismo entre 
+\begin_inset Formula $g$
+\end_inset
+
+ y 
+\begin_inset Formula $h:A''\to B''$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sabemos por definición que
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g\circ a=b\circ f$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h\circ a'=b'\circ g$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a') [right  of=a] {$A'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a'') [right  of=a'] {$A''$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [below  of=a] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b') [right  of=b] {$B'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b'') [right  of=b'] {$B''$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a') edge node [right] {g} (b');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a'') edge node [right] {h} (b'');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [above] {a} (a');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a') edge node [above] {a'} (a'');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node [below] {b} (b');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b') edge node [below] {b'} (b'');
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego para la composición 
+\begin_inset Formula $\left(a'\circ a,b'\circ b\right)$
+\end_inset
+
+ resulta
+\begin_inset Formula 
+\[
+h\circ\left(a'\circ a\right)=\left(h\circ a'\right)\circ a=\left(b'\circ g\right)\circ a=b'\circ\left(g\circ a\right)=b'\circ\left(b\circ f\right)=\left(b'\circ b\right)\circ f
+\]
+
+\end_inset
+
+es decir que también es un morfismo de la categoría.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para cada objeto 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ definimos 
+\begin_inset Formula $id_{f}=\left(id_{A},id_{B}\right)$
+\end_inset
+
+.
+ Observemos que 
+\begin_inset Formula $id_{f}$
+\end_inset
+
+ es un morfismo de 
+\begin_inset Formula $C^{\to}$
+\end_inset
+
+ pues 
+\begin_inset Formula $id_{B}\circ f=f=f\circ id_{A}$
+\end_inset
+
+, luego
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(a,b\right)\circ id_{f}=\left(a\circ id_{A},b\circ id_{B}\right)=\left(a,b\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $id_{f}\circ\left(a,b\right)=\left(id_{A}\circ a,id_{B}\circ b\right)=\left(a,b\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Asociatividad
+\emph default
+: Sean morfismos y objetos como en el siguiente diagrama
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a') [right  of=a] {$A'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a'') [right  of=a'] {$A''$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (a''') [right  of=a''] {$A'''$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b) [below  of=a] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b') [right  of=b] {$B'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b'') [right  of=b'] {$B''$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (b''') [right  of=b''] {$B'''$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {f} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a') edge node [right] {g} (b');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a'') edge node [right] {h} (b'');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a''') edge node [right] {i} (b''');
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [above] {a} (a');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a') edge node [above] {a'} (a'');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a'') edge node [above] {a''} (a''');
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node [below] {b} (b');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b') edge node [below] {b'} (b'');
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b'') edge node [below] {b''} (b''');
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego
+\begin_inset Formula 
+\[
+\left(\left(a'',b''\right)\circ\left(a',b'\right)\right)\circ\left(a,b\right)=\left(a''\circ a',b''\circ b'\right)\circ\left(a,b\right)=\left(a''\circ a'\circ a,b''\circ b'\circ b\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(a'',b'\right)\circ\left(a'\circ a,b'\circ b\right)=\left(a'',b'\right)\circ\left(\left(a',b'\right)\circ\left(a,b\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Teoremas
+\end_layout
+
+\begin_layout Subsection
+Principio de dualidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si un teorema vale en una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, entonces el coteorema (invirtiendo el sentido de los morfismos) vale en
+ la categoría 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Observaciones
+\end_layout
+
+\begin_layout Itemize
+Las definiciones de monomorfismo y epimorfismos son definiciones duales,
+ es decir que 
+\begin_inset Formula $f$
+\end_inset
+
+ es monomorfismo en la categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $f$
+\end_inset
+
+ es epimorfismo en la categoría 
+\begin_inset Formula $\mathcal{C}^{op}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Las definiciones de objeto inicial y objeto terminal son definiciones duales.
+\end_layout
+
+\begin_layout Itemize
+Los productos en una categoría son coproductos en la categoría opuesta.
+\end_layout
+
+\begin_layout Subsection
+Propiedades de isomorfismo
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es un isomorfismo, también es monomorfismo y epimorfismo.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Unicidad de elementos especiales
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Los objetos iniciales y terminales son únicos salvo isomorfismo.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Propiedad de ecualizador
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $e$
+\end_inset
+
+ es un ecualizador, entonces es monomorfismo.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Chapter
+Limites y conos
+\end_layout
+
+\begin_layout Chapter
+Functores
+\end_layout
+
+\begin_layout Chapter
+Transformaciones natruales
+\end_layout
+
+\begin_layout Chapter
+Monadas
 \end_layout
 
 \end_body

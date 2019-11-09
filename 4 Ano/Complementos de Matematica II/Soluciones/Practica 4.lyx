@@ -654,6 +654,10 @@ Dada una categoría
 \end_inset
 
  es una categoría.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -818,9 +822,98 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Definimos 
+\begin_inset Formula $\left(p,q\right)\circ_{\times}\left(f,g\right)=\left(p\circ f,q\circ g\right)$
+\end_inset
+
+.
+ 
 \end_layout
 
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para cada objeto 
+\begin_inset Formula $\left(C,D\right)\in ob\,\mathcal{C}\times\mathcal{D}$
+\end_inset
+
+ existen los objetos 
+\begin_inset Formula $C\in ob\,\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $D\in ob\,\mathcal{D}$
+\end_inset
+
+ y también los morfismos 
+\begin_inset Formula $id_{C}$
+\end_inset
+
+ e 
+\begin_inset Formula $id_{D},$
+\end_inset
+
+ por lo que también existe el morfismo 
+\begin_inset Formula $\left(id_{C},id_{D}\right)$
+\end_inset
+
+ para el cual
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(f,g\right)\circ_{\times}\left(id_{C},id_{D}\right)=\left(f\circ id_{C},g\circ id_{D}\right)=\left(f,g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(id_{C},id_{D}\right)\circ_{\times}\left(f,g\right)=\left(id_{C}\circ f,id_{D}\circ g\right)=\left(f,g\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\emph on
+Asociatividad
+\emph default
+: Sean 
+\begin_inset Formula $\left(f,g\right):\left(C_{1},C_{2}\right)\to\left(D_{1},D_{2}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(p,q\right):\left(C_{2},C_{3}\right)\to\left(D_{2},D_{3}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(r,s\right):\left(C_{3},C_{4}\right)\to\left(D_{3},D_{4}\right)$
+\end_inset
+
+, luego
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(\left(r,s\right)\circ_{\times}\left(p,q\right)\right)\circ_{\times}\left(f,g\right)=\left(r\circ p,s\circ q\right)\circ_{\times}\left(f,g\right)=\left(r\circ p\circ f,s\circ q\circ g\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(r,s\right)\circ_{\times}\left(\left(p,q\right)\circ_{\times}\left(f,g\right)\right)=\left(r,s\right)\circ_{\times}\left(p\circ f,q\circ g\right)=\left(r\circ p\circ f,s\circ q\circ g\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Definamos 
@@ -1077,7 +1170,7 @@ node[state] (a) {$A$};
 
     
 \backslash
-node[state] (d) [below  of=a] {$D$};
+node[state] (d) [below  of=a] {$A'$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1091,7 +1184,7 @@ node[state] (b) [right  of=a] {$B$};
 
     
 \backslash
-node[state] (e) [below  of=b] {$E$};
+node[state] (e) [below  of=b] {$B'$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1191,6 +1284,10 @@ Para
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1326,11 +1423,11 @@ end{tikzpicture}
 \end_deeper
 \begin_layout Itemize
 Sean 
-\begin_inset Formula $a:A\to D$
+\begin_inset Formula $a:A\to A'$
 \end_inset
 
  y 
-\begin_inset Formula $b:B\to E$
+\begin_inset Formula $b:B\to B'$
 \end_inset
 
  como en el diagrama, luego: 
@@ -1345,7 +1442,7 @@ Sean
 \end_layout
 
 \begin_layout Itemize
-Analogamente sean 
+Análogamente sean 
 \begin_inset Formula $a:D\to A$
 \end_inset
 
@@ -1632,6 +1729,10 @@ Sean
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1934,6 +2035,10 @@ Una flecha
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
