@@ -4073,11 +4073,7 @@ Mostrar las siguientes identidades:
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\left\langle f\circ h,g\circ h\right\rangle =$
-\end_inset
-
-
-\begin_inset Formula $\left\langle f,g\right\rangle \circ h$
+\begin_inset Formula $\left\langle f\circ h,g\circ h\right\rangle =\left\langle f,g\right\rangle \circ h$
 \end_inset
 
 .
@@ -4109,13 +4105,326 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que 
+\begin_inset Formula $\left\langle \pi_{A},\pi_{B}\right\rangle $
+\end_inset
+
+ es el único morfismo que hace conmutar el siguiente diagrama:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) [left  of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [above  of=AB] {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_A$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_B$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (C) edge node [anchor=center, below] {$
+\backslash
+left
+\backslash
+langle 
+\backslash
+pi_A,
+\backslash
+pi_B
+\backslash
+right
+\backslash
+rangle$} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (C) edge node [left] {$
+\backslash
+pi_A$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (C) edge node [right] {$
+\backslash
+pi_B$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset Formula $id$
+\end_inset
+
+ hace conmutar el diagrama pues 
+\begin_inset Formula $\pi_{B}\circ id=\pi_{B}$
+\end_inset
+
+ y 
+\begin_inset Formula $\pi_{A}\circ id=\pi_{A}$
+\end_inset
+
+; y como solo existe un morfismo con esa propiedad, debe ser 
+\begin_inset Formula $id=\left\langle \pi_{A},\pi_{B}\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que 
+\begin_inset Formula $\left\langle f,g\right\rangle $
+\end_inset
+
+ es el único morfismo que hace conmutar el diagrama interior:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (D) [below of=C] {$D$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) [below of=D] {$A
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right of=AB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) [left of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (C) edge node {$h$} (D);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (D) edge [above left] node {$f$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (D) edge node {$g$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_A$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_B$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (D) edge node [anchor=center] {$
+\backslash
+left
+\backslash
+langle f,g
+\backslash
+right
+\backslash
+rangle$} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+Además sabemos que el único morfismo que hace conmutar el diagrama exterior
+ es 
+\begin_inset Formula $\left\langle f\circ h,g\circ h\right\rangle $
+\end_inset
+
+.
+ Veamos entonces que 
+\begin_inset Formula $\left\langle f,g\right\rangle $
+\end_inset
+
+ también conmuta el diagrama exterior:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{B}\circ\left(\left\langle f,g\right\rangle \circ h\right)=\left(\pi_{B}\circ\left\langle f,g\right\rangle \right)\circ h=g\circ h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{A}\circ\left(\left\langle f,g\right\rangle \circ h\right)=\left(\pi_{A}\circ\left\langle f,g\right\rangle \right)\circ h=f\circ h$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
