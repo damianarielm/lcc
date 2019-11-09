@@ -2398,7 +2398,7 @@ y como
 \begin_inset Formula $f$
 \end_inset
 
- es un epimorfimo resulta 
+ es un epimorfismo resulta 
 \begin_inset Formula $g=h$
 \end_inset
 
@@ -3573,9 +3573,6 @@ Sabemos que entre
 \end_inset
 
  cumple estas propiedades:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 \pi_{A}\circ\left(\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \circ\left\langle \pi_{A},\pi_{B}\right\rangle \right)=\left(\pi_{A}\circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \right)\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\overline{\pi_{A}}\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\pi_{A}
@@ -3584,9 +3581,6 @@ Sabemos que entre
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 \pi_{B}\circ\left(\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \circ\left\langle \pi_{A},\pi_{B}\right\rangle \right)=\left(\pi_{B}\circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle \right)\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\overline{\pi_{B}}\circ\left\langle \pi_{A},\pi_{B}\right\rangle =\pi_{B}
@@ -3602,7 +3596,7 @@ Como
 \begin_inset Formula $id_{A\times B}$
 \end_inset
 
- tambien cumple dichas propiedades, entonces debe ser 
+ también cumple dichas propiedades, entonces debe ser 
 \begin_inset Formula $id_{A\times B}=\left\langle \pi_{A},\pi_{B}\right\rangle \circ\left\langle \overline{\pi_{A}},\overline{\pi_{B}}\right\rangle $
 \end_inset
 
@@ -3652,10 +3646,6 @@ Sea
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -3687,11 +3677,23 @@ Terminales:
 \end_layout
 
 \begin_layout Itemize
-Productos: COMPLETAR.
+Productos: 
+\begin_inset Formula $\left(A,\leq_{A}\right)\times\left(B,\leq_{B}\right)=\left(\left(A\times B,\leq_{A}\land\leq_{B}\right),fst,snd\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-Coproductos: COMPLETAR.
+Coproductos: 
+\begin_inset Formula $A+B=$
+\end_inset
+
+ COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3721,7 +3723,7 @@ Terminales:
 
 \begin_layout Itemize
 Productos: 
-\begin_inset Formula $A\times B=A\times B$
+\begin_inset Formula $A\times B=\left(A\times B,fst,snd\right)$
 \end_inset
 
 .
@@ -3729,7 +3731,7 @@ Productos:
 
 \begin_layout Itemize
 Coproductos: 
-\begin_inset Formula $A+B=A\uplus B$
+\begin_inset Formula $A+B=\left(A\uplus B,\times\left\{ 0\right\} ,\times\left\{ 1\right\} \right)$
 \end_inset
 
 .
@@ -3745,19 +3747,35 @@ Coproductos:
 
 \begin_deeper
 \begin_layout Itemize
-Iniciales: COMPLETAR.
+Iniciales: 
+\begin_inset Formula $0=\left(\left\{ e\right\} ,\oplus\right)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Terminales: COMPLETAR.
+Terminales: 
+\begin_inset Formula $1=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-Productos: COMPLETAR.
+Productos: 
+\begin_inset Formula $\left(A,\oplus\right)\times\left(B,\otimes\right)=\left(\left(,\right),,\right)$
+\end_inset
+
+ COMPLETAR.
 \end_layout
 
 \begin_layout Itemize
-Coproductos: COMPLETAR.
+Coproductos: 
+\begin_inset Formula $\left(A,\oplus\right)+\left(B,\otimes\right)=\left(\left(,\right),,\right)$
+\end_inset
+
+ COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -3770,19 +3788,35 @@ Coproductos: COMPLETAR.
 
 \begin_deeper
 \begin_layout Itemize
-Iniciales: COMPLETAR.
+Iniciales: 
+\begin_inset Formula $0=\left(\left\{ e\right\} ,\oplus\right)$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Terminales: COMPLETAR.
+Terminales: 
+\begin_inset Formula $1=0$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-Productos: COMPLETAR.
+Productos: 
+\begin_inset Formula $\left(A,\oplus\right)\times\left(B,\otimes\right)=\left(\left(,\right),,\right)$
+\end_inset
+
+ COMPLETAR.
 \end_layout
 
 \begin_layout Itemize
-Coproductos: COMPLETAR.
+Coproductos: 
+\begin_inset Formula $\left(A,\oplus\right)+\left(B,\otimes\right)=\left(\left(,\right),,\right)$
+\end_inset
+
+ COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -3797,7 +3831,10 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula $\left(\mathbb{Q},\leq\right)$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -3844,7 +3881,182 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) [right  of=A] {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [below of=A] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CD) [right  of=C] {$C 
+\backslash
+times D$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (D) [right  of=CD] {$D$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [left] node {$f$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge [above] node {$
+\backslash
+pi_1$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge [above] node {$
+\backslash
+pi_2$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (B) edge node {$g$} (D);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CD) edge [below] node {$
+\backslash
+pi_3$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CD) edge [below] node {$
+\backslash
+pi_4$} (D);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (AB) edge [anchor=center] node {$
+\backslash
+left
+\backslash
+langle f
+\backslash
+circ
+\backslash
+pi_{1},g
+\backslash
+circ
+\backslash
+pi_{2}
+\backslash
+right
+\backslash
+rangle $} (CD);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dicho morfismo existe pues lo garantiza la propiedad universal de 
+\begin_inset Formula $\text{\ensuremath{C\times D}}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
