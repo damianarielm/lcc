@@ -2227,7 +2227,7 @@ Pequeña si
 \begin_inset Formula $mor\,\mathcal{C}$
 \end_inset
 
-
+ son conjuntos.
 \end_layout
 
 \begin_layout Description
@@ -2240,7 +2240,7 @@ pequeña si
 \end_inset
 
  es un conjunto para cualquier 
-\begin_inset Formula $A,B\in ob\,\mathcal{C}$
+\begin_inset Formula $\text{\ensuremath{A,B\in ob\,\mathcal{C}}}$
 \end_inset
 
 .
@@ -4045,7 +4045,7 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Subsection
-Unicidad de elementos especiales
+Unicidad de elementos iniciales y terminales
 \end_layout
 
 \begin_layout Paragraph
@@ -4054,6 +4054,26 @@ Enunciado
 
 \begin_layout Standard
 Los objetos iniciales y terminales son únicos salvo isomorfismo.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Subsection
+Unicidad de productos y coproductos
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+Los productos y coproductos son únicos salvo isomorfismo.
 \end_layout
 
 \begin_layout Paragraph

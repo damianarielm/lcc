@@ -4473,21 +4473,536 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sean 
+\begin_inset Formula $\left(A\times B,\pi_{1},\pi_{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(B\times A,\pi_{3},\pi_{4}\right)$
+\end_inset
+
+ dos productos.
+ Como 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ es producto sabemos que existe un único morfismo 
+\begin_inset Formula $\left\langle \pi_{4},\pi_{3}\right\rangle $
+\end_inset
+
+ entre 
+\begin_inset Formula $B\times A$
+\end_inset
+
+ y 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\pi_{1}\circ\left\langle \pi_{4},\pi_{3}\right\rangle =\pi_{4}$
+\end_inset
+
+ y 
+\begin_inset Formula $\pi_{2}\circ\left\langle \pi_{4},\pi_{3}\right\rangle =\pi_{3}$
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Análogamente un único morfismo 
+\begin_inset Formula $\left\langle \pi_{2},\pi_{1}\right\rangle $
+\end_inset
+
+ entre 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ y 
+\begin_inset Formula $B\times A$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\pi_{3}\circ\left\langle \pi_{2},\pi_{1}\right\rangle =\pi_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\pi_{4}\circ\left\langle \pi_{2},\pi_{1}\right\rangle =\pi_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) {$A 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) [left  of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (BA) [above  of=AB] {$B
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_1$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_2$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (BA) edge node [anchor=center, below] {$
+\backslash
+left
+\backslash
+langle 
+\backslash
+pi_{4},
+\backslash
+pi_{3}
+\backslash
+right
+\backslash
+rangle $} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (BA) edge node [left] {$
+\backslash
+pi_4$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (BA) edge node [right] {$
+\backslash
+pi_3$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) {$B 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) [left  of=AB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (BA) [above  of=AB] {$A
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_3$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge node [below] {$
+\backslash
+pi_4$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (BA) edge node [anchor=center, below] {$
+\backslash
+left
+\backslash
+langle 
+\backslash
+pi_{2},
+\backslash
+pi_{1}
+\backslash
+right
+\backslash
+rangle $} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (BA) edge node [left] {$
+\backslash
+pi_2$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (BA) edge node [right] {$
+\backslash
+pi_1$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+También sabemos que existe un único morfismo entre 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ y si mismo que hace conmutar el diagrama, por lo que este debe ser el morfismo
+ identidad.
+ Análogamente para 
+\begin_inset Formula $B\times A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como el morfismo identidad es el único morfismo entre 
+\begin_inset Formula $A\times B$
+\end_inset
+
+ y si mismo que hace conmutar el diagrama y 
+\begin_inset Formula $\left\langle \pi_{4},\pi_{3}\right\rangle \circ\left\langle \pi_{2},\pi_{1}\right\rangle $
+\end_inset
+
+ también tiene esta propiedad, entonces se trata del mismo morfismo.
+ Análogamente para 
+\begin_inset Formula $B\times A$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Por ser 
+\begin_inset Formula $A\times1$
+\end_inset
+
+ producto y 
+\begin_inset Formula $1$
+\end_inset
+
+ elemento terminal, sabemos que existen los siguientes morfismos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A1) {$A 
+\backslash
+times 1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (1) [right  of=A1] {$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) [left  of=A1] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [above  of=A1] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (C) edge node [above left] {$id_A$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A1) edge node [below] {$
+\backslash
+pi_1$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A1) edge node [below] {$
+\backslash
+pi_2$} (1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (C) edge node [above right] {$g$} (1);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (C) edge node [anchor=center, below] {$
+\backslash
+left
+\backslash
+langle id_{A},g 
+\backslash
+right
+\backslash
+rangle $} (A1);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $\boxed{\pi_{1}\circ\left\langle id_{A},g\right\rangle =id_{A}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ademas observemos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{1}\circ\left(\left\langle id_{A},g\right\rangle \circ\pi_{1}\right)=\left(\pi_{1}\circ\left\langle id_{A},g\right\rangle \right)\circ\pi_{1}=id_{A}\circ\pi_{1}=\pi_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{2}\circ\left(\left\langle id_{A},g\right\rangle \circ\pi_{1}\right)=\pi_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+por lo que 
+\begin_inset Formula $\boxed{\left\langle id_{A},g\right\rangle \circ\pi_{1}=id_{A\times1}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A+B\cong B+A$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $A+0\cong A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A+\left(B+C\right)\cong\left(A+B\right)+C$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Probar que si dos morfismos 
@@ -4503,7 +5018,285 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sean 
+\begin_inset Formula $e_{1}:X\to A$
+\end_inset
+
+ y 
+\begin_inset Formula $e_{2}:X\to A$
+\end_inset
+
+ dos ecualizadores de 
+\begin_inset Formula $f,g:A\to B$
+\end_inset
+
+, luego sabemos:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\circ e_{1}=g\circ e_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\circ e_{2}=g\circ e_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall e':X'\to A$
+\end_inset
+
+ para el cual 
+\begin_inset Formula $f\circ e'=g\circ e'$
+\end_inset
+
+ existe un único 
+\begin_inset Formula $k':X'\to X$
+\end_inset
+
+ tal que 
+\begin_inset Formula $e_{1}\circ k=e'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall e'':X''\to A$
+\end_inset
+
+ para el cual 
+\begin_inset Formula $f\circ e''=g\circ e''$
+\end_inset
+
+ existe un único morfismo 
+\begin_inset Formula $k'':X''\to X$
+\end_inset
+
+ tal que 
+\begin_inset Formula $e_{2}\circ k=e''$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=A] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X') [below of=X] {$X'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X'') [above of=X] {$X''$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=A] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge [bend left] node  {$e_2$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge [bend right] node [below] {$e_1$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X') edge [bend right] node [right]  {$e'$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X'') edge [bend left] node [above right]  {$e''$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend left] node [above] {$f$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend right] node [below] {$g$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (X') edge node [left]  {$
+\backslash
+exists !k'$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (X'') edge node [left]  {$
+\backslash
+exists !k''$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Veremos que ambos son isomorfos en 
+\begin_inset Formula $\mathcal{C}^{\to}$
+\end_inset
+
+.
+ Necesitamos morfismos 
+\begin_inset Formula $\left(x:X\to X,a:A\to A\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(x^{-1}:X\to X,a^{-1}:A\to A\right)$
+\end_inset
+
+ tales que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset Formula $e_{1}\circ x=a\circ e_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e_{1}\circ x^{-1}=a^{-1}\circ e_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\circ x^{-1}=id_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x^{-1}\circ x=id_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\circ a^{-1}=id_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a^{-1}\circ a=id_{A}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+lo cual es trivial tomando 
+\begin_inset Formula $x=x^{-1}=id_{X}$
+\end_inset
+
+ y 
+\begin_inset Formula $a=a^{-1}=id_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ESTO ESTA MUY MAL.
+ NECESITO DORMIR, SON LAS 4AM.
 \end_layout
 
 \end_deeper
@@ -4598,7 +5391,7 @@ Probar que en una categoría
 \begin_inset Formula $e$
 \end_inset
 
- es epimorfismo, entonces se tiene un isomorfimos.
+ es epimorfismo, entonces se tiene un isomorfismo.
 \end_layout
 
 \begin_deeper
