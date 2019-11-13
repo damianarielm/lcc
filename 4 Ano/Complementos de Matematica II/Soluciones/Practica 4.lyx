@@ -5019,11 +5019,11 @@ Solución
 
 \begin_layout Standard
 Sean 
-\begin_inset Formula $e_{1}:X\to A$
+\begin_inset Formula $e_{1}:X_{1}\to A$
 \end_inset
 
  y 
-\begin_inset Formula $e_{2}:X\to A$
+\begin_inset Formula $e_{2}:X_{2}\to A$
 \end_inset
 
  dos ecualizadores de 
@@ -5033,21 +5033,21 @@ Sean
 , luego sabemos:
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $f\circ e_{1}=g\circ e_{1}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $f\circ e_{2}=g\circ e_{2}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\forall e':X'\to A$
 \end_inset
 
@@ -5056,17 +5056,17 @@ Sean
 \end_inset
 
  existe un único 
-\begin_inset Formula $k':X'\to X$
+\begin_inset Formula $k':X'\to X_{1}$
 \end_inset
 
  tal que 
-\begin_inset Formula $e_{1}\circ k=e'$
+\begin_inset Formula $e_{1}\circ k'=e'$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 \begin_inset Formula $\forall e'':X''\to A$
 \end_inset
 
@@ -5075,11 +5075,11 @@ Sean
 \end_inset
 
  existe un único morfismo 
-\begin_inset Formula $k'':X''\to X$
+\begin_inset Formula $k'':X''\to X_{2}$
 \end_inset
 
  tal que 
-\begin_inset Formula $e_{2}\circ k=e''$
+\begin_inset Formula $e_{2}\circ k''=e''$
 \end_inset
 
 .
@@ -5112,21 +5112,28 @@ node (A) {$A$};
 
     
 \backslash
-node (X) [left  of=A] {$X$};
+node (X1) [below left  of=A] {$X_1$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (X') [below of=X] {$X'$};
+node (X2) [above left  of=A] {$X_2$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (X'') [above of=X] {$X''$};
+node (X') [below of=X1] {$X'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X'') [above of=X2] {$X''$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -5144,35 +5151,35 @@ node (B) [right  of=A] {$B$};
 
     
 \backslash
-draw[->] (X) edge [bend left] node  {$e_2$} (A);
+draw[->] (X1) edge node {$e_1$} (A);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (X) edge [bend right] node [below] {$e_1$} (A);
+draw[->] (X2) edge node [below left] {$e_2$} (A);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (X') edge [bend right] node [right]  {$e'$} (A);
+draw[->] (X') edge node [right] {$e'$} (A);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (X'') edge [bend left] node [above right]  {$e''$} (A);
+draw[->] (X'') edge node {$e''$} (A);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (A) edge [bend left] node [above] {$f$} (B);
+draw[->] (A) edge [bend left] node {$f$} (B);
 \end_layout
 
 \begin_layout Plain Layout
@@ -5186,18 +5193,18 @@ draw[->] (A) edge [bend right] node [below] {$g$} (B);
 
     
 \backslash
-draw[->, dashed] (X') edge node [left]  {$
+draw[->, dashed] (X') edge node {$
 \backslash
-exists !k'$} (X);
+exists !k'$} (X1);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->, dashed] (X'') edge node [left]  {$
+draw[->, dashed] (X'') edge node [left] {$
 \backslash
-exists !k''$} (X);
+exists !k''$} (X2);
 \end_layout
 
 \begin_layout Plain Layout
@@ -5219,84 +5226,56 @@ end{tikzpicture}
 
 \end_deeper
 \begin_layout Standard
-Veremos que ambos son isomorfos en 
-\begin_inset Formula $\mathcal{C}^{\to}$
+Por 
+\begin_inset Formula $c)$
+\end_inset
+
+, sabemos que para 
+\begin_inset Formula $e'=e_{2}$
+\end_inset
+
+ existe un único 
+\begin_inset Formula $k':X_{2}\to X_{1}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $e_{1}\circ k'=e_{2}$
+\end_inset
+
+ y análogamente por 
+\begin_inset Formula $d)$
+\end_inset
+
+, existe un único 
+\begin_inset Formula $k'':X_{1}\to X_{2}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $e_{2}\circ k''=e_{1}$
 \end_inset
 
 .
- Necesitamos morfismos 
-\begin_inset Formula $\left(x:X\to X,a:A\to A\right)$
+ Tenemos entonces:
+\begin_inset Formula 
+\[
+e_{2}=e_{1}\circ k'=e_{2}\circ\left(k''\circ k\right)'\Rightarrow k''\circ k'=id_{X_{2}}
+\]
+
 \end_inset
 
- y 
-\begin_inset Formula $\left(x^{-1}:X\to X,a^{-1}:A\to A\right)$
+
+\begin_inset Formula 
+\[
+e_{1}=e_{2}\circ k''=e_{1}\circ\left(k'\circ k''\right)\Rightarrow k'\circ k''=id_{X_{1}}
+\]
+
 \end_inset
 
- tales que:
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Flex Multiple Columns
-status open
-
-\begin_layout Itemize
-\begin_inset Formula $e_{1}\circ x=a\circ e_{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $e_{1}\circ x^{-1}=a^{-1}\circ e_{2}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $x\circ x^{-1}=id_{X}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $x^{-1}\circ x=id_{X}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $a\circ a^{-1}=id_{A}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $a^{-1}\circ a=id_{A}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-lo cual es trivial tomando 
-\begin_inset Formula $x=x^{-1}=id_{X}$
-\end_inset
-
- y 
-\begin_inset Formula $a=a^{-1}=id_{A}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-ESTO ESTA MUY MAL.
- NECESITO DORMIR, SON LAS 4AM.
+por lo que ambos ecualizadores son isomorfismos.
 \end_layout
 
 \end_deeper
@@ -5314,7 +5293,180 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Veamos primero un ejemplo:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Z) {$
+\backslash
+mathbb{Z}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=A] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X') [below of=X] {$X'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (R) [right  of=A] {$
+\backslash
+mathbb{R}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node {$e$} (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X') edge node [right]  {$e'$} (Z);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Z) edge [bend left] node [above] {$x^2$} (R);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Z) edge [bend right] node [below] {$2x$} (R);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (X') edge node [left]  {$
+\backslash
+exists !k$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observemos el conjunto de valores para los cuales 
+\begin_inset Formula $f=g$
+\end_inset
+
+: 
+\begin_inset Formula $X=\left\{ 0,2\right\} $
+\end_inset
+
+, luego el morfismo 
+\begin_inset Formula $e\left(x\right)=x$
+\end_inset
+
+ cumple trivialmente la conmutatividad.
+\end_layout
+
+\begin_layout Standard
+Consideremos además 
+\begin_inset Formula $e':\mathbb{N}\to\mathbb{Z}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $e'\left(2x\right)=2$
+\end_inset
+
+ y 
+\begin_inset Formula $e'\left(2x+1\right)=0$
+\end_inset
+
+, es evidente que este morfismo también conmuta el diagrama.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Intentemos definir un morfismo 
+\begin_inset Formula $k:\mathbb{N}\to X$
+\end_inset
+
+ tal que 
+\begin_inset Formula $e\circ k=e'$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $e\left(k\left(x\right)\right)=e'\left(x\right)\iff k\left(x\right)=e'\left(x\right)$
+\end_inset
+
+, por lo que esta es la única forma de definirlo.
+\end_layout
+
+\begin_layout Standard
+En definitiva el ecualizador de dos funciones 
+\begin_inset Formula $f,g:A\to B$
+\end_inset
+
+ es:
+\begin_inset Formula 
+\[
+e:\left\{ a\in A:f\left(a\right)=g\left(a\right)\right\} \hookrightarrow B
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
