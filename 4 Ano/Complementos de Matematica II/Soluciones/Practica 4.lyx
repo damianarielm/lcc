@@ -349,16 +349,8 @@ Solución
 \end_layout
 
 \begin_layout Standard
-Para 
-\begin_inset Formula $\left(P,\leq\right)$
-\end_inset
-
- definimos:
+Definimos:
 \end_layout
-
-\begin_layout Standard
-\begin_inset Flex Multiple Columns
-status open
 
 \begin_layout Itemize
 \begin_inset Formula $ob\,\mathcal{P}=P$
@@ -375,37 +367,42 @@ status open
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $dom\left(a,b\right)=a$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $cod\left(a,b\right)=b$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $\left(b,c\right)\circ\left(a,b\right)=\left(a,c\right)$
 \end_inset
 
 .
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-Luego:
+Veamos que en efecto, se trata de una categoría:
 \end_layout
 
 \begin_layout Itemize
-Para cada objeto 
+
+\emph on
+Buena definición
+\emph default
+: La composición esta bien definida pues si 
+\begin_inset Formula $\left(b,c\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ son morfismos, por transitividad también lo será su composición 
+\begin_inset Formula $\left(a,c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para cada objeto 
 \begin_inset Formula $a$
 \end_inset
 
@@ -421,7 +418,7 @@ Para cada objeto
 \begin_inset Formula $id_{a}$
 \end_inset
 
- resultando: 
+ resultando
 \end_layout
 
 \begin_deeper
@@ -433,19 +430,19 @@ Para cada objeto
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $id_{a}\circ\left(c,a\right)=\left(a,a\right)\circ\left(c,a\right)=\left(c,a\right)$
+\begin_inset Formula $id_{a}\circ\left(b,a\right)=\left(a,a\right)\circ\left(b,a\right)=\left(b,a\right)$
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Sean 
+
+\emph on
+Asociatividad
+\emph default
+: Sean 
 \begin_inset Formula $\left(a,b\right)$
 \end_inset
 
@@ -457,7 +454,7 @@ Sean
 \begin_inset Formula $\left(c,d\right)$
 \end_inset
 
- morfismos, luego por transitividad también son morfismos 
+ morfismos, por transitividad también son morfismos 
 \begin_inset Formula $\boxed{\left(a,c\right)}$
 \end_inset
 
@@ -469,8 +466,7 @@ Sean
 \begin_inset Formula $\left(a,d\right)$
 \end_inset
 
-.
- Veamos que vale la asociatividad:
+ luego
 \end_layout
 
 \begin_deeper
@@ -509,16 +505,8 @@ Solución
 \end_layout
 
 \begin_layout Standard
-Para 
-\begin_inset Formula $\left(M,0,+\right)$
-\end_inset
-
- definimos:
+Definimos:
 \end_layout
-
-\begin_layout Standard
-\begin_inset Flex Multiple Columns
-status open
 
 \begin_layout Itemize
 \begin_inset Formula $ob\,\mathcal{M}=\left\{ *\right\} $
@@ -535,37 +523,42 @@ status open
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $dom\left(x\right)=*$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $cod\left(x\right)=*$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $x\circ y=x+y$
 \end_inset
 
 .
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
-Luego:
+Veamos que en efecto, se trata de una categoría:
 \end_layout
 
 \begin_layout Itemize
-Para el único objeto 
+
+\emph on
+Buena definición
+\emph default
+: Por clausura de monoides, si 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ son morfismos, también lo será su composición 
+\begin_inset Formula $x+y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para el único objeto 
 \begin_inset Formula $*$
 \end_inset
 
@@ -573,7 +566,7 @@ Para el único objeto
 \begin_inset Formula $0=id_{*}$
 \end_inset
 
- de manera tal que:
+ de manera tal que
 \end_layout
 
 \begin_deeper
@@ -593,7 +586,11 @@ Para el único objeto
 
 \end_deeper
 \begin_layout Itemize
-Para tres morfismos 
+
+\emph on
+Asociatividad
+\emph default
+: Para tres morfismos 
 \begin_inset Formula $x,y,z$
 \end_inset
 
@@ -609,8 +606,7 @@ Para tres morfismos
 \begin_inset Formula $\boxed{y+z}$
 \end_inset
 
-.
- Veamos que vale la asociatividad:
+, luego
 \end_layout
 
 \begin_deeper
@@ -654,10 +650,6 @@ Dada una categoría
 \end_inset
 
  es una categoría.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -666,97 +658,121 @@ Solución
 \end_layout
 
 \begin_layout Standard
-Sean 
-\begin_inset Formula $f_{op}:X\to Y$
-\end_inset
-
- y 
-\begin_inset Formula $g_{op}:Y\to Z$
-\end_inset
-
- en 
-\begin_inset Formula $Hom\,\mathcal{C}^{op}$
-\end_inset
-
-, definimos 
-\begin_inset Formula $g_{op}\circ_{op}f_{op}$
-\end_inset
-
- como 
-\begin_inset Formula $\left(f\circ g\right)_{op}$
-\end_inset
-
-.
- Observemos que la composición tiene sentido pues en 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- resultan 
-\begin_inset Formula $f:Y\to X$
-\end_inset
-
- y 
-\begin_inset Formula $g:Z\to Y$
-\end_inset
-
-.
- Luego:
+Definamos:
 \end_layout
 
 \begin_layout Itemize
-Para cada objeto 
-\begin_inset Formula $X$
+\begin_inset Formula $mor\,\mathcal{C}^{op}=\left\{ f_{op}:X\to Y/f:Y\to X\in mor\,\mathcal{C}\right\} $
 \end_inset
 
- el morfismo lo 
-\begin_inset Formula $id_{X}$
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{op}\circ_{op}f_{op}=\left(f\circ g\right)_{op}$
 \end_inset
 
- resulta ser el mismo en 
+ 
+\end_layout
+
+\begin_layout Standard
+Veamos que en efecto, se trata de una categoría:
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Buena definición
+\emph default
+: Dadas 
+\begin_inset Formula $f_{op}:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g_{op}:B\to C$
+\end_inset
+
+ por definición existen en 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
 
- y en 
+ los morfismos 
+\begin_inset Formula $f:B\to A$
+\end_inset
+
+ y 
+\begin_inset Formula $g:C\to B$
+\end_inset
+
+ luego es valida la composición 
+\begin_inset Formula $f\circ g$
+\end_inset
+
+ y por definición 
+\begin_inset Formula $\left(f\circ g\right)_{op}$
+\end_inset
+
+ es un morfismo de 
 \begin_inset Formula $\mathcal{C}^{op}$
 \end_inset
 
- por lo que:
+.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Morfismo identidad
+\emph default
+: Para cada objeto 
+\begin_inset Formula $X$
+\end_inset
+
+ sabemos que existe 
+\begin_inset Formula $id_{X}$
+\end_inset
+
+, luego 
+\begin_inset Formula $id_{X_{op}}$
+\end_inset
+
+ es un morfismo de la categoría opuesta para el cual
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $f_{op}\circ_{op}id_{X}=\left(id_{X}\circ f\right)_{op}=f_{op}$
+\begin_inset Formula $f_{op}\circ_{op}id_{X_{op}}=\left(id_{X}\circ f\right)_{op}=f_{op}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $id_{X}\circ_{op}h_{op}=\left(h\circ id_{X}\right)_{op}=h_{op}$
+\begin_inset Formula $id_{X_{op}}\circ_{op}h_{op}=\left(h\circ id_{X}\right)_{op}=h_{op}$
 \end_inset
 
- (donde 
-\begin_inset Formula $h_{op}:Y\to X$
-\end_inset
-
-).
+.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Sean 
+
+\emph on
+Asociatividad
+\emph default
+: Sean 
 \begin_inset Formula $f_{op}:A\to B$
 \end_inset
 
 , 
-\begin_inset Formula $g:B\to C$
+\begin_inset Formula $g_{op}:B\to C$
 \end_inset
 
  y 
-\begin_inset Formula $h:C\to D$
+\begin_inset Formula $h_{op}:C\to D$
 \end_inset
 
-, luego:
+, luego
 \end_layout
 
 \begin_deeper
@@ -801,7 +817,7 @@ Sean
 \begin_inset Formula $D\in ob\,\mathcal{D}$
 \end_inset
 
- y ademas:
+ y además:
 \begin_inset Formula 
 \[
 Hom_{\mathcal{C}\times D}\left(\left(C,D\right),\left(C',D'\right)\right)=Hom_{\mathcal{C}}\left(C,C'\right)\times Hom_{\mathcal{C}}\left(D,D'\right)
@@ -822,12 +838,26 @@ Solución
 \end_layout
 
 \begin_layout Standard
-Definimos 
+Definimos:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ob\,\mathcal{C}\times\mathcal{D}=ob\,\mathcal{C}\times ob\,\mathcal{D}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
 \begin_inset Formula $\left(p,q\right)\circ_{\times}\left(f,g\right)=\left(p\circ f,q\circ g\right)$
 \end_inset
 
 .
  
+\end_layout
+
+\begin_layout Standard
+Veamos que en efecto, se trata de una categoría:
 \end_layout
 
 \begin_layout Itemize
@@ -875,6 +905,10 @@ Morfismo identidad
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1284,10 +1318,6 @@ Para
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -1729,10 +1759,6 @@ Sean
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -3764,7 +3790,7 @@ Terminales:
 
 \begin_layout Itemize
 Productos: 
-\begin_inset Formula $\left(A,\oplus\right)\times\left(B,\otimes\right)=\left(\left(,\right),,\right)$
+\begin_inset Formula $\left(A,\oplus\right)\times\left(B,\otimes\right)=\left(\left(A\times B,\right),,\right)$
 \end_inset
 
  COMPLETAR.
@@ -5552,7 +5578,317 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Sea 
+\begin_inset Formula $e:X\to A$
+\end_inset
+
+ ecualizador de 
+\begin_inset Formula $f,g:A\to B$
+\end_inset
+
+, luego 
+\begin_inset Formula $f\circ e=g\circ e$
+\end_inset
+
+.
+ Consideremos ademas dos morfismos 
+\begin_inset Formula $k',k'':X'\to X$
+\end_inset
+
+ para los cuales 
+\begin_inset Formula $e\circ k'=e\circ k''$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=A] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X') [below of=X] {$X'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=A] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node {$e$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend left] node [above] {$f$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend right] node [below] {$g$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X') edge [bend right] node [right]  {$k''$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X') edge [bend left] node [left]  {$k'$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si definimos 
+\begin_inset Formula $e':=e\circ k'$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $\boxed{f\circ e'}=f\circ e\circ k'=g\circ e\circ k'=\boxed{g\circ e'}$
+\end_inset
+
+ lo que implica por propiedad universal de ecualizadores que 
+\begin_inset Formula $k'$
+\end_inset
+
+ es el único morfismo para el cual 
+\begin_inset Formula $e\circ k'=e'$
+\end_inset
+
+, sin embargo también ocurre que 
+\begin_inset Formula $e\circ k''=e'$
+\end_inset
+
+; luego 
+\begin_inset Formula $k'$
+\end_inset
+
+ y 
+\begin_inset Formula $k''$
+\end_inset
+
+ deben ser el mismo morfismo, de donde concluimos que 
+\begin_inset Formula $e$
+\end_inset
+
+ es monomorfismo.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Supongamos que ademas de monomorfismo también es epimorfismo, luego como
+ 
+\begin_inset Formula $f\circ e=g\circ e$
+\end_inset
+
+ resulta 
+\begin_inset Formula $f=g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si también consideramos que 
+\begin_inset Formula $f\circ id_{A}=f=g=g\circ id_{A}$
+\end_inset
+
+, sabemos que existe un único morfismo 
+\begin_inset Formula $k:A\to X$
+\end_inset
+
+ tal que 
+\begin_inset Formula $e\circ k=id_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=A] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X') [below of=X] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=A] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node {$e$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X') edge node [below right]  {$id_A$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend left] node [above] {$f$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [bend right] node [below] {$g$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (X') edge node [left]  {$
+\backslash
+exists !k$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $\boxed{e\circ id_{X}}=e=id_{A}\circ e=\left(e\circ k\right)\circ e=\boxed{e\circ\left(k\circ e\right)}$
+\end_inset
+
+ y 
+\begin_inset Formula $e$
+\end_inset
+
+ es monomorfismo, resulta 
+\begin_inset Formula $k\circ e=id_{X}$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -5683,14 +6019,14 @@ draw[->] (P) edge node {$p_2$} (Y);
 
     
 \backslash
-draw[->] (P) edge node {$p_1$} (X);
+draw[->] (P) edge node [left] {$p_1$} (X);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (X) edge node {$f$} (Z);
+draw[->] (X) edge node [below] {$f$} (Z);
 \end_layout
 
 \begin_layout Plain Layout
@@ -5708,7 +6044,9 @@ draw[->] (Y) edge node {$g$} (Z);
 
     
 \backslash
-draw[->, dotted] (Q) edge node {$u$} (P);
+draw[->, dashed] (Q) edge node {$
+\backslash
+exists !u$} (P);
 \end_layout
 
 \begin_layout Plain Layout
@@ -5722,7 +6060,7 @@ draw[->] (Q) edge [bend left] node {$q_2$} (Y);
 
     
 \backslash
-draw[->] (Q) edge [bend right] node {$q_1$} (X);
+draw[->] (Q) edge [bend right] node [left] {$q_1$} (X);
 \end_layout
 
 \begin_layout Plain Layout
@@ -5769,7 +6107,18 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula $P=\left\{ \left(x,y\right)\in X\times Y:f\left(x\right)=g\left(y\right)\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $p1=fst$
+\end_inset
+
+, 
+\begin_inset Formula $p2=snd$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
