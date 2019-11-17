@@ -3967,6 +3967,69 @@ Teoremas
 \end_layout
 
 \begin_layout Subsection
+Unicidad de la identidad
+\end_layout
+
+\begin_layout Paragraph
+Enunciado
+\end_layout
+
+\begin_layout Standard
+El morfismo identidad 
+\begin_inset Formula $id_{X}:X\to X$
+\end_inset
+
+ es único.
+\end_layout
+
+\begin_layout Paragraph
+Demostración
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $id_{X}$
+\end_inset
+
+ y 
+\begin_inset Formula $id_{X}'$
+\end_inset
+
+ dos morfismos identidad en 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Sabemos que para cualquier morfismo 
+\begin_inset Formula $f:Y\to X$
+\end_inset
+
+ resulta 
+\begin_inset Formula $id_{X}\circ f=f$
+\end_inset
+
+, en particular esto también es cierto para 
+\begin_inset Formula $id_{X}'$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $id_{X}\circ id_{X}'=id_{X}'$
+\end_inset
+
+.
+ Análogamente 
+\begin_inset Formula $id_{X}\circ id_{X}'=id_{X}$
+\end_inset
+
+.
+ En definitiva tenemos 
+\begin_inset Formula $id_{X}'=id_{X}\circ id_{X}'=id_{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
 Principio de dualidad
 \end_layout
 

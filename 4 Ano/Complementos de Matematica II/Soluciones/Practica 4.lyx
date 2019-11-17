@@ -7,7 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage{pgfplots, tikz}
-\usetikzlibrary{arrows, automata}
+\usetikzlibrary{arrows, automata, positioning}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -6145,7 +6145,7 @@ Dado un morfismo
 \end_inset
 
 , construir un morfismo 
-\begin_inset Formula $B^{A}\to C^{A}$
+\begin_inset Formula $B^{S}\to C^{S}$
 \end_inset
 
 .
@@ -6153,11 +6153,11 @@ Dado un morfismo
 
 \begin_layout Enumerate
 Dado un morfismo 
-\begin_inset Formula $f:A\to C^{B}$
+\begin_inset Formula $f:S\to C^{B}$
 \end_inset
 
 , construir un morfismo 
-\begin_inset Formula $uncurry\left(f\right):A\times B\to C$
+\begin_inset Formula $uncurry\left(f\right):S\times B\to C$
 \end_inset
 
 .
@@ -6180,13 +6180,644 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Como 
+\begin_inset Formula $B^{A}$
+\end_inset
+
+ es un exponencial, sabemos que para cualquier morfismo 
+\begin_inset Formula $g:C\times A\to B$
+\end_inset
+
+ (en particular para 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+) existe un único morfismo 
+\begin_inset Formula $\widetilde{\varepsilon}:B^{A}\to B^{A}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\varepsilon\circ\left(\widetilde{\varepsilon}\times id_{A}\right)=\varepsilon$
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$B^A 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CA) [below  of=A] {$B^A 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (BA) [left of=A] {$B^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=A] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge node {$
+\backslash
+varepsilon$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (BA) edge [loop left] node [left] {$
+\backslash
+exists !  
+\backslash
+widetilde{
+\backslash
+varepsilon}$} (BA);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CA) edge node [left] {$
+\backslash
+widetilde{
+\backslash
+varepsilon}
+\backslash
+times id_{A}$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CA) edge node [below right] {$
+\backslash
+varepsilon$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recordemos la definición de 
+\begin_inset Formula $\widetilde{\varepsilon}\times id_{A}=\left\langle \widetilde{\varepsilon}\circ\pi_{1},id_{A}\circ\pi_{2}\right\rangle $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$B^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) [right  of=A] {$B^A 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [below of=A] {$B^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CD) [right  of=C] {$B^A 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (D) [right  of=CD] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge [left] node {$
+\backslash
+widetilde{
+\backslash
+varepsilon}$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge [above] node {$
+\backslash
+pi_1$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge [above] node {$
+\backslash
+pi_2$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (B) edge node {$id_A$} (D);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CD) edge [below] node {$
+\backslash
+pi_1$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CD) edge [below] node {$
+\backslash
+pi_2$} (D);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (AB) edge [anchor=center] node {$
+\backslash
+left
+\backslash
+langle 
+\backslash
+widetilde{
+\backslash
+varepsilon}
+\backslash
+circ
+\backslash
+pi_{1},id_A
+\backslash
+circ
+\backslash
+pi_{2}
+\backslash
+right
+\backslash
+rangle $} (CD);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puesto que 
+\begin_inset Formula $\left\langle \widetilde{\varepsilon}\circ\pi_{1},id_{A}\circ\pi_{2}\right\rangle $
+\end_inset
+
+ es único entonces 
+\begin_inset Formula $\left\langle \widetilde{\varepsilon}\circ\pi_{1},id_{A}\circ\pi_{2}\right\rangle =id_{B^{A}\times A}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$B^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (AB) [right  of=A] {$B^A 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=AB] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge [above] node {$
+\backslash
+pi_1$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (AB) edge [above] node {$
+\backslash
+pi_2$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (A) edge [loop left] node {$
+\backslash
+widetilde{
+\backslash
+varepsilon}$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (B) edge [loop right] node {$id_A$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (AB) edge [loop above] node {$id_{B^{A}
+\backslash
+times A}$} (AB);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y como también 
+\begin_inset Formula $\widetilde{\varepsilon}$
+\end_inset
+
+ es único y el diagrama anterior conmuta entonces 
+\begin_inset Formula $\widetilde{\varepsilon}=id_{B^{A}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CAA) {$C^S 
+\backslash
+times S$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YA) [below of=CAA] {$B^S 
+\backslash
+times S$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [right  of=CAA] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CA) [left = 1cm of CAA] {$C^S$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Y) [below of=CA] {$B^S$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CAA) edge node {$
+\backslash
+varepsilon_{SC}$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (YA) edge node [below right] {$f 
+\backslash
+circ
+\backslash
+varepsilon_{SB}$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (Y) edge node {$
+\backslash
+widetilde{f
+\backslash
+circ
+\backslash
+varepsilon_{SB}}$} (CA);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-- curry :: ((x, y) -> z) -> x -> y -> z
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+f :: Bool -> Char
+\end_layout
+
+\begin_layout Plain Layout
+
+f = undefined
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+evalSB :: ((String -> Bool), String) -> Bool
+\end_layout
+
+\begin_layout Plain Layout
+
+evalSB (g, s) = g s
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+foevalSB :: ((String -> Bool), String) -> Char
+\end_layout
+
+\begin_layout Plain Layout
+
+foevalSB = f .
+ evalSB
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ej27b :: (String -> Bool) -> (String -> Char)
+\end_layout
+
+\begin_layout Plain Layout
+
+ej27b = curry foevalSB
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -6266,7 +6897,10 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset Formula $B^{A}=Hom\left(A,B\right)$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
