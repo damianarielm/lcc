@@ -6090,6 +6090,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -6200,7 +6204,7 @@ Como
 \begin_inset Formula $\varepsilon\circ\left(\widetilde{\varepsilon}\times id_{A}\right)=\varepsilon$
 \end_inset
 
-.
+:
 \end_layout
 
 \begin_deeper
@@ -6314,18 +6318,6 @@ end{tikzpicture}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Recordemos la definición de 
-\begin_inset Formula $\widetilde{\varepsilon}\times id_{A}=\left\langle \widetilde{\varepsilon}\circ\pi_{1},id_{A}\circ\pi_{2}\right\rangle $
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\align center
 \begin_inset Preview
 
 \begin_layout Standard
@@ -6397,7 +6389,7 @@ node (D) [right  of=CD] {$A$};
 
     
 \backslash
-draw[->] (A) edge [left] node {$
+draw[->, dashed] (A) edge [left] node {$
 \backslash
 widetilde{
 \backslash
@@ -6461,25 +6453,11 @@ pi_2$} (D);
 \backslash
 draw[->, dashed] (AB) edge [anchor=center] node {$
 \backslash
-left
-\backslash
-langle 
-\backslash
 widetilde{
 \backslash
 varepsilon}
 \backslash
-circ
-\backslash
-pi_{1},id_A
-\backslash
-circ
-\backslash
-pi_{2}
-\backslash
-right
-\backslash
-rangle $} (CD);
+times id_{A}$} (CD);
 \end_layout
 
 \begin_layout Plain Layout
@@ -6501,126 +6479,10 @@ end{tikzpicture}
 
 \begin_layout Standard
 Puesto que 
-\begin_inset Formula $\left\langle \widetilde{\varepsilon}\circ\pi_{1},id_{A}\circ\pi_{2}\right\rangle $
+\begin_inset Formula $id_{B^{A}}$
 \end_inset
 
- es único entonces 
-\begin_inset Formula $\left\langle \widetilde{\varepsilon}\circ\pi_{1},id_{A}\circ\pi_{2}\right\rangle =id_{B^{A}\times A}$
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Preview
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture}[node distance = 1.6cm,auto]
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node (A) {$B^A$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node (AB) [right  of=A] {$B^A 
-\backslash
-times A$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node (B) [right  of=AB] {$A$};
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (AB) edge [above] node {$
-\backslash
-pi_1$} (A);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (AB) edge [above] node {$
-\backslash
-pi_2$} (B);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->, dashed] (A) edge [loop left] node {$
-\backslash
-widetilde{
-\backslash
-varepsilon}$} (A);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->] (B) edge [loop right] node {$id_A$} (B);
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-draw[->, dashed] (AB) edge [loop above] node {$id_{B^{A}
-\backslash
-times A}$} (AB);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-y como también 
-\begin_inset Formula $\widetilde{\varepsilon}$
-\end_inset
-
- es único y el diagrama anterior conmuta entonces 
+ también tiene esa propiedad, entonces 
 \begin_inset Formula $\widetilde{\varepsilon}=id_{B^{A}}$
 \end_inset
 
@@ -6742,76 +6604,7 @@ end{tikzpicture}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset listings
-lstparams "language=Haskell"
-inline false
-status open
-
-\begin_layout Plain Layout
-
--- curry :: ((x, y) -> z) -> x -> y -> z
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-f :: Bool -> Char
-\end_layout
-
-\begin_layout Plain Layout
-
-f = undefined
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-evalSB :: ((String -> Bool), String) -> Bool
-\end_layout
-
-\begin_layout Plain Layout
-
-evalSB (g, s) = g s
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-foevalSB :: ((String -> Bool), String) -> Char
-\end_layout
-
-\begin_layout Plain Layout
-
-foevalSB = f .
- evalSB
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-ej27b :: (String -> Bool) -> (String -> Char)
-\end_layout
-
-\begin_layout Plain Layout
-
-ej27b = curry foevalSB
-\end_layout
-
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -6819,13 +6612,237 @@ ej27b = curry foevalSB
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Por ser 
+\begin_inset Formula $C^{B}\times B$
+\end_inset
+
+ un producto existe 
+\begin_inset Formula $f\times id_{B}$
+\end_inset
+
+:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CBXB) {$C^B 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=CBXB] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CB) [left  of=CBXB] {$C^B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (SXB) [above  of=CBXB] {$S 
+\backslash
+times B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (S) [left of=SXB] {$S$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CBXB) edge node [below] {$
+\backslash
+pi_2$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CBXB) edge node [below] {$
+\backslash
+pi_1$} (CB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (S) edge node [left] {$f$} (CB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (SXB) edge node [above] {$
+\backslash
+pi_3$} (S);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (SXB) edge node {$
+\backslash
+pi_4$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (SXB) edge node [left] {$
+\backslash
+exists !$} (CBXB);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego 
+\begin_inset Formula $uncurry\left(f\right):=\varepsilon\circ\left(f\times id_{B}\right):S\times B\to C$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:S\to C^{B}$
+\end_inset
+
+, y 
+\begin_inset Formula $h:=uncurry\left(f\right)=\varepsilon\circ\left(f\times id_{B}\right)$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $C^{B}$
+\end_inset
+
+ es exponencial entonces para 
+\begin_inset Formula $uncurry\left(f\right)$
+\end_inset
+
+ existe un único morfismo 
+\begin_inset Formula $\widetilde{h}:S\to C^{B}$
+\end_inset
+
+ para el cual 
+\begin_inset Formula $\varepsilon\circ\left(\widetilde{h}\times id_{B}\right)=h$
+\end_inset
+
+ y como también 
+\begin_inset Formula $\varepsilon\circ\left(f\times id_{B}\right)=h$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\widetilde{h}\times id_{B}=f\times id_{B}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\widetilde{h}=f$
+\end_inset
+
+, es decir: 
+\begin_inset Formula $curry\left(uncurry\left(f\right)\right)=f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $f:S\times B\to C$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $C^{B}$
+\end_inset
+
+ es exponencial entonces para 
+\begin_inset Formula $f$
+\end_inset
+
+ existe un único morfismo 
+\begin_inset Formula $\widetilde{f}:S\to C^{B}$
+\end_inset
+
+ para el cual 
+\begin_inset Formula $\varepsilon\circ\left(\widetilde{f}\times id_{B}\right)=f$
+\end_inset
+
+, luego 
+\begin_inset Formula $uncurry\left(\widetilde{f}\right)=\varepsilon\circ\left(\widetilde{f}\times id_{B}\right)=f$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Sea 
@@ -6901,6 +6918,10 @@ Solución
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -6914,7 +6935,171 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Un álgebra de Boole es un retículo acotado distributivo con complementos.
+ Consideremos entonces la categoría inducida por el poset.
+\end_layout
+
+\begin_layout Itemize
+En dicha categoría el producto corresponde al ínfimo, luego por ser retículo
+ existe el producto para cualquier par de elementos.
+\end_layout
+
+\begin_layout Itemize
+Por ser acotado tiene mínimo y máximo luego en la categoría corresponden
+ al objeto inicial y terminal.
+\end_layout
+
+\begin_layout Standard
+Veremos ahora que si 
+\begin_inset Formula $C$
+\end_inset
+
+ es complemento de 
+\begin_inset Formula $B$
+\end_inset
+
+ entonces 
+\begin_inset Formula $C^{B}$
+\end_inset
+
+ es exponencial.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CAA) {$C^B 
+\backslash
+land B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YA) [below of=CAA] {$A 
+\backslash
+land  B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (C) [right  of=CAA] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CA) [left = 1cm of CAA] {$C^B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Y) [below of=CA] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CAA) edge node {$$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (YA) edge node {$$} (CAA);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (YA) edge node [below right] {$$} (C);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (Y) edge node {$$} (CA);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sabemos que 
+\begin_inset Formula $C\lor B=1$
+\end_inset
+
+ y 
+\begin_inset Formula $C\land B=0$
+\end_inset
+
+.
+ Debemos ver que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C^{B}\land B\leq C$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\land B\leq C\Rightarrow A\land B\leq C^{B}\land B$
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\land B\leq C\Rightarrow A\leq C^{B}$
+\end_inset
+
+: COMPLETAR.
 \end_layout
 
 \end_deeper
@@ -7204,430 +7389,6 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-Sean 
-\begin_inset Formula $C$
-\end_inset
-
- y 
-\begin_inset Formula $D$
-\end_inset
-
- dos categorías.
- Se define 
-\begin_inset Formula $C\times D$
-\end_inset
-
- de la siguiente manera: los objetos de 
-\begin_inset Formula $C\times D$
-\end_inset
-
- son de la forma 
-\begin_inset Formula $\left(A,B\right)$
-\end_inset
-
- para 
-\begin_inset Formula $A\in C$
-\end_inset
-
- y 
-\begin_inset Formula $B\in D$
-\end_inset
-
- y las flechas 
-\begin_inset Formula $\left(f,g\right):\left(A,B\right)\to\left(A',B'\right)$
-\end_inset
-
- donde 
-\begin_inset Formula $f:A\to A'\in C$
-\end_inset
-
- y 
-\begin_inset Formula $g:B\to B'\in D$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Verificar que 
-\begin_inset Formula $C\times D$
-\end_inset
-
- es una categoría.
-\end_layout
-
-\begin_layout Enumerate
-Probar que 
-\begin_inset Formula $P_{1}:C\times D\to C$
-\end_inset
-
-, 
-\begin_inset Formula $P_{1}\left(A,B\right)=A$
-\end_inset
-
- y 
-\begin_inset Formula $P_{2}:C\times D\to D$
-\end_inset
-
-, 
-\begin_inset Formula $P_{2}\left(A,B\right)=B$
-\end_inset
-
-, definen functores.
-\end_layout
-
-\begin_layout Paragraph
-Soluciones
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Dados dos funtores 
-\begin_inset Formula $F:\mathcal{C}\to\mathcal{D}$
-\end_inset
-
- y 
-\begin_inset Formula $G:\mathcal{D}\to\mathcal{E}$
-\end_inset
-
-, definir un funtor que componga ambos.
- ¿Es posible definir una categoría cuyos objetos sean las categorías y sus
- flechas sean los funtores entre estas?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Si 
-\begin_inset Formula $f:A\to B$
-\end_inset
-
- en 
-\begin_inset Formula $Set$
-\end_inset
-
-, entonces definimos 
-\begin_inset Formula $f^{-1}\left(X\right)=\left\{ a\in A:f\left(a\right)\in X\right\} $
-\end_inset
-
- donde 
-\begin_inset Formula $X\subseteq B$
-\end_inset
-
-.
- Probar que 
-\begin_inset Formula $I:Set\to Set$
-\end_inset
-
- es un funtor contravariante, llevando: 
-\begin_inset Formula $I\left(A\right)=\mathcal{P}\left(A\right)$
-\end_inset
-
- y 
-\begin_inset Formula $I\left(f\right)=f^{-1}$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Se ha visto que puede considerarse a un monoide como una categoría con un
- único objeto, ¿Qué es un funtor entre dos categorías de este tipo? ¿Y entre
- categorías formadas a partir de conjuntos ordenados?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Sea 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- una categoría, para cada objeto 
-\begin_inset Formula $X$
-\end_inset
-
- de 
-\begin_inset Formula $\mathcal{C}$
-\end_inset
-
- definimos 
-\begin_inset Formula $Hom\left(X,-\right):\mathcal{C}\to Set$
-\end_inset
-
- donde 
-\begin_inset Formula $Hom\left(X,Y\right)=\mathcal{C}\left(X,Y\right)$
-\end_inset
-
- y 
-\begin_inset Formula $Hom\left(X,f\right)\left(g\right)=f\circ g$
-\end_inset
-
-.
- Probar que 
-\begin_inset Formula $Hom\left(X,-\right)$
-\end_inset
-
- es efectivamente un funtor para cada 
-\begin_inset Formula $X$
-\end_inset
-
-.
- Definir análogamente un funtor 
-\begin_inset Formula $Hom\left(-,X\right)$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Dado un semigurpo 
-\begin_inset Formula $\left(S,\cdot\right)$
-\end_inset
-
-, podemos construir un monoide 
-\begin_inset Formula $\left(S',\cdot'\right)$
-\end_inset
-
- donde 
-\begin_inset Formula $S'=S\cup\left\{ e\right\} $
-\end_inset
-
-, 
-\begin_inset Formula $\left(0,x\right)\cdot'\left(0,y\right)=\left(0,x\cdot y\right)$
-\end_inset
-
- y 
-\begin_inset Formula $\left(1,e\right)\cdot'x=x=x\cdot'\left(1,e\right)$
-\end_inset
-
-.
- Utilizando esta construcción, definir un funtor 
-\begin_inset Formula $F:Sem\to Mon$
-\end_inset
-
- y probar que es un monomorfismo en 
-\begin_inset Formula $Cat$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Definimos la asignación 
-\begin_inset Formula $Fr:Set\to Mon$
-\end_inset
-
- tal que 
-\begin_inset Formula $Fr\left(X\right)=X^{*}$
-\end_inset
-
- 
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $X^{*}$
-\end_inset
-
- es el monoide de las palabras sobre el alfabeto 
-\begin_inset Formula $X$
-\end_inset
-
- con la concatenación como operación.
- Puede pensar en las palabras de 
-\begin_inset Formula $X$
-\end_inset
-
- como las listas de elementos de 
-\begin_inset Formula $X$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- y 
-\begin_inset Formula $Fr\left(f\right)\left(x_{1}x_{2}\cdots x_{n}\right)=f\left(x_{1}\right)f\left(x_{2}\right)\cdots f\left(x_{n}\right)$
-\end_inset
-
-.
- Usando el funtor 
-\begin_inset Formula $U:Mon\to Set$
-\end_inset
-
- que se olvida de la estructura de monoide, consideramos 
-\begin_inset Formula $i:X\to U\left(Fr\left(X\right)\right)$
-\end_inset
-
- la función que lleva un elemento 
-\begin_inset Formula $x$
-\end_inset
-
- de 
-\begin_inset Formula $X$
-\end_inset
-
- a la palabra 
-\begin_inset Formula $x$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Probar que 
-\begin_inset Formula $Fr$
-\end_inset
-
- es un funtor.
-\end_layout
-
-\begin_layout Enumerate
-Probar que dado 
-\begin_inset Formula $f:X\to U\left(M\right)$
-\end_inset
-
- en 
-\begin_inset Formula $Set$
-\end_inset
-
- donde 
-\begin_inset Formula $M$
-\end_inset
-
- es un monoide, puedo construir una única 
-\begin_inset Formula $\overline{f}:Fr\left(X\right)\to M$
-\end_inset
-
- en 
-\begin_inset Formula $Mon$
-\end_inset
-
- tal que 
-\begin_inset Formula $U\left(\overline{f}\right)\circ i=f$
-\end_inset
-
- en 
-\begin_inset Formula $Set$
-\end_inset
-
-
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Cuando un monoide como 
-\begin_inset Formula $Fr\left(X\right)$
-\end_inset
-
- satisface esta propiedad, decimos que es el monoide libre sobre 
-\begin_inset Formula $X$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Enumerate
-¿A cuál monoide es isomorfo 
-\begin_inset Formula $Fr\left(X\right)$
-\end_inset
-
- donde 
-\begin_inset Formula $X$
-\end_inset
-
- es un conjunto de un solo elemento?
-\end_layout
-
-\begin_layout Enumerate
-¿Este funtor preserva productos?
-\end_layout
-
-\begin_layout Paragraph
-Soluciones
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Sea 
 \begin_inset Formula $\mathcal{C}$
 \end_inset
@@ -7757,103 +7518,6 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-Sean 
-\begin_inset Formula $x$
-\end_inset
-
- e 
-\begin_inset Formula $y$
-\end_inset
-
- elementos de un conjunto ordenado 
-\begin_inset Formula $P$
-\end_inset
-
-.
- ¿Cuál sería el producto de 
-\begin_inset Formula $x$
-\end_inset
-
- e 
-\begin_inset Formula $y$
-\end_inset
-
- considerando 
-\begin_inset Formula $P$
-\end_inset
-
- como una categoría?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Sean 
-\begin_inset Formula $P$
-\end_inset
-
- y 
-\begin_inset Formula $Q$
-\end_inset
-
- conjuntos ordenados.
- ¿Cuál es el coproducto de 
-\begin_inset Formula $P$
-\end_inset
-
- y 
-\begin_inset Formula $Q$
-\end_inset
-
- en 
-\begin_inset Formula $Poset$
-\end_inset
-
-?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-¿
-\begin_inset Formula $Grp$
-\end_inset
-
- tiene productos? ¿Tiene coproductos? ¿Tiene objeto inicial? ¿Tiene objeto
- final? ¿Y 
-\begin_inset Formula $Mon$
-\end_inset
-
-?
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Un 
 \begin_inset Formula $\omega CPO$
 \end_inset
@@ -7913,64 +7577,6 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Probar o refutar: sea 
-\begin_inset Formula $C$
-\end_inset
-
- una categoría con productos, y 
-\begin_inset Formula $F:C\to C$
-\end_inset
-
- un functor, entonces siempre existe un único morfismo 
-\begin_inset Formula $F\left(A\times B\right)\to FA\times FB$
-\end_inset
-
-.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Sea 
-\begin_inset Formula $U:Mon\to Set$
-\end_inset
-
- el functor que olvida la estructura de monoide.
- Definimos además 
-\begin_inset Formula $U^{2}:Mon\to Set$
-\end_inset
-
- que en objetos lleva 
-\begin_inset Formula $\left(X,\otimes,e\right)\mapsto X\times X$
-\end_inset
-
-.
- Probar que a 
-\begin_inset Formula $U^{2}$
-\end_inset
-
- se lo puede denotar de estructura functorial.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
 COMPLETAR.
 \end_layout
 

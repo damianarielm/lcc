@@ -1,0 +1,695 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{arrows, automata, positioning}
+\end_preamble
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Paragraph
+Funtores
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ dos categorías.
+ Probar que 
+\begin_inset Formula $P_{1}:\mathcal{C}\times\mathcal{D}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P_{1}\left(C,D\right)=C$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{2}:\mathcal{C}\times\mathcal{D}\to\mathcal{D}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P_{2}\left(C,D\right)=D$
+\end_inset
+
+ definen functores.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dado un conjunto 
+\begin_inset Formula $X$
+\end_inset
+
+, definimos el conjunto 
+\begin_inset Formula $List\left(X\right)$
+\end_inset
+
+ de la listas finitas de elementos de 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $List:Set\to Set$
+\end_inset
+
+ es un funtor.
+ Considerando ahora 
+\begin_inset Formula $List\left(X\right)$
+\end_inset
+
+ como un monoide, probar que 
+\begin_inset Formula $List:Set\to Mon$
+\end_inset
+
+ es un funtor.
+ Determinar si 
+\begin_inset Formula $List$
+\end_inset
+
+ preserva productos.
+ 
+\emph on
+Ayuda
+\emph default
+: pensar en cual monoide es isomorfo a 
+\begin_inset Formula $List\left(X\right)$
+\end_inset
+
+ cuando 
+\begin_inset Formula $X$
+\end_inset
+
+ es un conjunto con un solo elemento.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se ha visto que puede considerarse a un monoide como una categoría con un
+ único objeto, ¿Qué es un funtor entre dos categorías de este tipo? ¿Y entre
+ categorías formadas a partir de conjuntos ordenados?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados dos funtores 
+\begin_inset Formula $F:\mathcal{C}\to\mathcal{D}$
+\end_inset
+
+ y 
+\begin_inset Formula $G:\mathcal{D}\to\mathcal{E}$
+\end_inset
+
+, definir un funtor que componga ambos.
+ ¿Es posible definir una categoría cuyos objetos sean las categorías y sus
+ flechas sean los funtores entre estas?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría con productos, coproductos y exponenciales; y 
+\begin_inset Formula $A\in ob\,\mathcal{C}$
+\end_inset
+
+.
+ Probar que las siguientes aplicaciones pueden extenderse con estructura
+ funtorial:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Delta:\mathcal{C}\to\mathcal{C}\times\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Delta\left(B\right)=\left(B,B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría localmente pequeña, para cada objeto 
+\begin_inset Formula $X$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ definimos 
+\begin_inset Formula $Hom\left(X,-\right):\mathcal{C}\to Set$
+\end_inset
+
+ donde 
+\begin_inset Formula $Hom\left(X,-\right)\left(Y\right)=Hom\left(X,Y\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $Hom\left(X,-\right)\left(f\right)=Hom\left(X,f\right)$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $Hom\left(X,-\right)$
+\end_inset
+
+ es efectivamente un funtor para cada 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Definir análogamente un funtor 
+\begin_inset Formula $Hom\left(-,X\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ en 
+\begin_inset Formula $Set$
+\end_inset
+
+, entonces definimos 
+\begin_inset Formula $f^{-1}\left(X\right)=\left\{ a\in A:f\left(a\right)\in X\right\} $
+\end_inset
+
+ donde 
+\begin_inset Formula $X\subseteq B$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $I:Set\to Set$
+\end_inset
+
+ es un funtor contravariante, llevando: 
+\begin_inset Formula $I\left(A\right)=\mathcal{P}\left(A\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $I\left(f\right)=f^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dado un semigurpo 
+\begin_inset Formula $\left(S,\cdot\right)$
+\end_inset
+
+, podemos construir un monoide 
+\begin_inset Formula $\left(S',\cdot'\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $S'=S\uplus\left\{ e\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,x\right)\cdot'\left(0,y\right)=\left(0,x\cdot y\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(1,e\right)\cdot'x=x=x\cdot'\left(1,e\right)$
+\end_inset
+
+.
+ Utilizando esta construcción, definir un funtor 
+\begin_inset Formula $F:Sem\to Mon$
+\end_inset
+
+ y probar que es un monomorfismo en 
+\begin_inset Formula $Cat$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar o refutar: sea 
+\begin_inset Formula $C$
+\end_inset
+
+ una categoría con productos, y 
+\begin_inset Formula $F:\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ un functor, entonces siempre existe un único morfismo 
+\begin_inset Formula $F\left(A\times B\right)\to FA\times FB$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $U:Mon\to Set$
+\end_inset
+
+ el functor que olvida la estructura de monoide.
+ Definimos además 
+\begin_inset Formula $U^{2}:Mon\to Set$
+\end_inset
+
+ que en objetos actúa llevando 
+\begin_inset Formula $\left(X,\otimes,e\right)\mapsto X\times X$
+\end_inset
+
+.
+ Probar que a 
+\begin_inset Formula $U^{2}$
+\end_inset
+
+ se lo puede denotar de estructura functorial.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Transformaciones naturales
+\end_layout
+
+\begin_layout Paragraph
+Adjunciones
+\end_layout
+
+\begin_layout Paragraph
+Monadas
+\end_layout
+
+\begin_layout Paragraph
+Lema de Yoneda
+\end_layout
+
+\begin_layout Paragraph
+Ejercicios adicionales
+\end_layout
+
+\begin_layout Enumerate
+Definimos la asignación 
+\begin_inset Formula $Fr:Set\to Mon$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Fr\left(X\right)=X^{*}$
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $X^{*}$
+\end_inset
+
+ es el monoide de las palabras sobre el alfabeto 
+\begin_inset Formula $X$
+\end_inset
+
+ con la concatenación como operación.
+ Puede pensar en las palabras de 
+\begin_inset Formula $X$
+\end_inset
+
+ como las listas de elementos de 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset Formula $Fr\left(f\right)\left(x_{1}x_{2}\cdots x_{n}\right)=f\left(x_{1}\right)f\left(x_{2}\right)\cdots f\left(x_{n}\right)$
+\end_inset
+
+.
+ Usando el funtor 
+\begin_inset Formula $U:Mon\to Set$
+\end_inset
+
+ que se olvida de la estructura de monoide, consideramos 
+\begin_inset Formula $i:X\to U\left(Fr\left(X\right)\right)$
+\end_inset
+
+ la función que lleva un elemento 
+\begin_inset Formula $x$
+\end_inset
+
+ de 
+\begin_inset Formula $X$
+\end_inset
+
+ a la palabra 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $Fr$
+\end_inset
+
+ es un funtor.
+\end_layout
+
+\begin_layout Enumerate
+Probar que dado 
+\begin_inset Formula $f:X\to U\left(M\right)$
+\end_inset
+
+ en 
+\begin_inset Formula $Set$
+\end_inset
+
+ donde 
+\begin_inset Formula $M$
+\end_inset
+
+ es un monoide, puedo construir una única 
+\begin_inset Formula $\overline{f}:Fr\left(X\right)\to M$
+\end_inset
+
+ en 
+\begin_inset Formula $Mon$
+\end_inset
+
+ tal que 
+\begin_inset Formula $U\left(\overline{f}\right)\circ i=f$
+\end_inset
+
+ en 
+\begin_inset Formula $Set$
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Cuando un monoide como 
+\begin_inset Formula $Fr\left(X\right)$
+\end_inset
+
+ satisface esta propiedad, decimos que es el monoide libre sobre 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+¿A cuál monoide es isomorfo 
+\begin_inset Formula $Fr\left(X\right)$
+\end_inset
+
+ donde 
+\begin_inset Formula $X$
+\end_inset
+
+ es un conjunto de un solo elemento?
+\end_layout
+
+\begin_layout Enumerate
+¿Este funtor preserva productos?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
