@@ -12,6 +12,7 @@
 \use_default_options true
 \begin_modules
 multicol
+enumitem
 \end_modules
 \maintain_unincluded_children false
 \language spanish-mexico
@@ -123,9 +124,73 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Completamos las definiciones: 
+\begin_inset Formula $P_{1}\left(f,g\right)=f$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{2}\left(f,g\right)=g$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $\left(C,D\right)\in ob\,\mathcal{C}\times\mathcal{D}$
+\end_inset
+
+ sabemos que 
+\begin_inset Formula $id_{\left(C,D\right)}=\left(id_{C},id_{D}\right)$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P_{1}\left(id_{\left(C,D\right)}\right)=id_{C}=id_{P_{1}\left(C,D\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P_{2}\left(id_{\left(C,D\right)}\right)=id_{D}=id_{P_{2}\left(C,D\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $\left(f,g\right):\left(C_{1},C_{2}\right)\to\left(D_{1},D_{2}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(p,q\right):\left(C_{2},C_{3}\right)\to\left(D_{2},D_{3}\right)$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P_{1}\left(\left(p,q\right)\circ\left(f,g\right)\right)=P_{1}\left(p\circ f,q\circ g\right)=p\circ f=P_{1}\left(p,q\right)\circ P_{1}\left(f,g\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{P_{2}\left(\left(p,q\right)\circ\left(f,g\right)\right)=P_{2}\left(p\circ f,q\circ g\right)=q\circ g=P_{2}\left(p,q\right)\circ P_{2}\left(f,g\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dado un conjunto 
@@ -147,16 +212,16 @@ Dado un conjunto
 
  es un funtor.
  Considerando ahora 
-\begin_inset Formula $List\left(X\right)$
+\begin_inset Formula $List'\left(X\right)$
 \end_inset
 
  como un monoide, probar que 
-\begin_inset Formula $List:Set\to Mon$
+\begin_inset Formula $List':Set\to Mon$
 \end_inset
 
  es un funtor.
  Determinar si 
-\begin_inset Formula $List$
+\begin_inset Formula $List'$
 \end_inset
 
  preserva productos.
@@ -165,7 +230,7 @@ Dado un conjunto
 Ayuda
 \emph default
 : pensar en cual monoide es isomorfo a 
-\begin_inset Formula $List\left(X\right)$
+\begin_inset Formula $List'\left(X\right)$
 \end_inset
 
  cuando 
@@ -180,10 +245,150 @@ Ayuda
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Definimos 
+\begin_inset Formula $List\left(f:A\to B\right)=f':\left\langle A\right\rangle \to\left\langle B\right\rangle $
+\end_inset
+
+ tal que 
+\begin_inset Formula $f'\left\langle \right\rangle _{A}=\left\langle \right\rangle _{B}$
+\end_inset
+
+ y 
+\begin_inset Formula $f'\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle $
+\end_inset
+
+.
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $X\in ob\,Set$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $List\left(id_{X}\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle id_{X}\left(a_{1}\right),\ldots,id_{X}\left(a_{n}\right)\right\rangle =\left\langle a_{1},\ldots,a_{n}\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $id_{List\left(X\right)}\left\langle a_{1},\ldots,a_{n}\right\rangle =id_{\left\langle X\right\rangle }\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle a_{1},\ldots,a_{n}\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $List\left(id_{X}\right)\left\langle \right\rangle _{X}=\left\langle \right\rangle _{X}=id_{\left\langle X\right\rangle }\left\langle \right\rangle _{X}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Podemos ver entonces que 
+\begin_inset Formula $List\left(id_{X}\right)=id_{List\left(X\right)}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $List\left(g\circ f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle g\circ f\left(a_{1}\right),\ldots,g\circ f\left(a_{n}\right)\right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(List\left(g\right)\circ List\left(f\right)\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =g'\left(f'\left\langle a_{1},\ldots,a_{n}\right\rangle \right)=g'\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle =\left\langle g\circ f\left(a_{1}\right),\ldots,g\circ f\left(a_{n}\right)\right\rangle $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Podemos ver entonces que 
+\begin_inset Formula $List\left(g\circ f\right)=List\left(g\right)\circ List\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Definimos 
+\begin_inset Formula $List'\left(X\right)=\left(\left\langle X\right\rangle ,\left\langle \right\rangle _{X},++_{X}\right)$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $List'\left(f:A\to B\right)$
+\end_inset
+
+ es un morfismo de monoide:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $List'\left(f\right)\left\langle \right\rangle _{A}=\left\langle \right\rangle _{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $List'\left(f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle ++_{A}\left\langle a_{n+1},\ldots,a_{n+m}\right\rangle =List'\left(f\right)\left\langle a_{1},\ldots,a_{n+m}\right\rangle =\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $List'\left(f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle ++_{B}List'\left(f\right)\left\langle a_{n+1},\ldots,a_{n+m}\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle ++_{B}\left\langle f\left(a_{n+1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle =\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Se ha visto que puede considerarse a un monoide como una categoría con un
@@ -196,10 +401,140 @@ Se ha visto que puede considerarse a un monoide como una categoría con un
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $\left(A,e_{A},\oplus_{A}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(B,e_{B},\oplus_{B}\right)$
+\end_inset
+
+ dos monoides; 
+\begin_inset Formula $\mathcal{A}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{B}$
+\end_inset
+
+ las respectivas categorías asociadas y 
+\begin_inset Formula $F:\mathcal{A}\to\mathcal{B}$
+\end_inset
+
+ un functor.
+ Sabemos que 
+\begin_inset Formula $F\left(*_{A}\right)=*_{B}$
+\end_inset
+
+ y que:
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $F\left(id_{*_{A}}\right)=id_{F\left(A\right)}$
+\end_inset
+
+, es decir 
+\begin_inset Formula $F\left(e_{A}\right)=e_{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(a\circ a'\right)=F\left(a\right)\circ F\left(a'\right)$
+\end_inset
+
+, es decir 
+\begin_inset Formula $\text{\ensuremath{F\left(a\oplus_{A}a'\right)=F\left(a\right)\oplus_{B}F\left(a'\right)}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vemos entonces que 
+\begin_inset Formula $F$
+\end_inset
+
+ es un morfismo de monoides.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $\left(P,\leq_{P}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(Q,\leq_{Q}\right)$
+\end_inset
+
+ dos posets; 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{Q}$
+\end_inset
+
+ las respectivas categorías asociadas y 
+\begin_inset Formula $F:\mathcal{P}\to\mathcal{Q}$
+\end_inset
+
+ un functor.
+ Sabemos que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $F\left(id_{x}\right)=id_{F\left(x\right)}$
+\end_inset
+
+, es decir 
+\begin_inset Formula $F\left(x,x\right)=\left(F\left(x\right),F\left(x\right)\right)$
+\end_inset
+
+; lo que significa que si 
+\begin_inset Formula $x\leq_{P}x$
+\end_inset
+
+ entonces 
+\begin_inset Formula $F\left(x\right)\leq_{Q}F\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F\left(\left(y,z\right)\circ\left(x,y\right)\right)=F\left(y,z\right)\circ F\left(x,y\right)$
+\end_inset
+
+, lo que significa que si 
+\begin_inset Formula $x\leq_{P}z$
+\end_inset
+
+ entonces 
+\begin_inset Formula $F\left(x\right)\leq_{Q}F\left(z\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vemos entonces que 
+\begin_inset Formula $F$
+\end_inset
+
+ es un morfismo de posets.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dados dos funtores 
@@ -221,7 +556,84 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Definimos 
+\begin_inset Formula $G\circ F:\mathcal{C}\to\mathcal{E}$
+\end_inset
+
+ donde 
+\begin_inset Formula $G\circ F\left(C\right)=G\left(F\left(C\right)\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $G\circ F\left(f\right)=G\left(F\left(f\right)\right)$
+\end_inset
+
+.
+ Veamos que efectivamente se trata de un functor:
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $C\in ob\,\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $F\left(C\right)=D$
+\end_inset
+
+ y 
+\begin_inset Formula $G\left(D\right)=E$
+\end_inset
+
+, luego: 
+\begin_inset Formula 
+\[
+G\circ F\left(id_{C}\right)=G\left(F\left(id_{C}\right)\right)=G\left(id_{F\left(C\right)}\right)=G\left(id_{D}\right)=id_{G\left(D\right)}=id_{E}=id_{G\circ F\left(C\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+ morfismos de 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ tales que 
+\begin_inset Formula $F\left(f\right)=f':X'\to Y'$
+\end_inset
+
+ y 
+\begin_inset Formula $F\left(g\right)=g':Y'\to Z'$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+G\circ F\left(g\circ f\right)=G\left(F\left(g\right)\circ F\left(f\right)\right)=G\left(g'\circ f'\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=G\left(g'\right)\circ G\left(f'\right)=\left(G\circ F\right)\left(g\right)\circ\left(G\circ F\right)\left(f\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -241,42 +653,6 @@ Sea
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
-\begin_layout Paragraph
-Soluciones
-\end_layout
-
-\begin_layout Enumerate
 \begin_inset Formula $\Delta:\mathcal{C}\to\mathcal{C}\times\mathcal{C}$
 \end_inset
 
@@ -288,17 +664,381 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $-\times A:\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(-\times A\right)\left(B\right)=B\times A$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Formula $-^{A}:\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(-^{A}\right)\left(B\right)=B^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-^{A}\times A:\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(-^{A}\times A\right)\left(B\right)=B^{A}\times A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Pi:\mathcal{C}\times\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Pi\left(B,C\right)=B\times C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Sigma:\mathcal{C}\times\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Sigma\left(B,C\right)=B+C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A^{-}:\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(A^{-}\right)\left(B\right)=A^{B}$
+\end_inset
+
+ y es contravariante en los morfismos.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A^{A^{-}}:\mathcal{C}\to\mathcal{C}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(A^{A^{-}}\right)\left(B\right)=A^{A^{B}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Definimos 
+\begin_inset Formula $\Delta\left(f\right)=\left(f,f\right)$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ es un functor:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\Delta\left(id_{X}\right)=\left(id_{X},id_{X}\right)=id_{\left(X,X\right)}=id_{\Delta\left(X\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+ luego 
+\begin_inset Formula $\Delta\left(g\circ f\right)=\left(g\circ f,g\circ f\right)=\left(g,g\right)\circ\left(f,f\right)=\Delta\left(g\right)\circ\Delta\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Definimos 
+\begin_inset Formula $\left(-\times A\right)\left(f:X\to Y\right)=f\times id_{A}:X\times A\to Y\times A$
+\end_inset
+
+.
+ Veamos que 
+\begin_inset Formula $-\times A$
+\end_inset
+
+ es un functor:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(-\times A\right)\left(id_{X}\right)=id_{X}\times id_{A}=id_{X\times A}=id_{\left(-\times A\right)\left(X\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+ luego 
+\begin_inset Formula $\left(-\times A\right)\left(g\circ f\right)=\left(g\circ f\right)\times id_{A}=\left(g\times id_{A}\right)\circ\left(f\times id_{A}\right)=\left(-\times A\right)\left(g\right)\circ\left(-\times A\right)\left(f\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que el morfismo 
+\begin_inset Formula $\left(-^{A}\times A\right)\left(f:X\to Y\right)$
+\end_inset
+
+ debe tener tipo 
+\begin_inset Formula $X^{A}\times A\to Y^{A}\times A$
+\end_inset
+
+, proponemos entonces 
+\begin_inset Formula $\text{\ensuremath{\left(-^{A}\times A\right)\left(f\right)=\overline{f\circ\varepsilon_{AX}}\times id_{A}}}$
+\end_inset
+
+:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (XAA) {$X^{A}
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YAA) [below  of=XAA] {$Y^{A}
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (XA) [left  of=XAA] {$X^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YA) [left  of=YAA] {$Y^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=XA] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Y) [left  of=YA] {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node [left] {$f$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (XAA) edge [bend right] node [above] {$
+\backslash
+varepsilon_{AX}$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (YAA) edge [bend left] node [below] {$
+\backslash
+varepsilon_{AY}$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (XAA) edge node [right] {$
+\backslash
+overline{f
+\backslash
+circ
+\backslash
+varepsilon_{AX}} 
+\backslash
+times id_A$} (YAA);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (XA) edge node [left] {$$} (YA);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-^{A}\times A\right)\left(id_{X}\right)=\overline{id_{X}\circ\varepsilon_{AX}}\times id_{A}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\overline{\varepsilon_{AX}}\times id_{A}=id_{X^{A}}\times id_{A}=id_{X^{A}\times A}=id_{\left(-^{A}\times A\right)\left(X\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+ luego: 
+\begin_inset Formula 
+\[
+\left(-^{A}\times A\right)\left(g\circ f\right)=\overline{\left(g\circ f\right)\circ\varepsilon_{AX}}\times id_{A}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\overline{\varepsilon_{AZ}\circ\left(\overline{g\circ\varepsilon_{AY}}\times id_{A}\right)\circ\left(\overline{f\circ\varepsilon_{AX}}\times id_{A}\right)}\times id_{A}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\overline{\varepsilon_{AZ}\circ\left(\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)\times id_{A}\right)}\times id_{A}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)\times id_{A}=\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)\times\left(id_{A}\circ id_{A}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(\overline{g\circ\varepsilon_{AY}}\times id_{A}\right)\circ\left(\overline{f\circ\varepsilon_{AX}}\times id_{A}\right)=\left(-^{A}\times A\right)\left(g\right)\circ\left(-^{A}\times A\right)\left(f\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -330,20 +1070,20 @@ Sea
 \end_inset
 
  definimos 
-\begin_inset Formula $Hom\left(X,-\right):\mathcal{C}\to Set$
+\begin_inset Formula $HOM\left(X,-\right):\mathcal{C}\to Set$
 \end_inset
 
  donde 
-\begin_inset Formula $Hom\left(X,-\right)\left(Y\right)=Hom\left(X,Y\right)$
+\begin_inset Formula $HOM\left(X,-\right)\left(Y\right)=Hom\left(X,Y\right)$
 \end_inset
 
  y 
-\begin_inset Formula $Hom\left(X,-\right)\left(f\right)=Hom\left(X,f\right)$
+\begin_inset Formula $HOM\left(X,-\right)\left(f\right)=Hom\left(X,f\right)=\lambda g.f\circ g$
 \end_inset
 
 .
  Probar que 
-\begin_inset Formula $Hom\left(X,-\right)$
+\begin_inset Formula $HOM\left(X,-\right)$
 \end_inset
 
  es efectivamente un funtor para cada 
@@ -352,7 +1092,7 @@ Sea
 
 .
  Definir análogamente un funtor 
-\begin_inset Formula $Hom\left(-,X\right)$
+\begin_inset Formula $HOM'\left(-,X\right)$
 \end_inset
 
 .
@@ -516,18 +1256,965 @@ COMPLETAR.
 Transformaciones naturales
 \end_layout
 
+\begin_layout Enumerate-Resume
+Dada dos categorías 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+, probar que todo funtor 
+\begin_inset Formula $F:\mathcal{C}\to\mathcal{D}$
+\end_inset
+
+ es naturalmente isomorfo a si mismo, es decir, existe un isomorfismo natural
+ 
+\begin_inset Formula $id_{F}:F\dot{\longrightarrow}F$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $X\in ob\,\mathcal{C}$
+\end_inset
+
+, definimos 
+\begin_inset Formula $id_{F_{X}}=id_{F\left(X\right)}$
+\end_inset
+
+.
+ Es fácil ver que el siguiente diagrama conmuta:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.8cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (a) {$F(A)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (d) [below  of=a] {$F(B)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (b) [right  of=a] {$F(A)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (e) [below  of=b] {$F(B)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (f) [left  of=a] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (g) [left  of=d] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {$id_{F_{A}}$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {$id_{F_{B}}$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {$F(f)$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node [right] {$F(f)$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (f) edge node [left] {$f$} (g);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Considere el funtor 
+\begin_inset Formula $List:Set\to Set$
+\end_inset
+
+.
+ Mostrar que puede construirse un isomorfismo natural 
+\begin_inset Formula $REV:List\dot{\longrightarrow}List$
+\end_inset
+
+ tal que 
+\begin_inset Formula $REV_{X}$
+\end_inset
+
+ es la función que invierte las palabras de 
+\begin_inset Formula $List\left(X\right)$
+\end_inset
+
+.
+ ¿Se puede hacer lo mismo con el funtor 
+\begin_inset Formula $List':Set\to Mon$
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Para ver que es transformación natural debemos ver si el siguiente diagrama
+ conmuta:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 2cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (a) {$List(A)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (d) [below  of=a] {$List(B)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (b) [right  of=a] {$List(A)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (e) [below  of=b] {$List(B)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (f) [left  of=a] {$A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (g) [left  of=d] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {$REV_A$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {$REV_B$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {$List(f)$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node [right] {$List(f)$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (f) edge node [left] {$f$} (g);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(REV_{B}\circ List\left(f\right)\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =REV_{B}\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle =\left\langle f\left(a_{n}\right),\ldots,f\left(a_{1}\right)\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(List\left(f\right)\circ REV_{A}\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =List\left(f\right)\left\langle a_{n},\ldots,a_{1}\right\rangle =\left\langle f\left(a_{n}\right),\ldots,f\left(a_{1}\right)\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Solo nos resta ver que es un isomorfismo:
+\begin_inset Formula 
+\[
+REV_{X}\circ REV_{X}\left\langle x_{1},\ldots,x_{n}\right\rangle =\left\langle x_{1},\ldots,x_{n}\right\rangle \iff REV_{X}\circ REV_{X}=id_{List\left(X\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría con productos y exponenciales; y 
+\begin_inset Formula $A$
+\end_inset
+
+ un objeto de la misma.
+ Definir una transformación natural 
+\begin_inset Formula $\eta:\left(-^{A}\times A\right)\dot{\longrightarrow}id_{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $X,Y\in ob\,\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ un morfismo de la categoría, luego sabemos que 
+\begin_inset Formula $\left(-^{A}\times A\right)\left(X\right)=X^{A}\times A$
+\end_inset
+
+ y 
+\begin_inset Formula $\text{\ensuremath{\left(-^{A}\times A\right)\left(f\right)=\overline{f\circ\varepsilon_{AX}}\times id_{A}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (XAA) {$X^{A}
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YAA) [below  of=XAA] {$Y^{A}
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (XA) [left  of=XAA] {$X^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YA) [left  of=YAA] {$Y^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=XA] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Y) [left  of=YA] {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (IDX) [left  =0.1 pt of X] {$id_{
+\backslash
+mathcal{C}}(X)=$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (IDY) [left  =0.1 pt of Y] {$id_{
+\backslash
+mathcal{C}}(Y)=$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (FX) [right  =0.1 pt of XAA] {$=
+\backslash
+left(-^{A}
+\backslash
+times A
+\backslash
+right)
+\backslash
+left(X
+\backslash
+right)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (FX) [right  =0.1 pt of YAA] {$=
+\backslash
+left(-^{A}
+\backslash
+times A
+\backslash
+right)
+\backslash
+left(Y
+\backslash
+right)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node [left] {$f$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (XAA) edge [bend right] node [above] {$
+\backslash
+varepsilon_{AX}$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (YAA) edge [bend left] node [below] {$
+\backslash
+varepsilon_{AY}$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (XAA) edge node [right] {$
+\backslash
+overline{f
+\backslash
+circ
+\backslash
+varepsilon_{AX}} 
+\backslash
+times id_A =
+\backslash
+left(-^{A}
+\backslash
+times A
+\backslash
+right)
+\backslash
+left(f
+\backslash
+right)$} (YAA);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (XA) edge node [left] {$$} (YA);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Del diagrama anterior podemos deducir que 
+\begin_inset Formula $\eta_{X}=\varepsilon_{AX}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una C.C.C.
+ y 
+\begin_inset Formula $A$
+\end_inset
+
+ un objeto de la misma.
+ Definir una transformación natural 
+\begin_inset Formula $\eta:Id\dot{\longrightarrow}A^{A^{-}}$
+\end_inset
+
+, y probar que efectivamente es una transformación natural.
+ 
+\emph on
+Ayuda
+\emph default
+: puede ser útil probar los siguientes lemas:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $curry\left(f\right)\circ g=curry\left(f\circ\left(g\times id\right)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $swap\circ\left(h\times i\right)=\left(i\times h\right)\circ swap$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+donde 
+\begin_inset Formula $swap$
+\end_inset
+
+ es el isomorfismo que conmuta los factores de un producto.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Probar o refutar: sea 
+\begin_inset Formula $U:Grp\to Set$
+\end_inset
+
+ el funtor forgetful de grupos, entonces toda transformación natural 
+\begin_inset Formula $\eta:U\dot{\longrightarrow}U$
+\end_inset
+
+ es un isomorfismo natural.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Dadas dos categorías 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+, mostrar que los funtores de 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ a 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ forman una categoría con las transformaciones naturales como flechas.
+ A esta categoría se la nota 
+\begin_inset Formula $\mathcal{D}^{\mathcal{C}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Probar que 
+\begin_inset Formula $Cat$
+\end_inset
+
+ es una C.C.C.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Dada una categoría pequeña 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, mostrar que las categorías 
+\begin_inset Formula $\mathcal{C}^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{C}^{\to}$
+\end_inset
+
+ son isomorfas en 
+\begin_inset Formula $Cat$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 Adjunciones
 \end_layout
 
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 Monadas
 \end_layout
 
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 Lema de Yoneda
 \end_layout
 
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 Ejercicios adicionales
 \end_layout
