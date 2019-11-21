@@ -118,6 +118,11 @@ Describa las características fundamentales del patrón de diseño Visitor.
 Describa las características fundamentales del patrón de diseño Strategy.
 \end_layout
 
+\begin_layout Enumerate
+Explique como se logra evitar la explosión de clases al utilizar el patrón
+ de diseño Decorator.
+\end_layout
+
 \begin_layout Section
 Ejercicios prácticos
 \end_layout
@@ -7709,7 +7714,7 @@ Documentación de patrones
 \end_layout
 
 \begin_layout Subsection
-Problemas matemáticos
+Calculadoras
 \end_layout
 
 \begin_layout Subsubsection
@@ -7717,49 +7722,23 @@ Requerimientos
 \end_layout
 
 \begin_layout Standard
-Existen diversas bibliotecas de funciones que resuelven los siguientes problemas
- matemáticos:
+Suponga que tiene que diseñar e implementar diferentes tipos de calculadoras
+ (simple, científica, estadística, programable, etc.) sobre distintas bibliotecas
+ de funciones matemáticas.
+ Las bibliotecas no necesariamente proveerán todas las mismas operaciones;
+ por ejemplo, podría ocurrir que una de ellas no provea el promedio en cuyo
+ caso habrá que implementarlo en base a la suma y la cantidad de elementos.
+ Como ejemplo suponga que las bibliotecas son LibA, LibB y LibC.
 \end_layout
 
-\begin_layout Itemize
-Multiplicación de matrices.
+\begin_layout Enumerate
+Aplique el patrón de diseño Bridge al problema mencionado y documente adecuadame
+nte el diseño.
 \end_layout
 
-\begin_layout Itemize
-Cálculo de determinantes.
-\end_layout
-
-\begin_layout Itemize
-Factorial.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $x^{y}$
-\end_inset
-
- para 
-\begin_inset Formula $x$
-\end_inset
-
- e 
-\begin_inset Formula $y$
-\end_inset
-
- números reales.
-\end_layout
-
-\begin_layout Standard
-Cada biblioteca fue implementada por una universidad o centro de investigación
- diferente por lo que no todas tienen la misma interfaz.
- Por otro lado, existen diversos métodos de resolución de ecuaciones diferencial
-es que usan como operaciones primitivas las operaciones provistas por las
- bibliotecas mencionadas más arriba.
-\end_layout
-
-\begin_layout Standard
-Una empresa desea desarrollar un programa que provea los métodos de resolución
- de ecuaciones diferenciales utilizando las distintas bibliotecas según
- diferentes parámetros de configuración.
+\begin_layout Enumerate
+Indique como habría que modificar el diseño si se debe implementar un nuevo
+ tipo de calculadora o se agrega una nueva biblioteca.
 \end_layout
 
 \begin_layout Subsubsection
@@ -7859,6 +7838,59 @@ Aplique el patrón de diseño Composite para representar la estructura física
 \begin_layout Enumerate
 Aplique el patrón de diseño Decorator para dotar de armas al personaje del
  videojuego.
+\end_layout
+
+\begin_layout Subsubsection
+Módulos 2MIL
+\end_layout
+
+\begin_layout Subsubsection
+Documentación de patrones
+\end_layout
+
+\begin_layout Subsection
+Control de ingreso
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Una aplicación debe implementar un control de ingreso (
+\emph on
+login
+\emph default
+) mediante usuario y contraseña.
+ Ademas, se debe corroborar que el puesto de trabajo (es decir la computadora
+ que se esta usando) esta autorizado para acceder la aplicación, que el
+ usuario esta autorizado a usar la aplicación (mas allá de que su nombre
+ de usuario y contraseña sean correctos o no), se debe dejar constancia
+ de la hora de ingreso y egreso y de puesto desde donde se ingresa, etc.
+\end_layout
+
+\begin_layout Enumerate
+Aplique el patrón de diseño Decorator para efectuar todos estos controles
+ y documente adecuadamente el diseño.
+\end_layout
+
+\begin_layout Enumerate
+Suponga que el administrador del sistema dispone de una pantalla de configuració
+n desde la cual puede seleccionar diferentes opciones de controles (por
+ ejemplo, controlar usuario y contraseña y autorización del puesto; o controlar
+ autorización del puesto y registro de ingreso y egreso).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Aplique el patrón de diseño Strategy para resolver este problema.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Respecto del punto anterior explique como debería ser el código para reconfigura
+r el sistema en tiempo de ejecución cada vez que el administrador selecciona
+ una opción diferente.
 \end_layout
 
 \begin_layout Subsubsection
