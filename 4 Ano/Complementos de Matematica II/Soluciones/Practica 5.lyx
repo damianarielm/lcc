@@ -1239,7 +1239,7 @@ Sea
 \begin_inset Formula $U^{2}$
 \end_inset
 
- se lo puede denotar de estructura functorial.
+ se lo puede dotar de estructura functorial.
 \end_layout
 
 \begin_deeper
@@ -1912,6 +1912,10 @@ Probar o refutar: sea
 \end_inset
 
  es un isomorfismo natural.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1920,7 +1924,197 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Para 
+\begin_inset Formula $\left(G,\oplus,e_{G}\right)$
+\end_inset
+
+ definimos 
+\begin_inset Formula $\eta_{G}:G\to G$
+\end_inset
+
+ constante igual a 
+\begin_inset Formula $e_{G}$
+\end_inset
+
+.
+ Veamos que es una transformación natural:
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f:G_{1}\to G_{2}$
+\end_inset
+
+, por ser morfismo de grupos sabemos que 
+\begin_inset Formula $\text{\ensuremath{f\left(e_{G_{1}}\right)=e_{G_{2}}}}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\eta_{G_{2}}\circ U\left(f\right)\left(x\right)=e_{G_{2}}=U\left(f\right)\left(e_{G_{1}}\right)=U\left(f\right)\circ\eta_{G_{1}}\left(x\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.8cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (a) {$U
+\backslash
+left(G_{1}
+\backslash
+right)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (d) [below  of=a] {$U
+\backslash
+left(G_{2}
+\backslash
+right)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (b) [right  of=a] {$U
+\backslash
+left(G_{1}
+\backslash
+right)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (e) [below  of=b] {$U
+\backslash
+left(G_{2}
+\backslash
+right)$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (f) [left  of=a] {$G_1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (g) [left  of=d] {$G_2$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node {$
+\backslash
+eta_{G_1}$} (b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (d) edge node [below] {$
+\backslash
+eta_{G_2}$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {$U(f)$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node [right] {$U(f)$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (f) edge node [left] {$f$} (g);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observemos que en 
+\begin_inset Formula $Set$
+\end_inset
+
+ el único isomorfismo entre 
+\begin_inset Formula $X$
+\end_inset
+
+ y 
+\begin_inset Formula $X$
+\end_inset
+
+ es 
+\begin_inset Formula $id_{X}$
+\end_inset
+
+, luego 
+\begin_inset Formula $\eta$
+\end_inset
+
+ no es isomorfismo natural.
 \end_layout
 
 \end_deeper
@@ -2012,7 +2206,112 @@ Adjunciones
 \end_layout
 
 \begin_layout Enumerate-Resume
+Definir una adjunción entre el functor 
+\begin_inset Formula $List':Set\to Mon$
+\end_inset
+
+ y el functor olvido 
+\begin_inset Formula $U:Mon\to Set$
+\end_inset
+
+.
+ Dado un conjunto de símbolos 
+\begin_inset Formula $\Sigma$
+\end_inset
+
+ y la función constante 
+\begin_inset Formula $f:\Sigma\to U\left(\mathbb{N}_{0}\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f\left(x\right)=1$
+\end_inset
+
+, explicar el morfismo de monoides asociado 
+\begin_inset Formula $\widetilde{f}:List\left(\Sigma\right)\to\mathbb{N}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
 COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sea 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ una categoría con productos.
+ Dar una relación de adjunción entre 
+\begin_inset Formula $\Pi$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+ Dar un resultado analogo respecto al functor 
+\begin_inset Formula $\Sigma\left(X,Y\right)=X+Y$
+\end_inset
+
+ cuando 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ tiene coproductos.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Dada una categoría 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+ y un objeto 
+\begin_inset Formula $A$
+\end_inset
+
+ de 
+\begin_inset Formula $\mathcal{C}$
+\end_inset
+
+, probar que 
+\begin_inset Formula $-\times A\dashv-^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Construir la unidad de adjunción a partir de la counidad de adjunción.
 \end_layout
 
 \begin_deeper
@@ -2030,59 +2329,30 @@ COMPLETAR.
 \end_layout
 
 \begin_deeper
-\begin_layout Paragraph
-Solución
+\begin_layout Enumerate-Resume
+COMPLETAR.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate-Resume
-COMPLETAR.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate-Resume
-COMPLETAR.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate-Resume
-COMPLETAR.
-\end_layout
-
-\begin_deeper
-\begin_layout Paragraph
-Solución
-\end_layout
-
-\begin_layout Standard
-COMPLETAR.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate-Resume
-COMPLETAR.
+Explicar qué es una adjunción en el caso de que las categorías en cuestión
+ sean conjuntos ordenados vistos como categorías.
 \end_layout
 
 \begin_deeper
@@ -2202,7 +2472,7 @@ Lema de Yoneda
 \end_layout
 
 \begin_layout Enumerate-Resume
-COMPLETAR.
+Enunciar y probar el lema de Yoneda para functores contravariantes.
 \end_layout
 
 \begin_deeper
