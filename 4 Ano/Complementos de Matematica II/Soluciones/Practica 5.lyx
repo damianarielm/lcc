@@ -1303,7 +1303,84 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Observemos que para un morfismo 
+\begin_inset Formula $f:Y\to Z$
+\end_inset
+
+, el funtor nos devuelve en 
+\begin_inset Formula $Set$
+\end_inset
+
+ una función de alto orden que dada otra función de 
+\begin_inset Formula $X$
+\end_inset
+
+ en 
+\begin_inset Formula $Y$
+\end_inset
+
+, nos devuelve una función de 
+\begin_inset Formula $X$
+\end_inset
+
+ en 
+\begin_inset Formula $Z$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{aligned}HOM\left(X,-\right)\left(f\right): & Hom\left(X,Y\right) & \to & Hom\left(X,Z\right)\\
+ & g:X\to Y & \mapsto & f\circ g:X\to Z
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $HOM\left(X,-\right)\left(id_{A}\right)=\lambda\left(g:X\to A\right).id_{A}\circ g=\lambda\left(g:X\to A\right).g=id_{Hom\left(X,A\right)}=id_{HOM\left(X,-\right)\left(A\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ luego: 
+\begin_inset Formula 
+\[
+HOM\left(X,-\right)\left(g\circ f\right)=\lambda\left(a:X\to A\right).g\circ f\circ a=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(\lambda\left(b:X\to B\right).g\circ b\right)\circ\left(\lambda\left(a:X\to A\right).f\circ a\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=HOM\left(X,-\right)\left(g\right)\circ HOM\left(X,-\right)\left(f\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
