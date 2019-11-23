@@ -738,6 +738,10 @@ Sea
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -821,9 +825,204 @@ Sean
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sabemos que el morfismo 
+\begin_inset Formula $\left(-^{A}\right)\left(f:X\to Y\right)$
+\end_inset
+
+ debe tener tipo 
+\begin_inset Formula $\text{\ensuremath{X^{A}\to Y^{A}}}$
+\end_inset
+
+, proponemos entonces 
+\begin_inset Formula $\left(-^{A}\right)\left(f\right)=\overline{f\circ\varepsilon_{AX}}$
+\end_inset
+
+:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (XAA) {$X^{A}
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YAA) [below  of=XAA] {$Y^{A}
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (XA) [left  of=XAA] {$X^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (YA) [left  of=YAA] {$Y^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (X) [left  of=XA] {$X$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Y) [left  of=YA] {$Y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (X) edge node [left] {$f$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (XAA) edge [bend right] node [above] {$
+\backslash
+varepsilon_{AX}$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (YAA) edge [bend left] node [below] {$
+\backslash
+varepsilon_{AY}$} (Y);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (XA) edge node [right] {$
+\backslash
+overline{f
+\backslash
+circ
+\backslash
+varepsilon_{AX}}$} (YA);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (XA) edge node [left] {$
+\backslash
+exists ! $} (YA);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\text{\ensuremath{\left(-^{A}\right)\left(id_{X}\right)=\overline{id_{X}\circ\varepsilon_{AX}}=\overline{\varepsilon_{AX}}=id_{X^{A}}=id_{\overline{\varepsilon_{AX}}}=id_{\overline{id_{X}\circ\varepsilon_{AX}}}=id_{\left(-^{A}\right)\left(X\right)}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:X\to Y$
+\end_inset
+
+ y 
+\begin_inset Formula $g:Y\to Z$
+\end_inset
+
+ luego: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(-^{A}\right)\left(g\circ f\right)=\overline{\left(g\circ f\right)\circ\varepsilon_{AX}}=\overline{\varepsilon_{AZ}\circ\left(\overline{g\circ\varepsilon_{AY}}\times id_{A}\right)\circ\left(\overline{f\circ\varepsilon_{AX}}\times id_{A}\right)}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\overline{\varepsilon_{AZ}\circ\left(\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)\times id_{A}\right)}=\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(\overline{g\circ\varepsilon_{AY}}\times id_{A}\right)\circ\left(\overline{f\circ\varepsilon_{AX}}\times id_{A}\right)=\left(-^{A}\right)\left(g\right)\circ\left(-^{A}\right)\left(f\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 Sabemos que el morfismo 
 \begin_inset Formula $\left(-^{A}\times A\right)\left(f:X\to Y\right)$
