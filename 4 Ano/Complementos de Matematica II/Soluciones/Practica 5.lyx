@@ -272,19 +272,21 @@ Sea
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $List\left(id_{X}\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle id_{X}\left(a_{1}\right),\ldots,id_{X}\left(a_{n}\right)\right\rangle =\left\langle a_{1},\ldots,a_{n}\right\rangle $
+\begin_inset Formula $List\left(id_{X}\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle id_{X}\left(a_{1}\right),\ldots,id_{X}\left(a_{n}\right)\right\rangle =\left\langle a_{1},\ldots,a_{n}\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=id_{\left\langle X\right\rangle }\left\langle a_{1},\ldots,a_{n}\right\rangle =id_{List\left(X\right)}\left\langle a_{1},\ldots,a_{n}\right\rangle $
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $id_{List\left(X\right)}\left\langle a_{1},\ldots,a_{n}\right\rangle =id_{\left\langle X\right\rangle }\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle a_{1},\ldots,a_{n}\right\rangle $
-\end_inset
-
-.
-\end_layout
-
+\end_deeper
 \begin_layout Itemize
 \begin_inset Formula $List\left(id_{X}\right)\left\langle \right\rangle _{X}=\left\langle \right\rangle _{X}=id_{\left\langle X\right\rangle }\left\langle \right\rangle _{X}$
 \end_inset
@@ -319,21 +321,44 @@ Sean
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $List\left(g\circ f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle g\circ f\left(a_{1}\right),\ldots,g\circ f\left(a_{n}\right)\right\rangle $
+\begin_inset Formula $List\left(g\circ f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =\left\langle g\circ f\left(a_{1}\right),\ldots,g\circ f\left(a_{n}\right)\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=g'\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle =g'\left(f'\left\langle a_{1},\ldots,a_{n}\right\rangle \right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left(List\left(g\right)\circ List\left(f\right)\right)\left\langle a_{1},\ldots,a_{n}\right\rangle $
 \end_inset
 
 .
- 
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-\begin_inset Formula $\left(List\left(g\right)\circ List\left(f\right)\right)\left\langle a_{1},\ldots,a_{n}\right\rangle =g'\left(f'\left\langle a_{1},\ldots,a_{n}\right\rangle \right)=g'\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle =\left\langle g\circ f\left(a_{1}\right),\ldots,g\circ f\left(a_{n}\right)\right\rangle $
+\begin_inset Formula $List\left(g\circ f\right)\left\langle \right\rangle _{A}=\left(g\circ f\right)'\left\langle \right\rangle _{A}=\left\langle \right\rangle _{C}=g'\left\langle \right\rangle _{B}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=g'\left(f'\left\langle \right\rangle _{A}\right)=\left(g'\circ f'\right)\left\langle \right\rangle _{A}=\left(List\left(g\right)\circ List\left(f\right)\right)\left\langle \right\rangle _{A}$
 \end_inset
 
 .
- 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 Podemos ver entonces que 
 \begin_inset Formula $List\left(g\circ f\right)=List\left(g\right)\circ List\left(f\right)$
@@ -346,7 +371,7 @@ Podemos ver entonces que
 \end_deeper
 \begin_layout Itemize
 Definimos 
-\begin_inset Formula $List'\left(X\right)=\left(\left\langle X\right\rangle ,\left\langle \right\rangle _{X},++_{X}\right)$
+\begin_inset Formula $List'\left(X\right)=\left(\left\langle X\right\rangle ,\left\langle \right\rangle _{X},\oplus_{X}\right)$
 \end_inset
 
 .
@@ -366,14 +391,7 @@ Definimos
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $List'\left(f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle ++_{A}\left\langle a_{n+1},\ldots,a_{n+m}\right\rangle =List'\left(f\right)\left\langle a_{1},\ldots,a_{n+m}\right\rangle =\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle $
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $List'\left(f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle ++_{B}List'\left(f\right)\left\langle a_{n+1},\ldots,a_{n+m}\right\rangle =$
+\begin_inset Formula $List'\left(f\right)\left(\left\langle a_{1},\ldots,a_{n}\right\rangle \oplus_{A}\left\langle a_{n+1},\ldots,a_{n+m}\right\rangle \right)=$
 \end_inset
 
 
@@ -381,10 +399,24 @@ Definimos
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $=\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle ++_{B}\left\langle f\left(a_{n+1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle =\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle $
+\begin_inset Formula $=List'\left(f\right)\left\langle a_{1},\ldots,a_{n+m}\right\rangle =\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle =$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left\langle f\left(a_{1}\right),\ldots,f\left(a_{n}\right)\right\rangle \oplus_{B}\left\langle f\left(a_{n+1}\right),\ldots,f\left(a_{n+m}\right)\right\rangle =$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=List'\left(f\right)\left\langle a_{1},\ldots,a_{n}\right\rangle \oplus_{B}List'\left(f\right)\left\langle a_{n+1},\ldots,a_{n+m}\right\rangle $
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1024,16 +1056,16 @@ Sean
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-Sabemos que el morfismo 
-\begin_inset Formula $\left(-^{A}\times A\right)\left(f:X\to Y\right)$
+Observemos que 
+\begin_inset Formula $\left(-^{A}\times A\right)=\left(-\times A\right)\circ\left(-^{A}\right)$
 \end_inset
 
- debe tener tipo 
-\begin_inset Formula $X^{A}\times A\to Y^{A}\times A$
-\end_inset
+, luego también es funtor por ser composición de functores.
+\end_layout
 
-, proponemos entonces 
-\begin_inset Formula $\text{\ensuremath{\left(-^{A}\times A\right)\left(f\right)=\overline{f\circ\varepsilon_{AX}}\times id_{A}}}$
+\begin_layout Enumerate
+Definimos 
+\begin_inset Formula $\Pi\left(a:A\to A',b:B\to B'\right)=a\times b$
 \end_inset
 
 :
@@ -1059,46 +1091,46 @@ begin{tikzpicture}[node distance = 1.6cm,auto]
 
     
 \backslash
-node (XAA) {$X^{A}
-\backslash
-times A$};
+node (A) {$A$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (YAA) [below  of=XAA] {$Y^{A}
+node (AXC) [right of =A] {$A
 \backslash
-times A$};
+times B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (XA) [left  of=XAA] {$X^A$};
+node (C) [right of=AXC] {$B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (YA) [left  of=YAA] {$Y^A$};
+node (B) [below  of=A] {$A'$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (X) [left  of=XA] {$X$};
+node (BXD) [below of=AXC] {$A' 
+\backslash
+times B'$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (Y) [left  of=YA] {$Y$};
+node (D) [below  of=C] {$B'$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1109,47 +1141,41 @@ node (Y) [left  of=YA] {$Y$};
 
     
 \backslash
-draw[->] (X) edge node [left] {$f$} (Y);
+draw[->] (A) edge node [left] {$a$} (B);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (XAA) edge [bend right] node [above] {$
+draw[->] (AXC) edge node [above] {$
 \backslash
-varepsilon_{AX}$} (X);
+pi_A$} (A);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (YAA) edge [bend left] node [below] {$
+draw[->] (AXC) edge node [above] {$
 \backslash
-varepsilon_{AY}$} (Y);
+pi_B$} (C);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (XAA) edge node [right] {$
-\backslash
-overline{f
-\backslash
-circ
-\backslash
-varepsilon_{AX}} 
-\backslash
-times id_A$} (YAA);
+draw[->] (C) edge node [right] {$b$} (D);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->, dashed] (XA) edge node [left] {$$} (YA);
+draw[->, dashed] (AXC) edge node [anchor=center] {$a
+\backslash
+times b$} (BXD);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1170,34 +1196,25 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left(-^{A}\times A\right)\left(id_{X}\right)=\overline{id_{X}\circ\varepsilon_{AX}}\times id_{A}=$
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula $=\overline{\varepsilon_{AX}}\times id_{A}=id_{X^{A}}\times id_{A}=id_{X^{A}\times A}=id_{\left(-^{A}\times A\right)\left(X\right)}$
+\begin_inset Formula $\Pi\left(id_{\left(X,Y\right)}\right)=\Pi\left(id_{X},id_{Y}\right)=id_{X}\times id_{Y}=id_{X\times Y}=id_{\Pi\left(X,Y\right)}$
 \end_inset
 
 .
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 Sean 
-\begin_inset Formula $f:X\to Y$
+\begin_inset Formula $f:=\left(a:A\to A',b:B\to B'\right)$
 \end_inset
 
  y 
-\begin_inset Formula $g:Y\to Z$
+\begin_inset Formula $g:=\left(a':A'\to A'',b':B'\to B''\right)$
 \end_inset
 
- luego: 
+, luego:
 \begin_inset Formula 
 \[
-\left(-^{A}\times A\right)\left(g\circ f\right)=\overline{\left(g\circ f\right)\circ\varepsilon_{AX}}\times id_{A}=
+\Pi\left(g\circ f\right)=\Pi\left(a'\circ a,b'\circ b\right)=\left(a'\circ a\right)\times\left(b'\circ b\right)=
 \]
 
 \end_inset
@@ -1205,31 +1222,7 @@ Sean
 
 \begin_inset Formula 
 \[
-=\overline{\varepsilon_{AZ}\circ\left(\overline{g\circ\varepsilon_{AY}}\times id_{A}\right)\circ\left(\overline{f\circ\varepsilon_{AX}}\times id_{A}\right)}\times id_{A}=
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-=\overline{\varepsilon_{AZ}\circ\left(\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)\times id_{A}\right)}\times id_{A}=
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-=\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)\times id_{A}=\left(\overline{g\circ\varepsilon_{AY}}\circ\overline{f\circ\varepsilon_{AX}}\right)\times\left(id_{A}\circ id_{A}\right)=
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-=\left(\overline{g\circ\varepsilon_{AY}}\times id_{A}\right)\circ\left(\overline{f\circ\varepsilon_{AX}}\times id_{A}\right)=\left(-^{A}\times A\right)\left(g\right)\circ\left(-^{A}\times A\right)\left(f\right)
+=\left(a'\times b'\right)\circ\left(a\times b\right)=\Pi\left(a',b'\right)\circ\Pi\left(a,b\right)=\Pi\left(g\right)\circ\Pi\left(f\right)
 \]
 
 \end_inset
@@ -1238,10 +1231,6 @@ Sean
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
-
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -1335,6 +1324,10 @@ Observemos que para un morfismo
 \end{aligned}
 \]
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -2188,10 +2181,6 @@ Probar o refutar: sea
 \end_inset
 
  es un isomorfismo natural.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
