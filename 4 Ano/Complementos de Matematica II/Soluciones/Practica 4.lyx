@@ -110,28 +110,28 @@ begin{tikzpicture}[node distance = 1.6cm,auto]
 
     
 \backslash
-node[state] (a) {$a$};
+node (a) {$A$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (c) [below  of=a] {$c$};
+node (c) [below  of=a] {$C$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (b) [right  of=a] {$b$};
+node (b) [right  of=a] {$B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (d) [below  of=b] {$d$};
+node (d) [below  of=b] {$D$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -142,35 +142,35 @@ node[state] (d) [below  of=b] {$d$};
 
     
 \backslash
-draw[->] (a) edge node {p} (b);
+draw[->] (a) edge node {$p$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node [left] {q} (c);
+draw[->] (a) edge node [left] {$q$} (c);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node {r} (d);
+draw[->] (a) edge node {$r$} (d);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node {s} (d);
+draw[->] (b) edge node {$s$} (d);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node [below] {t} (d);
+draw[->] (c) edge node [below] {$t$} (d);
 \end_layout
 
 \begin_layout Plain Layout
@@ -209,28 +209,28 @@ begin{tikzpicture}[node distance = 1.6cm, auto]
 
     
 \backslash
-node[state] (a) {$a$};
+node (a) {$A$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (c) [below  of=a] {$c$};
+node (c) [below  of=a] {$C$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (b) [right  of=a] {$b$};
+node (b) [right  of=a] {$B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (d) [below  of=b] {$d$};
+node (d) [below  of=b] {$D$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -241,35 +241,35 @@ node[state] (d) [below  of=b] {$d$};
 
     
 \backslash
-draw[->] (a) edge node {p} (b);
+draw[->] (a) edge node {$p$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node [left] {q} (c);
+draw[->] (a) edge node [left] {$q$} (c);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node {r} (c);
+draw[->] (b) edge node {$r$} (c);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node {s} (d);
+draw[->] (b) edge node {$s$} (d);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node [below] {t} (d);
+draw[->] (c) edge node [below] {$t$} (d);
 \end_layout
 
 \begin_layout Plain Layout
@@ -951,24 +951,24 @@ Asociatividad
 \end_deeper
 \begin_layout Enumerate
 Definamos 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
  como la categoría de las flechas de una categoría 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
 , es decir, los objetos de 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
  son las flechas de 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
 .
  Una flecha de 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
  de 
@@ -984,7 +984,7 @@ Definamos
 \end_inset
 
  de flechas de 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  tales que 
@@ -997,7 +997,7 @@ Definamos
 \begin_deeper
 \begin_layout Enumerate
 Expresar las flechas de 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
  en términos de diagramas conmutativos.
@@ -1028,46 +1028,21 @@ begin{tikzpicture}[node distance = 1.6cm, auto]
 
     
 \backslash
-node[state] (a) {$a$};
+node[state] (a) {$A$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (b) [right  of=a] {$b$};
+node[state] (b) [right  of=a] {$B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (c) [right  of=b] {$c$};
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (d) [below  of=a] {$d$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (e) [right  of=d] {$e$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (f) [right  of=e] {$f$};
+node[state] (c) [right  of=b] {$C$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1078,49 +1053,74 @@ node[state] (f) [right  of=e] {$f$};
 
     
 \backslash
-draw[->] (a) edge node {p} (b);
+node[state] (d) [below  of=a] {$D$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node {q} (c);
+node[state] (e) [right  of=d] {$E$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (d) edge node [below] {r} (e);
+node[state] (f) [right  of=e] {$F$};
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (e) edge node [below] {s} (f);
+draw[->] (a) edge node {$p$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node [left] {t} (d);
+draw[->] (b) edge node {$q$} (c);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node {u} (e);
+draw[->] (d) edge node [below] {$r$} (e);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node {v} (f);
+draw[->] (e) edge node [below] {$s$} (f);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (a) edge node [left] {$t$} (d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (b) edge node {$u$} (e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (c) edge node {$v$} (f);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1143,7 +1143,7 @@ end{tikzpicture}
 \end_deeper
 \begin_layout Enumerate
 Utilizar el apartado anterior para definir la composición en 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
 .
@@ -1151,7 +1151,7 @@ Utilizar el apartado anterior para definir la composición en
 
 \begin_layout Enumerate
 Verificar que 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
  es una categoría.
@@ -1167,11 +1167,11 @@ El par
 \end_inset
 
  es una flecha de 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
  si el siguiente diagrama conmuta en 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
 :
@@ -1229,28 +1229,28 @@ node[state] (e) [below  of=b] {$B'$};
 
     
 \backslash
-draw[->] (a) edge node {f} (b);
+draw[->] (a) edge node {$f$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (d) edge node [below] {g} (e);
+draw[->] (d) edge node [below] {$g$} (e);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node [left] {a} (d);
+draw[->] (a) edge node [left] {$a$} (d);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node [right] {b} (e);
+draw[->] (b) edge node [right] {$b$} (e);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1286,7 +1286,7 @@ Sabemos que
 
 .
  Por asociatividad en 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  
@@ -1334,7 +1334,7 @@ Para cada
 \end_inset
 
  en 
-\begin_inset Formula $ob\,C^{\to}$
+\begin_inset Formula $ob\,\mathcal{C}^{\to}$
 \end_inset
 
  definimos 
@@ -1351,7 +1351,7 @@ Observemos que
 \end_inset
 
  es una flecha de 
-\begin_inset Formula $C^{\to}$
+\begin_inset Formula $\mathcal{C}^{\to}$
 \end_inset
 
  pues el siguiente diagrama conmuta:
@@ -1409,14 +1409,14 @@ node[state] (e) [below  of=b] {$B$};
 
     
 \backslash
-draw[->] (a) edge node {f} (b);
+draw[->] (a) edge node {$f$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (d) edge node [below] {f} (e);
+draw[->] (d) edge node [below] {$f$} (e);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1473,11 +1473,11 @@ Sean
 
 \begin_layout Itemize
 Análogamente sean 
-\begin_inset Formula $a:D\to A$
+\begin_inset Formula $a:A'\to A$
 \end_inset
 
  y 
-\begin_inset Formula $b:E\to B$
+\begin_inset Formula $b:B'\to B$
 \end_inset
 
 , entonces:
@@ -1527,46 +1527,21 @@ begin{tikzpicture}[node distance = 1.6cm, auto]
 
     
 \backslash
-node[state] (a) {$a$};
+node[state] (a) {$A$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (b) [right  of=a] {$b$};
+node[state] (b) [right  of=a] {$B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (c) [right  of=b] {$c$};
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (d) [below  of=a] {$d$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (e) [right  of=d] {$e$};
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-node[state] (f) [right  of=e] {$f$};
+node[state] (c) [right  of=b] {$C$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1577,14 +1552,21 @@ node[state] (f) [right  of=e] {$f$};
 
     
 \backslash
-node[state] (g) [right  of=c] {$g$};
+node[state] (d) [below  of=a] {$D$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node[state] (h) [right  of=f] {$h$};
+node[state] (e) [right  of=d] {$E$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node[state] (f) [right  of=e] {$F$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -1595,70 +1577,88 @@ node[state] (h) [right  of=f] {$h$};
 
     
 \backslash
-draw[->] (a) edge node {p} (b);
+node[state] (g) [right  of=c] {$G$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node {q} (c);
+node[state] (h) [right  of=f] {$H$};
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (d) edge node [below] {r} (e);
+draw[->] (a) edge node {$p$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (e) edge node [below] {s} (f);
+draw[->] (b) edge node {$q$} (c);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node [left] {t} (d);
+draw[->] (d) edge node [below] {$r$} (e);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (b) edge node {u} (e);
+draw[->] (e) edge node [below] {$s$} (f);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node {v} (f);
+draw[->] (a) edge node [left] {$t$} (d);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node {w} (g);
+draw[->] (b) edge node {$u$} (e);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (f) edge node {x} (h);
+draw[->] (c) edge node {$v$} (f);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (g) edge node {y} (h);
+draw[->] (c) edge node {$w$} (g);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (f) edge node {$x$} (h);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (g) edge node {$y$} (h);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1701,7 +1701,7 @@ end{tikzpicture}
 \end_deeper
 \begin_layout Enumerate
 Sean 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  una categoría y 
@@ -1709,12 +1709,12 @@ Sean
 \end_inset
 
  un objeto de 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
 .
  Definimos 
-\begin_inset Formula $C|A$
+\begin_inset Formula $\mathcal{C}|A$
 \end_inset
 
  como la categoría cuyos objetos son las flechas 
@@ -1722,7 +1722,7 @@ Sean
 \end_inset
 
  de 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  tales que 
@@ -1735,7 +1735,7 @@ Sean
 \end_inset
 
  en 
-\begin_inset Formula $C|A$
+\begin_inset Formula $\mathcal{C}|A$
 \end_inset
 
  de 
@@ -1751,7 +1751,7 @@ Sean
 \end_inset
 
  de 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  tal que 
@@ -1764,7 +1764,7 @@ Sean
 \begin_deeper
 \begin_layout Enumerate
 Expresar las flechas de 
-\begin_inset Formula $C|A$
+\begin_inset Formula $\mathcal{C}|A$
 \end_inset
 
  en términos de diagramas conmutativos.
@@ -1772,7 +1772,7 @@ Expresar las flechas de
 
 \begin_layout Enumerate
 Verificar que 
-\begin_inset Formula $C|A$
+\begin_inset Formula $\mathcal{C}|A$
 \end_inset
 
  es una categoría.
@@ -1800,7 +1800,7 @@ Soluciones
 
 \begin_layout Enumerate
 Si el siguiente diagrama conmuta en 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
 , entonces 
@@ -1808,7 +1808,7 @@ Si el siguiente diagrama conmuta en
 \end_inset
 
  es una flecha de 
-\begin_inset Formula $C|A$
+\begin_inset Formula $\mathcal{C}|A$
 \end_inset
 
 .
@@ -1859,21 +1859,21 @@ node[state] (b) [right  of=a] {$A$};
 
     
 \backslash
-draw[->] (a) edge node {f} (b);
+draw[->] (a) edge node {$f$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node [left] {g} (c);
+draw[->] (a) edge node [left] {$g$} (c);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node [right] {h} (b);
+draw[->] (c) edge node [right] {$h$} (b);
 \end_layout
 
 \begin_layout Plain Layout
@@ -1912,15 +1912,15 @@ Dados dos morfismos
 \end_inset
 
  en 
-\begin_inset Formula $C|A$
+\begin_inset Formula $\mathcal{C}|A$
 \end_inset
 
  definimos la composición en 
-\begin_inset Formula $C|A$
+\begin_inset Formula $\mathcal{C}|A$
 \end_inset
 
  como la composición en 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  y para cada objeto 
@@ -1988,7 +1988,7 @@ node[state] (b) [right  of=a] {$A$};
 
     
 \backslash
-draw[->] (a) edge node {f} (b);
+draw[->] (a) edge node {$f$} (b);
 \end_layout
 
 \begin_layout Plain Layout
@@ -2002,7 +2002,7 @@ draw[->] (a) edge node [left] {$id_f$} (c);
 
     
 \backslash
-draw[->] (c) edge node [right] {f} (b);
+draw[->] (c) edge node [right] {$f$} (b);
 \end_layout
 
 \begin_layout Plain Layout
@@ -2135,49 +2135,49 @@ node[state] (b) [right  of=a] {$A$};
 
     
 \backslash
-draw[->] (a) edge node {f} (b);
+draw[->] (a) edge node {$f$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (a) edge node [left] {g} (c);
+draw[->] (a) edge node [left] {$g$} (c);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node [right] {h} (b);
+draw[->] (c) edge node [right] {$h$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (c) edge node [left] {p} (d);
+draw[->] (c) edge node [left] {$p$} (d);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (d) edge node [below] {r} (e);
+draw[->] (d) edge node [below] {$r$} (e);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (e) edge [bend right] node [right] {s} (b);
+draw[->] (e) edge [bend right] node [right] {$s$} (b);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (d) edge [bend right] node [left] {q} (b);
+draw[->] (d) edge [bend right] node [left] {$q$} (b);
 \end_layout
 
 \begin_layout Plain Layout
@@ -2203,7 +2203,7 @@ luego
 \end_inset
 
  por asociatividad en 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
 .
@@ -2475,7 +2475,7 @@ g\circ f\left(x\right)=h\circ f\left(x\right)\iff g\left(f\left(x\right)\right)=
 \end_deeper
 \begin_layout Enumerate
 Sean 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  una categoría y 
@@ -2483,7 +2483,7 @@ Sean
 \end_inset
 
  flechas de 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
 .
@@ -2947,7 +2947,7 @@ Monomorfismo: Sean
 \end_inset
 
  morfismos tales que 
-\begin_inset Formula $f\circ g=f\circ h$
+\begin_inset Formula $\text{\ensuremath{f\circ g=f\circ h}}$
 \end_inset
 
  y supongamos existe 
@@ -3274,7 +3274,7 @@ La categoría del poset
 \begin_inset Formula $\left(\mathbb{Z}^{-},\leq\right)$
 \end_inset
 
- no tiene objetos iniciales.
+ no tiene objetos iniciales (mínimos).
 \end_layout
 
 \begin_layout Itemize
@@ -3282,7 +3282,7 @@ La categoría del poset
 \begin_inset Formula $\left(\mathbb{Z}^{+},\leq\right)$
 \end_inset
 
- no tiene objetos finales.
+ no tiene objetos finales (máximos).
 \end_layout
 
 \begin_layout Itemize
@@ -3790,10 +3790,10 @@ Terminales:
 
 \begin_layout Itemize
 Productos: 
-\begin_inset Formula $\left(A,\oplus\right)\times\left(B,\otimes\right)=\left(\left(A\times B,\right),,\right)$
+\begin_inset Formula $\left(A,\oplus\right)\times\left(B,\otimes\right)=\left(\left(A\times B,\left(\oplus,\otimes\right)\right),fst,snd\right)$
 \end_inset
 
- COMPLETAR.
+.
 \end_layout
 
 \begin_layout Itemize
@@ -3857,10 +3857,12 @@ Solución
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\left(\mathbb{Q},\leq\right)$
+Recordemos que en un poset el producto de dos elementos es el ínfimo, luego
+ en 
+\begin_inset Formula $\left(\left\{ x,y\right\} ,\Delta\right)$
 \end_inset
 
-.
+ no hay productos.
 \end_layout
 
 \end_deeper
@@ -4079,10 +4081,6 @@ Dicho morfismo existe pues lo garantiza la propiedad universal de
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -4430,7 +4428,7 @@ Además sabemos que el único morfismo que hace conmutar el diagrama exterior
 
 .
  Veamos entonces que 
-\begin_inset Formula $\left\langle f,g\right\rangle $
+\begin_inset Formula $\left\langle f,g\right\rangle \circ h$
 \end_inset
 
  también conmuta el diagrama exterior:
@@ -6115,11 +6113,11 @@ Solución
 \end_inset
 
 , 
-\begin_inset Formula $p1=fst$
+\begin_inset Formula $p_{1}=fst$
 \end_inset
 
 , 
-\begin_inset Formula $p2=snd$
+\begin_inset Formula $p_{2}=snd$
 \end_inset
 
 .
@@ -6137,7 +6135,7 @@ Sea
 \begin_deeper
 \begin_layout Enumerate
 Probar 
-\begin_inset Formula $curry\left(eval_{A,B}\right)=id_{B^{A}}$
+\begin_inset Formula $curry\left(eval_{AB}\right)=id_{B^{A}}$
 \end_inset
 
 .
@@ -6263,7 +6261,7 @@ node (B) [right  of=A] {$B$};
 
     
 \backslash
-draw[->] (A) edge node {$
+draw[->, red] (A) edge node {$
 \backslash
 varepsilon$} (B);
 \end_layout
@@ -6285,7 +6283,7 @@ varepsilon}$} (BA);
 
     
 \backslash
-draw[->] (CA) edge node [left] {$
+draw[->, red] (CA) edge node [left] {$
 \backslash
 widetilde{
 \backslash
@@ -6298,7 +6296,7 @@ times id_{A}$} (A);
 
     
 \backslash
-draw[->] (CA) edge node [below right] {$
+draw[->,red ] (CA) edge node [below right] {$
 \backslash
 varepsilon$} (B);
 \end_layout
@@ -6318,6 +6316,22 @@ end{tikzpicture}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Puesto que 
+\begin_inset Formula $id_{B^{A}}$
+\end_inset
+
+ también tiene esa propiedad, entonces 
+\begin_inset Formula $\widetilde{\varepsilon}=id_{B^{A}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
 \begin_inset Preview
 
 \begin_layout Standard
@@ -6389,11 +6403,18 @@ node (D) [right  of=CD] {$A$};
 
     
 \backslash
-draw[->, dashed] (A) edge [left] node {$
+node (X) [below of=CD] {$B$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-widetilde{
-\backslash
-varepsilon}$} (C);
+draw[->, dashed] (A) edge [left] node {$id_{B^A}$} (C);
 \end_layout
 
 \begin_layout Plain Layout
@@ -6451,13 +6472,22 @@ pi_2$} (D);
 
     
 \backslash
-draw[->, dashed] (AB) edge [anchor=center] node {$
+draw[->, red] (CD) edge [right] node {$
 \backslash
-widetilde{
+varepsilon$} (X);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
 \backslash
-varepsilon}
+draw[->, dashed, red] (AB) edge [anchor=center] node {$id_{B^A} 
 \backslash
-times id_{A}$} (CD);
+times id_A$} (CD);
 \end_layout
 
 \begin_layout Plain Layout
@@ -6478,15 +6508,16 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Standard
-Puesto que 
-\begin_inset Formula $id_{B^{A}}$
-\end_inset
-
- también tiene esa propiedad, entonces 
-\begin_inset Formula $\widetilde{\varepsilon}=id_{B^{A}}$
+\align block
+Nótese que 
+\begin_inset Formula $id_{B^{A}}\times id_{A}=\left\langle id_{B^{A}}\circ\pi_{1},id_{A}\circ\pi_{2}\right\rangle =\left\langle \pi_{1},\pi_{2}\right\rangle =id_{B^{A}\times A}$
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -6604,10 +6635,6 @@ end{tikzpicture}
 \end_inset
 
 
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -6680,6 +6707,13 @@ node (S) [left of=SXB] {$S$};
 
 \begin_layout Plain Layout
 
+    
+\backslash
+node (C) [below  of=CBXB] {$C$};
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -6720,7 +6754,7 @@ pi_3$} (S);
 
     
 \backslash
-draw[->] (SXB) edge node {$
+draw[->] (SXB) edge node  {$
 \backslash
 pi_4$} (B);
 \end_layout
@@ -6732,6 +6766,15 @@ pi_4$} (B);
 draw[->, dashed] (SXB) edge node [left] {$
 \backslash
 exists !$} (CBXB);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CBXB) edge node [right] {$
+\backslash
+varepsilon$} (C);
 \end_layout
 
 \begin_layout Plain Layout
@@ -6892,9 +6935,170 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Por ser 
+\begin_inset Formula $1$
+\end_inset
+
+ un objeto terminal, sabemos que existe un único morfismo 
+\begin_inset Formula $f:1\times A\to1$
+\end_inset
+
+ y otro 
+\begin_inset Formula $g:1^{A}\to1$
+\end_inset
+
+; además por ser 
+\begin_inset Formula $1^{A}$
+\end_inset
+
+ exponencial, sabemos que existe un único morfismo 
+\begin_inset Formula $\widetilde{f}:1\to1^{A}$
+\end_inset
+
+ tal que el siguiente diagrama conmuta:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance = 1.6cm, auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (A) {$1^A 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CA) [below  of=A] {$1 
+\backslash
+times A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (BA) [left = 2 cm of A] {$1^A$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (XA) [below of=BA] {$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (B) [right  of=A] {$1$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (A) edge node {$
+\backslash
+exists ! 
+\backslash
+varepsilon$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->, dashed] (XA) edge [bend left] node [left] {$
+\backslash
+exists !  
+\backslash
+widetilde{f}$} (BA);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (BA) edge [bend left] node [right] {$
+\backslash
+exists !  g$} (XA);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[->] (CA) edge node [left] {$
+\backslash
+widetilde{f}
+\backslash
+times id_A$} (A);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[-> ] (CA) edge node [below right] {$
+\backslash
+exists ! f$} (B);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset Formula $g\circ\widetilde{f}:1\to1$
+\end_inset
+
+ y el único morfismo de este tipo es 
+\begin_inset Formula $id_{1}$
+\end_inset
+
+.
+ COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -6918,10 +7122,6 @@ Solución
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -6950,19 +7150,11 @@ Por ser acotado tiene mínimo y máximo luego en la categoría corresponden
 \end_layout
 
 \begin_layout Standard
-Veremos ahora que si 
-\begin_inset Formula $C$
+Veremos ahora que 
+\begin_inset Formula $B^{A}=\overline{A}\lor B$
 \end_inset
 
- es complemento de 
-\begin_inset Formula $B$
-\end_inset
-
- entonces 
-\begin_inset Formula $C^{B}$
-\end_inset
-
- es exponencial.
+:
 \end_layout
 
 \begin_layout Standard
@@ -6977,46 +7169,58 @@ status open
 
 
 \backslash
-begin{tikzpicture}[node distance = 1.6cm, auto]
+begin{tikzpicture}[node distance = 1.9cm, auto]
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (CAA) {$C^B 
+node (CAA) {$
 \backslash
-land B$};
+left(
+\backslash
+overline{A}
+\backslash
+lor B
+\backslash
+right)
+\backslash
+land A$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (YA) [below of=CAA] {$A 
+node (YA) [below of=CAA] {$C 
 \backslash
-land  B$};
+land  A$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (C) [right  of=CAA] {$C$};
+node (C) [right  of=CAA] {$B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (CA) [left = 1cm of CAA] {$C^B$};
+node (CA) [left = 1cm of CAA] {$
+\backslash
+overline{A}
+\backslash
+lor B$};
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-node (Y) [below of=CA] {$A$};
+node (Y) [below of=CA] {$C$};
 \end_layout
 
 \begin_layout Plain Layout
@@ -7027,28 +7231,32 @@ node (Y) [below of=CA] {$A$};
 
     
 \backslash
-draw[->] (CAA) edge node {$$} (C);
+draw[->] (CAA) edge node {$
+\backslash
+varepsilon$} (C);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (YA) edge node {$$} (CAA);
+draw[->] (YA) edge node {$f$} (CAA);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (YA) edge node [below right] {$$} (C);
+draw[->] (YA) edge node [below right] {$g$} (C);
 \end_layout
 
 \begin_layout Plain Layout
 
     
 \backslash
-draw[->] (Y) edge node {$$} (CA);
+draw[->] (Y) edge node {$
+\backslash
+widetilde{g}$} (CA);
 \end_layout
 
 \begin_layout Plain Layout
@@ -7068,38 +7276,81 @@ end{tikzpicture}
 
 \end_layout
 
-\begin_layout Standard
-Sabemos que 
-\begin_inset Formula $C\lor B=1$
+\begin_layout Itemize
+Observemos que:
+\begin_inset Formula 
+\[
+\left(\overline{A}\lor B\right)\land A\leq B\iff\left(\overline{A}\land A\right)\lor\left(B\land A\right)\leq B\iff
+\]
+
 \end_inset
 
- y 
-\begin_inset Formula $C\land B=0$
+
+\begin_inset Formula 
+\[
+\iff0\lor\left(B\land A\right)\leq B\iff B\land A\leq B
+\]
+
+\end_inset
+
+lo cual vale, por lo que existe 
+\begin_inset Formula $\varepsilon$
 \end_inset
 
 .
- Debemos ver que:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $C^{B}\land B\leq C$
+Sea 
+\begin_inset Formula $C\land A\leq B\iff\boxed{\left(C\land A\right)\lor B}=B$
 \end_inset
 
-: COMPLETAR.
+, luego:
+\begin_inset Formula 
+\[
+C\lor\left(\overline{A}\lor B\right)=\left(C\land1\right)\lor\left(\overline{A}\lor B\right)=\left(C\land\left(A\lor\overline{A}\right)\right)\lor\left(\overline{A}\lor B\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(C\land A\right)\lor\left(C\land\overline{A}\right)\lor\overline{A}\lor B=\boxed{\left(C\land A\right)\lor B}\lor\left(C\land\overline{A}\right)\lor\overline{A}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=B\lor\left(\left(C\land\overline{A}\right)\lor\overline{A}\right)=B\lor\overline{A}=\overline{A}\lor B
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $C\leq\overline{A}\lor B$
+\end_inset
+
+, es decir que existe 
+\begin_inset Formula $\widetilde{g}$
+\end_inset
+
+.
+ Ademas es única pues es un morfismo de la categoría de un poset.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $A\land B\leq C\Rightarrow A\land B\leq C^{B}\land B$
+Finalmente 
+\begin_inset Formula $C\land A\leq\left(\overline{A}\lor B\right)\land A\iff C\leq\overline{A}\lor B$
 \end_inset
 
-: COMPLETAR.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $A\land B\leq C\Rightarrow A\leq C^{B}$
+ lo cual vale por el punto anterior, es decir que 
+\begin_inset Formula $f$
 \end_inset
 
-: COMPLETAR.
+ existe.
 \end_layout
 
 \end_deeper
@@ -7162,6 +7413,10 @@ Solución
 
 \begin_layout Standard
 COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
