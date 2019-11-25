@@ -1415,10 +1415,50 @@ Si
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Itemize
+\begin_inset Formula $I\left(id_{X}\right)=id_{X}^{-1}:\mathcal{P}\left(X\right)\to\mathcal{P}\left(X\right)=id_{\mathcal{P}\left(X\right)}=id_{I\left(X\right)}$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $I\left(g\circ f\right)\left(X\subseteq C\right)=\left(g\circ f\right)^{-1}\left(X\right)=\boxed{\left\{ a\in A:g\circ f\left(a\right)\in X\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(I\left(f\right)\circ I\left(g\right)\right)\left(X\right)=f^{-1}\left(g^{-1}\left(X\right)\right)=f^{-1}\left\{ b\in B:g\left(b\right)\in X\right\} =$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left\{ a\in A:f\left(a\right)\in\left\{ b\in B:g\left(b\right)\in X\right\} \right\} =\boxed{\left\{ a\in A:g\circ f\left(a\right)\in X\right\} }$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dado un semigurpo 
@@ -1465,7 +1505,7 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 Probar o refutar: sea 
-\begin_inset Formula $C$
+\begin_inset Formula $\mathcal{C}$
 \end_inset
 
  una categoría con productos, y 
@@ -1473,10 +1513,14 @@ Probar o refutar: sea
 \end_inset
 
  un functor, entonces siempre existe un único morfismo 
-\begin_inset Formula $F\left(A\times B\right)\to FA\times FB$
+\begin_inset Formula $\text{\ensuremath{F\left(A\times B\right)\to F\left(A\right)\times F\left(B\right)}}$
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1485,7 +1529,53 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Falso.
+ Basta considerar (por ejemplo) el funtor 
+\begin_inset Formula $Maybe$
+\end_inset
+
+ en la categoría 
+\begin_inset Formula $Hask$
+\end_inset
+
+ en donde:
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+f :: Maybe (a, b) -> (Maybe a, Maybe b)
+\end_layout
+
+\begin_layout Plain Layout
+
+f _ = (Nothing, Nothing)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+g :: Maybe (a, b) -> (Maybe a, Maybe b)
+\end_layout
+
+\begin_layout Plain Layout
+
+g Nothing       = (Nothing, Nothing)
+\end_layout
+
+\begin_layout Plain Layout
+
+g (Just (a, b)) = (Just a, Just b)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1517,9 +1607,86 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Definimos 
+\begin_inset Formula $\text{\ensuremath{U^{2}\left(f:\left(X,\otimes_{X},e_{X}\right)\to\left(Y,\otimes_{Y},e_{Y}\right)\right):=f^{2}:X\times X\to Y\times Y}}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f^{2}\left(x_{1},x_{2}\right)=\left(U\left(f\right)\left(x_{1}\right),U\left(f\right)\left(x_{2}\right)\right)=\left(f'\left(x_{1}\right),f'\left(x_{2}\right)\right)$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $U^{2}\left(id_{\left(X,\otimes,e\right)}\right)\left(x_{1},x_{2}\right)=\left(id_{X}'\left(x_{1}\right),id_{X}'\left(x_{2}\right)\right)=\boxed{\left(x_{1},x_{2}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $id_{U^{2}\left(\left(X,\otimes,e\right)\right)}\left(x_{1},x_{2}\right)=id_{X\times X}\left(x_{1},x_{2}\right)=\boxed{\left(x_{1},x_{2}\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sean 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ luego:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $U^{2}\left(g\circ f\right)\left(a_{1},a_{2}\right)=\left(g\circ f\right)^{2}\left(a_{1},a_{2}\right)=\left(g\circ f\right)'\left(a_{1},a_{2}\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\boxed{\left(\left(g\circ f\right)'\left(a_{1}\right),\left(g\circ f\right)'\left(a_{2}\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(U^{2}\left(g\right)\circ U^{2}\left(f\right)\right)\left(a_{1},a_{2}\right)=g^{2}\circ f^{2}\left(a_{1},a_{2}\right)=g^{2}\left(f'\left(a_{1}\right),f'\left(a_{2}\right)\right)=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left(g'\left(f'\left(a_{1}\right)\right),g'\left(f'\left(a_{2}\right)\right)\right)=\boxed{\left(\left(g\circ f\right)'\left(a_{1}\right),\left(g\circ f\right)'\left(a_{2}\right)\right)}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \end_deeper
 \begin_layout Paragraph
 Transformaciones naturales
@@ -1544,6 +1711,10 @@ Dada dos categorías
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1683,6 +1854,18 @@ end{tikzpicture}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Además 
+\begin_inset Formula $id_{F_{X}}\circ id_{F_{X}}=id_{F\left(X\right)}\circ id_{F\left(X\right)}=id_{F\left(X\right)}=id_{F_{X}}$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $id_{F}$
+\end_inset
+
+ es isomorfismo.
 \end_layout
 
 \end_deeper
@@ -1867,6 +2050,10 @@ REV_{X}\circ REV_{X}\left\langle x_{1},\ldots,x_{n}\right\rangle =\left\langle x
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -2037,7 +2224,9 @@ right)$};
 
     
 \backslash
-draw[->] (X) edge node [left] {$f$} (Y);
+draw[->] (X) edge node [left] {$id_{
+\backslash
+mathcal{C}}(f)=f$} (Y);
 \end_layout
 
 \begin_layout Plain Layout
@@ -2112,7 +2301,8 @@ Del diagrama anterior podemos deducir que
 \begin_inset Formula $\eta_{X}=\varepsilon_{AX}$
 \end_inset
 
-.
+, puesto que el diagrama conmuta por la propiedad universal de objetos exponenci
+ales.
 \end_layout
 
 \end_deeper
@@ -2181,6 +2371,10 @@ Probar o refutar: sea
 \end_inset
 
  es un isomorfismo natural.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2359,24 +2553,12 @@ end{tikzpicture}
 \end_layout
 
 \begin_layout Standard
-Observemos que en 
+Recordemos que en 
 \begin_inset Formula $Set$
 \end_inset
 
- el único isomorfismo entre 
-\begin_inset Formula $X$
-\end_inset
-
- y 
-\begin_inset Formula $X$
-\end_inset
-
- es 
-\begin_inset Formula $id_{X}$
-\end_inset
-
-, luego 
-\begin_inset Formula $\eta$
+ los isomorfismos son funciones biyectivas, luego 
+\begin_inset Formula $\eta_{X}$
 \end_inset
 
  no es isomorfismo natural.
