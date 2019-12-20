@@ -1,0 +1,48 @@
+2018/06 - v4.6 bugfix update of classicthesis.sty, with a number of changes under the hood
+
+2017/12 - v4.5 bugfix update of classicthesis.sty; LyX v. 2.3 version only
+
+2017/10 - v4.4
+- this is a major upgrade of the backend; LyX part of the manual has been updated to reflect the changes made in classicthesis.sty
+- LyX 2.3 will soon be out, with full support for biblatex; we're no longer using hacks to make it work
+- pdfs of ClassicThesis.lyx and classicthesis-article.lyx, classicthesis-book.lyx will we produced with XeLaTeX using OpenType fonts (TeX Gyre Pagella, EB Garamond etc.)
+
+2016/09 - v4.3pi
+alpha (testing) version using simplified classicthesis.sty (v4.3pi)
+removing hacks of v4.2 used by biblatex to find .bib files; LyX 2.2 introduced BIBINPUTS pointing to the working directory
+testing support for XeLaTeX, LuaLaTeX and OpenType fonts (end of Chapter 4)
+
+2015/09 - v4.2 
+bibliography managed by biblatex, processing with biber or bibtex8
+switched to utf8 encoding
+- successful build in LyX version 2.1.4 on Fedora Linux 22 with TeX Live 2014
+- successful build in LyX version 2.1.4 on Windows XP (CrossOver/Wine) with MiKTeX 2.9
+
+2015/09 - v4.1 bugfix update
+
+2012/08 - v4.1
+
+2011/12 - v4.0
+
+2011/10 - v3.1
+
+2011/06 - v3.0
+- LyX layout file (classicthesis.layout) created. When used as a local document class layout file, it makes KOMA Script scrreprt.cls the class of the document, relays some predefined options to it and defines all the environments, character styles, and custom insets inherent to the Classic Thesis Style.
+- successful build in LyX version 2.0.0 on Fedora Linux 15 with TeX Live 2010
+- successful build in LyX version 1.6.10 on Fedora Linux 13 with TeX Live 2010
+- successful build in LyX version 2.0.0 on Windows XP with MiKTeX 2.9
+
+2011/03 - v3.0 alpha/beta
+- LyX port and LaTeX version 3.0 of ClassicThesis now use the same two .sty files:
+	classicthesis.sty contains the core functionality of the style
+	classicthesis-preamble.sty is a classicthesis.sty package loader and user-configurable preamble file
+- LyX chapter files now use very few ERT's
+- successful build in LyX version 1.6.8 on Fedora Linux 13 with TeX Live 2010
+
+2009/08 - v1.1
+- fixed two graphics file paths in Chapter04.lyx
+- built successfully in LyX version 1.6.2 on Mac OSX 10.4.11 with TeX Version 3.1415926 (Web2C 7.5.7) installed using MacTEX-2008
+
+
+2009/03 - v1.0
+- First converted to LyX from ClassicThesis version 2.5

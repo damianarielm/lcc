@@ -1,0 +1,467 @@
+Changes in version 4.6 (June 2018)
+o Integration of arsclassica
+  (with permission from Lorenzo Pantieri)
+o Introduced style option for classicthesis,
+  allowing for changing style to arsclassica
+  (see classicthesis-arsclassica-book.tex as
+  an example)
+o Provision of customization and hooks, e.g.,
+  \ct@altfont and \ct@caps
+o Loading caption package in classicthesis.sty
+  (for better arsclassica integration)
+o Changed footmisc's option from "flushmargin"
+  to "marginal" in order to fix spacing
+  problems in non-KOMA settings (thanks to
+  Hugues de Lassus) #154
+X Removed double occurrence of "pdfpagemode"
+  in classicthesis-config.tex (thanks to
+  Csaba Hajdu)
+X Removed latexrelease (thanks to David
+  Carlisle and Ulrike Fischer)
+X Removed textcomp
+o Re-arranged package loading order, i.e.,
+  hyperref for avoiding problems
+o Generalized color names for easier user
+  customization (CTsemi, CTtitle)
+o Got rid of \refstepcounter{dummy}
+o Introduced \classicthesis to access version
+o Activating protrusion and expansion for
+  microtype if pdfLaTeX is used (beta-test)
+
+Changes in version 4.5 (December 2017)
+o Fixed vanished page numbers on chapter
+  opening pages (thanks to Ivo and Jos\'e M.
+  Alcaide) #144
+o Added support for B5 paper (thanks to
+  Jos\'e M. Alcaide) #145
+o Removed option "abstractoff" from
+  documentclass
+o Moved language selection from
+  documentclass to classicthesis-config.tex
+  (\PassOptionsToPackage for babel) #146
+o Added some protection to the optional
+  parameter of marginpar (Ivo) #143
+o Removed support for MinionPro (Ivo)
+  (can be manually included, see wiki)
+o Options "subfig" and "listings" now obsolete,
+  as correct treating done automatically (Ivo)
+o Many corrections and some clean-up of
+  the code (Ivo)
+o Changed \tableheadline to be left-aligned (in
+  classicthesis-config.tex)
+o Checked compatibility with arsclassica
+  package (successful)
+
+Changes in version 4.4 (October 2017)
+o Minor clean-up, also of .gitignore
+ (thanks to Jörn Hees)
+o \marginpar improved (thanks to Jörn Hees)
+o Workaround for removong headlines in "list of *"
+  environments (Contents.tex and ClassicThesis.tex)
+o Bibliography section headers now correctly using
+  spacedlowsmallcaps with biblatex (thanks to Ivo
+	and Enrico Gregorio)
+o Added some more books to bibliography for testing
+o Added help for external TikZ/PGF usage in
+  classicthesis-config.tex (thanks to Andreas Nautsch)
+o Fixed redefining \marginpar for two arguments (Ivo)
+o Fixed some spacing definitions and using the
+  soulutf8 package now (Ivo)
+o Reimplementation of \chapter and \part using solely
+  titlesec and tocloft (Ivo)
+o \ctparttext logic fixed (Ivo)
+o Logic for detecting PDF engines, pdftex, xetex,
+  luatex (Ivo)
+o Support for fontspec and OpenType fonts for suitable
+  PDF engines (Ivo)
+o Using kvoptions package so option=value is
+  available in classichtesis.sty (Ivo)
+o Support for more paper sizes, fixes for headinclude
+  and footinclude (Ivo)
+o Fixed use of subfigure (Ivo)
+o Fixed use of scrlayer-scrpage (Ivo)
+o Updated the documentation (Chapter01.tex)
+o Removed fixltx2e from classicthesis-config.tex and
+  inserted latexrelease there and classicthesis.sty
+o Added clarifications regarding use of GPL
+  (ClassicThesis.tex, Chapter01.tex)
+
+Changes in version 4.3 (not released)
+o When redefining the acronym label, check for the
+  acronym package's version (thanks to Scott Lowe)
+o Several minor fixes (comments, whitespaces removed,
+  .gitignore, .editorconfig, etc.; thanks to Jörn
+  Hees)
+o Updated comments regarding hyperref's draft option
+  (thanks to Claudio Diaspero)
+o Silenced the warnings from KOMA and titlesec about
+  each other, also in the examples (thanks to Jörg
+  Weber)
+
+Changes in version 4.2 (September 2015)
+o Fixed issue between titlesec and tocloft regarding
+  part numbering in the ToC (classicthesis.sty).
+  Thanks to Enrico Gregorio and Henri Menke.
+o Fixed bug with colored lines and graffiti
+  (classicthesis.sty). Thanks to Enrico Gregorio and
+  Stefano Bragaglia for the fix! (Also switched
+  graffiti from \slshape to \itshape.)
+o Changed \vspace*{8ex} to \vspace{8ex} (Contents.tex)
+o Moved \cleardoublepage from end of Contents.tex
+  to appropriate position in ClassicThesis.tex
+o \bflabel of acronym package removed, as it was
+  removed from acronym package and caused errors.
+  Now set \aclabelfont to \acsfont for consistency.
+o Converted major files to UTF-8 (thanks to Jörn Hees)
+  (Bibliography.bib excluded for now as BibTeX cannot
+  handle UTF-8)
+o Added support for BibLaTeX in
+  classicthesis-config.tex and Bibliography.tex
+  (thanks to Jörn Hees).
+  For LyX we will have a work-around for testing.
+o Added an example for one's own publication list
+  (via BibLaTeX) in Publications.tex (renamed from
+  Publication.tex)
+o Replaced/updated scrpage2 with scrlayer-scrpage
+  in classicthesis.sty (thanks to Ivo Pletìkosić).
+X Worked on Appendix case with floatperchapter
+  (works for captions but not for references so far)
+  Thanks to Claus Lahiri and Clemens Niederberger
+  for their help on this.
+  [REMOVED DUE TO OTHER PROBLEMS, SEE ISSUE #82]
+X Removed fixltx2e from classicthesis-config.tex and
+  have classicthesis.sty use or emulate the latest
+  LaTeX kernel via latexrelease (option: latest)
+  (thanks to Jörn Hees).
+  [REMOVED AS IT IS NOT AVAILABLE IN MANY
+  DISTRIBUTIONS, SEE ISSUE #107]
+
+Changes in version 4.1 (August 2012)
+o Working towards XeLaTeX support:
+  - "ifxetex" package for checking whether
+    XeTeX is in use (classicthesis.sty)
+  - Adjusted part, chapter, and tocEntry
+  - Thanks to Joerg Weber for his ideas and code
+  - Option "pdfspacing" does not work for XeTeX
+    and is disabled when XeTeX is running
+    (maybe implement spacing with fontspec later)
+o Load additional packages in order to
+  reduce warnings (classicthesis-config.tex)
+  - "textcomp" to fix warnings with missing font
+    shapes
+  - "scrhack" to fix warnings when using KOMA
+    with listings package
+o Replaced \mathrm-command with \textrm-command
+  (Chapter03.tex)
+
+Changes in version 4.0 (December 2011)
+o Due to lots of issues and complaints,
+  classicthesis-preamble.sty is replaced by
+  classicthesis-config.tex (which is cleaner,
+  nicer, better, etc. than before!)
+o No per-chapter-numbering also for equations
+  (classicthesis.sty and Chapter03.tex)
+o classicthesis.sty now also works without the
+  KOMA-classes (scrbook, scrartcl, etc.):
+  - This affects the text body shape, where the
+    package "typearea" is always loaded in order
+    to use \areaset
+  - And affects the layout of footnotes where the
+    package "footmisc" is loaded otherwise
+    (not 100\% identical look-and-feel but OK)
+o Help for using spanish babel with classicthesis
+  (classicthesis-config.tex)
+o Note about pdfsync issues with graffiti
+  (Chapter01.tex)
+o Minor clean-up of comments and duplicate lines
+  (classicthesis.sty)
+o Adjusted the colophon text (Colophon.tex)
+o Increased space for labels in the LoF, LoT, LoL
+o Included version information on the title page and
+  in the drafting and final version information
+  (classicthesis.sty and Titlepage.tex)
+
+Changes in version 3.0 (June 2011)
+o There have been some major changes in order to port
+  classicthesis to LyX easily. See below for details.
+  Special thanks go to Ivo Pletikosi\'c for all his
+  hard work he put into this project!
+o Changes in ClassicThesis.tex:
+  - Redundant fleqn removed from documentclass options
+   (will be set by amsmath package in preamble)
+  - KOMA adjustments for documentclass:
+    fontsize=11pt,paper=14
+  - Moved language options into documentclass due to LyX
+    issues with babel
+o Changes in classicthesis.sty:
+  - Removed bcor from \areaset command so that it can
+    be set via \documentclass option (BCOR=)
+  - New \ctparttext command for putting preamble text
+    after part titles (see ClassicThesis.tex for examples)
+  - \graffito command now also available as original
+    \marginpar (backward compatibility is enabled)
+  - Chapter number in margin done with \oldmarginpar
+o Changes to classicthesis-preamble.sty:
+  - Fixed autoref for subfigures (see Chapter 2 for example)
+  - Fixed issues with redefining autoref strings (for
+      different languages)
+  - Now contains all configuration information, such as
+    the title, your name etc.
+  - This package now also loads classicthesis.sty, change
+    the options classicthesis to be loaded with here
+  - Package inputenc now loaded with latin9 option
+  - Package listings now also loaded here
+  - Now safer package loading regarding options by
+    using \PassOptionsToPackage command extensively
+  - Inserted new string for \mySubtitle
+o Changes in Titlepage.tex and Titleback.tex because of new
+  string \mySubtitle
+o Changed a lot of the documentation, e.g., in Chapter01.tex
+
+Changes in version 2.9 (January 2011)
+o Fixed onlytext euler font for MinionPro font (in
+  classicthesis.sty)
+o Option "listsseparated" deprecated, because it led to some
+  strange side-effects (in classicthesis.sty)
+o Changed default font size to 11pt (in ClassicThesis.tex) and
+  adjusted text block size accordingly (in classicthesis.sty)
+o Fixed bug with backward compatibility regarding old commands
+  \myChapter and \myPart in classicthesis.sty
+o New option "floatperchapter" for classicthesis.sty, removed
+  all code for that from classicthesis-ldpkg.sty
+o Removed "nochapters" option from classicthesis-ldpkg.sty
+o Removed redundant loading of listings package (in
+  classicthesis-ldpkg.sty)
+o Fixed some headline bug in example classicthesis-book.tex
+o Fixed a bug when using parts with plain latex as in example
+  classicthesis-book.tex (in classicthesis.sty)
+
+Changes in version 2.8 (March/May 2010)
+o Fixed serious \graffito bug in classicthesis.sty
+  (thanks to Lorenzo Pantieri and Enrico Gregorio)
+o Included backward compatibility regarding old commands
+  \myChapter and \myPart in classicthesis.sty
+o Fixed drafting issues (draft information not shown at all)
+  caused by wrong code for listings and listsseparated options
+  in classicthesis.sty
+
+Changes in version 2.7 (February 2010, cumulative release)
+o Removed option for classicthesis-ldpkg.sty: nobackref
+  Introduced instead option "backref" for consistency
+  which works the other way (no backrefs by default)
+
+Changes in version 2.6.2 (January 2010, released as beta)
+o New option for classicthesis-ldpkg.sty: nobackref
+  (removes links to cited page in bibliography)
+o Fixed some spacing issues for LoF, LoT, LoL with option
+  "listsseparated" (in classicthesis.sty)
+
+Changes in version 2.6.1 (October 2009, released as beta)
+o Removed \myChapter and \myPart, you can now use the regular
+  \chapter and \part commands (in classicthesis.sty)
+  (thanks to Hinrich Harms for this)
+o Fixed used KOMA-options: numbers=noenddot, cleardoublepage=empty
+  (in ClassicThesis.tex)
+o Included hack to use citations in float environments, will
+  be fixed with caption package version 3.2 (in classicthesis.sty)
+o Included some font and text area fine-tuning code
+  (in ClassicThesis.tex)
+o Some testing with Libertine font (classicthesis-book.tex)
+o Fixed numbering of listings used in different chapters
+  (in ClassicThesis.tex, classicthesis.sty, classicthesis-ldpkg.sty)
+o Spacing between listings in different chapters and after List
+  of Listings header fixed (in classicthesis.sty)
+o Increased \newnumberwidth to sizeof(999) which is better for
+  documents with more than 99 pages (in classicthesis.sty)
+o New option for classicthesis.sty: manychapters
+
+Changes in version 2.6 (August 2009)
+o Centered the title page with the addmargin environment
+  (thanks to Nicolas Repp for the hint)
+o Fixed header for page two of Table of Contents (with 3
+  or more pages) (in Contents.tex)
+o Added numbering of \subsubsection (in Contents.tex)
+o Added correct Table of Contents entries for \subsubsection
+  (in classicthesis.sty)
+o Added printonlyused option to loading acronym package
+  (in classicthesis-ldpkg.sty)
+o Some code for "clean" hyperlinks (w/o color and w/o boxes)
+o Minor fix for \graffito (in classicthesis.sty)
+
+Changes in version 2.5.1 (May 2009, released as beta)
+o New option for classicthesis.sty: dottedtoc
+  (Refer to the manual for more information.)
+o New option for classicthesis.sty: listings
+  (Refer to the manual for more information.)
+  (Credit + thanks to Prof. Enrico Gregorio)
+o Minor clean-up and bug-fixing
+
+Changes in version 2.5 (October 2008, cumulative release)
+o Increased text-width for better page layout (experimental)
+o Cumulative release, some minor clean-up and bug-fixing
+
+Changes in version 2.4.{1--3} (February and April 2008,
+released as betas)
+o Switched back to "obsolete" KOMA options due to
+  compatibility issues on some installations
+o Increased robustness of \cauthor command in
+  classicthesis-ldpk.sty
+o Spacing fix for \sectionmark (in classicthesis.sty)
+o Made Booleans private (in classicthesis.sty)
+o Acronyms header for long acronym lists (in Contents.tex)
+o Moved "amsmath" package from classicthesis.sty to
+  ClassicThesis.tex
+o "MinionPro" package now loaded with "mathlf" option
+  instead of "osf" option (in classicthesis.sty)
+o Fixed issue with contents headings (in classicthesis.sty
+  and in Contents.tex)
+o Thanks to Lorenzo
+
+Changes in version 2.3 (November 2007)
+o Fixed serious bug with \myChapter command (using plain
+  LaTeX)
+o Removed hypcap package from classicthesis-ldpkg.sty and
+  placeins package from classicthesis.sty. Put both into
+  ClassicThesis.tex for finer end-user control
+o Removed obsolete KOMA options from ClassicThesis.tex
+o Option "subfigure" deprecated, replaced by "subfig" (in
+  classicthesis.sty)
+o Inserted some mechanisms to detect whether subfig(ure)
+  package was loaded or not (in classicthesis.sty)
+o Inserted some mechanism to detect whether classicthesis
+  packackage was loaded or not (in classicthesis-ldpkg.sty)
+o Moved "headlines" code block a bit up in
+  classicthesis.sty (seemed to cause problems with new
+  KOMA-Script classes)
+o Removed accidental "natbib" from classicthesis-ldpkg.sty
+o Some fine-tuning in (Dirty)Titlepage.tex
+o Thanks to Lorenzo and Denis! :-)
+
+Changes in version 2.2 (October 2007)
+o \myChapter and \myPart now take an optional argument
+  just as the regular \part and \chapter commands
+o Did some minor changes to classicthesis-book.tex
+  so it's a better example
+o Inserted some \cleardoublepage before \myPart
+  occurences to avoid pdfbookmark problems
+o Introduced some general typographic fine-tuning
+  (linespread, penalties, etc.)
+o Did some fine-tuning of the \graffito command
+
+Changes in version 2.1 (July 2007)
+o Removed duplicate xcolor package call from
+  classicthesis-ldpkg.sty and shifed some color
+  definitions around
+o Removed re-definition of \ttdefault
+
+Changes in version 2.0 (June 2007, cumulative release)
+o Better setup of the list of acronyms
+  (in classicthesis-ldpkg.sty)
+o Using KOMA option footinclude in ClassicThesis.tex
+  (text block sizes are adjusted to this)
+o New option for classicthesis.sty: minionpro
+o New option for classicthesis.sty: minionprospacing
+o New option for classicthesis.sty: pdfspacing
+  (Refer to the manual for more information.)
+
+Changes in version 1.7 (May 2007, not released separately)
+o Removed \graphicspath from ClassicThesis.tex
+o Use the nag package to ensure "compliance"
+o Switched from ccaption to caption in classicthesis-ldpkg.sty
+  (setup via \captionsetup in ClassicThesis.tex)
+o Switched from subfigure to subfig in classicthesis-ldpkg.sty
+o Removed obsolete "usenames" option from loading xcolor package
+o Noticed problem with \thelstlisting on some installations
+  (commented out in classicthesis-ldpkg.sty)
+o Noticed problem with some hyperlinks on some installations
+  (could not determine cause)
+
+Changes in version 1.6 (April 2007, not released separately)
+o Included greetings to Lorenzo Pantieri for many very useful
+  suggestions
+o Introduced new commands in classicthesis-ldpkg.sty to make
+  adaptation of backrefs to different languages easier
+   - \backrefnotcitedstring (ref is not cited)
+   - \backrefcitedsinglestring (ref is cited on one page)
+   - \backrefcitedmultistring (ref is cited on multiple pages)
+o Removed ellipsis package from classicthesis-ldpkg.sty due to
+  some undesired results for some users
+o Removed the following packages from classicthesis-ldpkg.sty as
+  these seem to require changes to their options from most users:
+  inputenc, babel, natbib (now in ClassicThesis.tex)
+o New option for classicthesis-ldpkg.sty: nochapters
+  Use the package with classes that do not have chapter divisions
+
+Changes in version 1.5 (April 2007, not released separately)
+o Fixed some bugs to use classicthesis.sty for article layout
+o Inserted some info/warnings when using nochapter/parts
+o Extended the manual: examples for using classicthesis.sty for
+  other projects than a thesis (source available in folder
+  "Examples")
+o Some minor adjustments in classicthesis-ldpkg.sty
+o Fixed some spelling mistakes
+
+Changes in version 1.4.2 (March 2007)
+o Renamed loadpackages.sty to classicthesis-ldpkg.sty due to
+  TeX Live package tree issues
+
+Changes in version 1.4.1 (March 2007)
+o Fixed some wording concerning the license :-o
+o Added fixltx2e and ellipsis packages to to loadpackages.sty to correct
+  some minor glitches
+o Fixed and changed some things about ToC entries of parts
+o Some minor bug fixes
+
+Changes in version 1.4 (January 2007)
+o Replaced \lineheight with \baselineskip in classicthesis.sty
+o Removed obsolete "usenames" option from xcolor package (classicthesis.sty)
+o Now classicthesis.sty processes the global a5paper option and adjusts
+  the layout accordingly (experimental!)
+
+Changes in version 1.3.1 (August 2006)
+o Urgent bug concerning ToC spacing etc. fixed
+
+Changes in version 1.3 (August 2006)
+o New option for classicthesis.sty: parts
+  Turn this on if you use Part divisions. It fine-tunes the ToC and
+  adds support for Part division via \myPart{} (cf. \myChapter{})
+  (The style of this feature is preliminary, any suggestions?!)
+o New option for classicthesis.sty: eulermath
+  Uses the awesome Euler fonts for math (Palatino fonts are default).
+o Added mparhack package to loadpackages.sty to get the graffiti right
+o Added a hint to loadpackages.sty on how to typeset the List of
+  Listings consistently with classicthesis
+o Some minor fine-tuning of typographic details
+o Collaboration with babel package improved (now easier to use
+  with other languages than English)
+o Added appropriate textwidth values for 11pt Palatino and Minion
+  (See comments near \areaset in classicthesis.sty)
+o Note: There is a problem with the case of math text in part-,
+  chapter-, and section titles and I have no clue how to fix this
+  (either the case or the spacing breaks). So far, I chose the case. :-(
+
+Changes in version 1.2 (June 2006)
+o Setup a little postcard collection: http://postcards.miede.de
+o Changed stupid spelling mistake: "A Homage" => "An Homage" D'oh!
+o New option for classicthesis.sty: nochapters
+  Allows to use the look-and-feel with classes that do not use chapters.
+o New option for classicthesis.sty: beramono
+  Loads Bera Mono as typewriter font. (Default = no typewriter font.)
+o Included list of files, see LISTOFFILES.
+
+Changes in version 1.1 (May 2006)
+o classicthesis.sty now stand-alone and usable w/o whole bundle!
+o classicthesis.sty compatible with both LaTeX and PDFLaTeX
+  Note: this is only true for classicthesis.sty, not the whole bundle.
+o New option for classicthesis.sty: subfigure
+  Tells the style to add the respective option when loading tocloft.
+o Now loading microtype package w/o options (classicthesis.sty)
+o Fixed overfull hbox warnings for ToC entries (classicthesis.sty)
+o No longer depending on a particular caption package (classicthesis.sty)
+o Layout for subsubsections provided (classicthesis.sty)
+o PDF opens on title page (ClassicThesis.[tex|pdf])
+o Files are a bit more "ASCII-friendly" (all)
+o Note: Thanks to all the folks who already sent me a postcard! :-)
+
+Version 1.0 (March 2006)
+o First public release

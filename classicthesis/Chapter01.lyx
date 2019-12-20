@@ -1,0 +1,1630 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblatex_bibstyle numeric-comp
+\biblatex_citestyle numeric-comp
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "ch:Introduction"
+
+\end_inset
+
+This bundle for \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+has two goals: 
+\end_layout
+
+\begin_layout Enumerate
+Provide students with an easy-to-use template for their Master's or PhD
+ thesis.
+ (Though it might also be used by other types of authors for reports, books,
+ etc.) 
+\end_layout
+
+\begin_layout Enumerate
+Provide a classic, high-quality typographic style that is inspired by 
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "bringhurst:2002"
+literal "true"
+
+\end_inset
+
+'s 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+The Elements of Typographic Style
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "bringhurst:2002"
+literal "true"
+
+\end_inset
+
+.
+ 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+myTitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+myVersion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bundle is configured to run with a 
+\emph on
+full
+\emph default
+ MiK\SpecialChar TeX
+ or \SpecialChar TeX
+Live
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+See the file 
+\family typewriter
+LISTOFFILES
+\family default
+ for needed packages.
+ Furthermore, 
+\family typewriter
+classicthesis
+\family default
+ works with most other distributions and, thus, with most systems \SpecialChar LaTeX
+ is available
+ for.
+\end_layout
+
+\end_inset
+
+ installation right away and uses only freely available fonts.
+ (Minion fans can easily adjust the style to their needs.)
+\end_layout
+
+\begin_layout Standard
+People interested in the nice style and not the whole bundle can now use
+ the style stand-alone via the file 
+\family typewriter
+classicthesis.sty
+\family default
+.
+ This works now also with 
+\begin_inset Quotes eld
+\end_inset
+
+plain
+\begin_inset Quotes erd
+\end_inset
+
+ \SpecialChar LaTeX
+.
+\end_layout
+
+\begin_layout Standard
+As of version 3.0, classicthesis can also be easily used with \SpecialChar LyX
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.lyx.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ thanks to Nicholas Mariette and Ivo Pletikosić.
+ The \SpecialChar LyX
+ version of this manual will contain more details.
+ 
+\end_layout
+
+\begin_layout Standard
+This should enable anyone with a basic knowledge of \SpecialChar LaTeX2e
+ or \SpecialChar LyX
+ to produce beautiful
+ documents without too much effort.
+ In the end, this is my overall goal: more beautiful documents, especially
+ theses, as I am tired of seeing so many ugly ones.
+\end_layout
+
+\begin_layout Standard
+The whole template and the used style is released under the 
+\size footnotesize
+GNU
+\size default
+ General Public License.
+\end_layout
+
+\begin_layout Standard
+If you like the style then I would appreciate a postcard: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+André Miede 
+\begin_inset Newline newline
+\end_inset
+
+ Detmolder Straße 32 
+\begin_inset Newline newline
+\end_inset
+
+ 31737 Rinteln 
+\begin_inset Newline newline
+\end_inset
+
+ Germany 
+\end_layout
+
+\begin_layout Standard
+\noindent
+The postcards I received so far are available at:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://postcards.miede.de
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+A well-balanced line width improves the legibility of the text.
+ That's what typography is all about, right?
+\end_layout
+
+\end_inset
+
+Many theses, some books, and several other publications have been typeset
+ successfully with classic thesis.
+ If you are interested in typographic details behind it, enjoy Robert Bringhurst
+'s wonderful book.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Important Note:
+\end_layout
+
+\begin_layout Standard
+Some things of this style might look unusual at first glance, many people
+ feel so in the beginning.
+ However, all things are intentionally designed to be as they are, especially
+ these: 
+\end_layout
+
+\begin_layout Itemize
+No bold fonts are used.
+ Italics or spaced small caps do the job quite well.
+ 
+\end_layout
+
+\begin_layout Itemize
+The size of the text body is intentionally shaped like it is.
+ It supports both legibility and allows a reasonable amount of information
+ to be on a page.
+ And, no: the lines are not too short.
+ 
+\end_layout
+
+\begin_layout Itemize
+The tables intentionally do not use vertical or double rules.
+ See the documentation for the 
+\family typewriter
+booktabs
+\family default
+ package for a nice discussion of this topic.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+To be found online at 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.ctan.org/tex-archive/macros/latex/contrib/booktabs/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+And last but not least, to provide the reader with a way easier access to
+ page numbers in the table of contents, the page numbers are right behind
+ the titles.
+ Yes, they are 
+\emph on
+not
+\emph default
+ neatly aligned at the right side and they are 
+\emph on
+not
+\emph default
+ connected with dots that help the eye to bridge a distance that is not
+ necessary.
+ If you are still not convinced: is your reader interested in the page number
+ or does she want to sum the numbers up? 
+\end_layout
+
+\begin_layout Standard
+Therefore, please do not break the beauty of the style by changing these
+ things unless you really know what you are doing! Please.
+\end_layout
+
+\begin_layout Paragraph
+Another Important Note:
+\end_layout
+
+\begin_layout Standard
+Since the first release of 
+\family typewriter
+classic\SpecialChar softhyphen
+the\SpecialChar softhyphen
+sis
+\family default
+ in 2006, many things have changed in the \SpecialChar LaTeX
+ world.
+  Trying to keep up-to-date, 
+\family typewriter
+classicthesis
+\family default
+ grew and evolved  into many directions, trying to stay stable and be  compatibl
+e with its port to \SpecialChar LyX
+.
+ However, there are still many  remains from older times in the code, many
+ dirty workarounds here and  there, and several other things I am absolutely
+ not proud of (for  example my unwise combination of 
+\size footnotesize
+KOMA
+\size default
+-script and 
+\family typewriter
+titlesec
+\family default
+ etc.).
+ 
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+ An outlook into the future of 
+\family typewriter
+classicthesis
+\family default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Currently, I am looking into how to completely re-design and  re-implement
+ 
+\family typewriter
+classicthesis
+\family default
+ making it easier to maintain and use.
+ As a general idea, 
+\family typewriter
+classicthesis.sty
+\family default
+ should be  distributed separately from the template  itself.
+  Excellent spin-offs such as 
+\family typewriter
+arsclassica
+\family default
+ could also be  integrated (with permission of their authors) as format
+ configurations.
+  Also, current trends of 
+\family typewriter
+microtype
+\family default
+, 
+\family typewriter
+fontspec
+\family default
+, and others  should be included as well.
+ As I am not really into deep  \SpecialChar LaTeX
+ programming,  I will reach out to the \SpecialChar LaTeX
+ community
+ for their expertise and help.
+ 
+\end_layout
+
+\begin_layout Section
+Organization
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Organization"
+
+\end_inset
+
+A very important factor for successful thesis writing is the organization
+ of the material.
+ This template suggests the structure as follows: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+You can use these margins for summaries of the text body
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+dots
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Chapters/
+\family default
+ is where all the 
+\begin_inset Quotes eld
+\end_inset
+
+real
+\begin_inset Quotes erd
+\end_inset
+
+ content goes in separate files such as 
+\family typewriter
+Chapter01.tex
+\family default
+ etc.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+FrontBackMatter/
+\family default
+ is where all the stuff goes that surrounds the 
+\begin_inset Quotes eld
+\end_inset
+
+real
+\begin_inset Quotes erd
+\end_inset
+
+ content, such as the acknowledgments, dedication, etc.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+gfx/
+\family default
+ is where you put all the graphics you use in the thesis.
+ Maybe they should be organized into subfolders depending on the chapter
+ they are used in, if you have a lot of graphics.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+Bibliography.bib
+\family default
+: a  Bib\SpecialChar TeX
+ database to organize all the references you might want to cite.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+classicthesis.sty
+\family default
+: the style definition to get this awesome look and feel.
+ Does not only work with this thesis template but also on its own (see folder
+ 
+\family typewriter
+Examples
+\family default
+).
+ Bonus: works with \SpecialChar LaTeX
+, 
+\shape smallcaps
+pdf
+\shape default
+\SpecialChar LaTeX
+, 
+\shape smallcaps
+xe
+\shape default
+\SpecialChar LaTeX
+, 
+\shape smallcaps
+lua
+\shape default
+\SpecialChar LaTeX
+\SpecialChar ldots
+ and all of them from \SpecialChar LyX
+.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+ClassicThesis.tex
+\family default
+: the main file of your thesis where all gets bundled together.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+classicthesis-config.tex
+\family default
+: a central place to load all nifty packages that are used.
+ 
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+Make your changes and adjustments here.
+
+\emph default
+ This means that you specify here the options you want to load 
+\family typewriter
+classicthesis.sty
+\family default
+ with.
+ You also adjust the title of your thesis, your name, and all similar informatio
+n here.
+ Refer to 
+\begin_inset Flex CT - auto cross-reference
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "sec:customization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ for more information.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+In total, this should get you started in no time.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Style Options
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:options"
+
+\end_inset
+
+There are a couple of options for 
+\family typewriter
+classicthesis.sty
+\family default
+ that allow for a bit of freedom concerning the layout: 
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+Options are enabled via 
+\family typewriter
+option=true
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+General: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+drafting
+\family default
+: prints the date and time at the bottom of each page, so you always know
+ which version you are dealing with.
+ Might come in handy not to give your Prof.
+ that old draft.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Parts and Chapters: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+parts
+\family default
+: use this option if you 
+\emph on
+need
+\emph default
+ Part divisions in your document.
+ This is necessary to get the spacing of the Table of Contents right.
+ (Cannot be used together with 
+\family typewriter
+nochapters
+\family default
+.) 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+nochapters
+\family default
+: allows to use the classicthesis style with classes that do not use chapters,
+ e.
+\begin_inset space \thinspace{}
+\end_inset
+
+g., for articles.
+ Automatically turns off a couple of other options: 
+\family typewriter
+eulerchapternumbers
+\family default
+, 
+\family typewriter
+linedheaders
+\family default
+, 
+\family typewriter
+listsseparated
+\family default
+, and 
+\family typewriter
+parts
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+linedheaders
+\family default
+: changes the look of the chapter headings a bit by adding a horizontal
+ line above the chapter title.
+ The chapter number will also be moved to the top of the page, above the
+ chapter title.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Typography: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+style
+\family default
+: this offers a convenient way of switching between different major styles.
+ Default style is 
+\family typewriter
+classicthesis
+\family default
+.
+ As a new feature, Lorenzo Pantieri's 
+\family typewriter
+arsclassica
+\family default
+ is available as well.
+ With his permission, 
+\family typewriter
+classicthesis-arsclassica.sty
+\family default
+ is now part of 
+\family typewriter
+classicthesis
+\family default
+ and will be maintained here.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+palatino
+\family default
+: Hermann Zapf's classic font is the free standard font for this style.
+ Robert Bringhurst's book uses Adobe's commercial font Minion Pro.
+ However, there are other free alternatives also available.
+ Deactivate this option for loading such alternatives and see 
+\family typewriter
+classicthesis-config.tex
+\family default
+ for some suggestions.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+eulerchapternumbers
+\family default
+: use figures from Hermann Zapf's Euler math font for the chapter numbers.
+ By default, old style figures from the Palatino font are used.
+ This option only works with pdfLaTeX.
+ XeTeX and LuaTeX will use different default options that can be easily
+ changed by the user; check Font section of classicthesis.sty for details.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+beramono
+\family default
+: loads Bera Mono as a typewriter font.
+ (Default setting is using the standard CM typewriter font.)
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+eulermath
+\family default
+: loads the awesome Euler fonts for math.
+ Pala\SpecialChar softhyphen
+tino is used as the default font.
+ This option only works with pdfLaTeX.
+ XeTeX and LuaTeX can easily be configured to use any font you want.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Itemize
+
+\family typewriter
+pdfspacing
+\family default
+: makes use of pdf\SpecialChar TeX
+ letter spacing capabilities via the 
+\family typewriter
+microtype
+\family default
+ package.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Use 
+\family typewriter
+microtype
+\family default
+'s 
+\family typewriter
+DVIoutput
+\family default
+ option to generate DVI with pdftex.
+\end_layout
+
+\end_inset
+
+ This fixes some serious issues regarding math formulæ etc.
+ (e.
+\begin_inset space \thinspace{}
+\end_inset
+
+g., 
+\begin_inset Quotes eld
+\end_inset
+
+ß
+\begin_inset Quotes erd
+\end_inset
+
+) in headers.
+ This is an obsolete option, letterspacing will either be done by microtype
+ or fontspec, depending on the engine used.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+minionprospacing
+\family default
+: uses the internal 
+\family typewriter
+textssc
+\family default
+ command of the 
+\family typewriter
+MinionPro
+\family default
+ package for letter spacing.
+ This enables the 
+\family typewriter
+minionpro
+\family default
+ option and overrides 
+\family typewriter
+pdfspacing
+\family default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Table of Contents: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+tocaligned
+\family default
+: aligns the whole table of contents on the left side.
+ Some people like that, some don't.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+dottedtoc
+\family default
+: sets pagenumbers flushed right in the table of contents.
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+manychapters
+\family default
+: if you need more than nine chapters for your document, you might not be
+ happy with the spacing between the chapter number and the chapter title
+ in the Table of Contents.
+ This option allows for additional space in this context.
+ However, it does not look as 
+\begin_inset Quotes eld
+\end_inset
+
+perfect
+\begin_inset Quotes erd
+\end_inset
+
+ if you use 
+\family typewriter
+
+\backslash
+parts
+\family default
+ for structuring your document.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Floats: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+floatperchapter
+\family default
+: activates numbering per chapter for all floats such as figures, tables,
+ and listings (if used).
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+listings
+\family default
+: loads the 
+\family typewriter
+listings
+\family default
+ package and configures the List of Listings accordingly.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+subfig
+\family default
+: subfigure option is passed to the 
+\family typewriter
+tocloft
+\family default
+ package to enable compatibility with the 
+\family typewriter
+subfig
+\family default
+ package.
+ Enable this option if you will use the package.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Furthermore, pre-defined margins for different paper sizes are available,
+ i.e.
+ a4 paper, a5 paper, b5 paper, and letter paper.
+ These are based on your chosen option of 
+\family typewriter
+
+\backslash
+documentclass
+\family default
+.
+ Both 
+\family typewriter
+paper=a4
+\family default
+ and 
+\family typewriter
+a4paper
+\family default
+ options will work.
+\end_layout
+
+\begin_layout Standard
+The best way to figure these options out is to try different possibilities
+ and see what you and your supervisor like best.
+ To make things easier, 
+\family typewriter
+classicthesis\SpecialChar softhyphen
+-config.tex
+\family default
+ contains some useful commands that might help you.
+\end_layout
+
+\begin_layout Section
+Customization
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:customization"
+
+\end_inset
+
+This section will give you a few hints about how to adapt 
+\family typewriter
+classicthesis
+\family default
+ to your needs.
+ The file 
+\family typewriter
+classicthesis.sty
+\family default
+ contains the core functionality of the style and in most cases will be
+ left intact, whereas 
+\family typewriter
+classicthesis-config.tex
+\family default
+ is used for some common user customizations.
+\end_layout
+
+\begin_layout Standard
+The first customization you are about to make is to alter the document title,
+ author name, and other thesis details.
+ In order to do this, replace the data in the following lines of 
+\family typewriter
+classicthesis-config.tex:
+\family default
+
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+Modifications in 
+\family typewriter
+classicthesis\SpecialChar softhyphen
+-config.tex
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "frame=lt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% *****************************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+% 2.
+ Personal data and user ad-hoc commands
+\end_layout
+
+\begin_layout Plain Layout
+
+% *****************************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+myTitle}{A Classic Thesis Style
+\backslash
+xspace} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+mySubtitle}{An Homage to...
+\backslash
+xspace} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This is a code listing layout inserted from the Lyx insert menu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Further customization can be made in 
+\family typewriter
+classicthesis-config.tex
+\family default
+ by choosing the options to 
+\family typewriter
+classicthesis.sty
+\family default
+ (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:options"
+
+\end_inset
+
+) in the lines that look like this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "frame=lt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+PassOptionsToPackage{drafting=true,
+\end_layout
+
+\begin_layout Plain Layout
+
+                      parts=true,
+\end_layout
+
+\begin_layout Plain Layout
+
+                      ...
+\end_layout
+
+\begin_layout Plain Layout
+
+                      }{classicthesis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Colors and fonts of certain elements of classicthesis can be tweaked by
+ redefining some internal commands: 
+\family typewriter
+
+\backslash
+ct@altfont
+\family default
+ and 
+\family typewriter
+
+\backslash
+ct@caps
+\family default
+ are hooks to alter the basic look of everything that uses spaced caps.
+ For example, for 
+\family typewriter
+arsclassica
+\family default
+ we used 
+\family typewriter
+
+\backslash
+renewcommand*{
+\backslash
+ct@altfont}{
+\backslash
+sffamily}
+\family default
+.
+ Coloring is also possible this way.
+ Check the corresponding commands in 
+\family typewriter
+classicthesis.sty
+\family default
+ for further ideas and implementation details.
+\end_layout
+
+\begin_layout Standard
+Several color names have been introduced to easily change chapter number,
+ title or hyperreference colors: 
+\family typewriter
+CTsemi
+\family default
+ will affect the color used for chapter numbers, the default is 
+\family typewriter
+
+\backslash
+definecolor{CTsemi}{gray}{0.55}
+\family default
+; 
+\family typewriter
+CTtitle
+\family default
+ can be used to change the title color from the default crimson red 
+\family typewriter
+
+\backslash
+definecolor{CTtitle}{named}{Maroon}
+\family default
+, and so on.
+ Color settings are handled by 
+\family typewriter
+xcolor
+\family default
+ package, check the documentation for other named colors (in the dvipsnames
+ set) and other possibilities.
+\end_layout
+
+\begin_layout Standard
+Many other customisations in 
+\family typewriter
+classicthesis-config.tex
+\family default
+ are possible, but you should be careful with making changes there, since
+ some changes could cause errors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Finally, if really needed, changes can be made in the file 
+\family typewriter
+classic\SpecialChar softhyphen
+thesis.sty
+\family default
+,
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+Modifications in 
+\family typewriter
+classicthesis.sty
+\end_layout
+
+\end_inset
+
+ although this is mostly not designed for user customisation.
+ Some commands from 
+\family typewriter
+classicthesis.sty
+\family default
+ can be repeated at the end of 
+\family typewriter
+classicthesis-config.tex
+\family default
+ to change the default behavior — the text-block size can be adjusted, for
+ example, to get longer lines of text.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Issues
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:issues"
+
+\end_inset
+
+ This section will list some information about problems using 
+\family typewriter
+classic\SpecialChar softhyphen
+thesis
+\family default
+ in general or using it with other packages.
+\end_layout
+
+\begin_layout Standard
+Beta versions of 
+\family typewriter
+classicthesis
+\family default
+ can be found at Bitbucket: 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://bitbucket.org/amiede/classicthesis/
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+There, you can also post serious bugs and problems you encountered.
+\end_layout
+
+\begin_layout Section
+Future Work
+\end_layout
+
+\begin_layout Standard
+So far, this is a quite stable version that served a couple of people well
+ during their thesis time.
+ However, some things are still not as they should be.
+ Proper documentation in the standard format is still missing.
+ In the long run, the style should probably be published separately, with
+ the template bundle being only an application of the style.
+ Alas, there is no time for that at the moment\SpecialChar ldots
+ it could be a nice task for
+ a small group of \SpecialChar LaTeX
+nicians.
+\end_layout
+
+\begin_layout Standard
+Please do not send me email with questions concerning \SpecialChar LaTeX
+
+\begin_inset space \space{}
+\end_inset
+
+or the template, as I do not have time for an answer.
+ But if you have comments, suggestions, or improvements for the style or
+ the template in general, do not hesitate to write them on that postcard
+ of yours.
+\end_layout
+
+\begin_layout Section
+Beyond a thesis
+\end_layout
+
+\begin_layout Standard
+The layout of 
+\family typewriter
+classicthesis.sty
+\family default
+ can be easily used without the framework of this template.
+ A few examples where it was used to typeset an article, a book or a curriculum
+ vitae can be found in the folder 
+\family typewriter
+Examples
+\family default
+.
+ The examples have been tested with 
+\family typewriter
+latex
+\family default
+ and 
+\family typewriter
+pdflatex
+\family default
+ and are easy to compile.
+ To encourage you even a more, PDFs built from the sources can be found
+ in the same folder.
+ 
+\end_layout
+
+\begin_layout Section
+License
+\end_layout
+
+\begin_layout Paragraph
+GNU General Public License:
+\end_layout
+
+\begin_layout Standard
+This program is free software; you can redistribute it and/or modify it
+ under the terms of the 
+\size footnotesize
+GNU
+\size default
+ General Public License as published by the Free Software Foundation; either
+ version 2 of the License, or (at your option) any later version.
+\end_layout
+
+\begin_layout Standard
+This program is distributed in the hope that it will be useful, but 
+\emph on
+without any warranty
+\emph default
+; without even the implied warranty of 
+\emph on
+merchant\SpecialChar softhyphen
+ability
+\emph default
+ or 
+\emph on
+fitness for a particular purpose
+\emph default
+.
+ See the 
+\size footnotesize
+GNU
+\size default
+ General Public License for more details.
+\end_layout
+
+\begin_layout Standard
+You should have received a copy of the 
+\size footnotesize
+GNU
+\size default
+ General Public License along with this program; see the file 
+\family typewriter
+COPYING
+\family default
+.
+ If not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite
+ 330, Boston, 
+\size footnotesize
+MA
+\size default
+ 02111-1307, 
+\size footnotesize
+USA
+\size default
+.
+\end_layout
+
+\begin_layout Paragraph
+Author's note:
+\end_layout
+
+\begin_layout Standard
+There have been some discussions about the 
+\size footnotesize
+GPL
+\size default
+ implications on using 
+\family typewriter
+classicthesis
+\family default
+ for theses etc.
+ Details can be found here:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://bitbucket.org/amiede/classicthesis/issues/123/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We chose (and currently stick with) the 
+\size footnotesize
+GPL
+\size default
+ because we would not like to compete with proprietary modified versions
+ of our own work.
+ However, the whole template is free as free beer and free as free speech.
+ We will not demand the sources for theses, books, CVs, etc.
+ that were created using classicthesis.
+\end_layout
+
+\begin_layout Standard
+Postcards are still highly appreciated.
+\end_layout
+
+\end_body
+\end_document

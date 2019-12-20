@@ -1,0 +1,1364 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine biblatex
+\cite_engine_type authoryear
+\biblio_style plainnat
+\biblatex_bibstyle numeric-comp
+\biblatex_citestyle numeric-comp
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Lyx Template Information
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "ch:LyxPortInfo"
+
+\end_inset
+
+The classic thesis template was first ported to \SpecialChar LyX
+ by Nick Mariette in 2009.
+ In spring of 2011 the original LaTeX style was adjusted to better suit
+ the \SpecialChar LyX
+ port.
+ Upon that, a \SpecialChar LyX
+ layout file was created and most of this chapter written
+ by Ivo Pletikosić.
+\end_layout
+
+\begin_layout Section
+Template structure
+\end_layout
+
+\begin_layout Standard
+Due to some issues with including external material into \SpecialChar LyX
+ documents, \SpecialChar LyX
+ template
+ directory structure is different from the directory structure described
+ in 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "sec:Organization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, as all the chapter and front&back-matter files are in the folder where
+ 
+\family typewriter
+ClassicThesis.lyx
+\family default
+, the main file of the thesis, is.
+ Graphic files are still found in 
+\family typewriter
+gfx/
+\family default
+, while the folder 
+\family typewriter
+Examples/
+\family default
+ contains the \SpecialChar LyX
+ port of the three examples of using 
+\family typewriter
+classicthesis.sty
+\family default
+ for a book, article, and curriculum vitæ.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+Take a look at this .lyx file in \SpecialChar LyX
+ for coding examples.
+ Make use of the contextual menus (right click) and the properties dialogs
+ for the insets.
+\end_layout
+
+\end_inset
+
+ A new \SpecialChar LyX
+ file, 
+\family typewriter
+classicthesis.layout
+\family default
+, has been created for v3.0 to provide a local document layout with the definitio
+ns (and their translations to \SpecialChar LaTeX
+) of all the environments, character styles,
+ and custom insets inherent to the classic thesis style.
+ 
+\end_layout
+
+\begin_layout Section
+Customization
+\end_layout
+
+\begin_layout Standard
+The 
+\family typewriter
+.lyx
+\family default
+ files of the thesis template have the document class set to the 
+\size footnotesize
+KOMA
+\size default
+-script report class 
+\emph on
+by a local layout file
+\emph default
+ 
+\family typewriter
+classicthesis.layout
+\family default
+.
+ That file passes to 
+\family typewriter
+scrreprt
+\family default
+ a series of predefined options (two most important being 
+\family typewriter
+fontsize=11pt
+\family default
+, and 
+\family typewriter
+paper=a4
+\family default
+), that can all be disabled or, one-by-one, overridden in the custom class
+ options input line.
+ 
+\end_layout
+
+\begin_layout Standard
+\SpecialChar LyX
+ is then instructed to load 
+\family typewriter
+classicthesis-config-LyX.tex
+\family default
+, a file whe\SpecialChar softhyphen
+re most of the user customizations are to be made.
+ Configure the file following the instructions in 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "sec:customization"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Keep in mind that most of the packages \SpecialChar LyX
+ needs are loaded before the packages
+ called in that file.
+ The \SpecialChar LyX
+ options for those packages will take precedence, and the options set
+ in 
+\family typewriter
+classicthesis-config-LyX.tex
+\family default
+ might have no effect at all! \SpecialChar LyX
+ promotes the options of all the used languages
+ to the global level, i.e.
+ to the very definition of the document class.
+ It is possible to change the language of the parts of the text in \SpecialChar LyX
+ by an
+ obscure option in the dialog for the text style.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is best if all the files in a project use the same document class and
+ options.
+ Yet, at the compilation of the whole thesis, most of the options will be
+ taken only from the master document.
+ 
+\end_layout
+
+\begin_layout Standard
+Explore and adapt the 
+\family typewriter
+.lyx
+\family default
+ files to make your own documents.
+ We provide an empty template file, 
+\family typewriter
+template.lyx
+\family default
+, for easier starting of new chapters.
+ Front- and back-matter files contain a lot of raw \SpecialChar LaTeX
+ code, some of which
+ will certainly have to be reordered for your needs.
+ Please test thoroughly every change you make.
+\end_layout
+
+\begin_layout Section
+Compendium
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+See how \SpecialChar LyX
+ environments get translated into \SpecialChar LaTeX
+ by enabling the View\SpecialChar menuseparator
+Source dialog.
+\end_layout
+
+\end_inset
+
+We present here a description list of all the environments, text styles,
+ and insets used in the classic thesis template:
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+Part introduction/abstract
+\end_layout
+
+\end_inset
+
+ can be inserted as a paragraph 
+\shape italic
+before
+\shape default
+ the start of the corresponding part in 
+\family typewriter
+ClassicThesis.lyx
+\family default
+ using the paragraph style 
+\begin_inset Quotes eld
+\end_inset
+
+Part Introduction (ClassicThesis)
+\begin_inset Quotes erd
+\end_inset
+
+ from the Standard toolbar dropdown list.
+ If the text consists of several paragraphs, make sure you end them with
+ Ctrl-Return (Ragged Line Break)
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+aEnumerate environment
+\end_layout
+
+\end_inset
+
+ where items are numbered with small capital letters can be entered by choosing
+ 
+\begin_inset Quotes eld
+\end_inset
+
+aEnumerate (ClassicThesis)
+\begin_inset Quotes erd
+\end_inset
+
+ from the Standard toolbar dropdown list.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout aEnumerate (ClassicThesis)
+Being the second list environment here, the depth of the aenumerate environment
+\end_layout
+
+\begin_layout aEnumerate (ClassicThesis)
+had to be increased by one
+\end_layout
+
+\end_deeper
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+Description labels
+\end_layout
+
+\end_inset
+
+ example of which are the labels in this description environment itself,
+ can contain more than one word only if the words are somehow grouped together.
+ As ordinary protected spaces won't work with the classic thesis style,
+ a special inset has been created, 
+\begin_inset Quotes eld
+\end_inset
+
+CT – Description Label
+\begin_inset Quotes erd
+\end_inset
+
+.
+ It can be found in Insert\SpecialChar menuseparator
+Custom
+\begin_inset space ~
+\end_inset
+
+Insets.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+Auto cross-references
+\end_layout
+
+\end_inset
+
+ Standard cross-references, like this one to Chapter 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ch:mathtest"
+
+\end_inset
+
+ or this one to Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:example"
+
+\end_inset
+
+, only reference (and hyperlink) the corresponding numbers.
+ Auto-references, like 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "ch:mathtest"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ or 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "fig:example"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ provide the reference name and the numbers.
+ They can be input as a custom inset 
+\begin_inset Quotes eld
+\end_inset
+
+CT – auto cross-references
+\begin_inset Quotes erd
+\end_inset
+
+ found in Insert\SpecialChar menuseparator
+Custom
+\begin_inset space ~
+\end_inset
+
+insets.
+ The reference label, which is the argument to the provided inset, can as
+ of LyX 2.3 be chosen from Insert\SpecialChar menuseparator
+Cross-Reference dialog; the reference format
+ should in that case be Label Only.
+ If auto-references are used in languages other than American English or
+ German, you might need to add some definitions in 
+\family typewriter
+classic\SpecialChar softhyphen
+thesis\SpecialChar softhyphen
+-config\SpecialChar softhyphen
+-LyX.tex
+\family default
+.
+ Make sure the labels are always in the text of the section you're labeling
+ and not in the section heading; the latter can lead to serious errors.
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+Marginal notes
+\end_layout
+
+\end_inset
+
+ are input as ordinary \SpecialChar LyX
+ insets, by using Insert\SpecialChar menuseparator
+Marginal
+\begin_inset space ~
+\end_inset
+
+Note.
+ To give an example, we'll put a marginal note right here:  
+\begin_inset Marginal
+status open
+
+\begin_layout Plain Layout
+This is a marginal note, once also known as graffito.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+Bibliography & Citations
+\end_layout
+
+\end_inset
+
+ The template has switched to Bib\SpecialChar LaTeX
+ and biber
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Biber, as opposed to bibtex, supports Unicode character encoding.
+ All thesis files have in version 4.2 been saved in 
+\size footnotesize
+UTF-8
+\size default
+.
+ 
+\end_layout
+
+\end_inset
+
+ for processing of citations and bibliographies.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Additional options to Bib\SpecialChar LaTeX
+ can be set either in 
+\family typewriter
+classicthesis\SpecialChar softhyphen
+-config\SpecialChar softhyphen
+-LyX.tex
+\family default
+ or in the preamble by being added to 
+\family typewriter
+
+\backslash
+Execute\SpecialChar softhyphen
+Bibliography\SpecialChar softhyphen
+Options{}
+\family default
+.
+ 
+\end_layout
+
+\end_inset
+
+Here are a few examples of citations generated by Bib\SpecialChar LaTeX
+:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Authors and reference numbers, like 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "cormen:2001,dueck:trio"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+List of reference numbers, like 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "cormen:2001,dueck:trio"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+List of authors, like 
+\begin_inset CommandInset citation
+LatexCommand citeauthor
+key "dueck:trio,cormen:2001"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Many other citation commands can only be called from a \SpecialChar TeX
+ code insert in \SpecialChar LyX
+,
+ like this superscript citation 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+supercite{bringhurst:2002}
+\end_layout
+
+\end_inset
+
+ or the whole reference 
+\begin_inset CommandInset citation
+LatexCommand footfullcite
+key "bringhurst:2002"
+literal "false"
+
+\end_inset
+
+ in the footnote.
+ Refer to Bib\SpecialChar LaTeX
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "documentation"
+target "https://www.ctan.org/pkg/biblatex/"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "examples"
+target "https://www.ctan.org/tex-archive/macros/latex/contrib/biblatex/doc/examples/"
+literal "false"
+
+\end_inset
+
+ to learn about citation styles and available options.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Acronyms First declare your acronyms in the file Contents.lyx.
+ Further on, use them through the custom inset 
+\begin_inset Quotes eld
+\end_inset
+
+CT – acronym
+\begin_inset Quotes erd
+\end_inset
+
+ found in Insert\SpecialChar menuseparator
+Custom
+\begin_inset space ~
+\end_inset
+
+Insets.
+ On the first use they will be fully expanded, like in 
+\begin_inset Flex CT - acronym
+status collapsed
+
+\begin_layout Plain Layout
+
+DRY
+\end_layout
+
+\end_inset
+
+, later on only the acronym itself, 
+\begin_inset Flex CT - acronym
+status collapsed
+
+\begin_layout Plain Layout
+
+DRY
+\end_layout
+
+\end_inset
+
+, will be shown.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+Font modifications
+\end_layout
+
+\end_inset
+
+ Two text styles characteristic of Classic Thesis, 
+\begin_inset Flex CT - Spaced Low Small Caps
+status collapsed
+
+\begin_layout Plain Layout
+spaced low small caps
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex CT - Spaced All Caps
+status collapsed
+
+\begin_layout Plain Layout
+spaced all caps
+\end_layout
+
+\end_inset
+
+, can be set from either the main menu (Edit\SpecialChar menuseparator
+Text
+\begin_inset space ~
+\end_inset
+
+Style) or the context-sensitive menu.
+ All other modifications (
+\family typewriter
+Family
+\family default
+, 
+\series bold
+Series
+\series default
+, 
+\shape italic
+Shape
+\shape default
+, 
+\size larger
+Size
+\size default
+, 
+\color magenta
+Color
+\color inherit
+) can be accomplished in the usual way, but to keep the style clean their
+ use is discouraged.
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+Hyperlinks
+\end_layout
+
+\end_inset
+
+ This is to show the look of URLs 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://bitbucket.org/amiede/classicthesis/
+\end_layout
+
+\end_inset
+
+ in the classic thesis style.
+\end_layout
+
+\begin_layout Description
+Figures Graphics can be entered either inline or in figure and subfigure
+ floats, an example for the latter being 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "fig:example-lyx"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement bth
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename gfx/example_1.jpg
+	width 45line%
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Asia personas duo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename gfx/example_2.jpg
+	width 45line%
+
+\end_inset
+
+ 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pan ma signo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:example-lyx"
+
+\end_inset
+
+Deler utilitate methodicamente con se
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Tables To make a table, choose Table...
+ from the Insert menu, then open its settings dialog, put border style to
+ 
+\emph on
+Formal
+\emph default
+ (that will make use of better rules from the package booktabs), and remove
+ any midrules you don't want to have.
+ Finally, for a nicely styled table with centered headline text in small
+ caps, change its style to 
+\begin_inset Quotes eld
+\end_inset
+
+CT – Table Headline
+\begin_inset Quotes erd
+\end_inset
+
+, as in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:lyx-example"
+
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features booktabs="true" tabularvalignment="middle" tabularwidth="100text%">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex CT - Table Headline
+status open
+
+\begin_layout Plain Layout
+labitur bonorum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex CT - Table Headline
+status open
+
+\begin_layout Plain Layout
+que vista
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Flex CT - Table Headline
+status open
+
+\begin_layout Plain Layout
+human
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+fastidii ea ius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+germano
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+demonstratea
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+suscipit instructior
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+titulo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+personas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+albucius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+homero
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+deterruisset
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+quaestio philosophia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+facto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+appellantur
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Nos duce infra publicava le Graecis 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:lyx-example"
+
+\end_inset
+
+Nos duce infra publicava le Graecis eleifend appellantur quo.
+ Id corpora inimicus nam, facer nonummy repudiandae ei mei.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Formulae Mathematical expressions (the ones like Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fourier"
+
+\end_inset
+
+) can be entered using convenient tools provided by \SpecialChar LyX
+.
+ The previous sentence features a reference to this equation:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial Q}{\partial t}=-\kappa\oint_{S}\vec{\nabla}T\cdot\mathrm{d}\vec{S}\label{eq:fourier}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Flex CT - Description Label
+status collapsed
+
+\begin_layout Plain Layout
+OpenType fonts
+\end_layout
+
+\end_inset
+
+ XeTeX and LuaTeX make the use of Unicode fonts possible through the package
+ 
+\family typewriter
+fontspec
+\family default
+.
+ The global font options set by 
+\family typewriter
+classicthesis.sty
+\family default
+ will be:
+\begin_inset listings
+lstparams "frame=none"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setmainfont{TeX Gyre Pagella}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setmathfont{TeX Gyre Pagella Math}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setmonofont{Liberation Mono}
+\end_layout
+
+\end_inset
+
+Dozens of OpenType fonts are available that can be easily installed and
+ used instead by issuing these commands in the preamble of the master thesis
+ file.
+ By dissolving the following \SpecialChar LyX
+ comment (with a right-click menu option) and
+ using either of the two processors (Document\SpecialChar menuseparator
+View other formats) you will
+ be able to see the closing paragraph typeset in a beautiful open source
+ font named EB Garamond.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The font can be downloaded from 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://bitbucket.org/georgd/eb-garamond
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+The Garamond font features several special ligatures.
+ How many can you recognize? 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fontspec{EB Garamond}[Contextuals=Alternate, Scale=1.20, Color=602020, Ligatures=
+Historic]
+\end_layout
+
+\end_inset
+
+ 
+\emph on
+Quello
+\emph default
+ 
+\emph on
+fiatto
+\emph default
+ altere uniffano pan maedis  signo studio.
+ Intruite preparati leguo ri altere tentation     su 67, rapide   ipse gentiones
+ non virge pro congue metodictamente.
+ Errem omnium  populo ornatus  qui dijcant nemore heftis.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

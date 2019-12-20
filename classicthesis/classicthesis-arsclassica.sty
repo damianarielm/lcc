@@ -1,0 +1,92 @@
+%************************************************************
+% classicthesis-arsclassica.sty
+% Integrated into classicthesis with permission and adapted
+% by André Miede and Ivo Pletikosić
+% 2018
+%************************************************************
+% Copyright (C) 2008--2017 Lorenzo Pantieri
+% http://www.lorenzopantieri.net/
+%************************************************************
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{classicthesis-arsclassica}[2018/05/20]
+
+\ifdefined\classicthesis\else\RequirePackage{classicthesis}\fi
+
+
+%************************************************************
+% Fonts
+%************************************************************
+\ifthenelse{\boolean{xetex}\OR\boolean{luatex}}
+    {\setsansfont[Ligatures=TeX,Numbers=OldStyle]{Iwona}}
+    {\renewcommand{\sfdefault}{iwona}}
+\renewcommand*{\ct@altfont}{\sffamily}
+
+\ifthenelse{\boolean{ct@eulerchapternumbers}}% font for the chapter numbers; scale in classicthesis is 7
+    {\DeclareFixedFont{\chapterNumber}{U}{eur}{b}{n}{50}}%
+    {\DeclareFixedFont{\chapterNumber}{T1}{pplj}{m}{n}{50}}%
+
+%************************************************************
+% Caption
+%************************************************************
+\captionsetup{font=small,labelfont={sf,bf},format=hang}
+\captionsetup[table]{skip=\medskipamount}
+
+%************************************************************
+% Itemize
+%************************************************************
+\renewcommand\labelitemi{\color{CTsemi}$\bullet$}
+
+%************************************************************
+% Headlines
+%************************************************************
+\renewcommand{\sectionmark}[1]{\markright{\textsc{\MakeTextLowercase{\thesection}} \spacedlowsmallcaps{#1}}}
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{CTsemi}\vline}\color{CTsemi}\hspace{0.5em}\headmark\hfil}}
+\rohead{\mbox{\hfil{\color{CTsemi}\headmark\hspace{0.5em}}\rlap{\small{\color{CTsemi}\vline}\kern1em\thepage}}}
+\renewcommand{\headfont}{\normalfont\sffamily}
+\renewcommand{\pnumfont}{\small\sffamily}
+\clearscrplain
+\rofoot[\mbox{\makebox[0pt][l]{\kern1em\thepage}}]{}
+
+%************************************************************
+% Layout of the chapter-, section-, subsection-,
+% subsubsection-, paragraph and description-headings
+%************************************************************
+% chapters
+\newcommand\formatchapter[1]{%
+  \vbox to \ht\strutbox{%
+  \setbox0=\hbox{\chapterNumber\thechapter\hspace{10pt}\vline\ }%
+  \advance\hsize-\wd0 \advance\hsize-10pt\raggedright%
+  \spacedallcaps{#1}\vss}}
+\titleformat{\chapter}[block]%
+   {\normalfont\Large\sffamily}%
+   {\textcolor{CTsemi}{\chapterNumber\thechapter}%
+   \ \,\hspace{10pt}\vline\ }{10pt}%
+   {\formatchapter}
+% sections
+\titleformat{\section}%
+	 {\normalfont\Large\sffamily}{\textsc%
+  {\MakeTextLowercase{\thesection}}}%
+  {1em}{\spacedlowsmallcaps}
+% subsections
+\titleformat{\subsection}%
+  {\normalfont\sffamily\bfseries}{\textsc{\MakeTextLowercase%
+  {\thesubsection}}}{1em}{\normalsize}
+% subsubsections
+\titleformat{\subsubsection}%
+  {\normalfont\sffamily\bfseries\itshape}{\textsc%
+  {\MakeTextLowercase{\thesubsubsection}}}%
+  {1em}{\normalsize\itshape}
+% paragraphs
+\titleformat{\paragraph}[runin]%
+  {\normalfont\normalsize\sffamily\bfseries}{\textsc%
+  {\MakeTextLowercase{\theparagraph}}}%
+  {0pt}{\spacedlowsmallcaps}
+% descriptionlabels
+\renewcommand{\descriptionlabel}[1]{\hspace*{\labelsep}\bfseries\spacedlowsmallcaps{#1}}
+
+\titlespacing*{\chapter}{0pt}{1\baselineskip}{2\baselineskip}
+\titlespacing*{\section}{0pt}{2\baselineskip}{.8\baselineskip}[\marginparsep]
+\titlespacing*{\subsection}{0pt}{1.5\baselineskip}{.8\baselineskip}[\marginparsep]
+\titlespacing*{\paragraph}{0pt}{1\baselineskip}{1\baselineskip}
+%************************************************************

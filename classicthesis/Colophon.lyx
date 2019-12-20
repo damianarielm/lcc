@@ -1,0 +1,402 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 539
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type numerical
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pdfbookmark[0]{Colophon}{colophon}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Colophon
+\end_layout
+
+\begin_layout Standard
+This document was typeset using 
+\family typewriter
+classicthesis
+\family default
+ style developed by André Miede.
+ The style was inspired by Robert Bringhurst's seminal book on typography
+ 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+The Elements of Typographic Style
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+.
+ It is available for \SpecialChar LaTeX
+ and \SpecialChar LyX
+ at
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://bitbucket.org/amiede/classicthesis/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Happy users of 
+\family typewriter
+classicthesis
+\family default
+ usually send the author a real postcard; the collection of postcards received
+ so far is featured at
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://postcards.miede.de/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+finalVersionString
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Hermann Zapf's 
+\emph on
+Palatino
+\emph default
+ and 
+\emph on
+Euler
+\emph default
+ type faces (Type
+\begin_inset space ~
+\end_inset
+
+1 PostScript fonts 
+\emph on
+URW Palladio L
+\emph default
+ and 
+\emph on
+FPL
+\emph default
+) are used.
+ The 
+\begin_inset Quotes eld
+\end_inset
+
+typewriter
+\begin_inset Quotes erd
+\end_inset
+
+ text is typeset in 
+\emph on
+Bera Mono
+\emph default
+, originally developed by Bitstream, Inc.
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+Bitstream Vera
+\begin_inset Quotes erd
+\end_inset
+
+.
+ (Type
+\begin_inset space ~
+\end_inset
+
+1 PostScript fonts were made available by Malte Rosenau and Ulrich Dirr.)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+The custom size of the textblock was calculated using the directions given
+ by Mr.
+ Bringhurst (pages 26–29 and 175/176).
+ 10
+\begin_inset space ~
+\end_inset
+
+pt Palatino needs 133.21
+\begin_inset space ~
+\end_inset
+
+pt for the string ``abcdefghijklmnopqrstuvwxyz''.
+ This yields a good line length between 24–26
+\begin_inset space ~
+\end_inset
+
+pc (288–312
+\begin_inset space ~
+\end_inset
+
+pt).
+ Using a 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+double square textblock
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ with a 1:2 ratio this results in a textblock of 312:624
+\begin_inset space ~
+\end_inset
+
+pt (which includes the headline in this design).
+ A good alternative would be the 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+golden section textblock
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ with a ratio of 1:1.62, here 312:505.44
+\begin_inset space ~
+\end_inset
+
+pt.
+ For comparison, 
+\family typewriter
+DIV9
+\family default
+ of the 
+\family typewriter
+typearea
+\family default
+ package results in a line length of 389
+\begin_inset space ~
+\end_inset
+
+pt (32.4
+\begin_inset space ~
+\end_inset
+
+pc), which is by far too long.
+ However, this information will only be of interest for hardcore pseudo-typograp
+hers like me.
+\end_layout
+
+\begin_layout Plain Layout
+To make your own calculations, use the following commands and look up the
+ corresponding lengths in the book: 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+settowidth{
+\backslash
+abcd}{abcdefghijklmnopqrstuvwxyz}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+the
+\backslash
+abcd
+\backslash
+ % prints the value of the length
+\end_layout
+
+\end_inset
+
+ Please see the file 
+\family typewriter
+classicthesis.sty
+\family default
+ for some precalculated values for Palatino and Minion.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
