@@ -1,5 +1,5 @@
 ###### Año 2018
 
-* Javier Kohan
+* Javier Victor Kohan
 * Pilar Estela Bulacio
 * Flavio Spetale

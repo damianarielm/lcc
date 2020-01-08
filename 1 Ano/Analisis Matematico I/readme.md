@@ -1,5 +1,5 @@
 ###### Año 2016
 
 * Maria Eugenia Torio
-* Sabrina Grossi
+* Sabrina Belen Grossi
 * Andrea Noemi Ceretani

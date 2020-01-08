@@ -1,5 +1,5 @@
 ###### Año 2018
 
-* Claudia Deco
-* Cristina Bender
+* Claudia Susana Deco
+* Cristina Marta Bender
 * Lucia Martin Reixach
