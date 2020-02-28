@@ -117,6 +117,21 @@ Explique brevemente las ventajas de tener un lenguaje de especificación
  no tipado.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+A veces es necesario que una determinada variable pueda asumir valores de
+ diferentes tipos.
+ En un lenguaje tipado esto exige definir un nuevo tipo con múltiples constructo
+res, lo cual conlleva que cada vez que se haga referencia a la variable
+ deberá hacerse un análisis por casos.
+ Esto torna la especificación mas larga y compleja.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique y justifique el significado de la fórmula final de una especificación
  TLA.
@@ -201,6 +216,40 @@ Init\land\square\left[Op_{1}\lor Op_{2}\right]_{v}\land WF_{v}\left(Op_{1}\right
 
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+ & \left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket Init\land\square\left[Op_{1}\lor Op_{2}\right]_{v}\land WF_{v}\left(Op_{1}\right)\right\rrbracket \\
+\equiv & \left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket Init\land\square\left(Op_{1}\lor Op_{2}\lor v'=v\right)\land WF_{v}\left(Op_{1}\right)\right\rrbracket \\
+\equiv & \land\left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket Init\right\rrbracket \\
+ & \land\left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket \square\left(Op_{1}\lor Op_{2}\lor v'=v\right)\right\rrbracket \\
+ & \land\left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket WF_{v}\left(Op_{1}\right)\right\rrbracket \\
+\equiv & \land s_{0}\left\llbracket Init\right\rrbracket \\
+ & \land\forall i\in\mathbb{N}:s_{i}\left\llbracket Op_{1}\lor Op_{2}\lor v'=v\right\rrbracket s_{i+1}\\
+ & \land\left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket WF_{v}\left(Op_{1}\right)\right\rrbracket \\
+\equiv & \land Init\left[\forall v\in Vars:v\leftarrow s_{0}\left(v\right)\right]\\
+ & \land\forall i\in\mathbb{N}:s_{i}\left\llbracket Op_{1}\right\rrbracket s_{i+1}\lor s_{i}\left\llbracket Op_{2}\right\rrbracket s_{i+1}\lor s_{i}\left\llbracket v'=v\right\rrbracket s_{i+1}\\
+ & \land\left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket WF_{v}\left(Op_{1}\right)\right\rrbracket \\
+\equiv & \land Init\left[\forall v\in Vars:v\leftarrow s_{0}\left(v\right)\right]\\
+ & \begin{array}{ccc}
+\land\forall i\in\mathbb{N}: & \lor & Op_{1}\left[\forall v\in Vars:v\leftarrow s_{i}\left(v\right),v'\leftarrow s_{i+1}\left(v\right)\right]\\
+ & \lor & Op_{2}\left[\forall v\in Vars:v\leftarrow s_{i}\left(v\right),v'\leftarrow s_{i+1}\left(v\right)\right]\\
+ & \lor & s_{i}\left(v\right)=s_{i+1}\left(v\right)
+\end{array}\\
+ & \land\left\langle s_{0},s_{1},\ldots\right\rangle \left\llbracket WF_{v}\left(Op_{1}\right)\right\rrbracket 
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Respecto del lenguaje TLA escriba el significado formal de 
 \color purple
@@ -210,7 +259,11 @@ Respecto del lenguaje TLA escriba el significado formal de
 
 
 \color inherit
- con respecto a una ejecución, donde 
+ con respecto a una ejecución 
+\begin_inset Formula $e$
+\end_inset
+
+, donde 
 \color purple
 
 \begin_inset Formula $A$
@@ -229,6 +282,23 @@ Respecto del lenguaje TLA escriba el significado formal de
  es una variable.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall i\in\mathbb{N}:A\left(e\left(i\right),e\left(i+1\right)\right)\lor e\left(i\right)\left(v\right)=e\left(i+1\right)\left(v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique la razón por la cual Lamport sugiere escribir la vitalidad de un
  sistema con fórmulas de equidad.
@@ -245,6 +315,206 @@ Indique, justificando su respuesta, todos los conceptos teóricos importantes
  Por ejemplo, el teorema de Alpern-Schneider.
 \end_layout
 
+\begin_deeper
+\begin_layout Description
+estado Sea 
+\begin_inset Formula $Var$
+\end_inset
+
+ el conjunto de todos los nombres posibles de variables y 
+\begin_inset Formula $Val$
+\end_inset
+
+ el conjunto de todos los valores que estas pueden llegar a tomar, luego
+ un estado es una función 
+\begin_inset Formula $s:Var\to Val$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+ejecución Secuencia infinita de estados.
+\end_layout
+
+\begin_layout Description
+propiedad Conjunto de todas las ejecuciones que la satisfacen.
+\end_layout
+
+\begin_layout Description
+sistema Conjunto de todas sus ejecuciones posibles.
+\end_layout
+
+\begin_layout Description
+seguridad Diremos que una propiedad 
+\begin_inset Formula $P$
+\end_inset
+
+ es de seguridad respecto del conjunto de estados 
+\begin_inset Formula $E$
+\end_inset
+
+ si y solo si para cualquier ejecución 
+\begin_inset Formula $e\in E^{\infty}$
+\end_inset
+
+ ocurre:
+\begin_inset Formula 
+\[
+e\notin P\iff\exists n\in\mathbb{N}:\forall t\in E^{\infty}:e_{n}\circ t\notin P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+vitalidad Diremos que una propiedad 
+\begin_inset Formula $P$
+\end_inset
+
+ es de vitalidad respecto del conjunto de estados 
+\begin_inset Formula $E$
+\end_inset
+
+ si y solo si:
+\begin_inset Formula 
+\[
+\forall e\in E^{*}:\exists t\in E^{\infty}:e\circ t\in P
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+equidad
+\begin_inset space ~
+\end_inset
+
+débil Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ un predicado que depende de dos estados (transición) luego:
+\begin_inset Formula 
+\begin{align*}
+WF_{v}\left(T\right) & \triangleq & \lozenge\square\left(ENABLED\left\langle T\right\rangle _{v}\right)\Rightarrow\square\lozenge\left\langle T\right\rangle _{v} & \left(a\right)\\
+ & \equiv & \square\left(\square ENABLED\left\langle T\right\rangle _{v}\Rightarrow\lozenge\left\langle T\right\rangle _{v}\right) & \left(b\right)\\
+ & \equiv & \square\lozenge\left(\neg ENABLED\left\langle T\right\rangle _{v}\right)\lor\square\lozenge\left\langle T\right\rangle _{v} & \left(c\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si en algún momento de una ejecución, 
+\begin_inset Formula $T$
+\end_inset
+
+ queda habilitada para siempre, entonces la transición 
+\begin_inset Formula $T$
+\end_inset
+
+ ocurre infinitas veces.
+\end_layout
+
+\begin_layout Enumerate
+Siempre se da el caso de que, si 
+\begin_inset Formula $T$
+\end_inset
+
+ esta habilitada por siempre, entonces la transición 
+\begin_inset Formula $T$
+\end_inset
+
+ eventualmente ocurrirá.
+\end_layout
+
+\begin_layout Enumerate
+O bien 
+\begin_inset Formula $T$
+\end_inset
+
+ esta infinitamente a menudo deshabilitada, o bien la transición 
+\begin_inset Formula $T$
+\end_inset
+
+ ocurre infinitas veces.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+equidad
+\begin_inset space ~
+\end_inset
+
+fuerte Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ un predicado que depende de dos estados (transición) luego:
+\begin_inset Formula 
+\begin{align*}
+SF_{v}\left(T\right) & \triangleq & \square\lozenge ENABLED\left\langle T\right\rangle _{v}\Rightarrow\square\lozenge\left\langle T\right\rangle _{v} & 33\\
+ & \equiv & \lozenge\square\left(\neg ENABLED\left\langle T\right\rangle _{v}\right)\lor\square\lozenge\left\langle T\right\rangle _{v} & 32
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ esta infinitamente a menudo habilitada, entonces la transición 
+\begin_inset Formula $T$
+\end_inset
+
+ ocurre infinitas veces.
+\end_layout
+
+\begin_layout Enumerate
+O bien 
+\begin_inset Formula $T$
+\end_inset
+
+ esta eventualmente deshabilitada para siempre, o bien la transición 
+\begin_inset Formula $T$
+\end_inset
+
+ ocurre infinitas veces.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+máquina
+\begin_inset space ~
+\end_inset
+
+cerrada COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Teorema de Alpern-Schneider: Toda propiedad es el resultado de una propiedad
+ de seguridad con otra de vitalidad.
+\end_layout
+
+\begin_layout Itemize
+Teorema de Abadi-Lamport: Si las propiedades de vitalidad se escriben como
+ propiedades de equidad, se obtienen maquinas cerradas.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique y ejemplifique la diferencia entre 
 \color purple
@@ -270,6 +540,115 @@ Defina formalmente el concepto de estado y explique por qué en TLA los estados
  son estados del universo y cuál es su utilidad en las especificaciones.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $Var$
+\end_inset
+
+ el conjunto de todos los nombres posibles de variables y 
+\begin_inset Formula $Val$
+\end_inset
+
+ el conjunto de todos los valores que estas pueden llegar a tomar, luego
+ un estado es una función 
+\begin_inset Formula $s:Var\to Val$
+\end_inset
+
+.
+ Es decir, que si un sistema solo utiliza las variables 
+\begin_inset Formula $x_{1},\ldots,x_{n}$
+\end_inset
+
+, un estado asigna valores no solo a dichos identificadores, sino también
+ a cualquier otro; es por ello que decimos que los estados son estados del
+ universo.
+\end_layout
+
+\begin_layout Standard
+Definir el concepto de estado de esta forma surge de la necesidad de poder
+ especificar un sistema como la composición de las especificaciones de sub-siste
+mas o componentes.
+ Por ejemplo consideremos los sistemas 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $N$
+\end_inset
+
+ con estados iniciales 
+\begin_inset Formula $x=0$
+\end_inset
+
+ e 
+\begin_inset Formula $y=0$
+\end_inset
+
+ respectivamente y cuyas únicas transiciones son 
+\begin_inset Formula $x'=x+1$
+\end_inset
+
+ e 
+\begin_inset Formula $y'=y+1$
+\end_inset
+
+.
+ Para el sistema que resulta de componer 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $N$
+\end_inset
+
+, una ejecución posible esta dada por la siguiente sucesión de estados:
+\begin_inset Formula 
+\begin{align*}
+s_{0} & :Var\to Val/s_{0}\left(x\right)=0\land s_{0}\left(y\right)=0\land s_{0}\left(z\right)=77\land\ldots\\
+s_{1} & :Var\to Val/s_{0}\left(x\right)=1\land s_{0}\left(y\right)=1\land s_{0}\left(z\right)=""\land\ldots\\
+\vdots
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si hubiéramos restringido los estados solo a las variables intervinientes
+ (
+\begin_inset Formula $s:\left\{ x\right\} \to Val$
+\end_inset
+
+ para 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $s:\left\{ y\right\} \to Val$
+\end_inset
+
+ para 
+\begin_inset Formula $N$
+\end_inset
+
+), entonces dicha ejecución no seria valida ni para 
+\begin_inset Formula $M$
+\end_inset
+
+ ni para 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Enuncie la regla práctica que indica cuándo se debe usar equidad fuerte
  y no equidad débil.
