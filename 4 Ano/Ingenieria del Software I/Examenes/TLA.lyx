@@ -112,6 +112,33 @@ Explique y ejemplifique las condiciones bajo las cuales equidad débil no
  es equivalente a equidad fuerte.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Consideremos la ejecución 
+\begin_inset Formula $\left\langle x=0,x=1,x=0,x=1,\ldots\right\rangle $
+\end_inset
+
+ y la acción 
+\begin_inset Formula $x=0\land x'=2$
+\end_inset
+
+.
+ Si quisiéramos exigir la ejecución de dicha acción no bastaría con solicitar
+ equidad débil pues ella aplica solamente si existe un momento en la ejecución
+ a partir del cual la acción siempre esta habilitada, lo cual no ocurre.
+\end_layout
+
+\begin_layout Standard
+Por el contrario, equidad fuerte solo requiere que en cualquier momento
+ de la ejecución, exista un punto a partir del cual la acción este habilitada
+ infinitas veces, cosa que si ocurre.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique brevemente las ventajas de tener un lenguaje de especificación
  no tipado.
@@ -137,6 +164,84 @@ Explique y justifique el significado de la fórmula final de una especificación
  TLA.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+La formula final de una especificación TLA suele tener la forma 
+\color purple
+
+\begin_inset Formula $Init\land\square\left[Next\right]_{vars}\land Fairness_{vars}$
+\end_inset
+
+
+\color inherit
+.
+ Dicha formula exige tres condiciones diferentes:
+\end_layout
+
+\begin_layout Enumerate
+El estado inicial de una ejecución válida debe cumplir con el predicado
+ 
+\color purple
+
+\begin_inset Formula $Init$
+\end_inset
+
+
+\color inherit
+, pues 
+\begin_inset Formula $e\left\llbracket P\right\rrbracket \equiv e\left(0\right)\left\llbracket P\right\rrbracket $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Cualquier par de estados sucesivos debe verificar la acción 
+\color purple
+
+\begin_inset Formula $Next$
+\end_inset
+
+
+\color inherit
+, pues 
+\begin_inset Formula $e\left\llbracket \square Next\right\rrbracket \equiv\forall i\in\mathbb{N}:e\left(i\right)\left\llbracket Next\right\rrbracket e\left(i+1\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+El sistema esta obligado a evolucionar si esta infinitamente habilitado
+ para hacerlo, pues por definición equidad es 
+\begin_inset Formula $\lozenge\square\left(ENABLED\left\langle T\right\rangle _{v}\right)\Rightarrow\square\lozenge\left\langle T\right\rangle _{v}$
+\end_inset
+
+ o bien 
+\begin_inset Formula $\square\lozenge ENABLED\left\langle T\right\rangle _{v}\Rightarrow\square\lozenge\left\langle T\right\rangle _{v}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Nótese que el subíndice 
+\color purple
+
+\begin_inset Formula $vars$
+\end_inset
+
+
+\color inherit
+ nos indica que también se admiten pasos intrascendentes, para poder combinar
+ la especificación con otras.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique y ejemplifique la forma de tener una cantidad ilimitada de instancias
  de un módulo en TLA+.
@@ -147,7 +252,7 @@ Explique y ejemplifique la forma de tener una cantidad ilimitada de instancias
 ...
 \color purple
 
-\begin_inset Formula $H\left(i\right)!Action$
+\begin_inset Formula $H\left[i\right]!Action$
 \end_inset
 
 
@@ -159,7 +264,7 @@ Explique y ejemplifique la forma de tener una cantidad ilimitada de instancias
  donde 
 \color purple
 
-\begin_inset Formula $H\left(i\right)$
+\begin_inset Formula $H\left[i\right]$
 \end_inset
 
 
@@ -191,16 +296,94 @@ Explique y ejemplifique la forma de tener una cantidad ilimitada de instancias
 .
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Puede lograrse por ejemplo definiendo un arreglo de la siguiente manera:
+ 
+\color purple
+
+\begin_inset Formula $H=\left[i\in Nat:i\mapsto\text{INSTANCE }MODULO\right]$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique la contribución del concepto de máquina cerrada a la teoría de
  especificaciones de sistemas concurrentes.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique los conceptos de vitalidad, seguridad y equidad según se estudiaron
  en clase.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+Una propiedad de seguridad es una propiedad que prohíbe pasos incorrectos.
+ Hacemos esto generalmente indicando cuales pasos están permitidos.
+ Por ejemplo 
+\begin_inset Formula $x=11\land x'=0$
+\end_inset
+
+ solo permite pasar de un estado donde 
+\begin_inset Formula $x$
+\end_inset
+
+ vale 
+\begin_inset Formula $11$
+\end_inset
+
+ al estado donde 
+\begin_inset Formula $x$
+\end_inset
+
+ vale 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Las propiedades de seguridad solo indican cuales son los pasos permitidos,
+ pero no exigen que un sistema evolucione; un sistema podría satisfacer
+ la especificación simplemente permaneciendo en el estado inicial.
+ Las propiedades de vitalidad son las que exigen que ciertos estados sean
+ alcanzado.
+\end_layout
+
+\begin_layout Itemize
+Las propiedades de equidad son un tipo especial de propiedades de vitalidad
+ que no agrega restricciones a las posibles ejecuciones de un sistema.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Describa formalmente con cierto detalle la semántica de una especificación
  TLA de la forma:
@@ -296,6 +479,10 @@ Solución
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -304,11 +491,96 @@ Explique la razón por la cual Lamport sugiere escribir la vitalidad de un
  sistema con fórmulas de equidad.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Una propiedad de vitalidad no debería agregar restricciones a un sistema,
+ para ello deben utilizarse propiedades de seguridad.
+ Sin embargo si se admiten propiedades de vitalidad arbitrarias es posible
+ que estas agreguen restricciones.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo un sistema con propiedades de seguridad que exigen estado inicial
+ 
+\begin_inset Formula $x=0$
+\end_inset
+
+ y única transición 
+\begin_inset Formula $x'=x+1$
+\end_inset
+
+ admiten ejecuciones como 
+\begin_inset Formula $\left\langle x=0\right\rangle $
+\end_inset
+
+ o 
+\begin_inset Formula $\left\langle x=0,x=1,\ldots\right\rangle $
+\end_inset
+
+.
+ Si ahora agregamos la propiedad de vitalidad 
+\begin_inset Quotes fld
+\end_inset
+
+si en algún estado 
+\begin_inset Formula $x$
+\end_inset
+
+ vale 
+\begin_inset Formula $1$
+\end_inset
+
+ entonces eventualmente se debe alcanzar un estado donde 
+\begin_inset Formula $x$
+\end_inset
+
+ vale 
+\begin_inset Formula $0$
+\end_inset
+
+
+\begin_inset Quotes frd
+\end_inset
+
+, entonces estamos agregando nuevas restricciones al sistema.
+\end_layout
+
+\begin_layout Standard
+Lamport sugiere escribir las propiedades de vitalidad como propiedades de
+ equidad, para así evitar este conflicto.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Explique la incidencia del teorema de Alpern-Schneider en el lenguaje de
  especificación TLA.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+El teorema de Alpern-Schneider dice que toda propiedad es el resultado de
+ una propiedad de seguridad con otra de vitalidad.
+ Es por eso que la formula final de una especificación suele tener la forma
+ 
+\color purple
+
+\begin_inset Formula $Init\land\square\left[Next\right]_{vars}\land Fairness_{vars}$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Indique, justificando su respuesta, todos los conceptos teóricos importantes
  que utiliza Lamport en TLA+ para definir el lenguaje.
@@ -461,8 +733,8 @@ fuerte Sea
  un predicado que depende de dos estados (transición) luego:
 \begin_inset Formula 
 \begin{align*}
-SF_{v}\left(T\right) & \triangleq & \square\lozenge ENABLED\left\langle T\right\rangle _{v}\Rightarrow\square\lozenge\left\langle T\right\rangle _{v} & 33\\
- & \equiv & \lozenge\square\left(\neg ENABLED\left\langle T\right\rangle _{v}\right)\lor\square\lozenge\left\langle T\right\rangle _{v} & 32
+SF_{v}\left(T\right) & \triangleq & \square\lozenge ENABLED\left\langle T\right\rangle _{v}\Rightarrow\square\lozenge\left\langle T\right\rangle _{v} & \left(a\right)\\
+ & \equiv & \lozenge\square\left(\neg ENABLED\left\langle T\right\rangle _{v}\right)\lor\square\lozenge\left\langle T\right\rangle _{v} & \left(b\right)
 \end{align*}
 
 \end_inset
@@ -502,6 +774,10 @@ máquina
 \end_inset
 
 cerrada COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -518,23 +794,600 @@ Teorema de Abadi-Lamport: Si las propiedades de vitalidad se escriben como
 \begin_layout Enumerate
 Explique y ejemplifique la diferencia entre 
 \color purple
-
-\begin_inset Formula $EXTENDS$
-\end_inset
-
-
+EXTENDS
 \color inherit
  e 
 \color purple
-
-\begin_inset Formula $INSTANCE$
-\end_inset
-
-
+INSTANCE
 \color inherit
  en TLA+.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+La sentencia 
+\color purple
+EXTENDS 
+\begin_inset Formula $MODULO$
+\end_inset
+
+
+\color inherit
+ simplemente agrega las definiciones del modulo 
+\color purple
+
+\begin_inset Formula $MODULO$
+\end_inset
+
+
+\color inherit
+ al módulo actual.
+ Por ejemplo si consideramos el siguiente modulo
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<row interlinespace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+MODULE 
+\begin_inset Formula $UNO$
+\end_inset
+
+
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="2mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+VARIABLE 
+\begin_inset Formula $v1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $UNOInit\triangleq v1=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+entonces los siguientes dos módulos son iguales:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<row interlinespace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+MODULE 
+\begin_inset Formula $DOS$
+\end_inset
+
+
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="2mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+VARIABLES 
+\begin_inset Formula $v1,v2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $UNOInit\triangleq v1=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="2mm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $DOSInit\triangleq v2=10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<row interlinespace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+MODULE 
+\begin_inset Formula $TRES$
+\end_inset
+
+
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="2mm">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+EXTENDS 
+\begin_inset Formula $UNO$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="2mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+VARIABLE 
+\begin_inset Formula $v2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $DOSInit\triangleq v2=10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La sentencia 
+\color purple
+INSTANCE 
+\begin_inset Formula $MODULO$
+\end_inset
+
+
+\color inherit
+ 
+\color purple
+WITH 
+\begin_inset Formula $x\leftarrow a$
+\end_inset
+
+
+\color inherit
+ permite crear varias instancias del mismo modulo utilizando substitución.
+ Por ejemplo en el siguiente modulo
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0pt">
+<row interlinespace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset space \hspace*{\fill}
+\end_inset
+
+MODULE 
+\begin_inset Formula $CUATRO$
+\end_inset
+
+
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabularnewline
+\backslash
+arrayrulecolor{darkgreen}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+VARIABLES 
+\begin_inset Formula $v1,v2,i1,i2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $DOSInit\triangleq v2=10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $i1\triangleq$
+\end_inset
+
+INSTANCE 
+\begin_inset Formula $UNO$
+\end_inset
+
+ WITH 
+\begin_inset Formula $v1\leftarrow v2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomspace="1mm">
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\color purple
+\begin_inset Formula $i2\triangleq$
+\end_inset
+
+INSTANCE 
+\begin_inset Formula $UNO$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se agregan las variables 
+\color purple
+
+\begin_inset Formula $i1.v2$
+\end_inset
+
+
+\color inherit
+ y 
+\color purple
+
+\begin_inset Formula $i2.v1$
+\end_inset
+
+
+\color inherit
+, y las definiciones 
+\color purple
+
+\begin_inset Formula $i1!UNOInit\triangleq v2=0$
+\end_inset
+
+
+\color inherit
+ y 
+\color purple
+
+\begin_inset Formula $i1!UNOInit\triangleq v1=0$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Defina formalmente el concepto de estado y explique por qué en TLA los estados
  son estados del universo y cuál es su utilidad en las especificaciones.
@@ -654,6 +1507,19 @@ Enuncie la regla práctica que indica cuándo se debe usar equidad fuerte
  y no equidad débil.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Siempre debe preferirse equidad débil por sobre equidad fuerte si no hay
+ un motivo importante por el cual la segunda opción sea la mejor.
+ Equidad débil y fuerte son son equivalentes para una acción, si siempre
+ que esta está habilitada solo puede deshabilitarse al ser ejecutada.
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Ejercicios prácticos
 \end_layout
