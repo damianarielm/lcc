@@ -1554,7 +1554,7 @@ Un brazo mecánico controlado digitalmente demora
 
 \color inherit
  unidades de tiempo desde la detención se lo debe mover en sentido contrario
- por el mismo tiempo que se lo movió hasta la derención.
+ por el mismo tiempo que se lo movió hasta la detención.
  Cuando el brazo llega a cualquiera de los extremos debe permanecer allí
  a lo sumo 
 \color purple
@@ -6434,7 +6434,7 @@ VARIABLES
 \begin_layout Plain Layout
 
 \color purple
-\begin_inset Formula $\land WF_{\left\langle muestras,actual,estado\right\rangle }\left(SISTEMANext\right)$
+\begin_inset Formula $\land WF_{\left\langle muestras,actual,estado\right\rangle }\left(muestrasNext\right)$
 \end_inset
 
 
@@ -8228,6 +8228,70 @@ THEOREM
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Sistema de alarma
+\end_layout
+
+\begin_layout Subsubsection
+Requerimientos
+\end_layout
+
+\begin_layout Standard
+Un sistema de alarma hogareño simple consta de un teclado (contiene los
+ 10 dígitos y las dos primeras letras del abecedario), dos sensores de movimient
+o y dos magnéticos (para aberturas) y una bocina.
+ Todo el sistema será controlado por un programa.
+\end_layout
+
+\begin_layout Standard
+El sistema puede estar armado o no.
+ Armado significa que si se detecta una intrusión debe sonar la bocina hasta
+ que se teclee el código de seguridad.
+ Si no esta armado no se responderá a las intrusiones.
+ Una intrusión se detecta cuando alguno de los sensores envía una señal.
+ Si esta armado, al teclear el código de seguridad el sistema se desarma;
+ si esta desarmado, al teclear el código de seguridad, se arma.
+ El código de seguridad viene de fabrica y consta de 2 dígitos.
+\end_layout
+
+\begin_layout Standard
+El sistema agrupa un sensor de movimiento y uno magnético en el sector 
+\color purple
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\color inherit
+ y a los sensores restantes en el sector 
+\color purple
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\color inherit
+.
+ Cada sector se puede armar independientemente del otro.
+ Para hacerlo se teclea su letra y el código de seguridad.
+ Si un sector no esta armado no se responderá a las intrusiones en ese sector.
+ Si solo se teclea el código de seguridad se arman todos los sectores; si
+ algún sector esta armado y se teclea el código de seguridad, se desarman
+ todos los sectores.
+\end_layout
+
+\begin_layout Subsubsection
+Designaciones
+\end_layout
+
+\begin_layout Subsubsection
+Conocimiento de dominio
+\end_layout
+
+\begin_layout Subsubsection
+Especificación
 \end_layout
 
 \end_body
