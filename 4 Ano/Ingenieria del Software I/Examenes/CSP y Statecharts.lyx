@@ -538,8 +538,120 @@ Explique las diferencias y semejanzas entre los operadores CSP:
 Solución
 \end_layout
 
+\begin_layout Itemize
+El operador 
+\color purple
+
+\begin_inset Formula $\mid$
+\end_inset
+
+
+\color inherit
+ (llamado alternativa etiquetada) espera que el entorno indique como debe
+ progresar el proceso: si el entorno ofrece el primer evento del proceso
+ a la izquierda entonces se comportara como tal, y si ofrece el de la derecha
+ hará lo propio.
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
-COMPLETAR.
+A ambos lados del operador debe estar explícitamente indicado cual es el
+ primer evento, es decir, no es un termino valido escribir 
+\color purple
+
+\begin_inset Formula $P\mid Q$
+\end_inset
+
+
+\color inherit
+, deberá en dicho caso escribirse 
+\color purple
+
+\begin_inset Formula $a\to P'\mid b\to Q'$
+\end_inset
+
+
+\color inherit
+.
+ Ademas dicho primer evento de cada proceso debe ser diferente, es decir
+ que no se admiten términos de la forma 
+\color purple
+
+\begin_inset Formula $a\to P\mid a\to Q$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+El operador 
+\color purple
+
+\begin_inset Formula $\square$
+\end_inset
+
+
+\color inherit
+ (llamado selección externa) se comporta de forma idéntica a la alternativa
+ etiquetada, solo que este admite los términos que el otro no, es decir
+ que es valido escribir términos de la forma 
+\color purple
+
+\begin_inset Formula $P\mid Q$
+\end_inset
+
+
+\color inherit
+ o 
+\color purple
+
+\begin_inset Formula $a\to P\mid a\to Q$
+\end_inset
+
+
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+El operador 
+\color purple
+
+\begin_inset Formula $\sqcap$
+\end_inset
+
+
+\color inherit
+ (llamado selección interna) representa el comportamiento no determinístico
+ respecto del entorno.
+ Es decir que el entorno no puede saber si 
+\color purple
+
+\begin_inset Formula $P\sqcap Q$
+\end_inset
+
+
+\color inherit
+ se comportará como 
+\color purple
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\color inherit
+ o como 
+\color purple
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \end_deeper
@@ -612,7 +724,70 @@ a\notin\alpha Q\land b\notin\alpha Q\Rightarrow a\to P\parallel b\to Q=a\to\left
 
 
 \color inherit
-COMPLETAR.
+La ley de interleaving dice que si dos procesos paralelos no su primer evento,
+ deben entonces considerarse todas las posibilidades, es decir que el entorno
+ decidirá si ocurre 
+\color purple
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\color inherit
+ o 
+\color purple
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\color inherit
+.
+ Si primero se consume 
+\begin_inset Formula $a$
+\end_inset
+
+ entonces a continuación puede consumirse el resto de 
+\color purple
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\color inherit
+ o bien 
+\color purple
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\color inherit
+; por el contrario si primero se consume 
+\color purple
+
+\begin_inset Formula $b$
+\end_inset
+
+
+\color inherit
+ a continuación puede consumirse el resto de 
+\color purple
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\color inherit
+ o bien 
+\color purple
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\color inherit
+.
 \end_layout
 
 \begin_layout Itemize
@@ -629,7 +804,20 @@ Deadlock:
 
 \begin_deeper
 \begin_layout Standard
-COMPLETAR.
+En CSP si dos procesos comparten un evento, ambos deben estar dispuestos
+ a consumirlo al mismo tiempo.
+ Precisamente como 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ son eventos compartidos, el modelo sincrónico indica que cualquiera de
+ los procesos debe esperar a que el otro esté dispuesto a comunicar el evento
+ que el primero está esperando, pero como ambos están en la misma situación
+ el progreso es imposible
 \end_layout
 
 \end_deeper
@@ -647,7 +835,8 @@ Sincronization:
 
 \begin_deeper
 \begin_layout Standard
-COMPLETAR.
+La ley de sincronización dice que si dos procesos deben interactuar a través
+ de un evento en común, entonces ambos consumen el evento al mismo tiempo.
 \end_layout
 
 \end_deeper
@@ -665,7 +854,24 @@ IEOF:
 
 \begin_deeper
 \begin_layout Standard
-COMPLETAR.
+Por ultimo la ley 
+\begin_inset Quotes fld
+\end_inset
+
+los eventos independientes ocurren primero
+\begin_inset Quotes frd
+\end_inset
+
+ nos indica justamente eso: si un evento (como 
+\color purple
+
+\begin_inset Formula $a$
+\end_inset
+
+
+\color inherit
+) no es compartido por dos procesos paralelos, entonces este debe consumirse
+ primero.
 \end_layout
 
 \end_deeper
@@ -772,6 +978,10 @@ COMPLETAR.
 \end_deeper
 \begin_layout Enumerate
 Enuncie las tres razones por las cuales, según Jackson, R no puede ser S.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -779,7 +989,15 @@ Enuncie las tres razones por las cuales, según Jackson, R no puede ser S.
 Solución
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
+Puede haber fenómenos no compartidos.
+\end_layout
+
+\begin_layout Itemize
+Puede haber referencias a futuro.
+\end_layout
+
+\begin_layout Itemize
 COMPLETAR.
 \end_layout
 
@@ -1199,7 +1417,7 @@ La impresora imprime un uno
 \end_layout
 
 \begin_layout Subsubsection
-Tabla de control (COMPLETAR)
+Tabla de control
 \end_layout
 
 \begin_layout Standard
@@ -1309,7 +1527,7 @@ Compartido
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $?$
+\begin_inset Formula $\XBox$
 \end_inset
 
 
@@ -2148,6 +2366,113 @@ Statecharts
 CSP
 \end_layout
 
+\begin_layout Standard
+Asumiremos que la cinta se mueve de izquierda a derecha, y que la posición
+ inicial se encuentra al tope a la izquierda.
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\text{\ensuremath{DK\_TERMOMETRO=DK\_TERMOMETRO1\square DK\_TERMOMETRO2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $DK\_TERMOMETRO1=\overline{superior}\to\overline{inferior}\to DK\_TERMOMETRO1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $DK\_TERMOMETRO2=\overline{inferior}\to\overline{superior}\to DK\_TERMOMETRO2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\text{\ensuremath{DK\_SENSOR=\overline{limiteizq}\to DK\_SENSOR\mid\overline{limiteder}\to DK\_SENSOR}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}DK\_ROCIADOR & =abrir\to DK\_ROCIADOR\\
+ & \mid cerrar\to DK\_ROCIADOR
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}DK\_MOTOR & =derecha\to DK\_ROBOT\\
+ & \mid izquierda\to DK\_ROBOT\\
+ & \mid detener\to DK\_ROBOT
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}DK\_ROBOT & =DK\_TERMOMETRO\\
+ & \parallel DK\_SENSOR\\
+ & \parallel DK\_ROCIADOR\\
+ & \parallel DK\_MOTOR
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\text{\ensuremath{SOFTWARE=\overline{cerrar}\to\overline{izquierda}\to limiteizq\to\overline{detener}\to EMPEZAR}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $EMPEZAR=superior\to\overline{abrir}\to\overline{derecha}\to ESPERAR$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $ESPERAR=inferior\to SOFTWARE\mid limiteder\to SOFTWARE$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Productores y consumidores 1 (COMPLETAR)
 \end_layout
@@ -2743,6 +3068,193 @@ Statecharts
 
 \begin_layout Subsubsection
 CSP
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $DK\_PRODUCTORES=send!d\to DK\_PRODUCTORES$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $DK\_CONSUMIDORES=buffer!b\to receive?d\to DK\_CONSUMIDORES$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $DK=DK\_PRODUCTORES\parallel DK\_CONSUMIDORES$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100text%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}BUFFER\left(0,\left\langle \right\rangle \right) & =push?x\to BUFFER\left(1,\left\langle x\right\rangle \right)\\
+ & \mid size!0\to BUFFER\left(0,\left\langle \right\rangle \right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $BUFFER\left(n,ys\right)=NOTFULL\left(n,ys\right)\left\lceil n<N\right\rceil FULL\left(ys\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}NOTFULL\left(n,y:ys\right) & =push?x\to BUFFER\left(n+1,x:y:ys\right)\\
+ & \mid pop!y\to BUFFER\left(n-1,ys\right)\\
+ & \mid size!n\to BUFFER\left(n,y:ys\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}FULL\left(y:ys\right) & =pop!y\to BUFFER\left(N-1,ys\right)\\
+ & \mid size!N\to FULL\left(y:ys\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $BUFFERS=\stackrel[i=1]{2}{\parallel}i:BUFFER\left(0,\left\langle \right\rangle \right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100text%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}PUSHER & =send?d\to1.size?s1\to1.size?s2\\
+ & \to\left(1.push!d\to PUSHER\left\lceil s1<s2\right\rceil 2.push!d\to PUSHER\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $POPER=buffer?b\to b.pop?d\to receive!d\to BALANCER$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $\begin{aligned}BALANCER & =1.size?s1\to1.size?s2\\
+ & \to LEFT\left\lceil s1-s2>1\right\rceil \left(RIGHT\left\lceil s2-s1>1\right\rceil POPER\right)
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $LEFT=1.pop?x\to2.push!x\to BALANCER$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $RIGHT=2.pop?x\to1.push!x\to BALANCER$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $B=PUSHER\parallel POPER$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100text%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\color purple
+\begin_inset Formula $SISTEMA=DK\parallel B\parallel BUFFERS$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
