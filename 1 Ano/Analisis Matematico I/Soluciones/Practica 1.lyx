@@ -4883,7 +4883,43 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+Puesto que es mínimo de 
+\begin_inset Formula $A$
+\end_inset
+
+ sabemos que para cualquier 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ resulta 
+\begin_inset Formula $\alpha\leq x$
+\end_inset
+
+, en particular esto también es cierto para 
+\begin_inset Formula $\beta$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $\alpha\leq\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Análogamente podemos concluir que 
+\begin_inset Formula $\beta\leq\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De todo lo anterior concluimos que 
+\begin_inset Formula $\alpha\leq\beta\land\beta\leq\alpha\implies\alpha=\beta$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -4942,15 +4978,48 @@ Hallar las condiciones bajo las cuales se tiene que
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Muestre que si 
+\begin_inset Formula $A$
+\end_inset
+
+ es un conjunto acotado superiormente (inferiormenente) entonces 
+\begin_inset Formula $-A$
+\end_inset
+
+ es u conjunto acotado inferiormenente (superiormente).
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Muestre que si 
+\begin_inset Formula $A$
+\end_inset
+
+ posee un supremo entonces 
+\begin_inset Formula $-A$
+\end_inset
+
+ posee ínfimo y se verifica que 
+\begin_inset Formula $\inf\left(-A\right)=-\sup\left(A\right)$
+\end_inset
+
+, y análogamente, si 
+\begin_inset Formula $A$
+\end_inset
+
+ posee ínfimo entonces 
+\begin_inset Formula $-A$
+\end_inset
+
+ posee supremo y se verifica que 
+\begin_inset Formula $\sup\left(-A\right)=-\inf\left(A\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Utilizar los resultados de las partes anteriores para mostrar que todo conjunto
+ no vacío de números reales acotado inferiormente posee ínfimo.
 \end_layout
 
 \begin_layout Paragraph
@@ -4962,9 +5031,94 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Sabemos que 
+\begin_inset Formula $A\neq\emptyset$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $x\in A$
+\end_inset
+
+ luego 
+\begin_inset Formula $-x\in-A$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $-A\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\subseteq}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x\in-\left(-A\right)$
+\end_inset
+
+, luego por definición 
+\begin_inset Formula $-x\in-A$
+\end_inset
+
+ y nuevamente por definición 
+\begin_inset Formula $-\left(-x\right)\in A$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\supseteq}$
+\end_inset
+
+: Sea 
+\begin_inset Formula $x\in A$
+\end_inset
+
+, observemos que 
+\begin_inset Formula $x=-\left(-x\right)$
+\end_inset
+
+ luego por definición 
+\begin_inset Formula $-x\in-A$
+\end_inset
+
+ y nuevamente por definición 
+\begin_inset Formula $-\left(-x\right)\in-\left(-A\right)$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $x\in-\left(-A\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -4991,7 +5145,7 @@ Si
 \begin_inset Formula $c$
 \end_inset
 
- es un número real, se define el conjutno
+ es un número real, se define el conjunto
 \begin_inset Formula 
 \[
 cA=\left\{ cx:x\in A\right\} 
@@ -5004,7 +5158,24 @@ cA=\left\{ cx:x\in A\right\}
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Si 
+\begin_inset Formula $A=\left\{ x\in\mathbb{R}:x\ge2\right\} $
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left[-1,2\right)$
+\end_inset
+
+, determinar 
+\begin_inset Formula $2A$
+\end_inset
+
+ y 
+\begin_inset Formula $-3B$
+\end_inset
+
+.
+ Analizar las cotas superiores e inferiores de estos conjuntos.
 \end_layout
 
 \begin_layout Enumerate
@@ -5024,9 +5195,62 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $2A=\left\{ 2x:x\in A\right\} =\left\{ 2x:x\geq2\right\} $
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $y=2x$
+\end_inset
+
+, observemos que 
+\begin_inset Formula $\frac{y}{2}=x$
+\end_inset
+
+, luego 
+\begin_inset Formula $2A=\left\{ y:\frac{y}{2}\geq2\right\} =\left\{ y:y\geq4\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\inf\left(2A\right)=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-3B=\left\{ -3x:x\in B\right\} =\left\{ -3x:-1\leq x<2\right\} =\left\{ y:-1\leq-\frac{y}{3}<2\right\} =\left\{ y:\frac{1}{3}\geq y>-\frac{2}{3}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\inf\left(-3B\right)=-\frac{2}{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sup\left(-3B\right)=\frac{1}{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -5054,11 +5278,28 @@ a\in A\land b\in B\implies a\leq b
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Demostrar que el conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ es acotado superiormente y el conjunto 
+\begin_inset Formula $B$
+\end_inset
+
+ es acotado inferiormente.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+¿Existe alguna relación entre el 
+\begin_inset Formula $\sup\left(A\right)$
+\end_inset
+
+ y el 
+\begin_inset Formula $\inf\left(B\right)$
+\end_inset
+
+? Hacer una conjetura sobre tal relación.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -5128,9 +5369,80 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Supongamos 
+\begin_inset Formula $x>0$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\left|x\right|<\epsilon$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ en particular también es cierto para 
+\begin_inset Formula $\epsilon=\frac{\left|x\right|}{2}$
+\end_inset
+
+ por lo que: 
+\begin_inset Formula 
+\[
+\left|x\right|<\frac{\left|x\right|}{2}\iff1<\frac{1}{2}
+\]
+
+\end_inset
+
+ lo cual es una contradicción.
+\end_layout
+
+\begin_layout Itemize
+Supongamos 
+\begin_inset Formula $x<0$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\left|x\right|<\epsilon$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ en particular también es cierto para 
+\begin_inset Formula $\epsilon=2\left|x\right|$
+\end_inset
+
+ por lo que: 
+\begin_inset Formula 
+\[
+\left|x\right|<2\left|x\right|\iff1>2
+\]
+
+\end_inset
+
+ lo cual es una contradicción.
+\end_layout
+
+\begin_layout Itemize
+Por lo tanto 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document
