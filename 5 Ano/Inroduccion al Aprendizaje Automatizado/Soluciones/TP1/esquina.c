@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include <stdio.h>  // printf
+#include <stdlib.h> // atoi, system
 
 void esquina(int n, int d, float c, float f, int x) {
     char cmd[200];

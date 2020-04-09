@@ -1,18 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <time.h>
+#include <stdio.h>  // printf
+#include <stdlib.h> // srand
+#include <math.h>   // pow
+#include <time.h>   // time
+#include "randf.h"  // randf
 
 float dnorm(float x, float mu, float sigma) {
     float max = 1 / (sqrt(2 * M_PI) * sigma);
-    float b = exp((-1/(2 * pow(sigma, 2))) * pow(x - mu, 2));
-    return max * b;
-}
-
-float randf(float min, float max) {
-    float random = ((float) rand()) / (float) RAND_MAX;
-    float r = random * (max - min);
-    return min + r;
+    return max * exp((-1/(2 * pow(sigma, 2))) * pow(x - mu, 2));
 }
 
 int main(int argc, char** argv) {

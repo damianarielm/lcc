@@ -1,10 +1,8 @@
 all:
-	@gcc rnorm.c -o rnorm -lm
-	@gcc diagonal.c -o diagonal -lm
-	@gcc esquina.c -o esquina -lm
-	@echo "Sintaxis: ./diagonal n d c"
-	@echo "Sintaxis: ./esquina  n d c"
+	gcc randf.c rnorm.c -o rnorm -lm
+	gcc diagonal.c -o diagonal -lm
+	gcc randf.c esquina.c -o esquina
+	gcc randf.c espirales.c -o espirales
 clean:
-	rm rnorm
-	rm diagonal
-	rm esquina
+	rm rnorm; rm diagonal; rm esquina; rm espirales; \
+	rm angulos; rm radios; rm espirales.jpg
