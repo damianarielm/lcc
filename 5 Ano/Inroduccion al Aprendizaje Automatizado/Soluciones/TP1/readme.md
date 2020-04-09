@@ -16,6 +16,6 @@ make
 
 ## Instrucciones para el ejercicio c ##
 ```shell
-./espirales n; Rscript espirales.r
+./espirales n > espirales.data; Rscript espirales.r
 ```
 La salida se escribe en el archivo *espirales.jpg*

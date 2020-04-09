@@ -1,6 +1,6 @@
 #include <stdio.h>  // printf
 #include <stdlib.h> // srand
-#include <math.h>   // M_PI
+#include <math.h>   // M_PI, pow
 #include <time.h>   // time
 #include "randf.h"  // randf
 
@@ -23,34 +23,25 @@ int main(int argc, char** argv) {
 
     int n = atoi(argv[1]);
 
-    float radios[n];
-    float angulos[n];
-    FILE* r = fopen("radios", "w");
-    FILE* a = fopen("angulos", "w");
+    int i = 0;
+    while (i < n) {
+        float x      = randf(-1.0, 1.0);
+        float y      = randf(-1.0, 1.0);
+        float radio  = sqrt(pow(x, 2) + pow(y, 2));
+        float angulo = atan2(y, x);
+        if (radio > 1) continue;
 
-    for (int i = 0; i < n; i++) {
-        float radio  = randf(0, 1);
-        float angulo = randf(0, 2 * M_PI);
+        int clase = i < n / 2;
 
-        if (i < n / 2) {
-            if ((espiral1(angulo) < radio && radio < espiral2(angulo))
-            || (espiral1(angulo) + 0.5 < radio && radio < espiral2(angulo) + 0.5)) {
-                radios[i] = radio;
-                angulos[i] = angulo;
-            }
-            else i--;
-        } else {
-            if (!((espiral1(angulo) < radio && radio < espiral2(angulo))
-            || (espiral1(angulo) + 0.5 < radio && radio < espiral2(angulo) + 0.5))) {
-                radios[i] = radio;
-                angulos[i] = angulo;
-            }
-            else i--;
+        if ((espiral1(angulo) < radio && radio < espiral2(angulo))
+        || (espiral1(angulo) + 0.5 < radio && radio < espiral2(angulo) + 0.5)
+        || (espiral1(angulo) + 1.0 < radio && radio < espiral2(angulo) + 1.0)) {
+            if (clase) { printf("%f, %f, %d\n", x, y, clase); i++; }
+        } else if (!clase) {
+            printf("%f, %f, %d\n", x, y, clase);
+            i++;
         }
     }
-
-    for (int i = 0; i < n; i++) fprintf(r, "%f\n", radios[i]);
-    for (int i = 0; i < n; i++) fprintf(a, "%f\n", angulos[i]);
 
     return 0;
 }
