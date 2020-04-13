@@ -368,7 +368,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg q$
+\begin_inset Formula $\neg q\lor\neg q$
 \end_inset
 
  (4 y 3)
@@ -385,10 +385,27 @@ status open
 \end_inset
 
 
+\begin_inset Formula $\neg q$
+\end_inset
+
+ (equivalencia lógica)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $p$
 \end_inset
 
- (5 y 1)
+ (6 y 1)
 \end_layout
 
 \begin_layout Enumerate
@@ -405,7 +422,7 @@ status open
 \begin_inset Formula $q$
 \end_inset
 
- (6 y 2)
+ (7 y 2)
 \end_layout
 
 \begin_layout Enumerate
@@ -422,7 +439,7 @@ status open
 \begin_inset Formula $\emptyset$
 \end_inset
 
- (7 y 5)
+ (7 y 6)
 \end_layout
 
 \end_deeper
@@ -858,29 +875,60 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\forall y\exists xR\left(x,y\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall yR\left(f\left(y\right),y\right)$
+\begin_inset Formula $\neg\left(\forall y\exists xR\left(x,y\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\boxed{R\left(f\left(y\right),y\right)}$
+\begin_inset Formula $\exists y\neg\exists xR\left(x,y\right)$
 \end_inset
 
 
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\exists y\forall x\neg R\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists y\neg R\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\neg R\left(x,k\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -901,7 +949,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $R(c,y)$
+\begin_inset Formula $R\left(c,y\right)$
 \end_inset
 
 
@@ -918,7 +966,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg R\left(f\left(y\right),y\right)$
+\begin_inset Formula $\neg R\left(x,k\right)$
 \end_inset
 
 
@@ -934,14 +982,15 @@ status open
 
 \end_inset
 
-No es posible unificar.
-\end_layout
 
-\begin_layout Standard
-\begin_inset Newpage pagebreak
+\begin_inset Formula $\emptyset$
 \end_inset
 
+ (1 y 2 
+\begin_inset Formula $\left[c/x,k/y\right]$
+\end_inset
 
+)
 \end_layout
 
 \end_deeper
@@ -966,17 +1015,44 @@ status open
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+columnbreak
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\exists x\left(P\left(x\right)\land Q\left(x\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\boxed{P\left(c\right)\land Q\left(c\right)}$
+\begin_inset Formula $\neg\exists x\left(P\left(x\right)\land Q\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\neg\left(P\left(x\right)\land Q\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall x\left(\neg P\left(x\right)\lor\neg Q\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\neg P\left(x\right)\lor\neg Q\left(x\right)}$
 \end_inset
 
 
@@ -1002,7 +1078,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $P\left(c\right)\land Q\left(x\right)$
+\begin_inset Formula $P\left(c\right)$
 \end_inset
 
 
@@ -1019,7 +1095,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg\left(P\left(c\right)\land Q\left(c\right)\right)$
+\begin_inset Formula $Q\left(x\right)$
 \end_inset
 
 
@@ -1036,10 +1112,44 @@ status open
 \end_inset
 
 
+\begin_inset Formula $\neg P\left(x\right)\lor\neg Q\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg P\left(x\right)$
+\end_inset
+
+ (2 y 3)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5)
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $\emptyset$
 \end_inset
 
- (1 y 2 
+ (1 y 4 
 \begin_inset Formula $\left[c/x\right]$
 \end_inset
 
@@ -1124,6 +1234,10 @@ Pasando a forma clausal:
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1148,25 +1262,35 @@ Pasando a forma clausal:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall x\left(D\left(x\right)\to\neg C\left(x\right)\right)$
+\begin_inset Formula $\neg\forall x\left(D\left(x\right)\to\neg C\left(x\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\forall x\left(\neg D\left(x\right)\lor\neg C\left(x\right)\right)$
+\begin_inset Formula $\neg\forall x\left(\neg D\left(x\right)\lor\neg C\left(x\right)\right)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\boxed{\neg D\left(x\right)\lor\neg C\left(x\right)}$
+\begin_inset Formula $\exists x\neg\left(\neg D\left(x\right)\lor\neg C\left(x\right)\right)$
 \end_inset
 
 
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\exists x\left(D\left(x\right)\land C\left(x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{D\left(k\right)\land C\left(k\right)}$
 \end_inset
 
 
@@ -1259,7 +1383,7 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg\left(\neg D\left(x\right)\lor\neg C\left(x\right)\right)$
+\begin_inset Formula $D\left(k\right)$
 \end_inset
 
 
@@ -1276,14 +1400,10 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg D\left(y\right)\lor\neg C\left(y\right)$
+\begin_inset Formula $C\left(k\right)$
 \end_inset
 
- (2 y 4 
-\begin_inset Formula $\left[c/x\right]$
-\end_inset
 
-)
 \end_layout
 
 \begin_layout Enumerate
@@ -1297,14 +1417,52 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\emptyset$
+\begin_inset Formula $Q\left(c,k\right)$
 \end_inset
 
- (5 y 6 
-\begin_inset Formula $\left[x/y\right]$
+ (5 y 2 
+\begin_inset Formula $\left[k/y\right]$
 \end_inset
 
 )
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\neg C\left(k\right)$
+\end_inset
+
+ (7 y 4 
+\begin_inset Formula $\left[c/x,k/y\right]$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ (8 y 6)
 \end_layout
 
 \end_inset
@@ -1777,10 +1935,10 @@ status open
 \end_inset
 
 
-\begin_inset Formula $\neg P\left(x\right)\lor\neg N\left(x\right)$
+\begin_inset Formula $\neg A\left(x\right)\lor\neg V\left(x\right)$
 \end_inset
 
- (11 y 2)
+ (11 y 10)
 \end_layout
 
 \begin_layout Enumerate
@@ -1794,14 +1952,10 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg N\left(arenque\right)$
+\begin_inset Formula $\neg P\left(x\right)\lor\neg V\left(x\right)$
 \end_inset
 
- (4 y 12 
-\begin_inset Formula $\left[arenque/x\right]$
-\end_inset
-
-)
+ (12 y 2)
 \end_layout
 
 \begin_layout Enumerate
@@ -1815,14 +1969,10 @@ status open
 \end_inset
 
  
-\begin_inset Formula $V\left(arenque,agua\right)$
+\begin_inset Formula $\neg P\left(x\right)\lor\neg P\left(x\right)$
 \end_inset
 
- (4 y 9 
-\begin_inset Formula $\left[arenque/x\right]$
-\end_inset
-
-)
+ (13 y 9)
 \end_layout
 
 \begin_layout Enumerate
@@ -1836,14 +1986,10 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg A\left(arenque\right)\lor N\left(arenque\right)$
+\begin_inset Formula $\neg P\left(x\right)$
 \end_inset
 
- (10 y 14 
-\begin_inset Formula $\left[arenque/x\right]$
-\end_inset
-
-)
+ (equivalencia lógica)
 \end_layout
 
 \begin_layout Enumerate
@@ -1857,11 +2003,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula $A\left(arenque\right)$
+\begin_inset Formula $\emptyset$
 \end_inset
 
- (2 y 4 
-\begin_inset Formula $\left[arenque/x\right]$
+ (15 y 4 
+\begin_inset Formula $\left[x/arenque\right]$
 \end_inset
 
 )
@@ -1878,27 +2024,14 @@ status open
 \end_inset
 
  
-\begin_inset Formula $N\left(arenque\right)$
-\end_inset
-
- (15 y 16)
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Argument item:1
-status open
-
-\begin_layout Plain Layout
-18)
-\end_layout
-
-\end_inset
-
- 
 \begin_inset Formula $\emptyset$
 \end_inset
 
- (13 y 17)
+ (15 y 4 
+\begin_inset Formula $\left[x/tiburon\right]$
+\end_inset
+
+)
 \end_layout
 
 \end_inset
@@ -1907,7 +2040,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-Pueden nadar la rana, el tiburón y el arenque.
+Pueden nadar el tiburón y el arenque.
 \end_layout
 
 \end_deeper
@@ -2291,10 +2424,6 @@ Juan, Pedro o María mataron a la gata de Luis que se llama Iris.
 \begin_layout Standard
 Probar que María mató a Iris, usando resolución.
  Analizar las adaptaciones necesarias para resolver utilizando PROLOG.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -2605,7 +2734,7 @@ status open
 \begin_inset Formula $MataIris\left(Juan\right)\lor MataIris\left(Pedro\right)$
 \end_inset
 
- (5 y 6)
+ (6 y 5)
 \end_layout
 
 \begin_layout Enumerate
@@ -2640,11 +2769,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula $\neg TieneAnimal\left(Juan,y\right)\lor MataIris\left(Pedro\right)$
+\begin_inset Formula $\neg AmaAnimales\left(Juan\right)\lor\neg AmaAnimales\left(Pedro\right)$
 \end_inset
 
- (8 y 3 
-\begin_inset Formula $\left[Juan/x\right]$
+ (8 y 4 
+\begin_inset Formula $\left[Pedro/x\right]$
 \end_inset
 
 )
@@ -2661,11 +2790,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula $MataIris\left(Pedro\right)$
+\begin_inset Formula $\neg TieneAnimal\left(Juan,y\right)\lor\neg AmaAnimales\left(Pedro\right)$
 \end_inset
 
- (9 y 1 
-\begin_inset Formula $\left[a/y\right]$
+ (9 y 3 
+\begin_inset Formula $\left[Juan/x\right]$
 \end_inset
 
 )
@@ -2685,8 +2814,8 @@ status open
 \begin_inset Formula $\neg AmaAnimales\left(Pedro\right)$
 \end_inset
 
- (10 y 4 
-\begin_inset Formula $\left[Pedro/x\right]$
+ (10 y 1 
+\begin_inset Formula $\left[a/y\right]$
 \end_inset
 
 )
@@ -2731,7 +2860,7 @@ status open
 \begin_inset Formula $\left[b/y\right]$
 \end_inset
 
-)
+).
 \end_layout
 
 \end_deeper
@@ -2801,6 +2930,11 @@ matairis(X) :- sospechoso(X), not(nomatairis(X)).
 \begin_layout Plain Layout
 
 %% matairis(X).
+\end_layout
+
+\begin_layout Plain Layout
+
+%% X = maria.
 \end_layout
 
 \end_inset
@@ -3223,7 +3357,17 @@ idestruir(frodo,sauron).
 
 \begin_layout Plain Layout
 
-%% comcarca(X), odia(X,sauron).
+%% odia(X,Y).
+\end_layout
+
+\begin_layout Plain Layout
+
+%% X = frodo,
+\end_layout
+
+\begin_layout Plain Layout
+
+%% Y = sauron .
 \end_layout
 
 \end_inset
