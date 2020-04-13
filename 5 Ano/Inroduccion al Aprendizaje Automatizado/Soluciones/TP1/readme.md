@@ -19,3 +19,8 @@ make
 ./espirales n > espirales.data; Rscript espirales.r
 ```
 La salida se escribe en el archivo *espirales.jpg*
+
+## Instrucciones para generar nombres  ##
+```shell
+./names nombre1 tipo1 ... nombred tipod  > archivo.names
+```

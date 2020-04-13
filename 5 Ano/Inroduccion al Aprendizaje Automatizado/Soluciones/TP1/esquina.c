@@ -6,10 +6,11 @@ void esquina(int n, int d, float c, float f, int x) {
 
     sprintf(cmd,
             "(./rnorm %d %f %f && ./rnorm %d %f %f)" // Generamos los datos,
-            "| pr -%d -t -s\", \""                   // los dividimos en columnas,
+            "| pr -%d -t -s\", \" -l%d"              // los dividimos en columnas,
             "| sed 's/$/, %d/'",                     // y los clasificamos.
-            n, f, c, n * (d - 1), 0.0, c, d, x);
+            n, f, c, n * (d - 1), 0.0, c, d, n, x);
     system(cmd);
+    printf("%s\n", cmd);
 }
 
 int main(int argc, char** argv) {
