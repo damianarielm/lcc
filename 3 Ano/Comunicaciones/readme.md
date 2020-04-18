@@ -2,4 +2,4 @@
 
 * Javier Victor Kohan
 * Pilar Estela Bulacio
-* Flavio Spetale
+* Flavio Ezequiel Spetale
