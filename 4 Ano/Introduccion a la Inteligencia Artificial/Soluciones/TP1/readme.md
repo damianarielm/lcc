@@ -40,27 +40,27 @@ python pacman.py -l trappedClassic -p SearchAgent -a fn=ucs
 
 ## Cost
 
-|     | tiny | medium | big | contoursMaze | mediumScaryMaze | openMaze | smallMaze | testMaze | trappedClassic |
-| --- | ---- | ------ | --- | ------------ | --------------- | -------- | --------- | -------- | -------------- |
-| dfs | 10   | 130    | 210 | 85           |  72             | 298      | 49        | 7        | 5              |
-| bfs | 8    | 68     | 210 | 13           |  72             | 54       | 19        | 7        | 5              |
-| ucs | 8    | 68     | 210 | 13           |  72             | 54       | 19        | 7        | 5              |
+|     | tiny | medium | big | contours | mediumScary | open | small | test | trappedClassic |
+| --- | ---- | ------ | --- | -------- | ----------- | ---- | ----- | ---- | -------------- |
+| dfs | 10   | 130    | 210 | 85       |  96         | 298  | 49    | 7    | 5              |
+| bfs | 8    | 68     | 210 | 13       |  72         | 54   | 19    | 7    | 5              |
+| ucs | 8    | 68     | 210 | 13       |  72         | 54   | 19    | 7    | 5              |
 
 ## Nodes expanded
 
-|     | tiny | medium | big | contoursMaze | mediumScaryMaze | openMaze | smallMaze | testMaze | trappedClassic |
-| --- | ---- | ------ | --- | ------------ | --------------- | -------- | --------- | -------- | -------------- |
-| dfs | 15   | 146    | 390 | 85           | 279             | 576      | 59        | 7        | 5              |
-| bfs | 15   | 269    | 620 | 170          | 279             | 682      | 92        | 7        | 7              |
-| ucs | 15   | 268    | 619 | 167          | 279             | 682      | 91        | 7        | 7              |
+|     | tiny | medium | big | contours | mediumScary | open | small | test | trappedClassic |
+| --- | ---- | ------ | --- | -------- | ----------- | ---- | ----- | ---- | -------------- |
+| dfs | 15   | 146    | 390 | 85       | 96          | 576  | 59    | 7    | 5              |
+| bfs | 15   | 269    | 620 | 170      | 279         | 682  | 92    | 7    | 7              |
+| ucs | 15   | 268    | 619 | 167      | 279         | 682  | 91    | 7    | 7              |
 
 ## Score
 
-|     | tiny | medium | big | contoursMaze | mediumScaryMaze | openMaze | smallMaze | testMaze | trappedClassic |
-| --- | ---- | ------ | --- | ------------ | --------------- | -------- | --------- | -------- | -------------- |
-| dfs | 500  | 300    | 300 | 425          | -513            | 212      | 461       | 503      | -502           |
-| bfs | 502  | 442    | 300 | 497          | -524            | 456      | 491       | 503      | -497           |
-| ucs | 502  | 442    | 300 | 497          | 438             | 456      | 491       | 503      | -502           |
+|     | tiny | medium | big | contours | mediumScary | open | small | test | trappedClassic |
+| --- | ---- | ------ | --- | -------- | ----------- | ---- | ----- | ---- | -------------- |
+| dfs | 500  | 380    | 300 | 425      | 414         | 212  | 461   | 503  | -502           |
+| bfs | 502  | 442    | 300 | 497      | -522        | 456  | 491   | 503  | -497           |
+| ucs | 502  | 442    | 300 | 497      | -512        | 456  | 491   | 503  | -502           |
 
 # StaySearchAgents
 
