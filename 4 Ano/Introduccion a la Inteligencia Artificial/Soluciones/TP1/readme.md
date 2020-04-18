@@ -62,12 +62,31 @@ python pacman.py -l trappedClassic -p SearchAgent -a fn=ucs
 | bfs | 502  | 442    | 300 | 497      | -522        | 456  | 491   | 503  | -497           |
 | ucs | 502  | 442    | 300 | 497      | -512        | 456  | 491   | 503  | -502           |
 
-# StaySearchAgents
+# StayEastSearchAgents
 
 ```shell
-python pacman.py -l mediumDottedMaze -p StayEastSearchAgent
-python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
+python pacman.py -l tinyMaze -p StayEastSearchAgent
+python pacman.py -l mediumMaze -p StayEastSearchAgent
+python pacman.py -l bigMaze -z .5 -p StayEastSearchAgent
+python pacman.py -l contoursMaze -p StayEastSearchAgent
+python pacman.py -l mediumScaryMaze -p StayEastSearchAgent
+python pacman.py -l openMaze -p StayEastSearchAgent
+python pacman.py -l smallMaze -p StayEastSearchAgent
+python pacman.py -l testMaze -p StayEastSearchAgent
+python pacman.py -l trappedClassic -p StayEastSearchAgent
 ```
+
+|                 | cost | nodes | score |
+| --------------- | ---- | ----- | ----- |
+| tinyMaze        | 1    | 13    | 502   |
+| mediumMaze      | 1    | 260   | 436   |
+| bigMaze         | 5    | 637   | 300   |
+| contoursMaze    | 1    | 169   | 479   |
+| mediumScaryMaze | 1    | 230   | -506  |
+| openMaze        | 1    | 668   | 424   |
+| smallMaze       | 1    | 85    | 491   |
+| testMaze        | 0    | 7     | 503   |
+| trappedClassic  | 1    | 7     | -502  \
 
 # Eight Puzzle
 
