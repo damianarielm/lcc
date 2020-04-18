@@ -86,7 +86,33 @@ python pacman.py -l trappedClassic -p StayEastSearchAgent
 | openMaze        | 1    | 668   | 424   |
 | smallMaze       | 1    | 85    | 491   |
 | testMaze        | 0    | 7     | 503   |
-| trappedClassic  | 1    | 7     | -502  \
+| trappedClassic  | 1    | 7     | -502  |
+
+# StayWestSearchAgents
+
+```shell
+python pacman.py -l tinyMaze -p StayWestSearchAgent
+python pacman.py -l mediumMaze -p StayWestSearchAgent
+python pacman.py -l bigMaze -z .5 -p StayWestSearchAgent
+python pacman.py -l contoursMaze -p StayWestSearchAgent
+python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
+python pacman.py -l openMaze -p StayWestSearchAgent
+python pacman.py -l smallMaze -p StayWestSearchAgent
+python pacman.py -l testMaze -p StayWestSearchAgent
+python pacman.py -l trappedClassic -p StayWestSearchAgent
+```
+
+|                 | cost         | nodes | score |
+| --------------- | ------------ | ----- | ----- |
+| tinyMaze        | 48           | 11    | 500   |
+| mediumMaze      | 17183280440  | 173   | 358   |
+| bigMaze         | 590401735138 | 496   | 300   |
+| contoursMaze    | 1030         | 36    | 497   |
+| mediumScaryMaze | 68719479864  | 108   | 418   |
+| openMaze        | 34360016900  | 288   | 456   |
+| smallMaze       | 23806        | 58    | 481   |
+| testMaze        | 254          | 7     | 503   |
+| trappedClassic  | 18           | 5     | -502  |
 
 # Eight Puzzle
 
