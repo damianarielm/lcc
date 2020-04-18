@@ -20,31 +20,39 @@ python pacman.py -l contoursMaze -p SearchAgent -a fn=ucs
 python pacman.py -l mediumScaryMaze -p SearchAgent
 python pacman.py -l mediumScaryMaze -p SearchAgent -a fn=bfs
 python pacman.py -l mediumScaryMaze -p SearchAgent -a fn=ucs
+
+python pacman.py -l openMaze -p SearchAgent
+python pacman.py -l openMaze -p SearchAgent -a fn=bfs
+python pacman.py -l openMaze -p SearchAgent -a fn=ucs
+
+python pacman.py -l smallMaze -p SearchAgent
+python pacman.py -l smallMaze -p SearchAgent -a fn=bfs
+python pacman.py -l smallMaze -p SearchAgent -a fn=ucs
 ```
 
 ## Cost
 
-|     | tiny | medium | big | contoursMaze | mediumScaryMaze |
-| --- | ---- | ------ | --- | ------------ | --------------- |
-| dfs | 10   | 130    | 210 | 85           |  72             |
-| bfs | 8    | 68     | 210 | 13           |  72             |
-| ucs | 8    | 68     | 210 | 13           |  72             |
+|     | tiny | medium | big | contoursMaze | mediumScaryMaze | openMaze | smallMaze |
+| --- | ---- | ------ | --- | ------------ | --------------- | -------- | --------- |
+| dfs | 10   | 130    | 210 | 85           |  72             | 298      | 49        |
+| bfs | 8    | 68     | 210 | 13           |  72             | 54       | 19        |
+| ucs | 8    | 68     | 210 | 13           |  72             | 54       | 19        |
 
 ## Nodes expanded
 
-|     | tiny | medium | big | contoursMaze | mediumScaryMaze |
-| --- | ---- | ------ | --- | ------------ | --------------- |
-| dfs | 15   | 146    | 390 | 85           | 279             |
-| bfs | 15   | 269    | 620 | 170          | 279             |
-| ucs | 15   | 268    | 619 | 167          | 279             |
+|     | tiny | medium | big | contoursMaze | mediumScaryMaze | openMaze | smallMaze |
+| --- | ---- | ------ | --- | ------------ | --------------- | -------- | --------- |
+| dfs | 15   | 146    | 390 | 85           | 279             | 576      | 59        |
+| bfs | 15   | 269    | 620 | 170          | 279             | 682      | 92        |
+| ucs | 15   | 268    | 619 | 167          | 279             | 682      | 91        |
 
 ## Score
 
-|     | tiny | medium | big | contoursMaze | mediumScaryMaze |
-| --- | ---- | ------ | --- | ------------ | --------------- |
-| dfs | 500  | 300    | 300 | 425          | -513            |
-| bfs | 502  | 442    | 300 | 497          | -524            |
-| ucs | 502  | 442    | 300 | 497          | 438             |
+|     | tiny | medium | big | contoursMaze | mediumScaryMaze | openMaze | smallMaze |
+| --- | ---- | ------ | --- | ------------ | --------------- | -------- | --------- |
+| dfs | 500  | 300    | 300 | 425          | -513            | 212      | 461       |
+| bfs | 502  | 442    | 300 | 497          | -524            | 456      | 491       |
+| ucs | 502  | 442    | 300 | 497          | 438             | 456      | 491       |
 
 # StaySearchAgents
 
