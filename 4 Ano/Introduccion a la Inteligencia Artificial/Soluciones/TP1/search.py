@@ -87,6 +87,15 @@ def search(problem, fringe):
                 fringe.push(candidate)
 
 def setStructure():
+    global h
+
+    try:
+        hfunction
+    except:
+        h = nullHeuristic
+    else:
+        h = hfunction
+
     try:
         queue
     except:
@@ -116,7 +125,7 @@ def depthFirstSearch(problem):
 
     visited = []
     structure = setStructure()
-    structure.push((problem.getStartState(), [], 0), 0)
+    structure.push((problem.getStartState(), [], 0), h(problem.getStartState(), problem))
 
     while structure:
         node, actions, costs = structure.pop()
@@ -127,7 +136,7 @@ def depthFirstSearch(problem):
         if node not in visited:
             visited += [node]
             for succ, action, cost in problem.getSuccessors(node):
-                structure.push((succ, actions+[action], costs+cost), costs+cost)
+                structure.push((succ, actions+[action], costs+cost), costs+cost+h(succ, problem))
 
 def breadthFirstSearch(problem):
     """
@@ -152,6 +161,9 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
+    global hfunction
+    hfunction = heuristic
+    return depthFirstSearch(problem)
 
 # Abbreviations
 bfs = breadthFirstSearch

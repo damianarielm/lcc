@@ -1,50 +1,38 @@
 # SearchAgent
 
-```shell
-python pacman.py -l tinyMaze -p SearchAgent
-python pacman.py -l tinyMaze -p SearchAgent -a fn=bfs
-python pacman.py -l tinyMaze -p SearchAgent -a fn=ucs
+```bash
+#!/bin/bash
 
-python pacman.py -l mediumMaze -p SearchAgent
-python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
-python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
+files="tinyMaze mediumMaze bigMaze contoursMaze mediumScaryMaze \
+       openMaze smallMaze testMaze trappedClassic"
+declare -a agents=("SearchAgent" "SearchAgent -a fn=bfs" "SearchAgent -a fn=ucs" \
+                   "StayEastSearchAgent" "StayWestSearchAgent" \
+                   "SearchAgent -a fn=astar,heuristic=manhattanHeuristic" \
+                   "SearchAgent -a fn=astar,heuristic=euclideanHeuristic")
+command="python2 pacman.py -q"
+grep="grep --color=always cost\|nodes\|Score"
 
-python pacman.py -l bigMaze -z .5 -p SearchAgent
-python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=bfs
-python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=ucs
-
-python pacman.py -l contoursMaze -p SearchAgent
-python pacman.py -l contoursMaze -p SearchAgent -a fn=bfs
-python pacman.py -l contoursMaze -p SearchAgent -a fn=ucs
-
-python pacman.py -l mediumScaryMaze -p SearchAgent
-python pacman.py -l mediumScaryMaze -p SearchAgent -a fn=bfs
-python pacman.py -l mediumScaryMaze -p SearchAgent -a fn=ucs
-
-python pacman.py -l openMaze -p SearchAgent
-python pacman.py -l openMaze -p SearchAgent -a fn=bfs
-python pacman.py -l openMaze -p SearchAgent -a fn=ucs
-
-python pacman.py -l smallMaze -p SearchAgent
-python pacman.py -l smallMaze -p SearchAgent -a fn=bfs
-python pacman.py -l smallMaze -p SearchAgent -a fn=ucs
-
-python pacman.py -l testMaze -p SearchAgent
-python pacman.py -l testMaze -p SearchAgent -a fn=bfs
-python pacman.py -l testMaze -p SearchAgent -a fn=ucs
-
-python pacman.py -l trappedClassic -p SearchAgent
-python pacman.py -l trappedClassic -p SearchAgent -a fn=bfs
-python pacman.py -l trappedClassic -p SearchAgent -a fn=ucs
+for file in $files; do
+    echo -e "\e[97m\e[4m$file\e[0m"
+    for agent in "${agents[@]}"; do
+        echo -e "\n\e[97m$agent\e[0m"
+        $command -l $file -p $agent | $grep | head -n3
+    done
+    echo "==========================================================="
+done
 ```
 
 ## Cost
 
-|     | tiny | medium | big | contours | mediumScary | open | small | test | trappedClassic |
-| --- | ---- | ------ | --- | -------- | ----------- | ---- | ----- | ---- | -------------- |
-| dfs | 10   | 130    | 210 | 85       |  96         | 298  | 49    | 7    | 5              |
-| bfs | 8    | 68     | 210 | 13       |  72         | 54   | 19    | 7    | 5              |
-| ucs | 8    | 68     | 210 | 13       |  72         | 54   | 19    | 7    | 5              |
+|     | tiny | medium | big    | contours | mediumSc | open | small | test | trappedCl |
+| --- | ---- | ------ | ------ | -------- | -------- | ---- | ----- | ---- | --------- |
+| dfs | 10   | 130    | 210    | 85       |  96      | 298  | 49    | 7    | 5         |
+| bfs | 8    | 68     | 210    | 13       |  72      | 54   | 19    | 7    | 5         |
+| ucs | 8    | 68     | 210    | 13       |  72      | 54   | 19    | 7    | 5         |
+| SEA | 1    | 1      | 5      | 1        |  1       | 1    | 1     | 0    | 1         |
+| SWA | 48   | 1718.. | 5904.. | 1030     |  68719.. | 343. | 238.. | 254  | 18        |
+| ASM | 10   | 130    | 210    | 85       |  96      | 298  | 49    | 7    | 5         |
+| ASE | 10   | 130    | 210    | 85       |  96      | 298  | 49    | 7    | 5         |
 
 ## Nodes expanded
 
@@ -61,62 +49,3 @@ python pacman.py -l trappedClassic -p SearchAgent -a fn=ucs
 | dfs | 500  | 380    | 300 | 425      | 414         | 212  | 461   | 503  | -502           |
 | bfs | 502  | 442    | 300 | 497      | -522        | 456  | 491   | 503  | -497           |
 | ucs | 502  | 442    | 300 | 497      | -512        | 456  | 491   | 503  | -502           |
-
-# StayEastSearchAgents
-
-```shell
-python pacman.py -l tinyMaze -p StayEastSearchAgent
-python pacman.py -l mediumMaze -p StayEastSearchAgent
-python pacman.py -l bigMaze -z .5 -p StayEastSearchAgent
-python pacman.py -l contoursMaze -p StayEastSearchAgent
-python pacman.py -l mediumScaryMaze -p StayEastSearchAgent
-python pacman.py -l openMaze -p StayEastSearchAgent
-python pacman.py -l smallMaze -p StayEastSearchAgent
-python pacman.py -l testMaze -p StayEastSearchAgent
-python pacman.py -l trappedClassic -p StayEastSearchAgent
-```
-
-|                 | cost | nodes | score |
-| --------------- | ---- | ----- | ----- |
-| tinyMaze        | 1    | 13    | 502   |
-| mediumMaze      | 1    | 260   | 436   |
-| bigMaze         | 5    | 637   | 300   |
-| contoursMaze    | 1    | 169   | 479   |
-| mediumScaryMaze | 1    | 230   | -506  |
-| openMaze        | 1    | 668   | 424   |
-| smallMaze       | 1    | 85    | 491   |
-| testMaze        | 0    | 7     | 503   |
-| trappedClassic  | 1    | 7     | -502  |
-
-# StayWestSearchAgents
-
-```shell
-python pacman.py -l tinyMaze -p StayWestSearchAgent
-python pacman.py -l mediumMaze -p StayWestSearchAgent
-python pacman.py -l bigMaze -z .5 -p StayWestSearchAgent
-python pacman.py -l contoursMaze -p StayWestSearchAgent
-python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
-python pacman.py -l openMaze -p StayWestSearchAgent
-python pacman.py -l smallMaze -p StayWestSearchAgent
-python pacman.py -l testMaze -p StayWestSearchAgent
-python pacman.py -l trappedClassic -p StayWestSearchAgent
-```
-
-|                 | cost         | nodes | score |
-| --------------- | ------------ | ----- | ----- |
-| tinyMaze        | 48           | 11    | 500   |
-| mediumMaze      | 17183280440  | 173   | 358   |
-| bigMaze         | 590401735138 | 496   | 300   |
-| contoursMaze    | 1030         | 36    | 497   |
-| mediumScaryMaze | 68719479864  | 108   | 418   |
-| openMaze        | 34360016900  | 288   | 456   |
-| smallMaze       | 23806        | 58    | 481   |
-| testMaze        | 254          | 7     | 503   |
-| trappedClassic  | 18           | 5     | -502  |
-
-# Eight Puzzle
-
-```shell
-python eightpuzzle.py
-```
-
