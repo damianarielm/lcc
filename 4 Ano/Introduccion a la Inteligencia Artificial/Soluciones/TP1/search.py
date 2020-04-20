@@ -86,27 +86,21 @@ def search(problem, fringe):
             for candidate in candidate_successors:
                 fringe.push(candidate)
 
-def setStructure():
-    global h
+def generalSearch(problem, structure, heuristic):
+    visited = []
+    structure.push((problem.getStartState(), [], 0), 0)
 
-    try:
-        hfunction
-    except:
-        h = nullHeuristic
-    else:
-        h = hfunction
+    while structure:
+        node, actions, cost = structure.pop()
 
-    try:
-        queue
-    except:
-        try:
-            pqueue
-        except:
-            return util.Stack()
-        else:
-            return util.PriorityQueue()
-    else:
-        return util.Queue()
+        if problem.isGoalState(node):
+            return actions
+
+        if node not in visited:
+            visited += [node]
+            for succ, action, nextCost in problem.getSuccessors(node):
+                h = cost + nextCost + heuristic(succ, problem)
+                structure.push((succ, actions + [action], cost + nextCost), h)
 
 def depthFirstSearch(problem):
     """
@@ -122,35 +116,18 @@ def depthFirstSearch(problem):
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
+    return generalSearch(problem, util.Stack(), nullHeuristic)
 
-    visited = []
-    structure = setStructure()
-    structure.push((problem.getStartState(), [], 0), h(problem.getStartState(), problem))
-
-    while structure:
-        node, actions, costs = structure.pop()
-
-        if problem.isGoalState(node):
-            return actions
-
-        if node not in visited:
-            visited += [node]
-            for succ, action, cost in problem.getSuccessors(node):
-                structure.push((succ, actions+[action], costs+cost), costs+cost+h(succ, problem))
 
 def breadthFirstSearch(problem):
     """
     Search the shallowest nodes in the search tree first.
     """
-    global queue
-    queue = True
-    return depthFirstSearch(problem)
+    return generalSearch(problem, util.Queue(), nullHeuristic)
 
 def uniformCostSearch(problem):
     "Search the node of least total cost first."
-    global pqueue
-    pqueue = True
-    return depthFirstSearch(problem)
+    return generalSearch(problem, util.PriorityQueue(), nullHeuristic)
 
 def nullHeuristic(state, problem=None):
     """
@@ -161,9 +138,7 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
-    global hfunction
-    hfunction = heuristic
-    return depthFirstSearch(problem)
+    return generalSearch(problem, util.PriorityQueue(), heuristic)
 
 # Abbreviations
 bfs = breadthFirstSearch

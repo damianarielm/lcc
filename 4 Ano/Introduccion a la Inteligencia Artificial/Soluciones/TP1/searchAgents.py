@@ -286,7 +286,6 @@ class CornersProblem(search.SearchProblem):
     def isGoalState(self, state):
         "Returns whether this search state is a goal state of the problem"
         "*** YOUR CODE HERE ***"
-        print state[1]
         return len(state[1]) == 0
 
     def getSuccessors(self, state):
@@ -314,9 +313,8 @@ class CornersProblem(search.SearchProblem):
             x, y = state[0]
             dx, dy = Actions.directionToVector(action)
             newPos = nextx, nexty = int(x + dx), int(y + dy)
-            hitsWall = self.walls[nextx][nexty]
 
-            if not hitsWall:
+            if not self.walls[nextx][nexty]:
                 newCorners = [ c for c in state[1] if c != newPos ]
                 successors += [((newPos, newCorners), action, 1)]
 
