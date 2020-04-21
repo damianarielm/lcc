@@ -5,7 +5,8 @@ files="mediumMaze bigMaze contoursMaze mediumScaryMaze \
        capsuleClassic contestClassic  greedySearch mediumCorners \
        mediumClassic originalClassic smallClassic \
        openClassic testClassic tinyCorners trappedClassic trickyClassic"
-declare -a agents=("SearchAgent -a fn=dfs" "SearchAgent -a fn=bfs")
+declare -a agents=("SearchAgent -a fn=dfs" "SearchAgent -a fn=bfs" \
+"SearchAgent -a fn=aStarSearch,heuristic=cornersHeuristic")
 command="python2 pacman.py -q"
 grep="grep --color=always cost\|nodes\|Score"
 

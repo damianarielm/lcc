@@ -84,26 +84,52 @@ done
 
 ## Cost
 
-| Maze            | dfs | bfs |
-| --------------- | --- | --- |
-| mediumMaze      | 231 | 134 |
-| bigMaze         | 462 | 260 |
-| contoursMaze    | 255 | 47  |
-| mediumScaryMaze | 353 | 139 |
-| openMaze        | 400 | 116 |
-| smallMaze       | 153 | 81  |
-| testMaze        | 14  | 9   |
-| trappedClassic  | 20  | 14  |
-| bigCorners      | 302 | 162 |
-| capsuleClassic  | 53  | 31  |
-| contestClassic  | 123 | 53  |
-| greedySearch    | 20  | 16  |
-| mediumCorners   | 371 | 106 |
-| mediumClasic    | 125 | 49  |
-| originalClassic | 350 | 104 |
-| smallClassic    | 75  | 37  |
-| openClassic     | 185 | 37  |
-| testClassic     | 27  | 13  |
-| tinyCorners     | 47  | 28  |
-| trappedClassic  | 20  | 14  |
-| trickyClassic   | 140 | 57  |
+| Maze            | dfs | bfs | AStar |
+| --------------- | --- | --- | ----- |
+| mediumMaze      | 231 | 134 | 134   |
+| bigMaze         | 462 | 260 | 260   |
+| contoursMaze    | 255 | 47  | 47    |
+| mediumScaryMaze | 353 | 139 | 139   |
+| openMaze        | 400 | 116 | 116   |
+| smallMaze       | 153 | 81  | 81    |
+| testMaze        | 14  | 9   | 9     |
+| trappedClassic  | 20  | 14  | 14    |
+| bigCorners      | 302 | 162 | 162   |
+| capsuleClassic  | 53  | 31  | 31    |
+| contestClassic  | 123 | 53  | 53    |
+| greedySearch    | 20  | 16  | 16    |
+| mediumCorners   | 221 | 106 | 106   |
+| mediumClasic    | 125 | 49  | 49    |
+| originalClassic | 350 | 104 | 104   |
+| smallClassic    | 75  | 37  | 37    |
+| openClassic     | 185 | 37  | 37    |
+| testClassic     | 27  | 13  | 13    |
+| tinyCorners     | 47  | 28  | 28    |
+| trappedClassic  | 20  | 14  | 14    |
+| trickyClassic   | 140 | 57  | 57    |
+
+## Nodes expanded
+
+| Maze            | dfs  | bfs  | AStar |
+| --------------- | ---- | ---- | ----- |
+| mediumMaze      | 247  | 2794 | 1192  |
+| bigMaze         | 1153 | 4157 | 1636  |
+| contoursMaze    | 255  | 1939 | 235   |
+| mediumScaryMaze | 356  | 3868 | 1521  |
+| openMaze        | 674  | 7306 | 1318  |
+| smallMaze       | 220  | 1226 | 703   |
+| testMaze        | 14   | 16   | 9     |
+| trappedClassic  | 20   | 49   | 32    |
+| bigCorners      | 504  | 7949 | 1740  |
+| capsuleClassic  | 105  | 307  | 31    |
+| contestClassic  | 156  | 877  | 291   |
+| greedySearch    | 20   | 122  | 39    |
+| mediumCorners   | 371  | 1966 | 692   |
+| mediumClasic    | 169  | 1155 | 141   |
+| originalClassic | 460  | 3932 | 897   |
+| smallClassic    | 82   | 592  | 114   |
+| openClassic     | 185  | 1037 | 37    |
+| testClassic     | 27   | 169  | 23    |
+| tinyCorners     | 51   | 252  | 155   |
+| trappedClassic  | 20   | 49   | 32    |
+| trickyClassic   | 168  | 1215 | 213   |
