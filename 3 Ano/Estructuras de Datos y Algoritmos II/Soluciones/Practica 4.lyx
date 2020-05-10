@@ -8495,7 +8495,7 @@ status open
 
 \begin_layout Plain Layout
 
- l1
+ h1
 \end_layout
 
 \end_inset
@@ -8508,7 +8508,7 @@ status open
 
 \begin_layout Plain Layout
 
- l2
+ h2
 \end_layout
 
 \end_inset
@@ -8521,12 +8521,16 @@ status open
 
 \begin_layout Plain Layout
 
-merge l1 l2
+merge h1 h2
 \end_layout
 
 \end_inset
 
  es un leftist heap.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -8535,11 +8539,161 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
-\begin_inset Newpage pagebreak
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH E           = True
+\end_layout
+
+\begin_layout Plain Layout
+
+checkH (N _ _ l r) = rank l >= rank r && checkH l && checkH r
+\end_layout
+
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Lema 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+h1 = N x a1 b1
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+h2 = N y a2 b2
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (makeH x h1 h2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.makeH\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\normalsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (if x >= y then N (y + 1) x h1 h2 else N (x + 1) x h2 h1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle caso.x\geq y\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (N (y + 1) x h1 h2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.checkH.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x >= y && checkH h1 && checkH h2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle x\geq y\land H.I.\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+True && True && True
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.\&\&\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+COMPLETAR.
 \end_layout
 
 \end_deeper
