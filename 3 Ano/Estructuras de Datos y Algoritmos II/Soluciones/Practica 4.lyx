@@ -8559,38 +8559,65 @@ checkH (N _ _ l r) = rank l >= rank r && checkH l && checkH r
 
 \end_layout
 
-\begin_layout Standard
-Sean 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-h1 = N x a1 b1
-\end_layout
-
-\end_inset
-
- y 
-\begin_inset listings
-lstparams "language=Haskell"
-inline true
-status open
-
-\begin_layout Plain Layout
-
-h2 = N y a2 b2
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Itemize
-Lema:
+Lema: Si 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ h1
+\end_layout
+
+\end_inset
+
+ y
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ h2
+\end_layout
+
+\end_inset
+
+ son leftist heaps, entonces 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+check (makeH h1 h2)
+\end_layout
+
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Caso base 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+E
+\end_layout
+
+\end_inset
+
+:
 \end_layout
 
 \begin_deeper
@@ -8602,7 +8629,7 @@ status open
 
 \begin_layout Plain Layout
 
-checkH (makeH x h1 h2)
+checkH (makeH x E h2)
 \end_layout
 
 \end_inset
@@ -8613,19 +8640,63 @@ checkH (makeH x h1 h2)
 
 
 \begin_inset listings
-lstparams "language=Haskell,fontsize={\normalsize}"
+lstparams "language=Haskell,fontsize={\footnotesize}"
 inline false
 status open
 
 \begin_layout Plain Layout
 
-checkH (if x >= y then N (y + 1) x h1 h2 else N (x + 1) x h2 h1)
+checkH (if rank E >= rank h2 then N (rank h2 + 1) x E h2 else N (x + 1)
+ x h2 h1)
 \end_layout
 
 \end_inset
 
 
-\begin_inset Formula $\equiv\left\langle caso.x\geq y\right\rangle $
+\begin_inset Formula $\equiv\left\langle def.rank.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\footnotesize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (if 0 >= rank h2 then N (rank h2 + 1) x E h2 else N (rank E + 1)
+ x h2 E)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $0\geq$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ rank h2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\equiv\left\langle def.if\right\rangle $
 \end_inset
 
 
@@ -8636,7 +8707,7 @@ status open
 
 \begin_layout Plain Layout
 
-checkH (N (y + 1) x h1 h2)
+checkH (N (rank h2 + 1) x E h2)
 \end_layout
 
 \end_inset
@@ -8653,13 +8724,13 @@ status open
 
 \begin_layout Plain Layout
 
-x >= y && checkH h1 && checkH h2
+rank E >= rank h2 && checkH E && checkH h2
 \end_layout
 
 \end_inset
 
 
-\begin_inset Formula $\equiv\left\langle x\geq y\land H.I.\right\rangle $
+\begin_inset Formula $\equiv\left\langle def.rank.1\land def.checkH.1\land Hipotesis\right\rangle $
 \end_inset
 
 
@@ -8670,13 +8741,16 @@ status open
 
 \begin_layout Plain Layout
 
-True && True && True
+0 >= rank h2 && True && True
 \end_layout
 
 \end_inset
 
 
-\begin_inset Formula $\equiv\left\langle def.\&\&\right\rangle $
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\equiv\left\langle caso.0\geq rank.h2\land def.\&\&\right\rangle $
 \end_inset
 
 
@@ -8696,6 +8770,310 @@ True
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $0<$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ rank h2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\equiv\left\langle def.if\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (N (rank E + 1) x h2 E))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.checkH.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rank h2 >= rank E && checkH h2 && checkH E
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.rank.1\land Hipotesis\land def.checkH.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rank h2 >= 0 && True && True
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\equiv\left\langle caso.0<rank.h2\land def.\&\&\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso inductivo 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+N x a1 b1
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (makeH x (N x a1 b1) h2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.makeH+def.rank.2\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\scriptsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (if x >= rank h2 then N (y + 1) x (N x a1 b1) h2 else N (x + 1) x
+ h2 (N x a1 b1))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $x\geq$
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ rank h2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (N (y + 1) x (N x a1 b1) h2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.checkH.2+def.rank.1\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+x >= rank h2 && checkH (N x a1 b1) && checkH h2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle x\geq rank.h2\land Hipotesis\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+True && checkH (N x a1 b1) && True
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.checkH\land H.I.\land def.\&\&\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $x<$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ rank h2
+\end_layout
+
+\end_inset
+
+: COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+checkH (merge h1 h2)
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\equiv$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 Caso base: COMPLETAR.
 \end_layout
@@ -8775,6 +9153,7 @@ True
 
 \end_layout
 
+\end_deeper
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
