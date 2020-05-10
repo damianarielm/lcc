@@ -8559,8 +8559,8 @@ checkH (N _ _ l r) = rank l >= rank r && checkH l && checkH r
 
 \end_layout
 
-\begin_layout Itemize
-Lema 
+\begin_layout Standard
+Sean 
 \begin_inset listings
 lstparams "language=Haskell"
 inline true
@@ -8586,7 +8586,11 @@ h2 = N y a2 b2
 
 \end_inset
 
-:
+.
+\end_layout
+
+\begin_layout Itemize
+Lema:
 \end_layout
 
 \begin_deeper
@@ -8693,9 +8697,85 @@ True
 
 \end_deeper
 \begin_layout Itemize
-COMPLETAR.
+Caso base: COMPLETAR.
 \end_layout
 
+\begin_layout Itemize
+Caso inductivo:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (merge h1 h2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle def.merge\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell,fontsize={\small}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (if x <= y makeH x a1 (merge b1 h2) else makeH y a2 (merge h1 b2))
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\equiv\left\langle caso.x\leq y\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+checkH (makeH x a1 (merge b1 h2))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\equiv\left\langle H.I.\land Lema\right\rangle $
+\end_inset
+
+
+\begin_inset listings
+lstparams "language=Haskell"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+True
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Dar el principio de inducción estructural para el siguiente tipo de datos:
