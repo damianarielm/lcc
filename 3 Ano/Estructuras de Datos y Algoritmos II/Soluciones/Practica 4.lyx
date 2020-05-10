@@ -9091,7 +9091,7 @@ status open
 
 \begin_layout Plain Layout
 
-checkH (merge h1 h2)
+checkH (merge (N x a1 b1) h2)
 \end_layout
 
 \end_inset
@@ -9102,22 +9102,40 @@ checkH (merge h1 h2)
 
 
 \begin_inset listings
-lstparams "language=Haskell,fontsize={\small}"
+lstparams "language=Haskell,fontsize={\scriptsize}"
 inline false
 status open
 
 \begin_layout Plain Layout
 
-checkH (if x <= y makeH x a1 (merge b1 h2) else makeH y a2 (merge h1 b2))
+checkH (if x <= rank h2 makeH x a1 (merge b1 h2) else makeH rank h2 a2 (merge
+ h1 b2))
 \end_layout
 
 \end_inset
 
 
-\begin_inset Formula $\equiv\left\langle caso.x\leq y\right\rangle $
+\end_layout
+
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $x\leq$
 \end_inset
 
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
 
+\begin_layout Plain Layout
+
+ rank h2
+\end_layout
+
+\end_inset
+
+:
 \begin_inset listings
 lstparams "language=Haskell"
 inline false
@@ -9133,8 +9151,9 @@ checkH (makeH x a1 (merge b1 h2))
 
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
-\begin_inset Formula $\equiv\left\langle H.I.\land Lema\right\rangle $
+\begin_inset Formula $\equiv\left\langle Hipotesis\land H.I\land Lema\right\rangle $
 \end_inset
 
 
@@ -9151,6 +9170,28 @@ True
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Caso 
+\begin_inset Formula $x>$
+\end_inset
+
+ 
+\begin_inset listings
+lstparams "language=Haskell"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ rank h2
+\end_layout
+
+\end_inset
+
+: COMPLETAR.
 \end_layout
 
 \end_deeper
