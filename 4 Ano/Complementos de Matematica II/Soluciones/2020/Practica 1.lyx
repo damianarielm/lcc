@@ -1,0 +1,1335 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Relaciones funcionales
+\end_layout
+
+\begin_layout Enumerate
+Determinar si cada una de las siguientes relaciones es una función.
+ En caso de que lo sea, determinar su imagen:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{R}_{1}=\left\{ \left(x,y\right)\in\mathbb{Z}\times\mathbb{Z}:y=x^{2}+7\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{R}_{2}=\left\{ \left(x,y\right)\in\mathbb{R}\times\mathbb{R}:y^{2}=x\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{R}_{3}=\left\{ \left(x,y\right)\in\mathbb{R}\times\mathbb{R}:y=3x+1\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $a\mathcal{R}_{1}b$
+\end_inset
+
+ y 
+\begin_inset Formula $a\mathcal{R}_{1}b'$
+\end_inset
+
+, luego por definición de 
+\begin_inset Formula $\mathcal{R}_{1}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $b=a^{2}+7=b'$
+\end_inset
+
+; por lo tanto 
+\begin_inset Formula $\text{\ensuremath{\mathcal{R}_{1}}}$
+\end_inset
+
+ es una función.
+\end_layout
+
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $4\mathcal{R}_{2}2$
+\end_inset
+
+ y 
+\begin_inset Formula $4\mathcal{R}_{2}-2$
+\end_inset
+
+ pero 
+\begin_inset Formula $2\neq-2$
+\end_inset
+
+; por lo tanto 
+\begin_inset Formula $\mathcal{R}_{2}$
+\end_inset
+
+ no es una función.
+\end_layout
+
+\begin_layout Enumerate
+Supongamos 
+\begin_inset Formula $a\mathcal{R}_{3}b$
+\end_inset
+
+ y 
+\begin_inset Formula $a\mathcal{R}_{3}b'$
+\end_inset
+
+, luego por definición de 
+\begin_inset Formula $\mathcal{R}_{3}$
+\end_inset
+
+ resulta 
+\begin_inset Formula $b=3a+1=b'$
+\end_inset
+
+; por lo tanto 
+\begin_inset Formula $\text{\ensuremath{\mathcal{R}_{1}}}$
+\end_inset
+
+ es una función.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f$
+\end_inset
+
+ una relación funcional.
+ Demostrar que 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ es una relación funcional si y solo si 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Rightarrow}$
+\end_inset
+
+: Supongamos que 
+\begin_inset Formula $f$
+\end_inset
+
+ no es inyectiva, luego existen elementos 
+\begin_inset Formula $b,a,a'$
+\end_inset
+
+ tales que 
+\begin_inset Formula $b=f\left(a\right)=f\left(a'\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $a\neq a'$
+\end_inset
+
+.
+ Por definición de 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $f^{-1}\left(b\right)=a$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{-1}\left(b\right)=a'$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ no es una relación funcional.
+ Contradicción.
+ 
+\begin_inset Formula $\therefore f$
+\end_inset
+
+ es inyectiva.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\boxed{\Leftarrow}$
+\end_inset
+
+: Supongamos que 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ no es relación funcional, luego existen elementos 
+\begin_inset Formula $b,a,a'$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f^{-1}\left(b\right)=a$
+\end_inset
+
+ y 
+\begin_inset Formula $f^{-1}\left(b\right)=a'$
+\end_inset
+
+ con 
+\begin_inset Formula $a\neq a'$
+\end_inset
+
+.
+ Por definición de 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ y 
+\begin_inset Formula $f\left(a'\right)=b'$
+\end_inset
+
+ y en consecuencia 
+\begin_inset Formula $f$
+\end_inset
+
+ no es inyectiva.
+ Contradicción.
+ 
+\begin_inset Formula $\therefore f^{-1}$
+\end_inset
+
+ es relación funcional.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que la composición de relaciones coincide con la composición de
+ funciones en el sentido usual.
+ Es decir, si 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ y 
+\begin_inset Formula $g:B\to C$
+\end_inset
+
+ son funciones, entonces la relación dada por 
+\begin_inset Formula $g\circ f=\left\{ \left(a,c\right)\in A\times C:\exists b\in B,f\left(a\right)=b\land g\left(b\right)=c\right\} $
+\end_inset
+
+ es una función.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a,c,c'$
+\end_inset
+
+ tales que 
+\begin_inset Formula $g\circ f\left(a\right)=c$
+\end_inset
+
+ y 
+\begin_inset Formula $g\circ f\left(a\right)=c'$
+\end_inset
+
+.
+ Por definición existen 
+\begin_inset Formula $b,b'$
+\end_inset
+
+ tales que
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f\left(a\right)=b$
+\end_inset
+
+ y 
+\begin_inset Formula $g\left(b\right)=c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f\left(a\right)=b'$
+\end_inset
+
+ y 
+\begin_inset Formula $g\left(b'\right)=c'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $f$
+\end_inset
+
+ es función entonces 
+\begin_inset Formula $b=b'$
+\end_inset
+
+ y como 
+\begin_inset Formula $g$
+\end_inset
+
+ también lo es entonces 
+\begin_inset Formula $c=c'$
+\end_inset
+
+.
+ Por lo tanto 
+\begin_inset Formula $g\circ f$
+\end_inset
+
+ es relación funcional.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f:A\to B$
+\end_inset
+
+ función y 
+\begin_inset Formula $A'\subseteq A$
+\end_inset
+
+.
+ Determinar si las siguientes afirmaciones son verdaderas o falsas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva (resp.
+ sobreyectiva), entonces 
+\begin_inset Formula $f_{|A'}$
+\end_inset
+
+ es inyectiva (resp.
+ sobreyectiva).
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f_{|A'}$
+\end_inset
+
+ es inyectiva (resp.
+ sobreyectiva), entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ es inyectiva (resp.
+ sobreyectiva).
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es sobreyectiva, 
+\begin_inset Formula $f_{|A'}$
+\end_inset
+
+ puede no serlo.
+ Basta considerar 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}/f\left(x\right)=x$
+\end_inset
+
+ y 
+\begin_inset Formula $A'=\left\{ 0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $f_{|A'}$
+\end_inset
+
+ es inyectiva, 
+\begin_inset Formula $f$
+\end_inset
+
+ puede no serlo.
+ Basta considerar 
+\begin_inset Formula $f:\mathbb{R}\to\mathbb{R}/f\left(x\right)=x^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $A'=\mathbb{R}^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Mostrar que hay una correspondencia biyectiva entre las relaciones de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $B$
+\end_inset
+
+ y las funciones de 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathcal{P}\left(B\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $R\subseteq A\times B$
+\end_inset
+
+, definimos 
+\begin_inset Formula $f_{R}:A\to\mathcal{P}\left(B\right)$
+\end_inset
+
+ tal que 
+\begin_inset Formula $f_{R}\left(a\right)=\left\{ b\in B/aRb\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Veamos que 
+\begin_inset Formula $f_{R}$
+\end_inset
+
+ es una función: Sean 
+\begin_inset Formula $a,\beta,\beta'$
+\end_inset
+
+ tales que 
+\begin_inset Formula $f_{R}\left(a\right)=\beta$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{R}\left(a\right)=\beta'$
+\end_inset
+
+.
+ Por definición 
+\begin_inset Formula $\beta=\left\{ b\in B/aRb\right\} =\beta'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Mostraremos que la función 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ que asigna a cada relación 
+\begin_inset Formula $R$
+\end_inset
+
+ la función 
+\begin_inset Formula $f_{R}$
+\end_inset
+
+ es biyectiva.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Inyectividad: Sean 
+\begin_inset Formula $R,R'$
+\end_inset
+
+ tales que 
+\begin_inset Formula $R\neq R'$
+\end_inset
+
+ y supongamos que 
+\begin_inset Formula $f_{R}=f_{R'}$
+\end_inset
+
+, entonces o bien existe un par 
+\begin_inset Formula $\left(a,\beta\right)\in f_{R}/\left(a,\beta\right)\notin f_{R'}$
+\end_inset
+
+ o bien existe un par 
+\begin_inset Formula $\left(a,\beta\right)\in f_{R'}/\left(a,\beta\right)\notin f_{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\left(a,\beta\right)\in f_{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(a,\beta\right)\notin f_{R'}$
+\end_inset
+
+ entonces
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Análogo.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sobreyectividad: COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section*
+Relaciones en un conjunto
+\end_layout
+
+\begin_layout Enumerate-Resume
+En cada uno de los siguientes casos, determinar si la relación 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ en 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ es reflexiva, simétrica, antisimétrica, o transitiva.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate-Resume
+\begin_inset Formula $x\mathcal{R}y\iff x=y^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $x\mathcal{R}y\iff x>y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $x\mathcal{R}y\iff x\geq y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $x\mathcal{R}y\iff x+y$
+\end_inset
+
+ es par.
+\end_layout
+
+\begin_layout Enumerate-Resume
+\begin_inset Formula $x\mathcal{R}y\iff x-y$
+\end_inset
+
+ es impar.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sea 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ relaciones en 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Determinar la validez de los siguientes enunciados:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ son reflexivas, entonces:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{R}\cup\mathcal{S}$
+\end_inset
+
+ es reflexiva.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{R\cap\mathcal{S}}$
+\end_inset
+
+ es reflexiva.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{R\circ S}$
+\end_inset
+
+ es reflexiva
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Repetir el ejercicio anterior sustituyendo 
+\begin_inset Quotes fld
+\end_inset
+
+reflexiva
+\begin_inset Quotes frd
+\end_inset
+
+ por simétrica, antisimétrica, o transitiva.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ es reflexiva (resp.
+ simétrica, antisimétrica, transitiva), entonces 
+\begin_inset Formula $\mathcal{R}^{-1}$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+Sean 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ relaciones en 
+\begin_inset Formula $A$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\mathcal{R}\subseteq\mathcal{S}$
+\end_inset
+
+, y sea 
+\begin_inset Formula $A'\subseteq A$
+\end_inset
+
+.
+ Determinar si las siguientes afirmaciones son verdaderas o falsas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate-Resume
+Si 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ es reflexiva (resp.
+ simétrica, antisimétrica, o transitiva), entonces 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Si 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ es reflexiva (resp.
+ simétrica, antisimétrica, o transitiva), entonces 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Enumerate-Resume
+Si 
+\begin_inset Formula $\mathcal{R}$
+\end_inset
+
+ es reflexiva (resp.
+ simétrica, antisimétrica, o transitiva), entonces 
+\begin_inset Formula $\mathcal{R}_{|A'\times A}$
+\end_inset
+
+ también lo es.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Relaciones de equivalencia
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Relaciones de preorden
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Relaciones de orden
+\end_layout
+
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate-Resume
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
