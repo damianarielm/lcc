@@ -1,0 +1,16 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-10-12 02:28 -03
+Nmap scan report for sonyentertainmentnetwork.com (216.146.46.10)
+Host is up (0.019s latency).
+Other addresses for sonyentertainmentnetwork.com (not scanned): 216.146.46.11
+rDNS record for 216.146.46.10: redirector1.dynect.net
+Not shown: 999 filtered ports
+PORT   STATE SERVICE
+80/tcp open  http
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|WAP|phone
+Running: iPXE 1.X, Linux 2.4.X|2.6.X, Sony Ericsson embedded
+OS CPE: cpe:/o:ipxe:ipxe:1.0.0%2b cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6.22 cpe:/h:sonyericsson:u8i_vivaz
+OS details: iPXE 1.0.0+, Tomato 1.28 (Linux 2.4.20), Tomato firmware (Linux 2.6.22), Sony Ericsson U8i Vivaz mobile phone
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 16.89 seconds

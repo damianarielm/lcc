@@ -1,0 +1,110 @@
+dnsenum VERSION:1.2.6
+
+-----   sonyentertainmentnetwork.com   -----                                                                                                                                                                                               
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Host's addresses:                                                                                                                                                                                                                          
+__________________                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                           
+sonyentertainmentnetwork.com.            3600     IN    A        216.146.46.11                                                                                                                                                             
+sonyentertainmentnetwork.com.            3600     IN    A        216.146.46.10
+
+                                                                                                                                                                                                                                           
+Name Servers:                                                                                                                                                                                                                              
+______________                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                           
+dns4.p05.nsone.net.                      62172    IN    A        198.51.45.69                                                                                                                                                              
+dns3.p05.nsone.net.                      62172    IN    A        198.51.44.69
+dns2.p05.nsone.net.                      62172    IN    A        198.51.45.5
+dns1.p05.nsone.net.                      62172    IN    A        198.51.44.5
+a1-22.akam.net.                          79291    IN    A        193.108.91.22
+a12-65.akam.net.                         74556    IN    A        184.26.160.65
+a13-66.akam.net.                         77609    IN    A        2.22.230.66
+a2-67.akam.net.                          77800    IN    A        95.100.174.67
+a24-64.akam.net.                         69421    IN    A        2.16.130.64
+a3-65.akam.net.                          78193    IN    A        96.7.49.65
+
+                                                                                                                                                                                                                                           
+Mail (MX) Servers:                                                                                                                                                                                                                         
+___________________                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                           
+sonyentertainmentnetwork-com.mail.protection.outlook.com. 10       IN    A                 (                                                                                                                                               
+sonyentertainmentnetwork-com.mail.protection.outlook.com. 10       IN    A                 (
+
+                                                                                                                                                                                                                                           
+Trying Zone Transfers and getting Bind Versions:                                                                                                                                                                                           
+_________________________________________________                                                                                                                                                                                          
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Trying Zone Transfer for sonyentertainmentnetwork.com on a12-65.akam.net ... 
+AXFR record query failed: REFUSED
+unresolvable name: ns1.p64.sonynei.net at /usr/bin/dnsenum line 900.
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on ns1.p64.sonynei.net ... 
+AXFR record query failed: no nameservers
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on dns3.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on dns2.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on a1-22.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on a13-66.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on dns1.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on dns4.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on a3-65.akam.net ... 
+AXFR record query failed: REFUSED
+unresolvable name: ns3.p64.sonynei.net at /usr/bin/dnsenum line 900.
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on ns3.p64.sonynei.net ... 
+AXFR record query failed: no nameservers
+unresolvable name: ns2.p64.sonynei.net at /usr/bin/dnsenum line 900.
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on ns2.p64.sonynei.net ... 
+AXFR record query failed: no nameservers
+unresolvable name: ns4.p64.sonynei.net at /usr/bin/dnsenum line 900.
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on ns4.p64.sonynei.net ... 
+AXFR record query failed: no nameservers
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on a2-67.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for sonyentertainmentnetwork.com on a24-64.akam.net ... 
+AXFR record query failed: REFUSED
+
+                                                                                                                                                                                                                                           
+Brute forcing with /usr/share/dnsenum/dns.txt:                                                                                                                                                                                             
+_______________________________________________                                                                                                                                                                                            
+                                                                                                                                                                                                                                           
+admin.sonyentertainmentnetwork.com.      3600     IN    A        173.230.217.112                                                                                                                                                           
+www.sonyentertainmentnetwork.com.        7200     IN    CNAME             (
+www.playstationnetwork.com.edgekey.net.  21600    IN    CNAME             (
+e11729.b.akamaiedge.net.                 20       IN    A        104.87.34.112
+www2.sonyentertainmentnetwork.com.       3600     IN    A        173.230.216.215
+
+                                                                                                                                                                                                                                           
+sonyentertainmentnetwork.com class C netranges:                                                                                                                                                                                            
+________________________________________________                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+ 173.230.216.0/24                                                                                                                                                                                                                          
+ 173.230.217.0/24
+ 216.146.46.0/24
+
+                                                                                                                                                                                                                                           
+Performing reverse lookup on 768 ip addresses:                                                                                                                                                                                             
+_______________________________________________                                                                                                                                                                                            
+                                                                                                                                                                                                                                           
+unresolvable name: ns1.p64.sonynei.net at /usr/bin/dnsenum line 660.                                                                                                                                                                       
+unresolvable name: ns3.p64.sonynei.net at /usr/bin/dnsenum line 660.                                                                                                                                                                       
+unresolvable name: ns2.p64.sonynei.net at /usr/bin/dnsenum line 660.                                                                                                                                                                       
+unresolvable name: ns4.p64.sonynei.net at /usr/bin/dnsenum line 660.

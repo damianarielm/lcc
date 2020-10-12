@@ -1,0 +1,83 @@
+dnsenum VERSION:1.2.6
+
+-----   playstation.net   -----                                                                                                                                                                                                            
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Host's addresses:                                                                                                                                                                                                                          
+__________________                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Name Servers:                                                                                                                                                                                                                              
+______________                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                           
+ns31.playstation.net.                    28       IN    A        193.108.91.22                                                                                                                                                             
+ns32.playstation.net.                    28       IN    A        184.26.160.65
+ns33.playstation.net.                    28       IN    A        2.22.230.66
+ns34.playstation.net.                    28       IN    A        95.100.174.67
+ns35.playstation.net.                    28       IN    A        2.16.130.64
+ns36.playstation.net.                    28       IN    A        96.7.49.65
+ns41.playstation.net.                    28       IN    A        198.51.44.7
+ns42.playstation.net.                    28       IN    A        198.51.45.7
+ns43.playstation.net.                    562      IN    A        198.51.44.71
+ns44.playstation.net.                    28       IN    A        198.51.45.71
+
+                                                                                                                                                                                                                                           
+Mail (MX) Servers:                                                                                                                                                                                                                         
+___________________                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Trying Zone Transfers and getting Bind Versions:                                                                                                                                                                                           
+_________________________________________________                                                                                                                                                                                          
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Trying Zone Transfer for playstation.net on ns44.playstation.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for playstation.net on ns32.playstation.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for playstation.net on ns31.playstation.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for playstation.net on ns33.playstation.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for playstation.net on ns36.playstation.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for playstation.net on ns41.playstation.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for playstation.net on ns43.playstation.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for playstation.net on ns35.playstation.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for playstation.net on ns34.playstation.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for playstation.net on ns42.playstation.net ... 
+AXFR record query failed: NOTIMP
+
+                                                                                                                                                                                                                                           
+Brute forcing with /usr/share/dnsenum/dns.txt:                                                                                                                                                                                             
+_______________________________________________                                                                                                                                                                                            
+                                                                                                                                                                                                                                           
+register.playstation.net.                20       IN    A        104.94.168.47                                                                                                                                                             
+
+                                                                                                                                                                                                                                           
+playstation.net class C netranges:                                                                                                                                                                                                         
+___________________________________                                                                                                                                                                                                        
+                                                                                                                                                                                                                                           
+ 2.16.130.0/24                                                                                                                                                                                                                             
+ 2.22.230.0/24
+ 95.100.174.0/24
+ 96.7.49.0/24
+ 104.94.168.0/24
+ 184.26.160.0/24
+ 193.108.91.0/24
+ 198.51.44.0/24
+ 198.51.45.0/24

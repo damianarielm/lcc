@@ -1,0 +1,96 @@
+dnsenum VERSION:1.2.6
+
+-----   api.playstation.com   -----                                                                                                                                                                                                        
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Host's addresses:                                                                                                                                                                                                                          
+__________________                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Name Servers:                                                                                                                                                                                                                              
+______________                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                           
+a13-66.akam.net.                         77436    IN    A        2.22.230.66                                                                                                                                                               
+a12-65.akam.net.                         74383    IN    A        184.26.160.65
+dns4.p05.nsone.net.                      61999    IN    A        198.51.45.69
+a1-22.akam.net.                          79118    IN    A        193.108.91.22
+dns2.p05.nsone.net.                      61999    IN    A        198.51.45.5
+a24-64.akam.net.                         69248    IN    A        2.16.130.64
+a2-67.akam.net.                          77627    IN    A        95.100.174.67
+dns1.p05.nsone.net.                      61999    IN    A        198.51.44.5
+a3-65.akam.net.                          78020    IN    A        96.7.49.65
+dns3.p05.nsone.net.                      61999    IN    A        198.51.44.69
+
+                                                                                                                                                                                                                                           
+Mail (MX) Servers:                                                                                                                                                                                                                         
+___________________                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Trying Zone Transfers and getting Bind Versions:                                                                                                                                                                                           
+_________________________________________________                                                                                                                                                                                          
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Trying Zone Transfer for api.playstation.com on a2-67.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for api.playstation.com on a13-66.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for api.playstation.com on a1-22.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for api.playstation.com on a24-64.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for api.playstation.com on dns4.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for api.playstation.com on dns1.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for api.playstation.com on dns2.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+Trying Zone Transfer for api.playstation.com on a12-65.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for api.playstation.com on a3-65.akam.net ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for api.playstation.com on dns3.p05.nsone.net ... 
+AXFR record query failed: NOTIMP
+
+                                                                                                                                                                                                                                           
+Brute forcing with /usr/share/dnsenum/dns.txt:                                                                                                                                                                                             
+_______________________________________________                                                                                                                                                                                            
+                                                                                                                                                                                                                                           
+accounts.api.playstation.com.            114      IN    CNAME             (                                                                                                                                                                
+accounts.api.playstation.com.edgekey.net. 114      IN    CNAME             (
+e4203.b.akamaiedge.net.                  20       IN    A        23.78.25.95
+lists.api.playstation.com.               1910     IN    CNAME             (
+wild.api.playstation.com.edgekey.net.    300      IN    CNAME    e16611.b.akamaiedge.net.
+e16611.b.akamaiedge.net.                 0        IN    A        104.94.173.15
+search.api.playstation.com.              3600     IN    CNAME             (
+wild.api.playstation.com.edgekey.net.    272      IN    CNAME    e16611.b.akamaiedge.net.
+e16611.b.akamaiedge.net.                 20       IN    A        104.94.173.15
+
+                                                                                                                                                                                                                                           
+api.playstation.com class C netranges:                                                                                                                                                                                                     
+_______________________________________                                                                                                                                                                                                    
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+Performing reverse lookup on 0 ip addresses:                                                                                                                                                                                               
+_____________________________________________                                                                                                                                                                                              
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+0 results out of 0 IP addresses.
+
+                                                                                                                                                                                                                                           
+api.playstation.com ip blocks:                                                                                                                                                                                                             
+_______________________________                                                                                                                                                                                                            
+                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+done.

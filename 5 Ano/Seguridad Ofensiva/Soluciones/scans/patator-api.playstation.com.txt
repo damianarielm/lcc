@@ -1,0 +1,66 @@
+Records ------------------------------------------
+     accounts.api.playstation.com.   IN CNAME   accounts.api.playstation.com.edgekey.net.
+              api.playstation.com.   IN SOA     dns1.p05.nsone.net. unixadmin.sonynei.net. 2020100902 28800 14400 2419200 86400
+         auth.api.playstation.com.   IN HINFO   "RFC8482" ""
+      banners.api.playstation.com.   IN CNAME   wild.api.playstation.com.edgekey.net.
+         cart.api.playstation.com.   IN CNAME   wild.api.playstation.com.edgekey.net.
+      catalog.api.playstation.com.   IN CNAME   wild.api.playstation.com.edgekey.net.
+          cis.api.playstation.com.   IN CNAME   wildcard.api.playstation.com.edgekey.net.
+     commerce.api.playstation.com.   IN CNAME   prod-elb-ext-v3entitlements-1070702612.us-west-1.elb.amazonaws.com.
+         core.api.playstation.com.   IN HINFO   "RFC8482" ""
+       cosmos.api.playstation.com.   IN CNAME   cosmos.ext.p1-np-usw2-01.h.km.playstation.net.
+      coupons.api.playstation.com.   IN HINFO   "RFC8482" ""
+          dms.api.playstation.com.   IN CNAME   wildcard.api.playstation.com.edgekey.net.
+          drm.api.playstation.com.   IN CNAME   wildcard.api.playstation.com.edgekey.net.
+          dss.api.playstation.com.   IN CNAME   wildcard.api.playstation.com.edgekey.net.
+           e1.api.playstation.com.   IN HINFO   "RFC8482" ""
+          gms.api.playstation.com.   IN CNAME   wild.api.playstation.com.edgekey.net.
+          ias.api.playstation.com.   IN CNAME   wildcard.api.playstation.com.edgekey.net.
+        image.api.playstation.com.   IN CNAME   image.api.playstation.com.edgekey.net.
+          int.api.playstation.com.   IN HINFO   "RFC8482" ""
+        lists.api.playstation.com.   IN CNAME   wild.api.playstation.com.edgekey.net.
+         mgmt.api.playstation.com.   IN HINFO   "RFC8482" ""
+        music.api.playstation.com.   IN CNAME   wild.api.playstation.com.edgekey.net.
+          pro.api.playstation.com.   IN HINFO   "RFC8482" ""
+      profile.api.playstation.com.   IN CNAME   richprofile.ext.p1-np-usw2-01.h.km.playstation.net.
+  radius.auth.api.playstation.com.   IN HINFO   "RFC8482" ""
+       search.api.playstation.com.   IN CNAME   wild.api.playstation.com.edgekey.net.
+       social.api.playstation.com.   IN CNAME   p1-np-ext-social-560074718.us-west-1.elb.amazonaws.com.
+       status.api.playstation.com.   IN CNAME   tbone-api.lacloud.playstation.net.
+        video.api.playstation.com.   IN CNAME   wild2.api.playstation.com.edgekey.net.
+         vote.api.playstation.com.   IN CNAME   p1-np-ext-kamaji-vote-496592661.us-west-1.elb.amazonaws.com.
+Hostmap ------------------------------------------
+wild.api.playstation.com.edgekey.net ?
+       banners.api.playstation.com
+        search.api.playstation.com
+           gms.api.playstation.com
+         lists.api.playstation.com
+         music.api.playstation.com
+       catalog.api.playstation.com
+          cart.api.playstation.com
+wild2.api.playstation.com.edgekey.net ?
+         video.api.playstation.com
+image.api.playstation.com.edgekey.net ?
+         image.api.playstation.com
+ tbone-api.lacloud.playstation.net ?
+        status.api.playstation.com
+p1-np-ext-social-560074718.us-west-1.elb.amazonaws.com ?
+        social.api.playstation.com
+wildcard.api.playstation.com.edgekey.net ?
+           cis.api.playstation.com
+           dss.api.playstation.com
+           dms.api.playstation.com
+           ias.api.playstation.com
+           drm.api.playstation.com
+p1-np-ext-kamaji-vote-496592661.us-west-1.elb.amazonaws.com ?
+          vote.api.playstation.com
+richprofile.ext.p1-np-usw2-01.h.km.playstation.net ?
+       profile.api.playstation.com
+prod-elb-ext-v3entitlements-1070702612.us-west-1.elb.amazonaws.com ?
+      commerce.api.playstation.com
+accounts.api.playstation.com.edgekey.net ?
+      accounts.api.playstation.com
+cosmos.ext.p1-np-usw2-01.h.km.playstation.net ?
+        cosmos.api.playstation.com
+Domains ------------------------------------------
+Networks -----------------------------------------
