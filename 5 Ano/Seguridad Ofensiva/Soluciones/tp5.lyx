@@ -1,0 +1,351 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\end_preamble
+\use_default_options true
+\begin_modules
+tcolorbox
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Seguridad Ofensiva 2020: Trabajo Práctico 5
+\end_layout
+
+\begin_layout Author
+Federico Juan Badaloni y Damián Ariel Marotte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 1
+\end_layout
+
+\begin_layout Standard
+Encontramos un crash corriendo 
+\family typewriter
+zzuf -c -s0:10000 -r 0.0001:0.001 ./parse mono.bmp
+\family default
+.
+ El resultado puede reproducirse con la seed 
+\family typewriter
+s=36
+\family default
+.
+\end_layout
+
+\begin_layout Section*
+Ejercicio 2
+\end_layout
+
+\begin_layout Standard
+El siguiente script Python utiliza angr para buscar un camino de ejecución
+ que llegué a ejecutar la dirección de memoria donde se imprime la flag.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import angr, claripy
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+base_address    = 0x08048000
+\end_layout
+
+\begin_layout Plain Layout
+
+success_address = 0x08048570
+\end_layout
+
+\begin_layout Plain Layout
+
+failure_address = 0x0804852d
+\end_layout
+
+\begin_layout Plain Layout
+
+pass_length     = 20
+\end_layout
+
+\begin_layout Plain Layout
+
+binary_name     = "r1"
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+proj = angr.Project(
+\end_layout
+
+\begin_layout Plain Layout
+
+        binary_name
+\end_layout
+
+\begin_layout Plain Layout
+
+        # main_opts    = {'base_addr': base_address},
+\end_layout
+
+\begin_layout Plain Layout
+
+        # load_options = {'auto_load_libs': False}
+\end_layout
+
+\begin_layout Plain Layout
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pass_chars = [
+\end_layout
+
+\begin_layout Plain Layout
+
+	claripy.BVS(f"pass_char{i}", 8)
+\end_layout
+
+\begin_layout Plain Layout
+
+	for i in range(pass_length)
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+password   = claripy.Concat(*pass_chars)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+state = proj.factory.full_init_state(
+\end_layout
+
+\begin_layout Plain Layout
+
+        # args = ["./" + binary_name],
+\end_layout
+
+\begin_layout Plain Layout
+
+        add_options = angr.options.unicorn,
+\end_layout
+
+\begin_layout Plain Layout
+
+        stdin = angr.SimFileStream(
+\end_layout
+
+\begin_layout Plain Layout
+
+			name='stdin',
+\end_layout
+
+\begin_layout Plain Layout
+
+			content=password, has_end=False)
+\end_layout
+
+\begin_layout Plain Layout
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+sim_mgr = proj.factory.simulation_manager(state)
+\end_layout
+
+\begin_layout Plain Layout
+
+sim_mgr.explore(find = success_address, avoid = failure_address)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+if len(sim_mgr.found):
+\end_layout
+
+\begin_layout Plain Layout
+
+    for found in sim_mgr.found:
+\end_layout
+
+\begin_layout Plain Layout
+
+        print(found.posix.dumps(0))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 3
+\end_layout
+
+\begin_layout Enumerate
+Se puede instalar 
+\family typewriter
+fmem
+\family default
+ que crea el dispositivo 
+\family typewriter
+/dev/fmem
+\family default
+ con el cual podemos dumpear la memoria usando 
+\family typewriter
+sudo dd if=/dev/fmem of=/tmp/memory.raw bs=1MB
+\family default
+.[
+\end_layout
+
+\begin_layout Enumerate
+[TODO: rekall]
+\end_layout
+
+\begin_layout Section*
+Ejercicio 4
+\end_layout
+
+\begin_layout Standard
+[TODO: nos falta crackear esto]
+\end_layout
+
+\begin_layout Section*
+Ejercicio 5
+\end_layout
+
+\begin_layout Standard
+Luego de encontrar un perfil de memoria adecuado para el dump en cuestión,
+ pudimos encontrar en rootkit usando el comando 
+\family typewriter
+linux_check_modules
+\family default
+ de volatility.
+\end_layout
+
+\begin_layout Standard
+[TODO: nos faltan los otros items]
+\end_layout
+
+\end_body
+\end_document
