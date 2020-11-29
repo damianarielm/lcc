@@ -58,7 +58,7 @@ tcolorbox
 \suppress_date false
 \justification true
 \use_refstyle 1
-\use_minted 0
+\use_minted 1
 \index Index
 \shortcut idx
 \color #008000
@@ -104,15 +104,112 @@ Ejercicio 1
 
 \begin_layout Standard
 Encontramos un crash corriendo 
+\begin_inset Quotes fld
+\end_inset
+
+
 \family typewriter
 zzuf -c -s0:10000 -r 0.0001:0.001 ./parse mono.bmp
 \family default
+
+\begin_inset Quotes frd
+\end_inset
+
 .
  El resultado puede reproducirse con la seed 
 \family typewriter
 s=36
 \family default
 .
+\end_layout
+
+\begin_layout Standard
+Posteriormente se generamos el archivo malicioso 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+cat mono.bmp | zzuf -cvq -s36 -r 0.0001:0.001 > error.bmp
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si analizamos la ejecución con gdb (estableciendo un breakpoint en la linea
+ 74) puede observarse que la variable 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+infoheader.ncolours
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+ vale 
+\begin_inset Quotes fld
+\end_inset
+
+524288
+\begin_inset Quotes frd
+\end_inset
+
+, por lo que 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+i
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+ tarde o temprano asumirá valores mayores a 255 y la posterior llamada a
+ la función 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+read
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+ escribirá en 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+colourindex[i]
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Sin embargo puede observarse en la linea 40 que dicho arreglo solo tiene
+ capacidad para 255 valores, por lo que puede desbordarse y modificar la
+ 
+\emph on
+return adress
+\emph default
+ de 
+\family typewriter
+parse
+\family default
+, lo cual modifica el EIP.
 \end_layout
 
 \begin_layout Section*
@@ -126,6 +223,7 @@ El siguiente script Python utiliza angr para buscar un camino de ejecución
 
 \begin_layout Standard
 \begin_inset listings
+lstparams "language=Python"
 inline false
 status open
 
@@ -315,11 +413,15 @@ fmem
 \family typewriter
 sudo dd if=/dev/fmem of=/tmp/memory.raw bs=1MB
 \family default
-.[
+ (notar que se necesitan los 
+\emph on
+headers
+\emph default
+ del kernel de Linux).
 \end_layout
 
 \begin_layout Enumerate
-[TODO: rekall]
+[TODO: LiME]
 \end_layout
 
 \begin_layout Section*
@@ -344,7 +446,7 @@ linux_check_modules
 \end_layout
 
 \begin_layout Standard
-[TODO: nos faltan los otros items]
+strings ubuntu-10.04.3-i386-LiveCD-kbeast.mem | grep "kbeast" -i
 \end_layout
 
 \end_body
