@@ -1,5 +1,5 @@
 ###### Año 2020
 
-* Joshep Cortez
+* Joshep Joel Cortez
 * Emanuel Bergagna
 * Martin Rodriguez
