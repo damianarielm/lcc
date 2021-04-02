@@ -37,7 +37,7 @@ class Taken:
         tmp = [[j + rows * i for j in range(rows)] for i in range(rows)]
         self.goalState  = tuple(tuple(x) for x in tmp)
 
-        # Shuffle the goal state
+        # Make a start state shuffling the goal
         self.startState = self.goalState
         for i in range(rows * rows * 10):
             tmp = choice(self.ops)(self.startState)
@@ -66,4 +66,4 @@ class Taken:
         return ( op(node) for op in self.ops if op(node) != None )
 
     def isGoalState(self, node):
-        return self.goalState == node
+        return node == self.goalState

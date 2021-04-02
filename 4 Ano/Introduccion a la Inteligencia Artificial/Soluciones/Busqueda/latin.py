@@ -1,36 +1,25 @@
 from itertools import product
 
-def put(node, i, j):
-    if len(node[i]) < len(node):
-        tmp = (node[i] + (j,) if x == i else node[x] for x in range(len(node)))
-        return tuple(tmp), f"{j}", 1
+def put(node, i, j, n):
+    if node[i][j] == -1 and n not in node[i] and n not in tuple(zip(*node))[j]:
+        newRow  = node[i][:j] + (n,) + node[i][j + 1:]
+        newNode = ( node[x] if x != i else newRow for x in range(len(node)) )
+        return tuple(newNode), f"{i},{j}:{n}", 1
 
 class Latin:
     def __init__(self, rows):
-        self.startState = tuple(() for i in range(rows))
+        self.startState = tuple((-1,) * rows for i in range(rows))
 
     def alternativeHeuristic(self, succ):
         return 0
 
-    # Repeated numbers and length diference
+    # Empty cells
     def defaultHeuristic(self, succ):
-        total = 0
-        for n in range(len(self.startState)):
-            for t in succ:
-                total += len(self.startState) - len(t)
-                total += t.count(n) if t.count(n) > 1 else 0
-
-        return total
+        return sum( row.count(-1) for row in succ )
 
     def getSuccessors(self, node):
-        tmp = product(range(len(node)), range(len(node)))
-        return ( put(node, i, j) for i, j in tmp if put(node, i, j) != None )
+        tmp = product(range(len(node)), range(len(node)), range(len(node)))
+        return ( put(node, *args) for args in tmp if put(node, *args) != None )
 
     def isGoalState(self, node):
-        for t in node + tuple(zip(*node)):
-            if len(t) != len(self.startState):
-                return False
-            if len(t) != len(set(t)):
-                return False
-
-        return True
+        return -1 not in ( e for row in node for e in row )

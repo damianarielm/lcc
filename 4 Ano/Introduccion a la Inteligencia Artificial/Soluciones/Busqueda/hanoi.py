@@ -36,7 +36,6 @@ def move32(node):
 
 class Hanoi:
     def __init__(self, disks):
-        self.ops = (move12, move13, move21, move23, move31, move32)
         self.startState = (tuple(i for i in range(disks)), (), ())
         self.goalState  = ((), (), tuple(i for i in range(disks)))
 
@@ -47,7 +46,8 @@ class Hanoi:
         return 0
 
     def getSuccessors(self, node):
-        return ( op(node) for op in self.ops if op(node) != None )
+        ops = (move12, move13, move21, move23, move31, move32)
+        return ( op(node) for op in ops if op(node) != None )
 
     def isGoalState(self, node):
-        return self.goalState == node
+        return node == self.goalState
