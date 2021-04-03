@@ -9,6 +9,7 @@ from taken        import Taken
 from hanoi        import Hanoi
 from latin        import Latin
 from ej2          import Ej2
+from ej11         import Ej11
 
 def mostrarSolucion(*args):
     init = time()
@@ -20,7 +21,7 @@ def mostrarSolucion(*args):
 
 def buscar(problem, structure, opcion):
     print("Estado inicial:", problem.startState)
-    print("Buscando solucion...")
+    print("\nBuscando solucion...")
 
     if opcion != "*":
         heuristic = nullHeuristic
@@ -30,11 +31,12 @@ def buscar(problem, structure, opcion):
     mostrarSolucion(problem, structure, heuristic)
 
     if opcion == "*":
-        print("\nHeuristica: Alternativa")
+        print("\nHeuristica alternativa...")
         mostrarSolucion(problem, structure, problem.alternativeHeuristic)
 
 def menu():
     print("2: Ejercicio 2")
+    print("1: Ejercicio 11")
     print("h: Torres de Hanoi")
     print("t: Taken")
     print("l: Cuadrado latino")
@@ -46,6 +48,9 @@ def menu():
         problem = Hanoi(opcion)
     elif opcion == "2":
         problem = Ej2()
+    elif opcion == "1":
+        opcion = int(input("Ingrese cantidad de fichas blancas: "))
+        problem = Ej11(opcion)
     elif opcion == "t":
         opcion = int(input("Ingrese cantidad de filas: "))
         problem = Taken(opcion)
