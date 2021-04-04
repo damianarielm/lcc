@@ -33,7 +33,7 @@ class Ej2:
         return 0
 
     def getSuccessors(self, node):
-        return (left(node), right(node))
+        return (s for s in (right(node), left(node)) if s != None)
 
     def isGoalState(self, node):
        return node == "M"
