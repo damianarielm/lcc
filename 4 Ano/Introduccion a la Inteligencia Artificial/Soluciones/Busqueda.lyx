@@ -1,0 +1,2899 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{trees,positioning,automata}
+\end_preamble
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Encontrar una representación adecuada del espacio para los siguientes problemas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+El juego de los 8 números (
+\begin_inset CommandInset href
+LatexCommand href
+name "Taken"
+target "https://es.wikipedia.org/wiki/Juego_del_15"
+literal "false"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dada una configuración de ocho números en un tablero de 
+\begin_inset Formula $3\times3$
+\end_inset
+
+, llevarlo mediante el desplazamiento de números, a la siguiente situación
+ final
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset href
+LatexCommand href
+name "La torre de Hanói"
+target "https://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Hay 64 discos de diámetro decreciente en un poste y hay que pasarlos a otro
+ poste, utilizando un tercero para los pasos intermedios.
+ Sólo puede moverse un disco a la vez, siempre deben estar en algún poste
+ y no se puede colocar un disco sobre otro de menor tamaño.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset href
+LatexCommand href
+name "Cuadrado Latino"
+target "https://es.wikipedia.org/wiki/Cuadrado_latino"
+literal "false"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Consiste en llenar un cuadrado de 
+\begin_inset Formula $3\times3$
+\end_inset
+
+ con un elemento del conjunto 
+\begin_inset Formula $\left\{ 1,2,3\right\} $
+\end_inset
+
+ de forma tal que en cada fila y columna no haya elementos repetidos.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ M\in\mathcal{M}_{3\times3}\left(\left\llbracket 0,8\right\rrbracket \right):\left|\left\{ m_{ij}/i,j\in\left\llbracket 1,3\right\rrbracket \right\} \right|=9\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Mover arriba: intercambia el 0 con el valor de arriba (siempre que el 0
+ no este en la primer fila).
+\end_layout
+
+\begin_layout Itemize
+Mover abajo: intercambia el 0 con el valor de abajo (siempre que el 0 no
+ este en la ultima fila).
+\end_layout
+
+\begin_layout Itemize
+Mover izquierda: intercambia el 0 con el valor de la izquierda (siempre
+ que el 0 no este en la primer columna).
+\end_layout
+
+\begin_layout Itemize
+Mover derecha: intercambia el 0 con el valor de la derecha (siempre que
+ el 0 no este en la última columna).
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ \left(A,B,C\right):A,B,C\in\left\llbracket 0,64\right\rrbracket ^{64}\land P\left(A\right)\land P\left(B\right)\land P\left(C\right)\land Q\left(A,B,C\right)\right\} $
+\end_inset
+
+, donde:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P\left(X\right)=\forall x_{i}\in X:x_{i}\leq x_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q\left(A,B,C\right)=$
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+Los números en 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ no se repiten, a excepción del 0
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Mover de 
+\begin_inset Formula $A$
+\end_inset
+
+ a 
+\begin_inset Formula $B$
+\end_inset
+
+: intercambia el menor valor de 
+\begin_inset Formula $A$
+\end_inset
+
+ con el último 0 de 
+\begin_inset Formula $B$
+\end_inset
+
+ (siempre que el menor valor de 
+\begin_inset Formula $A$
+\end_inset
+
+ sea menor que el menor valor de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Mover de 
+\begin_inset Formula $A$
+\end_inset
+
+ a 
+\begin_inset Formula $C$
+\end_inset
+
+: Análogo.
+\end_layout
+
+\begin_layout Itemize
+Mover de 
+\begin_inset Formula $B$
+\end_inset
+
+ a 
+\begin_inset Formula $A$
+\end_inset
+
+: Análogo.
+\end_layout
+
+\begin_layout Itemize
+Mover de 
+\begin_inset Formula $B$
+\end_inset
+
+ a 
+\begin_inset Formula $C$
+\end_inset
+
+: Análogo.
+\end_layout
+
+\begin_layout Itemize
+Mover de 
+\begin_inset Formula $C$
+\end_inset
+
+ a 
+\begin_inset Formula $A$
+\end_inset
+
+: Análogo.
+\end_layout
+
+\begin_layout Itemize
+Mover de 
+\begin_inset Formula $C$
+\end_inset
+
+ a 
+\begin_inset Formula $B$
+\end_inset
+
+: Análogo.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ M\in\mathcal{M}_{3\times3}\left(\left\llbracket 0,3\right\rrbracket \right):P\left(M\right)\land P\left(M^{t}\right)\right\} $
+\end_inset
+
+, donde 
+\begin_inset Formula $P\left(M\right)=\forall i\in\left\llbracket 1,3\right\rrbracket \left(\forall j\in\left\llbracket 1,3\right\rrbracket :m_{ij}=0\lor m_{ij}\neq m_{ij+1}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Llenar la celda 
+\begin_inset Formula $m_{ij}$
+\end_inset
+
+ con 
+\begin_inset Formula $n$
+\end_inset
+
+, siempr y cuando la matriz resultante pertenezca al espacio de estados.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Escribir en pseudocódigo el algoritmo para la búsqueda a lo ancho y en profundid
+ad, a partir del algoritmo de búsqueda general y realizando las especificaciones
+ necesarias para cada caso.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dar la evolución de la Lista de Espera de Nodos, al aplicar las estrategias
+ de búsqueda a lo ancho y en profundidad, al problema representado en el
+ siguiente árbol, donde 
+\begin_inset Formula $I$
+\end_inset
+
+ es el estado inicial y 
+\begin_inset Formula $M$
+\end_inset
+
+ es el estado meta.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[
+\end_layout
+
+\begin_layout Plain Layout
+
+  level 1/.style={sibling distance=5em}]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+coordinate
+\end_layout
+
+\begin_layout Plain Layout
+
+    child[yshift=4em]{node{$I$}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    child[xshift=-2em, yshift=2em]{node {A}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child[yshift=1em]{node{C} child[yshift=1em]{node{G}} child[yshift=1em]{nod
+e{H}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child[yshift=1em]{node{D}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+    child[xshift=2em, yshift=2em]{node {B}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child[yshift=1em]{node{E} child[yshift=1em]{node{$M$}} child[yshift=1em]{n
+ode{J J}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+      child[yshift=1em]{node{F}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def dfs(problem):
+\end_layout
+
+\begin_layout Plain Layout
+
+    l = [(problem.startState, [], 0)]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    while l:
+\end_layout
+
+\begin_layout Plain Layout
+
+        node, actions, cost = l.pop()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        if problem.isGoalState(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+            return node, actions, cost
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        for succ, action, nextCost in problem.getSuccessors(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+            l += [(succ, actions + [action], cost + nextCost)]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+I
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+A
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+C
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+D
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+G
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+H
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+D
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+H
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+D
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+D
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+E
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+F
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+M
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+J J
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+F
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Representar el problema de los 
+\begin_inset CommandInset href
+LatexCommand href
+name "Misioneros y Caníbales"
+target "https://es.wikipedia.org/wiki/Acertijo_de_los_misioneros_y_los_can%C3%ADbales"
+literal "false"
+
+\end_inset
+
+ descripto a continuación, mediante un espacio de estados y aplicar búsqueda
+ primero a lo ancho para resolver el problema.
+ Encontrar la solución de menos pasos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Tres misioneros y tres caníbales se encuentran en una orilla.
+ Junto a una canoa en la que pueden cruzar 1 o 2 personas.
+ Hay que encontrar la forma de pasarlos a todos a la otra orilla pero teniendo
+ en cuenta que en ningún momento el número de misioneros sea menor que el
+ de los caníbales.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ \left(m,c,b,M,C\right):m,c,M,C\in\left\llbracket 0,3\right\rrbracket \land b\in\mathbb{B}\in\land P\left(m,c,M,C\right)\right\} $
+\end_inset
+
+ donde 
+\begin_inset Formula $P\left(m,c,M,C\right)=\left(m=0\lor m\geq c\right)\land\left(M=0\lor M\geq C\right)\land m+M=3\land c+C=3$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{i}\left(m,c,\top,M,C\right)=\left(m-i,c,\bot,M+i,C\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $i>0$
+\end_inset
+
+ siempre que el resultado pertenezca al espacio de estados.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{i}\left(m,c,\bot,M,C\right)=\left(m+i,c,\top,M-i,C\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $i>0$
+\end_inset
+
+ siempre que el resultado pertenezca al espacio de estados.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{i}\left(m,c,\top,M,C\right)=\left(m,c-i,\bot,M,C+i\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $i>0$
+\end_inset
+
+ siempre que el resultado pertenezca al espacio de estados.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g_{i}\left(m,c,\bot,M,C\right)=\left(m,c+i,\top,M,C-i\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $i>0$
+\end_inset
+
+ siempre que el resultado pertenezca al espacio de estados.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En el juego de los 8 números (
+\begin_inset CommandInset href
+LatexCommand href
+name "Taken"
+target "https://es.wikipedia.org/wiki/Juego_del_15"
+literal "false"
+
+\end_inset
+
+) con la siguiente configuración inicial:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Resolverlo mediante la estrategia de búsqueda en profundidad estableciendo
+ algún límite apropiado de profundidad y controlando los nodos de estados
+ repetidos.
+\end_layout
+
+\begin_layout Enumerate
+Desarrollar las etapas de búsqueda considerando el método A* considerando:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ = Cantidad de números fuera de lugar.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{2}$
+\end_inset
+
+ = Distancia en cuadras (de Manhattan).
+\end_layout
+
+\begin_layout Standard
+Comparar los resultados obtenidos con ambas heurísticas (solución óptima,
+ cantidad de nodos expandidos) en este caso de resolución y analizar si
+ este comportamiento es un caso particular o si se puede generalizar a otros
+ casos del juego.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Considerando el siguiente mapa de Rumania con las rutas existentes y las
+ distancias en línea recta entre las distintas ciudades y Bucharest (Ejemplo
+ extraído de Russell & Norvig).
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Aplique el algoritmo de búsqueda de costo uniforme para encontrar una solución
+ al problema de ir desde Arad a Bucharest.
+\end_layout
+
+\begin_layout Enumerate
+Explorar el árbol de búsqueda con el método A* usando como heurística la
+ distancia en línea recta, indicar en cada nodo el número de expansión y
+ el valor de g y h.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considérese el grafo dirigido de la figura, que representa un espacio de
+ estados, siendo 
+\begin_inset Formula $I$
+\end_inset
+
+ el estado inicial y 
+\begin_inset Formula $G1$
+\end_inset
+
+ y 
+\begin_inset Formula $G2$
+\end_inset
+
+ los dos estados objetivos.
+ El número que figura en cada estado corresponde al valor de una función
+ heurística 
+\begin_inset Formula $h'$
+\end_inset
+
+ que estima el coste mínimo necesario para pasar de ese estado al objetivo
+ más cercano.
+ Cada arista está etiquetada con un número que representa el coste real
+ de atravesar dicha arista.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](I)   {$I_{15}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](B) [above right=3cm of I] {$B_{11}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](C) [left=of I]        {$C_{14}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](A) [above=of C]       {$A_{13}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](G1)[right=3cm of B]   {$G1_{0}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](D) [below right=of B] {$D_{4}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](E) [below =of I]      {$E_{14}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](F) [right=5 cm of E]  {$F_{3}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[state](G2)[above=of F]       {$G2_{0}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path[->]
+\end_layout
+
+\begin_layout Plain Layout
+
+		(I)	edge [bend right] node [below right] {$4$} (B)
+\end_layout
+
+\begin_layout Plain Layout
+
+               edge  node {$1$} (C)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (B)	edge  node [above] {$2$} (C)
+\end_layout
+
+\begin_layout Plain Layout
+
+		   	edge  node [right] {$5$} (D)
+\end_layout
+
+\begin_layout Plain Layout
+
+		   	edge  node [above] {$21$}(G1)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (A)	edge  node [above] {$1$} (B)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (E)	edge  node [above] {$3$} (D)
+\end_layout
+
+\begin_layout Plain Layout
+
+               edge  node [below] {$10$}(F)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (C)	edge  node [left]  {$1$} (A)
+\end_layout
+
+\begin_layout Plain Layout
+
+               edge  node [below] {$7$} (E)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (D)	edge  node [above] {$11$}(G2)
+\end_layout
+
+\begin_layout Plain Layout
+
+               edge [bend right] node [below left]  {$6$} (F)
+\end_layout
+
+\begin_layout Plain Layout
+
+	    (F)	edge [bend left] node [right] {$3$} (G2)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (G2)   edge [bend left] node [right]  {$2$} (F)
+\end_layout
+
+\begin_layout Plain Layout
+
+        (G1)   edge [bend left=90] node [right]  {$7$} (F)
+\end_layout
+
+\begin_layout Plain Layout
+
+    ;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Es 
+\begin_inset Formula $h'$
+\end_inset
+
+ una heurística admisible? Justifique.
+\end_layout
+
+\begin_layout Enumerate
+Indicar qué estado objetivo se alcanzará (si es que se alcanza alguno),
+ qué estados se expandirán y en qué orden para cada uno de los siguientes
+ algoritmos de búsqueda: primero en profundidad, A* y escalada simple (hill
+ climbing).
+ Cuando dos nodos tengan las mismas características por el criterio de selección
+ que se esté usando, se seleccionará el primero por orden alfabético.
+ Además, se evitarán las repeticiones de estados.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Un robot se mueve en una grilla de 
+\begin_inset Formula $n\times n$
+\end_inset
+
+.
+ En un determinado momento, el robot se encontrará en un celda (determinada
+ por su posición 
+\begin_inset Formula $x$
+\end_inset
+
+ indicando la fila y la posición 
+\begin_inset Formula $y$
+\end_inset
+
+ indicando la columna), con una orientación la cual puede tener los siguientes
+ valores: N (Norte), S (Sur), E (Este) y O (Oeste).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Los movimientos que puede realizar el robot en esta grilla son:
+\end_layout
+
+\begin_layout Itemize
+Avanza: el robot se dirige a la celda contigua (costo 2).
+ Esta celda depende de la orientación del robot.
+ La tabla siguiente resume la ubicación del robot después de ejecutar esta
+ acción:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Orientación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Próxima ubicación
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x-1,y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x+1,y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x,y+1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x,y-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Gira: el robot gira 90º en el sentido de las agujas del reloj.
+ El siguiente gráfico muestra la rotación del robot (costo 1)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[shorten >=1pt,node distance=1.5cm,on grid,auto]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[](N)   {$N$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[](E) [below right =of N] {$E$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[](O) [below left =of N] {$O$};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node[](S) [below right =of O] {$S$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+path[->]
+\end_layout
+
+\begin_layout Plain Layout
+
+		(N)	edge [bend left] node {} (E)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(E)	edge [bend left] node {} (S)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(S)	edge [bend left] node {} (O)
+\end_layout
+
+\begin_layout Plain Layout
+
+		(O)	edge [bend left] node {} (N)
+\end_layout
+
+\begin_layout Plain Layout
+
+    ;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El robot tendrá una posición inicial en la grilla y se le solicitará que
+ llegue a alguna celda destino.
+ Además se especificarán un grupo de celdas prohibidas.
+ Por lo tanto, el robot tendrá que resolver como problema determinar el
+ camino a seguir en la grilla para alcanzar el destino final, sin pasar
+ por las celdas prohibidas.
+\end_layout
+
+\begin_layout Standard
+Se pide:
+\end_layout
+
+\begin_layout Enumerate
+Representar el problema de desplazamiento del robot mediante un espacio
+ de estados.
+\end_layout
+
+\begin_layout Enumerate
+Definir una función heurística y aplicar búsqueda A* para hallar el camino
+ de menor costo entre (1,1) si el robot comienza con orientación N y (3,4)
+ cualquier orientación, en una grilla de (5x5), teniendo como celdas prohibidas:
+ (1,2), (1,4) y (2,2).
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Dado el siguiente problema, consistente en partir de una configuración 
+\begin_inset Formula $\left[0X0X0X0X\right]$
+\end_inset
+
+ pasar a otra 
+\begin_inset Formula $\left[0000XXXX\right]$
+\end_inset
+
+, moviendo de a dos letras adyacentes a la vez (cualquier par) desplazándolas
+ juntas y eliminando el hueco dejado.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Representar el problema mediante espacio de estados.
+\end_layout
+
+\begin_layout Enumerate
+Proponer una heurística e implementar un método de búsqueda de modo de obtener
+ la configuración deseada con el menor número de movimientos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supóngase que usted está diseñando un compilador para una máquina con un
+ solo registro y las siguientes instrucciones:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UNO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Poner en el registro el valor 1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DOBLE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duplicar el contenido del registro
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SUMAR_UNO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sumar uno al contenido del registro
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RESTAR_UNO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Restar uno al contenido del registro
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estas instrucciones sólo pueden ejecutarse cuando el contenido del registro
+ no es divisible por 3.
+ Cuando esto ocurre, la única instrucción disponible es:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DIVIDIR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dividir el valor del registro por 3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El problema es cómo poner el número 7 en el registro.
+ Puede suponerse que el registro está inicializado en 1.
+\end_layout
+
+\begin_layout Enumerate
+Formular este problema en términos de espacios de estado.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Supóngase que los costos de los operadores sobre un registro que contiene
+ el número n son:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+UNO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DOBLE
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SUMAR_UNO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RESTAR_UNO
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DIVIDIR
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2N/3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto es, cada operador tiene un costo equivalente a la diferencia que produce
+ respecto del valor inicial del registro, y la función heurística 
+\begin_inset Formula $h\left(n\right)=\left|7-n\right|$
+\end_inset
+
+.
+ Dibuje el árbol de búsqueda utilizando A* y determine la solución encontrada.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Considere un problema de búsqueda en un universo cuyos estados sean: 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $E$
+\end_inset
+
+.
+ Las acciones posibles, en este universo, son dadas por la siguiente tabla:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inicial
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Final
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $nodo$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h_{1}\left(nodo\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $nodo$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h_{2}\left(nodo\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+¿Es A* optimo con la heurística 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+? ¿Es A* óptima con 
+\begin_inset Formula $h_{2}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Enumerate
+¿Son las siguientes heurísticas admisibles?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $h_{1}\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $h_{2}\left(n\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+min(h1(n) , h2(n)) 
+\end_layout
+
+\begin_layout Enumerate
+h1 (n)+ h2(n) 
+\end_layout
+
+\begin_layout Enumerate
+(h1 (n)+ h2(n))/2 
+\end_layout
+
+\begin_layout Enumerate
+max(h1(n) , h2(n)) 
+\end_layout
+
+\begin_layout Enumerate
+h1 (n) × h2(n) 
+\end_layout
+
+\begin_layout Enumerate
+(h1 (n) × h2(n)) 1/2
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Consideremos un puzzle consistente en una fila con 4 fichas con la siguiente
+ configuración inicial:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+V
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay dos fichas negras (N), dos blancas (B) y una casilla vacía (V).
+ El puzzle permite los siguientes movimientos: 
+\end_layout
+
+\begin_layout Itemize
+Una ficha puede moverse a una casilla vacía adjunta con costo unidad.
+ 
+\end_layout
+
+\begin_layout Itemize
+Una ficha puede saltar sobre otras dos como máximo hasta la celda vacía,
+ con costo igual al número de fichas saltadas.
+ El objetivo es llegar a tener todas las fichas blancas a la izquierda de
+ todas las negras (sin importar la posición de la casilla vacía).
+\end_layout
+
+\begin_layout Enumerate
+Especificar el problema como búsqueda en un espacio de estados.
+\end_layout
+
+\begin_layout Enumerate
+Especificar una función heurística h para este problema, analizar si es
+ admisible.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Encontrar una solución utilizando el algoritmo A* con esa función heurística.
+ Mostrar el árbol de búsqueda desarrollado.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
