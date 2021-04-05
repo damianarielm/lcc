@@ -1064,6 +1064,28 @@ Solución
  siempre que el resultado pertenezca al espacio de estados.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $h_{i}\left(m,c,\top,M,C\right)=\left(m-i,c-i,\bot,M+i,C+i\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $i>0$
+\end_inset
+
+ siempre que el resultado pertenezca al espacio de estados.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{i}\left(m,c,\bot,M,C\right)=\left(m+i,c+i,\top,M-i,C-i\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $i>0$
+\end_inset
+
+ siempre que el resultado pertenezca al espacio de estados.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 En el juego de los 8 números (
@@ -1211,6 +1233,152 @@ Comparar los resultados obtenidos con ambas heurísticas (solución óptima,
  cantidad de nodos expandidos) en este caso de resolución y analizar si
  este comportamiento es un caso particular o si se puede generalizar a otros
  casos del juego.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def dfsWithLimit(problem):
+\end_layout
+
+\begin_layout Plain Layout
+
+  l = [(problem.startState, 0, [], 0)]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  while l:
+\end_layout
+
+\begin_layout Plain Layout
+
+    node, level, actions, cost = l.pop()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    if problem.isGoalState(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+      return node, actions, cost
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for succ, action, nextCost in problem.getSuccessors(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+      if level < 31:
+\end_layout
+
+\begin_layout Plain Layout
+
+        l += [(succ, level + 1, actions + [action], cost + nextCost)]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+def dfsWithAncestors(problem):
+\end_layout
+
+\begin_layout Plain Layout
+
+  l = [(problem.startState, [], 0, [], 0)]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  while l:
+\end_layout
+
+\begin_layout Plain Layout
+
+    node, ancestors, level, actions, cost = l.pop()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    if problem.isGoalState(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+      return node, actions, cost
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for succ, action, nextCost in problem.getSuccessors(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+      if succ not in ancestors:
+\end_layout
+
+\begin_layout Plain Layout
+
+        l += [(succ, ancestors+[node], actions+[action], cost+nextCost)]
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1230,7 +1398,390 @@ Aplique el algoritmo de búsqueda de costo uniforme para encontrar una solución
 \begin_layout Enumerate
 Explorar el árbol de búsqueda con el método A* usando como heurística la
  distancia en línea recta, indicar en cada nodo el número de expansión y
- el valor de g y h.
+ el valor de 
+\begin_inset Formula $g$
+\end_inset
+
+ y 
+\begin_inset Formula $h$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename rumania.bmp
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Distancia en linea recta a Bucharest
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Itemize
+Bucharest: 0.
+\end_layout
+
+\begin_layout Itemize
+Giurgiu: 77.
+\end_layout
+
+\begin_layout Itemize
+Urziceni: 80.
+\end_layout
+
+\begin_layout Itemize
+Pitesti: 100.
+\end_layout
+
+\begin_layout Itemize
+Hirsova: 151.
+\end_layout
+
+\begin_layout Itemize
+Craiova: 160.
+\end_layout
+
+\begin_layout Itemize
+Eforie: 161.
+\end_layout
+
+\begin_layout Itemize
+Fagaras: 176.
+\end_layout
+
+\begin_layout Itemize
+Rimnicu Vilcea: 193.
+\end_layout
+
+\begin_layout Itemize
+Vaslui: 199.
+\end_layout
+
+\begin_layout Itemize
+Iasi: 226.
+\end_layout
+
+\begin_layout Itemize
+Neamt: 234.
+\end_layout
+
+\begin_layout Itemize
+Mehadia: 241.
+\end_layout
+
+\begin_layout Itemize
+Drobeta: 242.
+\end_layout
+
+\begin_layout Itemize
+Lugoj: 244.
+\end_layout
+
+\begin_layout Itemize
+Sibiu: 253.
+\end_layout
+
+\begin_layout Itemize
+Timisora: 329.
+\end_layout
+
+\begin_layout Itemize
+Arad: 366.
+\end_layout
+
+\begin_layout Itemize
+Zerind: 374.
+\end_layout
+
+\begin_layout Itemize
+Oradea: 380.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset space \hspace*{}
+\length -5cm
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{A\to Z}{{\scriptscriptstyle 75}}},\boldsymbol{\overset{A\to T}{{\scriptscriptstyle 118}}},\boldsymbol{\overset{A\to S}{{\scriptscriptstyle 140}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to T}{{\scriptscriptstyle 118}},\overset{A\to S}{{\scriptscriptstyle 140}},\boldsymbol{\overset{A\to Z\to O}{{\scriptscriptstyle 75+71=146}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S}{{\scriptscriptstyle 140}},\overset{A\to Z\to O}{{\scriptscriptstyle 146}},\boldsymbol{\overset{A\to T\to L}{{\scriptscriptstyle 118+111=229}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to Z\to O}{{\scriptscriptstyle 146}},\boldsymbol{\overset{A\to S\to R}{{\scriptscriptstyle 140+99=220}}},\overset{A\to T\to L}{{\scriptscriptstyle 229}},\boldsymbol{\overset{A\to S\to F}{{\scriptscriptstyle 140+99=239}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to R}{{\scriptscriptstyle 220}},\overset{A\to T\to L}{{\scriptscriptstyle 229}},\overset{A\to S\to F}{{\scriptscriptstyle 239}},\boldsymbol{\overset{A\to Z\to O\to S}{{\scriptscriptstyle 146+151=297}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to T\to L}{{\scriptscriptstyle 229}},\overset{A\to S\to F}{{\scriptscriptstyle 239}},\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\boldsymbol{\overset{A\to S\to R\to P}{{\scriptscriptstyle 220+97=317}}},\boldsymbol{\overset{A\to S\to R\to C}{{\scriptscriptstyle 220+146=366}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to F}{{\scriptscriptstyle 239}},\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\boldsymbol{\overset{A\to T\to L\to M}{{\scriptscriptstyle 229+70=299}}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\overset{A\to T\to L\to M}{{\scriptscriptstyle 299}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to S\to F\to B}{{\scriptscriptstyle 239+211=450}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to T\to L\to M}{{\scriptscriptstyle 299}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 297+80=377}}},\boldsymbol{\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 297+99=396}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 299+75=374}}},\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 374}},\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\boldsymbol{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 317+101=418}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 374}},\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\boldsymbol{\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 366+138=504}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\boldsymbol{\overset{A\to T\to L\to M\to D\to C}{{\scriptscriptstyle 374+120=494}}},\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 504}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\boldsymbol{\overset{A\to Z\to O\to S\to R\to P}{{\scriptscriptstyle 377+97=474}}},\overset{A\to T\to L\to M\to D\to C}{{\scriptscriptstyle 494}},\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 504}},\boldsymbol{\overset{A\to Z\to O\to S\to R\to C}{{\scriptscriptstyle 377+97=523}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\overset{A\to Z\to O\to S\to R\to P}{{\scriptscriptstyle 474}},\overset{A\to T\to L\to M\to D\to C}{{\scriptscriptstyle 494}},\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 504}},\overset{A\to Z\to O\to S\to R\to C}{{\scriptscriptstyle 523}},\boldsymbol{\overset{A\to Z\to O\to S\to F\to B}{{\scriptscriptstyle 396+211=607}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boxed{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
 \end_layout
 
 \end_deeper
