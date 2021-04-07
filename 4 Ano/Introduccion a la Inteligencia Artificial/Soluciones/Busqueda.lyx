@@ -267,10 +267,20 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset space ~
+Notaremos con 
+\begin_inset Formula $0\left(M\right)$
 \end_inset
 
+ al par ordenado formado por la fila y columna donde se encuentra el elemento
+ 
+\begin_inset Formula $0$
+\end_inset
 
+ en la matriz 
+\begin_inset Formula $M$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -282,40 +292,137 @@ Soluciones
 \end_layout
 
 \begin_layout Itemize
-Mover arriba: intercambia el 0 con el valor de arriba (siempre que el 0
- no este en la primer fila).
+\begin_inset Formula $G=\begin{bmatrix}1 & 2 & 3\\
+8 & 0 & 4\\
+7 & 6 & 5
+\end{bmatrix}$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
-Mover abajo: intercambia el 0 con el valor de abajo (siempre que el 0 no
- este en la ultima fila).
+Sea 
+\begin_inset Formula $\left(f,c\right)=0\left(M\right)$
+\end_inset
+
+, definimos los siguientes operadores:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Mover arriba: 
+\begin_inset Formula 
+\[
+\uparrow\left(M\right)=\begin{cases}
+M & \text{si }f=1\\
+M' & \text{si }f\neq1
+\end{cases}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{ij}'=\begin{cases}
+m_{f-1,c} & \text{si }\left(i,j\right)=\left(f,c\right)\\
+0 & \text{si }\left(i,j\right)=\left(f-1,c\right)\\
+m_{ij} & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Mover izquierda: intercambia el 0 con el valor de la izquierda (siempre
- que el 0 no este en la primer columna).
+Mover abajo: 
+\begin_inset Formula 
+\[
+\downarrow\left(M\right)=\begin{cases}
+M & \text{si }f=3\\
+M' & \text{si }f\neq3
+\end{cases}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{ij}'=\begin{cases}
+m_{f+1,c} & \text{si }\left(i,j\right)=\left(f,c\right)\\
+0 & \text{si }\left(i,j\right)=\left(f+1,c\right)\\
+m_{ij} & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Mover derecha: intercambia el 0 con el valor de la derecha (siempre que
- el 0 no este en la última columna).
-\begin_inset Newpage pagebreak
+Mover a la derecha: 
+\begin_inset Formula 
+\[
+\rightarrow\left(M\right)=\begin{cases}
+M & \text{si }c=3\\
+M' & \text{si }c\neq3
+\end{cases}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{ij}'=\begin{cases}
+m_{f,c+1} & \text{si }\left(i,j\right)=\left(f,c\right)\\
+0 & \text{si }\left(i,j\right)=\left(f,c+1\right)\\
+m_{ij} & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Mover a la izquierda: 
+\begin_inset Formula 
+\[
+\leftarrow\left(M\right)=\begin{cases}
+M & \text{si }c=1\\
+M' & \text{si }c\neq1
+\end{cases}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{ij}'=\begin{cases}
+m_{f,c-1} & \text{si }\left(i,j\right)=\left(f,c\right)\\
+0 & \text{si }\left(i,j\right)=\left(f,c-1\right)\\
+m_{ij} & \text{en otro caso}
+\end{cases}$
 \end_inset
 
 
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout Enumerate
-\begin_inset space ~
+Sea 
+\begin_inset Formula $\mathbb{L}$
 \end_inset
 
+ el conjunto de todas las listas con coeficientes en 
+\begin_inset Formula $\left\llbracket 1,64\right\rrbracket $
+\end_inset
 
+ cuya longitud no es mayor a 
+\begin_inset Formula $64$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $S=\left\{ \left(A,B,C\right):A,B,C\in\left\llbracket 0,64\right\rrbracket ^{64}\land P\left(A\right)\land P\left(B\right)\land P\left(C\right)\land Q\left(A,B,C\right)\right\} $
+\begin_inset Formula $S=\left\{ \left(A,B,C\right):A,B,C\in\mathbb{L}\land P\left(A\right)\land P\left(B\right)\land P\left(C\right)\land Q\left(A\right)\land Q\left(B\right)\land Q\left(C\right)\right\} $
 \end_inset
 
 , donde:
@@ -330,116 +437,81 @@ Mover derecha: intercambia el 0 con el valor de la derecha (siempre que
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $Q\left(A,B,C\right)=$
+\begin_inset Formula $Q\left(X\right)=\left|X\right|=\left|\left\{ x/x\in X\right\} \right|$
 \end_inset
 
  
-\begin_inset Quotes fld
-\end_inset
-
-Los números en 
-\begin_inset Formula $A$
-\end_inset
-
-, 
-\begin_inset Formula $B$
-\end_inset
-
- y 
-\begin_inset Formula $C$
-\end_inset
-
- no se repiten, a excepción del 0
-\begin_inset Quotes frd
-\end_inset
-
-.
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Mover de 
-\begin_inset Formula $A$
-\end_inset
-
- a 
-\begin_inset Formula $B$
-\end_inset
-
-: intercambia el menor valor de 
-\begin_inset Formula $A$
-\end_inset
-
- con el último 0 de 
-\begin_inset Formula $B$
-\end_inset
-
- (siempre que el menor valor de 
-\begin_inset Formula $A$
-\end_inset
-
- sea menor que el menor valor de 
-\begin_inset Formula $B$
+\begin_inset Formula $I=\left(\left[1,2,3,4,5,\cdots,60,61,62,63,64\right],\left[\right],\left[\right]\right)$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Itemize
-Mover de 
-\begin_inset Formula $A$
+\begin_inset Formula $G=\left(\left[\right],\left[\right],\left[1,2,3,4,5,\cdots,60,61,62,63,64\right]\right)$
 \end_inset
 
- a 
-\begin_inset Formula $C$
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definimos los siguientes operadores:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overrightarrow{ab}\left(A,B,C\right)=\begin{cases}
+\left(A,B,C\right) & \text{si }a_{1}>b_{1}\\
+\left(tail\left(A\right),\left[a_{1}\right]+B,C\right) & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overrightarrow{ac}\left(A,B,C\right)=\begin{cases}
+\left(A,B,C\right) & \text{si }a_{1}>b_{c}\\
+\left(tail\left(A\right),B,\left[a_{1}\right]+C\right) & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overleftarrow{ba}\left(A,B,C\right)=\begin{cases}
+\left(A,B,C\right) & \text{si }b_{1}>a_{1}\\
+\left(\left[b_{1}\right]+A,tail\left(B\right),C\right) & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overrightarrow{bc}$
 \end_inset
 
 : Análogo.
 \end_layout
 
 \begin_layout Itemize
-Mover de 
-\begin_inset Formula $B$
-\end_inset
-
- a 
-\begin_inset Formula $A$
+\begin_inset Formula $\overleftarrow{ca}$
 \end_inset
 
 : Análogo.
 \end_layout
 
 \begin_layout Itemize
-Mover de 
-\begin_inset Formula $B$
-\end_inset
-
- a 
-\begin_inset Formula $C$
-\end_inset
-
-: Análogo.
-\end_layout
-
-\begin_layout Itemize
-Mover de 
-\begin_inset Formula $C$
-\end_inset
-
- a 
-\begin_inset Formula $A$
-\end_inset
-
-: Análogo.
-\end_layout
-
-\begin_layout Itemize
-Mover de 
-\begin_inset Formula $C$
-\end_inset
-
- a 
-\begin_inset Formula $B$
+\begin_inset Formula $\overleftarrow{cb}$
 \end_inset
 
 : Análogo.
@@ -466,17 +538,49 @@ Mover de
 \end_layout
 
 \begin_layout Itemize
-Llenar la celda 
-\begin_inset Formula $m_{ij}$
+\begin_inset Formula $I=\begin{bmatrix}0 & 0 & 0\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{bmatrix}$
 \end_inset
 
- con 
-\begin_inset Formula $n$
-\end_inset
-
-, siempr y cuando la matriz resultante pertenezca al espacio de estados.
+.
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $G=\left\{ M\in S/\forall m_{ij}\in M:m_{ij}\neq0\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $f\left(M,n,f,c\right)=M'$
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{ij}=\begin{cases}
+n & \text{si }\left(i,j\right)=\left(f,c\right)\\
+m_{ij} & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+ definimos el siguiente operador:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $g\left(M,n,f,c\right)=\begin{cases}
+M & \text{si }f\left(M,n,f,c\right)\notin S\\
+f\left(M,n,f,c\right) & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
@@ -499,6 +603,10 @@ Dar la evolución de la Lista de Espera de Nodos, al aplicar las estrategias
 
  es el estado meta.
 \end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
 
 \begin_layout Standard
 \align center
@@ -586,6 +694,11 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 Solución
 \end_layout
@@ -603,7 +716,7 @@ def dfs(problem):
 
 \begin_layout Plain Layout
 
-    l = [(problem.startState, [], 0)]
+    l = [(problem.startState, [])]
 \end_layout
 
 \begin_layout Plain Layout
@@ -617,7 +730,7 @@ def dfs(problem):
 
 \begin_layout Plain Layout
 
-        node, actions, cost = l.pop()
+        node, actions = l.pop()
 \end_layout
 
 \begin_layout Plain Layout
@@ -631,7 +744,7 @@ def dfs(problem):
 
 \begin_layout Plain Layout
 
-            return node, actions, cost
+            return node, actions
 \end_layout
 
 \begin_layout Plain Layout
@@ -640,22 +753,18 @@ def dfs(problem):
 
 \begin_layout Plain Layout
 
-        for succ, action, nextCost in problem.getSuccessors(node):
+        for succ, action, _ in problem.getSuccessors(node):
 \end_layout
 
 \begin_layout Plain Layout
 
-            l += [(succ, actions + [action], cost + nextCost)]
+            l += [(succ, actions + [action])]
 \end_layout
 
 \end_inset
 
 
 \end_layout
-
-\begin_layout Standard
-\begin_inset Flex Multiple Columns
-status open
 
 \begin_layout Itemize
 \begin_inset listings
@@ -967,11 +1076,497 @@ F
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Python"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+def bfs(problem):
+\end_layout
+
+\begin_layout Plain Layout
+
+    l = [(problem.startState, [])]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    while l:
+\end_layout
+
+\begin_layout Plain Layout
+
+        node, actions = l.pop()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        if problem.isGoalState(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+            return node, actions
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        for succ, action, _ in problem.getSuccessors(node):
+\end_layout
+
+\begin_layout Plain Layout
+
+            l = [(succ, actions + [action])] + l
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+I
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+A
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+B
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+C
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+D
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+C
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+D
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+E
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+F
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+D
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+E
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+F
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+G
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+H
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+E
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+F
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+G
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+H
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+F
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+G
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+H
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+M
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+J J
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+G
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+H
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+M
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+J J
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+H
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+M
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+J J
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+lstparams "language=TeX"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+l ~ [
+\begin_inset Quotes fld
+\end_inset
+
+M
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+J J
+\begin_inset Quotes frd
+\end_inset
+
+]
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -1014,10 +1609,20 @@ Solución
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I=\left(3,3,\top,0,0\right)$
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $G=\left(0,0,\bot,3,3\right)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -1025,7 +1630,7 @@ Solución
 \end_inset
 
  para 
-\begin_inset Formula $i>0$
+\begin_inset Formula $1\leq i\leq2$
 \end_inset
 
  siempre que el resultado pertenezca al espacio de estados.
@@ -1036,7 +1641,7 @@ Solución
 \end_inset
 
  para 
-\begin_inset Formula $i>0$
+\begin_inset Formula $1\leq i\leq2$
 \end_inset
 
  siempre que el resultado pertenezca al espacio de estados.
@@ -1047,7 +1652,7 @@ Solución
 \end_inset
 
  para 
-\begin_inset Formula $i>0$
+\begin_inset Formula $1\leq i\leq2$
 \end_inset
 
  siempre que el resultado pertenezca al espacio de estados.
@@ -1058,7 +1663,7 @@ Solución
 \end_inset
 
  para 
-\begin_inset Formula $i>0$
+\begin_inset Formula $1\leq i\leq2$
 \end_inset
 
  siempre que el resultado pertenezca al espacio de estados.
@@ -1069,7 +1674,7 @@ Solución
 \end_inset
 
  para 
-\begin_inset Formula $i>0$
+\begin_inset Formula $i=1$
 \end_inset
 
  siempre que el resultado pertenezca al espacio de estados.
@@ -1080,7 +1685,7 @@ Solución
 \end_inset
 
  para 
-\begin_inset Formula $i>0$
+\begin_inset Formula $i=1$
 \end_inset
 
  siempre que el resultado pertenezca al espacio de estados.
@@ -1233,10 +1838,6 @@ Comparar los resultados obtenidos con ambas heurísticas (solución óptima,
  cantidad de nodos expandidos) en este caso de resolución y analizar si
  este comportamiento es un caso particular o si se puede generalizar a otros
  casos del juego.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1260,12 +1861,12 @@ status open
 
 \begin_layout Plain Layout
 
-def dfsWithLimit(problem):
+def dfsWithLimit(problem, limit):
 \end_layout
 
 \begin_layout Plain Layout
 
-  l = [(problem.startState, 0, [], 0)]
+  l = [(problem.startState, 0, [])]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1279,7 +1880,7 @@ def dfsWithLimit(problem):
 
 \begin_layout Plain Layout
 
-    node, level, actions, cost = l.pop()
+    node, level, actions = l.pop()
 \end_layout
 
 \begin_layout Plain Layout
@@ -1293,7 +1894,7 @@ def dfsWithLimit(problem):
 
 \begin_layout Plain Layout
 
-      return node, actions, cost
+      return node, actions
 \end_layout
 
 \begin_layout Plain Layout
@@ -1302,17 +1903,17 @@ def dfsWithLimit(problem):
 
 \begin_layout Plain Layout
 
-    for succ, action, nextCost in problem.getSuccessors(node):
+    for succ, action, _ in problem.getSuccessors(node):
 \end_layout
 
 \begin_layout Plain Layout
 
-      if level < 31:
+      if level < limit:
 \end_layout
 
 \begin_layout Plain Layout
 
-        l += [(succ, level + 1, actions + [action], cost + nextCost)]
+        l += [(succ, level + 1, actions + [action])]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1326,7 +1927,7 @@ def dfsWithAncestors(problem):
 
 \begin_layout Plain Layout
 
-  l = [(problem.startState, [], 0, [], 0)]
+  l = [(problem.startState, [], [])]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1340,7 +1941,7 @@ def dfsWithAncestors(problem):
 
 \begin_layout Plain Layout
 
-    node, ancestors, level, actions, cost = l.pop()
+    node, ancestors, actions = l.pop()
 \end_layout
 
 \begin_layout Plain Layout
@@ -1354,7 +1955,7 @@ def dfsWithAncestors(problem):
 
 \begin_layout Plain Layout
 
-      return node, actions, cost
+      return node, actions
 \end_layout
 
 \begin_layout Plain Layout
@@ -1363,7 +1964,7 @@ def dfsWithAncestors(problem):
 
 \begin_layout Plain Layout
 
-    for succ, action, nextCost in problem.getSuccessors(node):
+    for succ, action, _ in problem.getSuccessors(node):
 \end_layout
 
 \begin_layout Plain Layout
@@ -1373,7 +1974,7 @@ def dfsWithAncestors(problem):
 
 \begin_layout Plain Layout
 
-        l += [(succ, ancestors+[node], actions+[action], cost+nextCost)]
+        l += [(succ, ancestors + [node], actions + [action])]
 \end_layout
 
 \end_inset
@@ -1382,6 +1983,14 @@ def dfsWithAncestors(problem):
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Considerando el siguiente mapa de Rumania con las rutas existentes y las
@@ -1433,7 +2042,7 @@ Distancia en linea recta a Bucharest
 
 \begin_layout Standard
 \begin_inset Flex Multiple Columns
-status open
+status collapsed
 
 \begin_layout Itemize
 Bucharest: 0.
@@ -1515,10 +2124,6 @@ Zerind: 374.
 Oradea: 380.
 \end_layout
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -2080,13 +2685,274 @@ end{tikzpicture}
 \begin_layout Enumerate
 Indicar qué estado objetivo se alcanzará (si es que se alcanza alguno),
  qué estados se expandirán y en qué orden para cada uno de los siguientes
- algoritmos de búsqueda: primero en profundidad, A* y escalada simple (hill
- climbing).
- Cuando dos nodos tengan las mismas características por el criterio de selección
+ algoritmos de búsqueda:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Primero en profundidad.
+\end_layout
+
+\begin_layout Enumerate
+A*.
+\end_layout
+
+\begin_layout Enumerate
+Escalada simple (hill climbing).
+\end_layout
+
+\begin_layout Standard
+Cuando dos nodos tengan las mismas características por el criterio de selección
  que se esté usando, se seleccionará el primero por orden alfabético.
  Además, se evitarán las repeticiones de estados.
 \end_layout
 
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+No es admisible pues 
+\begin_inset Formula $h'\left(E\right)=14>h^{*}\left(E\right)=12$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Primero en profundidad:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset space \hspace*{}
+\length -2cm
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{I\to B},\boldsymbol{I\to C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{I\to B\to D},\boldsymbol{I\to B\to G1},I\to C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{I\to B\to D\to F},\boldsymbol{I\to B\to D\to G2},I\to B\to G1,I\to C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boxed{I\to B\to D\to F\to G2},I\to B\to D\to G2,I\to B\to G1,I\to C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A*:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset space \hspace*{}
+\length -5.5cm
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{I\to B}{{\scriptscriptstyle 4+11=15}}},\boldsymbol{\overset{I\to C}{{\scriptscriptstyle 1+14=15}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{I\to B\to D}{{\scriptscriptstyle 9+4=13}}},\overset{I\to C}{{\scriptscriptstyle 1+14=15}},\boldsymbol{\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}}},\boldsymbol{\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{I\to C}{{\scriptscriptstyle 1+14=15}},\boldsymbol{\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\boldsymbol{\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{I\to C\to A}{{\scriptscriptstyle 2+14=16}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\boldsymbol{\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{I\to C\to A\to B}{{\scriptscriptstyle 3+11=14}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{I\to C\to A\to B\to D}{{\scriptscriptstyle 8+4=12}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\boldsymbol{\overset{I\to C\to A\to B\to G1}{{\scriptscriptstyle 24+0=24}}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{I\to C\to A\to B\to D\to F}{{\scriptscriptstyle 14+3=17}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\boldsymbol{\overset{I\to C\to A\to B\to D\to G2}{{\scriptscriptstyle 19+0=19}}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\overset{I\to C\to A\to B\to G1}{{\scriptscriptstyle 24+0=24}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boxed{\boldsymbol{\overset{I\to C\to A\to B\to D\to F\to G2}{{\scriptscriptstyle 17+0=17}}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to C\to A\to B\to D\to G2}{{\scriptscriptstyle 19+0=19}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\overset{I\to C\to A\to B\to G1}{{\scriptscriptstyle 24+0=24}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Escalada simple: COMPLETAR.
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Un robot se mueve en una grilla de 
@@ -3523,7 +4389,10 @@ Una ficha puede moverse a una casilla vacía adjunta con costo unidad.
 \begin_layout Itemize
 Una ficha puede saltar sobre otras dos como máximo hasta la celda vacía,
  con costo igual al número de fichas saltadas.
- El objetivo es llegar a tener todas las fichas blancas a la izquierda de
+\end_layout
+
+\begin_layout Itemize
+El objetivo es llegar a tener todas las fichas blancas a la izquierda de
  todas las negras (sin importar la posición de la casilla vacía).
 \end_layout
 
@@ -3532,16 +4401,268 @@ Especificar el problema como búsqueda en un espacio de estados.
 \end_layout
 
 \begin_layout Enumerate
-Especificar una función heurística h para este problema, analizar si es
- admisible.
+Especificar una función heurística 
+\begin_inset Formula $h$
+\end_inset
+
+ para este problema, analizar si es admisible.
  
 \end_layout
 
 \begin_layout Enumerate
 Encontrar una solución utilizando el algoritmo A* con esa función heurística.
  Mostrar el árbol de búsqueda desarrollado.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S=\left\{ M\in\mathcal{M}_{1\times5}\left(\left\{ 6,1,-1\right\} \right):{\displaystyle \sum_{i=1}^{5}m_{i}=6}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I=\left(1,1,-1,-1,6\right)$
+\end_inset
+
+ (puede observarse que el 
+\begin_inset Formula $6$
+\end_inset
+
+ representa al vacío, 
+\begin_inset Formula $1$
+\end_inset
+
+ a las negras y 
+\begin_inset Formula $-1$
+\end_inset
+
+ a las blancas).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G=\left\{ M\in S/\forall m_{i}\in X:m_{i}=6\lor m_{i}\leq m_{i+1}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sea 
+\begin_inset Formula $V\left(M\right)$
+\end_inset
+
+ el indice del casillero vacío, definimos los siguientes operadores:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\leftarrow\left(M\right)=\begin{cases}
+M & \text{si }V\left(M\right)=1\\
+M' & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{i}'=\begin{cases}
+6 & \text{si }i=V\left(M\right)-1\\
+m_{i-1} & \text{si }i=V\left(M\right)\\
+m_{i} & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\leftarrow^{2}\left(M\right)=\begin{cases}
+M & \text{si }V\left(M\right)\leq2\\
+M' & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{i}'=\begin{cases}
+6 & \text{si }i=V\left(M\right)-2\\
+m_{i-2} & \text{si }i=V\left(M\right)\\
+m_{i} & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\leftarrow^{3}\left(M\right)=\begin{cases}
+M & \text{si }V\left(M\right)\leq3\\
+M' & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+ donde 
+\begin_inset Formula $m_{i}'=\begin{cases}
+6 & \text{si }i=V\left(M\right)-3\\
+m_{i-3} & \text{si }i=V\left(M\right)\\
+m_{i} & \text{en otro caso}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Pueden definirse análogamente los operadores 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+, 
+\begin_inset Formula $\rightarrow^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\rightarrow^{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $M^{*}$
+\end_inset
+
+ la matriz resultante de eliminar la columna que contiene al vacío de la
+ matriz 
+\begin_inset Formula $M$
+\end_inset
+
+, definimos:
+\begin_inset Formula 
+\[
+h\left(M\right)=m_{1}^{*}\cdot p\left(m_{1}^{*}\right)+m_{2}^{*}\cdot p\left(m_{2}^{*}\right)+m_{3}^{*}\cdot q\left(m_{3}^{*}\right)+m_{4}^{*}\cdot q\left(m_{4}^{*}\right)
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $p\left(-1\right)=0,p\left(1\right)=1,q\left(-1\right)=1,q\left(1\right)=0$
+\end_inset
+
+.
+ Observemos que esta heurística cuenta la cantidad de piezas fuera de lugar,
+ por lo cual siempre será menor o igual al costo de moverla al casillero
+ vacío; luego la heurística es admisible.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Arriba de cada tupla pueden observarse los operadores utilizados a partir
+ del estado inicial, y debajo 
+\begin_inset Formula $g\left(M\right)+h\left(M\right)=f\left(M\right)$
+\end_inset
+
+.
+ En negrita se observan los nodos agregados a la lista.
+ Vale la pena notar que no se agregan nodos repetidos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset space \hspace*{}
+\length -4.5cm
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{\boldsymbol{\left(1,1,-1,-1,6\right)}}{{\scriptstyle \boldsymbol{0+4=4}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\stackrel[2+2=4]{\leftarrow^{3}}{\left(1,6,-1,-1,1\right)}};\boldsymbol{\stackrel[1+4=5]{\leftarrow}{\left(1,1,-1,6,-1\right)}};\boldsymbol{\stackrel[1+4=5]{\leftarrow^{2}}{\left(1,1,6,-1,-1\right)}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\stackrel[3+2=5]{\leftarrow^{3},\rightarrow^{2}}{\left(1,-1,-1,6,1\right)}};\boldsymbol{\stackrel[3+2=5]{\leftarrow^{3},\leftarrow}{\left(6,1,-1,-1,1\right)}};\boldsymbol{\stackrel[3+2=5]{\leftarrow^{3},\rightarrow}{\left(1,-1,6,-1,1\right)}};\stackrel[1+4=5]{\leftarrow}{\left(1,1,-1,6,-1\right)};\stackrel[1+4=5]{\leftarrow^{2}}{\left(1,1,6,-1,-1\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\boxed{\stackrel[5+0=5]{\leftarrow^{3},\rightarrow^{2},\leftarrow^{3}}{\left(6,-1,-1,1,1\right)}}};\stackrel[3+2=5]{\leftarrow^{3},\leftarrow}{\left(6,1,-1,-1,1\right)};\stackrel[3+2=5]{\leftarrow^{3},\rightarrow}{\left(1,-1,6,-1,1\right)};\stackrel[1+4=5]{\leftarrow}{\left(1,1,-1,6,-1\right)};\stackrel[1+4=5]{\leftarrow^{2}}{\left(1,1,6,-1,-1\right)};\boldsymbol{\stackrel[4+2=6]{\leftarrow^{3},\rightarrow^{2},\rightarrow}{\left(1,-1,-1,1,6\right)}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Hay una sola pila de 7 monedas.
