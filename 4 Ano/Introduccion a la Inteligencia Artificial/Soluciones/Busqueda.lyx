@@ -2498,26 +2498,28 @@ aztsorlfmpcd
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset space ~
+Puede observarse debajo de cada nodo 
+\begin_inset Formula $g\left(n\right)+h\left(n\right)=f\left(n\right)$
 \end_inset
 
-
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \align center
 \begin_inset space \hspace*{}
-\length -1cm
+\length -3cm
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="1">
+<lyxtabular version="3" rows="5" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2529,13 +2531,22 @@ aztsorlfmpcd
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boldsymbol{\overset{A\to S\to R}{{\scriptscriptstyle 220+80=300}}},\boldsymbol{\overset{A\to S\to F}{{\scriptscriptstyle 239+178=417}}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}}$
+a
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{A\to S\to R}{{\scriptscriptstyle 220+80=300}}},\boldsymbol{\overset{A\to S\to F}{{\scriptscriptstyle 239+178=417}}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}},\boldsymbol{\overset{A\to S\to O}{{\scriptscriptstyle 291+380=671}}}$
 \end_inset
 
 
@@ -2543,13 +2554,22 @@ aztsorlfmpcd
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boldsymbol{\overset{A\to S\to R\to P}{{\scriptscriptstyle 317+98=415}}},\overset{A\to S\to F}{{\scriptscriptstyle 239+178=417}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}},\boldsymbol{\overset{A\to S\to R\to C}{{\scriptscriptstyle 366+160=526}}}$
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{\overset{A\to S\to R\to P}{{\scriptscriptstyle 317+98=415}}},\overset{A\to S\to F}{{\scriptscriptstyle 239+178=417}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}},\boldsymbol{\overset{A\to S\to R\to C}{{\scriptscriptstyle 366+160=526}}},\overset{A\to S\to O}{{\scriptscriptstyle 291+380=671}}$
 \end_inset
 
 
@@ -2557,13 +2577,22 @@ aztsorlfmpcd
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to S\to F}{{\scriptscriptstyle 239+178=417}},\boldsymbol{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418+0=418}}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366+160=526}},\boldsymbol{\overset{A\to S\to R\to P\to C}{{\scriptscriptstyle 455+160=615}}}$
+asr
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to F}{{\scriptscriptstyle 239+178=417}},\boldsymbol{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418+0=418}}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366+160=526}},\boldsymbol{\overset{A\to S\to R\to P\to C}{{\scriptscriptstyle 455+160=615}}},\overset{A\to S\to O}{{\scriptscriptstyle 291+380=671}}$
 \end_inset
 
 
@@ -2571,16 +2600,34 @@ aztsorlfmpcd
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boxed{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418+0=418}}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}},\boldsymbol{\overset{A\to S\to F\to B}{{\scriptscriptstyle 450+0=450}}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366+160=526}},\overset{A\to S\to R\to P\to C}{{\scriptscriptstyle 455+160=615}}$
+asrp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boxed{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418+0=418}}},\overset{A\to T}{{\scriptscriptstyle 118+329=447}},\overset{A\to Z}{{\scriptscriptstyle 75+374=449}},\boldsymbol{\overset{A\to S\to F\to B}{{\scriptscriptstyle 450+0=450}}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366+160=526}},\overset{A\to S\to R\to P\to C}{{\scriptscriptstyle 455+160=615}},\overset{A\to S\to O}{{\scriptscriptstyle 291+380=671}}$
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+asrpf
 \end_layout
 
 \end_inset
