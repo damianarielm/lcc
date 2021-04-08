@@ -2909,16 +2909,17 @@ Primero en profundidad:
 \begin_layout Standard
 \align center
 \begin_inset space \hspace*{}
-\length -2cm
+\length -5cm
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="1">
+<lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2930,13 +2931,22 @@ Primero en profundidad:
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boldsymbol{I\to B\to D},\boldsymbol{I\to B\to G1},I\to C$
+i
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{I\to B\to C},\boldsymbol{I\to B\to D},\boldsymbol{I\to B\to G1},I\to C$
 \end_inset
 
 
@@ -2944,13 +2954,22 @@ Primero en profundidad:
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boldsymbol{I\to B\to D\to F},\boldsymbol{I\to B\to D\to G2},I\to B\to G1,I\to C$
+ib
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{I\to B\to C\to A},\boldsymbol{I\to B\to C\to E},I\to B\to D,I\to B\to G1,I\to C$
 \end_inset
 
 
@@ -2958,16 +2977,103 @@ Primero en profundidad:
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boxed{I\to B\to D\to F\to G2},I\to B\to D\to G2,I\to B\to G1,I\to C$
+ibc
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I\to B\to C\to E,I\to B\to D,I\to B\to G1,I\to C$
 \end_inset
 
 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ibca
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boldsymbol{I\to B\to C\to E\to D},\boldsymbol{I\to B\to C\to E\to F},I\to B\to D,I\to B\to G1,I\to C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ibcae
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\scriptstyle \boldsymbol{I\to B\to C\to E\to D\to F},\boldsymbol{I\to B\to C\to E\to D\to G2},I\to B\to C\to E\to F,I\to B\to D,I\to B\to G1,I\to C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ibcaed
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boxed{I\to B\to C\to E\to D\to G2},I\to B\to C\to E\to F,I\to B\to D,I\to B\to G1,I\to C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ibcaedf
 \end_layout
 
 \end_inset
@@ -2975,10 +3081,6 @@ Primero en profundidad:
 </row>
 </lyxtabular>
 
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
