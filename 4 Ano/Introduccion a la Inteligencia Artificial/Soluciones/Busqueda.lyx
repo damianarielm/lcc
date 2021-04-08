@@ -758,7 +758,12 @@ def dfs(problem):
 
 \begin_layout Plain Layout
 
-            l += [(succ, actions + [action])]
+            newActions = actions + [action]
+\end_layout
+
+\begin_layout Plain Layout
+
+            l += [(succ, newActions)]
 \end_layout
 
 \end_inset
@@ -1137,7 +1142,12 @@ def bfs(problem):
 
 \begin_layout Plain Layout
 
-            l = [(succ, actions + [action])] + l
+            newActions = actions + [action]
+\end_layout
+
+\begin_layout Plain Layout
+
+            l = [(succ, newActions)] + l
 \end_layout
 
 \end_inset
@@ -1974,7 +1984,12 @@ def dfsWithAncestors(problem):
 
 \begin_layout Plain Layout
 
-        l += [(succ, ancestors + [node], actions + [action])]
+        newAncestors = ancestors + [node]
+\end_layout
+
+\begin_layout Plain Layout
+
+        l += [(succ, newAncestors, actions + [action])]
 \end_layout
 
 \end_inset
@@ -2135,26 +2150,25 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset space ~
-\end_inset
-
-
+Puede observarse en negrita la expansión del nodo actual y debajo de cada
+ nodo, el costo total de ruta.
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \align center
 \begin_inset space \hspace*{}
-\length -5cm
+\length -4.5cm
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="15" columns="1">
+<lyxtabular version="3" rows="14" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2166,9 +2180,18 @@ Soluciones
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2180,9 +2203,18 @@ Soluciones
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+az
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2194,13 +2226,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to Z\to O}{{\scriptscriptstyle 146}},\boldsymbol{\overset{A\to S\to R}{{\scriptscriptstyle 140+99=220}}},\overset{A\to T\to L}{{\scriptscriptstyle 229}},\boldsymbol{\overset{A\to S\to F}{{\scriptscriptstyle 140+99=239}}}$
+azt
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to Z\to O}{{\scriptscriptstyle 146}},\boldsymbol{\overset{A\to S\to R}{{\scriptscriptstyle 140+99=220}}},\overset{A\to T\to L}{{\scriptscriptstyle 229}},\boldsymbol{\overset{A\to S\to F}{{\scriptscriptstyle 140+99=239}}},\boldsymbol{\overset{A\to S\to O}{{\scriptscriptstyle 140+151=291}}}$
 \end_inset
 
 
@@ -2208,13 +2249,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to S\to R}{{\scriptscriptstyle 220}},\overset{A\to T\to L}{{\scriptscriptstyle 229}},\overset{A\to S\to F}{{\scriptscriptstyle 239}},\boldsymbol{\overset{A\to Z\to O\to S}{{\scriptscriptstyle 146+151=297}}}$
+azts
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to R}{{\scriptscriptstyle 220}},\overset{A\to T\to L}{{\scriptscriptstyle 229}},\overset{A\to S\to F}{{\scriptscriptstyle 239}},\overset{A\to S\to O}{{\scriptscriptstyle 291}},\boldsymbol{\overset{A\to Z\to O\to S}{{\scriptscriptstyle 146+151=297}}}$
 \end_inset
 
 
@@ -2222,13 +2272,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to T\to L}{{\scriptscriptstyle 229}},\overset{A\to S\to F}{{\scriptscriptstyle 239}},\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\boldsymbol{\overset{A\to S\to R\to P}{{\scriptscriptstyle 220+97=317}}},\boldsymbol{\overset{A\to S\to R\to C}{{\scriptscriptstyle 220+146=366}}}$
+aztso
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to T\to L}{{\scriptscriptstyle 229}},\overset{A\to S\to F}{{\scriptscriptstyle 239}},\overset{A\to S\to O}{{\scriptscriptstyle 291}},\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\boldsymbol{\overset{A\to S\to R\to P}{{\scriptscriptstyle 220+97=317}}},\boldsymbol{\overset{A\to S\to R\to C}{{\scriptscriptstyle 220+146=366}}}$
 \end_inset
 
 
@@ -2236,13 +2295,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to S\to F}{{\scriptscriptstyle 239}},\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\boldsymbol{\overset{A\to T\to L\to M}{{\scriptscriptstyle 229+70=299}}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}}$
+aztsor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to F}{{\scriptscriptstyle 239}},\overset{A\to S\to O}{{\scriptscriptstyle 291}},\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\boldsymbol{\overset{A\to T\to L\to M}{{\scriptscriptstyle 229+70=299}}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}}$
 \end_inset
 
 
@@ -2250,13 +2318,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\overset{A\to T\to L\to M}{{\scriptscriptstyle 299}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to S\to F\to B}{{\scriptscriptstyle 239+211=450}}}$
+aztsorl
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to O}{{\scriptscriptstyle 291}},\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\overset{A\to T\to L\to M}{{\scriptscriptstyle 299}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to S\to F\to B}{{\scriptscriptstyle 239+211=450}}}$
 \end_inset
 
 
@@ -2264,13 +2341,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to T\to L\to M}{{\scriptscriptstyle 299}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 297+80=377}}},\boldsymbol{\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 297+99=396}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
+aztsorlf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to Z\to O\to S}{{\scriptscriptstyle 297}},\overset{A\to T\to L\to M}{{\scriptscriptstyle 299}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
 \end_inset
 
 
@@ -2278,13 +2364,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 299+75=374}}},\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
+aztsorlf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to T\to L\to M}{{\scriptscriptstyle 299}},\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
 \end_inset
 
 
@@ -2292,13 +2387,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 374}},\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\boldsymbol{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 317+101=418}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
+aztsorlf
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to R\to P}{{\scriptscriptstyle 317}},\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\boldsymbol{\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 299+75=374}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}}$
 \end_inset
 
 
@@ -2306,13 +2410,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 374}},\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\boldsymbol{\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 366+138=504}}}$
+aztsorlfm
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to S\to R\to C}{{\scriptscriptstyle 366}},\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 374}},\boldsymbol{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 317+101=418}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\boldsymbol{\overset{A\to S\to R\to P\to C}{{\scriptscriptstyle 317+138=455}}}$
 \end_inset
 
 
@@ -2320,13 +2433,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to Z\to O\to S\to R}{{\scriptscriptstyle 377}},\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\boldsymbol{\overset{A\to T\to L\to M\to D\to C}{{\scriptscriptstyle 374+120=494}}},\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 504}}$
+aztsorlfmp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{A\to T\to L\to M\to D}{{\scriptscriptstyle 374}},\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\overset{A\to S\to R\to P\to C}{{\scriptscriptstyle 455}},\boldsymbol{\overset{A\to S\to R\to C\to D}{{\scriptscriptstyle 366+120=486}}},\boldsymbol{\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 366+138=504}}}$
 \end_inset
 
 
@@ -2334,13 +2456,22 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\overset{A\to Z\to O\to S\to F}{{\scriptscriptstyle 396}},\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\boldsymbol{\overset{A\to Z\to O\to S\to R\to P}{{\scriptscriptstyle 377+97=474}}},\overset{A\to T\to L\to M\to D\to C}{{\scriptscriptstyle 494}},\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 504}},\boldsymbol{\overset{A\to Z\to O\to S\to R\to C}{{\scriptscriptstyle 377+97=523}}}$
+aztsorlfmpc
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boxed{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\overset{A\to S\to R\to P\to C}{{\scriptscriptstyle 455}},\overset{A\to S\to R\to C\to D}{{\scriptscriptstyle 486}},\boldsymbol{\overset{A\to T\to L\to M\to D\to C}{{\scriptscriptstyle 374+120=494}}},\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 504}}$
 \end_inset
 
 
@@ -2348,16 +2479,11 @@ Soluciones
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boxed{\overset{A\to S\to R\to P\to B}{{\scriptscriptstyle 418}}},\overset{A\to S\to F\to B}{{\scriptscriptstyle 450}},\overset{A\to Z\to O\to S\to R\to P}{{\scriptscriptstyle 474}},\overset{A\to T\to L\to M\to D\to C}{{\scriptscriptstyle 494}},\overset{A\to S\to R\to C\to P}{{\scriptscriptstyle 504}},\overset{A\to Z\to O\to S\to R\to C}{{\scriptscriptstyle 523}},\boldsymbol{\overset{A\to Z\to O\to S\to F\to B}{{\scriptscriptstyle 396+211=607}}}$
-\end_inset
-
-
+aztsorlfmpcd
 \end_layout
 
 \end_inset
