@@ -3095,16 +3095,17 @@ A*:
 \begin_layout Standard
 \align center
 \begin_inset space \hspace*{}
-\length -5.5cm
+\length -2cm
 \end_inset
 
 
 \begin_inset Tabular
-<lyxtabular version="3" rows="8" columns="1">
+<lyxtabular version="3" rows="7" columns="2">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3116,9 +3117,18 @@ A*:
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+i
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3130,9 +3140,18 @@ A*:
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ib
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3144,9 +3163,18 @@ A*:
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ibd
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3158,9 +3186,18 @@ A*:
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ibdc
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3172,13 +3209,22 @@ A*:
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boldsymbol{\overset{I\to C\to A\to B\to D}{{\scriptscriptstyle 8+4=12}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\boldsymbol{\overset{I\to C\to A\to B\to G1}{{\scriptscriptstyle 24+0=24}}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+ibdca
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
 \end_inset
 
 
@@ -3186,13 +3232,22 @@ A*:
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boldsymbol{\overset{I\to C\to A\to B\to D\to F}{{\scriptscriptstyle 14+3=17}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\boldsymbol{\overset{I\to C\to A\to B\to D\to G2}{{\scriptscriptstyle 19+0=19}}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\overset{I\to C\to A\to B\to G1}{{\scriptscriptstyle 24+0=24}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
+ibdca
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\boxed{\boldsymbol{\overset{I\to B\to D\to F\to G2}{{\scriptscriptstyle 18+0=18}}}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
 \end_inset
 
 
@@ -3200,16 +3255,11 @@ A*:
 
 \end_inset
 </cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\boxed{\boldsymbol{\overset{I\to C\to A\to B\to D\to F\to G2}{{\scriptscriptstyle 17+0=17}}}},\overset{I\to B\to D\to F}{{\scriptscriptstyle 15+3=18}},\overset{I\to B\to C}{{\scriptscriptstyle 6+14=20}},\overset{I\to C\to A\to B\to D\to G2}{{\scriptscriptstyle 19+0=19}},\overset{I\to B\to D\to G2}{{\scriptscriptstyle 20+0=20}},\overset{I\to C\to E}{{\scriptscriptstyle 8+14=22}},\overset{I\to C\to A\to B\to G1}{{\scriptscriptstyle 24+0=24}},\overset{I\to B\to G1}{{\scriptscriptstyle 25+0=25}}$
-\end_inset
-
-
+ibdcaf
 \end_layout
 
 \end_inset
