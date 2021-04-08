@@ -3530,8 +3530,13 @@ end{tikzpicture}
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 El robot tendrá una posición inicial en la grilla y se le solicitará que
  llegue a alguna celda destino.
@@ -3553,11 +3558,25 @@ Representar el problema de desplazamiento del robot mediante un espacio
 \begin_layout Enumerate
 Definir una función heurística y aplicar búsqueda A* para hallar el camino
  de menor costo entre (1,1) si el robot comienza con orientación N y (3,4)
- cualquier orientación, en una grilla de (5x5), teniendo como celdas prohibidas:
- (1,2), (1,4) y (2,2).
+ cualquier orientación, en una grilla de (
+\begin_inset Formula $5\times5$
+\end_inset
+
+), teniendo como celdas prohibidas: (1,2), (1,4) y (2,2).
 \end_layout
 
-\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Dado el siguiente problema, consistente en partir de una configuración 
@@ -3580,6 +3599,22 @@ Representar el problema mediante espacio de estados.
 \begin_layout Enumerate
 Proponer una heurística e implementar un método de búsqueda de modo de obtener
  la configuración deseada con el menor número de movimientos.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -3864,6 +3899,22 @@ Esto es, cada operador tiene un costo equivalente a la diferencia que produce
 \end_layout
 
 \end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Considere un problema de búsqueda en un universo cuyos estados sean: 
@@ -4627,9 +4678,25 @@ Costo
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Consideremos un puzzle consistente en una fila con 4 fichas con la siguiente
@@ -4737,10 +4804,6 @@ Especificar una función heurística
 \begin_layout Enumerate
 Encontrar una solución utilizando el algoritmo A* con esa función heurística.
  Mostrar el árbol de búsqueda desarrollado.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Paragraph
@@ -4786,6 +4849,10 @@ Soluciones
 \end_inset
 
 .
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -4895,10 +4962,6 @@ donde
  Observemos que esta heurística cuenta la cantidad de piezas fuera de lugar,
  por lo cual siempre será menor o igual al costo de moverla al casillero
  vacío; luego la heurística es admisible.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -5009,6 +5072,18 @@ Representar el problema en espacio de estados definiendo los operadores
 Definir una heurística y aplicar el algoritmo A.*
 \end_layout
 
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
 \end_deeper
 \begin_layout Enumerate
 Representar como un problema de Satisfacción de Restricciones (CSP) al problema
@@ -5023,6 +5098,16 @@ Representar como un problema de Satisfacción de Restricciones (CSP) al problema
  Generalice la representación al problema de N reinas.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Represente como un CSP el conocido problema criptoaritmético 
 \begin_inset Quotes fld
@@ -5035,6 +5120,20 @@ send+more=money
  donde debe asignarse un dígito distinto a cada letra.
 \end_layout
 
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 Considere el siguiente Sudoku y represéntelo como un CSP:
 \end_layout
@@ -6055,6 +6154,14 @@ Considere el siguiente Sudoku y represéntelo como un CSP:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
 \end_layout
 
 \end_deeper
