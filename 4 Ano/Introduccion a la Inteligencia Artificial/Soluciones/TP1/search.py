@@ -86,22 +86,6 @@ def search(problem, fringe):
             for candidate in candidate_successors:
                 fringe.push(candidate)
 
-def generalSearch(problem, structure, heuristic):
-    visited = []
-    structure.push((problem.getStartState(), [], 0), 0)
-
-    while structure:
-        node, actions, cost = structure.pop()
-
-        if problem.isGoalState(node):
-            return actions
-
-        if node not in visited:
-            visited += [node]
-            for succ, action, nextCost in problem.getSuccessors(node):
-                h = cost + nextCost + heuristic(succ, problem)
-                structure.push((succ, actions + [action], cost + nextCost), h)
-
 def depthFirstSearch(problem):
     """
     Search the deepest nodes in the search tree first
@@ -116,18 +100,14 @@ def depthFirstSearch(problem):
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
-    return generalSearch(problem, util.Stack(), nullHeuristic)
-
 
 def breadthFirstSearch(problem):
     """
     Search the shallowest nodes in the search tree first.
     """
-    return generalSearch(problem, util.Queue(), nullHeuristic)
 
 def uniformCostSearch(problem):
     "Search the node of least total cost first."
-    return generalSearch(problem, util.PriorityQueue(), nullHeuristic)
 
 def nullHeuristic(state, problem=None):
     """
@@ -138,7 +118,6 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
-    return generalSearch(problem, util.PriorityQueue(), heuristic)
 
 # Abbreviations
 bfs = breadthFirstSearch

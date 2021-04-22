@@ -20,7 +20,7 @@ class Stack:
     def __init__(self):
         self.list = []
 
-    def push(self,item,_):
+    def push(self,item):
         "Push 'item' onto the stack"
         self.list.append(item)
 
@@ -37,7 +37,7 @@ class Queue:
     def __init__(self):
         self.list = []
 
-    def push(self,item,_):
+    def push(self,item):
         "Enqueue the 'item' into the queue"
         self.list.insert(0,item)
 
@@ -115,12 +115,12 @@ class Counter(dict):
     all keys are defaulted to have value 0.  Using a dictionary:
 
     a = {}
-    print a['test']
+    print(a['test'])
 
     would give an error, while the Counter class analogue:
 
     >>> a = Counter()
-    >>> print a['test']
+    >>> print(a['test'])
     0
 
     returns the default 0 value. Note that to reference a key
@@ -129,14 +129,14 @@ class Counter(dict):
 
     >>> a = Counter()
     >>> a['test'] = 2
-    >>> print a['test']
+    >>> print(a['test'])
     2
 
     This is very useful for counting things without initializing their counts,
     see for example:
 
     >>> a['blah'] += 1
-    >>> print a['blah']
+    >>> print(a['blah'])
     1
 
     The counter also includes additional functionality useful in implementing
@@ -318,7 +318,7 @@ class Counter(dict):
         return addend
 
 def raiseNotDefined():
-    print "Method not implemented: %s" % inspect.stack()[1][3]
+    print("Method not implemented: %s" % inspect.stack()[1][3])
     sys.exit(1)
 
 def normalize(vectorOrCounter):
@@ -455,14 +455,14 @@ def lookup(name, namespace):
         options = [getattr(module, name) for module in modules if name in dir(module)]
         options += [obj[1] for obj in namespace.items() if obj[0] == name ]
         if len(options) == 1: return options[0]
-        if len(options) > 1: raise Exception, 'Name conflict for %s'
-        raise Exception, '%s not found as a method or class' % name
+        if len(options) > 1: raise(Exception, 'Name conflict for %s')
+        raise(Exception, '%s not found as a method or class' % name)
 
 def pause():
     """
     Pauses the output stream awaiting user feedback.
     """
-    print "<Press enter/return to continue>"
+    print("<Press enter/return to continue>")
     raw_input()
 
 
@@ -480,7 +480,7 @@ class TimeoutFunction:
         self.function = function
 
     def handle_timeout(self, signum, frame):
-        raise TimeoutFunctionException()
+        raise(TimeoutFunctionException())
 
     def __call__(self, *args):
         if not 'SIGALRM' in dir(signal):

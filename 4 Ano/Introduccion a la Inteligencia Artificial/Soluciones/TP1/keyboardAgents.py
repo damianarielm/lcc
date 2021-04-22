@@ -30,7 +30,7 @@ class KeyboardAgent(Agent):
     def getAction( self, state):
         from graphicsUtils import keys_waiting
         from graphicsUtils import keys_pressed
-        keys = keys_waiting() + keys_pressed()
+        keys = list(keys_waiting()) + list(keys_pressed())
         if keys != []:
             self.keys = keys
 

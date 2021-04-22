@@ -12,7 +12,11 @@ import random
 import string
 import time
 import types
-import Tkinter
+try :
+    import Tkinter
+except:
+    import tkinter as Tkinter
+    Tkinter.tkinter = Tkinter._tkinter
 
 _Windows = sys.platform == 'win32'  # True if on Win95/98/NT
 
@@ -132,7 +136,7 @@ def _destroy_window(event=None):
 #    global _root_window
 #    _root_window.destroy()
 #    _root_window = None
-    #print "DESTROY"
+    #print("DESTROY")
 
 def end_graphics():
     global _root_window, _canvas, _mouse_enabled
@@ -141,8 +145,8 @@ def end_graphics():
             sleep(1)
             if _root_window != None:
                 _root_window.destroy()
-        except SystemExit, e:
-            print 'Ending graphics raised an exception:', e
+        except(SystemExit, e):
+            print('Ending graphics raised an exception:', e)
     finally:
         _root_window = None
         _canvas = None
@@ -250,7 +254,7 @@ def _keypress(event):
     #remap_arrows(event)
     _keysdown[event.keysym] = 1
     _keyswaiting[event.keysym] = 1
-#    print event.char, event.keycode
+#    print(event.char, event.keycode)
     _got_release = None
 
 def _keyrelease(event):
@@ -281,7 +285,7 @@ def _clear_keys(event=None):
     _keyswaiting = {}
     _got_release = None
 
-def keys_pressed(d_o_e=Tkinter.tkinter.dooneevent,
+def keys_pressed(d_o_e=lambda a: _root_window.dooneevent(a),
                  d_w=Tkinter.tkinter.DONT_WAIT):
     d_o_e(d_w)
     if _got_release:
@@ -304,7 +308,7 @@ def wait_for_keys():
     return keys
 
 def remove_from_screen(x,
-                       d_o_e=Tkinter.tkinter.dooneevent,
+        d_o_e=lambda a: _root_window.dooneevent(a),
                        d_w=Tkinter.tkinter.DONT_WAIT):
     _canvas.delete(x)
     d_o_e(d_w)
@@ -316,11 +320,11 @@ def _adjust_coords(coord_list, x, y):
     return coord_list
 
 def move_to(object, x, y=None,
-            d_o_e=Tkinter.tkinter.dooneevent,
+            d_o_e=lambda a: _root_window.dooneevent(a),
             d_w=Tkinter.tkinter.DONT_WAIT):
     if y is None:
         try: x, y = x
-        except: raise  'incomprehensible coordinates'
+        except: raise( 'incomprehensible coordinates')
 
     horiz = True
     newCoords = []
@@ -338,11 +342,11 @@ def move_to(object, x, y=None,
     d_o_e(d_w)
 
 def move_by(object, x, y=None,
-            d_o_e=Tkinter.tkinter.dooneevent,
+            d_o_e=lambda a: _root_window.dooneevent(a),
             d_w=Tkinter.tkinter.DONT_WAIT):
     if y is None:
         try: x, y = x
-        except: raise Exception, 'incomprehensible coordinates'
+        except: raise(Exception, 'incomprehensible coordinates')
 
     horiz = True
     newCoords = []

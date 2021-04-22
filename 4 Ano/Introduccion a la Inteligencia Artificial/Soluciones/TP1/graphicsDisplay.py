@@ -299,7 +299,7 @@ class PacmanGraphics:
 
     def animatePacman(self, pacman, prevPacman, image):
         if self.frameTime < 0:
-            print 'Press any key to step forward, "q" to play'
+            print('Press any key to step forward, "q" to play')
             keys = wait_for_keys()
             if 'q' in keys:
                 self.frameTime = 0.1

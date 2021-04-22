@@ -90,7 +90,7 @@ class GameState:
         Returns the successor state after the specified agent takes the action.
         """
         # Check that successors exist
-        if self.isWin() or self.isLose(): raise Exception('Can\'t generate a successor of a terminal state.')
+        if self.isWin() or self.isLose(): (Exception('Can\'t generate a successor of a terminal state.'))
 
         # Copy current state
         state = GameState(self)
@@ -142,12 +142,12 @@ class GameState:
 
     def getGhostState( self, agentIndex ):
         if agentIndex == 0 or agentIndex >= self.getNumAgents():
-            raise Exception("Invalid index passed to getGhostState")
+            raise(Exception("Invalid index passed to getGhostState"))
         return self.data.agentStates[agentIndex]
 
     def getGhostPosition( self, agentIndex ):
         if agentIndex == 0:
-            raise Exception("Pacman's index passed to getGhostPosition")
+            raise(Exception("Pacman's index passed to getGhostPosition"))
         return self.data.agentStates[agentIndex].getPosition()
 
     def getGhostPositions(self):
@@ -227,7 +227,7 @@ class GameState:
         """
         Allows two states to be compared.
         """
-        return self.data == other.data
+        return self.data == other.data if other != None else False
 
     def __hash__( self ):
         """
@@ -281,11 +281,11 @@ class ClassicGameRules:
         if state.isLose(): self.lose(state, game)
 
     def win( self, state, game ):
-        if not self.quiet: print "Pacman emerges victorious! Score: %d" % state.data.score
+        if not self.quiet: print("Pacman emerges victorious! Score: %d" % state.data.score)
         game.gameOver = True
 
     def lose( self, state, game ):
-        if not self.quiet: print "Pacman died! Score: %d" % state.data.score
+        if not self.quiet: print("Pacman died! Score: %d" % state.data.score)
         game.gameOver = True
 
     def getProgress(self, game):
@@ -293,9 +293,9 @@ class ClassicGameRules:
 
     def agentCrash(self, game, agentIndex):
         if agentIndex == 0:
-            print "Pacman crashed"
+            print("Pacman crashed")
         else:
-            print "A ghost crashed"
+            print("A ghost crashed")
 
     def getMaxTotalTime(self, agentIndex):
         return self.timeout
@@ -332,7 +332,7 @@ class PacmanRules:
         """
         legal = PacmanRules.getLegalActions( state )
         if action not in legal:
-            raise Exception("Illegal action " + str(action))
+            raise(Exception("Illegal action " + str(action)))
 
         pacmanState = state.data.agentStates[0]
 
@@ -394,7 +394,7 @@ class GhostRules:
 
         legal = GhostRules.getLegalActions( state, ghostIndex )
         if action not in legal:
-            raise Exception("Illegal ghost action " + str(action))
+            raise(Exception("Illegal ghost action " + str(action)))
 
         ghostState = state.data.agentStates[ghostIndex]
         speed = GhostRules.GHOST_SPEED
@@ -518,7 +518,7 @@ def readCommand( argv ):
 
     options, otherjunk = parser.parse_args(argv)
     if len(otherjunk) != 0:
-        raise Exception('Command line input not understood: ' + str(otherjunk))
+        raise(Exception('Command line input not understood: ' + str(otherjunk)))
     args = dict()
 
     # Fix the random seed
@@ -526,7 +526,7 @@ def readCommand( argv ):
 
     # Choose a layout
     args['layout'] = layout.getLayout( options.layout )
-    if args['layout'] == None: raise Exception("The layout " + options.layout + " cannot be found")
+    if args['layout'] == None: raise(Exception("The layout " + options.layout + " cannot be found"))
 
     # Choose a Pacman agent
     noKeyboard = options.gameToReplay == None and (options.textGraphics or options.quietGraphics)
@@ -565,7 +565,7 @@ def readCommand( argv ):
 
     # Special case: recorded games don't use the runGames method or args structure
     if options.gameToReplay != None:
-        print 'Replaying recorded game %s.' % options.gameToReplay
+        print('Replaying recorded game %s.' % options.gameToReplay)
         import cPickle
         f = open(options.gameToReplay)
         try: recorded = cPickle.load(f)
@@ -595,9 +595,9 @@ def loadAgent(pacman, nographics):
                 continue
             if pacman in dir(module):
                 if nographics and modulename == 'keyboardAgents.py':
-                    raise Exception('Using the keyboard requires graphics (not text display)')
+                    raise(Exception('Using the keyboard requires graphics (not text display)'))
                 return getattr(module, pacman)
-    raise Exception('The agent ' + pacman + ' is not specified in any *Agents.py.')
+    raise(Exception('The agent ' + pacman + ' is not specified in any *Agents.py.'))
 
 def replayGame( layout, actions, display ):
     import pacmanAgents, ghostAgents
@@ -650,10 +650,10 @@ def runGames( layout, pacman, ghosts, display, numGames, record, numTraining = 0
         scores = [game.state.getScore() for game in games]
         wins = [game.state.isWin() for game in games]
         winRate = wins.count(True)/ float(len(wins))
-        print 'Average Score:', sum(scores) / float(len(scores))
-        print 'Scores:       ', ', '.join([str(score) for score in scores])
-        print 'Win Rate:      %d/%d (%.2f)' % (wins.count(True), len(wins), winRate)
-        print 'Record:       ', ', '.join([ ['Loss', 'Win'][int(w)] for w in wins])
+        print('Average Score:', sum(scores) / float(len(scores)))
+        print('Scores:       ', ', '.join([str(score) for score in scores]))
+        print('Win Rate:      %d/%d (%.2f)' % (wins.count(True), len(wins), winRate))
+        print('Record:       ', ', '.join([ ['Loss', 'Win'][int(w)] for w in wins]))
 
     return games
 
