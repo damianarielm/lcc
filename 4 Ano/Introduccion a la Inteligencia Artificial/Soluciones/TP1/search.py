@@ -11,7 +11,7 @@ In search.py, you will implement generic search algorithms which are called
 by Pacman agents (in searchAgents.py).
 """
 
-import util
+from util import Stack, Queue, PriorityQueue
 
 class SearchProblem:
     """
@@ -100,14 +100,17 @@ def depthFirstSearch(problem):
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
+    return generalSearch(problem, nullHeuristic, Stack(), True)
 
 def breadthFirstSearch(problem):
     """
     Search the shallowest nodes in the search tree first.
     """
+    return generalSearch(problem, nullHeuristic, Queue(), False)
 
 def uniformCostSearch(problem):
     "Search the node of least total cost first."
+    return generalSearch(problem, nullHeuristic, PriorityQueue(), False)
 
 def nullHeuristic(state, problem=None):
     """
@@ -118,9 +121,43 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     "Search the node that has the lowest combined cost and heuristic first."
+    return generalSearch(problem, heuristic, PriorityQueue(), False)
 
 # Abbreviations
 bfs = breadthFirstSearch
 dfs = depthFirstSearch
 astar = aStarSearch
 ucs = uniformCostSearch
+
+def push(struct, value, priority):
+    try:
+        struct.push(value, priority)
+    except:
+        struct.push(value)
+
+def generalSearch(problem, heuristic, struct, checkAncestors):
+    expanded = set()
+    initialState = problem.getStartState()
+    f = heuristic(initialState, problem)
+
+    push(struct, (initialState, [], 0, set(), f), 0)
+    while not struct.isEmpty():
+        node, actions, cost, ancestors, f = struct.pop()
+
+        if problem.isGoalState(node):
+            return actions
+
+        if node in expanded:
+            continue
+
+        if checkAncestors:
+            ancestors.add(node)
+        else:
+            expanded.add(node)
+
+        for suc, sucAction, sucCost in problem.getSuccessors(node):
+            if not checkAncestors or suc not in ancestors:
+                newActions = actions + [sucAction]
+                newCost    = cost + sucCost
+                priority   = max([f, newCost + heuristic(suc, problem)])
+                push(struct, (suc, newActions, newCost, ancestors, priority), priority)
