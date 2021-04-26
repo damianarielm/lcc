@@ -1,0 +1,1500 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+
+\usetikzlibrary{positioning,shapes,shadows,arrows}
+
+
+\usepackage[]{preview}
+\PreviewEnvironment{tikzpicture}
+
+
+\tikzstyle{abstract}=[rectangle, draw=black, rounded corners, fill=black!40!blue!60, drop shadow,
+        text centered, anchor=north, text=white]
+\tikzstyle{comment}=[rectangle, draw=black, rounded corners, fill=black!60!green, drop shadow,
+        text centered, anchor=north, text=white]
+\tikzstyle{myarrow}=[->, >=open triangle 90, thick]
+\tikzstyle{naranja}=[->, >=open triangle 90, thick, color=orange]
+\tikzstyle{azul}=[->, >=open triangle 90, thick, color=blue]
+\tikzstyle{line}=[-, thick]
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Taxonomía simplificada de animales.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Los animales se dividen en vertebrados e invertebrados de acuerdo a si poseen
+ o no columna vertebral.
+ Los vertebrados a su vez se dividen en mamíferos, reptiles o aves.
+ 
+\end_layout
+
+\begin_layout Itemize
+Los mamíferos tienen sangre caliente y mamas.
+ Suelen tener pelos y su hábitat es variado.
+ Pueden reproducirse por huevos, marsupio o placenta.
+ 
+\end_layout
+
+\begin_layout Itemize
+Las aves también tienen sangre caliente, se reproducen exclusivamente por
+ huevos, tienen alas y plumas (si bien existen aves que no son capaces de
+ volar).
+\end_layout
+
+\begin_layout Itemize
+Los reptiles tienen sangre fría y se reproducen por huevos.
+ Pueden tener extremidades y/o caparazón.
+ Su hábitat es variado.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace*{}
+\length -5.1cm
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance=1.5cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Raiz) [abstract] { 
+\backslash
+textbf{Raiz} };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Tipo) [abstract, rectangle split, rectangle split parts=1, left=0.5
+ cm of Raiz]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Tipo de Sangre}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Animal) [abstract, rectangle split, rectangle split parts=2, below
+ =of Raiz]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Animal}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Habitat: string
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Reproduccion) [abstract, rectangle split, rectangle split parts=1,
+ right=3.1 cm of Raiz]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Reproduccion}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Caliente) [abstract, rectangle split, rectangle split parts=1, below
+ =0.7 cm of Tipo]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Caliente}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Fria) [abstract, rectangle split, rectangle split parts=1, left=4
+ of Tipo]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Fria}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Huevo) [abstract, rectangle split, rectangle split parts=1, below
+ right=0.7 of Reproduccion]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Huevo}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Placenta) [abstract, rectangle split, rectangle split parts=1, above
+ right=0.3 of Reproduccion]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Placenta}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Marsupio) [abstract, rectangle split, rectangle split parts=1, above
+ left=0.7 of Reproduccion]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Marsupio}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Invertebrado) [abstract, rectangle split, rectangle split parts=1,
+ right=0.7 of Animal]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Invertebrado}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Serpiente) [comment, rectangle split, rectangle split parts=2, below=0.2
+ of Invertebrado]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Serpiente
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Vertebrado) [abstract, rectangle split, rectangle split parts=1, left=3
+ of Animal]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Vertebrado}
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Reptil) [abstract, rectangle split, rectangle split parts=3, below
+ left=of Vertebrado]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Reptil}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Habitat: 
+\begin_inset Quotes eld
+\end_inset
+
+Variado
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Caparazon: T
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Tortuga) [comment, rectangle split, rectangle split parts=2, below=0.2
+ cm of Reptil]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Tortuga
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Ave) [abstract, rectangle split, rectangle split parts=3, below =of
+ Vertebrado]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Ave}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Habitat: 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Alas-Plumas: T
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Picaflor) [comment, rectangle split, rectangle split parts=2, below=0.2
+ cm of Ave]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Picaflor
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Mamifero) [abstract, rectangle split, rectangle split parts=3, below
+ right=of Vertebrado]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Mamifero}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Habitat: 
+\begin_inset Quotes eld
+\end_inset
+
+Variado
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Pelo: T
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Perro) [comment, rectangle split, rectangle split parts=2, below=0.2
+ cm of Mamifero]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Perro
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Tipo.east) -- ++(0,0) -- (Raiz.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Animal.north) -- ++(0,0.8) -- (Raiz.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Reproduccion.west) -- ++(0,0) -- (Raiz.east);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Caliente.north) -- ++(0,0.1) -| (Tipo.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Fria.east) -- ++(0,0) -- (Tipo.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Huevo.north) -- ++(0,0.1) |- (Reproduccion.east);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Placenta.west) -- ++(0,0) -| (Reproduccion.north);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Marsupio.east) -- ++(0,0.1) -| (Reproduccion.north);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Invertebrado.west) -- ++(0,0) -- (Animal.east);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Vertebrado.east) -- ++(0,0) -- (Animal.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Reptil.east) -- ++(0.5,0) |- (Vertebrado.west);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Ave.north) -- ++(0,0.1) -| (Vertebrado.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Mamifero.north) -- ++(0,0.1) -| (Vertebrado.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[naranja] (Reptil.north) -- ++(0,0) |- (Fria.west) node[above left, sloped,
+ midway] {tiene} ;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[naranja] (Ave.north) -- ++(0,0) -- (Caliente.south) node[above left,
+ sloped, midway] {tiene} ;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[naranja] (Mamifero.north) -- ++(0,0) -- node[below, midway, sloped]
+ {tiene} (Caliente.south)  ;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[azul] (Mamifero.east) -- ++(0,0) -| (Reproduccion.south) node[below,
+ midway] {se reproduce}  ;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[azul] (Ave.east) -- ++(0,-0.55) -| (Huevo.south) node[below left, midway]
+ {se reproduce} ;
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[azul] (Reptil.south) -- ++(0,-2) -| (Huevo.south) node[above left, midway]
+ {se reproduce}  ;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Clasificación parcial de plántulas.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Las plántulas latifoliadas (de hoja ancha) se dividen en perennes y anuales
+ de acuerdo a si poseen o no, órgano subterráneo (raíz), respectivamente.
+ Entre las plántulas perennes existen las especies Wedelia Glauca, Physalis
+ Viscosa y Convolvulus.
+\end_layout
+
+\begin_layout Itemize
+La especie Convolvulus se caracteriza por su tallo rastrero voluble, su
+ forma de hoja sagitada y su ápice obtuso.
+ Además sus nervaduras son notables.
+\end_layout
+
+\begin_layout Itemize
+La especie Wedelia Glauca tiene su tallo erecto ascendente, su forma de
+ hoja lanceolada y su ápice agudo.
+\end_layout
+
+\begin_layout Itemize
+Por su parte, la Physalis Viscosa tiene forma de hoja oval lanceolada y
+ sus nervaduras son poco notables.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Distintos vehículos aéreos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Los vehículos aéreos se dividen en helicópteros, aviones y planeadores.
+ Los planeadores no tienen sistema de propulsión.
+ Los helicópteros tienen sistema de propulsión, y su sistema de sustentación
+ es por rotor.
+ Los aviones tienen sistema de propulsión que puede ser de distinto tipo
+ y se sustentan mediante las alas.
+ A su vez, los aviones se dividen en aviones de línea, ejecutivos y de carga.
+\end_layout
+
+\begin_layout Itemize
+Los aviones de línea transportan muchos pasajeros y tienen rutas preestablecidas.
+\end_layout
+
+\begin_layout Itemize
+Los aviones ejecutivos transportan pocos pasajeros, son lujosos y pactan
+ su ruta con los clientes.
+\end_layout
+
+\begin_layout Itemize
+Las aviones de carga no llevan pasajeros y tienen gran capacidad para transporta
+r distintos productos.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace*{}
+\length -2cm
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[node distance=2cm]
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Raiz) [abstract] { 
+\backslash
+textbf{Raiz} };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Vehiculo) [abstract, rectangle split, rectangle split parts=2, below=1
+ cm of Raiz]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Vehiculo Aereo}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Sist.
+ Prop: bool
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Helicoptero) [abstract, rectangle split, rectangle split parts=3,
+ below left=of Vehiculo]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Helicoptero}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Sist.
+ Prop: T
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Sust: Rotor
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Avion) [abstract, rectangle split, rectangle split parts=4, below
+ =of Vehiculo]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Avion}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Sist.
+ Prop: T
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Sust: Ala
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{fourth}
+\backslash
+#Pasajero: integer
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Planeador) [abstract, rectangle split, rectangle split parts=2, below
+ right=of Vehiculo]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Planeador}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Sist.
+ Prop: F
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (HelicopteroI) [comment, rectangle split, rectangle split parts=2,
+ below=0.2cm of Helicoptero]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}S-76B
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (PlaneadorI) [comment, rectangle split, rectangle split parts=2, below=0.2cm
+ of Planeador]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}ASK 21
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Linea) [abstract, rectangle split, rectangle split parts=3, below
+ left=of Avion]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Linea}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}
+\backslash
+#Pasajero: min(20)
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Ruta Prestablecida: T
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Ejecutivo) [abstract, rectangle split, rectangle split parts=4, below
+ =of Avion]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Ejecutivo}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}
+\backslash
+#Pasajero: max(10)
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Ruta Prestablecida: F
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{fourth}Lujo: T
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (Carga) [abstract, rectangle split, rectangle split parts=3, below
+ right=of Avion]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Carga}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}
+\backslash
+#Pasajero: 0
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{third}Cap.
+ Carga: min(10T)
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (LineaI) [comment, rectangle split, rectangle split parts=2, below=0.2cm
+ of Linea]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}LaTaM
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (EjecutivoI) [comment, rectangle split, rectangle split parts=2, below=0.2cm
+ of Ejecutivo]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Embraer Phenom
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+node (CargaI) [comment, rectangle split, rectangle split parts=2, below=0.2cm
+ of Carga]
+\end_layout
+
+\begin_layout Plain Layout
+
+        {
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+textbf{Instancias}
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+nodepart{second}Beluga XL
+\end_layout
+
+\begin_layout Plain Layout
+
+        };
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Vehiculo.north) -- ++(0,0.8) -- (Raiz.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Helicoptero.north) -- ++(0,0.8) -| (Vehiculo.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Avion.north) -- ++(0,0.8) -- (Vehiculo.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Planeador.north) -- ++(0,0.8) -| (Vehiculo.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Linea.north) -- ++(0,0.8) -| (Avion.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Ejecutivo.north) -- ++(0,0.8) -| (Avion.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+draw[myarrow] (Carga.north) -- ++(0,0.8) -| (Avion.south);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Musica.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Un álbum musical es hecho por un musico.
+ La banda esta forma por músicos.
+ Los músicos tocan sus instrumentos.
+\end_layout
+
+\begin_layout Itemize
+El álbum pertenece a un genero musical como Punk, Rock, Heavy, Pop.
+ Un álbum tiene un numero de pistas y una cantidad de canciones.
+\end_layout
+
+\begin_layout Itemize
+Los instrumentos musicales se pueden dividir en percusión, viento, teclado
+ o de cuerda.
+ Los instrumentos de percusión también se los puede dividir en dos: baterías
+ y tambores.
+ Una batería se caracteriza por tener platillos, toms y bombo.
+\end_layout
+
+\begin_layout Itemize
+Las bandas puede ganar premios y tienen contrato con una compañía discográfica.
+\end_layout
+
+\begin_layout Itemize
+Las formas grabación de un álbum puede ser en vivo, en estudio o acústica.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
