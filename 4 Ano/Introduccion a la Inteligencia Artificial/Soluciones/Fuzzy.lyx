@@ -1,0 +1,1457 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\end_preamble
+\use_default_options true
+\begin_modules
+enumitem
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Supongamos que un médico pediatra realiza un primer diagnóstico observando
+ si hay Fiebre, Dolor de garganta, Sarpullido.
+\end_layout
+
+\begin_layout Itemize
+Si hay sólo fiebre media o alta, se puede pensar en una virosis de origen
+ dudoso y se observa al paciente durante las siguientes 24 hs.
+ Medicar con antitérmico.
+\end_layout
+
+\begin_layout Itemize
+Si hay fiebre alta y dolor de garganta intenso, se puede pensar en una laringiti
+s.
+ Medicar con antitérmico/analgésico.
+\end_layout
+
+\begin_layout Itemize
+Si hay fiebre alta y dolor de garganta y sarpullido rojo de textura áspera
+ como la del papel de lija, se debe pensar en escarlatina (Streptococcus
+ grupo A, escarlatina).
+ Medicar con antibiótico.
+\end_layout
+
+\begin_layout Standard
+Los valores normales de fiebre son desde 36 grados por debajo (alrededor)
+ de 37 grados, entre 37 y 38 se puede pensar en fiebre media, a partir de
+ los 39 grados, fiebre francamente alta.
+\end_layout
+
+\begin_layout Standard
+Los niveles de dolor de garganta son evaluados por el paciente con una escala
+ de 0 a 1: Bajo-Medio-Alto conjuntos separados en forma regular según las
+ formas semi-trapezoidal inferior, triangular, semi-trapezoidal superior,
+ respectivamente.
+\end_layout
+
+\begin_layout Standard
+El aspecto del sarpullido se puede medir entre color y textura del 1 al
+ 10 por un experto según las formas semi-trapezoidal inferior (poco color/textur
+a), triangular (color o textura visible), semi-trapezoidal superior (color
+ y textura importante)
+\end_layout
+
+\begin_layout Paragraph
+Identificar:
+\end_layout
+
+\begin_layout Enumerate
+Las variables lingüísticas.
+\end_layout
+
+\begin_layout Enumerate
+Los conjuntos borrosos.
+ Dibujarlos.
+\end_layout
+
+\begin_layout Enumerate
+Las reglas borrosas.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Predecir la acción del pediatra según observe las siguientes entradas:
+\end_layout
+
+\begin_layout Enumerate-Resume
+Fiebre de 38 grados, dolor de garganta agudo (del 1 al 10 el paciente dice
+ 7 durante el día y 9 al atardecer), no hay sarpullido.
+ Qué operaciones borrosas utiliza?
+\end_layout
+
+\begin_layout Enumerate-Resume
+Fiebre de 39 grados, dolor de garganta medio (del 1 al 10 el paciente dice
+ 6 durante el día y 7 al atardecer), hay sarpullido rojo tipo lija (del
+ 1 al 10 el médico observa un 7).
+ Qué operaciones borrosas utiliza?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+Son variables linguisticas: 
+\begin_inset Quotes fld
+\end_inset
+
+fiebre
+\begin_inset Quotes frd
+\end_inset
+
+, 
+\begin_inset Quotes fld
+\end_inset
+
+dolor de garganta
+\begin_inset Quotes frd
+\end_inset
+
+ y 
+\begin_inset Quotes fld
+\end_inset
+
+aspecto del sarpullido
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 35:40, scale = 0.75, legend style={at={(0.5,-0.1)},anchor=nort
+h}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, axis equal, grid = major,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 35:36, forget plot]{x - 35};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 36:37.5, forget plot]{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 37.5:38]{-2*x + 76};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Fiebre Normal};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 36:37, forget plot]{x - 36};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 37:38, forget plot]{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 38:39]{-x + 39};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Fiebre Media};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 38:39, forget plot]{x - 38};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 39:40]{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Fiebre Alta};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 0:1, legend style={at={(0.5,-0.2)},anchor=north},
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, axis equal, grid = both,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 minor tick num = 1, xtick distance = 0.25,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:0.25, forget plot]{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.25:1]{-1.333*x + 1.333};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Dolor bajo};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:0.5, forget plot]{2*x};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.5:1]{-2*x+2};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Dolor medio};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.25:0.75, forget plot]{2*x-0.5};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.75:1]{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Dolor alto};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 0:10, legend pos = outer north east,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, grid = major, xtick distance = 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:2.5, forget plot]{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 2.5:10]{-0.1333*x + 1.333};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Poco color};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 2.5:5, forget plot]{0.4*x - 1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 5:7.5]{-0.4*x + 3};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Color visible};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 2.5:7.5, forget plot]{0.2*x-0.5};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 7.5:10]{1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Color importante};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $solo\,fiebre:M\Rightarrow virosis\land antibiotico$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $solo\,fiebre:A\Rightarrow virosis\land antibiotico$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $fiebre:A\land dolor:A\Rightarrow laringitis\land antitermico/analgesico$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $fiebre:A\land dolor:M\land sarpullido:I\Rightarrow escarlatina\land antibiotico$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que las primeras dos reglas no intervienen en nuestra decisión
+ pues además de fiebre también hay dolor.
+ Para las restantes tenemos 
+\begin_inset Formula $alta\left(38\right)=0$
+\end_inset
+
+ por lo cual tampoco intervienen.
+ Por lo tanto no podemos tomar una decisión con nuestro modelo.
+\end_layout
+
+\begin_layout Enumerate
+Observemos que las primeras dos reglas no intervienen en nuestra decisión
+ pues además de fiebre también hay dolor.
+ Para las restantes tenemos:
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $normal\left(39\right)=0$
+\end_inset
+
+; 
+\begin_inset Formula $media\left(39\right)=0$
+\end_inset
+
+; 
+\begin_inset Formula $alta\left(39\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $medio\left(6\right)=0,8$
+\end_inset
+
+; 
+\begin_inset Formula $alto\left(6\right)=0,7$
+\end_inset
+
+; 
+\begin_inset Formula $medio\left(7\right)=0,6$
+\end_inset
+
+; 
+\begin_inset Formula $alto\left(7\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $intenso\left(7\right)=0,9$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para la tercer regla durante el día, usando la T-norma mínimo obtenemos
+ un disparo de 
+\begin_inset Formula $\min\left(1;0,7\right)=0,7$
+\end_inset
+
+ y por el atardecer 
+\begin_inset Formula $\min\left(1;0,6\right)=0,6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para la cuarta regla durante el día 
+\begin_inset Formula $\min\left(1;0,8;0,9\right)=0,9$
+\end_inset
+
+ y durante el atardeer 
+\begin_inset Formula $\min\left(1;0,6;0,9\right)=0,6$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideremos el siguiente modelo de conocimiento borroso que vincula el
+ 
+\begin_inset Quotes fld
+\end_inset
+
+índice de masa corporal
+\begin_inset Quotes frd
+\end_inset
+
+ ICM (
+\begin_inset Formula $peso/altura^{2}$
+\end_inset
+
+ ), la presión arterial y el riesgo a padecer enfermedades cardíacas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 10:60, scale = 0.75, legend style={at={(0.5,-0.2)},anchor=nort
+h}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, grid = both, minor tick num = 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 10:25]{-0.0666*x+1.666};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Bajo};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 10:26, forget plot]{0.0625*x-0.625};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 26:44]{-0.05555*x+2.44444};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Medio Bajo};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 26:42, forget plot]{0.0625*(x-16)-0.625};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 42:60]{-0.05555*(x-16)+2.44444};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Medio Alto};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 44:60]{0.0625*x-2.75};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Alto};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 0:30, scale = 0.75, legend style={at={(0.5,-0.2)},anchor=north
+}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, grid = both, minor tick num = 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:15, forget plot]{0.0666*x};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 15:30]{-0.0666*x+2};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Media};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:15]{-0.0666*x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Baja};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 15:30]{0.0666*x-1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Alta};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calcule el Grado de Veracidad de las reglas para los valores:
+\end_layout
+
+\begin_layout Enumerate
+ICM = 55; Presión = 25.
+\end_layout
+
+\begin_layout Enumerate
+ICM = 55; Presión = 15.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si el ICM es Alto y la Presión NO es Media THEN … hay riesgo.
+\end_layout
+
+\begin_layout Itemize
+Si el ICM es Medio_alto y la Presión es Alta THEN … hay riesgo.
+\end_layout
+
+\begin_layout Standard
+Utilice distintos operadores AND.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+Observemos que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $alto\left(55\right)=0,6875$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $media\left(25\right)=0,335$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $medio\_alto\left(55\right)=0,278$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $alta\left(25\right)=0,665$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego, usando la T-norma mínimo tenemos que el grado de veracidad de la
+ primer regla es 
+\begin_inset Formula $\min\left\{ 0,6875,1-0,335\right\} =0,665$
+\end_inset
+
+ y el de la segunda 
+\begin_inset Formula $\min\left\{ 0,278;0,665\right\} =0,278$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $media\left(15\right)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $alta\left(15\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego, usando la T-norma mínimo tenemos que el grado de veracidad de la
+ primer regla es 
+\begin_inset Formula $\min\left\{ 0,6875,1-1\right\} =0$
+\end_inset
+
+ y el de la segunda 
+\begin_inset Formula $\min\left\{ 0,278;0\right\} =0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nuevamente, consideremos el siguiente modelo de conocimiento borroso que
+ vincula el ICM, la presión arterial y el riesgo a padecer enfermedades
+ cardíacas.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $bajo\Rightarrow alto$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $medio\_bajo\land baja\Rightarrow bajo$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $medio\_bajo\land media\Rightarrow bajo$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $medio\_bajo\land alta\Rightarrow medio$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $medio\_alto\land baja\Rightarrow medio$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $medio\_alto\land media\Rightarrow medio$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $medio\_alto\land alta\Rightarrow alto$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $alta\Rightarrow alto$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 0:1, scale = 0.75, legend pos = outer north east, 
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, grid = both, minor tick num = 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:0.5, forget plot]{2*x};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.5:1]{-2*x+2};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Medio};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:0.5]{-2*x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Bajo};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.5:1]{2*x-1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Alto};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Determine el grado de veracidad o disparo de cada una de las reglas.
+\end_layout
+
+\begin_layout Enumerate
+Estime el Riesgo según el método de inferencia MaxMin y defuzificación según
+ el valor medio del máximo.
+\end_layout
+
+\begin_layout Enumerate
+Analice si se puede reescribir el modelo en un número de reglas menor admitiendo
+ el uso de más operadores lógicos.
+ Qué cambios haría?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+COMPLETAR
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+COMPLETAR
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Section
+COMPLETAR
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_body
+\end_document
