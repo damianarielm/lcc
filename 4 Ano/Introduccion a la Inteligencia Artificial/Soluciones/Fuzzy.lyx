@@ -85,11 +85,8 @@ multicol
 
 \begin_body
 
-\begin_layout Section
-\begin_inset space ~
-\end_inset
-
-
+\begin_layout Section*
+Ejercicio 1
 \end_layout
 
 \begin_layout Standard
@@ -776,11 +773,8 @@ Para la cuarta regla durante el día
 \end_layout
 
 \end_deeper
-\begin_layout Section
-\begin_inset space ~
-\end_inset
-
-
+\begin_layout Section*
+Ejercicio 2
 \end_layout
 
 \begin_layout Standard
@@ -1142,11 +1136,24 @@ Observemos que:
 \begin_layout Standard
 Luego, usando la T-norma mínimo tenemos que el grado de veracidad de la
  primer regla es 
-\begin_inset Formula $\min\left\{ 0,6875,1-0,335\right\} =0,665$
+\begin_inset Formula $\min\left\{ 0,6875;1-0,335\right\} =0,665$
 \end_inset
 
  y el de la segunda 
 \begin_inset Formula $\min\left\{ 0,278;0,665\right\} =0,278$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si utilizamos el producto entonces el grado de veracidad de la primer regla
+ es 
+\begin_inset Formula $0,6875\cdot\left(1-0,335\right)=0,457188$
+\end_inset
+
+ y el de la segunda 
+\begin_inset Formula $0,278\cdot0,665=0,18487$
 \end_inset
 
 .
@@ -1175,7 +1182,7 @@ Observemos que:
 \begin_layout Standard
 Luego, usando la T-norma mínimo tenemos que el grado de veracidad de la
  primer regla es 
-\begin_inset Formula $\min\left\{ 0,6875,1-1\right\} =0$
+\begin_inset Formula $\min\left\{ 0,6875;1-1\right\} =0$
 \end_inset
 
  y el de la segunda 
@@ -1185,22 +1192,35 @@ Luego, usando la T-norma mínimo tenemos que el grado de veracidad de la
 .
 \end_layout
 
+\begin_layout Standard
+Si utilizamos el prodcuto tenemos que el grado de veracidad de la primer
+ regla es 
+\begin_inset Formula $0,6875\cdot\left(1-1\right)=0$
+\end_inset
+
+ y el de la segunda 
+\begin_inset Formula $0,278\cdot0=0$
+\end_inset
+
+.
+\end_layout
+
 \end_deeper
-\begin_layout Section
-\begin_inset space ~
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Ejercicio 3
 \end_layout
 
 \begin_layout Standard
 Nuevamente, consideremos el siguiente modelo de conocimiento borroso que
  vincula el ICM, la presión arterial y el riesgo a padecer enfermedades
  cardíacas.
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1394,31 +1414,673 @@ end{tikzpicture}
 
 \end_layout
 
+\begin_layout Standard
+Para las entradas IMC = 35 y Presión = 15
+\end_layout
+
 \begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+a)
+\end_layout
+
+\end_inset
+
 Determine el grado de veracidad o disparo de cada una de las reglas.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+b)
+\end_layout
+
+\end_inset
+
 Estime el Riesgo según el método de inferencia MaxMin y defuzificación según
  el valor medio del máximo.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+c)
+\end_layout
+
+\end_inset
+
 Analice si se puede reescribir el modelo en un número de reglas menor admitiendo
  el uso de más operadores lógicos.
  Qué cambios haría?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
 Solución
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+a)
+\end_layout
+
+\end_inset
+
+Utilizaré T-norma mínimo:
+\end_layout
+
+\begin_deeper
 \begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\min\left\{ 0,5;0\right\} =0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\min\left\{ 0,5;1\right\} =0,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\min\left\{ 0,5;0\right\} =0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\min\left\{ 0,5625;0\right\} =0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\min\left\{ 0,5625;1\right\} =0,5625$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\min\left\{ 0,5625;0\right\} =0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+b)
+\end_layout
+
+\end_inset
+
+ La regla 3 se dispara con un grado de 
+\begin_inset Formula $0,5$
+\end_inset
+
+ y la regla 6 con 
+\begin_inset Formula $0,5625$
+\end_inset
+
+, luego tenemos las siguientes gráficas para el consecuente:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 0:1, scale = 0.75, legend pos = outer north east, 
+\end_layout
+
+\begin_layout Plain Layout
+
+                 ymax = 0.6,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, grid = both, minor tick num = 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:0.28125, forget plot]{2*x};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.28125:0.71875, forget plot]{0.5625};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.71875:1]{-2*x+2};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Medio};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:0.25, forget plot]{0.5};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.25:0.5]{-2*x+1};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addlegendentry{Bajo};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y considerando el máximo entre ambas tenemos:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[domain = 0:1, scale = 0.75, legend pos = outer north east, 
+\end_layout
+
+\begin_layout Plain Layout
+
+                 ymax = 0.6,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 axis lines = middle, grid = both, minor tick num = 1,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 cycle list = { {blue, mark = none}, {red, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {green, mark = none}, {cyan, mark = none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {orange, mark = none}, {magenta, mark =
+ none},
+\end_layout
+
+\begin_layout Plain Layout
+
+                                {gray, mark = none}, {black, mark = none}
+\end_layout
+
+\begin_layout Plain Layout
+
+                              }]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+draw[dashed, blue] (0.5, 0) -- (0.5, 0.5625);
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.25:0.28125, forget plot]{2*x};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.28125:0.71875, forget plot]{0.5625};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0:0.25, forget plot]{0.5};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain = 0.71875:1]{-2*x+2};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+de donde concluimos que el valor medio del máximo es 
+\begin_inset Formula $0,28125+\cfrac{0,71875-0,28125}{2}=0,5$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+c)
+\end_layout
+
+\end_inset
+
 COMPLETAR.
 \end_layout
 
 \begin_layout Section
-COMPLETAR
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considere la base de conocimiento que vincula la velocidad de un vehículo
+ prototipo (
+\begin_inset Formula $v$
+\end_inset
+
+) y la fuerza de frenado (
+\begin_inset Formula $f$
+\end_inset
+
+), y la fuerza de frenado 
+\begin_inset Formula $f$
+\end_inset
+
+ con el tiempo de vida 
+\begin_inset Formula $t$
+\end_inset
+
+ de los frenos formada por las siguientes reglas:
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $v$
+\end_inset
+
+ es baja entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ debe ser baja.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $v$
+\end_inset
+
+ es alta entonces 
+\begin_inset Formula $f$
+\end_inset
+
+ debe ser elevada.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es baja entonces 
+\begin_inset Formula $t$
+\end_inset
+
+ es elevado.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $f$
+\end_inset
+
+ es alta entonces 
+\begin_inset Formula $t$
+\end_inset
+
+ es bajo.
+\end_layout
+
+\begin_layout Standard
+Con los siguientes conjuntos borrosos:
+\end_layout
+
+\begin_layout Itemize
+vBaja (Km/h) = (0/0 0.25/10 0.5/20 0.75/30 1/40 0.75/50 0.5/60 0.25/70 0/80)
+\end_layout
+
+\begin_layout Itemize
+vAlta (Km/h) =(0/40 0.
+ 25/50 0.5/60 0.75/70 1/80 0.75/90 0.5/100 0.25/110 0/120 )
+\end_layout
+
+\begin_layout Itemize
+fBaja (N) = (0/0 0.5/100 0.75/150 1/200 0.75/250 0.5/300 0/400)
+\end_layout
+
+\begin_layout Itemize
+fAlta (N) = (0/200 0.5/300 1/400 0.5/500 0/600)
+\end_layout
+
+\begin_layout Itemize
+tBajo (años) = (1/0 1/2 0.75/2.5 0.5/3 0.25/3.5 0/4)
+\end_layout
+
+\begin_layout Itemize
+tAlto (años) = (0/0 0.5/3 1/4 1/5)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+a)
+\end_layout
+
+\end_inset
+
+Determinar la fuerza de frenado 
+\begin_inset Formula $f$
+\end_inset
+
+ para una velocidad 
+\begin_inset Formula $v$
+\end_inset
+
+ = 50 Km/h de un hecho específico según el modelo de inferencia de Mamdani
+ (Max-Min).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+OBS: para defuzzificar, usar la técnica del primer valor máximo del área.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+b)
+\end_layout
+
+\end_inset
+
+ Considerando el valor crisp de fuerza de frenado f del punto anterior,
+ obtener el tiempo de vida t de los frenos.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+OBS: para defuzzificar, usar la técnica del valor medio del máximo del área.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+c)
+\end_layout
+
+\end_inset
+
+Indique si hay alguna regla que no se disparó para evaluar el hecho v =
+ 50 Km/h versus t de vida de los frenos.
 \end_layout
 
 \begin_layout Paragraph
