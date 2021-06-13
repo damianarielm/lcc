@@ -1896,7 +1896,7 @@ end{tikzpicture}
 
 \begin_layout Standard
 de donde concluimos que el valor medio del máximo es 
-\begin_inset Formula $0,28125+\cfrac{0,71875-0,28125}{2}=0,5$
+\begin_inset Formula $\cfrac{0,71875+0,28125}{2}=0,5$
 \end_inset
 
 .
@@ -1916,11 +1916,8 @@ c)
 COMPLETAR.
 \end_layout
 
-\begin_layout Section
-\begin_inset space ~
-\end_inset
-
-
+\begin_layout Section*
+Ejercicio 4
 \end_layout
 
 \begin_layout Standard
@@ -2031,7 +2028,11 @@ a)
 
 \end_inset
 
-Determinar la fuerza de frenado 
+Determinar la 
+\emph on
+fuerza de frenado
+\emph default
+ 
 \begin_inset Formula $f$
 \end_inset
 
@@ -2091,8 +2092,230 @@ Solución
 COMPLETAR.
 \end_layout
 
-\begin_layout Section
-COMPLETAR
+\begin_layout Section*
+Ejercicio 5
+\end_layout
+
+\begin_layout Standard
+Considere las siguientes reglas como parte de la base de conocimiento de
+ un robot autónomo.
+ En ellas se muestra la relación entre las variables sensadas: distancia
+ a un objeto (
+\begin_inset Formula $Dist$
+\end_inset
+
+); Fuerza de Rozamiento (
+\begin_inset Formula $Fr$
+\end_inset
+
+) y acciones consecuentes que realiza el objeto: aplicación de fuerza de
+ frenado (
+\begin_inset Formula $Ffrena$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Dist$
+\end_inset
+
+ es 
+\emph on
+media
+\emph default
+ y 
+\begin_inset Formula $Fr$
+\end_inset
+
+ es 
+\emph on
+baja
+\emph default
+ entonces 
+\begin_inset Formula $Ffrena$
+\end_inset
+
+ es 
+\emph on
+alta
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Dist$
+\end_inset
+
+ es 
+\emph on
+cerca
+\emph default
+ y 
+\begin_inset Formula $Fr$
+\end_inset
+
+ es 
+\emph on
+baja
+\emph default
+ entonces 
+\begin_inset Formula $Ffrena$
+\end_inset
+
+ es 
+\emph on
+media
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Dist$
+\end_inset
+
+ es 
+\emph on
+leojs
+\emph default
+ y 
+\begin_inset Formula $Fr$
+\end_inset
+
+ es 
+\emph on
+baja
+\emph default
+ entonces 
+\begin_inset Formula $Ffrena$
+\end_inset
+
+ es 
+\emph on
+media
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Dist$
+\end_inset
+
+ es 
+\emph on
+cerca
+\emph default
+ y 
+\begin_inset Formula $Fr$
+\end_inset
+
+ es 
+\emph on
+alta
+\emph default
+ entonces 
+\begin_inset Formula $Ffrena$
+\end_inset
+
+ es 
+\emph on
+media
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $Dist$
+\end_inset
+
+ es 
+\emph on
+cerca
+\emph default
+ y 
+\begin_inset Formula $Fr$
+\end_inset
+
+ es 
+\emph on
+media
+\emph default
+ entonces 
+\begin_inset Formula $Ffrena$
+\end_inset
+
+ es 
+\emph on
+alta
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Con las siguientes variables lingusticas y conjuntos borrosos:
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+a)
+\end_layout
+
+\end_inset
+
+ Determinar cuántas y qué reglas se disparan si ocurre un hecho donde un
+ robot tiene un objeto a una distancia Dist = 70 metros siendo la Fuerza
+ de Rozamiento Fr = 23 N.
+ Indique el grado de veracidad (disparo) de cada regla usando la Tnorma
+ mínimo.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+b)
+\end_layout
+
+\end_inset
+
+ Estimar la fuerza de frenado Ffrena para dicho hecho (Dist = 70; Fr = 23
+ N) según el modelo de inferencia de MaxMin.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+OBS: para defuzzificar, usar la técnica del valor medio del valor máximo
+ del área.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+c)
+\end_layout
+
+\end_inset
+
+ Nuevamente, determinar cuántas y qué reglas se disparan si ocurre otro
+ hecho donde el robot tiene un objeto a una distancia Dist = 50 metros siendo
+ la Fuerza de Rozamiento Fr = 30 N.
 \end_layout
 
 \begin_layout Paragraph
@@ -2103,8 +2326,8 @@ Solución
 COMPLETAR.
 \end_layout
 
-\begin_layout Section
-COMPLETAR
+\begin_layout Section*
+Ejercicio 6 (opcional)
 \end_layout
 
 \begin_layout Paragraph
