@@ -8,6 +8,32 @@
 \begin_preamble
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.17}
+
+\pgfplotsset{
+    Ejes/.style = {
+        set layers, samples = 500,
+        legend pos = outer north east, legend cell align = left,
+        cycle list = { {blue, mark = none}, {red, mark = none},
+                       {green, mark = none}, {cyan, mark = none},
+                       {orange, mark = none}, {magenta, mark = none},
+                       {gray, mark = none}, {black, mark = none}
+        },
+        axis lines = middle, grid = both, smooth, minor tick num = 1
+    },
+    /pgf/declare function = {
+        % Ecuacion de la recta que pasa por (a, b) y (c, d)
+        recta(\a,\b,\c,\d) = ((\d-\b)/(\c-\a)) * (\x - \a) + \b;
+        triangulo(\a,\b,\c) = and(\x>=\a, \x<=\b) * recta(\a,0,\b,1) +
+                              and(\x>=\b, \x<=\c) * recta(\b,1,\c,0);
+        trapecio(\a,\b,\c,\d) = and(\x>=\a, \x<=\b) * recta(\a,0,\b,1) +
+                                and(\x>=\b, \x<=\c) * 1 +
+                                and(\x>=\c, \x<=\d) * recta(\c,1,\d,0);
+        trapecioinf(\a,\b,\c) = and(\x>=\a, \x<=\b) * 1 +
+                                and(\x>=\b, \x<=\c) * recta(\b,1,\c,0);
+        trapeciosup(\a,\b,\c) = and(\x>=\a, \x<=\b) * recta(\a,0,\b,1) +
+                                and(\x>=\b, \x<=\x) * 1;
+    }
+}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -212,6 +238,9 @@ aspecto del sarpullido
 
 \begin_deeper
 \begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -363,6 +392,14 @@ end{tikzpicture}
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -506,6 +543,15 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
 \begin_layout Standard
 \align center
 \begin_inset ERT
@@ -639,6 +685,11 @@ end{axis}
 
 \backslash
 end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -795,6 +846,9 @@ Consideremos el siguiente modelo de conocimiento borroso que vincula el
 \end_layout
 
 \begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -943,6 +997,14 @@ end{tikzpicture}
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1061,6 +1123,11 @@ end{axis}
 
 \backslash
 end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1290,6 +1357,10 @@ status open
 
 \begin_layout Standard
 \align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
 \begin_inset ERT
 status open
 
@@ -1407,6 +1478,11 @@ end{axis}
 
 \backslash
 end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1652,6 +1728,10 @@ b)
 \begin_deeper
 \begin_layout Standard
 \align center
+\begin_inset Preview
+
+\begin_layout Standard
+\align center
 \begin_inset ERT
 status open
 
@@ -1781,9 +1861,18 @@ end{tikzpicture}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 y considerando el máximo entre ambas tenemos:
 \end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
 
 \begin_layout Standard
 \align center
@@ -1887,6 +1976,11 @@ end{axis}
 
 \backslash
 end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2262,7 +2356,237 @@ Con las siguientes variables lingusticas y conjuntos borrosos:
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset space \hspace*{}
+\length -2.5cm
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[Ejes, xmin = 0, xmax = 100, ymin = 0, ymax = 1, domain = 0:100,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 title = Dist, scale = 0.75]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:100] {triangulo(25,50,75)}; 
+\backslash
+addlegendentry{Media};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:100] {trapecioinf(0,25,50)};  
+\backslash
+addlegendentry{Cerca};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:100] {trapeciosup(50,75,100)};  
+\backslash
+addlegendentry{Lejos};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[Ejes, xmin = 0, xmax = 60, ymin = 0, ymax = 1, domain = 0:60,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 title = Fr, scale = 0.75]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:60] {triangulo(15,30,45)}; 
+\backslash
+addlegendentry{Media};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:60] {trapecioinf(0,15,30)};  
+\backslash
+addlegendentry{Baja};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:60] {trapeciosup(30,45,60)};  
+\backslash
+addlegendentry{Alta};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[Ejes, xmin = 0, xmax = 100, ymin = 0, ymax = 1, domain = 0:100,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 title = FFrena]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:100] {triangulo(0,50,100)}; 
+\backslash
+addlegendentry{Media};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:100] {recta(0,1,50,0)};  
+\backslash
+addlegendentry{Baja};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[domain=0:100] {recta(50,0,100,1)};  
+\backslash
+addlegendentry{Alta};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -2322,12 +2646,55 @@ c)
 Solución
 \end_layout
 
-\begin_layout Standard
-COMPLETAR.
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+a)
+\end_layout
+
+\end_inset
+
+ COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+b)
+\end_layout
+
+\end_inset
+
+ COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+c)
+\end_layout
+
+\end_inset
+
+ COMPLETAR.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
 Ejercicio 6 (opcional)
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
 \end_layout
 
 \begin_layout Paragraph
