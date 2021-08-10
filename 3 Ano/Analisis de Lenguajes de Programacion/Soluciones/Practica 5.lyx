@@ -2730,10 +2730,6 @@ read :: String -> Int
 \end_inset
 
 .
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -2743,13 +2739,13 @@ Solucion
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=Haskell,tabsize=2"
+lstparams "language=Haskell,fontsize={\small},tabsize=2"
 inline false
 status open
 
 \begin_layout Plain Layout
 
-import System.IO
+import System.Random
 \end_layout
 
 \begin_layout Plain Layout
@@ -2758,22 +2754,7 @@ import System.IO
 
 \begin_layout Plain Layout
 
-getPass = do hSetEcho stdin False
-\end_layout
-
-\begin_layout Plain Layout
-
-             pass <- getPass'
-\end_layout
-
-\begin_layout Plain Layout
-
-             hSetEcho stdin True
-\end_layout
-
-\begin_layout Plain Layout
-
-             return pass
+getNumber s = do { putStr s; readLn }
 \end_layout
 
 \begin_layout Plain Layout
@@ -2782,34 +2763,23 @@ getPass = do hSetEcho stdin False
 
 \begin_layout Plain Layout
 
-getPass' = do x <- getChar
+game r 0 = do putStrLn ("Fin del juego.
+ El numero era: " ++ show r)
 \end_layout
 
 \begin_layout Plain Layout
 
-              if x == '
-\backslash
-n' then do putChar x
+game r i = do n <- getNumber "Ingrese un numero: "
 \end_layout
 
 \begin_layout Plain Layout
 
-                                   return []
+              putStrLn (guess r n)
 \end_layout
 
 \begin_layout Plain Layout
 
-                           else do putChar '*'
-\end_layout
-
-\begin_layout Plain Layout
-
-                                   xs <- getPass'
-\end_layout
-
-\begin_layout Plain Layout
-
-                                   return (x:xs)
+              if n /= r then game r (i - 1) else return ()
 \end_layout
 
 \begin_layout Plain Layout
@@ -2818,56 +2788,19 @@ n' then do putChar x
 
 \begin_layout Plain Layout
 
-game :: Int -> Int -> IO ()
+guess r n | n < r     = "Incorrecto.
+ El numero es mas grande."
 \end_layout
 
 \begin_layout Plain Layout
 
-game n 0 = do putStrLn 
-\begin_inset Quotes cld
-\end_inset
-
-El juego ha finalizado.
-\begin_inset Quotes crd
-\end_inset
-
-
+          | n > r     = "Incorrecto.
+ El numero es mas chico."
 \end_layout
 
 \begin_layout Plain Layout
 
-game n t = do putStrLn $ 
-\begin_inset Quotes cld
-\end_inset
-
-Intentos restantes: 
-\begin_inset Quotes cld
-\end_inset
-
- ++ show t
-\end_layout
-
-\begin_layout Plain Layout
-
-              putStr 
-\begin_inset Quotes cld
-\end_inset
-
-Ingrese un numero: 
-\begin_inset Quotes cld
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-              x <- getLine
-\end_layout
-
-\begin_layout Plain Layout
-
-              guess n t (read x)
+          | otherwise = "Correcto!"
 \end_layout
 
 \begin_layout Plain Layout
@@ -2876,104 +2809,19 @@ Ingrese un numero:
 
 \begin_layout Plain Layout
 
-guess n t x | x < n = do putStrLn 
-\begin_inset Quotes cld
-\end_inset
-
-Incorrecto.
- El numero es mas grande.
-\begin_inset Quotes crd
-\end_inset
-
-
+main = do m <- getNumber "Ingrese numero maximo: "
 \end_layout
 
 \begin_layout Plain Layout
 
-                         game n (t - 1)
+          r <- randomRIO (0, m) :: IO Int
 \end_layout
 
 \begin_layout Plain Layout
 
-            | x > n = do putStrLn 
-\begin_inset Quotes cld
-\end_inset
-
-Incorrecto.
- El numero es mas chico.
-\begin_inset Quotes crd
-\end_inset
-
-
+          game r (floor (logBase 2 $ fromIntegral m))
 \end_layout
 
-\begin_layout Plain Layout
-
-                         game n (t - 1)
-\end_layout
-
-\begin_layout Plain Layout
-
-            | otherwise = do putStrLn 
-\begin_inset Quotes cld
-\end_inset
-
-Correcto!
-\begin_inset Quotes crd
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-main = do putStr 
-\begin_inset Quotes cld
-\end_inset
-
-Ingrese el numero secreto: 
-\begin_inset Quotes cld
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-          n <- getPass
-\end_layout
-
-\begin_layout Plain Layout
-
-          putStr 
-\begin_inset Quotes cld
-\end_inset
-
-Ingrese la cantidad de intentos: 
-\begin_inset Quotes cld
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-          t <- getLine
-\end_layout
-
-\begin_layout Plain Layout
-
-          game (read n) (read t)
-\end_layout
-
-\end_inset
-
-
-\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -3032,208 +2880,92 @@ Solucion
 
 \begin_layout Standard
 \begin_inset listings
-lstparams "language=Haskell,tabsize=2"
+lstparams "language=Haskell,fontsize={\small},tabsize=2"
 inline false
 status open
 
 \begin_layout Plain Layout
 
-printB []     = do putStrLn 
-\begin_inset Quotes cld
-\end_inset
+valid r b q | r <= 0 || r > length b              = False
+\end_layout
 
+\begin_layout Plain Layout
 
-\begin_inset Quotes crd
-\end_inset
+            | q <= 0 || q > length (b !! (r - 1)) = False
+\end_layout
 
+\begin_layout Plain Layout
+
+            | otherwise = not $ null $ b !! (r - 1)
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
 \begin_layout Plain Layout
 
-printB (x:xs) = do putStrLn x
+play r b q = [if i == r then drop q xs else xs | (xs, i) <- zip b [1..]]
 \end_layout
 
 \begin_layout Plain Layout
-
-                   printB xs
-\end_layout
-
-\begin_layout Plain Layout
-
-valid 1 (x:xs) = (not.null) x
-\end_layout
-
-\begin_layout Plain Layout
-
-valid n b@(x:xs)
-\end_layout
-
-\begin_layout Plain Layout
-
-    | n <= 0 || n > length b = False
-\end_layout
-
-\begin_layout Plain Layout
-
-    | otherwise = valid (n-1) xs
-\end_layout
-
-\begin_layout Plain Layout
-
-play 1 (xs:xss) = (tail xs):xss
-\end_layout
-
-\begin_layout Plain Layout
-
-play n (xs:xss) = xs : (play (n-1) xss)
-\end_layout
-
-\begin_layout Plain Layout
-
-winner [] = True
-\end_layout
-
-\begin_layout Plain Layout
-
-winner (xs:xss) = (null xs) && (winner xss)
-\end_layout
-
-\begin_layout Plain Layout
-
-ask player board = do printB board
-\end_layout
-
-\begin_layout Plain Layout
-
-                      putStr $ 
-\begin_inset Quotes cld
-\end_inset
-
-Jugador 
-\begin_inset Quotes cld
-\end_inset
-
- ++
-\end_layout
-
-\begin_layout Plain Layout
-
-                               (show $ player+1) ++
-\end_layout
-
-\begin_layout Plain Layout
-
-                               
-\begin_inset Quotes cld
-\end_inset
-
-, ingrese su jugada: 
-\begin_inset Quotes cld
-\end_inset
-
 
 \end_layout
 
 \begin_layout Plain Layout
 
-                      c <- getLine
+getNumber s = do { putStr s; readLn }
 \end_layout
 
 \begin_layout Plain Layout
-
-                      if valid (read c) board then
-\end_layout
-
-\begin_layout Plain Layout
-
-                         let newboard = play (read c) board
-\end_layout
-
-\begin_layout Plain Layout
-
-                         in  if winner newboard
-\end_layout
-
-\begin_layout Plain Layout
-
-                             then putStrLn 
-\begin_inset Quotes cld
-\end_inset
-
-Usted ha ganado.
-\begin_inset Quotes crd
-\end_inset
-
 
 \end_layout
 
 \begin_layout Plain Layout
 
-                             else ask (mod (player+1) 2) newboard
+ask p b | and (map null b) = putStrLn "Usted gano!"
 \end_layout
 
 \begin_layout Plain Layout
 
-                      else do putStrLn 
-\begin_inset Quotes cld
-\end_inset
+        | otherwise = do mapM print (zip [1..] b)
+\end_layout
 
-JUGADA INVALIDA!
-\begin_inset Quotes crd
-\end_inset
+\begin_layout Plain Layout
 
+                         putStrLn $ "
+\backslash
+nJugador " ++ (show $ p + 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+                         r <- getNumber "Fila: "
+\end_layout
+
+\begin_layout Plain Layout
+
+                         q <- getNumber "Cantidad: "
+\end_layout
+
+\begin_layout Plain Layout
+
+                         if valid r b q then ask (mod (p + 1) 2) (play r
+ b q)
+\end_layout
+
+\begin_layout Plain Layout
+
+                                        else ask p b
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
 \begin_layout Plain Layout
 
-                              ask player board
-\end_layout
-
-\begin_layout Plain Layout
-
-main = ask 0 start [
-\begin_inset Quotes cld
-\end_inset
-
-*****
-\begin_inset Quotes crd
-\end_inset
-
-, 
-\begin_inset Quotes cld
-\end_inset
-
-****
-\begin_inset Quotes crd
-\end_inset
-
-, 
-\begin_inset Quotes cld
-\end_inset
-
-***
-\begin_inset Quotes crd
-\end_inset
-
-, 
-\begin_inset Quotes cld
-\end_inset
-
-**
-\begin_inset Quotes crd
-\end_inset
-
-, 
-\begin_inset Quotes cld
-\end_inset
-
-*
-\begin_inset Quotes crd
-\end_inset
-
-]
+main = ask 0 ["*****", "****", "***", "**", "*"]
 \end_layout
 
 \end_inset
