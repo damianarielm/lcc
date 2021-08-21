@@ -1,0 +1,94 @@
+[System]
+Name='Distancia al Arco'
+Ninputs=4
+Noutputs=3
+Nrules=7
+Nexceptions=0
+Conjunction='prod'
+MissingValues='random'
+
+[Input1]
+Active='yes'
+Name='Distancia al Arco'
+Range=[       0.000 ,     120.000 ]
+NMFs=3
+MF1='Lejos','SemiTrapezoidalSup',[      30.000 ,      45.000 ,     120.000 ]
+MF2='Medio','trapezoidal',[      16.500 ,      25.000 ,      30.000 ,      40.000 ]
+MF3='Cerca','SemiTrapezoidalInf',[      12.000 ,      16.500 ,      20.500 ]
+
+[Input2]
+Active='yes'
+Name='PosicionPelota'
+Range=[     -45.000 ,      45.000 ]
+NMFs=3
+MF1='Izquierda','SemiTrapezoidalInf',[     -45.000 ,     -20.000 ,       0.000 ]
+MF2='Derecha','SemiTrapezoidalSup',[       0.000 ,      20.000 ,      45.000 ]
+MF3='Centro','triangular',[     -10.000 ,       0.000 ,      10.000 ]
+
+[Input3]
+Active='yes'
+Name='VelocidaViento'
+Range=[       0.000 ,      70.000 ]
+NMFs=3
+MF1='VientoSuave','SemiTrapezoidalInf',[       0.000 ,       9.000 ,      22.000 ]
+MF2='VientoMedio','trapezoidal',[      15.000 ,      25.000 ,      30.000 ,      40.000 ]
+MF3='VientoFuerte','SemiTrapezoidalSup',[      35.000 ,      49.000 ,      70.000 ]
+
+[Input4]
+Active='yes'
+Name='Barrera'
+Range=[       0.000 ,       5.000 ]
+NMFs=3
+MF1='Poca','SemiTrapezoidalInf',[       0.000 ,       1.000 ,       3.000 ]
+MF2='Medio','trapezoidal',[       1.000 ,       2.000 ,       3.000 ,       4.000 ]
+MF3='Mucha','SemiTrapezoidalSup',[       3.000 ,       4.000 ,       5.000 ]
+
+[Output1]
+Nature='crisp'
+Defuzzification='sugeno'
+Disjunction='max'
+DefaultValue=       0.000 
+Classif='yes' 
+Active='yes'
+Name='PateaArco'
+Range=[       0.000 ,       1.000 ]
+NMFs=0
+
+[Output2]
+Nature='fuzzy'
+Defuzzification='area'
+Disjunction='sum'
+DefaultValue=      50.000 
+Classif='yes' 
+Active='yes'
+Name='Fuerza'
+Range=[       0.000 ,     200.000 ]
+NMFs=3
+MF1='Debil','SemiTrapezoidalInf',[       0.000 ,      25.000 ,      50.000 ]
+MF2='Medio','trapezoidal',[      30.000 ,      65.000 ,      85.000 ,     130.000 ]
+MF3='Fuerte','SemiTrapezoidalSup',[     100.000 ,     130.000 ,     200.000 ]
+
+[Output3]
+Nature='fuzzy'
+Defuzzification='area'
+Disjunction='sum'
+DefaultValue=      10.000 
+Classif='yes' 
+Active='yes'
+Name='Efecto'
+Range=[       0.000 ,      20.000 ]
+NMFs=3
+MF1='Poco','SemiTrapezoidalInf',[       0.000 ,       2.000 ,       5.000 ]
+MF2='Medio','trapezoidal',[       3.000 ,       5.000 ,       7.000 ,       9.000 ]
+MF3='Alto','SemiTrapezoidalSup',[       7.000 ,      10.000 ,      20.000 ]
+
+[Rules]
+3, 0, 0, 1,        1.000 ,       3.000 ,       1.000 ,
+1, 0, 3, 0,        0.000 ,       3.000 ,       1.000 ,
+3, 0, 0, 2,        1.000 ,       1.000 ,       3.000 ,
+3, 0, 0, 3,        1.000 ,       1.000 ,       3.000 ,
+0, 1, 0, 0,        0.000 ,       1.000 ,       2.000 ,
+0, 2, 0, 0,        0.000 ,       1.000 ,       2.000 ,
+2, 0, 0, 3,        0.000 ,       2.000 ,       1.000 ,
+
+[Exceptions]

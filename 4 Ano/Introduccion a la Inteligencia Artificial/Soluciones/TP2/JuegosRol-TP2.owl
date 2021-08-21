@@ -1,0 +1,1193 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#"
+     xml:base="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsLlevadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsLlevadoPor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Exclusivo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Exclusivo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Narra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Narra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#DM"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Participa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Participa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pertenecen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pertenecen">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mapa"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sesion"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#SeRelaciona -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#SeRelaciona">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#SeUbica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#SeUbica">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Se_Encuentran"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Se_Encuentran -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Se_Encuentran">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escenario"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mapa"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escenario"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mapa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Tiene -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Tiene">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Capacidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Capacidad">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Daño -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Daño">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Defensa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Defensa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Duracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Duracion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Efecto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Efecto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsCura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsCura">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsHostil -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsHostil">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsOpcional -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsOpcional">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Peso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Peso">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Precio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Precio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Salud -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Salud">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_blancas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_blancas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Asesino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Asesino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Subfusil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#DM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#DM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Roles"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escenario -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escenario"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Guerrero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Guerrero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Humano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Humano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos_de_Mesa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos_de_Mesa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Videojuegos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Ladron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Ladron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mago -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mago">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mapa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mapa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sesion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Roles"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Necrofago -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Necrofago">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Otros -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Otros">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Personaje_Jugable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Roles"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Roles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Roles"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sesion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sesion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Videojuegos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Videojuegos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Clase"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Objetos"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Raza"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Roles"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Castillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Castillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Commonwealth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Codsworth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Codsworth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Robot"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Commonwealth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Commonwealth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mapa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Concord -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Concord">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Commonwealth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Conrad_Kellogg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Conrad_Kellogg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Asesino"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Humano"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Dependencia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Dependencia">
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Diamond_City -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Diamond_City">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Commonwealth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escopeta_de_doble_caño -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escopeta_de_doble_caño">
+        <Daño rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</Daño>
+        <Defensa rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Defensa>
+        <Peso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</Peso>
+        <Precio rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Precio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escuela -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escuela">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escenario"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Diamond_City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Espada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Espada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_blancas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Estimulante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Estimulante">
+        <EsCura rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsCura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Videojuegos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Videojuegos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Videojuegos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Videojuegos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Far_Harbor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Far_Harbor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mapa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fuera_del_tiempo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fuera_del_tiempo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones"/>
+        <Pertenecen rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1"/>
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Hacha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Hacha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_blancas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Hombre_de_confianza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Hombre_de_confianza">
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#John_Hancock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#John_Hancock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Necrofago"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Joya_de_la_Commonwealth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Joya_de_la_Commonwealth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones"/>
+        <Pertenecen rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1"/>
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#La_guerra_no_cambia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#La_guerra_no_cambia">
+        <Pertenecen rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Prologo"/>
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzallamas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzallamas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Castillo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzamisiles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzamisiles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Castillo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Machete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Machete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_blancas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mar_Resplandeciente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mar_Resplandeciente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mentats -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mentats">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mosquete_Laser -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mosquete_Laser">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Concord"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Musculeina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Musculeina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutaracha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutaracha">
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Navaja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Navaja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_blancas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Nick_Valentine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Nick_Valentine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Asesino"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Obtener_una_pista -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Obtener_una_pista">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones"/>
+        <Pertenecen rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1"/>
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Periodico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Periodico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escenario"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Diamond_City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Piper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Piper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Humano"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_.44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_.44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_10mm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_10mm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego"/>
+        <SeUbica rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escuela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Preston -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Preston">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Humano"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Prologo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Prologo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Campaña"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rad-X -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rad-X">
+        <EsCura rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsCura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Radaway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Radaway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables"/>
+        <EsCura rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsCura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rata_Topo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rata_Topo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Reuniones -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Reuniones">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones"/>
+        <Pertenecen rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1"/>
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sancturay_Hills -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sancturay_Hills">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Locaciones"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Secret_Hitler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Secret_Hitler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos_de_Mesa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Subfusil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Subfusil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Armas_de_fuego"/>
+        <Se_Encuentran rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Periodico"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Time_Bomb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Time_Bomb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Juegos_de_Mesa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Un_Valentin_muy_poco_santo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Un_Valentin_muy_poco_santo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Misiones"/>
+        <Pertenecen rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1"/>
+        <EsOpcional rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsOpcional>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Unico_Superviviente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Unico_Superviviente">
+        <Participa rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Virgil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Virgil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Asesino"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#NPC"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Humano"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutante"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Necrofago"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Robot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <Utiliza rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzallamas"/>
+        <Utiliza rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzamisiles"/>
+        <Utiliza rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mosquete_Laser"/>
+        <Utiliza rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_.44"/>
+        <Utiliza rdf:resource="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_10mm"/>
+        <EsHostil rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</EsHostil>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Asesino"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Guerrero"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Ladron"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mago"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Consumables"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Equipamiento"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Otros"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Humano"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutante"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Necrofago"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Robot"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Acto_1"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Castillo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Codsworth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Commonwealth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Concord"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Conrad_Kellogg"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Dependencia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Diamond_City"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escopeta_de_doble_caño"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escuela"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Espada"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Estimulante"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Far_Harbor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fuera_del_tiempo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Hacha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Hombre_de_confianza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#John_Hancock"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Joya_de_la_Commonwealth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#La_guerra_no_cambia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzallamas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzamisiles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Machete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mar_Resplandeciente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mentats"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mosquete_Laser"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Musculeina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutaracha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Navaja"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Nick_Valentine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Obtener_una_pista"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Periodico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Piper"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_.44"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_10mm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Preston"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Prologo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rad-X"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Radaway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rata_Topo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Reuniones"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sancturay_Hills"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Secret_Hitler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Subfusil"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Time_Bomb"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Un_Valentin_muy_poco_santo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Unico_Superviviente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Virgil"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Castillo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Commonwealth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Concord"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Diamond_City"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escopeta_de_doble_caño"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Escuela"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Estimulante"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_3"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fallout_4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Far_Harbor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Fuera_del_tiempo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Joya_de_la_Commonwealth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#La_guerra_no_cambia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzallamas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Lanzamisiles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mar_Resplandeciente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mentats"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mosquete_Laser"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Musculeina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Mutaracha"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Nick_Valentine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Obtener_una_pista"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Periodico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Piper"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_.44"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Pistola_10mm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Preston"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rad-X"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Radaway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Rata_Topo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Reuniones"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Sancturay_Hills"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Secret_Hitler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Subfusil"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Time_Bomb"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Un_Valentin_muy_poco_santo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Virgil"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#EsLlevadoPor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Narra"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Participa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#SeRelaciona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Tiene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ilitmanovich/ontologies/2021/4/untitled-ontology-6#Utiliza"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
