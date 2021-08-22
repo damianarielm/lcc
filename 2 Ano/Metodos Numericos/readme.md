@@ -1,5 +1,5 @@
-###### Año 2017
+###### Año 2021
 
 * Alejandro Marchetti
 * Juan Manuel Rabasedas
-* Nicolas Rodriguez Castro
+* Brian Natanael Luporini
