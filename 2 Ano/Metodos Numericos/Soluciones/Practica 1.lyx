@@ -1,0 +1,716 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+En cada caso determinar si la sucesión 
+\begin_inset Formula $\left\{ a_{n}\right\} $
+\end_inset
+
+ converge o diverge y en caso de ser convergente hallar su límite.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{n}=\frac{1}{n^{\alpha}}$
+\end_inset
+
+, 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{n}=\frac{n-1}{n}-\frac{n}{n-1}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{n}=\frac{3n^{2}-n+4}{2n^{2}+1}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{n}=\cos\frac{n\pi}{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{n}=\frac{n!}{n^{n}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{n}=\frac{n^{p}}{e^{n}}$
+\end_inset
+
+, 
+\begin_inset Formula $p>0$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{n}=\sqrt[n]{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Veamos que la sucesión es monótona decreciente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & 1\leq n\leq n+1\\
+\iff & \left\langle x^{\alpha}\text{ estrictamente creciente }\left(\alpha>0\right)\right\rangle \\
+ & 1^{\alpha}\leq n^{\alpha}\leq\left(n+1\right)^{\alpha}\\
+\iff & \left\langle \text{\ensuremath{\nicefrac{1}{x}}}\text{ estrictamente decreciente }\left(x>0\right)\right\rangle \\
+ & \frac{1}{1^{\alpha}}\geq\underbrace{\frac{1}{n^{\alpha}}}_{a_{n}}\geq\underbrace{\frac{1}{\left(n+1\right)^{\alpha}}}_{a_{n+1}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Veamos que la sucesión es acotada inferiormente por 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Supongamos existe 
+\begin_inset Formula $1\leq n$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\frac{1}{n^{\alpha}}<0$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & \frac{1}{n^{\alpha}}<0\\
+\iff & \left\langle \text{sgn}\left(x\right)=\text{sgn}\left(x^{-1}\right)\right\rangle \\
+ & n^{\alpha}<0\\
+\iff & \left\langle \sqrt[\alpha]{x}\text{ estrictamente creciente }\left(\alpha,x>0\right)\right\rangle \\
+ & n=\sqrt[\alpha]{n^{\alpha}}<\sqrt[\alpha]{0}=0\\
+\iff & \left\langle 1\leq n\right\rangle \\
+ & 1\leq0
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Puesto que 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ es monótona decreciente y acotada inferiormente, entonces converge.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que:
+\begin_inset Formula 
+\begin{alignat*}{1}
+ & a_{n}\\
+= & \left\langle \text{definicion}\right\rangle \\
+ & \frac{n-1}{n}-\frac{n}{n-1}\\
+= & \left\langle \text{suma de fracciones}\right\rangle \\
+ & \frac{n}{n}-\frac{1}{n}-\frac{n}{n-1}\\
+= & \left\langle \text{factor comun }n\right\rangle \\
+ & \frac{n}{n}-\frac{1}{n}-\frac{n}{n\left(1-\frac{1}{n}\right)}\\
+= & \left\langle n\geq1\right\rangle \\
+ & 1-\frac{1}{n}-\frac{1}{1-\frac{1}{n}}
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea 
+\begin_inset Formula $f\left(x\right)=1-\frac{1}{x}-\frac{1}{1-\frac{1}{x}}$
+\end_inset
+
+ luego
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}1-\overbrace{\frac{1}{x}}^{\to0}-\overbrace{\frac{1}{1-\underbrace{\frac{1}{x}}_{\to0}}}^{\to1}=1-0-1=1
+\]
+
+\end_inset
+
+por lo que la sucesión converge a 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $f\left(x\right)=3x^{2}-x+4$
+\end_inset
+
+ y 
+\begin_inset Formula $g\left(x\right)=2x^{2}+1$
+\end_inset
+
+.
+ Observemos que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $f'\left(x\right)=6x-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $g'\left(x\right)=4x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{x\to\infty}\frac{f'\left(x\right)}{g'\left(x\right)}=\lim_{x\to\infty}\frac{6x-1}{4x}=\lim_{x\to\infty}\overbrace{\frac{6x}{4x}}^{\to\nicefrac{3}{2}}-\frac{1}{4x}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\frac{3}{2}-\lim_{x\to\infty}\overbrace{\frac{1}{4x}}^{\to0}=\frac{3}{2}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Luego como 
+\begin_inset Formula $\lim_{x\to\infty}\frac{\overbrace{f\left(x\right)}^{\to\infty}}{\underbrace{g\left(x\right)}_{\to\infty}}$
+\end_inset
+
+ por regla de L'Hopial resulta:
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}\frac{f\left(x\right)}{g\left(x\right)}=\lim_{x\to\infty}\frac{f'\left(x\right)}{g'\left(x\right)}=\frac{3}{2}
+\]
+
+\end_inset
+
+ por lo que 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ converge a 
+\begin_inset Formula $\frac{3}{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ la subsucesión de los números páres y 
+\begin_inset Formula $c_{n}$
+\end_inset
+
+ la subsucesión de los números impares.
+ Tenemos que:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\lim_{n\to\infty}b_{n}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\lim_{n\to\infty}c_{n}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Puesto que una sucesión es convergente si y sólo si todas sus subsucesiones
+ convergen al mimsmo límite, podemos concluir que 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ no es convergente.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $l_{n}=0$
+\end_inset
+
+ y 
+\begin_inset Formula $r_{n}=\frac{1}{n}$
+\end_inset
+
+.
+ Observemos que:
+\begin_inset Formula 
+\[
+l_{n}=0\leq\frac{n!}{n^{n}}=\frac{n}{n}\cdot\frac{n-1}{n}\cdot\dots\cdot\frac{2}{n}\cdot\frac{1}{n}\leq1\cdot1\cdot\dots\cdot1\cdot\frac{1}{n}=r_{n}
+\]
+
+\end_inset
+
+puesto que cada factor de la expresión es positivo (por ser cociente de
+ numeros positivos) y que cada factor es menor o igual a uno.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Resulta fácil ver que 
+\begin_inset Formula $l_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $r_{n}$
+\end_inset
+
+ convergen a 0 y por teorema del sandwitch 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ también lo hace.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f\left(x\right)=\frac{x^{p}}{e^{x}}$
+\end_inset
+
+ luego 
+\begin_inset Formula $f\left(x\right)=e^{\ln\left(\frac{x^{p}}{e^{x}}\right)}=e^{\ln\left(x^{p}\right)-\ln\left(e^{x}\right)}=e^{p\ln\left(x\right)-x}$
+\end_inset
+
+.
+ Observemos que:
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}\left(\frac{p\ln\left(x\right)}{x}-1\right)=\lim_{x\to\infty}\frac{p\ln\left(x\right)}{x}-\lim_{x\to\infty}1=\lim_{x\to\infty}\frac{p\ln\left(x\right)}{x}-1=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=p\cdot\lim_{x\to\infty}\frac{\overbrace{\ln\left(x\right)}^{\to\infty}}{\underbrace{x}_{\to\infty}}-1\overset{LH}{=}p\cdot\lim_{x\to\infty}\frac{\nicefrac{1}{x}}{1}-1=p\cdot0-1=-1
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Ahora:
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}p\ln\left(x\right)-x=\lim_{x\to\infty}\left(p\ln\left(x\right)-x\right)\cdot\frac{x}{x}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\lim_{x\to\infty}\frac{p\ln\left(x\right)-x}{x}\cdot x=\lim_{x\to\infty}\underbrace{\left(\frac{p\ln\left(x\right)}{x}-1\right)}_{\to-1}\cdot\underbrace{x}_{\to\infty}=-\infty
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y finalmente 
+\begin_inset Formula $\lim_{x\to\infty}f\left(x\right)=\lim_{x\to\infty}e^{\overbrace{p\ln\left(x\right)-x}^{\to-\infty}}=0$
+\end_inset
+
+ por lo que 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ converge a 0.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $f\left(x\right)=\sqrt[n]{n}=n^{\nicefrac{1}{n}}=e^{\ln\left(n^{\nicefrac{1}{n}}\right)}=e^{\frac{\ln\left(n\right)}{n}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}\frac{\overbrace{\ln\left(n\right)}^{\to\infty}}{\underbrace{n}_{\to\infty}}\overset{LH}{=}\lim_{x\to\infty}\frac{1}{x}=0
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula $\lim_{x\to\infty}f\left(x\right)=e^{0}=1$
+\end_inset
+
+; luego la sucesión converge a 1.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En cada caso determinar si la serie converge o diverge y en caso de ser
+ convergente hallar su límite.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n\left(n+1\right)}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n\left(n+2\right)}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{n}{\sqrt{n^{2}+1}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\left(-\frac{1}{2}\right)^{n}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}3\left(\frac{3}{2}\right)^{n}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{2^{n}+1}{2^{n+1}}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{\left(2n+1\right)\left(2n+3\right)}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\left(\frac{1}{2^{n}}-\frac{1}{3^{n}}\right)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{n!}{2^{n}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Estudiar el carácter de las siguientes series en función de los valores
+ posibles de los parámetros 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ En cada caso utilizar alguno de los criterios de convergencia para justificar
+ la respuesta.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{3^{n}+1}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{4^{n}}{3^{n}-1}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{\left|b\right|^{n}}{n\left(1+a^{n}\right)}$
+\end_inset
+
+, 
+\begin_inset Formula $a>1$
+\end_inset
+
+, 
+\begin_inset Formula $\left|b\right|\neq a$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{a^{n}}{\left(n+2\right)\left(n+a\right)5^{n}}$
+\end_inset
+
+, 
+\begin_inset Formula $a>0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
