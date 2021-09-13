@@ -590,39 +590,348 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sea 
+\begin_inset Formula $b_{n}=\frac{1}{n}$
+\end_inset
+
+, observemos que 
+\begin_inset Formula $b_{n}-b_{n+1}=\frac{1}{n}-\frac{1}{n+1}=\frac{\left(n+1\right)-n}{n\left(n+1\right)}=\frac{1}{n\left(n+1\right)}$
+\end_inset
+
+; luego podemos reescribir a la serie como una serie telescópica:
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{n\left(n+1\right)}=\sum_{n=1}^{\infty}\left(b_{n}-b_{n+1}\right)
+\]
+
+\end_inset
+
+Calculemos ahora el límite de 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}b_{n}=\lim_{n\to\infty}\frac{1}{\underbrace{n}_{\to\infty}}=0
+\]
+
+\end_inset
+
+Podemos concluir entonces que la serie converge a 
+\begin_inset Formula $b_{1}-0=1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Sea 
+\begin_inset Formula $b_{n}=\frac{1}{n}$
+\end_inset
+
+, observemos que 
+\begin_inset Formula $b_{n}-b_{n+2}=\frac{2}{n\left(n+2\right)}$
+\end_inset
+
+ y además:
+\begin_inset Formula 
+\[
+b_{n}-b_{n+2}=\frac{1}{n}-\frac{1}{n+2}=\frac{1}{n}-\frac{1}{n+2}+\frac{1}{n+1}-\frac{1}{n+1}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=b_{n}-b_{n+2}+b_{n+1}-b_{n+1}=b_{n}+b_{n+1}-\left(b_{n+1}+b_{n+2}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea entonces 
+\begin_inset Formula $c_{n}=b_{n}+b_{n+1}$
+\end_inset
+
+ podemos reescribir a la serie original como:
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{n\left(n+2\right)}=\sum_{n=1}^{\infty}\frac{1}{2}\left(b_{n}-b_{n+2}\right)=\sum_{n=1}^{\infty}\frac{1}{2}\left(c_{n}-c_{n+1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $\lim_{n\to\infty}b_{n}=\lim_{n\to\infty}\frac{1}{n}=0=\lim_{n\to\infty}\frac{1}{n+1}=\lim_{n\to\infty}b_{n+1}$
+\end_inset
+
+ podemos concluir que:
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}c_{n}=\lim_{n\to\infty}\left(b_{n}+b_{n+1}\right)=0+0=0
+\]
+
+\end_inset
+
+Por propiedad de linealidad y propiedad telescópica la serie converge a:
+ 
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(c_{1}-0\right)=\frac{1}{2}\left(b_{1}+b_{2}\right)=\frac{1}{2}\left(1+\frac{1}{2}\right)=\frac{1}{2}\cdot\frac{3}{2}=\frac{3}{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{n}{\sqrt{n^{2}+1}}=\lim_{n\to\infty}\frac{n}{\sqrt{n^{2}+1}}\cdot\frac{\nicefrac{1}{n}}{\nicefrac{1}{n}}=\lim_{n\to\infty}\frac{1}{\frac{\sqrt{n^{2}+1}}{n}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\lim_{n\to\infty}\frac{1}{\frac{\sqrt{n^{2}+1}}{\sqrt{n^{2}}}}=\lim_{n\to\infty}\frac{1}{\sqrt{\frac{n^{2}+1}{n^{2}}}}=\lim_{n\to\infty}\frac{1}{\sqrt{\frac{n^{2}}{n^{2}}+\frac{1}{n^{2}}}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\lim_{n\to\infty}\frac{1}{\sqrt{1+\underbrace{\frac{1}{n^{2}}}_{\to0}}}=1\neq0
+\]
+
+\end_inset
+
+luego por el teorema de condicion necesaria para la convergencia, la serie
+ diverge.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Convergencia: Observemos que
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\left(-\frac{1}{2}\right)^{n}=\sum_{n=1}^{\infty}\left(-1\right)^{n}\left(\frac{1}{2}\right)^{n}=-\sum_{n=1}^{\infty}\left(-1\right)^{n-1}\left(\frac{1}{2}\right)^{n}
+\]
+
+\end_inset
+
+Además 
+\begin_inset Formula $\left\{ \left(\frac{1}{2}\right)^{n}\right\} $
+\end_inset
+
+ es monotona decreciente y como 
+\begin_inset Formula $\lim_{n\to\infty}\left(\frac{1}{2}\right)^{n}=\lim_{n\to\infty}\frac{1}{\underbrace{2^{n}}_{\to\infty}}=0$
+\end_inset
+
+ por el criterio de Libniz la serie converge.
+\end_layout
+
+\begin_layout Itemize
+Suma: Observemos que
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\left(-\frac{1}{2}\right)^{n}=\sum_{n=0}^{\infty}\left(-\frac{1}{2}\right)^{n+1}=\sum_{n=0}^{\infty}\left(-\frac{1}{2}\right)\left(-\frac{1}{2}\right)^{n}=-\frac{1}{2}\sum_{n=0}^{\infty}\left(-\frac{1}{2}\right)^{n}
+\]
+
+\end_inset
+
+y como 
+\begin_inset Formula $\sum_{n=0}^{\infty}\left(-\frac{1}{2}\right)^{n}$
+\end_inset
+
+ es una serie geométrica de radio menor a 1 resulta que la serie original
+ converge a
+\begin_inset Formula 
+\[
+-\frac{1}{2}\left(\frac{1}{1-\left(-\frac{1}{2}\right)}\right)=-\frac{1}{2}\left(\frac{1}{1+\frac{1}{2}}\right)=-\frac{1}{2}\left(\frac{1}{\nicefrac{3}{2}}\right)=-\frac{1}{2}\cdot\frac{2}{3}=-\frac{1}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}3\left(\frac{3}{2}\right)^{n}=3\sum_{n=1}^{\infty}\left(\frac{3}{2}\right)^{n}=3\sum_{n=0}^{\infty}\left(\frac{3}{2}\right)^{n+1}=3\sum_{n=0}^{\infty}\frac{3}{2}\left(\frac{3}{2}\right)^{n}=3\frac{3}{2}\sum_{n=0}^{\infty}\left(\frac{3}{2}\right)^{n}
+\]
+
+\end_inset
+
+y por aparecer una serie geometrica de radio mayor a 1, la serie original
+ no converge.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Observemos que
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{2^{n}+1}{2^{n+1}}=\sum_{n=1}^{\infty}\frac{1}{2}\frac{2^{n}+1}{2^{n}}=\frac{1}{2}\sum_{n=1}^{\infty}\frac{2^{n}+1}{2^{n}}=\frac{1}{2}\sum_{n=1}^{\infty}\left(\frac{2^{n}}{2^{n}}+\frac{1}{2^{n}}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{2}\sum_{n=1}^{\infty}\left(1+\frac{1}{2^{n}}\right)
+\]
+
+\end_inset
+
+luego como 
+\begin_inset Formula $\lim_{n\to\infty}\left(1+\frac{1}{2^{n}}\right)=1\neq0$
+\end_inset
+
+ por el teorema de condición necesaria para la convergencia, la serie diverge.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Descomponemos en fracciones simples:
+\begin_inset Formula 
+\[
+\frac{1}{\left(2n+1\right)\left(2n+3\right)}=\frac{A}{2n+1}+\frac{B}{2n+3}=\frac{A\left(2n+3\right)+B\left(2n+1\right)}{\left(2n+1\right)\left(2n+3\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n=-\frac{1}{2}\Rightarrow1=A\left(-1+3\right)\Rightarrow A=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+n=-\frac{3}{2}\Rightarrow1=B\left(-3+1\right)\Rightarrow B=-\frac{1}{2}
+\]
+
+\end_inset
+
+por lo tanto:
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\frac{1}{\left(2n+1\right)\left(2n+3\right)}=\sum_{n=1}^{\infty}\left(\frac{\nicefrac{1}{2}}{2n+1}-\frac{\nicefrac{1}{2}}{2n+3}\right)=\frac{1}{2}\sum_{n=1}^{\infty}\left(\frac{1}{2n+1}-\frac{1}{2n+3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sea entonces 
+\begin_inset Formula $b_{n}=\frac{1}{2n+1}$
+\end_inset
+
+ podemos reescribir la serie como:
+\begin_inset Formula 
+\[
+\frac{1}{2}\sum_{n=1}^{\infty}\left(b_{n}-b_{n+1}\right)
+\]
+
+\end_inset
+
+y por propiedad telescopica la serie converge a
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(b_{1}-\lim_{n\to\infty}\frac{1}{2n+1}\right)=\frac{1}{2}\left(\frac{1}{3}-0\right)=\frac{1}{6}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que:
+\begin_inset Formula 
+\[
+\sum_{n=1}^{\infty}\left(\frac{1}{2^{n}}-\frac{1}{3^{n}}\right)=\sum_{n=1}^{\infty}\frac{1}{2^{n}}-\sum_{n=1}^{\infty}\frac{1}{3^{n}}=\sum_{n=0}^{\infty}\frac{1}{2^{n+1}}-\sum_{n=0}^{\infty}\frac{1}{3^{n+1}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{n=0}^{\infty}\frac{1}{2^{n+1}}-\sum_{n=0}^{\infty}\frac{1}{3^{n+1}}=\sum_{n=0}^{\infty}\frac{1}{2^{n}}\cdot\frac{1}{2}-\sum_{n=0}^{\infty}\frac{1}{3^{n}}\cdot\frac{1}{3}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{2}\sum_{n=0}^{\infty}\frac{1}{2^{n}}-\frac{1}{3}\sum_{n=0}^{\infty}\frac{1}{3^{n}}
+\]
+
+\end_inset
+
+y por ser series geométricas de radio menor a uno la serie converge a
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(\frac{1}{1-\nicefrac{1}{2}}\right)-\frac{1}{3}\left(\frac{1}{1-\nicefrac{1}{3}}\right)=\frac{1}{2}\left(\frac{1}{\nicefrac{1}{2}}\right)-\frac{1}{3}\left(\frac{1}{\nicefrac{2}{3}}\right)=1-\frac{3}{6}=\frac{1}{2}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
-\end_layout
+Consideremos 
+\begin_inset Formula $n\geq3$
+\end_inset
 
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
+, luego
+\begin_inset Formula 
+\[
+\frac{n!}{2^{n}}=\frac{1\cdot2\cdot3\cdot\dots\cdot n}{2\cdot2\cdot2\cdot\dots\cdot\dot{2}}\geq\frac{1}{2}\cdot1\cdot\dots\cdot1=\frac{1}{2}
+\]
 
-\begin_layout Enumerate
-COMPLETAR.
-\end_layout
+\end_inset
 
-\begin_layout Enumerate
-COMPLETAR.
+por lo que 
+\begin_inset Formula $\lim_{n\to\infty}\frac{n!}{2^{n}}\neq0$
+\end_inset
+
+ y la serie diverge el por teorema de condicion necesaria para la convergencia.
 \end_layout
 
 \end_deeper
