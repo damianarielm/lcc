@@ -1,0 +1,672 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Crear una función en Scilab que calcule en forma robusta las raíces de una
+ ecuación cuadrática con discriminante positivo.
+ Usar dicha función para evaluar la raíz positiva de la ecuación cuadrática
+ con 
+\begin_inset Formula $\epsilon=0,0001$
+\end_inset
+
+ y estimar su error.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function r = raices(polinomio)
+\end_layout
+
+\begin_layout Plain Layout
+
+    a = coeff(p, 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    b = coeff(p, 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    c = coeff(p, 0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    delta = b^2 - 4*a*c
+\end_layout
+
+\begin_layout Plain Layout
+
+    if b < 0 then
+\end_layout
+
+\begin_layout Plain Layout
+
+        x1 = (2*c) / (-b + sqrt(delta))
+\end_layout
+
+\begin_layout Plain Layout
+
+        x2 = (-b + sqrt(delta)) / (2*a)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        x1 = (-b - sqrt(delta)) / (2*a)
+\end_layout
+
+\begin_layout Plain Layout
+
+        x2 = (2*c) / (-b - sqrt(delta))
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+    r = [x1; x2]
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+function r = resolvente(p)
+\end_layout
+
+\begin_layout Plain Layout
+
+    a = coeff(p, 2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    b = coeff(p, 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    c = coeff(p, 0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    delta = b^2 - 4*a*c
+\end_layout
+
+\begin_layout Plain Layout
+
+    x1 = (-b - sqrt(delta)) / 2*a
+\end_layout
+
+\begin_layout Plain Layout
+
+    x2 = (-b + sqrt(delta)) / 2*a
+\end_layout
+
+\begin_layout Plain Layout
+
+    r = [x1; x2]
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+epsilon = 0.0001;
+\end_layout
+
+\begin_layout Plain Layout
+
+a = epsilon;
+\end_layout
+
+\begin_layout Plain Layout
+
+b = 1 / epsilon;
+\end_layout
+
+\begin_layout Plain Layout
+
+c = -epsilon;
+\end_layout
+
+\begin_layout Plain Layout
+
+p = poly([c b a], "x", "coeff");
+\end_layout
+
+\begin_layout Plain Layout
+
+assert_checkequal(raices(p), roots(p));
+\end_layout
+
+\begin_layout Plain Layout
+
+error1 = abs(raices(p)(1) - resolvente(p)(1))
+\end_layout
+
+\begin_layout Plain Layout
+
+error2 = abs(raices(p)(1) - resolvente(p)(1))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Usando aritmética de cuatro dígitos de precisión (mantiza decimal de 4 dígitos
+ con redondeo), sume la siguiente expresión 
+\begin_inset Formula 
+\[
+0,9222\cdot10^{4}+0,9123\cdot10^{3}+0,3244\cdot10^{3}+0,2849\cdot10^{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+tanto ordenando los números de mayor a menor (en valor absoluto), como de
+ menor a mayor.
+ Realiza cada operación de forma separada, primero igualando exponentes
+ y luego normalizando el resultado en cada paso.
+ ¿Cuál de las dos posibilidades es más exacta? Justifique los resultados
+ que encuentre.
+\end_layout
+
+\begin_layout Subparagraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0,9222\cdot10^{4}+0,9123\cdot10^{3}+0,3244\cdot10^{3}+0,2849\cdot10^{3}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,9123\cdot10^{3}=0,09123\cdot10^{4}\to0,0912\cdot10^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,9222\cdot10^{4}+0,0912\cdot10^{4}=1,0134\cdot10^{4}=0,10134\cdot10^{5}\to0,1013\cdot10^{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,3244\cdot10^{3}=0,03244\cdot10^{4}\to0,0324\cdot10^{4}=0,00324\cdot10^{5}\to0,0032\cdot10^{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,1013\cdot10^{5}+0,0032\cdot10^{5}=0,1045\cdot10^{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,2849\cdot10^{3}=0,02849\cdot10^{4}\to0,0285\cdot10^{4}=0,00285\cdot10^{5}\to0,0029\cdot10^{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,1045\cdot10^{5}+0,0029\cdot10^{5}=0,1074\cdot10^{5}=10740$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0,2849\cdot10^{3}+0,3244\cdot10^{3}+0,9123\cdot10^{3}+0,9222\cdot10^{4}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,2849\cdot10^{3}+0,3244\cdot10^{3}=0,6093\cdot10^{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,6093\cdot10^{3}+0,9123\cdot10^{3}=1,5216\cdot10^{3}=0,15216\cdot10^{4}\to0,1522\cdot10^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,1522\cdot10^{4}+0,9222\cdot10^{4}=1,0744\cdot10^{4}=0,10744\cdot10^{5}\to0,1074\cdot10^{5}=10740$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,9222\cdot10^{4}+0,9123\cdot10^{3}+0,3244\cdot10^{3}+0,2849\cdot10^{3}=10743,6$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|10743,6-10740\right|=3,6=\left|10743,6-10740\right|$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+El algoritmo de Horner se usa para evaluar de forma eficiente funciones
+ polinómicas.
+ Dado un polinomio 
+\begin_inset Formula $p\left(x\right)=a_{0}+a_{1}x+\dots+a_{n}x^{n}$
+\end_inset
+
+ a coeficientes reales, se genera una secuencia de constantes dadas por:
+\begin_inset Formula 
+\[
+\begin{aligned}b_{n} & =a_{n}\\
+b_{i} & =a_{i}+x_{0}b_{i+1}\,\left(i=n-1,\dots,1,0\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+donde 
+\begin_inset Formula $b_{0}=p\left(x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que dado un 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{0}=p\left(x_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Implementar el algoritmo de Horner para calcular 
+\begin_inset Formula $p\left(x_{0}\right)$
+\end_inset
+
+ en Scilab.
+\end_layout
+
+\begin_layout Enumerate
+Dado 
+\begin_inset Formula $q\left(x\right)=b_{1}+b_{2}x+\dots+b_{n}x^{n-1}$
+\end_inset
+
+, mostrar que 
+\begin_inset Formula $p'\left(x_{0}\right)=q\left(x_{0}\right)$
+\end_inset
+
+.
+ Verificar que 
+\begin_inset Formula $p\left(x\right)=b_{0}+\left(x-x_{0}\right)q\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Implementar una generalización del algoritmo horner dado en Scilab, de tal
+ forma que se pueda calcular 
+\begin_inset Formula $p\left(x_{0}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $p'\left(x_{0}\right)$
+\end_inset
+
+ al mismo tiempo.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function bi = aux(p, x0, i)
+\end_layout
+
+\begin_layout Plain Layout
+
+    n = degree(p)
+\end_layout
+
+\begin_layout Plain Layout
+
+    if i == n then
+\end_layout
+
+\begin_layout Plain Layout
+
+        bi = coeff(p, n)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        ai = coeff(p, i)
+\end_layout
+
+\begin_layout Plain Layout
+
+        bi = ai + x0 * aux(p, x0, i + 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function b0 = calcular(p, x0)
+\end_layout
+
+\begin_layout Plain Layout
+
+    b0 = aux(p, x0, 0)
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+p = poly([3 2 1], "x", "coeff");
+\end_layout
+
+\begin_layout Plain Layout
+
+assert_checkequal(calcular(p, 4), horner(p, 4));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Implementar en Scilab una función taylor que calcule el valor de un polinomio
+ de Taylor de grado 
+\begin_inset Formula $n$
+\end_inset
+
+ de una función 
+\begin_inset Formula $f$
+\end_inset
+
+ en un punto dado 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
