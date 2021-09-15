@@ -766,7 +766,7 @@ y como
 \begin_inset Formula $\sum_{n=0}^{\infty}\left(-\frac{1}{2}\right)^{n}$
 \end_inset
 
- es una serie geométrica de radio menor a 1 resulta que la serie original
+ es una serie geométrica de razón menor a 1 resulta que la serie original
  converge a
 \begin_inset Formula 
 \[
@@ -788,7 +788,7 @@ Observemos que
 
 \end_inset
 
-y por aparecer una serie geometrica de radio mayor a 1, la serie original
+y por aparecer una serie geometrica de razón mayor a 1, la serie original
  no converge.
 \end_layout
 
@@ -903,7 +903,7 @@ Observemos que:
 
 \end_inset
 
-y por ser series geométricas de radio menor a uno la serie converge a
+y por ser series geométricas de razón menor a uno la serie converge a
 \begin_inset Formula 
 \[
 \frac{1}{2}\left(\frac{1}{1-\nicefrac{1}{2}}\right)-\frac{1}{3}\left(\frac{1}{1-\nicefrac{1}{3}}\right)=\frac{1}{2}\left(\frac{1}{\nicefrac{1}{2}}\right)-\frac{1}{3}\left(\frac{1}{\nicefrac{2}{3}}\right)=1-\frac{3}{6}=\frac{1}{2}
@@ -1005,21 +1005,216 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Observemos que 
+\begin_inset Formula $\frac{1}{3^{n}+1}>0$
+\end_inset
+
+ luego:
+\begin_inset Formula 
+\[
+\lim_{x\to\infty}\frac{\frac{1}{3^{n+1}+1}}{\frac{1}{3^{n}+1}}=\lim_{x\to\infty}\frac{3^{n}+1}{3^{n+1}+1}\overset{LH}{=}\lim_{x\to\infty}\frac{n3^{n-1}}{\left(n+1\right)3^{n}}=\lim_{x\to\infty}\frac{n}{\left(n+1\right)3}\overset{LH}{=}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overset{LH}{=}\lim_{x\to\infty}\frac{1}{3}=\frac{1}{3}
+\]
+
+\end_inset
+
+Como 
+\begin_inset Formula $\frac{1}{3}<1$
+\end_inset
+
+, por el criterio del cociente la serie converge.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Observemos que 
+\begin_inset Formula $0<\left(\frac{4}{3}\right)^{n}<\frac{4^{n}}{3^{n}-1}$
+\end_inset
+
+ y que 
+\begin_inset Formula $\left(\frac{4}{3}\right)^{n}$
+\end_inset
+
+ diverge por ser una geométrica de razón mayor a 1.
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a_{n}=\left(\frac{4}{3}\right)^{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $b_{n}=\frac{4^{n}}{3^{n}-1}$
+\end_inset
+
+, como 
+\begin_inset Formula $a_{n}\leq1\cdot b_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ diverge, entonces por el criterio de comparación, la serie diverge.
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Consideremos 
+\begin_inset Formula $\left|b\right|>a>1$
+\end_inset
+
+: La serie diverge.
+ COMPLETAR.
+\end_layout
+
+\begin_layout Itemize
+Consideremos 
+\begin_inset Formula $\left|b\right|<a$
+\end_inset
+
+: Observemos que
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\sqrt[n]{\frac{\left|b\right|^{n}}{a^{n}}}=\lim_{n\to\infty}\frac{\left|b\right|}{a}=\frac{\left|b\right|}{a}<1
+\]
+
+\end_inset
+
+por lo que la serie 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{\left|b\right|^{n}}{a^{n}}$
+\end_inset
+
+ converge como consecuencia del criterio de la raiz.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Sean 
+\begin_inset Formula $a_{n}=\frac{\left|b\right|^{n}}{n\left(1+a^{n}\right)}$
+\end_inset
+
+ y 
+\begin_inset Formula $b_{n}=\frac{\left|b\right|^{n}}{a^{n}}$
+\end_inset
+
+, como 
+\begin_inset Formula $a_{n}\leq1\cdot b_{n}$
+\end_inset
+
+ y 
+\begin_inset Formula $\sum_{n=1}^{\infty}b_{n}$
+\end_inset
+
+ converge, entonces por el criterio de comparación, la serie original converge.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Consideremos 
+\begin_inset Formula $a\leq5$
+\end_inset
+
+: Observemos que 
+\begin_inset Formula $\frac{1}{n^{2}}\leq1\cdot\frac{1}{2^{n}}$
+\end_inset
+
+ (para 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+) y que 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{2^{n}}$
+\end_inset
+
+ converge (serie geométrica) luego por el criterio de comparación también
+ converge 
+\begin_inset Formula $\sum_{n=1}^{\infty}\frac{1}{n^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Además como
+\begin_inset Formula 
+\[
+\frac{a^{n}}{\left(n+2\right)\left(n+a\right)5^{n}}=\frac{1}{\left(n+2\right)\left(n+a\right)\left(\frac{5}{a}\right)^{n}}<\frac{1}{n^{2}}
+\]
+
+\end_inset
+
+nuevamente por el criterio de comparación, la serie original converge.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Consideremos 
+\begin_inset Formula $a>5$
+\end_inset
+
+: Observemos que
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}\frac{\frac{a^{n+1}}{\left(n+1+2\right)\left(n+1+a\right)5^{n+1}}}{\frac{a^{n}}{\left(n+2\right)\left(n+a\right)5^{n}}}=\lim_{n\to\infty}\frac{a^{n+1}\left(n+2\right)\left(n+a\right)5^{n}}{\left(n+1+2\right)\left(n+1+a\right)5^{n+1}a^{n}}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\lim_{n\to\infty}\frac{a\left(n+2\right)\left(n+a\right)}{\left(n+3\right)\left(n+1+a\right)5}=\lim_{n\to\infty}\frac{a\left(n^{2}+na+2n+2a\right)}{5n^{2}+5n+5na+15n+15+15a}=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\lim_{n\to\infty}\frac{an^{2}+na^{2}+2n+2a}{5n^{2}+5n+5na+15n+15+15a}\overset{LH}{=}\lim_{n\to\infty}\frac{2an+a^{2}+2a}{10n+5+5a+15}\overset{LH}{=}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overset{LH}{=}\lim_{n\to\infty}\frac{2a}{10}=\lim_{n\to\infty}\frac{a}{5}>1
+\]
+
+\end_inset
+
+luego por el criterio del cociente, la serie diverge.
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document
