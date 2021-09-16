@@ -313,7 +313,7 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $0,3244\cdot10^{3}=0,03244\cdot10^{4}\to0,0324\cdot10^{4}=0,00324\cdot10^{5}\to0,0032\cdot10^{5}$
+\begin_inset Formula $0,3244\cdot10^{3}=0,03244\cdot10^{4}=0,003244\cdot10^{5}\to0,0032\cdot10^{5}$
 \end_inset
 
 
@@ -327,14 +327,14 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $0,2849\cdot10^{3}=0,02849\cdot10^{4}\to0,0285\cdot10^{4}=0,00285\cdot10^{5}\to0,0029\cdot10^{5}$
+\begin_inset Formula $0,2849\cdot10^{3}=0,02849\cdot10^{4}=0,002849\cdot10^{5}\to0,0028\cdot10^{5}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $0,1045\cdot10^{5}+0,0029\cdot10^{5}=0,1074\cdot10^{5}=10740$
+\begin_inset Formula $0,1045\cdot10^{5}+0,0028\cdot10^{5}=0,1073\cdot10^{5}=10730$
 \end_inset
 
 
@@ -387,10 +387,15 @@ Solución
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\left|10743,6-10740\right|=3,6=\left|10743,6-10740\right|$
+\begin_inset Formula $\left|10743,6-10740\right|=3,6<13,6=\left|10743,6-10730\right|$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+La posibilidad mas exacta es ordenando de menor a mayor, puesto que es la
+ que produce menor error.
 \end_layout
 
 \end_deeper
@@ -488,7 +493,7 @@ Observemos que
 \begin{align*}
 p\left(x_{0}\right) & =\sum_{i=0}^{n}a_{i}x_{0}^{i}=a_{n}x_{0}^{n}+\sum_{i=0}^{n-1}a_{i}x_{0}^{i}=b_{n}x_{0}^{n}+\sum_{i=0}^{n-1}\left(b_{i}-x_{0}b_{i+1}\right)x_{0}^{i}=\\
  & =b_{n}x_{0}^{n}+\sum_{i=0}^{n-1}\left(b_{i}x_{0}^{i}-x_{0}b_{i+1}x_{0}^{i}\right)=b_{n}x_{0}^{n}+\sum_{i=0}^{n-1}\left(b_{i}x_{0}^{i}-b_{i+1}x_{0}^{i+1}\right)=\\
- & =b_{n}x_{0}^{n}+b_{0}-b_{n}x_{0}^{n}\text{  (propiedad telescópica)}\\
+ & =b_{n}x_{0}^{n}+b_{0}-b_{n}x_{0}^{n}\text{ (propiedad telescópica)}\\
  & =b_{0}
 \end{align*}
 
@@ -600,9 +605,64 @@ assert_checkequal(calcular(p, 4), horner(p, 4));
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Recordemos que la derivada de 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ es 
+\begin_inset Formula $p'\left(x\right)=\sum_{i=1}^{n}a_{i}\cdot i\cdot x^{i-1}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\hspace{-3cm}\begin{aligned}p'\left(x_{0}\right) & =\sum_{i=1}^{n}a_{i}\cdot i\cdot x_{0}^{i-1}=a_{n}\cdot n\cdot x_{0}^{n-1}+\sum_{i=1}^{n-1}a_{i}\cdot i\cdot x_{0}^{i-1}=\\
+ & =b_{n}\cdot n\cdot x_{0}^{n-1}+\sum_{i=1}^{n-1}\left(b_{i}-x_{0}b_{i+1}\right)\cdot i\cdot x_{0}^{i-1}=\\
+ & =b_{n}\cdot n\cdot x_{0}^{n-1}+\sum_{i=1}^{n-1}\left(b_{i}\cdot x_{0}^{i-1}-x_{0}b_{i+1}\cdot x_{0}^{i-1}\right)\cdot i=\\
+ & =b_{n}\cdot n\cdot x_{0}^{n-1}+\sum_{i=1}^{n-1}b_{i}\cdot x_{0}^{i-1}\cdot i-\sum_{i=1}^{n-1}x_{0}b_{i+1}\cdot x_{0}^{i-1}\cdot i=\\
+ & =b_{n}\cdot n\cdot x_{0}^{n-1}+\sum_{i=1}^{n-1}b_{i}\cdot x_{0}^{i-1}\cdot i-\sum_{i=1}^{n-1}b_{i+1}\cdot x_{0}^{i}\cdot i=\\
+ & =b_{n}\cdot n\cdot x_{0}^{n-1}+\sum_{i=1}^{n-1}b_{i}\cdot x_{0}^{i-1}\cdot i-\sum_{i=2}^{n}b_{i}\cdot x_{0}^{i-1}\cdot\left(i-1\right)=\\
+ & =\cancel{b_{n}\cdot n\cdot x_{0}^{n-1}}+b_{1}+\sum_{i=2}^{n-1}b_{i}\cdot x_{0}^{i-1}\cdot i-\cancel{b_{n}\cdot x_{0}^{n-1}\cdot\left(n-1\right)}-\sum_{i=2}^{n-1}b_{i}\cdot x_{0}^{i-1}\cdot\left(i-1\right)=\\
+ & =b_{n}\cdot x_{0}^{n-1}+b_{1}+\cancel{{\color{blue}\sum_{i=2}^{n-1}b_{i}\cdot x_{0}^{i-1}}\cdot i}-\cancel{{\color{red}\sum_{i=2}^{n-1}b_{i}\cdot x_{0}^{i-1}}\cdot\left(i-1\right)}=\\
+ & =b_{n}\cdot x_{0}^{n-1}+b_{1}+\sum_{i=2}^{n-1}b_{i}\cdot x_{0}^{i-1}\cdot1=b_{1}+b_{2}x_{0}+\dots+b_{n}x_{0}^{n-1}=q\left(x_{0}\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Veamos que 
+\begin_inset Formula $p\left(x\right)=b_{0}+\left(x-x_{0}\right)q\left(x\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\hspace{-3cm}\begin{aligned}p\left(x\right) & =\sum_{i=0}^{n}a_{i}\cdot x^{i}=\sum_{i=0}^{n-1}a_{i}\cdot x^{i}+a_{n}x^{n}=\sum_{i=0}^{n-1}a_{i}\cdot x^{i}+b_{n}x^{n}=\\
+ & =\sum_{i=0}^{n-1}\left(b_{i}-x_{0}b_{i+1}\right)\cdot x^{i}+b_{n}x^{n}=\sum_{i=0}^{n-1}\left(b_{i}\cdot x^{i}-x_{0}\cdot b_{i+1}\cdot x^{i}\right)+b_{n}x^{n}\\
+ & =x\sum_{i=0}^{n-1}b_{i}\cdot x^{i-1}-x_{0}\sum_{i=0}^{n-1}b_{i+1}\cdot x^{i}+b_{n}x^{n}=b_{0}+x\sum_{i=1}^{n-1}b_{i}\cdot x^{i-1}-x_{0}\sum_{i=0}^{n-1}b_{i+1}\cdot x^{i}+b_{n}x^{n}=\\
+ & =b_{0}+x\sum_{i=1}^{n-1}b_{i}\cdot x^{i-1}-x_{0}\sum_{i=1}^{n}b_{i}\cdot x^{i-1}+b_{n}x^{n}=b_{0}+x\sum_{i=1}^{n}b_{i}\cdot x^{i-1}-x_{0}\sum_{i=1}^{n}b_{i}\cdot x^{i-1}=\\
+ & =b_{0}+xq\left(x\right)-x_{0}q\left(x\right)=b_{0}+\left(x-x_{0}\right)q\left(x\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -657,10 +717,6 @@ derivar
 
 \begin_layout Paragraph
 Soluciones
-\begin_inset Newpage pagebreak
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -692,6 +748,22 @@ function y = derivar(f, v, n, h)
 \begin_layout Plain Layout
 
         d0 = f
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -736,7 +808,7 @@ function y = derivar(f, v, n, h)
 
 \begin_layout Plain Layout
 
-            deff("y = " + nombre + "(x)", cuerpo)
+            deff("y = " + nombre + argumento, cuerpo)
 \end_layout
 
 \begin_layout Plain Layout
@@ -801,23 +873,128 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function valor = taylor(f, v, n)
+\end_layout
+
+\begin_layout Plain Layout
+
+    h = 0.01
+\end_layout
+
+\begin_layout Plain Layout
+
+       
+\end_layout
+
+\begin_layout Plain Layout
+
+    for i = 1:n
+\end_layout
+
+\begin_layout Plain Layout
+
+        numerador = derivar(f, 0 , i, h)
+\end_layout
+
+\begin_layout Plain Layout
+
+        denominador = factorial(i)
+\end_layout
+
+\begin_layout Plain Layout
+
+        coeficientes(i) = numerador / denominador
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+    p = poly(coeficientes, "x", "coeff")
+\end_layout
+
+\begin_layout Plain Layout
+
+    valor = horner(p, v) + f(0)
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset space ~
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Verificar que la aproximación por polinomio de Taylor de grado 10 de la
+ función 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+ permite obtener el valor correcto de 
+\begin_inset Formula $e^{−2}$
+\end_inset
+
+ redondeado a tres dígitos (utilizando la precisión de Scilab).
+ 
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Utilizar el polinomio de Taylor de grado 10 de la función 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+ para aproximar
 \end_layout
 
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $e^{-2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\nicefrac{1}{e^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+empleando aritmética de punto flotante con redondeo a tres dígitos decimales.
+ El valor correcto en 3 dígitos es 0,135.
+ ¿Cuál es la mejor aproximación y por qué?
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 Soluciones
 \end_layout
