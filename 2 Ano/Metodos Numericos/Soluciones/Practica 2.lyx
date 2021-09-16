@@ -479,7 +479,26 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Observemos que 
+\begin_inset Formula $b_{i}=a_{i}+x_{0}b_{i+1}\iff a_{i}=b_{i}-x_{0}b_{i+1}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\begin{align*}
+p\left(x_{0}\right) & =\sum_{i=0}^{n}a_{i}x_{0}^{i}=a_{n}x_{0}^{n}+\sum_{i=0}^{n-1}a_{i}x_{0}^{i}=b_{n}x_{0}^{n}+\sum_{i=0}^{n-1}\left(b_{i}-x_{0}b_{i+1}\right)x_{0}^{i}=\\
+ & =b_{n}x_{0}^{n}+\sum_{i=0}^{n-1}\left(b_{i}x_{0}^{i}-x_{0}b_{i+1}x_{0}^{i}\right)=b_{n}x_{0}^{n}+\sum_{i=0}^{n-1}\left(b_{i}x_{0}^{i}-b_{i+1}x_{0}^{i+1}\right)=\\
+ & =b_{n}x_{0}^{n}+b_{0}-b_{n}x_{0}^{n}\text{  (propiedad telescópica)}\\
+ & =b_{0}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -590,20 +609,164 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Implementar en Scilab la función 
+\family typewriter
+derivar
+\family default
+ que toma una función 
+\begin_inset Formula $f$
+\end_inset
+
+, un valor 
+\begin_inset Formula $v$
+\end_inset
+
+, un orden 
+\begin_inset Formula $n$
+\end_inset
+
+ y un paso 
+\begin_inset Formula $h$
+\end_inset
+
+ y retorna el valor de evaluar la derivada de 
+\begin_inset Formula $f$
+\end_inset
+
+ de orden 
+\begin_inset Formula $n$
+\end_inset
+
+ en el punto 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ Implementar usando cociente incremental y luego usando el comando numderivative
+ implementado en Scilab.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+¿Cómo son los errores cometidos en cada caso?
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+¿Qué hace que el error en la implementación por cociente incremental crezca?
 \end_layout
 
 \begin_layout Paragraph
 Soluciones
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function y = derivar(f, v, n, h)
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n == 0 then
+\end_layout
+
+\begin_layout Plain Layout
+
+        y = f(v)
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        d0 = f
+\end_layout
+
+\begin_layout Plain Layout
+
+        for i = 1:n
+\end_layout
+
+\begin_layout Plain Layout
+
+            argumento = "(x)"
+\end_layout
+
+\begin_layout Plain Layout
+
+            incremento = "(x + " + string(h) + ")"
+\end_layout
+
+\begin_layout Plain Layout
+
+            nombre = "d" + string(i)
+\end_layout
+
+\begin_layout Plain Layout
+
+            anterior = "d" + string(i - 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+            cuerpo = "y = (" + anterior + incremento
+\end_layout
+
+\begin_layout Plain Layout
+
+            cuerpo = cuerpo + "-" + anterior + argumento
+\end_layout
+
+\begin_layout Plain Layout
+
+            cuerpo = cuerpo + ") /" + string(h)
+\end_layout
+
+\begin_layout Plain Layout
+
+            deff("y = " + nombre + "(x)", cuerpo)
+\end_layout
+
+\begin_layout Plain Layout
+
+        end
+\end_layout
+
+\begin_layout Plain Layout
+
+        deff("y = dn" + "(x)", cuerpo)
+\end_layout
+
+\begin_layout Plain Layout
+
+        y = dn(v);
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
