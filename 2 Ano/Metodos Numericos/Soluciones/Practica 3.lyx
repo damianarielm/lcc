@@ -1,0 +1,924 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\end_preamble
+\use_default_options true
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Determine gráficamente valores aproximados de las primeras tres raíces positivas
+ de la función 
+\begin_inset Formula $f\left(x\right)=\cos\left(x\right)\cosh\left(x\right)+1$
+\end_inset
+
+.
+ Recordar que 
+\begin_inset Formula $\cosh\left(x\right)=\frac{e^{x}+e^{-x}}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset space \hspace*{}
+\length -3.75cm
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+begin{axis}[axis lines = middle, x = 2.3cm, y = 1cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 xmin = 0, xmax = 8.1, ymin = -0.25, ymax = 2.25,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 xtick distance = 1, minor tick num = 6,
+\end_layout
+
+\begin_layout Plain Layout
+
+                 restrict y to domain =-3:6, domain = 0:8]
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\backslash
+addplot+[no marks, samples = 5000] {cos(deg(x)) * ((e^x+e^(-x))/2) + 1};
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+end{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(1+\frac{6}{7}+0,01\right)\approx0,0327524$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(4+\frac{5}{7}-0,02\right)\approx0,010440$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f\left(7+\frac{6}{7}-0,00234\right)\approx-0,0586$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Usando el método de la bisección, hallar todas las raíces de las siguientes
+ ecuaciones con una presición de 
+\begin_inset Formula $10^{-2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\sin\left(x\right)=\nicefrac{x^{2}}{2}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $e^{-x}=x^{4}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\log\left(x\right)=x-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function y = a(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = sin(x) - x^2 / 2
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+function y = b(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = exp(-x) - x^4
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+function y = c(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = log10(x) - x + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function r = biseccion(f, a, b, e)
+\end_layout
+
+\begin_layout Plain Layout
+
+    c = (a + b) / 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    if b - c <= e then
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = c
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        if f(b)*f(c) <= 0 then
+\end_layout
+
+\begin_layout Plain Layout
+
+            r = biseccion(f, c, b, e)
+\end_layout
+
+\begin_layout Plain Layout
+
+        else
+\end_layout
+
+\begin_layout Plain Layout
+
+            r = biseccion(f, a, c, e)
+\end_layout
+
+\begin_layout Plain Layout
+
+        end
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", biseccion(a, -1, 1, 10^-2))
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", biseccion(a, 1.4, 1.5, 10^-2))
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", biseccion(b, -1.5, -1.4, 10^-2))
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", biseccion(b, 0.8, 0.9, 10^-2))
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", biseccion(c, 0.1, 0.2, 10^-2))
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", biseccion(c, 0.8, 1.1, 10^-2))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r_{1}\approx0,007813$
+\end_inset
+
+; 
+\begin_inset Formula $r_{2}\approx1,406250$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r_{1}\approx-1,431250$
+\end_inset
+
+; 
+\begin_inset Formula $r_{2}\approx0,818750$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $r_{1}\approx0,131250$
+\end_inset
+
+; 
+\begin_inset Formula $r_{2}\approx0,996875$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Aplicar el método de la secante para hallar la raíz no nula de 
+\begin_inset Formula $f\left(x\right)=\nicefrac{x^{2}}{4}-\sin\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function y = f(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = x^2 / 4 - sin(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function r = secante(f, xn1, xn, e)
+\end_layout
+
+\begin_layout Plain Layout
+
+    if abs(xn - xn1) <= e then
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = xn1
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        numerador = xn - xn1
+\end_layout
+
+\begin_layout Plain Layout
+
+        denominador = f(xn) - f(xn1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        sig = xn - f(xn) * (numerador / denominador)
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = secante(f, xn, sig, e)
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", secante(f, -0.1, 0.1, 0.01))
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", secante(f, 1.3, 1.5, 0.01))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r_{1}\approx0,002504$
+\end_inset
+
+; 
+\begin_inset Formula $r_{2}\approx1,934653$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Qué se obtiene al aplicar reiteradamente a un valor cualquiera la función
+ coseno?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Consideramos la iteración 
+\begin_inset Formula $x_{k+1}=2^{x_{k}-1}$
+\end_inset
+
+ para resolver la ecuación 
+\begin_inset Formula $2x=2^{x}$
+\end_inset
+
+.
+ Determinar para que valores iniciales 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ la iteración converge y en ese caso, cual es el límite.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Convertir la ecuación 
+\begin_inset Formula $x^{2}-5=0$
+\end_inset
+
+ en el problema de punto fijo 
+\begin_inset Formula $x=x+c\left(x^{2}-5\right):=g\left(x\right)$
+\end_inset
+
+, con 
+\begin_inset Formula $c$
+\end_inset
+
+ constante positiva.
+ Elegir un valor adecuado de 
+\begin_inset Formula $c$
+\end_inset
+
+ que asegure la convergencia de 
+\begin_inset Formula $x_{n+1}=x_{n}+c\left(x_{n}^{2}-5\right)$
+\end_inset
+
+ a 
+\begin_inset Formula $z=-\sqrt{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dada la profundidad 
+\begin_inset Formula $h$
+\end_inset
+
+ y el período 
+\begin_inset Formula $T$
+\end_inset
+
+ de una ola, su longitud de onda 
+\begin_inset Formula $l$
+\end_inset
+
+ surge de la relación de dispersión 
+\begin_inset Formula $w^{2}=gf\tanh\left(hd\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $w=\nicefrac{2\pi}{T}$
+\end_inset
+
+ es una pulsación, 
+\begin_inset Formula $g$
+\end_inset
+
+ es la aceleración de la gravedad, y 
+\begin_inset Formula $d=\nicefrac{2\pi}{l}$
+\end_inset
+
+ es el número de donde.
+ Conociendo 
+\begin_inset Formula $g=9,8\frac{m}{s^{2}}$
+\end_inset
+
+ y 
+\begin_inset Formula $h=4m$
+\end_inset
+
+, se desea calcular cuál es la longitud de onda correspondiente a una ola
+ con 
+\begin_inset Formula $T=5s$
+\end_inset
+
+.
+ Construir un algoritmo en Scilab que efectúe los siguientes calculos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Utilizar un método de punto fijo para calcular la solución con un dígito
+ de presición, partiendo de 
+\begin_inset Formula $d=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Utilizar el método de Newton para calcular la solución con 4 dígitos de
+ presicion, partiendo del resultado obtenido en el ítem anterior.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Se requiere calcular la solución de la ecuación 
+\begin_inset Formula $e^{x}=3x$
+\end_inset
+
+, usando iteración simple con diferentes funciones de iteración:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Standard
+¿Cuáles son útiles?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Efectuar cinco iteraciones del método de Newton para el siguiente sistema:
+\begin_inset Formula 
+\[
+\begin{aligned}0 & =1+x^{2}-y^{2}+e^{x}\cos\left(y\right)\\
+0 & =2xy+e^{x}\sin\left(y\right)
+\end{aligned}
+\]
+
+\end_inset
+
+utilizando como valor inicial 
+\begin_inset Formula $x_{0}=-1$
+\end_inset
+
+ y 
+\begin_inset Formula $y_{0}=4$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Resolver el sistema
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}0 & =x^{2}+xy^{3}-9\\
+0 & =3x^{2}y-4-y^{3}
+\end{aligned}
+\]
+
+\end_inset
+
+usando el método de Newton para cada uno de los siguientes valores iniciales:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(1,2;2,5\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-2;2,5\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-1,2;-2,5\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(2,-2,5\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
