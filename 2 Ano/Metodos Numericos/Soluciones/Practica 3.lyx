@@ -601,7 +601,187 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function b = ej5(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+    b = 2*x == 2^x
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function xk1 = g(xk)
+\end_layout
+
+\begin_layout Plain Layout
+
+    xk1 = 2^(xk - 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function r = fijo(ecuacion, g, xk)
+\end_layout
+
+\begin_layout Plain Layout
+
+    if ecuacion(xk) then
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = xk
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = fijo(ecuacion, g, g(xk))
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Para 
+\begin_inset Formula $b\leq1$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+\begin{aligned} & x\leq1\\
+\iff & x\leq0+1\\
+\iff & x\leq\log_{2}\left(1\right)+1\\
+\iff & x-1\leq\log_{2}\left(1\right)\\
+\iff & 2^{x-1}\leq1=b\\
+\iff & g\left(x\right)\leq b
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Para 
+\begin_inset Formula $a\leq1$
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\[
+\begin{aligned} & 1\leq x\\
+\iff & 1+\log_{2}\left(a\right)\leq x\\
+\iff & \log_{2}\left(a\right)\leq x-1\\
+\iff & a\leq2^{x-1}\\
+\iff & a\leq g\left(x\right)
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+De las dos condiciones anteriores sabemos que 
+\begin_inset Formula $a\leq x_{k}\leq b\Rightarrow a\leq g\left(x_{k}\right)\leq b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Ahora, observemos que para 
+\begin_inset Formula $x\in\left[a,b\right]$
+\end_inset
+
+ resulta 
+\begin_inset Formula 
+\[
+g'\left(x\right)=\ln\left(2\right)\cdot2^{x-1}=\underbrace{\ln\left(2\right)}_{\leq1}\cdot\underbrace{g\left(x\right)}_{\leq1}\leq1
+\]
+
+\end_inset
+
+luego 
+\begin_inset Formula $\lambda=\underset{x\in\left[a,b\right]}{\sup}\left|g'\left(x\right)\right|\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Finalmente por el teorema de condición suficiente de convergencia sabemos
+ que para cualquier 
+\begin_inset Formula $x_{0}\in\left[a,b\right]$
+\end_inset
+
+, la iteración 
+\begin_inset Formula $x_{n+1}=g\left(x_{n}\right)$
+\end_inset
+
+ converge a 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -658,7 +838,7 @@ Dada la profundidad
 \end_inset
 
  surge de la relación de dispersión 
-\begin_inset Formula $w^{2}=gf\tanh\left(hd\right)$
+\begin_inset Formula $w^{2}=g\cdot d\cdot\tanh\left(h\cdot d\right)$
 \end_inset
 
 , donde 
@@ -673,7 +853,7 @@ Dada la profundidad
 \begin_inset Formula $d=\nicefrac{2\pi}{l}$
 \end_inset
 
- es el número de donde.
+ es el número de onda.
  Conociendo 
 \begin_inset Formula $g=9,8\frac{m}{s^{2}}$
 \end_inset
@@ -729,19 +909,31 @@ Se requiere calcular la solución de la ecuación
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $g_{1}\left(x\right)=\nicefrac{e^{x}}{3}$
+\end_inset
+
+,
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $g_{2}\left(x\right)=\frac{e^{x}-x}{2}$
+\end_inset
+
+,
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $g_{3}\left(x\right)=\log\left(3x\right)$
+\end_inset
+
+,
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $g_{4}\left(x\right)=e^{x}-2x$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -797,7 +989,116 @@ Solución
 \end_layout
 
 \begin_layout Standard
-COMPLETAR.
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function z = ej9(v)
+\end_layout
+
+\begin_layout Plain Layout
+
+    x = v(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = v(2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    fx = 1 + x^2 - y^2 + exp(x) * cos(y)
+\end_layout
+
+\begin_layout Plain Layout
+
+    fy = 2*x*y + exp(x) * sin(y)
+\end_layout
+
+\begin_layout Plain Layout
+
+    z = [fx; fy]
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function r = newton(f, xn, n)
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n == 0 then
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = xn
+\end_layout
+
+\begin_layout Plain Layout
+
+    else
+\end_layout
+
+\begin_layout Plain Layout
+
+        j = numderivative(f, xn)^-1
+\end_layout
+
+\begin_layout Plain Layout
+
+        xn1 = xn - j * f(xn)
+\end_layout
+
+\begin_layout Plain Layout
+
+        r = newton(f, xn1, n - 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", newton(ej9, [-1; 4], 5))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\approx-0,293163;y\approx1.172660$
+\end_inset
+
+.
 \end_layout
 
 \end_deeper
@@ -851,28 +1152,181 @@ usando el método de Newton para cada uno de los siguientes valores iniciales:
 Soluciones
 \end_layout
 
-\begin_layout Enumerate
-COMPLETAR.
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=Scilab"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function z = ej10(v)
+\end_layout
+
+\begin_layout Plain Layout
+
+    x = v(1)
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = v(2)
+\end_layout
+
+\begin_layout Plain Layout
+
+    fx = x^2 + x*y^3 - 9
+\end_layout
+
+\begin_layout Plain Layout
+
+    fy = 3*x^2*y - 4 - y^3
+\end_layout
+
+\begin_layout Plain Layout
+
+    z = [fx; fy]
+\end_layout
+
+\begin_layout Plain Layout
+
+endfunction
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", newton(ej10, [1.2; 2.5], 5)); printf("
+\backslash
+n")
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", newton(ej10, [-2; 2.5], 10)); printf("
+\backslash
+n")
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", newton(ej10, [-1.2; 2.5], 20)); printf("
+\backslash
+n")
+\end_layout
+
+\begin_layout Plain Layout
+
+printf("%f
+\backslash
+n", newton(ej10, [2; -2.5], 20)); printf("
+\backslash
+n")
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $x\approx1,336355;y\approx1,754235$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $x\approx-0,901266;y\approx-2,086588$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+\begin_inset Formula $x\approx-0,901266;y\approx-2,086588$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x\approx-3,001625;y\approx0,148108$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Sea 
+\begin_inset Formula $f:\mathbb{R}^{2}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f\in\mathcal{C}^{2}$
+\end_inset
+
+, una función definida en el dominio bidimiensional.
+ Las siguientes condiciones son suficientes para un mínimop local estricto
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+:
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\frac{\partial f}{\partial x}=\left[\frac{\partial f}{\partial x_{1}},\frac{\partial f}{\partial x_{2}}\right]=0$
+\end_inset
+
+ (gradiente nulo),
+\end_layout
+
+\begin_layout Itemize
+matriz hessiana 
+\begin_inset Formula $\frac{\partial^{2}f}{\partial x^{2}}=\begin{bmatrix}\frac{\partial^{2}f}{\partial x_{1}^{2}} & \frac{\partial^{2}f}{\partial x_{1}\partial x_{2}}\\
+\frac{\partial^{2}f}{\partial x_{2}\partial x_{1}} & \frac{\partial^{2}f}{\partial x_{2}^{2}}
+\end{bmatrix}$
+\end_inset
+
+ definida positiva.
+\end_layout
+
+\begin_layout Standard
+Se desea hallar los valores de 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ que minimizan la función
+\begin_inset Formula 
+\[
+f\left(x\right)=2x_{1}+3x_{2}^{2}+e^{2x_{1}^{2}+x_{2}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
@@ -890,21 +1344,71 @@ COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Corroborar que el punto hallado en el item anterior es un mínimo (local)
+ de 
+\begin_inset Formula $f$
+\end_inset
+
+ verificando el cumplimiento de la segunda condición.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+La presión requerida para sumergir un objeto grande y pesado en un terreno
+ suave y homógeneo que se encuentra sobre una base dura, puede predecirse
+ a partir de la presión requerida para sumergir objetos más pequeños en
+ el mismo suelo.
 \end_layout
 
 \begin_deeper
+\begin_layout Standard
+En particular la presion 
+\begin_inset Formula $p$
+\end_inset
+
+ necesaria para sumergir una lámina circular de radio 
+\begin_inset Formula $r$
+\end_inset
+
+ una distancia 
+\begin_inset Formula $d$
+\end_inset
+
+ en un terreno suave, donde la base dura yace a una distancia 
+\begin_inset Formula $D>d$
+\end_inset
+
+, puede aproximarse por una ecuación de la forma
+\begin_inset Formula 
+\[
+p=k_{1}e^{k_{2}r}+k_{3}r
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $k_{i},i=1,2,3$
+\end_inset
+
+ dependen de 
+\begin_inset Formula $d$
+\end_inset
+
+, pero no de 
+\begin_inset Formula $r$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Enumerate
 COMPLETAR.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Usando los cálculos realizados en el apartado anterior, predecir el radio
+ mínimo de una lámina circular que deberá sostener una carga de 500 libras
+ sumergiéndose menos de 1 pie.
 \end_layout
 
 \begin_layout Paragraph
