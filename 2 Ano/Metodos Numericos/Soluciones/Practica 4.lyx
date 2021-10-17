@@ -914,7 +914,7 @@ A partir de la información obtenida en la eliminación de Gauss, obtenga
 \end_inset
 
 , y utilize dicha factorización para resolver el sistema 
-\begin_inset Formula $Ax=b$
+\begin_inset Formula $Ax=\tilde{b}$
 \end_inset
 
 , donde 
@@ -929,13 +929,231 @@ Soluciones
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Consideremos la matriz ampliada:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E_{21}\left(4\right)A=\begin{pmatrix}1 & 2 & -2 & 1\\
+0 & -3 & 1 & 2\\
+5 & 25 & -15 & -3\\
+6 & -12 & -6 & 22
+\end{pmatrix}\iff
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E_{31}\left(5\right)E_{21}\left(4\right)A=\begin{pmatrix}1 & 2 & -2 & 1\\
+0 & -3 & 1 & 2\\
+0 & 15 & -5 & -8\\
+6 & -12 & -6 & 22
+\end{pmatrix}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{41}\left(6\right)E_{31}\left(5\right)E_{21}\left(4\right)A=\begin{pmatrix}1 & 2 & -2 & 1\\
+0 & -3 & 1 & 2\\
+0 & 15 & -5 & -8\\
+0 & -24 & 6 & 16
+\end{pmatrix}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{32}\left(-5\right)E_{41}\left(6\right)E_{31}\left(5\right)E_{21}\left(4\right)A=\begin{pmatrix}1 & 2 & -2 & 1\\
+0 & -3 & 1 & 2\\
+0 & 0 & \boldsymbol{0} & 2\\
+0 & -24 & 6 & 16
+\end{pmatrix}
+\]
+
+\end_inset
+
+luego debemos realizar una permutación, reajustar los indices y continuar,
+\begin_inset Formula 
+\[
+E_{42}\left(-5\right)E_{31}\left(6\right)E_{41}\left(5\right)E_{21}\left(4\right)P_{34}A=\begin{pmatrix}1 & 2 & -2 & 1\\
+0 & -3 & 1 & 2\\
+0 & -24 & 6 & 16\\
+0 & 0 & 0 & 2
+\end{pmatrix}\iff
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+E_{32}\left(8\right)E_{42}\left(-5\right)E_{31}\left(6\right)E_{41}\left(5\right)E_{21}\left(4\right)P_{34}A=\begin{pmatrix}1 & 2 & -2 & 1\\
+0 & -3 & 1 & 2\\
+0 & 0 & -2 & 0\\
+0 & 0 & 0 & 2
+\end{pmatrix}\iff
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+finalmente repetimos el proceso con 
+\begin_inset Formula $b$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+E_{32}\left(8\right)E_{42}\left(-5\right)E_{31}\left(6\right)E_{41}\left(5\right)E_{21}\left(4\right)P_{34}b=\begin{pmatrix}1\\
+-2\\
+11\\
+-15
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y resolvemos el sistema equivalente obteniendo,
+\begin_inset Formula 
+\[
+x=\begin{pmatrix}\nicefrac{59}{6}\\
+\nicefrac{-37}{6}\\
+\nicefrac{-11}{2}\\
+\nicefrac{-15}{2}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+De lo visto en el ejercicio anterior concluimos que la factorización 
+\begin_inset Formula $PA=LU$
+\end_inset
+
+ es:
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+PA=\begin{pmatrix}1 & 0 & 0 & 0\\
+4 & 1 & 0 & 0\\
+6 & 8 & 1 & 0\\
+5 & -5 & 0 & 1
+\end{pmatrix}\begin{pmatrix}1 & 2 & -2 & 1\\
+0 & -3 & 1 & 2\\
+0 & 0 & -2 & 0\\
+0 & 0 & 0 & 2
+\end{pmatrix}
+\]
+
+\end_inset
+
+luego:
+\begin_inset Formula 
+\[
+Ax=\tilde{b}\iff PAx=P\tilde{b}\iff LUx=P\tilde{b}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $y=Ux$
+\end_inset
+
+ entonces 
+\begin_inset Formula $Ly=P\tilde{b}$
+\end_inset
+
+ es el siguiente sistema de ecuaciones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S_{1}=\begin{cases}
+y_{1} & =2\\
+4y_{1}+y_{2} & =2\\
+6y_{1}+8y_{2}+y_{3} & =0\\
+5y_{1}-5y_{2}+y_{4} & =1
+\end{cases}
+\]
+
+\end_inset
+
+para el cual resulta
+\begin_inset Formula 
+\[
+y=\begin{pmatrix}2\\
+-6\\
+36\\
+-39
+\end{pmatrix}
+\]
+
+\end_inset
+
+que usaremos para resolver el sistema de ecuaciones 
+\begin_inset Formula $Ux=y$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+S_{2}=\begin{cases}
+x_{1}+2x_{2}-2x_{3}+x_{4} & =2\\
+-3x_{2}+x_{3}+2x_{4} & =-6\\
+-2x_{3} & =36\\
+2x_{4} & =-39
+\end{cases}
+\]
+
+\end_inset
+
+obteniendo finalmente
+\begin_inset Formula 
+\[
+x=\begin{pmatrix}\nicefrac{39}{2}\\
+-17\\
+-18\\
+\nicefrac{-39}{2}
+\end{pmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Construir un algoritmo para resolver sistemas lineales mediante la factorización
@@ -977,16 +1195,61 @@ COMPLETAR.
 
 \end_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Se proveé la factorización de Cholesky, programada en Scilab en la función
+ 
+\begin_inset listings
+lstparams "language=Scilab"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Cholesky
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-COMPLETAR.
+Estudiar el código de la función 
+\begin_inset listings
+lstparams "language=Scilab"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+Cholesky
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
-COMPLETAR.
+Aplicar la función para factorizar las siguientes matrices.
+ En todos los casos verificar que la factorización es correcta.
+\begin_inset Formula 
+\[
+A=\begin{pmatrix}16 & -12 & 8 & -16\\
+-12 & 18 & -6 & 9\\
+8 & -6 & 5 & -10\\
+-16 & 9 & -10 & 46
+\end{pmatrix},B=\begin{pmatrix}4 & 1 & 1\\
+8 & 2 & 2\\
+1 & 2 & 3
+\end{pmatrix},C=\begin{pmatrix}1 & 2\\
+2 & 4
+\end{pmatrix}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
