@@ -1,6 +1,6 @@
 ###### Año 2017
 
 * Pablo Fabian Verdes
-* Alejandro Hernandez
+* Alejandro Mario Hernandez
 * Mauro Lucci
 * Pamela Ines Viale
