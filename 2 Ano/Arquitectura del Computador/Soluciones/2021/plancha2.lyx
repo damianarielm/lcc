@@ -1,0 +1,2348 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../../../../lyx
+\use_default_options true
+\begin_removed_modules
+theorems-ams
+theorems-chap
+multicol
+\end_removed_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Cover
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Plancha 2
+\end_layout
+
+\begin_layout Author
+Ensamblador de x86_64
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+2022 - Arquitectura del Computador
+\end_layout
+
+\begin_layout Date
+Licenciatura en Ciencias de la Computación
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+Esta plancha de ejercicios introduce la arquitectura de CPU x86_64 y su
+ lenguaje de ensamblador.
+ El ensamblador para esta arquitectura viene en dos variantes de sintaxis
+ distintas: la de Intel y la de AT&T.
+ Nosotros usaremos exclusivamente la segunda, por ser la que emplean por
+ defecto las herramientas de GNU.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Recuadro
+status open
+
+\begin_layout Paragraph
+Nota
+\end_layout
+
+\begin_layout Plain Layout
+Los registros 
+\family typewriter
+rax
+\family default
+, 
+\family typewriter
+rcx
+\family default
+, 
+\family typewriter
+rdx
+\family default
+, 
+\family typewriter
+rsi
+\family default
+, 
+\family typewriter
+rdi
+\family default
+, 
+\family typewriter
+r8
+\family default
+, 
+\family typewriter
+r9
+\family default
+, 
+\family typewriter
+r10
+\family default
+ y 
+\family typewriter
+r11
+\family default
+, y sus subregistros, NO son preservados en llamadas a funciones de biblioteca
+ ni en llamadas al sistema (servicios del núcleo de sistema operativo).
+ Si se necesita preservar los valores de estos registros, lo mejor es guardarlos
+ en la pila.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Procedimiento
+\end_layout
+
+\begin_layout Standard
+Resuelva cada ejercicio en computadora.
+ Cree un subdirectorio dedicado para cada ejercicio, que contenga todos
+ los archivos del mismo.
+ Para todo ejercicio que pida escribir código, genere un programa completo,
+ con su función 
+\family typewriter
+main
+\family default
+ correspondiente; evite dejar fragmentos sueltos de programas.
+\end_layout
+
+\begin_layout Standard
+Asegúrese de que todos los programas que escriba compilen correctamente
+ con 
+\family typewriter
+gcc
+\family default
+.
+ Se recomienda además pasar a este las opciones 
+\family typewriter
+-Wall
+\family default
+ y 
+\family typewriter
+-Wextra
+\family default
+ para habilitar advertencias sobre construcciones cuestionables en el código.
+\end_layout
+
+\begin_layout Standard
+Es probable que necesiten también utilizar la opcién 
+\family typewriter
+-no-pie
+\family default
+ al momento de compilar si aparece un error referido a la sección 
+\family typewriter
+data
+\family default
+.
+ Esto puede ocurrir dependiendo de la versión de compilador que tengan instalado.
+\end_layout
+
+\begin_layout Chapter
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+A continuación se presenta el código fuente de dos programas en ensamblador
+ de x86 64.
+ ¿Qué devuelve cada uno de ellos como código de salida? Escriba programas
+ equivalentes para cada uno en lenguaje C.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+.global main
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+main:
+\end_layout
+
+\begin_layout Plain Layout
+
+    movb $0xff, %al
+\end_layout
+
+\begin_layout Plain Layout
+
+    ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+.global main
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+main:
+\end_layout
+
+\begin_layout Plain Layout
+
+    movb $0xfe, %al
+\end_layout
+
+\begin_layout Plain Layout
+
+    movb $-1, %bl
+\end_layout
+
+\begin_layout Plain Layout
+
+    addb %bl, %al
+\end_layout
+
+\begin_layout Plain Layout
+
+    incb %bl
+\end_layout
+
+\begin_layout Plain Layout
+
+    ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+¿Cómo se puede obtener el código de salida de un programa? Explique dos
+ maneras distintas.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En el ejercicio 1 de la plancha 1, se pidió completar expresiones que usaran
+ operadores de bits y números literales del lenguaje C
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Traduzca estas expresiones a ensamblador, escribiendo un programa para cada
+ una de ellas.
+ Asegúrese de usar registros de un tamaño adecuado.
+ Ejecute los programas con GDB para analizar el valor resultante en cada
+ registro.
+\end_layout
+
+\begin_layout Enumerate
+¿Es necesario usar GDB en este caso? ¿Podría utilizarse el código de salida
+ como en los ejercicios anteriores? 
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El producto tiene dos versiones: 
+\family typewriter
+mul
+\family default
+ (producto unsigned) e 
+\family typewriter
+imul
+\family default
+ (producto signed).
+ Complete el siguiente fragmento de código para que el resultado final quede
+ en la porción correspondiente de 
+\family typewriter
+rax
+\family default
+ (i.e.: en el primer caso, si se hace 
+\family typewriter
+print $rax
+\family default
+ desde gdb se debe obtener -2).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+.globl main
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+main:
+\end_layout
+
+\begin_layout Plain Layout
+
+    movl $-1,%eax # Solo para este tamañno el mov pone en 0
+\end_layout
+
+\begin_layout Plain Layout
+
+                  # la parte alta del registro.
+\end_layout
+
+\begin_layout Plain Layout
+
+    movl $2, %ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+    imull %ecx
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#completar para que el resultado correcto como signed quede en rax
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+xorq %rax,%rax
+\end_layout
+
+\begin_layout Plain Layout
+
+movw $-1,%ax
+\end_layout
+
+\begin_layout Plain Layout
+
+movw $2, %cx
+\end_layout
+
+\begin_layout Plain Layout
+
+mulw %cx
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#completar para que el resultado correcto como unsigned int
+\end_layout
+
+\begin_layout Plain Layout
+
+#quede en eax
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+La función factorial se puede escribir en lenguaje C con recursión:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+unsigned long fact1(unsigned long x) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (x <= 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+        return x;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return x * fact1(x - 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y también con un bucle:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+unsigned long fact2(unsigned long x) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned long acc = 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (; x > 1; x--)
+\end_layout
+
+\begin_layout Plain Layout
+
+        acc *= x;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return acc;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Implemente ambas versiones en ensamblador.
+ Se sugiere empezar por 
+\family typewriter
+fact2
+\family default
+.
+ Acompáñelas del siguiente archivo en C para probarlas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long fact1(unsigned long);
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned long fact2(unsigned long);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main(void) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned long x;
+\end_layout
+
+\begin_layout Plain Layout
+
+    scanf("%lu", &x);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("fact1: %lu
+\backslash
+n", fact1(x));
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("fact2: %lu
+\backslash
+n", fact2(x));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Deberá entonces mantener dos o más archivos separados: uno para la función
+ 
+\family typewriter
+main
+\family default
+ en C y uno o más para las funciones en ensamblador.
+ Para generar el binario ejecutable, debe pasar los nombres de todos archivos
+ de implementación como argumentos de 
+\family typewriter
+gcc
+\family default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+$ gcc fact.s main.c
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una forma de imprimir un valor entero es realizando una llamada a la función
+ 
+\family typewriter
+printf
+\family default
+.
+ Esta toma como primer argumento una cadena de C (las cuales se representan
+ como un puntero a caracter) indicando el formato y luego una cantidad variable
+ de argumentos que serán impresos.
+ La signatura en C es la siguiente:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int printf(const char *format, ...);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La forma de llamarla en ensamblador es como sigue: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+.data
+\end_layout
+
+\begin_layout Plain Layout
+
+format: .asciz "%ld
+\backslash
+n"
+\end_layout
+
+\begin_layout Plain Layout
+
+i:      .quad 0xDEADBEEF
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.text
+\end_layout
+
+\begin_layout Plain Layout
+
+.global main
+\end_layout
+
+\begin_layout Plain Layout
+
+main:
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq $format, %rdi # El primer argumento es el formato.
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq $1234, %rsi   # El valor a imprimir.
+\end_layout
+
+\begin_layout Plain Layout
+
+    xorq %rax, %rax    # Cantidad de valores de punto flotante.
+\end_layout
+
+\begin_layout Plain Layout
+
+    call printf
+\end_layout
+
+\begin_layout Plain Layout
+
+    ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Agregue más llamadas a 
+\family typewriter
+printf
+\family default
+ en el código para imprimir:
+\end_layout
+
+\begin_layout Enumerate
+El valor del registro 
+\family typewriter
+rsp
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+La dirección de la cadena de formato.
+\end_layout
+
+\begin_layout Enumerate
+La dirección de la cadena de formato en hexadecimal.
+\end_layout
+
+\begin_layout Enumerate
+El 
+\emph on
+quad
+\emph default
+ en el tope de la pila.
+\end_layout
+
+\begin_layout Enumerate
+El 
+\emph on
+quad
+\emph default
+ ubicado en la dirección 
+\family typewriter
+rsp + 8
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+El valor 
+\family typewriter
+i
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+La dirección de 
+\family typewriter
+i
+\family default
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Las instrucciones 
+\family typewriter
+rol
+\family default
+ y 
+\family typewriter
+ror
+\family default
+ toman dos operandos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+rol cantidad a rotar, registro
+\end_layout
+
+\begin_layout Plain Layout
+
+ror cantidad a rotar, registro
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y rotan los bits del segundo operando a izquierda y derecha, respectivamente,
+ la cantidad de veces indicada en el primer operando.
+ Además, dejan el bit izquierdo o el derecho, según corresponda, del segundo
+ operando en la bandera de acarreo (
+\emph on
+carry
+\emph default
+) del registro de estado.
+\end_layout
+
+\begin_layout Standard
+Además, existe la instrucción 
+\family typewriter
+adc
+\family default
+ (
+\emph on
+add with carry
+\emph default
+), que toma dos operandos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+adc op origen, op destino
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y calcula 
+\begin_inset Formula $op\_destino\leftarrow op\_origen+op\_destino+acarreo$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Use estas instrucciones para permutar la mitad alta y baja de un entero
+ de 64 bits (
+\emph on
+quad
+\emph default
+) almacenado en el registro 
+\family typewriter
+rax
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Use estas instrucciones para encontrar cuántos bits en uno tiene un entero
+ de 64 bits (
+\emph on
+quad
+\emph default
+) almacenado en el registro 
+\family typewriter
+rax
+\family default
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Implemente en ensamblador dos funciones que realicen lo siguiente completando
+ el código de ejemplo: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Busque un caracter dentro de una cadena apuntada por 
+\family typewriter
+rdi
+\family default
+.
+ Código de ejemplo (guardarlo en 
+\family typewriter
+buscachar.s
+\family default
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+.data
+\end_layout
+
+\begin_layout Plain Layout
+
+cadena: .asciz 
+\begin_inset Quotes fld
+\end_inset
+
+123456
+\begin_inset Quotes frd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.text
+\end_layout
+
+\begin_layout Plain Layout
+
+.global main
+\end_layout
+
+\begin_layout Plain Layout
+
+main:
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq $cadena, %rdi
+\end_layout
+
+\begin_layout Plain Layout
+
+    movb $'6', %sil #Probar luego con diferentes valores (1, a, 5...)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.global busca
+\end_layout
+
+\begin_layout Plain Layout
+
+busca:
+\end_layout
+
+\begin_layout Plain Layout
+
+    # completar aqui
+\end_layout
+
+\begin_layout Plain Layout
+
+    # si el char está en la cadena en rax debe quedar
+\end_layout
+
+\begin_layout Plain Layout
+
+    # la dirección en donde se encontró el char.
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Si no, en rax debe quedar el valor -1
+\end_layout
+
+\begin_layout Plain Layout
+
+    ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Comparen dos cadenas de longitud 
+\family typewriter
+rdx
+\family default
+ apuntadas por 
+\family typewriter
+rdi
+\family default
+ y 
+\family typewriter
+rsi
+\family default
+.
+ Código de ejemplo (guardarlo en 
+\family typewriter
+comparastrings.s
+\family default
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+.data
+\end_layout
+
+\begin_layout Plain Layout
+
+cadenalarga: .asciz "123456"
+\end_layout
+
+\begin_layout Plain Layout
+
+cadenacorta: .asciz "123" # 123=>1 , 124=>0, 456=>0
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.text
+\end_layout
+
+\begin_layout Plain Layout
+
+.global main
+\end_layout
+
+\begin_layout Plain Layout
+
+main:
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq $cadenalarga, %rdi
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq $cadenacorta, %rsi
+\end_layout
+
+\begin_layout Plain Layout
+
+    movl $3, %edx # debe ser la longitud de cadenacorta
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.global compara
+\end_layout
+
+\begin_layout Plain Layout
+
+compara:
+\end_layout
+
+\begin_layout Plain Layout
+
+    #retorna 1 si las cadenas son iguales en los primeros %edx caracteres
+\end_layout
+
+\begin_layout Plain Layout
+
+    #retorna 0 si son distintas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una vez implementadas las funciones anteriores y probadas con diferentes
+ valores las utilizaremos para implementar el algoritmo de 
+\begin_inset Quotes fld
+\end_inset
+
+fuerza bruta
+\begin_inset Quotes frd
+\end_inset
+
+.
+ Una versión en C de tal algoritmo es la siguiente (archivo 
+\family typewriter
+fuerza_bruta_c.c
+\family default
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int fuerza_bruta(const char *S, const char *s, unsigned lS, unsigned ls)
+ {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned i, j;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (i = 0; i < lS - ls + 1; i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (S[i] == s[0]) {
+\end_layout
+
+\begin_layout Plain Layout
+
+            for (j = 0; j < ls && S[i + j] == s[j]; j++);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            if (j == ls) return i;
+\end_layout
+
+\begin_layout Plain Layout
+
+        }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return -1;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Asegúrese de entender qué hace la función anterior 
+\family typewriter
+fuerza_bruta
+\family default
+: haga un programa (guárdelo en 
+\family typewriter
+main.c
+\family default
+) que llame a dicha función y tome como argumentos las dos cadenas que llegarán
+ a 
+\family typewriter
+fuerza_bruta
+\family default
+.
+ Incluya al principio de 
+\family typewriter
+main.c
+\family default
+ la declaración de 
+\family typewriter
+fuerza_bruta
+\family default
+ para que el programa compile:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int fuerza_bruta(const char *S, const char *s, unsigned lS, unsigned ls);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Puede compilar el programa completo usando:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gcc fuerza_bruta_c.c main.c -o main -g
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O puede compilar los módulos en forma individual a medida que sea necesario:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gcc -g -c fuerza_bruta_c.c # esto produce fuerza_bruta_c.o
+\end_layout
+
+\begin_layout Plain Layout
+
+gcc -g -c main.c           # esto produce main.o
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...y luego compilar el programa completo usando
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gcc main.o fuerza_bruta_c.o -o main
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pruebe el programa con diferentes entradas y estudie el funcionamiento de
+ 
+\family typewriter
+fuerza_bruta
+\family default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Reescriba la función en C 
+\family typewriter
+fuerza_bruta
+\family default
+ para que utilice las funciones de los apartados a) y b).
+ Llámela 
+\family typewriter
+fuerza_bruta2
+\family default
+ y guárdela en 
+\family typewriter
+fuerza_bruta2_c.c
+\family default
+.
+ Al principio de ese archivo deberá declarar las dos funciones anteriores:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+char *busca(const char *s1, char c, unsigned l);
+\end_layout
+
+\begin_layout Plain Layout
+
+int compara(const char *s1,const char *s2, unsigned l);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para compilar deberá:
+\end_layout
+
+\begin_layout Itemize
+Borrar (o mejor: comentar) las referencias a 
+\family typewriter
+main
+\family default
+ en los archivos 
+\begin_inset Quotes fld
+\end_inset
+
+
+\family typewriter
+.s
+\family default
+
+\begin_inset Quotes frd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Reemplazar en 
+\family typewriter
+main.c
+\family default
+: 
+\family typewriter
+fuerza_bruta
+\family default
+ por 
+\family typewriter
+fuerza_bruta2
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+Compilar con el siguiente comando (también se puede hacer compilación de
+ cada módulo individualmente como se hizo en el apartado anterior):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gcc -g main.c fuerza_bruta2_c.c buscachar.s comparastrings.s
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Pruebe el programa con diferentes entradas.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Reemplace la implementación en C de 
+\family typewriter
+fuerza_bruta2
+\family default
+ por una implementación en assembler de la misma función.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El programa que sigue, funcs, implementa 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+void (*funcs[])() = {f1, f2, f3}
+\end_layout
+
+\end_inset
+
+.
+ Complételo para que la línea con el comentario corresponda a 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+funcs[entero]()
+\end_layout
+
+\end_inset
+
+.
+ Use el código más eficiente.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+.data
+\end_layout
+
+\begin_layout Plain Layout
+
+fmt:    .string "%d"
+\end_layout
+
+\begin_layout Plain Layout
+
+entero: .long -100
+\end_layout
+
+\begin_layout Plain Layout
+
+funcs:  .quad f1
+\end_layout
+
+\begin_layout Plain Layout
+
+        .quad f2
+\end_layout
+
+\begin_layout Plain Layout
+
+        .quad f3
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.text
+\end_layout
+
+\begin_layout Plain Layout
+
+f1: movl $0, %esi; movq $fmt, %rdi; call printf; jmp fin
+\end_layout
+
+\begin_layout Plain Layout
+
+f2: movl $1, %esi; movq $fmt, %rdi; call printf; jmp fin
+\end_layout
+
+\begin_layout Plain Layout
+
+f3: movl $2, %esi; movq $fmt, %rdi; call printf; jmp fin
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+.global main
+\end_layout
+
+\begin_layout Plain Layout
+
+main:
+\end_layout
+
+\begin_layout Plain Layout
+
+    pushq %rbp
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq %rsp, %rbp
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # Leemos el entero.
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq $entero, %rsi
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq $fmt, %rdi
+\end_layout
+
+\begin_layout Plain Layout
+
+    xorq %rax, %rax
+\end_layout
+
+\begin_layout Plain Layout
+
+    call scanf
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    xorq %rax, %rax
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    # COMPLETE CON DOS INSTRUCCIONES
+\end_layout
+
+\begin_layout Plain Layout
+
+    jmp *%rdx
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fin:
+\end_layout
+
+\begin_layout Plain Layout
+
+    movq %rbp, %rsp
+\end_layout
+
+\begin_layout Plain Layout
+
+    popq %rbp
+\end_layout
+
+\begin_layout Plain Layout
+
+    ret
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Las funciones 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+setjmp
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+longjmp
+\end_layout
+
+\end_inset
+
+ permiten hacer saltos no locales.
+ Sus signaturas en C se encuentran en la cabecera 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+setjmp.h
+\end_layout
+
+\end_inset
+
+ y son las siguientes:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int setjmp(jmp_buf env);
+\end_layout
+
+\begin_layout Plain Layout
+
+void longjmp(jmp_buf env, int val);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+setjmp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Quotes fld
+\end_inset
+
+guarda
+\begin_inset Quotes frd
+\end_inset
+
+ el estado de la computadora en el argumento 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+env
+\end_layout
+
+\end_inset
+
+ y luego 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+longjmp
+\end_layout
+
+\end_inset
+
+ lo restaura.
+ Reimplemente 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+setjmp
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+longjmp
+\end_layout
+
+\end_inset
+
+; llámelas 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+setjmp2
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+longjmp2
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dado el siguiente programa en C (
+\begin_inset CommandInset href
+LatexCommand href
+name "código/memoria/disposición_pila.c"
+target "https://svn.dcc.fceia.unr.edu.ar/svn/lcc/R-222/Public/c%c3%b3digo/memoria/disposici%c3%b3n_pila.c"
+literal "false"
+
+\end_inset
+
+ en Subversion):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C,fontfamily=tt"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int f(char a, int b, char c, long d, char e, short f, int g, int h) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("a: %p
+\backslash
+n", &a);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("b: %p
+\backslash
+n", &b);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("c: %p
+\backslash
+n", &c);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("d: %p
+\backslash
+n", &d);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("e: %p
+\backslash
+n", &e);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("f: %p
+\backslash
+n", &f);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("g: %p
+\backslash
+n", &g);
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("h: %p
+\backslash
+n", &h);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main(void) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return f('1', 2, '3', 4, '5', 6, 7, 8);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Realice un diagrama de la pila de cuando se está ejecutando 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+f
+\end_layout
+
+\end_inset
+
+.
+ Indique en el diagrama la ubicación y el espacio utilizado por cada argumento.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Indique la dirección dentro de la pila en donde está almacenada la dirección
+ de retorno de 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+f
+\end_layout
+
+\end_inset
+
+ y si es posible verifique con GDB.
+ Sugerencia: utilice el comando 
+\begin_inset listings
+lstparams "language=bash"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+si
+\end_layout
+
+\end_inset
+
+, para avanzar de a una instrucción.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Corrutinas:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compile y ejecute el código de corrutinas cooperativas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=bash"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+cd codigo/corrutinas_cooperativas
+\end_layout
+
+\begin_layout Plain Layout
+
+gcc corrutinas.c guiwindows.c -o corrutinas
+\end_layout
+
+\begin_layout Plain Layout
+
+./corrutinas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Agregue una nueva corrutina: COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+Modifique las tres corrutinas para que impriman la dirección de una variable
+ local antes de comenzar a iterar.
+ Compare las direcciones mostradas.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

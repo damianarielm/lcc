@@ -1,0 +1,466 @@
+#% Do not delete the line below; configure depends on this
+#  \DeclareLaTeXClass[book]{Libro (Custom Classic Thesis)}
+#  \DeclareCategory{Books}
+
+Format 66
+Input book.layout
+
+NoStyle Address
+NoStyle Right_Address
+NoStyle Verse
+
+DefaultModule  theorems-ams
+DefaultModule  theorems-chap
+DefaultModule  multicol
+ExcludesModule initials
+
+TocDepth 2
+SecNumDepth 2
+
+PageStyle fancy
+
+###############################################################################
+
+AddToPreamble
+    \usepackage[sc]{mathpazo}        % Main font: Palatino with small caps
+    \usepackage[dvipsnames]{xcolor}  % Colors
+
+    % Colored boxes
+    \usepackage[skins]{tcolorbox}
+
+    % Figures
+    \newtcolorbox[blend into = figures]{myfigure}[1]
+    {float=htb, title={#1}, drop shadow, enhanced}
+
+    % Headers
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \renewcommand{\chaptermark}[1]{%
+    \markboth{\thechapter.\ #1}{}}
+    \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+    \lhead{\textsc{\leftmark}}
+    \rhead{\textsc{\rightmark}}
+
+    % Hyperlinks
+    \usepackage{hyperref}
+    \hypersetup{colorlinks=true,breaklinks=true,linktocpage=true,
+                urlcolor=Maroon,linkcolor=RoyalBlue,citecolor=Maroon}
+
+    % Capital letters
+    \usepackage{lettrine}
+    \setcounter{DefaultLines}{1}
+    \renewcommand{\LettrineFontHook}{\color{Maroon}}
+
+    % Margin notes inside tcolorbox patch
+    \usepackage{marginnote}
+    \renewcommand{\marginpar}[2][] { \footnotesize\marginnote{\emph{#2}}\normalsize }
+
+    % Margin sizes
+    \setlength{\marginparsep}{2em}
+    \setlength{\marginparwidth}{6em}
+    \setlength{\parskip}{2mm}
+
+    % Automatic color boxes for presented math
+    \BeforeBeginEnvironment{equation}{\begin{tcolorbox}[drop shadow, enhanced, after skip=20pt]}
+    \AfterEndEnvironment{equation}{\end{tcolorbox}}
+
+    \usepackage{titlesec}            % Custom part, chapter formats
+
+    % Part
+    \newcommand{\ctparttext}[1]{\renewcommand{\ctparttext@keep}{#1}}
+    \def\ctparttext@keep{} % Thanks to Ivo
+    \def\ctparttext@print{\ctparttext@keep \gdef\ctparttext@keep{}}
+    \titleformat{\part}[display]
+    {\centering \LARGE} % format
+    {\partname ~ \thepart} % label
+    {1em} % sep
+    {\color{Maroon}\textsc} % before
+    [\bigskip \normalsize \color{Black} \begin{quote} \ctparttext@print \end{quote}] % after
+    % Chapters
+    \DeclareFixedFont{\chapterNumber}{U}{eur}{b}{n}{60} % Chapter number
+    \titlespacing{\chapter}{0em}{0pt}{2em}
+    \titleformat{\chapter}[display]
+    {\relax} % format
+    {\raggedleft{\color{Gray}\chapterNumber \thechapter} \\} % label
+    {0pt} % sep
+    {\titlerule\vspace*{.9\baselineskip}\raggedright\Large\textsc} % before
+    [\normalsize\vspace*{.8\baselineskip}\titlerule] % after
+    % Sections
+    \titleformat{\section}
+    {\relax} % format
+    {\textsc{\thesection}} % label
+    {1em} % sep
+    {\textsc} % beofre
+    % Subsections
+    \titleformat{\subsection}
+    {\relax} % format
+    {\emph{\thesubsection}} % label
+    {1em} % sep
+    {\emph} % beofre
+    % Subsubsections
+    \titleformat{\subsubsection}
+    {\relax} % format
+    {\emph{\thesubsubsection}} % label
+    {1em} % sep
+    {\emph} % beofre
+    % Paragraph
+    \titleformat{\paragraph}[runin]
+    {\normalfont\normalsize} % format
+    {\theparagraph} % label
+    {0em} % sep
+    {\textsc} % beofre
+    % Description
+    \renewcommand{\descriptionlabel}[1]{\hspace*{\labelsep}\textsc{#1}}
+
+    % Custom Indexes
+    \usepackage[titles]{tocloft}
+
+    % Part
+    \renewcommand{\cftpartfont}{\color{Maroon}\scshape}
+    \renewcommand{\cftpartpagefont}{\normalfont}
+    % Chapter
+    \renewcommand{\cftchapfont}{\textsc}
+    \renewcommand{\cftchappagefont}{\normalfont}
+
+    % Math plots
+    \usepackage{pgfplots}
+    \pgfplotsset{
+        my axis/.style={
+            domain = -5:5,
+            xlabel = $x$, ylabel = $y$, scale = 1,
+            legend pos = outer north east, legend cell align = left,
+            cycle list = { {blue, mark = none}, {red, mark = none},
+                           {green, mark = none}, {cyan, mark = none},
+                           {orange, mark = none}, {magenta, mark = none},
+                           {gray, mark = none}, {black, mark = none}
+                         }, set layers,
+            axis lines = middle, axis equal, grid = both, smooth,
+            minor tick num = 1, xtick distance = 1, ytick distance = 1,
+            label style = {font = \tiny}, tick label style = {font = \tiny},
+            legend style = {font = \tiny}, title style = {font = \tiny}
+        },
+        legend entry/.initial=,
+        every axis plot post/.code={%
+        \pgfkeysgetvalue{/pgfplots/legend entry}\tempValue
+        \ifx\tempValue\empty
+            \pgfkeysalso{/pgfplots/forget plot}%
+        \else
+            \expandafter\addlegendentry\expandafter{\tempValue}%
+        \fi
+        },
+    }
+
+    \newenvironment{myplot}[6]
+    { \begin{tikzpicture}
+      \begin{axis}
+      [my axis, title = #1, domain = #2, xmin = #3, xmax = #4, ymin = #5, ymax = #6] }
+    { \end{axis} \end{tikzpicture} }
+EndPreamble
+
+###############################################################################
+
+Style Cover
+    LatexType   Environment
+    LeftDelim   "\centering "
+    LatexName   titlepage
+    Category    FrontMatter
+    KeepEmpty   1
+End
+
+Style Title
+    LatexType   Command
+    LeftDelim   "\begin{center}\color{Maroon}\LARGE{"
+    LatexName   textsc
+    RightDelim  "}\normalcolor\end{center}"
+    InTitle     0
+    Font
+        Size    Huge
+        Shape   SmallCaps
+        Color   Brown
+    EndFont
+End
+
+Style Author
+    LatexType   Command
+    LeftDelim   "\begin{center}"
+    LatexName   textsc
+    RightDelim  "\end{center}"
+    InTitle     0
+    Font
+        Color   None
+        Shape   SmallCaps
+    EndFont
+End
+
+Style Date
+    LatexType   Paragraph
+    LeftDelim   "\begin{center}"
+    RightDelim  "\end{center}"
+    InTitle     0
+End
+
+Style "Introduccion"
+      Category       Secciones
+      LatexType      Command
+      LatexName      ctparttext
+      NextNoIndent   true
+      Parsep         3
+      TopSep         2.5
+      BottomSep      0
+      Align          Center
+      AlignPossible  Center
+End
+
+Style Part
+    TopSep          1
+    Font
+        Size    Huge
+        Shape   SmallCaps
+        Color   Brown
+    EndFont
+    LabelFont
+        Size    Huge
+        Shape   Up
+        Series  Bold
+        Color   None
+    EndLabelFont
+End
+
+Style Part*
+    TopSep          1
+    Font
+        Size    Huge
+        Shape   SmallCaps
+        Color   Brown
+    EndFont
+End
+
+Style Chapter
+    Font
+        Shape   SmallCaps
+    EndFont
+End
+
+Style Chapter*
+    Font
+        Shape   SmallCaps
+    EndFont
+End
+
+Style Section
+    Font
+        Shape   SmallCaps
+    EndFont
+End
+
+Style Section*
+    Font
+        Shape   SmallCaps
+    EndFont
+End
+
+Style Subsection
+    Font
+        Misc    Emph
+        Series  Medium
+    EndFont
+End
+
+Style Subsection*
+    Font
+        Misc    Emph
+        Series  Medium
+    EndFont
+End
+
+Style Subsubsection
+    Font
+        Series  Medium
+        Misc    Emph
+    EndFont
+End
+
+Style Subsubsection*
+    Font
+        Series  Medium
+        Misc    Emph
+    EndFont
+End
+
+Style Paragraph
+    Font
+        Shape   Smallcaps
+    EndFont
+End
+
+Style Paragraph*
+    Font
+        Shape   Smallcaps
+    EndFont
+End
+
+Style Description
+    LabelFont
+        Shape   Smallcaps
+    Endfont
+End
+
+Style Capital
+      LatexType      Command
+      LatexName      lettrine
+      Category       Secciones
+      Argument 1
+        LabelString  "Primer Letra"
+        Mandatory    1
+        LeftDelim    "{"
+        RightDelim   "}"
+        Decoration   Minimalistic
+        Font
+          Size       Largest
+          Color      Brown
+        EndFont
+      EndArgument
+      Argument 2
+        LabelString  "Resto"
+        Mandatory    1
+        LeftDelim    "{"
+        RightDelim   "}"
+        Decoration   Minimalistic
+        Font
+          Shape      SmallCaps
+        EndFont
+      EndArgument
+End
+
+Style Plots
+      LatexType   Item_Environment
+      LatexName   myplot
+      LabelType   Itemize
+      LeftMargin  MMN
+      LabelSep    xx
+      TopSep      0.7
+      BottomSep   0.7
+      NextNoIndent 1
+      ItemCommand addplot+
+      LeftDelim   "{"
+      RightDelim  "};"
+      PassThruChars "^"
+      TextFont
+        Family      TypeWriter
+      EndFont
+      Argument 1
+        LabelString  "Titulo"
+        Mandatory    1
+        LeftDelim    "{"
+        RightDelim   "}"
+        Decoration   Classic
+      EndArgument
+      Argument 2
+        LabelString  "Dominio de plot"
+        Mandatory    1
+        LeftDelim    "{"
+        RightDelim   "}"
+        Decoration   Classic
+      EndArgument
+      Argument 3
+        LabelString  "x minimo"
+        Mandatory    1
+        LeftDelim    "{"
+        DefaultArg  "-6"
+        RightDelim   "}"
+        Decoration   Classic
+      EndArgument
+      Argument 4
+        LabelString  "x maximo"
+        Mandatory    1
+        LeftDelim    "{"
+        DefaultArg   "6"
+        RightDelim   "}"
+        Decoration   Classic
+      EndArgument
+      Argument 5
+        LabelString  "y minimo"
+        Mandatory    1
+        LeftDelim    "{"
+        DefaultArg   "-6"
+        RightDelim   "}"
+        Decoration   Classic
+      EndArgument
+      Argument 6
+        LabelString  "y maximo"
+        Mandatory    1
+        LeftDelim    "{"
+        DefaultArg   "6"
+        RightDelim   "}"
+        Decoration   Classic
+      EndArgument
+      Argument item:1
+        LabelString  "Dominio de funcion"
+        Mandatory    0
+        LeftDelim    "[domain="
+        RightDelim   "]"
+        Decoration   Classic
+      EndArgument
+      Argument item:2
+        LabelString  "Color"
+        Mandatory    0
+        LeftDelim    "[color="
+        RightDelim   "]"
+        Decoration   Classic
+      EndArgument
+      Argument item:3
+        LabelString  "Leyenda"
+        Mandatory    0
+        LeftDelim    "[legend entry="
+        RightDelim   "]"
+        Decoration   Classic
+      EndArgument
+End
+
+###############################################################################
+
+InsetLayout Flex:Recuadro
+      LyxType       Custom
+      LabelString   "Recuadro"
+      LatexType     Environment
+      LatexName     tcolorbox
+      BgColor       LightGray
+      Decoration    Minimalistic
+      LatexParam    "[drop shadow, enhanced, after skip=20pt]"
+End
+
+InsetLayout Flex:Observacion
+      LyxType       Custom
+      LabelString   "Observacion"
+      LatexType     Environment
+      LatexName     tcolorbox
+      BgColor       Lime
+      Decoration    Classic
+      LatexParam    "[title=Observacion, colback=YellowGreen, colbacktitle=Green, drop shadow, enhanced, after skip=20pt]"
+End
+
+InsetLayout Flex:Notacion
+      LyxType       Custom
+      LabelString   "Notacion"
+      LatexType     Environment
+      LatexName     tcolorbox
+      BgColor       Orange
+      Decoration    Classic
+      LatexParam    "[title=Notacion, colbacktitle=Dandelion, colback=Goldenrod, drop shadow, enhanced, coltitle=Black]"
+End
+
+InsetLayout Flex:Figura
+      LyxType       Custom
+      LabelString   "Figure"
+      LatexType     Environment
+      LatexName     myfigure
+      BgColor       LightGray
+      Decoration    Classic
+      Argument 1
+        LabelString  "Caption"
+        Mandatory    1
+        LeftDelim    "{"
+        RightDelim   "}"
+        Decoration   Minimalistic
+      EndArgument
+End

@@ -1,0 +1,2983 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../../../../lyx
+\use_default_options true
+\begin_removed_modules
+theorems-ams
+theorems-chap
+\end_removed_modules
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Cover
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Plancha 0
+\end_layout
+
+\begin_layout Author
+Representación Computacional de datos
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+2022 - Arquitectura del Computador
+\end_layout
+
+\begin_layout Date
+Licenciatura en Ciencias de la Computación
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+El objetivo de esta plancha de ejercicios es familiarizarse con la representació
+n de datos orientada a la computación pero independizándose de la implementación
+ computacional propiamente dicha.
+ Son ejercicios para resolver con papel y lápiz aunque algunos ejercicios
+ luego pueden realizarse utilizando computadora para chequear resultados.
+\end_layout
+
+\begin_layout Chapter
+Procedimiento
+\end_layout
+
+\begin_layout Standard
+Resuelva cada ejercicio en papel.
+ Luego, se puede subir la resolución escaneándola (ser claros con la letra)
+ o utilizando algún editor de texto.
+\end_layout
+
+\begin_layout Chapter
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+Utilizando el sistema de numeración posicional 
+\begin_inset Formula $\left(-1\right)^{\sigma}\left(a_{n}a_{n-1}\dots a_{1}a_{0},a_{-1}a_{-2}\dots\right)_{\beta}$
+\end_inset
+
+ con 
+\begin_inset Formula $\beta=2$
+\end_inset
+
+, determinar la representación binaria de los siguientes números:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+29
+\end_layout
+
+\begin_layout Enumerate
+0,625
+\end_layout
+
+\begin_layout Enumerate
+0,1
+\end_layout
+
+\begin_layout Enumerate
+5,75
+\end_layout
+
+\begin_layout Enumerate
+-138
+\end_layout
+
+\begin_layout Enumerate
+-15,125
+\end_layout
+
+\begin_layout Standard
+Analizar en cada caso cuántos dígitos son necesarios para poder representar
+ cada uno de los números.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Son necesarios 5 bits para el número y uno extra para el signo:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $29=2\cdot{\color{blue}14}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{blue}14}=2\cdot{\color{magenta}7}+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{2}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{magenta}7}=2\cdot{\color{red}3}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{3}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{red}3}=2\cdot{\color{green}1}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{4}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{green}1}=2\cdot0+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-1\right)^{0}\left(11101\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Son necesarios 4 bits para el número y uno extra para el signo:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $0,625\cdot2=\boxed{1},{\color{blue}25}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-2}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{blue}25}\cdot2=\boxed{0},{\color{magenta}5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-3}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{magenta}5}\cdot2=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-1\right)^{0}\left(0,101\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Son necesarios infinitos bits:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $0,1\cdot2=\boxed{0},{\color{blue}2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-2}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{blue}2}\cdot2=\boxed{0},{\color{magenta}4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-3}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{magenta}4}\cdot2=\boxed{0},{\color{red}8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-4}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{red}8}\cdot2=\boxed{1},{\color{green}6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-5}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{green}6}\cdot2=\boxed{1},{\color{blue}2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-1\right)^{0}\left(0,0\overline{0011}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Son necesarios 5 bits para el número y uno extra para el signo:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $0,75\cdot2=\boxed{1},{\color{red}{\color{blue}5}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-2}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{red}{\color{blue}5}}\cdot2=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $5=2\cdot{\color{blue}{\color{magenta}2}}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{blue}{\color{magenta}2}}=2\cdot{\color{magenta}{\color{red}1}}+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{2}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{magenta}{\color{red}1}}=2\cdot0+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-1\right)^{0}\left(101,11\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Son necesarios 8 bits para el número y uno extra para el signo:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $138=2\cdot{\color{blue}69}+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{blue}69}=2\cdot{\color{magenta}34}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{2}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{magenta}34}=2\cdot{\color{red}17}+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{3}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{red}17}=2\cdot{\color{green}8}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{4}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{green}8}=2\cdot{\color{yellow}4}+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{5}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{yellow}4}=2\cdot2+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{6}$
+\end_inset
+
+: 
+\begin_inset Formula $2=2\cdot1+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{7}$
+\end_inset
+
+: 
+\begin_inset Formula $1=2\cdot0+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-1\right)^{1}\left(10001010\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Son necesarios 7 bits para el número y uno extra para el signo:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $0,125\cdot2=\boxed{0},{\color{blue}25}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-2}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{blue}25}\cdot2=\boxed{0},{\color{magenta}5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-3}$
+\end_inset
+
+: 
+\begin_inset Formula $0,{\color{magenta}5}\cdot2=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $15=2\cdot{\color{red}7}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{red}7}=2\cdot{\color{green}3}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{2}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{green}3}=2\cdot{\color{yellow}1}+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{3}$
+\end_inset
+
+: 
+\begin_inset Formula ${\color{yellow}1}=2\cdot0+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(-1\right)^{1}\left(1111,001\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Convertir los siguientes números decimales a binario utilizando la representació
+n en complemento a dos con seis bits:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+-16
+\end_layout
+
+\begin_layout Enumerate
+13
+\end_layout
+
+\begin_layout Enumerate
+-1
+\end_layout
+
+\begin_layout Enumerate
+-10
+\end_layout
+
+\begin_layout Enumerate
+16
+\end_layout
+
+\begin_layout Enumerate
+-31
+\end_layout
+
+\begin_layout Standard
+¿Qué tienen en común todos los números negativos y todos los números positivos
+ al utilizar esta representación?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-16\right)_{10}=\left(-010000\right)_{2}=\left(110000\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(13\right)_{10}=\left(001101\right)_{2}=\left(001101\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-1\right)_{10}=\left(-000001\right)_{2}=\left(111111\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-10\right)_{10}=\left(-001010\right)_{2}=\left(110110\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(16\right)_{10}=\left(010000\right)_{2}=\left(010000\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-31\right)_{10}=\left(-011111\right)_{2}=\left(100001\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los números negativos en complemento a 2, tienen el bit mas significativo
+ en 1 mientras que los positivos lo tienen en 0.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Repetir el ejercicio anterior pero ahora utilizando 8 bits.
+ ¿Qué conclusión se puede sacar comparando los resultados con los del ejercicio
+ anterior?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-16\right)_{10}=\left(-00010000\right)_{2}=\left(11110000\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(13\right)_{10}=\left(00001101\right)_{2}=\left(00001101\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-1\right)_{10}=\left(-00000001\right)_{2}=\left(11111111\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-10\right)_{10}=\left(-00001010\right)_{2}=\left(11110110\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(16\right)_{10}=\left(00010000\right)_{2}=\left(00010000\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-31\right)_{10}=\left(-00011111\right)_{2}=\left(11100001\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Basta con agregar 
+\begin_inset Quotes fld
+\end_inset
+
+unos
+\begin_inset Quotes frd
+\end_inset
+
+ a la izquierda para los números negativos y 
+\begin_inset Quotes fld
+\end_inset
+
+ceros
+\begin_inset Quotes frd
+\end_inset
+
+ para los positivos.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dadas las siguientes secuencias de bits, indicar a qué números corresponden
+ en sistema decimal utilizando la representación en complemento a dos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(00001101\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(01001101\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11100001\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11111001\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11111111\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(00000000\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(0000{\color{red}1}{\color{magenta}1}0{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{2}}+{\color{red}2^{3}}={\color{blue}1}+{\color{magenta}4}+{\color{red}8}=\left(13\right)_{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(0{\color{green}1}00{\color{red}1}{\color{magenta}1}0{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{2}}+{\color{red}2^{3}}+{\color{green}2^{6}}={\color{blue}1}+{\color{magenta}4}+{\color{red}8}+{\color{green}64}=\left(77\right)_{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left({\color{green}1}{\color{red}1}{\color{magenta}1}0000{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{5}}+{\color{red}2^{6}}-{\color{green}2^{7}}={\color{blue}1}+{\color{magenta}32}+{\color{red}64}-{\color{green}128}=\left(-31\right)_{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(1{\color{yellow}1}{\color{green}1}{\color{red}1}{\color{magenta}1}00{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{3}}+{\color{red}2^{4}}+{\color{green}2^{5}}+{\color{yellow}2^{6}}-2^{7}={\color{blue}1}+{\color{magenta}8}+{\color{red}16}+{\color{green}32}+{\color{yellow}64}-128=\left(-7\right)_{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11111111\right)_{C_{2}^{8}}=2^{0}+2^{1}+2^{2}+2^{3}+2^{4}+2^{5}+2^{6}-2^{7}=1+2+4+8+16+32+64-128=\left(-1\right)_{10}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(00000000\right)_{C_{2}^{8}}=\left(0\right)_{10}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $\left(13,25\right)_{10}=\left(1101,01\right)_{2}=\left(15,2\right)_{8}=\left(D,4\right)_{16}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(13,25\right)_{10}=\left(1101,01\right)_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $0,25\cdot2=\boxed{0},5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{-2}$
+\end_inset
+
+: 
+\begin_inset Formula $0,5\cdot2=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $13=2\cdot6+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}$
+\end_inset
+
+: 
+\begin_inset Formula $6=2\cdot3+\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{2}$
+\end_inset
+
+: 
+\begin_inset Formula $3=2\cdot1+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{3}$
+\end_inset
+
+: 
+\begin_inset Formula $1=2\cdot0+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(13,25\right)_{10}=\left(15,2\right)_{8}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $0,25\cdot8=\boxed{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $13=8\cdot1+\boxed{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{1}$
+\end_inset
+
+: 
+\begin_inset Formula $1=8\cdot0+\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(13,25\right)_{10}=\left(D,4\right)_{16}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $a_{-1}$
+\end_inset
+
+: 
+\begin_inset Formula $0,25\cdot16=\boxed{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $13=16\cdot0+13=\left(\boxed{D}\right)_{16}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Rellenar la siguiente tabla:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Binario
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Octal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hexadecimal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Decimal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1101100,110
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+362,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1,8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74,125
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cada fila verán un valor numérico expresado en la base que indica la
+ casilla superior de la columna donde se encuentra.
+ Completar en el resto de casillas con la representación correspondiente
+ según la base indicada en la parte superior de manera que se mantengan
+ las equivalencias en cada fila.
+ Asumir que los números son sin signo.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Binario
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Octal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hexadecimal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Decimal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1101100,110
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+154,6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6C,C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+108,75
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11110010,01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+362,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+F2,4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+242,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10100001,1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+241,4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1,8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+161,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1001010,001
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+112,1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4A,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+74,125
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar el formato hexadecimal que use el mínimo número de dígitos y
+ que permita representar el número 
+\begin_inset Formula $\left(16,25\right)_{10}$
+\end_inset
+
+ de manera exacta.
+ ¿Cuál es el rango y la precisión del formato? Asumir números sin signo.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset Formula $\left(16,25\right)_{10}=\left(10,4\right)_{16}$
+\end_inset
+
+, luego nos bastará un formato hexadecimal de punto fijo con dos dígitos
+ para la parte entera y uno para la parte fraccionaria.
+\end_layout
+
+\begin_layout Standard
+Este formato permite expresar numeros entre 
+\begin_inset Formula $0\leq N\leq\left(FF,F\right)_{16}=\left(255,9375\right)_{10}$
+\end_inset
+
+ y tiene una presición de 
+\begin_inset Formula $16^{-1}=0,0625$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Realizar cada una las siguientes operaciones, como lo realizaría una computadora
+, usando registros de 8 bits:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+10 - 3
+\end_layout
+
+\begin_layout Enumerate
+-39 + 92
+\end_layout
+
+\begin_layout Enumerate
+-19 - 7
+\end_layout
+
+\begin_layout Enumerate
+44 + 45
+\end_layout
+
+\begin_layout Enumerate
+104 + 45
+\end_layout
+
+\begin_layout Enumerate
+-75 + 59
+\end_layout
+
+\begin_layout Enumerate
+-103 - 69
+\end_layout
+
+\begin_layout Enumerate
+127 + 1
+\end_layout
+
+\begin_layout Enumerate
+-1 + 1
+\end_layout
+
+\begin_layout Enumerate
+-1 - 1
+\end_layout
+
+\begin_layout Itemize
+En cada una de la operaciones anteriores, analizar si los resultados son
+ correctos/incorrectos y por qué.
+ Ubicar los resultados obtenidos en la recta real, incluyendo los valores
+ mínimos y máximos para esta representación.
+\end_layout
+
+\begin_layout Itemize
+Indicar el estado de las banderas 
+\emph on
+Carry
+\emph default
+ y 
+\emph on
+Overflow
+\emph default
+ luego de realizar cada una de las operaciones anteriores.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(10\right)_{10}=\left(00001010\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(3\right)_{10}=\left(00000011\right)_{2}=\left(11111101\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 0 & 0 & 0 & 1 & 0 & 1 & 0\\
++ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 0 & 1\\
+\hline {\color{green}1} & \boldsymbol{0} & 0 & 0 & 0 & 0 & 1 & 1 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(00000111\right)_{C_{2}^{8}}=\left(7\right)_{10}=10-3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-39\right)_{10}=\left(-00100111\right)_{2}=\left(11011001\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(92\right)_{10}=\left(01011100\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 0 & 1 & 1 & 0 & 0 & 1\\
++ & \boldsymbol{0} & 1 & 0 & 1 & 1 & 1 & 0 & 0\\
+\hline {\color{green}1} & \boldsymbol{0} & 0 & 1 & 1 & 0 & 1 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(00110101\right)_{C_{2}^{8}}=\left(53\right)_{10}=-39+92$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-19\right)_{10}=\left(-00010011\right)_{2}=\left(11101101\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(-7\right)_{10}=\left(-00000111\right)_{2}=\left(11111001\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 1 & 0 & 1 & 1 & 0 & 1\\
++ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 0 & 0 & 1\\
+\hline {\color{green}1} & \boldsymbol{1} & 1 & 1 & 0 & 0 & 1 & 1 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(11100110\right)_{C_{2}^{8}}=\left(-26\right)_{10}=-19-7$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(44\right)_{10}=\left(00101100\right)_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(45\right)_{10}=\left(00101101\right)_{2}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 0 & 1 & 0 & 1 & 1 & 0 & 0\\
++ & \boldsymbol{0} & 0 & 1 & 0 & 1 & 1 & 0 & 1\\
+\hline {\color{red}0} & \boldsymbol{0} & 1 & 0 & 1 & 1 & 0 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(01011001\right)_{C_{2}^{8}}=\left(89\right)_{10}=44+45$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(104\right)_{10}=\left(01101000\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(45\right)_{10}=\left(00101101\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 1 & 1 & 0 & 1 & 0 & 0 & 0\\
++ & \boldsymbol{0} & 0 & 1 & 0 & 1 & 1 & 0 & 1\\
+\hline {\color{red}0} & \boldsymbol{1} & 0 & 0 & 1 & 0 & 1 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(10010101\right)_{2}=\left(-107\right)_{10}\neq\left(149\right)_{10}=104+45$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+\emph on
+enciende
+\series default
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-75\right)_{10}=\left(-01001011\right)_{2}=\left(10110101\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(59\right)_{10}=\left(00111011\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 0 & 1 & 1 & 0 & 1 & 0 & 1\\
++ & \boldsymbol{0} & 0 & 1 & 1 & 1 & 0 & 1 & 1\\
+\hline {\color{red}0} & \boldsymbol{1} & 1 & 1 & 1 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(11110000\right)_{C_{2}^{8}}=\left(-16\right)_{10}=-75+59$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-103\right)_{10}=\left(-01100111\right)_{2}=\left(10011001\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(-69\right)_{10}=\left(-01000101\right)_{2}=\left(10111011\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 0 & 0 & 1 & 1 & 0 & 0 & 1\\
++ & \boldsymbol{1} & 0 & 1 & 1 & 1 & 0 & 1 & 1\\
+\hline {\color{green}1} & \boldsymbol{0} & 1 & 0 & 1 & 0 & 1 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es incorrecto pues 
+\begin_inset Formula $\left(01010100\right)_{C_{2}^{8}}=\left(84\right)_{10}\neq-172=-19-7$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+enciende
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(127\right)_{10}=\left(01111111\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(1\right)_{10}=\left(00000001\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
++ & \boldsymbol{0} & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\hline {\color{red}0} & \boldsymbol{1} & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es incorrecto pues 
+\begin_inset Formula $\left(10000000\right)_{C_{2}^{8}}=\left(-1\right)_{10}\neq128=127+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+enciende
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-1\right)_{10}=\left(11111111\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(1\right)_{10}=\left(00000001\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
++ & \boldsymbol{0} & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\hline {\color{green}1} & \boldsymbol{0} & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(00000000\right)_{C_{2}^{8}}=\left(0\right)_{10}=-1+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-1\right)_{10}=\left(11111111\right)_{C_{2}^{8}}$
+\end_inset
+
+, luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
++ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+\hline {\color{green}1} & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(11111110\right)_{C_{2}^{8}}=\left(-2\right)_{10}=-1-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Repetir el ejercicio 1 pero ahora utilizando el sistema de numeración binario
+ en complemento a dos para los números enteros y la norma IEEE 754 para
+ los números con parte fraccionaria.
+ Comparando con los resultados anteriores, ¿qué conclusiones se pueden sacar?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(29\right)_{10}=\left(-1\right)^{0}\left(11101\right)_{2}=\left(011101\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(0,625\right)_{10}=\left(-1\right)^{0}\cdot\left(0,101\right)_{2}\cdot2^{0}=\left(-1\right)^{{\color{blue}0}}\cdot\left(1,01\right)_{2}\cdot2^{{\color{magenta}-1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\sigma={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}-1}+127=126=\left(01111110\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m=\left(01000000000000000000000\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(0,625\right)_{10}=\left(\underbrace{0}_{\sigma}\underbrace{01111110}_{E}\underbrace{01000000000000000000000}_{m}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(0,1\right)_{10}=\left(-1\right)^{0}\left(0,000\overline{1100}\right)_{2}\cdot2^{0}=\left(-1\right)^{{\color{blue}0}}\left(1,\overline{1001}\right)_{2}\cdot2^{{\color{magenta}-4}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\sigma={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}-4}+127=123=\left(01111011\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m=\left(1001100110011001100110\boldsymbol{1}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(0,1\right)_{10}=\left(\underbrace{0}_{\sigma}\underbrace{01111011}_{E}\underbrace{1001100110011001100110\boldsymbol{1}}_{m}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(5,75\right)_{10}=\left(-1\right)^{0}\left(101,11\right)_{2}\cdot2^{0}=\left(-1\right)^{{\color{blue}0}}\left(1,0111\right)_{2}\cdot2^{{\color{magenta}2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\sigma={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}2}+127=129=\left(10000001\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m=\left(01110000000000000000000\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(5,75\right)_{10}=\left(\underbrace{0}_{\sigma}\underbrace{10000001}_{E}\underbrace{01110000000000000000000}_{m}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(-138\right)_{10}=\left(-1\right)^{1}\left(10001010\right)_{2}=\left(101110110\right)_{C_{2}^{9}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(-15,125\right)_{10}=\left(-1\right)^{1}\left(1111,001\right)_{2}\cdot2^{0}=\left(-1\right)^{{\color{blue}1}}\left(1,111001\right)_{2}\cdot2^{{\color{magenta}3}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\sigma={\color{blue}1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}3}+127=130=\left(10000010\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m=\left(11100100000000000000000\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(15,125\right)_{10}=\left(\underbrace{1}_{\sigma}\underbrace{10000010}_{E}\underbrace{11100100000000000000000}_{m}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Considere el conjunto de números de punto flotante 
+\begin_inset Formula $\mathbb{F}\left(2,3,-1,2\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determinar 
+\begin_inset Formula $x_{\min},x_{\max},\epsilon_{M}$
+\end_inset
+
+ y el número de elementos de 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar los números de punto flotante positivos del conjunto 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Graficar sobre la recta real los números de puntos flotantes determinados
+ en el punto anterior.
+\end_layout
+
+\begin_layout Paragraph
+Ayuda
+\end_layout
+
+\begin_layout Standard
+Recordar la notación 
+\begin_inset Formula $\mathbb{F}\left(\beta,t,L,U\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $\beta$
+\end_inset
+
+ es la base, 
+\begin_inset Formula $t$
+\end_inset
+
+ es la cantidad de dígitos significativos de la mantisa, 
+\begin_inset Formula $L$
+\end_inset
+
+ es el valor mínimo del exponente y 
+\begin_inset Formula $U$
+\end_inset
+
+ es el valor máximo del exponente.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $\mathbb{F}\left({\color{blue}2},{\color{magenta}3},{\color{red}-1},{\color{green}2}\right)$
+\end_inset
+
+ resulta:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $x_{\min}={\color{blue}2}^{{\color{red}-1}}\cdot{\color{blue}2}^{-1}=2^{-2}=\nicefrac{1}{4}=0,25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{\max}={\color{blue}2}^{{\color{green}2}}\left(1-{\color{blue}2}^{-{\color{magenta}3}}\right)=4\left(1-\nicefrac{1}{8}\right)=\nicefrac{28}{8}=\nicefrac{7}{2}=3,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\epsilon_{M}={\color{blue}2}^{1-{\color{magenta}t}}=2^{1-3}=2^{-2}=\nicefrac{1}{4}=0,25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\mathbb{F}\left({\color{blue}2},{\color{magenta}3},{\color{red}-1},{\color{green}2}\right)\right|=2\left({\color{blue}2}-1\right){\color{blue}2}^{{\color{magenta}3}-1}\left({\color{green}2}-\left({\color{red}-1}\right)+1\right)+1=33$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar si el número 
+\begin_inset Formula $\left(2,89\right)_{10}\cdot10^{10}$
+\end_inset
+
+ es representable en un formato de coma flotante de 16 bits, con mantisa
+ normalizada de la forma 
+\begin_inset Formula $1,b_{-1}b_{-2}\dots$
+\end_inset
+
+, bit implícito y 7 bits para el exponente.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset Formula 
+\[
+\begin{aligned}\left(2,89\right)_{10}\cdot10^{10} & \approx\left(2,89\right)_{10}\cdot2^{33,22}=\left(2,89\right)_{10}\cdot2^{33}\cdot2^{0,22}\approx\left(3,3661\right)_{10}\cdot2^{33}\\
+ & \approx\left(11,010111011011100011\right)_{2}\cdot2^{33}\\
+ & =\left(1,1010111011011100011\right)_{2}\cdot2^{34}
+\end{aligned}
+\]
+
+\end_inset
+
+luego como tenemos reservados 7 bits para el exponente el rango es 
+\begin_inset Formula $\left[-63,64\right]$
+\end_inset
+
+ con sesgo 
+\begin_inset Formula $63$
+\end_inset
+
+ por lo que:
+\begin_inset Formula 
+\[
+\left(2,89\right)_{10}\cdot10^{10}\approx\left(\underbrace{0}_{\sigma}\underbrace{1100001}_{E}\underbrace{10101111}_{m}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados los siguientes números representados en punto flotante IEEE 754 simple
+ precisión, indicar a qué número en formato decimal corresponden y analizar
+ si son números normalizados:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $N_{1}=\left(11000010111011010100000000000000\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{2}=\left(0x40600000\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{3}=\left(0x00600000\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $N_{1}=\left({\color{blue}1}{\color{magenta}10000101}{\color{red}11011010100000000000000}\right)_{IEEE754}$
+\end_inset
+
+ tenemos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left({\color{magenta}10000101}\right)_{2}=133$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e=133-127=6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(1,{\color{red}110110101}\right)_{2}=2^{0}+{\color{red}2^{-1}+2^{-2}+2^{-4}+2^{-5}+2^{-7}+2^{-9}}=1,853515625$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{1}={\color{blue}-}\left(1,853515625\right)\cdot2^{6}=-118,625$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $N_{2}=\left(0x40600000\right)_{IEEE754}=\left({\color{blue}0}{\color{magenta}10000000}{\color{red}11000000000000000000000}\right)_{IEEE754}$
+\end_inset
+
+ tenemos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left({\color{magenta}10000000}\right)_{2}=128$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e=128-127=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(1,{\color{red}11}\right)_{2}=2^{0}+{\color{red}2^{-1}+2^{-2}}=1,75$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{2}=1,75\cdot2^{1}=3,5$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $N_{3}=\left(0x00600000\right)_{IEEE754}=\left({\color{blue}0}{\color{magenta}00000000}{\color{red}11000000000000000000000}\right)_{IEEE754}$
+\end_inset
+
+ tenemos:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left({\color{magenta}00000000}\right)_{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $N_{3}$
+\end_inset
+
+ es un numero denormalizado (
+\begin_inset Formula $E=0$
+\end_inset
+
+) entonces 
+\begin_inset Formula $e=-126$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(0,{\color{red}11}\right)={\color{red}2^{-1}+2^{-2}}=0,75$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{3}=0,75\cdot2^{-126}\approx8.81620763\cdot10^{-39}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Determinar la representación de punto flotante de 
+\begin_inset Formula $\pi$
+\end_inset
+
+ utilizando 4 dígitos.
+ Utilizar la norma IEEE 754 simple precisión.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Redondeamos 
+\begin_inset Formula $\pi\approx3,1416$
+\end_inset
+
+, luego observemos que 
+\begin_inset Formula $\left(3\right)_{10}=\left(11\right)_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(0,1416\right)_{10}\approx\left(0,0010010000111111111001\right)_{2}$
+\end_inset
+
+, luego:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi\approx\left(11,0010010000111111111001\right)_{2}\cdot2^{0}=\left(1,10010010000111111111001\right)_{2}\cdot2^{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E=1+127=128=\left(10000000\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m=\left(10010010000111111111001\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(3,1416\right)_{10}\approx\left(\underbrace{0}_{\sigma}\underbrace{10000000}_{E}\underbrace{10010010000111111111001}_{m}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Realizar la suma 0,1 + 0,2 utilizando aritmética en punto flotante con norma
+ IEEE 754 simple precisión.
+ Luego realizar la suma 0,1 + 0,4.
+ ¿Qué se puede observar?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Ayuda
+\end_layout
+
+\begin_layout Standard
+Al realizar las conversiones se puede reducir la cantidad de operaciones
+ observando la periodicidad de los resultados
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(0,1\right)_{10} & \approx\left(00111101110011001100110011001101\right)_{IEEE754}=\\
+ & =\left(-1\right)^{0}2^{-4}\left(1,10011001100110011001101\right)_{2}\approx\\
+ & \approx\left(-1\right)^{0}2^{-3}\left(0,11001100110011001100110\right)_{2}\approx\\
+ & \approx\left(-1\right)^{0}2^{-2}\left(0,01100110011001100110011\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(0,2\right)_{10} & \approx\left(00111110010011001100110011001101\right)_{IEEE754}=\\
+ & =\left(-1\right)^{0}2^{-3}\left(1,10011001100110011001101\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccccccccccccccccccc}
+ & 0, & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0\\
++ & 1, & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1\\
+\hline 1 & 0, & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1
+\end{array}
+\]
+
+\end_inset
+
+por lo que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\left(0,1\right)_{10}+\left(0,2\right)_{10} & \approx\left(-1\right)^{0}2^{-3}\left(10,01100110011001100110011\right)=\\
+ & =\left(-1\right)^{0}2^{-2}\left(1,001100110011001100110011\right)\approx\\
+ & \approx\left(00111110100110011001100110011010\right)_{IEEE754}\approx\\
+ & \approx\left(0,300000011921\right)_{10}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(0,4\right)_{10} & \approx\left(00111110110011001100110011001101\right)_{IEEE754}\approx\\
+ & \approx\left(-1\right)^{0}2^{-2}\left(1,10011001100110011001101\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccccccccccccccccccc}
+ & 0, & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1\\
++ & 1, & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1\\
+\hline 1 & 0, & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+por lo que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\left(0,1\right)_{10}+\left(0,4\right)_{10} & =\left(-1\right)^{0}2^{-2}\left(10\right)=\left(-1\right)^{0}2^{-1}\left(1,0\right)=0,5=\\
+ & =\left(00111111000000000000000000000000\right)_{IEEE754}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Efectuar los siguientes cálculos utilizando aritmética en punto flotante
+ con norma IEEE 754 simple precisión, siendo 
+\begin_inset Formula $a=12345$
+\end_inset
+
+, 
+\begin_inset Formula $b=0,0001$
+\end_inset
+
+, 
+\begin_inset Formula $c=45,5$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(a\oplus b\right)\oplus c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\oplus\left(b\oplus c\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al comparar los resultados en cada una de las operaciones, ¿qué puede concluirse
+?
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(12345\right)_{10} & \approx\left(01000110010000001110010000000000\right)_{IEEE754}\approx\\
+ & \approx\left(-1\right)^{0}2^{13}\left(1,1000000111001\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(0,0001\right)_{10} & \approx\left(00111000110100011011011100010111\right)_{IEEE754}\approx\\
+ & \approx\left(-1\right)^{0}2^{-14}\left(1,10100011011011100010111\right)_{2}\approx\\
+ & \approx\left(-1\right)^{0}2^{5}\left(0,00000000000000000011010\right)_{2}\neq\\
+ & \neq\left(-1\right)^{0}2^{13}\left(0,00000000000000000000000000\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(45,5\right)_{10} & \approx\left(01000010001101100000000000000000\right)_{IEEE754}=\\
+ & =\left(-1\right)^{0}2^{5}\left(1,011011\right)_{2}=\left(-1\right)^{0}2^{13}\left(0,00000001011011\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a\oplus b\right)\oplus c=a\oplus c=\left(01000110010000011001101000000000\right)_{IEEE754}=\left(12390,5\right)_{10}\approx\left(a+b\right)+c=\left(12390.5001\right)_{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\oplus\left(b\oplus c\right)=\left(12345\right)_{10}\oplus\left(01000010001101100000000000011010\right)_{IEEE754}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left(-1\right)^{0}2^{13}\left(1,1000000111001\right)_{2}+\left(-1\right)^{0}2^{5}\left(1,01101100000000000011010\right)_{2}\approx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\approx\left(-1\right)^{0}2^{13}\left(1,1000000111001\right)_{2}+\left(-1\right)^{0}2^{13}\left(0,00000001011011000000000\right)_{2}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left(-1\right)^{0}2^{13}\left(1,10000011001101\right)_{2}=\left(12390,5\right)_{10}\approx a+\left(b+c\right)=\left(12390.5001\right)_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Repetir el ejercicio anterior pero ahora utilizando doble precisión.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Ayuda
+\end_layout
+
+\begin_layout Standard
+No es necesario volver a hacer todo el procedimiento para hacer las conversiones.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Puede apreciarse que en este caso, ambas operaciones dan el resultado exacto.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
