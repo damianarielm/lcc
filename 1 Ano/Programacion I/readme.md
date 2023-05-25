@@ -9,5 +9,5 @@
 
 * Natalia Colussi
 * Pamela Ines Viale
-* Tahiu Pire
+* Tahiu Ahuara Nahuel Pire
 * Ezequiel Bisiach
