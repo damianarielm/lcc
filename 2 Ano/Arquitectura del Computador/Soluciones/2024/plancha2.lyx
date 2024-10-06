@@ -1,0 +1,1685 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../../../../lyx
+\use_default_options true
+\begin_removed_modules
+theorems-ams
+theorems-chap
+\end_removed_modules
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children no
+\language spanish
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 1
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Cover
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Plancha 2
+\end_layout
+
+\begin_layout Author
+Representación Computacional de Números Reales
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+2024 - Arquitectura del Computador
+\end_layout
+
+\begin_layout Date
+Licenciatura en Ciencias de la Computación
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+Esta plancha trata los sistemas de representación de números enteros en el lenguaje de programación C y los operadores de bits para manipular estos números a bajo nivel.
+\end_layout
+
+\begin_layout Chapter
+Procedimiento
+\end_layout
+
+\begin_layout Standard
+Resuelva cada ejercicio en computadora.
+ Cree un subdirectorio dedicado para cada ejercicio,
+ que contenga todos los archivos del mismo.
+ Para todo ejercicio que pida escribir código,
+ genere un programa completo,
+ con su función 
+\family typewriter
+main
+\family default
+ correspondiente;
+ evite dejar fragmentos sueltos de programas.
+\end_layout
+
+\begin_layout Standard
+Asegúrese de que todos los programas que escriba compilen correctamente con 
+\family typewriter
+gcc
+\family default
+.
+ Se recomienda además pasar a este las opciones 
+\family typewriter
+-Wall
+\family default
+ y 
+\family typewriter
+-Wextra
+\family default
+ para habilitar advertencias sobre construcciones cuestionables en el código
+\end_layout
+
+\begin_layout Chapter
+Punto Flotante
+\end_layout
+
+\begin_layout Enumerate
+Expresar en norma IEEE 754 simple precisión los siguientes números:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $29$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0,625$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $5,75$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-138$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-15,125$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0,1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $29=\left(-1\right)^{{\color{blue}0}}\cdot\left(1{\color{magenta}{\color{green}1101}}\right)_{2}\cdot2^{{\color{red}0}}=\left(-1\right)^{{\color{blue}0}}\cdot\left(1,{\color{magenta}{\color{green}1101}}\right)_{2}\cdot2^{{\color{red}4}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{red}4}+127=131=\left({\color{red}10000011}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,{\color{magenta}{\color{green}1101}}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $29=\left(\boxed{{\color{blue}0}}\boxed{{\color{red}10000011}}\boxed{{\color{magenta}{\color{green}1101}}0000000000000000000}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0,625=\left(-1\right)^{{\color{blue}0}}\cdot\left(0,1{\color{green}01}\right)_{2}\cdot2^{{\color{green}{\color{red}0}}}=\left(-1\right)^{{\color{blue}0}}\cdot\left(1,{\color{green}01}\right)_{2}\cdot2^{{\color{magenta}{\color{green}{\color{red}-1}}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}{\color{green}{\color{red}-1}}}+127=126=\left({\color{green}{\color{red}01111110}}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,{\color{green}01}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,625=\left(\boxed{{\color{blue}0}}\boxed{{\color{red}01111110}}\boxed{{\color{magenta}{\color{green}01}}000000000000000000000}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $5,75=\left(-1\right)^{{\color{blue}0}}\left(1{\color{green}01},{\color{green}11}\right)_{2}\cdot2^{{\color{red}0}}=\left(-1\right)^{{\color{blue}0}}\left(1,{\color{green}0111}\right)_{2}\cdot2^{{\color{magenta}{\color{red}2}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}{\color{red}2}}+127=129=\left({\color{red}10000001}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,{\color{green}0111}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $5,75=\left(\boxed{{\color{blue}0}}\boxed{{\color{red}10000001}}\boxed{{\color{magenta}{\color{green}0111}}0000000000000000000}\right)_{IEEE754}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $-138=\left(-1\right)^{{\color{blue}1}}\cdot\left(1{\color{green}0001010}\right)_{2}\cdot2^{{\color{red}0}}=\left(-1\right)^{{\color{blue}1}}\cdot\left(1,{\color{green}0001010}\right)_{2}\cdot2^{{\color{red}7}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}{\color{red}7}}+127=134=\left({\color{red}10000110}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,{\color{green}0001010}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-138=\left(\boxed{{\color{blue}1}}\boxed{{\color{red}10000110}}\boxed{{\color{magenta}{\color{green}0001010}}0000000000000000}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $-15,125=\left(-1\right)^{{\color{blue}1}}\left(1{\color{green}111},{\color{green}001}\right)_{2}\cdot2^{{\color{red}0}}=\left(-1\right)^{{\color{blue}1}}\left(1,{\color{green}111001}\right)_{2}\cdot2^{{\color{magenta}{\color{red}3}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}{\color{red}3}}+127=130=\left({\color{red}10000010}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,{\color{green}111001}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-15,125=\left(\boxed{{\color{blue}1}}\boxed{{\color{red}10000010}}\boxed{{\color{magenta}{\color{green}111001}}00000000000000000}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $0,1=\left(-1\right)^{{\color{blue}0}}\left(0,000\overline{1{\color{green}100}}\right)_{2}\cdot2^{{\color{red}0}}=\left(-1\right)^{{\color{blue}0}}\left(1,\overline{{\color{green}1001}}\right)_{2}\cdot2^{{\color{magenta}{\color{red}-4}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{magenta}{\color{red}-4}}+127=123=\left({\color{red}01111011}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,\overline{{\color{green}1001}}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,1\approx\left(\boxed{{\color{blue}0}}\boxed{{\color{red}01111011}}\boxed{{\color{green}1001100110011001100110}1}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Haga dos funciones o macros de C para extraer la fracción y el exponente de un 
+\family typewriter
+float
+\family default
+ sin usar variables auxiliares.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Sugerencia
+\emph default
+:
+ utilice corrimientos de bits y máscaras.
+ Luego use los tipos definidos en la cabecera 
+\family typewriter
+ieee754.h
+\family default
+ para corroborar.
+\end_layout
+
+\begin_layout Subparagraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+unsigned int signo(float f) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned int* r = (int*) &f;
+\end_layout
+
+\begin_layout Plain Layout
+
+    return *r >> 31;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned int fraccion(float f) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned int* r = (int*) &f;
+\end_layout
+
+\begin_layout Plain Layout
+
+    return (*r << 9) >> 9;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+unsigned int exponente(float f) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned int* r = (int*) &f;
+\end_layout
+
+\begin_layout Plain Layout
+
+    return (*r << 1) >> 24;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Convierta a 
+\family typewriter
+double
+\family default
+ y 
+\family typewriter
+float
+\family default
+ norma IEEE 754 el número:
+ 
+\begin_inset Formula $N=6,225$
+\end_inset
+
+.
+ Realice el cálculo de manera explícita y luego corrobore el resultado mediante un programa que aproveche las herramientas provistas en el ejercicio anterior.
+ Analizar en cada caso si se ha cometido error de representación y en caso afirmativo la magnitud del mismo.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $6,225=\left(-1\right)^{{\color{blue}0}}\left(110,001\overline{1100}\right)_{2}\cdot2^{{\color{red}0}}=\left(-1\right)^{{\color{blue}0}}\left(1,{\color{green}10001}\overline{{\color{green}1100}}\right)_{2}\cdot2^{{\color{magenta}{\color{red}2}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{1}={\color{magenta}{\color{red}2}}+127=129=\left({\color{red}10000001}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,{\color{green}10001}\overline{{\color{green}1100}}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $6,225\approx\left(\boxed{{\color{blue}0}}\boxed{{\color{red}10000001}}\boxed{{\color{green}10001110011001100110011}}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E_{2}={\color{magenta}{\color{red}2}}+1023=1025=\left({\color{red}10000000001}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $6,225\approx\left(\boxed{{\color{blue}0}}\boxed{{\color{red}10000000001}}\boxed{{\color{green}1000111001100110011001100110011001100110011001100110}}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados los números 
+\begin_inset Formula $N_{1}=\left(100000\right)_{10}$
+\end_inset
+
+ ,
+ 
+\begin_inset Formula $N_{2}=\left(0,2\right)_{10}$
+\end_inset
+
+ y 
+\begin_inset Formula $N_{3}=\left(0,1\right)_{10}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Realizar la operación 
+\begin_inset Formula $N_{1}\otimes\left(N_{2}\oplus N_{3}\right)$
+\end_inset
+
+ en simple precisión IEEE754.
+\end_layout
+
+\begin_layout Enumerate
+Realizar la operación 
+\begin_inset Formula $\left(N_{1}\otimes N_{2}\right)\oplus\left(N_{1}\otimes N_{3}\right)$
+\end_inset
+
+ en simple precisión IEEE754.
+\end_layout
+
+\begin_layout Enumerate
+Repetir para doble precisión IEEE 754.
+\end_layout
+
+\begin_layout Enumerate
+Comparar los resultados.
+\end_layout
+
+\begin_layout Subparagraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+La propiedad distributiva del producto respecto de la suma puede no valer para valores en norma IEEE754.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Puede apreciarse como en simple precisión,
+ el segundo resultado es preferible.
+\end_layout
+
+\begin_layout Standard
+En doble precisión no se observan diferencias para esos valores.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Realice el procedimiento de suma en simple precisión del número 
+\begin_inset Formula $\left(1,75\right)_{10}\cdot2^{-79}$
+\end_inset
+
+ con el número 
+\begin_inset Formula $0x19d00000$
+\end_inset
+
+ expresado en IEEE 754 simple precisión.
+\end_layout
+
+\begin_deeper
+\begin_layout Subparagraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+El siguiente programa muestra algunas cualidades de los números 
+\family typewriter
+NaN
+\family default
+ (
+\emph on
+Not A Number
+\emph default
+) y la función 
+\family typewriter
+isnan
+\family default
+ de C,
+ que indica si un flotante es 
+\family typewriter
+NaN
+\family default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <math.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main(void)
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+    float g = 0.0;
+\end_layout
+
+\begin_layout Plain Layout
+
+    float f = 0.0 / g;
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("f:
+ %f
+\backslash
+n",
+ f);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    // ADVERTENCIA:
+ 'NAN' es una extension de GCC.
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (f == NAN) printf("Es NAN
+\backslash
+n");
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (isnan(f)) printf("isNaN dice que si
+\backslash
+n");
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+El programa muestra que comparar con 
+\family typewriter
+NaN
+\family default
+ retorna siempre falso y para saber si una operación dio 
+\family typewriter
+NaN
+\family default
+ se puede usar 
+\family typewriter
+isnan
+\family default
+.
+ Utilizando las funciones de los ejercicios anteriorer,
+ implemente una función 
+\family typewriter
+myisnan
+\family default
+ que haga lo mismo que la función 
+\family typewriter
+isnan
+\family default
+ de C.
+\end_layout
+
+\begin_layout Enumerate
+Implemente otra función,
+ 
+\family typewriter
+myisnan2
+\family default
+,
+ que haga lo mismo pero utilizando solo una comparación y sin operaciones de bits.
+\end_layout
+
+\begin_layout Enumerate
+¿Ocurre lo mismo con 
+\begin_inset Formula $+\infty$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+¿Qué pasa si se suma un valor a 
+\begin_inset Formula $+\infty$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Subparagraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int myisnan(float f) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return (exponente(f) == (1 << 8) - 1) && fraccion(f);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int myisnan2(float f) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return *((unsigned int*) &f) > 0x7F800000;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados los siguientes números representados en punto flotante IEEE 754 simple precisión,
+ indicar a qué número en formato decimal corresponden y analizar si son números normalizados:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $N_{1}=\left(11000010111011010100000000000000\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{2}=\left(0x40600000\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{3}=\left(0x00600000\right)_{IEEE754}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $N_{1}=\left(\boxed{{\color{blue}1}}\boxed{{\color{magenta}{\color{red}10000101}}}\boxed{{\color{red}{\color{green}11011010100000000000000}}}\right)_{IEEE754}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left({\color{magenta}{\color{red}10000101}}\right)_{2}={\color{red}133}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e={\color{red}133}-127={\color{red}6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(1,{\color{red}{\color{green}110110101}}\right)_{2}=2^{0}+{\color{green}2^{-1}+2^{-2}+2^{-4}+2^{-5}+2^{-7}+2^{-9}}=1,{\color{green}853515625}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{1}={\color{blue}-}1,{\color{green}853515625}\cdot2^{{\color{red}6}}={\color{blue}-}118,625$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $N_{2}=\left(\boxed{{\color{blue}0}}\boxed{{\color{magenta}{\color{red}10000000}}}\boxed{{\color{red}{\color{green}11000000000000000000000}}}\right)_{IEEE754}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left({\color{red}10000000}\right)_{2}={\color{red}128}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e={\color{red}128}-127={\color{red}1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(1,{\color{red}{\color{green}11}}\right)_{2}=2^{0}+{\color{green}2^{-1}+2^{-2}}=1,{\color{green}75}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{2}=1,{\color{green}75}\cdot2^{{\color{red}1}}=3,5$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $N_{3}=\left(\boxed{{\color{blue}0}}\boxed{{\color{magenta}{\color{red}00000000}}}\boxed{{\color{green}11000000000000000000000}}\right)_{IEEE754}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left({\color{red}00000000}\right)_{2}={\color{red}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Como 
+\begin_inset Formula $N_{3}$
+\end_inset
+
+ es un numero denormalizado (
+\begin_inset Formula $E={\color{red}0}$
+\end_inset
+
+) entonces 
+\begin_inset Formula $e={\color{red}-126}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(0,{\color{red}{\color{green}11}}\right)={\color{green}2^{-1}+2^{-2}}=0,{\color{green}75}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $N_{3}=0,{\color{green}75}\cdot2^{{\color{red}-126}}=8,816207631167156309765524\cdot10^{-39}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Determinar la representación de punto flotante de 
+\begin_inset Formula $\pi$
+\end_inset
+
+ utilizando 4 dígitos.
+ Utilizar la norma IEEE 754 simple precisión.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Redondeamos 
+\begin_inset Formula $\pi\approx3,1416$
+\end_inset
+
+,
+ luego observemos que 
+\begin_inset Formula $\left(3\right)_{10}=\left(11\right)_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(0,1416\right)_{10}\approx\left(0,0010010000111111111001\right)_{2}$
+\end_inset
+
+,
+ luego:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi\approx\left(11,0010010000111111111001\right)_{2}\cdot2^{0}=\left(1,{\color{green}10010010000111111111001}\right)_{2}\cdot2^{{\color{red}1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s={\color{blue}0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $E={\color{red}1}+127={\color{red}128}=\left({\color{red}10000000}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f=\left(0,{\color{green}10010010000111111111001}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $3,1416\approx\left(\boxed{{\color{blue}0}}\boxed{{\color{magenta}{\color{red}10000000}}}\boxed{{\color{green}10010010000111111111001}}\right)_{IEEE754}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Realizar la suma 
+\begin_inset Formula $0,1+0,2$
+\end_inset
+
+ utilizando aritmética en punto flotante con norma IEEE 754 simple precisión.
+ Luego realizar la suma 
+\begin_inset Formula $0,1+0,4$
+\end_inset
+
+.
+ ¿Qué se puede observar?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Ayuda
+\emph default
+:
+ Al realizar las conversiones se puede reducir la cantidad de operaciones observando la periodicidad de los resultados.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}0,1 & \approx\left({\color{blue}0}{\color{red}01111011}{\color{green}10011001100110011001101}\right)_{IEEE754}=\\
+ & =\left(-1\right)^{{\color{blue}0}}2^{{\color{red}-4}}\left(1,{\color{green}10011001100110011001101}\right)_{2}\approx\\
+ & \approx\left(-1\right)^{{\color{blue}0}}2^{{\color{red}-3}}\left(0,1{\color{green}1001100110011001100110}\right)_{2}\approx\\
+ & \approx\left(-1\right)^{{\color{blue}0}}2^{{\color{red}-2}}\left(0,01{\color{green}100110011001100110011}\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}0,2 & \approx\left({\color{blue}0}{\color{red}01111100}{\color{green}10011001100110011001101}\right)_{IEEE754}=\\
+ & =\left(-1\right)^{{\color{blue}0}}2^{{\color{red}-3}}\left(1,{\color{green}10011001100110011001101}\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccccccccccccccccccc}
+ & 0, & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0\\
++ & 1, & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1\\
+\hline 1 & 0, & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1
+\end{array}
+\]
+
+\end_inset
+
+por lo que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}0,1+0,2 & \approx\left(-1\right)^{{\color{blue}0}}2^{-3}\left(1{\color{green}0},{\color{green}0110011001100110011001}1\right)=\\
+ & =\left(-1\right)^{{\color{blue}0}}2^{-2}\left(1,{\color{green}00110011001100110011001}1\right)\approx\\
+ & \approx\left(\boxed{{\color{blue}0}}\boxed{{\color{red}01111101}}\boxed{{\color{green}001100110011001100110}10}\right)_{IEEE754}=\\
+ & =\left(0,300000011920928955078125\right)_{10}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(0,4\right)_{10} & \approx\left(00111110110011001100110011001101\right)_{IEEE754}\approx\\
+ & \approx\left(-1\right)^{0}2^{-2}\left(1,10011001100110011001101\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccccccccccccccccccc}
+ & 0, & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1\\
++ & 1, & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1\\
+\hline 1 & 0, & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+por lo que
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{aligned}\left(0,1\right)_{10}+\left(0,4\right)_{10} & =\left(-1\right)^{0}2^{-2}\left(10\right)=\left(-1\right)^{0}2^{-1}\left(1,0\right)=0,5=\\
+ & =\left(00111111000000000000000000000000\right)_{IEEE754}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Efectuar los siguientes cálculos utilizando aritmética en punto flotante con norma IEEE 754 simple precisión,
+ siendo 
+\begin_inset Formula $a=12345$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=0,0001$
+\end_inset
+
+,
+ 
+\begin_inset Formula $c=45,5$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(a\oplus b\right)\oplus c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\oplus\left(b\oplus c\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al comparar los resultados en cada una de las operaciones,
+ ¿qué puede concluirse?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(12345\right)_{10} & \approx\left(01000110010000001110010000000000\right)_{IEEE754}\approx\\
+ & \approx\left(-1\right)^{0}2^{13}\left(1,1000000111001\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(0,0001\right)_{10} & \approx\left(00111000110100011011011100010111\right)_{IEEE754}\approx\\
+ & \approx\left(-1\right)^{0}2^{-14}\left(1,10100011011011100010111\right)_{2}\approx\\
+ & \approx\left(-1\right)^{0}2^{5}\left(0,00000000000000000011010\right)_{2}\neq\\
+ & \neq\left(-1\right)^{0}2^{13}\left(0,00000000000000000000000000\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{aligned}\left(45,5\right)_{10} & \approx\left(01000010001101100000000000000000\right)_{IEEE754}=\\
+ & =\left(-1\right)^{0}2^{5}\left(1,011011\right)_{2}=\left(-1\right)^{0}2^{13}\left(0,00000001011011\right)_{2}
+\end{aligned}
+$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+luego:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(a\oplus b\right)\oplus c=a\oplus c=\left(01000110010000011001101000000000\right)_{IEEE754}=\left(12390,5\right)_{10}\approx\left(a+b\right)+c=\left(12390.5001\right)_{10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $a\oplus\left(b\oplus c\right)=\left(12345\right)_{10}\oplus\left(01000010001101100000000000011010\right)_{IEEE754}=$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $=\left(-1\right)^{0}2^{13}\left(1,1000000111001\right)_{2}+\left(-1\right)^{0}2^{5}\left(1,01101100000000000011010\right)_{2}\approx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\approx\left(-1\right)^{0}2^{13}\left(1,1000000111001\right)_{2}+\left(-1\right)^{0}2^{13}\left(0,00000001011011000000000\right)_{2}=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left(-1\right)^{0}2^{13}\left(1,10000011001101\right)_{2}=\left(12390,5\right)_{10}\approx a+\left(b+c\right)=\left(12390.5001\right)_{10}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Repetir el ejercicio anterior pero ahora utilizando doble precisión.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Ayuda
+\end_layout
+
+\begin_layout Standard
+No es necesario volver a hacer todo el procedimiento para hacer las conversiones.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Puede apreciarse que en este caso,
+ ambas operaciones dan el resultado exacto.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados los números 
+\begin_inset Formula $A=\left(24\right)_{10}$
+\end_inset
+
+ ,
+ 
+\begin_inset Formula $B=\left(30\right)_{10}$
+\end_inset
+
+ y 
+\begin_inset Formula $C=\left(15,75\right)_{10}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Realizar la suma 
+\begin_inset Formula $S=A\oplus B\oplus C$
+\end_inset
+
+ en norma IEEE754 simple precisión.
+\end_layout
+
+\begin_layout Enumerate
+Expresar el resultado en hexadecimal.
+\end_layout
+
+\begin_layout Enumerate
+Convertir el resultado a doble precisión y expresar el resultado en hexadecimal.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Considere el conjunto de números de punto flotante 
+\begin_inset Formula $\mathbb{F}\left(2,3,-1,2\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Determinar 
+\begin_inset Formula $x_{\min},x_{\max},\epsilon_{M}$
+\end_inset
+
+ y el número de elementos de 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Determinar los números de punto flotante positivos del conjunto 
+\begin_inset Formula $\mathbb{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Graficar sobre la recta real los números de puntos flotantes determinados en el punto anterior.
+\end_layout
+
+\begin_layout Paragraph
+Ayuda
+\end_layout
+
+\begin_layout Standard
+Recordar la notación 
+\begin_inset Formula $\mathbb{F}\left(\beta,t,L,U\right)$
+\end_inset
+
+,
+ donde 
+\begin_inset Formula $\beta$
+\end_inset
+
+ es la base,
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ es la cantidad de dígitos significativos de la mantisa,
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ es el valor mínimo del exponente y 
+\begin_inset Formula $U$
+\end_inset
+
+ es el valor máximo del exponente.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Para 
+\begin_inset Formula $\mathbb{F}\left({\color{blue}2},{\color{magenta}3},{\color{red}-1},{\color{green}2}\right)$
+\end_inset
+
+ resulta:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $x_{\min}={\color{blue}2}^{{\color{red}-1}}\cdot{\color{blue}2}^{-1}=2^{-2}=\nicefrac{1}{4}=0,25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x_{\max}={\color{blue}2}^{{\color{green}2}}\left(1-{\color{blue}2}^{-{\color{magenta}3}}\right)=4\left(1-\nicefrac{1}{8}\right)=\nicefrac{28}{8}=\nicefrac{7}{2}=3,5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\epsilon_{M}={\color{blue}2}^{1-{\color{magenta}t}}=2^{1-3}=2^{-2}=\nicefrac{1}{4}=0,25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left|\mathbb{F}\left({\color{blue}2},{\color{magenta}3},{\color{red}-1},{\color{green}2}\right)\right|=2\left({\color{blue}2}-1\right){\color{blue}2}^{{\color{magenta}3}-1}\left({\color{green}2}-\left({\color{red}-1}\right)+1\right)+1=33$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(
+\emph on
+Opcional
+\emph default
+) Determinar si el número 
+\begin_inset Formula $\left(2,89\right)_{10}\cdot10^{4}$
+\end_inset
+
+ es representable en un formato de coma flotante de 16 bits,
+ con mantisa normalizada de la forma 
+\begin_inset Formula $\left(1,b_{-1}b_{-2}\dots\right)_{2}$
+\end_inset
+
+,
+ bit implícito y 5 bits para el exponente.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset Formula 
+\[
+\begin{aligned}\left(2,89\right)_{10}\cdot10^{4} & =\left(1{\color{green}11000011100100}\right)_{2}\cdot2^{{\color{red}0}}\\
+ & =\left(1,{\color{green}11000011100100}\right)_{2}\cdot2^{{\color{red}14}}
+\end{aligned}
+\]
+
+\end_inset
+
+luego como tenemos reservados 5 bits para el exponente el rango es 
+\begin_inset Formula $\left[-14,15\right]$
+\end_inset
+
+ con sesgo 
+\begin_inset Formula $15$
+\end_inset
+
+ por lo que:
+\begin_inset Formula 
+\[
+\left(2,89\right)_{10}\cdot10^{10}\approx\left(\boxed{{\color{blue}0}}\boxed{{\color{red}11101}}\boxed{{\color{green}1100001110}}\right)_{IEEE754}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

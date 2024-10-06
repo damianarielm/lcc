@@ -1,0 +1,4440 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../../../../lyx
+\use_default_options true
+\begin_removed_modules
+theorems-ams
+theorems-chap
+\end_removed_modules
+\begin_modules
+multicol
+\end_modules
+\maintain_unincluded_children no
+\language spanish
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 1
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Cover
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Plancha 1
+\end_layout
+
+\begin_layout Author
+Representación Computacional de datos
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+2024 - Arquitectura del Computador
+\end_layout
+
+\begin_layout Date
+Licenciatura en Ciencias de la Computación
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Introducción
+\end_layout
+
+\begin_layout Standard
+El objetivo de esta serie de ejercicios es familiarizarse con la representación de datos orientada a la computación,
+ sin depender de la implementación computacional propiamente dicha.
+ Muchos de los ejercicios están diseñados para ser resueltos con papel y lápiz,
+ aunque aunque posteriormente se pueden utilizar herramientas inform´aticas para verificar los resultados.
+\end_layout
+
+\begin_layout Chapter
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+Determinar la representación binaria de los siguientes números:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+29
+\end_layout
+
+\begin_layout Enumerate
+0,625
+\end_layout
+
+\begin_layout Enumerate
+5,75
+\end_layout
+
+\begin_layout Enumerate
+-138
+\end_layout
+
+\begin_layout Enumerate
+-15,125
+\end_layout
+
+\begin_layout Enumerate
+0,1
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $29=2\cdot{\color{blue}14}+\boxed{1}\Rightarrow a_{0}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{blue}14}=2\cdot{\color{magenta}7}+\boxed{0}\Rightarrow a_{1}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{magenta}7}=2\cdot{\color{red}3}+\boxed{1}\Rightarrow a_{2}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{red}3}=2\cdot{\color{green}1}+\boxed{1}\Rightarrow a_{3}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{green}1}=2\cdot0+\boxed{1}\Rightarrow a_{4}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore29=\left(a_{4}a_{3}a_{2}a_{1}a_{0}\right)_{2}=\left(11101\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,625\cdot2=\boxed{1},{\color{blue}25}\Rightarrow a_{-1}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{blue}25}\cdot2=\boxed{0},{\color{magenta}5}\Rightarrow a_{-2}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{magenta}5}\cdot2=\boxed{1}\Rightarrow a_{-3}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore0,625=\left(0,a_{-1}a_{-2}a_{-3}\right)_{2}=\left(0,101\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,75\cdot2=\boxed{1},{\color{red}{\color{blue}5}}\Rightarrow a_{-1}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{red}{\color{blue}5}}\cdot2=\boxed{1}\Rightarrow a_{-2}=\boxed{1}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $5=2\cdot{\color{blue}{\color{magenta}2}}+\boxed{1}\Rightarrow a_{0}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{blue}{\color{magenta}2}}=2\cdot{\color{magenta}{\color{red}1}}+\boxed{0}\Rightarrow a_{1}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{magenta}{\color{red}1}}=2\cdot0+\boxed{1}\Rightarrow a_{2}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore5,75=\left(a_{2}a_{1}a_{0},a_{-1}a_{-2}\right)_{2}=\left(101,11\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $138=2\cdot{\color{blue}69}+\boxed{0}\Rightarrow a_{0}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{blue}69}=2\cdot{\color{magenta}34}+\boxed{1}\Rightarrow a_{1}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{magenta}34}=2\cdot{\color{red}17}+\boxed{0}\Rightarrow a_{2}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{red}17}=2\cdot{\color{green}8}+\boxed{1}\Rightarrow a_{3}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{green}8}=2\cdot{\color{yellow}4}+\boxed{0}\Rightarrow a_{4}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{yellow}4}=2\cdot2+\boxed{0}\Rightarrow a_{5}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $2=2\cdot1+\boxed{0}\Rightarrow a_{6}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1=2\cdot0+\boxed{1}\Rightarrow a_{7}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore-138=\left(-a_{7}a_{6}a_{5}a_{4}a_{3}a_{2}a_{1}a_{0}\right)_{2}=\left(-10001010\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,125\cdot2=\boxed{0},{\color{blue}25}\Rightarrow a_{-1}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{blue}25}\cdot2=\boxed{0},{\color{magenta}5}\Rightarrow a_{-2}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{magenta}5}\cdot2=\boxed{1}\Rightarrow a_{-3}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $15=2\cdot{\color{red}7}+\boxed{1}\Rightarrow a_{0}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{red}7}=2\cdot{\color{green}3}+\boxed{1}\Rightarrow a_{1}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{green}3}=2\cdot{\color{yellow}1}+\boxed{1}\Rightarrow a_{2}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\color{yellow}1}=2\cdot0+\boxed{1}\Rightarrow a_{3}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore-15,125=\left(-a_{3}a_{2}a_{1}a_{0},a_{-1}a_{-2}a_{-3}\right)_{2}=\left(-1111,001\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,1\cdot2=\boxed{0},{\color{blue}2}\Rightarrow a_{-1}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{blue}2}\cdot2=\boxed{0},{\color{magenta}4}\Rightarrow a_{-2}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{magenta}4}\cdot2=\boxed{0},{\color{red}8}\Rightarrow a_{-3}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{red}8}\cdot2=\boxed{1},{\color{green}6}\Rightarrow a_{-4}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,{\color{green}6}\cdot2=\boxed{1},{\color{blue}2}\Rightarrow a_{-5}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore0,1=\left(a_{0},a_{-1}\overline{a_{-2}a_{-3}a_{-4}a_{-5}}\right)_{2}=\left(0,0\overline{0011}\right)_{2}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Repita el ejercicio anterior utilizando el sistema de numeración posicional denominado 
+\emph on
+magnitud y signo
+\emph default
+ con punto fijo:
+\begin_inset Formula 
+\[
+\left(-1\right)^{s}\left(a_{n}a_{n-1}\dots a_{1}a_{0},a_{-1}a_{-2}\dots\right)_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Analizar en cada caso cuántos dígitos son necesarios para poder representar cada uno de los números.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $29=\left(-1\right)^{{\color{blue}0}}\left({\color{red}11101}\right)_{2}=\left({\color{blue}0}{\color{red}11101}\right)_{\left|\pm2\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Son necesarios 6 bits.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,625=\left(-1\right)^{{\color{blue}0}}\left({\color{red}0},{\color{red}101}\right)_{2}=\left({\color{blue}0}{\color{red}0},{\color{red}101}\right)_{\left|\pm2\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Son necesarios 5 bits.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $5,75=\left(-1\right)^{{\color{blue}0}}\left({\color{red}101},{\color{red}11}\right)_{2}=\left({\color{blue}0}{\color{red}101},{\color{red}11}\right)_{\left|\pm2\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Son necesarios 6 bits.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $-138=\left(-1\right)^{{\color{blue}1}}\left({\color{red}10001010}\right)_{2}=\left({\color{blue}1}{\color{red}10001010}\right)_{\left|\pm2\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Son necesarios 9 bits.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $-15,125=\left(-1\right)^{{\color{blue}1}}\left({\color{red}1111},{\color{red}001}\right)_{2}=\left({\color{blue}1}{\color{red}1111},{\color{red}001}\right)_{\left|\pm2\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Son necesarios 8 bits.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,1=\left(-1\right)^{{\color{blue}0}}\left({\color{red}0},{\color{red}0\overline{0011}}\right)_{2}=\left({\color{blue}0}{\color{red}0},{\color{red}0\overline{0011}}\right)_{\left|\pm2\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Son necesarios infinitos bits.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Convertir los siguientes números decimales a binario utilizando la representación en complemento a dos con seis bits:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+-16
+\end_layout
+
+\begin_layout Enumerate
+13
+\end_layout
+
+\begin_layout Enumerate
+-1
+\end_layout
+
+\begin_layout Enumerate
+-10
+\end_layout
+
+\begin_layout Enumerate
+16
+\end_layout
+
+\begin_layout Enumerate
+-31
+\end_layout
+
+\begin_layout Standard
+¿Qué tienen en común todos los números negativos y todos los números positivos al utilizar esta representación?
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-16=\left({\color{red}-0}{\color{blue}10000}\right)_{2}=\left({\color{red}1}{\color{blue}10000}\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $13=\left({\color{blue}001101}\right)_{2}=\left({\color{blue}001101}\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-1=\left({\color{red}-00000}{\color{blue}1}\right)_{2}=\left({\color{red}11111}{\color{blue}1}\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-10=\left({\color{red}-0010}{\color{blue}10}\right)_{2}=\left({\color{red}1101}{\color{blue}10}\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $16=\left({\color{blue}010000}\right)_{2}=\left({\color{blue}010000}\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $31=\left({\color{red}-01111}{\color{blue}1}\right)_{2}=\left({\color{red}10000}{\color{blue}1}\right)_{C_{2}^{6}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los números negativos en complemento a 2,
+ tienen el bit mas significativo en 1 mientras que los positivos lo tienen en 0.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Repetir el ejercicio anterior pero ahora utilizando 8 bits.
+ ¿Qué conclusión se puede sacar comparando los resultados con los del ejercicio anterior?
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-16=\left({\color{blue}1}10000\right)_{C_{2}^{6}}=\left({\color{blue}111}10000\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $13=\left({\color{blue}0}01101\right)_{C_{2}^{6}}=\left({\color{blue}000}01101\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-1=\left({\color{blue}1}11111\right)_{C_{2}^{6}}=\left({\color{blue}111}11111\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-10=\left({\color{blue}1}10110\right)_{C_{2}^{6}}=\left({\color{blue}111}10110\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $16=\left({\color{blue}0}10000\right)_{C_{2}^{6}}=\left({\color{blue}000}10000\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $31=\left({\color{blue}1}00001\right)_{C_{2}^{6}}=\left({\color{blue}111}00001\right)_{C_{2}^{8}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Basta con extender el bit mas significativo para realizar la conversión.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dadas las siguientes secuencias de bits,
+ indicar a qué números corresponden en sistema decimal utilizando la representación en complemento a dos:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\left(00001101\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(01001101\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11100001\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11111001\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11111111\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(00000000\right)_{C_{2}^{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(0000{\color{red}1}{\color{magenta}1}0{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{2}}+{\color{red}2^{3}}={\color{blue}1}+{\color{magenta}4}+{\color{red}8}=13$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(0{\color{green}1}00{\color{red}1}{\color{magenta}1}0{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{2}}+{\color{red}2^{3}}+{\color{green}2^{6}}={\color{blue}1}+{\color{magenta}4}+{\color{red}8}+{\color{green}64}=77$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left({\color{green}1}{\color{red}1}{\color{magenta}1}0000{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{5}}+{\color{red}2^{6}}-{\color{green}2^{7}}={\color{blue}1}+{\color{magenta}32}+{\color{red}64}-{\color{green}128}=-31$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(1{\color{yellow}1}{\color{green}1}{\color{red}1}{\color{magenta}1}00{\color{blue}1}\right)_{C_{2}^{8}}={\color{blue}2}^{{\color{blue}0}}+{\color{magenta}2^{3}}+{\color{red}2^{4}}+{\color{green}2^{5}}+{\color{yellow}2^{6}}-2^{7}=-7$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(11111111\right)_{C_{2}^{8}}=2^{0}+2^{1}+2^{2}+2^{3}+2^{4}+2^{5}+2^{6}-2^{7}=-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(00000000\right)_{C_{2}^{8}}=0$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mostrar que 
+\begin_inset Formula $\left(13,25\right)_{10}=\left(1101,01\right)_{2}=\left(15,2\right)_{8}=\left(D,4\right)_{16}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left(13,25\right)_{10}=\left(1101,01\right)_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,25\cdot2=\boxed{0},5\Rightarrow a_{-1}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $0,5\cdot2=\boxed{1}\Rightarrow a_{-2}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $13=2\cdot6+\boxed{1}\Rightarrow a_{0}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $6=2\cdot3+\boxed{0}\Rightarrow a_{1}=\boxed{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $3=2\cdot1+\boxed{1}\Rightarrow a_{2}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1=2\cdot0+\boxed{1}\Rightarrow a_{3}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(13,25\right)_{10}=\left(15,2\right)_{8}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,25\cdot8=\boxed{2}\Rightarrow a_{-1}=\boxed{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $13=8\cdot1+\boxed{5}\Rightarrow a_{0}=\boxed{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $1=8\cdot0+\boxed{1}\Rightarrow a_{1}=\boxed{1}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\left(13,25\right)_{10}=\left(D,4\right)_{16}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $0,25\cdot16=\boxed{4}\Rightarrow a_{-1}=\boxed{4}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $13=16\cdot0+13=\boxed{13}\Rightarrow a_{0}=\boxed{D}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Rellenar la siguiente tabla:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Binario
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Octal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hexadecimal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Decimal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1101100,110$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $362,23$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A1,03$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $74,3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cada fila encontrarán un valor numérico expresado en la base indicada en la casilla superior de la columna correspondiente.
+ Completen el resto de las casillas con la representación correspondiente según la base indicada en la parte superior,
+ de manera que se mantengan las equivalencias en cada fila.
+ Asuman que los números son sin signo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Binario
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Octal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hexadecimal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Decimal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1101100,110$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $154,6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6C,C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $108,75$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $11110010,010011$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $362,23$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F2,4C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $242,296875$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $10100001,00000011$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $241,006$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A1,03$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $161,01171875$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1001010,0\overline{1001}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $112,2\overline{3146}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4A,4\overline{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $74,3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Determinar el formato hexadecimal que use el mínimo número de dígitos y que permita representar el número 
+\begin_inset Formula $\left(16,25\right)_{10}$
+\end_inset
+
+ de manera exacta.
+ ¿Cuál es el rango y la precisión del formato?
+ Asumir números sin signo.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Ayuda:
+
+\emph default
+ Tener en cuenta que la precisión se puede interpretar como la diferencia entre un número y el siguiente número representable.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+Observemos que 
+\begin_inset Formula $16,25_{10}=\left(10,4\right)_{16}$
+\end_inset
+
+,
+ luego nos bastará un formato hexadecimal de punto fijo con dos dígitos para la parte entera y uno para la parte fraccionaria.
+\end_layout
+
+\begin_layout Standard
+Este formato permite expresar numeros entre 
+\begin_inset Formula $0\leq N\leq\left(FF,F\right)_{16}=\left(255,9375\right)_{10}$
+\end_inset
+
+ y tiene una presición de 
+\begin_inset Formula $16^{-1}=0,0625$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Realicen cada una de las siguientes operaciones en complemento a dos,
+ utilizando 8 bits para representar cada número.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Flex Multiple Columns
+status open
+
+\begin_layout Enumerate
+\begin_inset Formula $10-3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-39+92$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-19-7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $44+45$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $104+45$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-75+59$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-103-69$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $127+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-1+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-1-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-8-127$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $127+127$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para cada operación,
+ analicen si los resultados obtenidos son correctos o incorrectos,
+ explicando las razones.
+ Ubique los resultados en la recta real,
+ incluyendo los valores mínimos y máximos para esta representación.
+ Además,
+ indicar el estado de las banderas 
+\emph on
+Carry
+\emph default
+ y 
+\emph on
+Overflow
+\emph default
+ luego de realizar cada una de las operaciones anteriores.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(10\right)_{10}=\left(00001010\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(3\right)_{10}=\left(00000011\right)_{2}=\left(11111101\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 0 & 0 & 0 & 1 & 0 & 1 & 0\\
++ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 0 & 1\\
+\hline {\color{green}1} & \boldsymbol{0} & 0 & 0 & 0 & 0 & 1 & 1 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(00000111\right)_{C_{2}^{8}}=\left(7\right)_{10}=10-3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-39\right)_{10}=\left(-00100111\right)_{2}=\left(11011001\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(92\right)_{10}=\left(01011100\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 0 & 1 & 1 & 0 & 0 & 1\\
++ & \boldsymbol{0} & 1 & 0 & 1 & 1 & 1 & 0 & 0\\
+\hline {\color{green}1} & \boldsymbol{0} & 0 & 1 & 1 & 0 & 1 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(00110101\right)_{C_{2}^{8}}=\left(53\right)_{10}=-39+92$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-19\right)_{10}=\left(-00010011\right)_{2}=\left(11101101\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(-7\right)_{10}=\left(-00000111\right)_{2}=\left(11111001\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 1 & 0 & 1 & 1 & 0 & 1\\
++ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 0 & 0 & 1\\
+\hline {\color{green}1} & \boldsymbol{1} & 1 & 1 & 0 & 0 & 1 & 1 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(11100110\right)_{C_{2}^{8}}=\left(-26\right)_{10}=-19-7$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(44\right)_{10}=\left(00101100\right)_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(45\right)_{10}=\left(00101101\right)_{2}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 0 & 1 & 0 & 1 & 1 & 0 & 0\\
++ & \boldsymbol{0} & 0 & 1 & 0 & 1 & 1 & 0 & 1\\
+\hline {\color{red}0} & \boldsymbol{0} & 1 & 0 & 1 & 1 & 0 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(01011001\right)_{C_{2}^{8}}=\left(89\right)_{10}=44+45$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(104\right)_{10}=\left(01101000\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(45\right)_{10}=\left(00101101\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 1 & 1 & 0 & 1 & 0 & 0 & 0\\
++ & \boldsymbol{0} & 0 & 1 & 0 & 1 & 1 & 0 & 1\\
+\hline {\color{red}0} & \boldsymbol{1} & 0 & 0 & 1 & 0 & 1 & 0 & 1
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(10010101\right)_{2}=\left(-107\right)_{10}\neq\left(149\right)_{10}=104+45$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+\emph on
+enciende
+\series default
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-75\right)_{10}=\left(-01001011\right)_{2}=\left(10110101\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(59\right)_{10}=\left(00111011\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 0 & 1 & 1 & 0 & 1 & 0 & 1\\
++ & \boldsymbol{0} & 0 & 1 & 1 & 1 & 0 & 1 & 1\\
+\hline {\color{red}0} & \boldsymbol{1} & 1 & 1 & 1 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(11110000\right)_{C_{2}^{8}}=\left(-16\right)_{10}=-75+59$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-103\right)_{10}=\left(-01100111\right)_{2}=\left(10011001\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(-69\right)_{10}=\left(-01000101\right)_{2}=\left(10111011\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 0 & 0 & 1 & 1 & 0 & 0 & 1\\
++ & \boldsymbol{1} & 0 & 1 & 1 & 1 & 0 & 1 & 1\\
+\hline {\color{green}1} & \boldsymbol{0} & 1 & 0 & 1 & 0 & 1 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es incorrecto pues 
+\begin_inset Formula $\left(01010100\right)_{C_{2}^{8}}=\left(84\right)_{10}\neq-172=-19-7$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+enciende
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(127\right)_{10}=\left(01111111\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(1\right)_{10}=\left(00000001\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{0} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
++ & \boldsymbol{0} & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\hline {\color{red}0} & \boldsymbol{1} & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es incorrecto pues 
+\begin_inset Formula $\left(10000000\right)_{C_{2}^{8}}=\left(-1\right)_{10}\neq128=127+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color red
+apaga
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+enciende
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-1\right)_{10}=\left(11111111\right)_{C_{2}^{8}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(1\right)_{10}=\left(00000001\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
++ & \boldsymbol{0} & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+\hline {\color{green}1} & \boldsymbol{0} & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(00000000\right)_{C_{2}^{8}}=\left(0\right)_{10}=-1+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Observemos que 
+\begin_inset Formula $\left(-1\right)_{10}=\left(11111111\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ luego:
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
++ & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+\hline {\color{green}1} & \boldsymbol{1} & 1 & 1 & 1 & 1 & 1 & 1 & 0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+El resultado es correcto pues 
+\begin_inset Formula $\left(11111110\right)_{C_{2}^{8}}=\left(-2\right)_{10}=-1-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados 
+\begin_inset Formula $A=200$
+\end_inset
+
+,
+ 
+\begin_inset Formula $B=300$
+\end_inset
+
+,
+ 
+\begin_inset Formula $C=500$
+\end_inset
+
+ y 
+\begin_inset Formula $D=400$
+\end_inset
+
+,
+ calcular 
+\begin_inset Formula $S=A\cdot B\cdot C\cdot D$
+\end_inset
+
+,
+ interpretando los datos como enteros con signo.
+ Imprimir el resultado por pantalla haciendo un programa en lenguaje C con datos tipo 
+\family typewriter
+int
+\family default
+ y analizar el resultado.
+ Repetir para datos tipo 
+\family typewriter
+long int
+\family default
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Ayuda
+\emph default
+:
+ Para poder imprimir un 
+\family typewriter
+long int
+\family default
+ se debe usar el especificador
+\begin_inset space ~
+\end_inset
+
+ 
+\family typewriter
+%ld
+\family default
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=\left(10{\color{blue}11001011010000010111100000000000}\right)_{2}=2^{11}+2^{12}+2^{13}+2^{14}+2^{16}+2^{22}+2^{24}+2^{25}+2^{27}+2^{30}+2^{31}+2^{33}=12000000000$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T=\left({\color{blue}11001011010000010111100000000000}\right)_{C_{2}^{8}}=2^{11}+2^{12}+2^{13}+2^{14}+2^{16}+2^{22}+2^{24}+2^{25}+2^{27}+2^{30}-2^{31}=-884901888$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    int a = 200,
+ b = 300,
+ c = 500,
+ d = 400;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    int s = a * b * c * d;
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("s = %d
+\backslash
+n",
+ s);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    long int t = (long int) a * b * c * d;
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("t = %ld
+\backslash
+n",
+ t);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ejecutar el siguiente programa y analizar lo que imprime por pantalla.
+ Conviene usar GDB para observar el contenido de las variables.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main() {
+\end_layout
+
+\begin_layout Plain Layout
+
+    char a = 127;
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("%hhd %hhu
+\backslash
+n",
+ a,
+ a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    a = ++a;
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("%hhd %hhu
+\backslash
+n",
+ a,
+ a);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned char b = 128;
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("%hhd %hhu
+\backslash
+n",
+ b,
+ b);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    b = ++b;
+\end_layout
+
+\begin_layout Plain Layout
+
+    printf("%hhd %hhu
+\backslash
+n",
+ b,
+ b);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+127 127
+\end_layout
+
+\begin_layout Plain Layout
+
+-128 128
+\end_layout
+
+\begin_layout Plain Layout
+
+-128 128
+\end_layout
+
+\begin_layout Plain Layout
+
+-127 129
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Puesto que 
+\begin_inset Formula $127=\left({\color{blue}1111111}\right)_{2}=\left({\color{red}0}{\color{blue}1111111}\right)_{C_{2}^{8}}$
+\end_inset
+
+,
+ el resultado impreso no presenta ninguna particularidad.
+\end_layout
+
+\begin_layout Itemize
+Ahora bien 
+\begin_inset Formula $127+1=\left({\color{blue}10000000}\right)_{2}=128$
+\end_inset
+
+,
+ pero 
+\begin_inset Formula $\left({\color{red}1}{\color{blue}0000000}\right)_{C_{2}^{8}}=-128$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+A partir del punto anterior,
+ es análogo interpretar este.
+\end_layout
+
+\begin_layout Itemize
+Finalmente 
+\begin_inset Formula $128+1=\left({\color{blue}10000001}\right)_{2}=129$
+\end_inset
+
+,
+ pero 
+\begin_inset Formula $\left({\color{red}1}{\color{blue}0000001}\right)_{C_{2}^{8}}=-127$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Dados los siguientes números 
+\begin_inset Formula $A=0xc4$
+\end_inset
+
+ y 
+\begin_inset Formula $B=0x4e$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Realizar la suma 
+\begin_inset Formula $C=A+B$
+\end_inset
+
+ en hexadecimal.
+\end_layout
+
+\begin_layout Enumerate
+Escriba el valor decimal de C,
+ interpretando el resultado como 
+\family typewriter
+signed char
+\family default
+ y luego como 
+\family typewriter
+unsigned char
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Indicar el rango y la cantidad de números representables en ambos casos.
+\end_layout
+
+\begin_layout Enumerate
+Indicar el valor de las banderas 
+\emph on
+CF
+\emph default
+,
+ 
+\emph on
+OF
+\emph default
+ y 
+\emph on
+SF
+\emph default
+ luego de realizarse la operación suma.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccc}
+ & c & 4\\
++ & 4 & e\\
+\hline {\color{green}1} & 1 & 2
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Puesto que 
+\begin_inset Formula $\left(112\right)_{16}=274=\left(1{\color{blue}00010010}\right)_{2}$
+\end_inset
+
+,
+ luego 
+\begin_inset Formula $\left({\color{blue}00010010}\right)_{2}=\left({\color{blue}00010010}\right)_{C_{2}^{8}}=18$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{array}{ccccccccc}
+ & \boldsymbol{1} & 1 & 0 & 0 & 0 & 1 & 0 & 0\\
++ & \boldsymbol{0} & 1 & 0 & 0 & 1 & 1 & 1 & 0\\
+\hline {\color{green}1} & \boldsymbol{0} & 0 & 0 & 1 & 0 & 0 & 1 & 0
+\end{array}
+\]
+
+\end_inset
+
+La bandera 
+\emph on
+Carry Flag
+\emph default
+ se 
+\color green
+enciende
+\color inherit
+ y la 
+\emph on
+Overflow Flag
+\emph default
+ se 
+\series bold
+apaga
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Supongamos que en un servidor de almacenamiento los tamaños de los archivos se gestionan usando el sistema octal.
+ La capacidad total del servidor es de 010000 unidades de almacenamiento.
+ Actualmente,
+ el servidor contiene los siguientes archivos:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Archivo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Unidades
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0345$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0672$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $01250$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0507$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0710$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Convertir los tamalos de los archivos a su equivalente en decimal.
+\end_layout
+
+\begin_layout Enumerate
+Convertir la capacidad total del servidor a su equivalente en decimal.
+\end_layout
+
+\begin_layout Enumerate
+Calcular el espacio total usado en el servidor en octal y decimal.
+\end_layout
+
+\begin_layout Enumerate
+Calcular el espacio libre en el servidor en octal y decimal.
+\end_layout
+
+\begin_layout Enumerate
+Si se desea almacenar un nuevo archivo de tamaño 
+\begin_inset Formula $0500$
+\end_inset
+
+ unidades,
+ determinar si hay suficiente espacio disponible.
+ Si el archivo se puede almacenar,
+ actualizar la lista de archivos y recalcular el espacio usado y libre en el servidor.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Una plataforma de criptomonedas gestiona las transacciones de sus usuarios utilizando identificadores de transacción en sistema hexadecimal.
+ Cada transacción tiene un identificador único y un valor asociado en una criptomoneda llamada CryptoCoin (CC).
+ Actualmente,
+ la plataforma tiene las siguientes transacciones registradas:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Transacción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Identificador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Valor
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x1a2f$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x3b$
+\end_inset
+
+ CC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x2c4d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x4e$
+\end_inset
+
+ CC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x3d5a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x25$
+\end_inset
+
+ CC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x4e7c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x6a$
+\end_inset
+
+ CC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x5f8e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0x72$
+\end_inset
+
+ CC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Convierte los identificadores y valores de las transacciones a su equivalente en decimal.
+\end_layout
+
+\begin_layout Enumerate
+Calcula el valor total de todas las transacciones en CryptoCoin en decimal y hexadecimal.
+\end_layout
+
+\begin_layout Enumerate
+La plataforma añade dos nuevas transacciones con los siguientes detalles:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Transacción 
+\begin_inset Formula $F$
+\end_inset
+
+:
+ Identificador 
+\begin_inset Formula $0x6a7b$
+\end_inset
+
+,
+ valor 
+\begin_inset Formula $0x3c$
+\end_inset
+
+ CC.
+\end_layout
+
+\begin_layout Itemize
+Transacción 
+\begin_inset Formula $G$
+\end_inset
+
+:
+ Identificador 
+\begin_inset Formula $0x7b9d$
+\end_inset
+
+,
+ valor 
+\begin_inset Formula $0x4a$
+\end_inset
+
+ CC.
+\end_layout
+
+\begin_layout Standard
+Actualiza la lista de transacciones y recalcula el valor total de todas las transacciones.
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+COMPLETAR.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A continuación se presentan ciertos números enteros expresados en binario utilizando 32 bits y a su derecha,
+ expresiones en lenguaje C incompletas.
+ Complete estas expresiones de forma que la igualdad sea cierta.
+ Utilice operadores de bits,
+ operadores enteros y constantes de enteros literales según considere necesario.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+10000000 00000000 00000000 00000000 == ...
+ << ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+10000000 00000000 10000000 00000000 == (1 << ...) | (1 << ...)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+11111111 11111111 11111111 00000000 == -1 & ...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+10101010 00000000 00000000 10101010 == 0xAA ...
+ (0xAA << ...)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+00000000 00000000 00000101 00000000 == 5 ...
+ 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+11111111 11111111 11111110 11111111 == -1 & (...
+ (1 << 8))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+11111111 11111111 11111111 11111111 == 0 ...
+ 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+00000000 00000000 00000000 00000000 == 0x80000000 + ............
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+10000000 00000000 00000000 00000000 == 1 << 31
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+10000000 00000000 10000000 00000000 == (1 << 31) | (1 << 15)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+11111111 11111111 11111111 00000000 == -1 & (-1 << 8)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+10101010 00000000 00000000 10101010 == 0xAA | (0xAA << 24)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+00000000 00000000 00000101 00000000 == 5 << 8
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+11111111 11111111 11111110 11111111 == -1 & (~ (1 << 8))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+11111111 11111111 11111111 11111111 == 0 - 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+00000000 00000000 00000000 00000000 == 0x80000000 + 0x80000000
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Implemente una función 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+int is_one(int n,
+ int b);
+\end_layout
+
+\end_inset
+
+ que indique si el bit 
+\family typewriter
+b
+\family default
+ del entero 
+\family typewriter
+n
+\family default
+ es 1 o 0.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Ayuda
+\emph default
+:
+ Pensar en las propiedades de los operadores de bits.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int is_one(int n,
+ int b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return n & (1 << b);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Implemente una función 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+void printbin(int n);
+\end_layout
+
+\end_inset
+
+ que tome un entero de 32 bits y lo imprima en binario.
+ Utilizar esta función para mostrar en binario los números del ejercicio 2.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Ayuda
+\emph default
+:
+ Se puede utilizar la función realizada en el ejercicio anterior.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void printbin(int n) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = 31;
+ i >= 0;
+ i--)
+\end_layout
+
+\begin_layout Plain Layout
+
+        printf("%c",
+ is_one(n,
+ i) ?
+ '1' :
+ '0');
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Implemente una función en lenguaje C que tome tres parámetros 
+\begin_inset Formula $a$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+ y que rote los valores de las variables de manera que al finalizar la función el valor de 
+\begin_inset Formula $a$
+\end_inset
+
+ se encuentre en 
+\begin_inset Formula $b$
+\end_inset
+
+,
+ el valor de 
+\begin_inset Formula $b$
+\end_inset
+
+ en 
+\begin_inset Formula $c$
+\end_inset
+
+ y el de 
+\begin_inset Formula $c$
+\end_inset
+
+ en 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Evitar utilizar variables auxiliares.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Ayuda
+\emph default
+:
+ Tener en cuenta las propiedades del operador 
+\family typewriter
+XOR
+\family default
+.
+ Se puede pensar primero en intercambiar dos variables.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+void swap(unsigned long* a,
+ unsigned long* b,
+ unsigned long* c) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    *a = *a ^ *b ^ *c;
+\end_layout
+
+\begin_layout Plain Layout
+
+    *b = *a ^ *b ^ *c;
+\end_layout
+
+\begin_layout Plain Layout
+
+    *c = *a ^ *b ^ *c;
+\end_layout
+
+\begin_layout Plain Layout
+
+    *a = *a ^ *b ^ *c;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Escriba en lenguaje C un programa que tome la entrada estándar,
+ la codifique e imprima el resultado en salida estándar.
+ La codificación deberá ser hecha carácter a carácter utilizando el operador 
+\family typewriter
+XOR
+\family default
+ y un código que se pase al programa como argumento de línea de comando.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+El código adicional para el operador 
+\family typewriter
+XOR
+\family default
+ también se debe pasar como argumento de línea de comandos al programa.
+ Es decir,
+ suponiendo que el ejecutable se llame 
+\family typewriter
+prog
+\family default
+,
+ la línea de comando para ejecutar el programa tendría el formato:
+ 
+\begin_inset listings
+lstparams "language=bash"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+./prog <código> <cadena a codificar>
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por ejemplo,
+ se podría hacer 
+\begin_inset listings
+lstparams "language=bash"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+./prog 12 Mensaje
+\end_layout
+
+\end_inset
+
+ para codificar la cadena 
+\begin_inset Quotes fld
+\end_inset
+
+Mensaje
+\begin_inset Quotes frd
+\end_inset
+
+ con el código 12.
+ Pruebe el programa codificando con diferentes códigos,
+ por ejemplo,
+ utilizando el código -98.
+\end_layout
+
+\begin_layout Standard
+¿Qué modificaciones se tendrían que hacer al programa para que decodifique?
+ ¿Se gana algo codificando más de una vez?
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+#include <stdio.h>  // putchar
+\end_layout
+
+\begin_layout Plain Layout
+
+#include <stdlib.h> // atoi
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+int main(int argc,
+ char** argv) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = 0;
+ argv[2][i];
+ i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+        putchar(atoi(argv[1]) ^ argv[2][i]);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No es necesario modificar el programa para decodificar pues:
+\begin_inset Formula 
+\[
+\left(m\oplus a\right)\oplus a=m\oplus\left(a\oplus a\right)=m\oplus0=m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No se gana nada codificando varias veces pues:
+\begin_inset Formula 
+\[
+\left(m\oplus a\right)\oplus b=m\oplus\left(a\oplus b\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\emph on
+Algoritmo del campesino ruso
+\emph default
+:
+ La multiplicación de enteros positivos puede implementarse con sumas,
+ el operador 
+\family typewriter
+AND
+\family default
+ y desplazamientos de bits usando las siguientes identidades:
+\begin_inset Formula 
+\[
+a\cdot b\begin{cases}
+0 & \text{si }b=0\\
+a & \text{si }b=1\\
+2a\cdot k & \text{si }b=2k\\
+2a\cdot k+a & \text{si }b=2k+1
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Úselas para implementar una función en lenguaje C 
+\begin_inset listings
+lstparams "language=C"
+inline true
+status open
+
+\begin_layout Plain Layout
+
+unsigned mult(unsigned a,
+ unsigned b);
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+unsigned mult(unsigned a,
+ unsigned b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (!b) return 0;
+                              // b == 0
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (b == 1) return a;
+                          // b == 1
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (!(b & 1)) return mult((a << 1),
+ (b >> 1));
+ // b par
+\end_layout
+
+\begin_layout Plain Layout
+
+    return mult((a << 1),
+ (b >> 1)) + a;
+           // b impar
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+(
+\emph on
+Opcional
+\emph default
+) Muchas arquitecturas de CPU restringen los enteros a un máximo de 64 bits.
+ ¿Qué sucede si ese rango no nos alcanza?
+ Una solución es extender el rango utilizando más de un entero (en este caso enteros de 16 bits) para representar un valor.
+ Así podemos pensar que:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+typedef struct {
+\end_layout
+
+\begin_layout Plain Layout
+
+    unsigned short n[16];
+\end_layout
+
+\begin_layout Plain Layout
+
+} nro;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+representa el valor:
+\begin_inset Formula 
+\[
+\begin{aligned}N= & \texttt{ nro.n[0]} & +\\
+ & \texttt{ nro.n[1] * (2\mathcircumflex sizeof(short) * 8)} & +\\
+ & \texttt{ nro.n[1] * (2\mathcircumflex(2 * sizeof(short) * 8))} & +\\
+ &  & \vdots\\
+ & \texttt{ nro.n[15] * (2\mathcircumflex(15 * sizeof(short) * 8))}
+\end{aligned}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Podemos pensar en la estructura 
+\family typewriter
+nro
+\family default
+ como un entero de 256 bits.
+ Lamentablemente la arquitectura no soporta operaciones entre valores de este tipo,
+ por lo cual debemos realizarlas en software.
+\end_layout
+
+\begin_layout Enumerate
+Implemente funciones que comparen con 0 y con 1 y determinen paridad para valores de este tipo.
+\end_layout
+
+\begin_layout Enumerate
+Realice funciones que corran a izquierda y derecha los valores del tipo 
+\family typewriter
+nro
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Implemente la suma de valores del tipo 
+\family typewriter
+nro
+\family default
+.
+\end_layout
+
+\begin_layout Paragraph
+Nota:
+\end_layout
+
+\begin_layout Standard
+en el repositorio Subversion de la materia hay una función para imprimir valores de este tipo.
+ Esta función utiliza la biblioteca GMP (
+\emph on
+GNU Multiple Precision Arithmetic Library
+\emph default
+),
+ por lo cual deberá compilar el código agregando la opción 
+\family typewriter
+-lgmp
+\family default
+.
+ Puede encontrar la función en el archivo 
+\family typewriter
+código/enteros/grandes/gmp1.c
+\family default
+:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://svn.dcc.fceia.unr.edu.ar/svn/lcc/R-222/Public/código/enteros_grandes/gmp1.c"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Soluciones
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+int es_cero(nro n) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = 0;
+ i < 16;
+ i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (n.n[i]) return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int es_uno(nro n) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = 1;
+ i < 16;
+ i++)
+\end_layout
+
+\begin_layout Plain Layout
+
+        if (n.n[i]) return 0;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return n.n[0] == 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+int es_par(nro n) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    return (!(n.n[0] & 1));
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+COMPLETAR.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+nro suc(nro n) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    nro s = n;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = 0;
+ i < 16;
+ i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        s.n[i] += 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+        if ((int) n.n[i] + 1 == s.n[i]) // No hay acarreo
+\end_layout
+
+\begin_layout Plain Layout
+
+            return s;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return s;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+nro pred(nro n) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    nro p = n;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    for (int i = 0;
+ i < 16;
+ i++) {
+\end_layout
+
+\begin_layout Plain Layout
+
+        p.n[i] -= 1;
+\end_layout
+
+\begin_layout Plain Layout
+
+        if ((int) n.n[i] - 1 == p.n[i]) return p;
+\end_layout
+
+\begin_layout Plain Layout
+
+    }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    return p;
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+nro add(nro a,
+ nro b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+    if (es_cero(b)) return a;
+\end_layout
+
+\begin_layout Plain Layout
+
+    return add(suc(a),
+ pred(b));
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+(
+\emph on
+Opcional
+\emph default
+) Implemente el algoritmo del campesino ruso para los números anteriores.
+\end_layout
+
+\begin_deeper
+\begin_layout Paragraph
+Solución
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "language=C"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+nro mult(nro a,
+ nro b) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (es_cero(b)) return b;
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (es_uno(b)) return a;
+\end_layout
+
+\begin_layout Plain Layout
+
+	if (es_par(b)) return mult(izq(a,
+ 1),
+ der(b,
+ 1));
+\end_layout
+
+\begin_layout Plain Layout
+
+	return add(mult(izq(a),
+ der(b)),
+ a);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
